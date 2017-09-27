@@ -1,0 +1,2443 @@
+/* This file is produced by the P/Invoke AutoWrapper Utility 
+ Copyright (c) 2012 by EarthView Image Inc */
+#include "spatialobject/geometry/circlechordring.h"
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Spatial
+		{
+			namespace Geometry
+			{
+				typedef EarthView::World::Spatial::Geometry::CPoint*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint_CPoint_Callback)();
+				typedef void*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint2_CPoint_Callback)();
+				typedef EarthView::World::Spatial::Geometry::CPoint*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint_CPoint_Callback)();
+				typedef void*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint2_CPoint_Callback)();
+				typedef EarthView::World::Spatial::Geometry::CPoint*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint_CPoint_Callback)();
+				typedef void*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint2_CPoint_Callback)();
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getRadius_ev_real64_Callback)();
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getFromAngle_ev_real64_Callback)();
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getToAngle_ev_real64_Callback)();
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getSweepAngle_ev_real64_Callback)();
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getArcLength_ev_real64_Callback)();
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getChordLength_ev_real64_Callback)();
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getChordHeight_ev_real64_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByThreePoint_void_CPoint_CPoint_CPoint_Callback)(_in const void* fromPoint, _in const void* toPoint, _in const void* controlPoint);
+				typedef void  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByRadius_void_CPoint_ev_real64_ev_real64_ev_real64_Callback)(_in const void* centerPoint, _in ev_real64 radius, _in ev_real64 fromAngle, _in ev_real64 sweepAngle);
+				typedef void  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByTwoPoint_void_CPoint_CPoint_ev_real64_Callback)(_in const void* centerPoint, _in const void* edgePoint, _in ev_real64 sweepAngle);
+				typedef void  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_setCenterPoint_void_CPoint_Callback)(_in const void* point);
+				typedef void  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_setRadius_void_ev_real64_Callback)(_in ev_real64 value);
+				typedef void  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_setFromAngle_void_ev_real64_Callback)(_in ev_real64 value);
+				typedef void  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_setSweepAngle_void_ev_real64_Callback)(_in ev_real64 value);
+				typedef const EarthView::World::Spatial::Geometry::CCoordinate*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromCoordinateRef_CCoordinate_Callback)();
+				typedef const EarthView::World::Spatial::Geometry::CCoordinate*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToCoordinateRef_CCoordinate_Callback)();
+				typedef const EarthView::World::Spatial::Geometry::CCoordinate*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterCoordinateRef_CCoordinate_Callback)();
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getArea_ev_real64_Callback)();
+				typedef ev_uint32  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveCount_ev_uint32_Callback)();
+				typedef EarthView::World::Spatial::Geometry::CCurve*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getCurve_CCurve_ev_uint32_Callback)(_in ev_uint32 index);
+				typedef const EarthView::World::Spatial::Geometry::CCurve*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveRef_CCurve_ev_uint32_Callback)(_in ev_uint32 index);
+				typedef ev_int32  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_add_ev_int32_CCurve_ev_int32_Callback)(_in const void* curve, _in ev_int32 index);
+				typedef ev_int32  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_remove_ev_int32_ev_uint32_ev_int32_Callback)(_in ev_uint32 index, _in ev_int32 size);
+				typedef ev_int32  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_clear_ev_int32_Callback)();
+				typedef ev_int32  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_replace_ev_int32_CCurve_ev_uint32_Callback)(_in const void* curve, _in ev_uint32 index);
+				typedef void*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString2_CLineString_ev_uint32_Callback)(_in ev_uint32 smooth);
+				typedef EarthView::World::Spatial::Geometry::CPoint*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint_CPoint_Callback)();
+				typedef void*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint2_CPoint_Callback)();
+				typedef EarthView::World::Spatial::Geometry::CPoint*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint_CPoint_Callback)();
+				typedef void*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint2_CPoint_Callback)();
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getLength_ev_real64_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_isClosed_ev_bool_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_isRing_ev_bool_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_reverse_ev_bool_Callback)();
+				typedef EarthView::World::Spatial::Geometry::CLineString*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString_CLineString_ev_uint32_Callback)(_in ev_uint32 smooth);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_isDirty_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_setDirty_void_ev_bool_Callback)(_in ev_bool dirty);
+				typedef void  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_update_void_Callback)();
+				typedef EarthView::World::Spatial::Geometry::IGeometry*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_resample_IGeometry_ev_real64_EVDimensionType_Callback)(_in ev_real64 tolerance, _in int dimension);
+				typedef EarthView::World::Spatial::Geometry::IGeometry*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_mirror_IGeometry_IGeometry_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* line);
+				typedef EarthView::World::Spatial::Geometry::IGeometry*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_split_IGeometry_IGeometry_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* pSplitGeom);
+				typedef EarthView::World::Spatial::Geometry::IGeometry*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_clip_IGeometry_IGeometry_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* clipRegion);
+				typedef EarthView::World::Spatial::Geometry::IGeometry*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_smooth_IGeometry_ev_real64_EVDimensionType_Callback)(_in ev_real64 tolerance, _in int dimension);
+				typedef EarthView::World::Spatial::Geometry::IGeometry*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_snapToPoint_IGeometry_IGeometry_ev_real64_EVGeometrySnapType_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* point, _in ev_real64 tolerance, _inout int& snap);
+				typedef EarthView::World::Spatial::Geometry::IGeometry*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_snapToSegment_IGeometry_IGeometry_ev_real64_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* point, _in ev_real64 tolerance);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_movePointTo_ev_bool_IGeometry_IGeometry_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* frmPoint, _in const EarthView::World::Spatial::Geometry::IGeometry* cpy_toPoint);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_addPointTo_ev_bool_IGeometry_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* cpy_point);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_deletePoint_ev_bool_IGeometry_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* point);
+				typedef const EarthView::World::Spatial::Geometry::IEnvelope*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getEnvelopeRef_IEnvelope_Callback)();
+				typedef const EarthView::World::Spatial::Geometry::ISpatialReference*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getSpatialReferenceRef_ISpatialReference_Callback)();
+				typedef int  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getGeometryType_EVGeometryType_Callback)();
+				typedef int  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getWKBGeometryType_EVWKBGeometryType_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_isValid_ev_bool_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_isEmpty_ev_bool_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_isSimple_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_simplify_void_Callback)();
+				typedef EarthView::World::Spatial::Geometry::IGeometry*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getBoundary_IGeometry_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_makeZ_void_ev_real64_Callback)(_in ev_real64 z);
+				typedef void  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_makeM_void_ev_real64_Callback)(_in ev_real64 m);
+				typedef void  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_setSpatialReferenceRef_void_ISpatialReference_Callback)(_in const EarthView::World::Spatial::Geometry::ISpatialReference* ref_sr);
+				typedef EarthView::World::Spatial::Geometry::IGeometry*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_clone_IGeometry_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_isContains_ev_bool_IGeometry_EVDimensionType_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in int dimension);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_isEquals_ev_bool_IGeometry_ev_real64_EVDimensionType_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in ev_real64 tolerance, _in int dimension);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_isDisjoin_ev_bool_IGeometry_EVDimensionType_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in int dimension);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_isIntersects_ev_bool_IGeometry_EVDimensionType_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in int dimension);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_isWithin_ev_bool_IGeometry_EVDimensionType_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in int dimension);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_isTouches_ev_bool_IGeometry_EVDimensionType_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in int dimension);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_isCrosses_ev_bool_IGeometry_EVDimensionType_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in int dimension);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_isRelates_ev_bool_IGeometry_EVString_EVDimensionType_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in char*& relateMatrix, _in int dimension);
+				typedef EarthView::World::Spatial::Geometry::IGeometry*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_buffer_IGeometry_ev_real64_EVDimensionType_Callback)(_in ev_real64 tolerance, _in int dimension);
+				typedef EarthView::World::Spatial::Geometry::IGeometry*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_convexHull_IGeometry_EVDimensionType_Callback)(_in int dimension);
+				typedef EarthView::World::Spatial::Geometry::IGeometry*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_difference_IGeometry_IGeometry_EVDimensionType_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in int dimension);
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_distance_ev_real64_IGeometry_EVDimensionType_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in int dimension);
+				typedef EarthView::World::Spatial::Geometry::IGeometry*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_intersects_IGeometry_IGeometry_EVDimensionType_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in int dimension);
+				typedef EarthView::World::Spatial::Geometry::IGeometry*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_overlaps_IGeometry_IGeometry_EVDimensionType_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in int dimension);
+				typedef EarthView::World::Spatial::Geometry::IGeometry*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_symDifference_IGeometry_IGeometry_EVDimensionType_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in int dimension);
+				typedef EarthView::World::Spatial::Geometry::IGeometry*  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_unions_IGeometry_IGeometry_EVDimensionType_Callback)(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in int dimension);
+				typedef void  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_toWKB_void_CDataStream_Callback)(_inout void* stream);
+				typedef void  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_toWKT_void_EVString_Callback)(_inout char*& wkt);
+				typedef void  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_toStream_void_CDataStream_Callback)(_inout void* stream);
+				typedef void  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_translate_void_ev_real64_ev_real64_ev_real64_Callback)(_in ev_real64 x, _in ev_real64 y, _in ev_real64 z);
+				typedef void  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_rotate_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_Callback)(_in ev_real64 xRef, _in ev_real64 yRef, _in ev_real64 zRef, _in ev_real64 xAngle, _in ev_real64 yAngle, _in ev_real64 zAngle);
+				typedef void  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_scale_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_Callback)(_in ev_real64 xRef, _in ev_real64 yRef, _in ev_real64 zRef, _in ev_real64 x, _in ev_real64 y, _in ev_real64 z);
+				typedef void  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_projects_void_ISpatialReference_ev_real64_ev_uint32_Callback)(_in const EarthView::World::Spatial::Geometry::ISpatialReference* sr, _in ev_real64* sevenParam, _in ev_uint32 count);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getInteriorPoint_ev_bool_IGeometry_Callback)(_in EarthView::World::Spatial::Geometry::IGeometry* point);
+				class CCircleChordRingProxy : public EarthView::World::Spatial::Geometry::CCircleChordRing
+				{
+				private:
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint_CPoint_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint_CPoint_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint2_CPoint_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint2_CPoint_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint_CPoint_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint_CPoint_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint2_CPoint_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint2_CPoint_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint_CPoint_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint_CPoint_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint2_CPoint_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint2_CPoint_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getRadius_ev_real64_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getRadius_ev_real64_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getFromAngle_ev_real64_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getFromAngle_ev_real64_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getToAngle_ev_real64_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getToAngle_ev_real64_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getSweepAngle_ev_real64_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getSweepAngle_ev_real64_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getArcLength_ev_real64_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcLength_ev_real64_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getChordLength_ev_real64_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getChordLength_ev_real64_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getChordHeight_ev_real64_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getChordHeight_ev_real64_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByThreePoint_void_CPoint_CPoint_CPoint_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByThreePoint_void_CPoint_CPoint_CPoint_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByRadius_void_CPoint_ev_real64_ev_real64_ev_real64_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByRadius_void_CPoint_ev_real64_ev_real64_ev_real64_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByTwoPoint_void_CPoint_CPoint_ev_real64_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByTwoPoint_void_CPoint_CPoint_ev_real64_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_setCenterPoint_void_CPoint_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_setCenterPoint_void_CPoint_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_setRadius_void_ev_real64_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_setRadius_void_ev_real64_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_setFromAngle_void_ev_real64_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_setFromAngle_void_ev_real64_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_setSweepAngle_void_ev_real64_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_setSweepAngle_void_ev_real64_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromCoordinateRef_CCoordinate_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromCoordinateRef_CCoordinate_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToCoordinateRef_CCoordinate_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToCoordinateRef_CCoordinate_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterCoordinateRef_CCoordinate_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterCoordinateRef_CCoordinate_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getArea_ev_real64_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArea_ev_real64_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveCount_ev_uint32_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveCount_ev_uint32_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getCurve_CCurve_ev_uint32_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurve_CCurve_ev_uint32_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveRef_CCurve_ev_uint32_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveRef_CCurve_ev_uint32_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_add_ev_int32_CCurve_ev_int32_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_add_ev_int32_CCurve_ev_int32_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_remove_ev_int32_ev_uint32_ev_int32_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_remove_ev_int32_ev_uint32_ev_int32_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_clear_ev_int32_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_clear_ev_int32_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_replace_ev_int32_CCurve_ev_uint32_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_replace_ev_int32_CCurve_ev_uint32_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString2_CLineString_ev_uint32_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString2_CLineString_ev_uint32_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint_CPoint_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint_CPoint_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint2_CPoint_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint2_CPoint_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint_CPoint_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint_CPoint_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint2_CPoint_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint2_CPoint_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getLength_ev_real64_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getLength_ev_real64_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_isClosed_ev_bool_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_isClosed_ev_bool_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_isRing_ev_bool_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_isRing_ev_bool_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_reverse_ev_bool_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_reverse_ev_bool_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString_CLineString_ev_uint32_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString_CLineString_ev_uint32_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_isDirty_ev_bool_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_isDirty_ev_bool_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_setDirty_void_ev_bool_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_setDirty_void_ev_bool_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_update_void_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_update_void_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_resample_IGeometry_ev_real64_EVDimensionType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_resample_IGeometry_ev_real64_EVDimensionType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_mirror_IGeometry_IGeometry_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_mirror_IGeometry_IGeometry_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_split_IGeometry_IGeometry_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_split_IGeometry_IGeometry_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_clip_IGeometry_IGeometry_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_clip_IGeometry_IGeometry_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_smooth_IGeometry_ev_real64_EVDimensionType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_smooth_IGeometry_ev_real64_EVDimensionType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_snapToPoint_IGeometry_IGeometry_ev_real64_EVGeometrySnapType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_snapToPoint_IGeometry_IGeometry_ev_real64_EVGeometrySnapType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_snapToSegment_IGeometry_IGeometry_ev_real64_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_snapToSegment_IGeometry_IGeometry_ev_real64_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_movePointTo_ev_bool_IGeometry_IGeometry_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_movePointTo_ev_bool_IGeometry_IGeometry_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_addPointTo_ev_bool_IGeometry_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_addPointTo_ev_bool_IGeometry_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_deletePoint_ev_bool_IGeometry_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_deletePoint_ev_bool_IGeometry_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getEnvelopeRef_IEnvelope_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getEnvelopeRef_IEnvelope_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getSpatialReferenceRef_ISpatialReference_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getSpatialReferenceRef_ISpatialReference_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getGeometryType_EVGeometryType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getGeometryType_EVGeometryType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getWKBGeometryType_EVWKBGeometryType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getWKBGeometryType_EVWKBGeometryType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_isValid_ev_bool_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_isValid_ev_bool_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_isEmpty_ev_bool_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_isEmpty_ev_bool_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_isSimple_ev_bool_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_isSimple_ev_bool_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_simplify_void_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_simplify_void_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getBoundary_IGeometry_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getBoundary_IGeometry_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_makeZ_void_ev_real64_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_makeZ_void_ev_real64_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_makeM_void_ev_real64_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_makeM_void_ev_real64_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_setSpatialReferenceRef_void_ISpatialReference_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_setSpatialReferenceRef_void_ISpatialReference_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_clone_IGeometry_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_clone_IGeometry_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_isContains_ev_bool_IGeometry_EVDimensionType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_isContains_ev_bool_IGeometry_EVDimensionType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_isEquals_ev_bool_IGeometry_ev_real64_EVDimensionType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_isEquals_ev_bool_IGeometry_ev_real64_EVDimensionType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_isDisjoin_ev_bool_IGeometry_EVDimensionType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_isDisjoin_ev_bool_IGeometry_EVDimensionType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_isIntersects_ev_bool_IGeometry_EVDimensionType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_isIntersects_ev_bool_IGeometry_EVDimensionType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_isWithin_ev_bool_IGeometry_EVDimensionType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_isWithin_ev_bool_IGeometry_EVDimensionType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_isTouches_ev_bool_IGeometry_EVDimensionType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_isTouches_ev_bool_IGeometry_EVDimensionType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_isCrosses_ev_bool_IGeometry_EVDimensionType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_isCrosses_ev_bool_IGeometry_EVDimensionType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_isRelates_ev_bool_IGeometry_EVString_EVDimensionType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_isRelates_ev_bool_IGeometry_EVString_EVDimensionType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_buffer_IGeometry_ev_real64_EVDimensionType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_buffer_IGeometry_ev_real64_EVDimensionType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_convexHull_IGeometry_EVDimensionType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_convexHull_IGeometry_EVDimensionType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_difference_IGeometry_IGeometry_EVDimensionType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_difference_IGeometry_IGeometry_EVDimensionType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_distance_ev_real64_IGeometry_EVDimensionType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_distance_ev_real64_IGeometry_EVDimensionType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_intersects_IGeometry_IGeometry_EVDimensionType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_intersects_IGeometry_IGeometry_EVDimensionType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_overlaps_IGeometry_IGeometry_EVDimensionType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_overlaps_IGeometry_IGeometry_EVDimensionType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_symDifference_IGeometry_IGeometry_EVDimensionType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_symDifference_IGeometry_IGeometry_EVDimensionType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_unions_IGeometry_IGeometry_EVDimensionType_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_unions_IGeometry_IGeometry_EVDimensionType_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_toWKB_void_CDataStream_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_toWKB_void_CDataStream_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_toWKT_void_EVString_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_toWKT_void_EVString_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_toStream_void_CDataStream_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_toStream_void_CDataStream_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_translate_void_ev_real64_ev_real64_ev_real64_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_translate_void_ev_real64_ev_real64_ev_real64_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_rotate_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_rotate_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_scale_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_scale_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_projects_void_ISpatialReference_ev_real64_ev_uint32_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_projects_void_ISpatialReference_ev_real64_ev_uint32_Callback;
+					EarthView_World_Spatial_Geometry_CCircleChordRing_getInteriorPoint_ev_bool_IGeometry_Callback* m_EarthView_World_Spatial_Geometry_CCircleChordRing_getInteriorPoint_ev_bool_IGeometry_Callback;
+				public:
+					CCircleChordRingProxy(EarthView::World::Core::CNameValuePairList *pList) : CCircleChordRing(pList)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint_CPoint_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint2_CPoint_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint_CPoint_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint2_CPoint_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint_CPoint_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint2_CPoint_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getRadius_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getFromAngle_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getToAngle_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getSweepAngle_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcLength_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getChordLength_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getChordHeight_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByThreePoint_void_CPoint_CPoint_CPoint_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByRadius_void_CPoint_ev_real64_ev_real64_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByTwoPoint_void_CPoint_CPoint_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_setCenterPoint_void_CPoint_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_setRadius_void_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_setFromAngle_void_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_setSweepAngle_void_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromCoordinateRef_CCoordinate_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToCoordinateRef_CCoordinate_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterCoordinateRef_CCoordinate_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArea_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveCount_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurve_CCurve_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveRef_CCurve_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_add_ev_int32_CCurve_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_remove_ev_int32_ev_uint32_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_clear_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_replace_ev_int32_CCurve_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString2_CLineString_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint_CPoint_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint2_CPoint_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint_CPoint_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint2_CPoint_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getLength_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isClosed_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isRing_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_reverse_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString_CLineString_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isDirty_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_setDirty_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_update_void_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_resample_IGeometry_ev_real64_EVDimensionType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_mirror_IGeometry_IGeometry_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_split_IGeometry_IGeometry_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_clip_IGeometry_IGeometry_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_smooth_IGeometry_ev_real64_EVDimensionType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_snapToPoint_IGeometry_IGeometry_ev_real64_EVGeometrySnapType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_snapToSegment_IGeometry_IGeometry_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_movePointTo_ev_bool_IGeometry_IGeometry_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_addPointTo_ev_bool_IGeometry_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_deletePoint_ev_bool_IGeometry_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getEnvelopeRef_IEnvelope_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getSpatialReferenceRef_ISpatialReference_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getGeometryType_EVGeometryType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getWKBGeometryType_EVWKBGeometryType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isValid_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isEmpty_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isSimple_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_simplify_void_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getBoundary_IGeometry_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_makeZ_void_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_makeM_void_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_setSpatialReferenceRef_void_ISpatialReference_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_clone_IGeometry_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isContains_ev_bool_IGeometry_EVDimensionType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isEquals_ev_bool_IGeometry_ev_real64_EVDimensionType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isDisjoin_ev_bool_IGeometry_EVDimensionType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isIntersects_ev_bool_IGeometry_EVDimensionType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isWithin_ev_bool_IGeometry_EVDimensionType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isTouches_ev_bool_IGeometry_EVDimensionType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isCrosses_ev_bool_IGeometry_EVDimensionType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isRelates_ev_bool_IGeometry_EVString_EVDimensionType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_buffer_IGeometry_ev_real64_EVDimensionType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_convexHull_IGeometry_EVDimensionType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_difference_IGeometry_IGeometry_EVDimensionType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_distance_ev_real64_IGeometry_EVDimensionType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_intersects_IGeometry_IGeometry_EVDimensionType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_overlaps_IGeometry_IGeometry_EVDimensionType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_symDifference_IGeometry_IGeometry_EVDimensionType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_unions_IGeometry_IGeometry_EVDimensionType_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_toWKB_void_CDataStream_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_toWKT_void_EVString_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_toStream_void_CDataStream_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_translate_void_ev_real64_ev_real64_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_rotate_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_scale_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_projects_void_ISpatialReference_ev_real64_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getInteriorPoint_ev_bool_IGeometry_Callback = NULL;
+					}
+				public:
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint_CPoint(EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint_CPoint_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint_CPoint_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint2_CPoint(EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint2_CPoint_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint2_CPoint_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint_CPoint(EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint_CPoint_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint_CPoint_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint2_CPoint(EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint2_CPoint_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint2_CPoint_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint_CPoint(EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint_CPoint_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint_CPoint_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint2_CPoint(EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint2_CPoint_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint2_CPoint_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getRadius_ev_real64(EarthView_World_Spatial_Geometry_CCircleChordRing_getRadius_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getRadius_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getFromAngle_ev_real64(EarthView_World_Spatial_Geometry_CCircleChordRing_getFromAngle_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getFromAngle_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getToAngle_ev_real64(EarthView_World_Spatial_Geometry_CCircleChordRing_getToAngle_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getToAngle_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getSweepAngle_ev_real64(EarthView_World_Spatial_Geometry_CCircleChordRing_getSweepAngle_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getSweepAngle_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcLength_ev_real64(EarthView_World_Spatial_Geometry_CCircleChordRing_getArcLength_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcLength_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getChordLength_ev_real64(EarthView_World_Spatial_Geometry_CCircleChordRing_getChordLength_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getChordLength_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getChordHeight_ev_real64(EarthView_World_Spatial_Geometry_CCircleChordRing_getChordHeight_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getChordHeight_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByThreePoint_void_CPoint_CPoint_CPoint(EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByThreePoint_void_CPoint_CPoint_CPoint_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByThreePoint_void_CPoint_CPoint_CPoint_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByRadius_void_CPoint_ev_real64_ev_real64_ev_real64(EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByRadius_void_CPoint_ev_real64_ev_real64_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByRadius_void_CPoint_ev_real64_ev_real64_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByTwoPoint_void_CPoint_CPoint_ev_real64(EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByTwoPoint_void_CPoint_CPoint_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByTwoPoint_void_CPoint_CPoint_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setCenterPoint_void_CPoint(EarthView_World_Spatial_Geometry_CCircleChordRing_setCenterPoint_void_CPoint_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_setCenterPoint_void_CPoint_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setRadius_void_ev_real64(EarthView_World_Spatial_Geometry_CCircleChordRing_setRadius_void_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_setRadius_void_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setFromAngle_void_ev_real64(EarthView_World_Spatial_Geometry_CCircleChordRing_setFromAngle_void_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_setFromAngle_void_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setSweepAngle_void_ev_real64(EarthView_World_Spatial_Geometry_CCircleChordRing_setSweepAngle_void_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_setSweepAngle_void_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromCoordinateRef_CCoordinate(EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromCoordinateRef_CCoordinate_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromCoordinateRef_CCoordinate_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToCoordinateRef_CCoordinate(EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToCoordinateRef_CCoordinate_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToCoordinateRef_CCoordinate_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterCoordinateRef_CCoordinate(EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterCoordinateRef_CCoordinate_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterCoordinateRef_CCoordinate_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArea_ev_real64(EarthView_World_Spatial_Geometry_CCircleChordRing_getArea_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArea_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveCount_ev_uint32(EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveCount_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveCount_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurve_CCurve_ev_uint32(EarthView_World_Spatial_Geometry_CCircleChordRing_getCurve_CCurve_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurve_CCurve_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveRef_CCurve_ev_uint32(EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveRef_CCurve_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveRef_CCurve_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_add_ev_int32_CCurve_ev_int32(EarthView_World_Spatial_Geometry_CCircleChordRing_add_ev_int32_CCurve_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_add_ev_int32_CCurve_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_remove_ev_int32_ev_uint32_ev_int32(EarthView_World_Spatial_Geometry_CCircleChordRing_remove_ev_int32_ev_uint32_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_remove_ev_int32_ev_uint32_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_clear_ev_int32(EarthView_World_Spatial_Geometry_CCircleChordRing_clear_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_clear_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_replace_ev_int32_CCurve_ev_uint32(EarthView_World_Spatial_Geometry_CCircleChordRing_replace_ev_int32_CCurve_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_replace_ev_int32_CCurve_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString2_CLineString_ev_uint32(EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString2_CLineString_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString2_CLineString_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint_CPoint(EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint_CPoint_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint_CPoint_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint2_CPoint(EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint2_CPoint_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint2_CPoint_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint_CPoint(EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint_CPoint_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint_CPoint_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint2_CPoint(EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint2_CPoint_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint2_CPoint_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getLength_ev_real64(EarthView_World_Spatial_Geometry_CCircleChordRing_getLength_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getLength_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isClosed_ev_bool(EarthView_World_Spatial_Geometry_CCircleChordRing_isClosed_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isClosed_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isRing_ev_bool(EarthView_World_Spatial_Geometry_CCircleChordRing_isRing_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isRing_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_reverse_ev_bool(EarthView_World_Spatial_Geometry_CCircleChordRing_reverse_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_reverse_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString_CLineString_ev_uint32(EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString_CLineString_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString_CLineString_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isDirty_ev_bool(EarthView_World_Spatial_Geometry_CCircleChordRing_isDirty_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isDirty_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setDirty_void_ev_bool(EarthView_World_Spatial_Geometry_CCircleChordRing_setDirty_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_setDirty_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_update_void(EarthView_World_Spatial_Geometry_CCircleChordRing_update_void_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_update_void_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_resample_IGeometry_ev_real64_EVDimensionType(EarthView_World_Spatial_Geometry_CCircleChordRing_resample_IGeometry_ev_real64_EVDimensionType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_resample_IGeometry_ev_real64_EVDimensionType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_mirror_IGeometry_IGeometry(EarthView_World_Spatial_Geometry_CCircleChordRing_mirror_IGeometry_IGeometry_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_mirror_IGeometry_IGeometry_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_split_IGeometry_IGeometry(EarthView_World_Spatial_Geometry_CCircleChordRing_split_IGeometry_IGeometry_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_split_IGeometry_IGeometry_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_clip_IGeometry_IGeometry(EarthView_World_Spatial_Geometry_CCircleChordRing_clip_IGeometry_IGeometry_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_clip_IGeometry_IGeometry_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_smooth_IGeometry_ev_real64_EVDimensionType(EarthView_World_Spatial_Geometry_CCircleChordRing_smooth_IGeometry_ev_real64_EVDimensionType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_smooth_IGeometry_ev_real64_EVDimensionType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_snapToPoint_IGeometry_IGeometry_ev_real64_EVGeometrySnapType(EarthView_World_Spatial_Geometry_CCircleChordRing_snapToPoint_IGeometry_IGeometry_ev_real64_EVGeometrySnapType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_snapToPoint_IGeometry_IGeometry_ev_real64_EVGeometrySnapType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_snapToSegment_IGeometry_IGeometry_ev_real64(EarthView_World_Spatial_Geometry_CCircleChordRing_snapToSegment_IGeometry_IGeometry_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_snapToSegment_IGeometry_IGeometry_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_movePointTo_ev_bool_IGeometry_IGeometry(EarthView_World_Spatial_Geometry_CCircleChordRing_movePointTo_ev_bool_IGeometry_IGeometry_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_movePointTo_ev_bool_IGeometry_IGeometry_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_addPointTo_ev_bool_IGeometry(EarthView_World_Spatial_Geometry_CCircleChordRing_addPointTo_ev_bool_IGeometry_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_addPointTo_ev_bool_IGeometry_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_deletePoint_ev_bool_IGeometry(EarthView_World_Spatial_Geometry_CCircleChordRing_deletePoint_ev_bool_IGeometry_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_deletePoint_ev_bool_IGeometry_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getEnvelopeRef_IEnvelope(EarthView_World_Spatial_Geometry_CCircleChordRing_getEnvelopeRef_IEnvelope_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getEnvelopeRef_IEnvelope_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getSpatialReferenceRef_ISpatialReference(EarthView_World_Spatial_Geometry_CCircleChordRing_getSpatialReferenceRef_ISpatialReference_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getSpatialReferenceRef_ISpatialReference_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getGeometryType_EVGeometryType(EarthView_World_Spatial_Geometry_CCircleChordRing_getGeometryType_EVGeometryType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getGeometryType_EVGeometryType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getWKBGeometryType_EVWKBGeometryType(EarthView_World_Spatial_Geometry_CCircleChordRing_getWKBGeometryType_EVWKBGeometryType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getWKBGeometryType_EVWKBGeometryType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isValid_ev_bool(EarthView_World_Spatial_Geometry_CCircleChordRing_isValid_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isValid_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isEmpty_ev_bool(EarthView_World_Spatial_Geometry_CCircleChordRing_isEmpty_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isEmpty_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isSimple_ev_bool(EarthView_World_Spatial_Geometry_CCircleChordRing_isSimple_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isSimple_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_simplify_void(EarthView_World_Spatial_Geometry_CCircleChordRing_simplify_void_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_simplify_void_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getBoundary_IGeometry(EarthView_World_Spatial_Geometry_CCircleChordRing_getBoundary_IGeometry_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getBoundary_IGeometry_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_makeZ_void_ev_real64(EarthView_World_Spatial_Geometry_CCircleChordRing_makeZ_void_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_makeZ_void_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_makeM_void_ev_real64(EarthView_World_Spatial_Geometry_CCircleChordRing_makeM_void_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_makeM_void_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setSpatialReferenceRef_void_ISpatialReference(EarthView_World_Spatial_Geometry_CCircleChordRing_setSpatialReferenceRef_void_ISpatialReference_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_setSpatialReferenceRef_void_ISpatialReference_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_clone_IGeometry(EarthView_World_Spatial_Geometry_CCircleChordRing_clone_IGeometry_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_clone_IGeometry_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isContains_ev_bool_IGeometry_EVDimensionType(EarthView_World_Spatial_Geometry_CCircleChordRing_isContains_ev_bool_IGeometry_EVDimensionType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isContains_ev_bool_IGeometry_EVDimensionType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isEquals_ev_bool_IGeometry_ev_real64_EVDimensionType(EarthView_World_Spatial_Geometry_CCircleChordRing_isEquals_ev_bool_IGeometry_ev_real64_EVDimensionType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isEquals_ev_bool_IGeometry_ev_real64_EVDimensionType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isDisjoin_ev_bool_IGeometry_EVDimensionType(EarthView_World_Spatial_Geometry_CCircleChordRing_isDisjoin_ev_bool_IGeometry_EVDimensionType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isDisjoin_ev_bool_IGeometry_EVDimensionType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isIntersects_ev_bool_IGeometry_EVDimensionType(EarthView_World_Spatial_Geometry_CCircleChordRing_isIntersects_ev_bool_IGeometry_EVDimensionType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isIntersects_ev_bool_IGeometry_EVDimensionType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isWithin_ev_bool_IGeometry_EVDimensionType(EarthView_World_Spatial_Geometry_CCircleChordRing_isWithin_ev_bool_IGeometry_EVDimensionType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isWithin_ev_bool_IGeometry_EVDimensionType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isTouches_ev_bool_IGeometry_EVDimensionType(EarthView_World_Spatial_Geometry_CCircleChordRing_isTouches_ev_bool_IGeometry_EVDimensionType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isTouches_ev_bool_IGeometry_EVDimensionType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isCrosses_ev_bool_IGeometry_EVDimensionType(EarthView_World_Spatial_Geometry_CCircleChordRing_isCrosses_ev_bool_IGeometry_EVDimensionType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isCrosses_ev_bool_IGeometry_EVDimensionType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isRelates_ev_bool_IGeometry_EVString_EVDimensionType(EarthView_World_Spatial_Geometry_CCircleChordRing_isRelates_ev_bool_IGeometry_EVString_EVDimensionType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_isRelates_ev_bool_IGeometry_EVString_EVDimensionType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_buffer_IGeometry_ev_real64_EVDimensionType(EarthView_World_Spatial_Geometry_CCircleChordRing_buffer_IGeometry_ev_real64_EVDimensionType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_buffer_IGeometry_ev_real64_EVDimensionType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_convexHull_IGeometry_EVDimensionType(EarthView_World_Spatial_Geometry_CCircleChordRing_convexHull_IGeometry_EVDimensionType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_convexHull_IGeometry_EVDimensionType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_difference_IGeometry_IGeometry_EVDimensionType(EarthView_World_Spatial_Geometry_CCircleChordRing_difference_IGeometry_IGeometry_EVDimensionType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_difference_IGeometry_IGeometry_EVDimensionType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_distance_ev_real64_IGeometry_EVDimensionType(EarthView_World_Spatial_Geometry_CCircleChordRing_distance_ev_real64_IGeometry_EVDimensionType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_distance_ev_real64_IGeometry_EVDimensionType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_intersects_IGeometry_IGeometry_EVDimensionType(EarthView_World_Spatial_Geometry_CCircleChordRing_intersects_IGeometry_IGeometry_EVDimensionType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_intersects_IGeometry_IGeometry_EVDimensionType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_overlaps_IGeometry_IGeometry_EVDimensionType(EarthView_World_Spatial_Geometry_CCircleChordRing_overlaps_IGeometry_IGeometry_EVDimensionType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_overlaps_IGeometry_IGeometry_EVDimensionType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_symDifference_IGeometry_IGeometry_EVDimensionType(EarthView_World_Spatial_Geometry_CCircleChordRing_symDifference_IGeometry_IGeometry_EVDimensionType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_symDifference_IGeometry_IGeometry_EVDimensionType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_unions_IGeometry_IGeometry_EVDimensionType(EarthView_World_Spatial_Geometry_CCircleChordRing_unions_IGeometry_IGeometry_EVDimensionType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_unions_IGeometry_IGeometry_EVDimensionType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_toWKB_void_CDataStream(EarthView_World_Spatial_Geometry_CCircleChordRing_toWKB_void_CDataStream_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_toWKB_void_CDataStream_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_toWKT_void_EVString(EarthView_World_Spatial_Geometry_CCircleChordRing_toWKT_void_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_toWKT_void_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_toStream_void_CDataStream(EarthView_World_Spatial_Geometry_CCircleChordRing_toStream_void_CDataStream_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_toStream_void_CDataStream_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_translate_void_ev_real64_ev_real64_ev_real64(EarthView_World_Spatial_Geometry_CCircleChordRing_translate_void_ev_real64_ev_real64_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_translate_void_ev_real64_ev_real64_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_rotate_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64(EarthView_World_Spatial_Geometry_CCircleChordRing_rotate_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_rotate_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_scale_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64(EarthView_World_Spatial_Geometry_CCircleChordRing_scale_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_scale_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_projects_void_ISpatialReference_ev_real64_ev_uint32(EarthView_World_Spatial_Geometry_CCircleChordRing_projects_void_ISpatialReference_ev_real64_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_projects_void_ISpatialReference_ev_real64_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getInteriorPoint_ev_bool_IGeometry(EarthView_World_Spatial_Geometry_CCircleChordRing_getInteriorPoint_ev_bool_IGeometry_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Geometry_CCircleChordRing_getInteriorPoint_ev_bool_IGeometry_Callback = pCallback;
+					}
+					virtual ev_real64 getArea() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArea_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArea_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getArea();
+					}
+					virtual EarthView::World::Spatial::Geometry::IGeometry* clone() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_clone_IGeometry_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::IGeometry* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_clone_IGeometry_Callback();
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::clone();
+					}
+					virtual EarthView::World::Spatial::Geometry::CLineString toLineString2(_in ev_uint32 smooth) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString2_CLineString_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::CLineString returnValue = *(EarthView::World::Spatial::Geometry::CLineString*)m_EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString2_CLineString_ev_uint32_Callback(smooth);
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::toLineString2(smooth);
+					}
+					virtual ev_bool isValid() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_isValid_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_isValid_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::isValid();
+					}
+					virtual EarthView::World::Spatial::Geometry::CPoint* getCenterPoint() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint_CPoint_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::CPoint* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint_CPoint_Callback();
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getCenterPoint();
+					}
+					virtual EarthView::World::Spatial::Geometry::CPoint getCenterPoint2() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint2_CPoint_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::CPoint returnValue = *(EarthView::World::Spatial::Geometry::CPoint*)m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint2_CPoint_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getCenterPoint2();
+					}
+					virtual EarthView::World::Spatial::Geometry::CPoint* getArcFromPoint() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint_CPoint_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::CPoint* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint_CPoint_Callback();
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getArcFromPoint();
+					}
+					virtual EarthView::World::Spatial::Geometry::CPoint getArcFromPoint2() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint2_CPoint_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::CPoint returnValue = *(EarthView::World::Spatial::Geometry::CPoint*)m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint2_CPoint_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getArcFromPoint2();
+					}
+					virtual EarthView::World::Spatial::Geometry::CPoint* getArcToPoint() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint_CPoint_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::CPoint* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint_CPoint_Callback();
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getArcToPoint();
+					}
+					virtual EarthView::World::Spatial::Geometry::CPoint getArcToPoint2() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint2_CPoint_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::CPoint returnValue = *(EarthView::World::Spatial::Geometry::CPoint*)m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint2_CPoint_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getArcToPoint2();
+					}
+					virtual ev_real64 getRadius() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getRadius_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getRadius_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getRadius();
+					}
+					virtual ev_real64 getFromAngle() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getFromAngle_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getFromAngle_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getFromAngle();
+					}
+					virtual ev_real64 getToAngle() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getToAngle_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getToAngle_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getToAngle();
+					}
+					virtual ev_real64 getSweepAngle() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getSweepAngle_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getSweepAngle_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getSweepAngle();
+					}
+					virtual ev_real64 getArcLength() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcLength_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcLength_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getArcLength();
+					}
+					virtual ev_real64 getChordLength() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getChordLength_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getChordLength_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getChordLength();
+					}
+					virtual ev_real64 getChordHeight() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getChordHeight_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getChordHeight_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getChordHeight();
+					}
+					virtual void setCircleArcRingByThreePoint(_in const EarthView::World::Spatial::Geometry::CPoint& fromPoint, _in const EarthView::World::Spatial::Geometry::CPoint& toPoint, _in const EarthView::World::Spatial::Geometry::CPoint& controlPoint)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByThreePoint_void_CPoint_CPoint_CPoint_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByThreePoint_void_CPoint_CPoint_CPoint_Callback(&fromPoint, &toPoint, &controlPoint);
+						}
+						else
+							return this->CCircleChordRing::setCircleArcRingByThreePoint(fromPoint, toPoint, controlPoint);
+					}
+					virtual void setCircleArcRingByRadius(_in const EarthView::World::Spatial::Geometry::CPoint& centerPoint, _in ev_real64 radius, _in ev_real64 fromAngle, _in ev_real64 sweepAngle)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByRadius_void_CPoint_ev_real64_ev_real64_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByRadius_void_CPoint_ev_real64_ev_real64_ev_real64_Callback(&centerPoint, radius, fromAngle, sweepAngle);
+						}
+						else
+							return this->CCircleChordRing::setCircleArcRingByRadius(centerPoint, radius, fromAngle, sweepAngle);
+					}
+					virtual void setCircleArcRingByTwoPoint(_in const EarthView::World::Spatial::Geometry::CPoint& centerPoint, _in const EarthView::World::Spatial::Geometry::CPoint& edgePoint, _in ev_real64 sweepAngle)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByTwoPoint_void_CPoint_CPoint_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByTwoPoint_void_CPoint_CPoint_ev_real64_Callback(&centerPoint, &edgePoint, sweepAngle);
+						}
+						else
+							return this->CCircleChordRing::setCircleArcRingByTwoPoint(centerPoint, edgePoint, sweepAngle);
+					}
+					virtual void setCenterPoint(_in const EarthView::World::Spatial::Geometry::CPoint& point)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_setCenterPoint_void_CPoint_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Geometry_CCircleChordRing_setCenterPoint_void_CPoint_Callback(&point);
+						}
+						else
+							return this->CCircleChordRing::setCenterPoint(point);
+					}
+					virtual void setRadius(_in ev_real64 value)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_setRadius_void_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Geometry_CCircleChordRing_setRadius_void_ev_real64_Callback(value);
+						}
+						else
+							return this->CCircleChordRing::setRadius(value);
+					}
+					virtual void setFromAngle(_in ev_real64 value)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_setFromAngle_void_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Geometry_CCircleChordRing_setFromAngle_void_ev_real64_Callback(value);
+						}
+						else
+							return this->CCircleChordRing::setFromAngle(value);
+					}
+					virtual void setSweepAngle(_in ev_real64 value)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_setSweepAngle_void_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Geometry_CCircleChordRing_setSweepAngle_void_ev_real64_Callback(value);
+						}
+						else
+							return this->CCircleChordRing::setSweepAngle(value);
+					}
+					virtual const EarthView::World::Spatial::Geometry::CCoordinate* getArcFromCoordinateRef() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromCoordinateRef_CCoordinate_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Spatial::Geometry::CCoordinate* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromCoordinateRef_CCoordinate_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getArcFromCoordinateRef();
+					}
+					virtual const EarthView::World::Spatial::Geometry::CCoordinate* getArcToCoordinateRef() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToCoordinateRef_CCoordinate_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Spatial::Geometry::CCoordinate* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToCoordinateRef_CCoordinate_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getArcToCoordinateRef();
+					}
+					virtual const EarthView::World::Spatial::Geometry::CCoordinate* getCenterCoordinateRef() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterCoordinateRef_CCoordinate_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Spatial::Geometry::CCoordinate* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterCoordinateRef_CCoordinate_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getCenterCoordinateRef();
+					}
+					virtual ev_int32 add(_in const EarthView::World::Spatial::Geometry::CCurve& curve, _in ev_int32 index)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_add_ev_int32_CCurve_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_int32 returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_add_ev_int32_CCurve_ev_int32_Callback(&curve, index);
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::add(curve, index);
+					}
+					virtual ev_int32 remove(_in ev_uint32 index, _in ev_int32 size)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_remove_ev_int32_ev_uint32_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_int32 returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_remove_ev_int32_ev_uint32_ev_int32_Callback(index, size);
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::remove(index, size);
+					}
+					virtual ev_int32 clear()
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_clear_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_int32 returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_clear_ev_int32_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::clear();
+					}
+					virtual EarthView::World::Spatial::Geometry::CPoint* getEndPoint() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint_CPoint_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::CPoint* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint_CPoint_Callback();
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getEndPoint();
+					}
+					virtual EarthView::World::Spatial::Geometry::CPoint getEndPoint2() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint2_CPoint_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::CPoint returnValue = *(EarthView::World::Spatial::Geometry::CPoint*)m_EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint2_CPoint_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getEndPoint2();
+					}
+					virtual ev_real64 getLength() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getLength_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getLength_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getLength();
+					}
+					virtual ev_bool isClosed() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_isClosed_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_isClosed_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::isClosed();
+					}
+					virtual ev_bool isRing() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_isRing_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_isRing_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::isRing();
+					}
+					virtual ev_bool isEmpty() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_isEmpty_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_isEmpty_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::isEmpty();
+					}
+					virtual EarthView::World::Spatial::Geometry::IGeometry* getBoundary() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getBoundary_IGeometry_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::IGeometry* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getBoundary_IGeometry_Callback();
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getBoundary();
+					}
+					virtual EarthView::World::Spatial::Geometry::IGeometry* split(_in const EarthView::World::Spatial::Geometry::IGeometry* pSplitGeom) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_split_IGeometry_IGeometry_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::IGeometry* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_split_IGeometry_IGeometry_Callback(pSplitGeom);
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::split(pSplitGeom);
+					}
+					virtual EarthView::World::Spatial::Geometry::IGeometry* clip(_in const EarthView::World::Spatial::Geometry::IGeometry* pClipLine) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_clip_IGeometry_IGeometry_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::IGeometry* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_clip_IGeometry_IGeometry_Callback(pClipLine);
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::clip(pClipLine);
+					}
+					virtual EarthView::World::Spatial::Geometry::IGeometry* smooth(_in ev_real64 tolerance, _in EarthView::World::Spatial::Geometry::EVDimensionType dimension) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_smooth_IGeometry_ev_real64_EVDimensionType_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::IGeometry* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_smooth_IGeometry_ev_real64_EVDimensionType_Callback(tolerance, (int)dimension);
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::smooth(tolerance, dimension);
+					}
+					virtual EarthView::World::Spatial::Geometry::IGeometry* snapToPoint(_in const EarthView::World::Spatial::Geometry::IGeometry* point, _in ev_real64 tolerance, _inout EarthView::World::Spatial::Geometry::EVGeometrySnapType& snap) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_snapToPoint_IGeometry_IGeometry_ev_real64_EVGeometrySnapType_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::IGeometry* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_snapToPoint_IGeometry_IGeometry_ev_real64_EVGeometrySnapType_Callback(point, tolerance, (int&)snap);
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::snapToPoint(point, tolerance, snap);
+					}
+					virtual EarthView::World::Spatial::Geometry::IGeometry* snapToSegment(_in const EarthView::World::Spatial::Geometry::IGeometry* point, _in ev_real64 tolerance) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_snapToSegment_IGeometry_IGeometry_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::IGeometry* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_snapToSegment_IGeometry_IGeometry_ev_real64_Callback(point, tolerance);
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::snapToSegment(point, tolerance);
+					}
+					virtual ev_bool addPointTo(_in const EarthView::World::Spatial::Geometry::IGeometry* cpy_point)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_addPointTo_ev_bool_IGeometry_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_addPointTo_ev_bool_IGeometry_Callback(cpy_point);
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::addPointTo(cpy_point);
+					}
+					virtual ev_uint32 getCurveCount() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveCount_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_uint32 returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveCount_ev_uint32_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getCurveCount();
+					}
+					virtual EarthView::World::Spatial::Geometry::CCurve* getCurve(_in ev_uint32 index) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurve_CCurve_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::CCurve* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurve_CCurve_ev_uint32_Callback(index);
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getCurve(index);
+					}
+					virtual const EarthView::World::Spatial::Geometry::CCurve* getCurveRef(_in ev_uint32 index) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveRef_CCurve_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Spatial::Geometry::CCurve* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveRef_CCurve_ev_uint32_Callback(index);
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getCurveRef(index);
+					}
+					virtual ev_int32 replace(_in const EarthView::World::Spatial::Geometry::CCurve& curve, _in ev_uint32 index)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_replace_ev_int32_CCurve_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_int32 returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_replace_ev_int32_CCurve_ev_uint32_Callback(&curve, index);
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::replace(curve, index);
+					}
+					virtual EarthView::World::Spatial::Geometry::CPoint* getStartPoint() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint_CPoint_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::CPoint* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint_CPoint_Callback();
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getStartPoint();
+					}
+					virtual EarthView::World::Spatial::Geometry::CPoint getStartPoint2() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint2_CPoint_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::CPoint returnValue = *(EarthView::World::Spatial::Geometry::CPoint*)m_EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint2_CPoint_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getStartPoint2();
+					}
+					virtual ev_bool reverse()
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_reverse_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_reverse_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::reverse();
+					}
+					virtual EarthView::World::Spatial::Geometry::CLineString* toLineString(_in ev_uint32 smooth) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString_CLineString_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::CLineString* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString_CLineString_ev_uint32_Callback(smooth);
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::toLineString(smooth);
+					}
+					virtual void makeZ(_in ev_real64 z)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_makeZ_void_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Geometry_CCircleChordRing_makeZ_void_ev_real64_Callback(z);
+						}
+						else
+							return this->CCircleChordRing::makeZ(z);
+					}
+					virtual void makeM(_in ev_real64 m)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_makeM_void_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Geometry_CCircleChordRing_makeM_void_ev_real64_Callback(m);
+						}
+						else
+							return this->CCircleChordRing::makeM(m);
+					}
+					virtual ev_bool isEquals(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in ev_real64 tolerance, _in EarthView::World::Spatial::Geometry::EVDimensionType dimension) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_isEquals_ev_bool_IGeometry_ev_real64_EVDimensionType_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_isEquals_ev_bool_IGeometry_ev_real64_EVDimensionType_Callback(geom, tolerance, (int)dimension);
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::isEquals(geom, tolerance, dimension);
+					}
+					virtual void translate(_in ev_real64 x, _in ev_real64 y, _in ev_real64 z)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_translate_void_ev_real64_ev_real64_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Geometry_CCircleChordRing_translate_void_ev_real64_ev_real64_ev_real64_Callback(x, y, z);
+						}
+						else
+							return this->CCircleChordRing::translate(x, y, z);
+					}
+					virtual void rotate(_in ev_real64 xRef, _in ev_real64 yRef, _in ev_real64 zRef, _in ev_real64 xAngle, _in ev_real64 yAngle, _in ev_real64 zAngle)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_rotate_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Geometry_CCircleChordRing_rotate_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_Callback(xRef, yRef, zRef, xAngle, yAngle, zAngle);
+						}
+						else
+							return this->CCircleChordRing::rotate(xRef, yRef, zRef, xAngle, yAngle, zAngle);
+					}
+					virtual void scale(_in ev_real64 xRef, _in ev_real64 yRef, _in ev_real64 zRef, _in ev_real64 x, _in ev_real64 y, _in ev_real64 z)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_scale_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Geometry_CCircleChordRing_scale_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_Callback(xRef, yRef, zRef, x, y, z);
+						}
+						else
+							return this->CCircleChordRing::scale(xRef, yRef, zRef, x, y, z);
+					}
+					virtual void projects(_in const EarthView::World::Spatial::Geometry::ISpatialReference* ref_sr, _in ev_real64* sevenParam, _in ev_uint32 count)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_projects_void_ISpatialReference_ev_real64_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Geometry_CCircleChordRing_projects_void_ISpatialReference_ev_real64_ev_uint32_Callback(ref_sr, sevenParam, count);
+						}
+						else
+							return this->CCircleChordRing::projects(ref_sr, sevenParam, count);
+					}
+					virtual void setSpatialReferenceRef(_in const EarthView::World::Spatial::Geometry::ISpatialReference* ref_sr)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_setSpatialReferenceRef_void_ISpatialReference_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Geometry_CCircleChordRing_setSpatialReferenceRef_void_ISpatialReference_Callback(ref_sr);
+						}
+						else
+							return this->CCircleChordRing::setSpatialReferenceRef(ref_sr);
+					}
+					virtual void update()
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_update_void_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Geometry_CCircleChordRing_update_void_Callback();
+						}
+						else
+							return this->CCircleChordRing::update();
+					}
+					virtual EarthView::World::Spatial::Geometry::IGeometry* mirror(_in const EarthView::World::Spatial::Geometry::IGeometry* line) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_mirror_IGeometry_IGeometry_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::IGeometry* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_mirror_IGeometry_IGeometry_Callback(line);
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::mirror(line);
+					}
+					virtual ev_bool movePointTo(_in const EarthView::World::Spatial::Geometry::IGeometry* frmPoint, _in const EarthView::World::Spatial::Geometry::IGeometry* cpy_toPoint)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_movePointTo_ev_bool_IGeometry_IGeometry_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_movePointTo_ev_bool_IGeometry_IGeometry_Callback(frmPoint, cpy_toPoint);
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::movePointTo(frmPoint, cpy_toPoint);
+					}
+					virtual ev_bool deletePoint(_in const EarthView::World::Spatial::Geometry::IGeometry* point)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_deletePoint_ev_bool_IGeometry_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_deletePoint_ev_bool_IGeometry_Callback(point);
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::deletePoint(point);
+					}
+					virtual const EarthView::World::Spatial::Geometry::IEnvelope* getEnvelopeRef() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getEnvelopeRef_IEnvelope_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Spatial::Geometry::IEnvelope* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getEnvelopeRef_IEnvelope_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getEnvelopeRef();
+					}
+					virtual const EarthView::World::Spatial::Geometry::ISpatialReference* getSpatialReferenceRef() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getSpatialReferenceRef_ISpatialReference_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Spatial::Geometry::ISpatialReference* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getSpatialReferenceRef_ISpatialReference_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getSpatialReferenceRef();
+					}
+					virtual EarthView::World::Spatial::Geometry::EVGeometryType getGeometryType() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getGeometryType_EVGeometryType_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::EVGeometryType returnValue = (EarthView::World::Spatial::Geometry::EVGeometryType)m_EarthView_World_Spatial_Geometry_CCircleChordRing_getGeometryType_EVGeometryType_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getGeometryType();
+					}
+					virtual EarthView::World::Spatial::Geometry::EVWKBGeometryType getWKBGeometryType() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getWKBGeometryType_EVWKBGeometryType_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::EVWKBGeometryType returnValue = (EarthView::World::Spatial::Geometry::EVWKBGeometryType)m_EarthView_World_Spatial_Geometry_CCircleChordRing_getWKBGeometryType_EVWKBGeometryType_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getWKBGeometryType();
+					}
+					virtual ev_bool isSimple() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_isSimple_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_isSimple_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::isSimple();
+					}
+					virtual void simplify()
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_simplify_void_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Geometry_CCircleChordRing_simplify_void_Callback();
+						}
+						else
+							return this->CCircleChordRing::simplify();
+					}
+					virtual EarthView::World::Spatial::Geometry::IGeometry* buffer(_in ev_real64 tolerance, _in EarthView::World::Spatial::Geometry::EVDimensionType dimension) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_buffer_IGeometry_ev_real64_EVDimensionType_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::IGeometry* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_buffer_IGeometry_ev_real64_EVDimensionType_Callback(tolerance, (int)dimension);
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::buffer(tolerance, dimension);
+					}
+					virtual ev_bool isContains(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in EarthView::World::Spatial::Geometry::EVDimensionType dimension) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_isContains_ev_bool_IGeometry_EVDimensionType_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_isContains_ev_bool_IGeometry_EVDimensionType_Callback(geom, (int)dimension);
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::isContains(geom, dimension);
+					}
+					virtual ev_bool isDisjoin(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in EarthView::World::Spatial::Geometry::EVDimensionType dimension) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_isDisjoin_ev_bool_IGeometry_EVDimensionType_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_isDisjoin_ev_bool_IGeometry_EVDimensionType_Callback(geom, (int)dimension);
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::isDisjoin(geom, dimension);
+					}
+					virtual ev_bool isIntersects(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in EarthView::World::Spatial::Geometry::EVDimensionType dimension) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_isIntersects_ev_bool_IGeometry_EVDimensionType_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_isIntersects_ev_bool_IGeometry_EVDimensionType_Callback(geom, (int)dimension);
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::isIntersects(geom, dimension);
+					}
+					virtual ev_bool isWithin(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in EarthView::World::Spatial::Geometry::EVDimensionType dimension) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_isWithin_ev_bool_IGeometry_EVDimensionType_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_isWithin_ev_bool_IGeometry_EVDimensionType_Callback(geom, (int)dimension);
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::isWithin(geom, dimension);
+					}
+					virtual ev_bool isTouches(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in EarthView::World::Spatial::Geometry::EVDimensionType dimension) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_isTouches_ev_bool_IGeometry_EVDimensionType_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_isTouches_ev_bool_IGeometry_EVDimensionType_Callback(geom, (int)dimension);
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::isTouches(geom, dimension);
+					}
+					virtual ev_bool isCrosses(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in EarthView::World::Spatial::Geometry::EVDimensionType dimension) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_isCrosses_ev_bool_IGeometry_EVDimensionType_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_isCrosses_ev_bool_IGeometry_EVDimensionType_Callback(geom, (int)dimension);
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::isCrosses(geom, dimension);
+					}
+					virtual ev_bool isRelates(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in EVString relateMatrix, _in EarthView::World::Spatial::Geometry::EVDimensionType dimension) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_isRelates_ev_bool_IGeometry_EVString_EVDimensionType_Callback != NULL && this->isCustomExtend())
+						{
+							char* relateMatrix_Char = relateMatrix.makeBuffer();
+							ev_bool returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_isRelates_ev_bool_IGeometry_EVString_EVDimensionType_Callback(geom, relateMatrix_Char, (int)dimension);
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::isRelates(geom, relateMatrix, dimension);
+					}
+					virtual EarthView::World::Spatial::Geometry::IGeometry* convexHull(_in EarthView::World::Spatial::Geometry::EVDimensionType dimension) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_convexHull_IGeometry_EVDimensionType_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::IGeometry* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_convexHull_IGeometry_EVDimensionType_Callback((int)dimension);
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::convexHull(dimension);
+					}
+					virtual EarthView::World::Spatial::Geometry::IGeometry* difference(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in EarthView::World::Spatial::Geometry::EVDimensionType dimension) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_difference_IGeometry_IGeometry_EVDimensionType_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::IGeometry* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_difference_IGeometry_IGeometry_EVDimensionType_Callback(geom, (int)dimension);
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::difference(geom, dimension);
+					}
+					virtual ev_real64 distance(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in EarthView::World::Spatial::Geometry::EVDimensionType dimension) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_distance_ev_real64_IGeometry_EVDimensionType_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_distance_ev_real64_IGeometry_EVDimensionType_Callback(geom, (int)dimension);
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::distance(geom, dimension);
+					}
+					virtual EarthView::World::Spatial::Geometry::IGeometry* intersects(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in EarthView::World::Spatial::Geometry::EVDimensionType dimension) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_intersects_IGeometry_IGeometry_EVDimensionType_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::IGeometry* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_intersects_IGeometry_IGeometry_EVDimensionType_Callback(geom, (int)dimension);
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::intersects(geom, dimension);
+					}
+					virtual EarthView::World::Spatial::Geometry::IGeometry* overlaps(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in EarthView::World::Spatial::Geometry::EVDimensionType dimension) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_overlaps_IGeometry_IGeometry_EVDimensionType_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::IGeometry* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_overlaps_IGeometry_IGeometry_EVDimensionType_Callback(geom, (int)dimension);
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::overlaps(geom, dimension);
+					}
+					virtual EarthView::World::Spatial::Geometry::IGeometry* symDifference(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in EarthView::World::Spatial::Geometry::EVDimensionType dimension) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_symDifference_IGeometry_IGeometry_EVDimensionType_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::IGeometry* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_symDifference_IGeometry_IGeometry_EVDimensionType_Callback(geom, (int)dimension);
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::symDifference(geom, dimension);
+					}
+					virtual EarthView::World::Spatial::Geometry::IGeometry* unions(_in const EarthView::World::Spatial::Geometry::IGeometry* geom, _in EarthView::World::Spatial::Geometry::EVDimensionType dimension) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_unions_IGeometry_IGeometry_EVDimensionType_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::IGeometry* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_unions_IGeometry_IGeometry_EVDimensionType_Callback(geom, (int)dimension);
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::unions(geom, dimension);
+					}
+					virtual void toWKB(_inout EarthView::World::Core::CDataStream& stream) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_toWKB_void_CDataStream_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Geometry_CCircleChordRing_toWKB_void_CDataStream_Callback(&stream);
+						}
+						else
+							return this->CCircleChordRing::toWKB(stream);
+					}
+					virtual void toWKT(_inout EVString& wkt) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_toWKT_void_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							char* wkt_Char = wkt.makeBuffer();
+							m_EarthView_World_Spatial_Geometry_CCircleChordRing_toWKT_void_EVString_Callback(wkt_Char);
+							wkt = wkt_Char;
+							if(wkt_Char != NULL){ delete[] wkt_Char;wkt_Char = NULL;}
+						}
+						else
+							return this->CCircleChordRing::toWKT(wkt);
+					}
+					virtual void toStream(_inout EarthView::World::Core::CDataStream& stream) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_toStream_void_CDataStream_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Geometry_CCircleChordRing_toStream_void_CDataStream_Callback(&stream);
+						}
+						else
+							return this->CCircleChordRing::toStream(stream);
+					}
+					virtual ev_bool isDirty() const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_isDirty_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_isDirty_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::isDirty();
+					}
+					virtual void setDirty(_in ev_bool dirty)
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_setDirty_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Geometry_CCircleChordRing_setDirty_void_ev_bool_Callback(dirty);
+						}
+						else
+							return this->CCircleChordRing::setDirty(dirty);
+					}
+					virtual EarthView::World::Spatial::Geometry::IGeometry* resample(_in ev_real64 tolerance, _in EarthView::World::Spatial::Geometry::EVDimensionType dimension) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_resample_IGeometry_ev_real64_EVDimensionType_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::IGeometry* returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_resample_IGeometry_ev_real64_EVDimensionType_Callback(tolerance, (int)dimension);
+							if(returnValue != NULL) {
+								((EarthView::World::Core::CBaseObject*)returnValue)->setExternFree(false);
+							}
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::resample(tolerance, dimension);
+					}
+					virtual ev_bool getInteriorPoint(_in EarthView::World::Spatial::Geometry::IGeometry* point) const
+					{
+						if(m_EarthView_World_Spatial_Geometry_CCircleChordRing_getInteriorPoint_ev_bool_IGeometry_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Geometry_CCircleChordRing_getInteriorPoint_ev_bool_IGeometry_Callback(point);
+							return returnValue;
+						}
+						else
+							return this->CCircleChordRing::getInteriorPoint(point);
+					}
+				};
+				REGISTER_FACTORY_CLASS(CCircleChordRingProxy);
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getArea_ev_real64(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Geometry::CCircleChordRing* ptrNativeObject = (EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX;
+					if (dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*)ptrNativeObject) != NULL)
+					{
+						ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial::Geometry::CCircleChordRing::getArea();
+						return objXXXX;
+					}
+					else
+					{
+						ev_real64 objXXXX = ptrNativeObject->getArea();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArea_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getArea_ev_real64_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArea_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_getArea_ev_real64_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Geometry::CCircleChordRing* ptrNativeObject = (EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX;
+					ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial::Geometry::CCircleChordRing::getArea();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  EarthView::World::Spatial::Geometry::IGeometry*  _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_clone_IGeometry(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Geometry::CCircleChordRing* ptrNativeObject = (EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX;
+					if (dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*)ptrNativeObject) != NULL)
+					{
+						EarthView::World::Spatial::Geometry::IGeometry* objXXXX = ptrNativeObject->EarthView::World::Spatial::Geometry::CCircleChordRing::clone();
+						if(objXXXX != NULL) {
+							((EarthView::World::Core::CBaseObject*)objXXXX)->setExternFree(true);
+						}
+						return objXXXX;
+					}
+					else
+					{
+						EarthView::World::Spatial::Geometry::IGeometry* objXXXX = ptrNativeObject->clone();
+						if(objXXXX != NULL) {
+							((EarthView::World::Core::CBaseObject*)objXXXX)->setExternFree(true);
+						}
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_clone_IGeometry( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_clone_IGeometry_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_clone_IGeometry(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  EarthView::World::Spatial::Geometry::IGeometry*  _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_clone_IGeometry_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Geometry::CCircleChordRing* ptrNativeObject = (EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX;
+					EarthView::World::Spatial::Geometry::IGeometry* objXXXX = ptrNativeObject->EarthView::World::Spatial::Geometry::CCircleChordRing::clone();
+					if(objXXXX != NULL) {
+						((EarthView::World::Core::CBaseObject*)objXXXX)->setExternFree(true);
+					}
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString2_CLineString_ev_uint32(void *pObjectXXXX, _in ev_uint32 smooth )
+				{
+					const EarthView::World::Spatial::Geometry::CCircleChordRing* ptrNativeObject = (EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX;
+					if (dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*)ptrNativeObject) != NULL)
+					{
+						EarthView::World::Spatial::Geometry::CLineString objXXXX = ptrNativeObject->EarthView::World::Spatial::Geometry::CCircleChordRing::toLineString2(smooth);
+						EarthView::World::Spatial::Geometry::CLineString *pXXXX = new EarthView::World::Spatial::Geometry::CLineString(objXXXX);
+						((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+						return (void*)pXXXX;
+					}
+					else
+					{
+						EarthView::World::Spatial::Geometry::CLineString objXXXX = ptrNativeObject->toLineString2(smooth);
+						EarthView::World::Spatial::Geometry::CLineString *pXXXX = new EarthView::World::Spatial::Geometry::CLineString(objXXXX);
+						((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+						return (void*)pXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString2_CLineString_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString2_CLineString_ev_uint32_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString2_CLineString_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString2_CLineString_ev_uint32_NoVirtual(void *pObjectXXXX, _in ev_uint32 smooth )
+				{
+					const EarthView::World::Spatial::Geometry::CCircleChordRing* ptrNativeObject = (EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX;
+					EarthView::World::Spatial::Geometry::CLineString objXXXX = ptrNativeObject->EarthView::World::Spatial::Geometry::CCircleChordRing::toLineString2(smooth);
+					EarthView::World::Spatial::Geometry::CLineString *pXXXX = new EarthView::World::Spatial::Geometry::CLineString(objXXXX);
+					((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+					return (void*)pXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_clone2_CCircleChordRing(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Geometry::CCircleChordRing* ptrNativeObject = (EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX;
+					EarthView::World::Spatial::Geometry::CCircleChordRing objXXXX = ptrNativeObject->clone2();
+					EarthView::World::Spatial::Geometry::CCircleChordRing *pXXXX = new EarthView::World::Spatial::Geometry::CCircleChordRing(objXXXX);
+					((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+					return (void*)pXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Spatial_Geometry_CCircleChordRing_OperatorAssign_CCircleChordRing_CCircleChordRing(void *pObjXXXX, _in const void* obj )
+				{
+					EarthView::World::Spatial::Geometry::CCircleChordRing& objXXXX = *((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjXXXX);
+					objXXXX = *(EarthView::World::Spatial::Geometry::CCircleChordRing*)obj;
+					EarthView::World::Spatial::Geometry::CCircleChordRing *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint_CPoint( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint_CPoint_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint_CPoint(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint2_CPoint( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint2_CPoint_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterPoint2_CPoint(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint_CPoint( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint_CPoint_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint_CPoint(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint2_CPoint( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint2_CPoint_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromPoint2_CPoint(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint_CPoint( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint_CPoint_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint_CPoint(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint2_CPoint( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint2_CPoint_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToPoint2_CPoint(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getRadius_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getRadius_ev_real64_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getRadius_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getFromAngle_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getFromAngle_ev_real64_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getFromAngle_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getToAngle_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getToAngle_ev_real64_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getToAngle_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getSweepAngle_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getSweepAngle_ev_real64_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getSweepAngle_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcLength_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getArcLength_ev_real64_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcLength_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getChordLength_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getChordLength_ev_real64_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getChordLength_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getChordHeight_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getChordHeight_ev_real64_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getChordHeight_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByThreePoint_void_CPoint_CPoint_CPoint( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByThreePoint_void_CPoint_CPoint_CPoint_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByThreePoint_void_CPoint_CPoint_CPoint(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByRadius_void_CPoint_ev_real64_ev_real64_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByRadius_void_CPoint_ev_real64_ev_real64_ev_real64_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByRadius_void_CPoint_ev_real64_ev_real64_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByTwoPoint_void_CPoint_CPoint_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByTwoPoint_void_CPoint_CPoint_ev_real64_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setCircleArcRingByTwoPoint_void_CPoint_CPoint_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setCenterPoint_void_CPoint( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_setCenterPoint_void_CPoint_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setCenterPoint_void_CPoint(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setRadius_void_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_setRadius_void_ev_real64_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setRadius_void_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setFromAngle_void_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_setFromAngle_void_ev_real64_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setFromAngle_void_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setSweepAngle_void_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_setSweepAngle_void_ev_real64_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setSweepAngle_void_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromCoordinateRef_CCoordinate( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromCoordinateRef_CCoordinate_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcFromCoordinateRef_CCoordinate(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToCoordinateRef_CCoordinate( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToCoordinateRef_CCoordinate_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getArcToCoordinateRef_CCoordinate(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterCoordinateRef_CCoordinate( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterCoordinateRef_CCoordinate_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getCenterCoordinateRef_CCoordinate(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveCount_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveCount_ev_uint32_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveCount_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurve_CCurve_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getCurve_CCurve_ev_uint32_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurve_CCurve_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveRef_CCurve_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveRef_CCurve_ev_uint32_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getCurveRef_CCurve_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_add_ev_int32_CCurve_ev_int32( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_add_ev_int32_CCurve_ev_int32_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_add_ev_int32_CCurve_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_remove_ev_int32_ev_uint32_ev_int32( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_remove_ev_int32_ev_uint32_ev_int32_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_remove_ev_int32_ev_uint32_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_clear_ev_int32( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_clear_ev_int32_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_clear_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_replace_ev_int32_CCurve_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_replace_ev_int32_CCurve_ev_uint32_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_replace_ev_int32_CCurve_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint_CPoint( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint_CPoint_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint_CPoint(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint2_CPoint( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint2_CPoint_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getStartPoint2_CPoint(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint_CPoint( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint_CPoint_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint_CPoint(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint2_CPoint( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint2_CPoint_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getEndPoint2_CPoint(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getLength_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getLength_ev_real64_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getLength_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isClosed_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_isClosed_ev_bool_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isClosed_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isRing_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_isRing_ev_bool_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isRing_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_reverse_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_reverse_ev_bool_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_reverse_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString_CLineString_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString_CLineString_ev_uint32_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_toLineString_CLineString_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isDirty_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_isDirty_ev_bool_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isDirty_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setDirty_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_setDirty_void_ev_bool_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setDirty_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_update_void( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_update_void_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_update_void(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_resample_IGeometry_ev_real64_EVDimensionType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_resample_IGeometry_ev_real64_EVDimensionType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_resample_IGeometry_ev_real64_EVDimensionType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_mirror_IGeometry_IGeometry( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_mirror_IGeometry_IGeometry_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_mirror_IGeometry_IGeometry(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_split_IGeometry_IGeometry( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_split_IGeometry_IGeometry_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_split_IGeometry_IGeometry(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_clip_IGeometry_IGeometry( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_clip_IGeometry_IGeometry_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_clip_IGeometry_IGeometry(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_smooth_IGeometry_ev_real64_EVDimensionType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_smooth_IGeometry_ev_real64_EVDimensionType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_smooth_IGeometry_ev_real64_EVDimensionType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_snapToPoint_IGeometry_IGeometry_ev_real64_EVGeometrySnapType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_snapToPoint_IGeometry_IGeometry_ev_real64_EVGeometrySnapType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_snapToPoint_IGeometry_IGeometry_ev_real64_EVGeometrySnapType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_snapToSegment_IGeometry_IGeometry_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_snapToSegment_IGeometry_IGeometry_ev_real64_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_snapToSegment_IGeometry_IGeometry_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_movePointTo_ev_bool_IGeometry_IGeometry( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_movePointTo_ev_bool_IGeometry_IGeometry_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_movePointTo_ev_bool_IGeometry_IGeometry(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_addPointTo_ev_bool_IGeometry( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_addPointTo_ev_bool_IGeometry_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_addPointTo_ev_bool_IGeometry(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_deletePoint_ev_bool_IGeometry( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_deletePoint_ev_bool_IGeometry_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_deletePoint_ev_bool_IGeometry(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getEnvelopeRef_IEnvelope( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getEnvelopeRef_IEnvelope_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getEnvelopeRef_IEnvelope(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getSpatialReferenceRef_ISpatialReference( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getSpatialReferenceRef_ISpatialReference_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getSpatialReferenceRef_ISpatialReference(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getGeometryType_EVGeometryType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getGeometryType_EVGeometryType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getGeometryType_EVGeometryType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getWKBGeometryType_EVWKBGeometryType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getWKBGeometryType_EVWKBGeometryType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getWKBGeometryType_EVWKBGeometryType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isValid_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_isValid_ev_bool_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isValid_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isEmpty_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_isEmpty_ev_bool_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isEmpty_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isSimple_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_isSimple_ev_bool_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isSimple_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_simplify_void( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_simplify_void_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_simplify_void(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getBoundary_IGeometry( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getBoundary_IGeometry_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getBoundary_IGeometry(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_makeZ_void_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_makeZ_void_ev_real64_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_makeZ_void_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_makeM_void_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_makeM_void_ev_real64_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_makeM_void_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setSpatialReferenceRef_void_ISpatialReference( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_setSpatialReferenceRef_void_ISpatialReference_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_setSpatialReferenceRef_void_ISpatialReference(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isContains_ev_bool_IGeometry_EVDimensionType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_isContains_ev_bool_IGeometry_EVDimensionType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isContains_ev_bool_IGeometry_EVDimensionType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isEquals_ev_bool_IGeometry_ev_real64_EVDimensionType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_isEquals_ev_bool_IGeometry_ev_real64_EVDimensionType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isEquals_ev_bool_IGeometry_ev_real64_EVDimensionType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isDisjoin_ev_bool_IGeometry_EVDimensionType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_isDisjoin_ev_bool_IGeometry_EVDimensionType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isDisjoin_ev_bool_IGeometry_EVDimensionType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isIntersects_ev_bool_IGeometry_EVDimensionType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_isIntersects_ev_bool_IGeometry_EVDimensionType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isIntersects_ev_bool_IGeometry_EVDimensionType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isWithin_ev_bool_IGeometry_EVDimensionType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_isWithin_ev_bool_IGeometry_EVDimensionType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isWithin_ev_bool_IGeometry_EVDimensionType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isTouches_ev_bool_IGeometry_EVDimensionType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_isTouches_ev_bool_IGeometry_EVDimensionType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isTouches_ev_bool_IGeometry_EVDimensionType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isCrosses_ev_bool_IGeometry_EVDimensionType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_isCrosses_ev_bool_IGeometry_EVDimensionType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isCrosses_ev_bool_IGeometry_EVDimensionType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isRelates_ev_bool_IGeometry_EVString_EVDimensionType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_isRelates_ev_bool_IGeometry_EVString_EVDimensionType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_isRelates_ev_bool_IGeometry_EVString_EVDimensionType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_buffer_IGeometry_ev_real64_EVDimensionType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_buffer_IGeometry_ev_real64_EVDimensionType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_buffer_IGeometry_ev_real64_EVDimensionType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_convexHull_IGeometry_EVDimensionType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_convexHull_IGeometry_EVDimensionType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_convexHull_IGeometry_EVDimensionType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_difference_IGeometry_IGeometry_EVDimensionType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_difference_IGeometry_IGeometry_EVDimensionType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_difference_IGeometry_IGeometry_EVDimensionType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_distance_ev_real64_IGeometry_EVDimensionType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_distance_ev_real64_IGeometry_EVDimensionType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_distance_ev_real64_IGeometry_EVDimensionType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_intersects_IGeometry_IGeometry_EVDimensionType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_intersects_IGeometry_IGeometry_EVDimensionType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_intersects_IGeometry_IGeometry_EVDimensionType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_overlaps_IGeometry_IGeometry_EVDimensionType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_overlaps_IGeometry_IGeometry_EVDimensionType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_overlaps_IGeometry_IGeometry_EVDimensionType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_symDifference_IGeometry_IGeometry_EVDimensionType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_symDifference_IGeometry_IGeometry_EVDimensionType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_symDifference_IGeometry_IGeometry_EVDimensionType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_unions_IGeometry_IGeometry_EVDimensionType( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_unions_IGeometry_IGeometry_EVDimensionType_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_unions_IGeometry_IGeometry_EVDimensionType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_toWKB_void_CDataStream( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_toWKB_void_CDataStream_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_toWKB_void_CDataStream(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_toWKT_void_EVString( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_toWKT_void_EVString_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_toWKT_void_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_toStream_void_CDataStream( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_toStream_void_CDataStream_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_toStream_void_CDataStream(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_translate_void_ev_real64_ev_real64_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_translate_void_ev_real64_ev_real64_ev_real64_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_translate_void_ev_real64_ev_real64_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_rotate_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_rotate_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_rotate_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_scale_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_scale_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_scale_void_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_projects_void_ISpatialReference_ev_real64_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_projects_void_ISpatialReference_ev_real64_ev_uint32_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_projects_void_ISpatialReference_ev_real64_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getInteriorPoint_ev_bool_IGeometry( void *pObjectXXXX, EarthView_World_Spatial_Geometry_CCircleChordRing_getInteriorPoint_ev_bool_IGeometry_Callback* pCallback )
+				{
+					CCircleChordRingProxy* ptr = dynamic_cast<CCircleChordRingProxy*>((EarthView::World::Spatial::Geometry::CCircleChordRing*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Geometry_CCircleChordRing_getInteriorPoint_ev_bool_IGeometry(pCallback);
+					}
+				}
+			}
+		}
+	}
+}

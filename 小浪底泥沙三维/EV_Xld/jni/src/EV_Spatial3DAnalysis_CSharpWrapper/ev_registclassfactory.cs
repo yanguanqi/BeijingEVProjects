@@ -1,0 +1,92 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Runtime.InteropServices;
+
+public static class EV_Spatial3DAnalysis_ClassFactory
+{
+	public static void RegisterAll()
+	{
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAltitudeListener", new EarthView.World.Spatial3D.Analysis.AltitudeListenerClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAltitudeListenerProxy", new EarthView.World.Spatial3D.Analysis.AltitudeListenerClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DListener", new EarthView.World.Spatial3D.Analysis.Analysis3DListenerClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DListenerProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DListenerClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DMeasureArea", new EarthView.World.Spatial3D.Analysis.Analysis3DMeasureAreaClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DMeasureAreaProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DMeasureAreaClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DMeasureAreaParam", new EarthView.World.Spatial3D.Analysis.Analysis3DMeasureAreaParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DMeasureAreaParamProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DMeasureAreaParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DMeasureAzimuth", new EarthView.World.Spatial3D.Analysis.Analysis3DMeasureAzimuthClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DMeasureAzimuthProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DMeasureAzimuthClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DMeasureAzimuthParam", new EarthView.World.Spatial3D.Analysis.Analysis3DMeasureAzimuthParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DMeasureAzimuthParamProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DMeasureAzimuthParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DMeasureHeight", new EarthView.World.Spatial3D.Analysis.Analysis3DMeasureHeightClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DMeasureHeightProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DMeasureHeightClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DMeasureHeightParam", new EarthView.World.Spatial3D.Analysis.Analysis3DMeasureHeightParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DMeasureHeightParamProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DMeasureHeightParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DMeasureLength", new EarthView.World.Spatial3D.Analysis.Analysis3DMeasureLengthClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DMeasureLengthProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DMeasureLengthClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DMeasureLengthParam", new EarthView.World.Spatial3D.Analysis.Analysis3DMeasureLengthParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DMeasureLengthParamProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DMeasureLengthParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DMeasurePoint", new EarthView.World.Spatial3D.Analysis.Analysis3DMeasurePointClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DMeasurePointProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DMeasurePointClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DMeasurePointParam", new EarthView.World.Spatial3D.Analysis.Analysis3DMeasurePointParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DMeasurePointParamProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DMeasurePointParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DRegionFlood", new EarthView.World.Spatial3D.Analysis.Analysis3DRegionFloodClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DRegionFloodProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DRegionFloodClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DRegionFloodParam", new EarthView.World.Spatial3D.Analysis.Analysis3DRegionFloodParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DRegionFloodParamProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DRegionFloodParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSection", new EarthView.World.Spatial3D.Analysis.Analysis3DSectionClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSectionProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DSectionClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSectionParam", new EarthView.World.Spatial3D.Analysis.Analysis3DSectionParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSectionParamProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DSectionParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSlope", new EarthView.World.Spatial3D.Analysis.Analysis3DSlopeClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSlopeProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DSlopeClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSlopeParam", new EarthView.World.Spatial3D.Analysis.Analysis3DSlopeParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSlopeParamProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DSlopeParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::Point2PointTarget", new EarthView.World.Spatial3D.Analysis.Point2PointTargetClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::Point2PointTargetList", new EarthView.World.Spatial3D.Analysis.Point2PointTargetListClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::Point2PointParam", new EarthView.World.Spatial3D.Analysis.Point2PointParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::Point2LineParam", new EarthView.World.Spatial3D.Analysis.Point2LineParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::Point2AreaParam", new EarthView.World.Spatial3D.Analysis.Point2AreaParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DVisibility", new EarthView.World.Spatial3D.Analysis.Analysis3DVisibilityClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DVisibilityProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DVisibilityClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DVisibilityParam", new EarthView.World.Spatial3D.Analysis.Analysis3DVisibilityParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DVisibilityParamProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DVisibilityParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DVolume", new EarthView.World.Spatial3D.Analysis.Analysis3DVolumeClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DVolumeProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DVolumeClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DVolumeParam", new EarthView.World.Spatial3D.Analysis.Analysis3DVolumeParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DVolumeParamProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DVolumeParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommand3DMeasureArea", new EarthView.World.Spatial3D.Analysis.Command3DMeasureAreaClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommand3DMeasureAreaProxy", new EarthView.World.Spatial3D.Analysis.Command3DMeasureAreaClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommand3DMeasureAzimuth", new EarthView.World.Spatial3D.Analysis.Command3DMeasureAzimuthClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommand3DMeasureAzimuthProxy", new EarthView.World.Spatial3D.Analysis.Command3DMeasureAzimuthClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommand3DMeasureLength", new EarthView.World.Spatial3D.Analysis.Command3DMeasureLengthClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommand3DMeasureLengthProxy", new EarthView.World.Spatial3D.Analysis.Command3DMeasureLengthClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommand3DMeasurePoint", new EarthView.World.Spatial3D.Analysis.Command3DMeasurePointClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommand3DMeasurePointProxy", new EarthView.World.Spatial3D.Analysis.Command3DMeasurePointClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommand3DMeasureVertical", new EarthView.World.Spatial3D.Analysis.Command3DMeasureVerticalClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommand3DMeasureVerticalProxy", new EarthView.World.Spatial3D.Analysis.Command3DMeasureVerticalClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DRegionFlood", new EarthView.World.Spatial3D.Analysis.CommandAnalysis3DRegionFloodClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DRegionFloodProxy", new EarthView.World.Spatial3D.Analysis.CommandAnalysis3DRegionFloodClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DSection", new EarthView.World.Spatial3D.Analysis.CommandAnalysis3DSectionClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DSectionProxy", new EarthView.World.Spatial3D.Analysis.CommandAnalysis3DSectionClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DSlope", new EarthView.World.Spatial3D.Analysis.CommandAnalysis3DSlopeClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DSlopeProxy", new EarthView.World.Spatial3D.Analysis.CommandAnalysis3DSlopeClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DVisibility", new EarthView.World.Spatial3D.Analysis.CommandAnalysis3DVisibilityClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DVisibilityProxy", new EarthView.World.Spatial3D.Analysis.CommandAnalysis3DVisibilityClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DVolume", new EarthView.World.Spatial3D.Analysis.CommandAnalysis3DVolumeClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DVolumeProxy", new EarthView.World.Spatial3D.Analysis.CommandAnalysis3DVolumeClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CSpatial3DManualObject", new EarthView.World.Spatial3D.Analysis.Spatial3DManualObjectClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CSpatial3DManualObjectProxy", new EarthView.World.Spatial3D.Analysis.Spatial3DManualObjectClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CSpatial3DManualObject::CSubRenderable", new EarthView.World.Spatial3D.Analysis.Spatial3DManualObject.SubRenderableClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CSpatial3DManualObject::CSubRenderableProxy", new EarthView.World.Spatial3D.Analysis.Spatial3DManualObject.SubRenderableClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DEvent", new EarthView.World.Spatial3D.Analysis.Analysis3DEventClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DEventObject", new EarthView.World.Spatial3D.Analysis.Analysis3DEventObjectClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DEventObjectProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DEventObjectClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::IAnalysis3DTool", new EarthView.World.Spatial3D.Analysis.Ianalysis3dtoolClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::IAnalysis3DToolProxy", new EarthView.World.Spatial3D.Analysis.Ianalysis3dtoolClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysisCameraListener", new EarthView.World.Spatial3D.Analysis.AnalysisCameraListenerClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysisCameraListenerProxy", new EarthView.World.Spatial3D.Analysis.AnalysisCameraListenerClassFactory());
+	}
+}
+

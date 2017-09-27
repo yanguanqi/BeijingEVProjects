@@ -1,0 +1,2813 @@
+/* This file is produced by the P/Invoke AutoWrapper Utility 
+ Copyright (c) 2012 by EarthView Image Inc */
+#include "spatialinterface/ichartoption.h"
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Spatial
+		{
+			namespace Display
+			{
+				typedef int  ( _stdcall EarthView_World_Spatial_Display_IChartOption_getChartPointType_EVChartLookUpType_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setChartPointType_void_EVChartLookUpType_Callback)(_in int type);
+				typedef int  ( _stdcall EarthView_World_Spatial_Display_IChartOption_getChartAreaType_EVChartLookUpType_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setChartAreaType_void_EVChartLookUpType_Callback)(_in int type);
+				typedef int  ( _stdcall EarthView_World_Spatial_Display_IChartOption_getCartoAssistLineType_EVChartSimpleLineType_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setCartoAssistLineType_void_EVChartSimpleLineType_Callback)(_in int type);
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setColorType_void_EVChartColorType_Callback)(_in int type);
+				typedef int  ( _stdcall EarthView_World_Spatial_Display_IChartOption_getColorType_EVChartColorType_Callback)();
+				typedef int  ( _stdcall EarthView_World_Spatial_Display_IChartOption_getDisplayCategory_EVChartDisplayCategory_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setDisplayCategory_void_EVChartDisplayCategory_Callback)(_in int category);
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Display_IChartOption_getSafetyDeep_ev_real64_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setSafetyDeep_void_ev_real64_Callback)(_in ev_real64 value);
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Display_IChartOption_getSafetyContour_ev_real64_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setSafetyContour_void_ev_real64_Callback)(_in ev_real64 value);
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Display_IChartOption_getShallowContour_ev_real64_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setShallowContour_void_ev_real64_Callback)(_in ev_real64 value);
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Display_IChartOption_getDeepContour_ev_real64_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setDeepContour_void_ev_real64_Callback)(_in ev_real64 value);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Display_IChartOption_isTwoShadesOn_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setTwoShadesValue_void_ev_bool_Callback)(_in ev_bool value);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Display_IChartOption_isShallowPatternOn_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setShallowPatternValue_void_ev_bool_Callback)(_in ev_bool value);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Display_IChartOption_isShipOutlineOn_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setShipOutlineValue_void_ev_bool_Callback)(_in ev_bool value);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Display_IChartOption_isFullSectorsOn_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setFullSectorsValue_void_ev_bool_Callback)(_in ev_bool value);
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Display_IChartOption_getDistanceTag_ev_real64_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setDistanceTag_void_ev_real64_Callback)(_in ev_real64 value);
+				typedef ev_int32  ( _stdcall EarthView_World_Spatial_Display_IChartOption_getTimeTags_ev_int32_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setTimeTages_void_ev_int32_Callback)(_in ev_int32 value);
+				typedef ev_int32  ( _stdcall EarthView_World_Spatial_Display_IChartOption_getSymbolGroup_ev_int32_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setSymbolGroup_void_ev_int32_Callback)(_in ev_int32 value);
+				typedef ev_int32  ( _stdcall EarthView_World_Spatial_Display_IChartOption_getTextGroup_ev_int32_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setTextGroup_void_ev_int32_Callback)(_in ev_int32 group);
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Display_IChartOption_getChartScale_ev_real64_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setChartScale_void_ev_real64_Callback)(_in ev_real64 scale);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Display_IChartOption_isShowOtherVessel_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setShowOtherVesselValue_void_ev_bool_Callback)(_in ev_bool value);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Display_IChartOption_isShowCourseSpeedVessel_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setShowCourseSpeedVesselValue_void_ev_bool_Callback)(_in ev_bool value);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Display_IChartOption_isShowBeamBearingLine_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setShowBeamBearingLineValue_void_ev_bool_Callback)(_in ev_bool value);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Display_IChartOption_isShowStabilization_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setShowStabilizationValue_void_ev_bool_Callback)(_in ev_bool value);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Display_IChartOption_isShowTimeMarks_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setShowTimeMarksValue_void_ev_bool_Callback)(_in ev_bool value);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Display_IChartOption_isShowHeadingLine_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setShowHeadingLineValue_void_ev_bool_Callback)(_in ev_bool value);
+				typedef ev_int32  ( _stdcall EarthView_World_Spatial_Display_IChartOption_getShipBeamLengthValue_ev_int32_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setShipBeamLengthValue_void_ev_int32_Callback)(_in ev_int32 value);
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_insertVRMRadius_void_ev_real64_Callback)(_in ev_real64 radius);
+				typedef ev_uint32  ( _stdcall EarthView_World_Spatial_Display_IChartOption_getVRMRadiusNum_ev_uint32_Callback)();
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Display_IChartOption_getVRMRadiusValue_ev_real64_ev_uint32_Callback)(_in ev_uint32 index);
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_removeVRMRadius_void_ev_uint32_Callback)(_in ev_uint32 index);
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_clearVRMRadius_void_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Display_IChartOption_isUseVRMEBLSymbolA_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setUseVRMEBLSymbolAValue_void_ev_bool_Callback)(_in ev_bool value);
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Display_IChartOption_getEBLLength_ev_real64_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setEBLLength_void_ev_real64_Callback)(_in ev_real64 length);
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Display_IChartOption_getEBLAngle_ev_real64_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setEBLAngle_void_ev_real64_Callback)(_in ev_real64 angle);
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setUseEnglishValue_void_ev_bool_Callback)(_in ev_bool value);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Display_IChartOption_getUseEnglishValue_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setUseBlurSpatialRelation_void_ev_bool_Callback)(_in ev_bool value);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Display_IChartOption_isUseBlurSpatialRelation_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Display_IChartOption_setGeneralizeSoundgPoints_void_ev_bool_Callback)(_in ev_bool value);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Display_IChartOption_isGeneralizeSoundgPoints_ev_bool_Callback)();
+				typedef EarthView::World::Spatial::Display::IChartOption*  ( _stdcall EarthView_World_Spatial_Display_IChartOption_clone_IChartOption_Callback)();
+				class IChartOptionProxy : public EarthView::World::Spatial::Display::IChartOption
+				{
+				private:
+					EarthView_World_Spatial_Display_IChartOption_getChartPointType_EVChartLookUpType_Callback* m_EarthView_World_Spatial_Display_IChartOption_getChartPointType_EVChartLookUpType_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setChartPointType_void_EVChartLookUpType_Callback* m_EarthView_World_Spatial_Display_IChartOption_setChartPointType_void_EVChartLookUpType_Callback;
+					EarthView_World_Spatial_Display_IChartOption_getChartAreaType_EVChartLookUpType_Callback* m_EarthView_World_Spatial_Display_IChartOption_getChartAreaType_EVChartLookUpType_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setChartAreaType_void_EVChartLookUpType_Callback* m_EarthView_World_Spatial_Display_IChartOption_setChartAreaType_void_EVChartLookUpType_Callback;
+					EarthView_World_Spatial_Display_IChartOption_getCartoAssistLineType_EVChartSimpleLineType_Callback* m_EarthView_World_Spatial_Display_IChartOption_getCartoAssistLineType_EVChartSimpleLineType_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setCartoAssistLineType_void_EVChartSimpleLineType_Callback* m_EarthView_World_Spatial_Display_IChartOption_setCartoAssistLineType_void_EVChartSimpleLineType_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setColorType_void_EVChartColorType_Callback* m_EarthView_World_Spatial_Display_IChartOption_setColorType_void_EVChartColorType_Callback;
+					EarthView_World_Spatial_Display_IChartOption_getColorType_EVChartColorType_Callback* m_EarthView_World_Spatial_Display_IChartOption_getColorType_EVChartColorType_Callback;
+					EarthView_World_Spatial_Display_IChartOption_getDisplayCategory_EVChartDisplayCategory_Callback* m_EarthView_World_Spatial_Display_IChartOption_getDisplayCategory_EVChartDisplayCategory_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setDisplayCategory_void_EVChartDisplayCategory_Callback* m_EarthView_World_Spatial_Display_IChartOption_setDisplayCategory_void_EVChartDisplayCategory_Callback;
+					EarthView_World_Spatial_Display_IChartOption_getSafetyDeep_ev_real64_Callback* m_EarthView_World_Spatial_Display_IChartOption_getSafetyDeep_ev_real64_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setSafetyDeep_void_ev_real64_Callback* m_EarthView_World_Spatial_Display_IChartOption_setSafetyDeep_void_ev_real64_Callback;
+					EarthView_World_Spatial_Display_IChartOption_getSafetyContour_ev_real64_Callback* m_EarthView_World_Spatial_Display_IChartOption_getSafetyContour_ev_real64_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setSafetyContour_void_ev_real64_Callback* m_EarthView_World_Spatial_Display_IChartOption_setSafetyContour_void_ev_real64_Callback;
+					EarthView_World_Spatial_Display_IChartOption_getShallowContour_ev_real64_Callback* m_EarthView_World_Spatial_Display_IChartOption_getShallowContour_ev_real64_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setShallowContour_void_ev_real64_Callback* m_EarthView_World_Spatial_Display_IChartOption_setShallowContour_void_ev_real64_Callback;
+					EarthView_World_Spatial_Display_IChartOption_getDeepContour_ev_real64_Callback* m_EarthView_World_Spatial_Display_IChartOption_getDeepContour_ev_real64_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setDeepContour_void_ev_real64_Callback* m_EarthView_World_Spatial_Display_IChartOption_setDeepContour_void_ev_real64_Callback;
+					EarthView_World_Spatial_Display_IChartOption_isTwoShadesOn_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_isTwoShadesOn_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setTwoShadesValue_void_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_setTwoShadesValue_void_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_isShallowPatternOn_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_isShallowPatternOn_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setShallowPatternValue_void_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_setShallowPatternValue_void_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_isShipOutlineOn_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_isShipOutlineOn_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setShipOutlineValue_void_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_setShipOutlineValue_void_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_isFullSectorsOn_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_isFullSectorsOn_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setFullSectorsValue_void_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_setFullSectorsValue_void_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_getDistanceTag_ev_real64_Callback* m_EarthView_World_Spatial_Display_IChartOption_getDistanceTag_ev_real64_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setDistanceTag_void_ev_real64_Callback* m_EarthView_World_Spatial_Display_IChartOption_setDistanceTag_void_ev_real64_Callback;
+					EarthView_World_Spatial_Display_IChartOption_getTimeTags_ev_int32_Callback* m_EarthView_World_Spatial_Display_IChartOption_getTimeTags_ev_int32_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setTimeTages_void_ev_int32_Callback* m_EarthView_World_Spatial_Display_IChartOption_setTimeTages_void_ev_int32_Callback;
+					EarthView_World_Spatial_Display_IChartOption_getSymbolGroup_ev_int32_Callback* m_EarthView_World_Spatial_Display_IChartOption_getSymbolGroup_ev_int32_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setSymbolGroup_void_ev_int32_Callback* m_EarthView_World_Spatial_Display_IChartOption_setSymbolGroup_void_ev_int32_Callback;
+					EarthView_World_Spatial_Display_IChartOption_getTextGroup_ev_int32_Callback* m_EarthView_World_Spatial_Display_IChartOption_getTextGroup_ev_int32_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setTextGroup_void_ev_int32_Callback* m_EarthView_World_Spatial_Display_IChartOption_setTextGroup_void_ev_int32_Callback;
+					EarthView_World_Spatial_Display_IChartOption_getChartScale_ev_real64_Callback* m_EarthView_World_Spatial_Display_IChartOption_getChartScale_ev_real64_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setChartScale_void_ev_real64_Callback* m_EarthView_World_Spatial_Display_IChartOption_setChartScale_void_ev_real64_Callback;
+					EarthView_World_Spatial_Display_IChartOption_isShowOtherVessel_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_isShowOtherVessel_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setShowOtherVesselValue_void_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_setShowOtherVesselValue_void_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_isShowCourseSpeedVessel_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_isShowCourseSpeedVessel_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setShowCourseSpeedVesselValue_void_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_setShowCourseSpeedVesselValue_void_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_isShowBeamBearingLine_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_isShowBeamBearingLine_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setShowBeamBearingLineValue_void_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_setShowBeamBearingLineValue_void_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_isShowStabilization_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_isShowStabilization_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setShowStabilizationValue_void_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_setShowStabilizationValue_void_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_isShowTimeMarks_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_isShowTimeMarks_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setShowTimeMarksValue_void_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_setShowTimeMarksValue_void_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_isShowHeadingLine_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_isShowHeadingLine_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setShowHeadingLineValue_void_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_setShowHeadingLineValue_void_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_getShipBeamLengthValue_ev_int32_Callback* m_EarthView_World_Spatial_Display_IChartOption_getShipBeamLengthValue_ev_int32_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setShipBeamLengthValue_void_ev_int32_Callback* m_EarthView_World_Spatial_Display_IChartOption_setShipBeamLengthValue_void_ev_int32_Callback;
+					EarthView_World_Spatial_Display_IChartOption_insertVRMRadius_void_ev_real64_Callback* m_EarthView_World_Spatial_Display_IChartOption_insertVRMRadius_void_ev_real64_Callback;
+					EarthView_World_Spatial_Display_IChartOption_getVRMRadiusNum_ev_uint32_Callback* m_EarthView_World_Spatial_Display_IChartOption_getVRMRadiusNum_ev_uint32_Callback;
+					EarthView_World_Spatial_Display_IChartOption_getVRMRadiusValue_ev_real64_ev_uint32_Callback* m_EarthView_World_Spatial_Display_IChartOption_getVRMRadiusValue_ev_real64_ev_uint32_Callback;
+					EarthView_World_Spatial_Display_IChartOption_removeVRMRadius_void_ev_uint32_Callback* m_EarthView_World_Spatial_Display_IChartOption_removeVRMRadius_void_ev_uint32_Callback;
+					EarthView_World_Spatial_Display_IChartOption_clearVRMRadius_void_Callback* m_EarthView_World_Spatial_Display_IChartOption_clearVRMRadius_void_Callback;
+					EarthView_World_Spatial_Display_IChartOption_isUseVRMEBLSymbolA_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_isUseVRMEBLSymbolA_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setUseVRMEBLSymbolAValue_void_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_setUseVRMEBLSymbolAValue_void_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_getEBLLength_ev_real64_Callback* m_EarthView_World_Spatial_Display_IChartOption_getEBLLength_ev_real64_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setEBLLength_void_ev_real64_Callback* m_EarthView_World_Spatial_Display_IChartOption_setEBLLength_void_ev_real64_Callback;
+					EarthView_World_Spatial_Display_IChartOption_getEBLAngle_ev_real64_Callback* m_EarthView_World_Spatial_Display_IChartOption_getEBLAngle_ev_real64_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setEBLAngle_void_ev_real64_Callback* m_EarthView_World_Spatial_Display_IChartOption_setEBLAngle_void_ev_real64_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setUseEnglishValue_void_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_setUseEnglishValue_void_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_getUseEnglishValue_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_getUseEnglishValue_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setUseBlurSpatialRelation_void_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_setUseBlurSpatialRelation_void_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_isUseBlurSpatialRelation_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_isUseBlurSpatialRelation_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_setGeneralizeSoundgPoints_void_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_setGeneralizeSoundgPoints_void_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_isGeneralizeSoundgPoints_ev_bool_Callback* m_EarthView_World_Spatial_Display_IChartOption_isGeneralizeSoundgPoints_ev_bool_Callback;
+					EarthView_World_Spatial_Display_IChartOption_clone_IChartOption_Callback* m_EarthView_World_Spatial_Display_IChartOption_clone_IChartOption_Callback;
+				public:
+					IChartOptionProxy(EarthView::World::Core::CNameValuePairList *pList) : IChartOption(pList)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getChartPointType_EVChartLookUpType_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setChartPointType_void_EVChartLookUpType_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_getChartAreaType_EVChartLookUpType_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setChartAreaType_void_EVChartLookUpType_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_getCartoAssistLineType_EVChartSimpleLineType_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setCartoAssistLineType_void_EVChartSimpleLineType_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setColorType_void_EVChartColorType_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_getColorType_EVChartColorType_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_getDisplayCategory_EVChartDisplayCategory_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setDisplayCategory_void_EVChartDisplayCategory_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_getSafetyDeep_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setSafetyDeep_void_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_getSafetyContour_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setSafetyContour_void_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_getShallowContour_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setShallowContour_void_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_getDeepContour_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setDeepContour_void_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_isTwoShadesOn_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setTwoShadesValue_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_isShallowPatternOn_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setShallowPatternValue_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_isShipOutlineOn_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setShipOutlineValue_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_isFullSectorsOn_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setFullSectorsValue_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_getDistanceTag_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setDistanceTag_void_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_getTimeTags_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setTimeTages_void_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_getSymbolGroup_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setSymbolGroup_void_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_getTextGroup_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setTextGroup_void_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_getChartScale_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setChartScale_void_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_isShowOtherVessel_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setShowOtherVesselValue_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_isShowCourseSpeedVessel_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setShowCourseSpeedVesselValue_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_isShowBeamBearingLine_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setShowBeamBearingLineValue_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_isShowStabilization_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setShowStabilizationValue_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_isShowTimeMarks_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setShowTimeMarksValue_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_isShowHeadingLine_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setShowHeadingLineValue_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_getShipBeamLengthValue_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setShipBeamLengthValue_void_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_insertVRMRadius_void_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_getVRMRadiusNum_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_getVRMRadiusValue_ev_real64_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_removeVRMRadius_void_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_clearVRMRadius_void_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_isUseVRMEBLSymbolA_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setUseVRMEBLSymbolAValue_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_getEBLLength_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setEBLLength_void_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_getEBLAngle_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setEBLAngle_void_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setUseEnglishValue_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_getUseEnglishValue_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setUseBlurSpatialRelation_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_isUseBlurSpatialRelation_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_setGeneralizeSoundgPoints_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_isGeneralizeSoundgPoints_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Display_IChartOption_clone_IChartOption_Callback = NULL;
+					}
+				public:
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_getChartPointType_EVChartLookUpType(EarthView_World_Spatial_Display_IChartOption_getChartPointType_EVChartLookUpType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getChartPointType_EVChartLookUpType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setChartPointType_void_EVChartLookUpType(EarthView_World_Spatial_Display_IChartOption_setChartPointType_void_EVChartLookUpType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setChartPointType_void_EVChartLookUpType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_getChartAreaType_EVChartLookUpType(EarthView_World_Spatial_Display_IChartOption_getChartAreaType_EVChartLookUpType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getChartAreaType_EVChartLookUpType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setChartAreaType_void_EVChartLookUpType(EarthView_World_Spatial_Display_IChartOption_setChartAreaType_void_EVChartLookUpType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setChartAreaType_void_EVChartLookUpType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_getCartoAssistLineType_EVChartSimpleLineType(EarthView_World_Spatial_Display_IChartOption_getCartoAssistLineType_EVChartSimpleLineType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getCartoAssistLineType_EVChartSimpleLineType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setCartoAssistLineType_void_EVChartSimpleLineType(EarthView_World_Spatial_Display_IChartOption_setCartoAssistLineType_void_EVChartSimpleLineType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setCartoAssistLineType_void_EVChartSimpleLineType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setColorType_void_EVChartColorType(EarthView_World_Spatial_Display_IChartOption_setColorType_void_EVChartColorType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setColorType_void_EVChartColorType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_getColorType_EVChartColorType(EarthView_World_Spatial_Display_IChartOption_getColorType_EVChartColorType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getColorType_EVChartColorType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_getDisplayCategory_EVChartDisplayCategory(EarthView_World_Spatial_Display_IChartOption_getDisplayCategory_EVChartDisplayCategory_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getDisplayCategory_EVChartDisplayCategory_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setDisplayCategory_void_EVChartDisplayCategory(EarthView_World_Spatial_Display_IChartOption_setDisplayCategory_void_EVChartDisplayCategory_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setDisplayCategory_void_EVChartDisplayCategory_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_getSafetyDeep_ev_real64(EarthView_World_Spatial_Display_IChartOption_getSafetyDeep_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getSafetyDeep_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setSafetyDeep_void_ev_real64(EarthView_World_Spatial_Display_IChartOption_setSafetyDeep_void_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setSafetyDeep_void_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_getSafetyContour_ev_real64(EarthView_World_Spatial_Display_IChartOption_getSafetyContour_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getSafetyContour_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setSafetyContour_void_ev_real64(EarthView_World_Spatial_Display_IChartOption_setSafetyContour_void_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setSafetyContour_void_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_getShallowContour_ev_real64(EarthView_World_Spatial_Display_IChartOption_getShallowContour_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getShallowContour_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setShallowContour_void_ev_real64(EarthView_World_Spatial_Display_IChartOption_setShallowContour_void_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setShallowContour_void_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_getDeepContour_ev_real64(EarthView_World_Spatial_Display_IChartOption_getDeepContour_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getDeepContour_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setDeepContour_void_ev_real64(EarthView_World_Spatial_Display_IChartOption_setDeepContour_void_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setDeepContour_void_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_isTwoShadesOn_ev_bool(EarthView_World_Spatial_Display_IChartOption_isTwoShadesOn_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_isTwoShadesOn_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setTwoShadesValue_void_ev_bool(EarthView_World_Spatial_Display_IChartOption_setTwoShadesValue_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setTwoShadesValue_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_isShallowPatternOn_ev_bool(EarthView_World_Spatial_Display_IChartOption_isShallowPatternOn_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_isShallowPatternOn_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setShallowPatternValue_void_ev_bool(EarthView_World_Spatial_Display_IChartOption_setShallowPatternValue_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setShallowPatternValue_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_isShipOutlineOn_ev_bool(EarthView_World_Spatial_Display_IChartOption_isShipOutlineOn_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_isShipOutlineOn_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setShipOutlineValue_void_ev_bool(EarthView_World_Spatial_Display_IChartOption_setShipOutlineValue_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setShipOutlineValue_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_isFullSectorsOn_ev_bool(EarthView_World_Spatial_Display_IChartOption_isFullSectorsOn_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_isFullSectorsOn_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setFullSectorsValue_void_ev_bool(EarthView_World_Spatial_Display_IChartOption_setFullSectorsValue_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setFullSectorsValue_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_getDistanceTag_ev_real64(EarthView_World_Spatial_Display_IChartOption_getDistanceTag_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getDistanceTag_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setDistanceTag_void_ev_real64(EarthView_World_Spatial_Display_IChartOption_setDistanceTag_void_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setDistanceTag_void_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_getTimeTags_ev_int32(EarthView_World_Spatial_Display_IChartOption_getTimeTags_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getTimeTags_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setTimeTages_void_ev_int32(EarthView_World_Spatial_Display_IChartOption_setTimeTages_void_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setTimeTages_void_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_getSymbolGroup_ev_int32(EarthView_World_Spatial_Display_IChartOption_getSymbolGroup_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getSymbolGroup_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setSymbolGroup_void_ev_int32(EarthView_World_Spatial_Display_IChartOption_setSymbolGroup_void_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setSymbolGroup_void_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_getTextGroup_ev_int32(EarthView_World_Spatial_Display_IChartOption_getTextGroup_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getTextGroup_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setTextGroup_void_ev_int32(EarthView_World_Spatial_Display_IChartOption_setTextGroup_void_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setTextGroup_void_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_getChartScale_ev_real64(EarthView_World_Spatial_Display_IChartOption_getChartScale_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getChartScale_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setChartScale_void_ev_real64(EarthView_World_Spatial_Display_IChartOption_setChartScale_void_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setChartScale_void_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_isShowOtherVessel_ev_bool(EarthView_World_Spatial_Display_IChartOption_isShowOtherVessel_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_isShowOtherVessel_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setShowOtherVesselValue_void_ev_bool(EarthView_World_Spatial_Display_IChartOption_setShowOtherVesselValue_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setShowOtherVesselValue_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_isShowCourseSpeedVessel_ev_bool(EarthView_World_Spatial_Display_IChartOption_isShowCourseSpeedVessel_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_isShowCourseSpeedVessel_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setShowCourseSpeedVesselValue_void_ev_bool(EarthView_World_Spatial_Display_IChartOption_setShowCourseSpeedVesselValue_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setShowCourseSpeedVesselValue_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_isShowBeamBearingLine_ev_bool(EarthView_World_Spatial_Display_IChartOption_isShowBeamBearingLine_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_isShowBeamBearingLine_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setShowBeamBearingLineValue_void_ev_bool(EarthView_World_Spatial_Display_IChartOption_setShowBeamBearingLineValue_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setShowBeamBearingLineValue_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_isShowStabilization_ev_bool(EarthView_World_Spatial_Display_IChartOption_isShowStabilization_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_isShowStabilization_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setShowStabilizationValue_void_ev_bool(EarthView_World_Spatial_Display_IChartOption_setShowStabilizationValue_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setShowStabilizationValue_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_isShowTimeMarks_ev_bool(EarthView_World_Spatial_Display_IChartOption_isShowTimeMarks_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_isShowTimeMarks_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setShowTimeMarksValue_void_ev_bool(EarthView_World_Spatial_Display_IChartOption_setShowTimeMarksValue_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setShowTimeMarksValue_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_isShowHeadingLine_ev_bool(EarthView_World_Spatial_Display_IChartOption_isShowHeadingLine_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_isShowHeadingLine_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setShowHeadingLineValue_void_ev_bool(EarthView_World_Spatial_Display_IChartOption_setShowHeadingLineValue_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setShowHeadingLineValue_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_getShipBeamLengthValue_ev_int32(EarthView_World_Spatial_Display_IChartOption_getShipBeamLengthValue_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getShipBeamLengthValue_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setShipBeamLengthValue_void_ev_int32(EarthView_World_Spatial_Display_IChartOption_setShipBeamLengthValue_void_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setShipBeamLengthValue_void_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_insertVRMRadius_void_ev_real64(EarthView_World_Spatial_Display_IChartOption_insertVRMRadius_void_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_insertVRMRadius_void_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_getVRMRadiusNum_ev_uint32(EarthView_World_Spatial_Display_IChartOption_getVRMRadiusNum_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getVRMRadiusNum_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_getVRMRadiusValue_ev_real64_ev_uint32(EarthView_World_Spatial_Display_IChartOption_getVRMRadiusValue_ev_real64_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getVRMRadiusValue_ev_real64_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_removeVRMRadius_void_ev_uint32(EarthView_World_Spatial_Display_IChartOption_removeVRMRadius_void_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_removeVRMRadius_void_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_clearVRMRadius_void(EarthView_World_Spatial_Display_IChartOption_clearVRMRadius_void_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_clearVRMRadius_void_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_isUseVRMEBLSymbolA_ev_bool(EarthView_World_Spatial_Display_IChartOption_isUseVRMEBLSymbolA_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_isUseVRMEBLSymbolA_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setUseVRMEBLSymbolAValue_void_ev_bool(EarthView_World_Spatial_Display_IChartOption_setUseVRMEBLSymbolAValue_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setUseVRMEBLSymbolAValue_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_getEBLLength_ev_real64(EarthView_World_Spatial_Display_IChartOption_getEBLLength_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getEBLLength_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setEBLLength_void_ev_real64(EarthView_World_Spatial_Display_IChartOption_setEBLLength_void_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setEBLLength_void_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_getEBLAngle_ev_real64(EarthView_World_Spatial_Display_IChartOption_getEBLAngle_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getEBLAngle_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setEBLAngle_void_ev_real64(EarthView_World_Spatial_Display_IChartOption_setEBLAngle_void_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setEBLAngle_void_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setUseEnglishValue_void_ev_bool(EarthView_World_Spatial_Display_IChartOption_setUseEnglishValue_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setUseEnglishValue_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_getUseEnglishValue_ev_bool(EarthView_World_Spatial_Display_IChartOption_getUseEnglishValue_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_getUseEnglishValue_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setUseBlurSpatialRelation_void_ev_bool(EarthView_World_Spatial_Display_IChartOption_setUseBlurSpatialRelation_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setUseBlurSpatialRelation_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_isUseBlurSpatialRelation_ev_bool(EarthView_World_Spatial_Display_IChartOption_isUseBlurSpatialRelation_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_isUseBlurSpatialRelation_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_setGeneralizeSoundgPoints_void_ev_bool(EarthView_World_Spatial_Display_IChartOption_setGeneralizeSoundgPoints_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_setGeneralizeSoundgPoints_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_isGeneralizeSoundgPoints_ev_bool(EarthView_World_Spatial_Display_IChartOption_isGeneralizeSoundgPoints_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_isGeneralizeSoundgPoints_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Display_IChartOption_clone_IChartOption(EarthView_World_Spatial_Display_IChartOption_clone_IChartOption_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Display_IChartOption_clone_IChartOption_Callback = pCallback;
+					}
+					virtual EarthView::World::Spatial::Display::EVChartLookUpType getChartPointType() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_getChartPointType_EVChartLookUpType_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Display::EVChartLookUpType returnValue = (EarthView::World::Spatial::Display::EVChartLookUpType)m_EarthView_World_Spatial_Display_IChartOption_getChartPointType_EVChartLookUpType_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::getChartPointType();
+					}
+					virtual void setChartPointType(_in EarthView::World::Spatial::Display::EVChartLookUpType type)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setChartPointType_void_EVChartLookUpType_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setChartPointType_void_EVChartLookUpType_Callback((int)type);
+						}
+						else
+							return this->IChartOption::setChartPointType(type);
+					}
+					virtual EarthView::World::Spatial::Display::EVChartLookUpType getChartAreaType() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_getChartAreaType_EVChartLookUpType_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Display::EVChartLookUpType returnValue = (EarthView::World::Spatial::Display::EVChartLookUpType)m_EarthView_World_Spatial_Display_IChartOption_getChartAreaType_EVChartLookUpType_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::getChartAreaType();
+					}
+					virtual void setChartAreaType(_in EarthView::World::Spatial::Display::EVChartLookUpType type)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setChartAreaType_void_EVChartLookUpType_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setChartAreaType_void_EVChartLookUpType_Callback((int)type);
+						}
+						else
+							return this->IChartOption::setChartAreaType(type);
+					}
+					virtual EarthView::World::Spatial::Display::EVChartSimpleLineType getCartoAssistLineType() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_getCartoAssistLineType_EVChartSimpleLineType_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Display::EVChartSimpleLineType returnValue = (EarthView::World::Spatial::Display::EVChartSimpleLineType)m_EarthView_World_Spatial_Display_IChartOption_getCartoAssistLineType_EVChartSimpleLineType_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::getCartoAssistLineType();
+					}
+					virtual void setCartoAssistLineType(_in EarthView::World::Spatial::Display::EVChartSimpleLineType type)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setCartoAssistLineType_void_EVChartSimpleLineType_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setCartoAssistLineType_void_EVChartSimpleLineType_Callback((int)type);
+						}
+						else
+							return this->IChartOption::setCartoAssistLineType(type);
+					}
+					virtual void setColorType(_in EarthView::World::Spatial::Display::EVChartColorType type)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setColorType_void_EVChartColorType_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setColorType_void_EVChartColorType_Callback((int)type);
+						}
+						else
+							return this->IChartOption::setColorType(type);
+					}
+					virtual EarthView::World::Spatial::Display::EVChartColorType getColorType() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_getColorType_EVChartColorType_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Display::EVChartColorType returnValue = (EarthView::World::Spatial::Display::EVChartColorType)m_EarthView_World_Spatial_Display_IChartOption_getColorType_EVChartColorType_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::getColorType();
+					}
+					virtual EarthView::World::Spatial::Display::EVChartDisplayCategory getDisplayCategory() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_getDisplayCategory_EVChartDisplayCategory_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Display::EVChartDisplayCategory returnValue = (EarthView::World::Spatial::Display::EVChartDisplayCategory)m_EarthView_World_Spatial_Display_IChartOption_getDisplayCategory_EVChartDisplayCategory_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::getDisplayCategory();
+					}
+					virtual void setDisplayCategory(_in EarthView::World::Spatial::Display::EVChartDisplayCategory category)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setDisplayCategory_void_EVChartDisplayCategory_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setDisplayCategory_void_EVChartDisplayCategory_Callback((int)category);
+						}
+						else
+							return this->IChartOption::setDisplayCategory(category);
+					}
+					virtual ev_real64 getSafetyDeep() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_getSafetyDeep_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Display_IChartOption_getSafetyDeep_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::getSafetyDeep();
+					}
+					virtual void setSafetyDeep(_in ev_real64 value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setSafetyDeep_void_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setSafetyDeep_void_ev_real64_Callback(value);
+						}
+						else
+							return this->IChartOption::setSafetyDeep(value);
+					}
+					virtual ev_real64 getSafetyContour() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_getSafetyContour_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Display_IChartOption_getSafetyContour_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::getSafetyContour();
+					}
+					virtual void setSafetyContour(_in ev_real64 value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setSafetyContour_void_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setSafetyContour_void_ev_real64_Callback(value);
+						}
+						else
+							return this->IChartOption::setSafetyContour(value);
+					}
+					virtual ev_real64 getShallowContour() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_getShallowContour_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Display_IChartOption_getShallowContour_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::getShallowContour();
+					}
+					virtual void setShallowContour(_in ev_real64 value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setShallowContour_void_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setShallowContour_void_ev_real64_Callback(value);
+						}
+						else
+							return this->IChartOption::setShallowContour(value);
+					}
+					virtual ev_real64 getDeepContour() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_getDeepContour_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Display_IChartOption_getDeepContour_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::getDeepContour();
+					}
+					virtual void setDeepContour(_in ev_real64 value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setDeepContour_void_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setDeepContour_void_ev_real64_Callback(value);
+						}
+						else
+							return this->IChartOption::setDeepContour(value);
+					}
+					virtual ev_bool isTwoShadesOn() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_isTwoShadesOn_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Display_IChartOption_isTwoShadesOn_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::isTwoShadesOn();
+					}
+					virtual void setTwoShadesValue(_in ev_bool value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setTwoShadesValue_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setTwoShadesValue_void_ev_bool_Callback(value);
+						}
+						else
+							return this->IChartOption::setTwoShadesValue(value);
+					}
+					virtual ev_bool isShallowPatternOn() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_isShallowPatternOn_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Display_IChartOption_isShallowPatternOn_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::isShallowPatternOn();
+					}
+					virtual void setShallowPatternValue(_in ev_bool value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setShallowPatternValue_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setShallowPatternValue_void_ev_bool_Callback(value);
+						}
+						else
+							return this->IChartOption::setShallowPatternValue(value);
+					}
+					virtual ev_bool isShipOutlineOn() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_isShipOutlineOn_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Display_IChartOption_isShipOutlineOn_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::isShipOutlineOn();
+					}
+					virtual void setShipOutlineValue(_in ev_bool value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setShipOutlineValue_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setShipOutlineValue_void_ev_bool_Callback(value);
+						}
+						else
+							return this->IChartOption::setShipOutlineValue(value);
+					}
+					virtual ev_bool isFullSectorsOn() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_isFullSectorsOn_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Display_IChartOption_isFullSectorsOn_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::isFullSectorsOn();
+					}
+					virtual void setFullSectorsValue(_in ev_bool value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setFullSectorsValue_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setFullSectorsValue_void_ev_bool_Callback(value);
+						}
+						else
+							return this->IChartOption::setFullSectorsValue(value);
+					}
+					virtual ev_real64 getDistanceTag() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_getDistanceTag_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Display_IChartOption_getDistanceTag_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::getDistanceTag();
+					}
+					virtual void setDistanceTag(_in ev_real64 value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setDistanceTag_void_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setDistanceTag_void_ev_real64_Callback(value);
+						}
+						else
+							return this->IChartOption::setDistanceTag(value);
+					}
+					virtual ev_int32 getTimeTags() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_getTimeTags_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_int32 returnValue = m_EarthView_World_Spatial_Display_IChartOption_getTimeTags_ev_int32_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::getTimeTags();
+					}
+					virtual void setTimeTages(_in ev_int32 value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setTimeTages_void_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setTimeTages_void_ev_int32_Callback(value);
+						}
+						else
+							return this->IChartOption::setTimeTages(value);
+					}
+					virtual ev_int32 getSymbolGroup() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_getSymbolGroup_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_int32 returnValue = m_EarthView_World_Spatial_Display_IChartOption_getSymbolGroup_ev_int32_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::getSymbolGroup();
+					}
+					virtual void setSymbolGroup(_in ev_int32 value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setSymbolGroup_void_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setSymbolGroup_void_ev_int32_Callback(value);
+						}
+						else
+							return this->IChartOption::setSymbolGroup(value);
+					}
+					virtual ev_int32 getTextGroup() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_getTextGroup_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_int32 returnValue = m_EarthView_World_Spatial_Display_IChartOption_getTextGroup_ev_int32_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::getTextGroup();
+					}
+					virtual void setTextGroup(_in ev_int32 group)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setTextGroup_void_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setTextGroup_void_ev_int32_Callback(group);
+						}
+						else
+							return this->IChartOption::setTextGroup(group);
+					}
+					virtual ev_real64 getChartScale() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_getChartScale_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Display_IChartOption_getChartScale_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::getChartScale();
+					}
+					virtual void setChartScale(_in ev_real64 scale)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setChartScale_void_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setChartScale_void_ev_real64_Callback(scale);
+						}
+						else
+							return this->IChartOption::setChartScale(scale);
+					}
+					virtual ev_bool isShowOtherVessel() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_isShowOtherVessel_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Display_IChartOption_isShowOtherVessel_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::isShowOtherVessel();
+					}
+					virtual void setShowOtherVesselValue(_in ev_bool value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setShowOtherVesselValue_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setShowOtherVesselValue_void_ev_bool_Callback(value);
+						}
+						else
+							return this->IChartOption::setShowOtherVesselValue(value);
+					}
+					virtual ev_bool isShowCourseSpeedVessel() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_isShowCourseSpeedVessel_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Display_IChartOption_isShowCourseSpeedVessel_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::isShowCourseSpeedVessel();
+					}
+					virtual void setShowCourseSpeedVesselValue(_in ev_bool value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setShowCourseSpeedVesselValue_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setShowCourseSpeedVesselValue_void_ev_bool_Callback(value);
+						}
+						else
+							return this->IChartOption::setShowCourseSpeedVesselValue(value);
+					}
+					virtual ev_bool isShowBeamBearingLine() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_isShowBeamBearingLine_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Display_IChartOption_isShowBeamBearingLine_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::isShowBeamBearingLine();
+					}
+					virtual void setShowBeamBearingLineValue(_in ev_bool value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setShowBeamBearingLineValue_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setShowBeamBearingLineValue_void_ev_bool_Callback(value);
+						}
+						else
+							return this->IChartOption::setShowBeamBearingLineValue(value);
+					}
+					virtual ev_bool isShowStabilization() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_isShowStabilization_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Display_IChartOption_isShowStabilization_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::isShowStabilization();
+					}
+					virtual void setShowStabilizationValue(_in ev_bool value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setShowStabilizationValue_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setShowStabilizationValue_void_ev_bool_Callback(value);
+						}
+						else
+							return this->IChartOption::setShowStabilizationValue(value);
+					}
+					virtual ev_bool isShowTimeMarks() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_isShowTimeMarks_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Display_IChartOption_isShowTimeMarks_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::isShowTimeMarks();
+					}
+					virtual void setShowTimeMarksValue(_in ev_bool value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setShowTimeMarksValue_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setShowTimeMarksValue_void_ev_bool_Callback(value);
+						}
+						else
+							return this->IChartOption::setShowTimeMarksValue(value);
+					}
+					virtual ev_bool isShowHeadingLine() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_isShowHeadingLine_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Display_IChartOption_isShowHeadingLine_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::isShowHeadingLine();
+					}
+					virtual void setShowHeadingLineValue(_in ev_bool value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setShowHeadingLineValue_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setShowHeadingLineValue_void_ev_bool_Callback(value);
+						}
+						else
+							return this->IChartOption::setShowHeadingLineValue(value);
+					}
+					virtual ev_int32 getShipBeamLengthValue() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_getShipBeamLengthValue_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_int32 returnValue = m_EarthView_World_Spatial_Display_IChartOption_getShipBeamLengthValue_ev_int32_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::getShipBeamLengthValue();
+					}
+					virtual void setShipBeamLengthValue(_in ev_int32 value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setShipBeamLengthValue_void_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setShipBeamLengthValue_void_ev_int32_Callback(value);
+						}
+						else
+							return this->IChartOption::setShipBeamLengthValue(value);
+					}
+					virtual void insertVRMRadius(_in ev_real64 radius)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_insertVRMRadius_void_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_insertVRMRadius_void_ev_real64_Callback(radius);
+						}
+						else
+							return this->IChartOption::insertVRMRadius(radius);
+					}
+					virtual ev_uint32 getVRMRadiusNum() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_getVRMRadiusNum_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_uint32 returnValue = m_EarthView_World_Spatial_Display_IChartOption_getVRMRadiusNum_ev_uint32_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::getVRMRadiusNum();
+					}
+					virtual ev_real64 getVRMRadiusValue(_in ev_uint32 index) const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_getVRMRadiusValue_ev_real64_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Display_IChartOption_getVRMRadiusValue_ev_real64_ev_uint32_Callback(index);
+							return returnValue;
+						}
+						else
+							return this->IChartOption::getVRMRadiusValue(index);
+					}
+					virtual void removeVRMRadius(_in ev_uint32 index)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_removeVRMRadius_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_removeVRMRadius_void_ev_uint32_Callback(index);
+						}
+						else
+							return this->IChartOption::removeVRMRadius(index);
+					}
+					virtual void clearVRMRadius()
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_clearVRMRadius_void_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_clearVRMRadius_void_Callback();
+						}
+						else
+							return this->IChartOption::clearVRMRadius();
+					}
+					virtual ev_bool isUseVRMEBLSymbolA() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_isUseVRMEBLSymbolA_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Display_IChartOption_isUseVRMEBLSymbolA_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::isUseVRMEBLSymbolA();
+					}
+					virtual void setUseVRMEBLSymbolAValue(_in ev_bool value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setUseVRMEBLSymbolAValue_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setUseVRMEBLSymbolAValue_void_ev_bool_Callback(value);
+						}
+						else
+							return this->IChartOption::setUseVRMEBLSymbolAValue(value);
+					}
+					virtual ev_real64 getEBLLength() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_getEBLLength_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Display_IChartOption_getEBLLength_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::getEBLLength();
+					}
+					virtual void setEBLLength(_in ev_real64 length)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setEBLLength_void_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setEBLLength_void_ev_real64_Callback(length);
+						}
+						else
+							return this->IChartOption::setEBLLength(length);
+					}
+					virtual ev_real64 getEBLAngle() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_getEBLAngle_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Display_IChartOption_getEBLAngle_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::getEBLAngle();
+					}
+					virtual void setEBLAngle(_in ev_real64 angle)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setEBLAngle_void_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setEBLAngle_void_ev_real64_Callback(angle);
+						}
+						else
+							return this->IChartOption::setEBLAngle(angle);
+					}
+					virtual void setUseEnglishValue(_in ev_bool value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setUseEnglishValue_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setUseEnglishValue_void_ev_bool_Callback(value);
+						}
+						else
+							return this->IChartOption::setUseEnglishValue(value);
+					}
+					virtual ev_bool getUseEnglishValue() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_getUseEnglishValue_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Display_IChartOption_getUseEnglishValue_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::getUseEnglishValue();
+					}
+					virtual void setUseBlurSpatialRelation(_in ev_bool value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setUseBlurSpatialRelation_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setUseBlurSpatialRelation_void_ev_bool_Callback(value);
+						}
+						else
+							return this->IChartOption::setUseBlurSpatialRelation(value);
+					}
+					virtual ev_bool isUseBlurSpatialRelation() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_isUseBlurSpatialRelation_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Display_IChartOption_isUseBlurSpatialRelation_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::isUseBlurSpatialRelation();
+					}
+					virtual void setGeneralizeSoundgPoints(_in ev_bool value)
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_setGeneralizeSoundgPoints_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Display_IChartOption_setGeneralizeSoundgPoints_void_ev_bool_Callback(value);
+						}
+						else
+							return this->IChartOption::setGeneralizeSoundgPoints(value);
+					}
+					virtual ev_bool isGeneralizeSoundgPoints() const
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_isGeneralizeSoundgPoints_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Display_IChartOption_isGeneralizeSoundgPoints_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::isGeneralizeSoundgPoints();
+					}
+					virtual EarthView::World::Spatial::Display::IChartOption* clone()
+					{
+						if(m_EarthView_World_Spatial_Display_IChartOption_clone_IChartOption_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Display::IChartOption* returnValue = m_EarthView_World_Spatial_Display_IChartOption_clone_IChartOption_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartOption::clone();
+					}
+				};
+				REGISTER_FACTORY_CLASS(IChartOptionProxy);
+				extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Spatial_Display_IChartOption_getChartPointType_EVChartLookUpType(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						EarthView::World::Spatial::Display::EVChartLookUpType objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getChartPointType();
+						return (int)objXXXX;
+					}
+					else
+					{
+						EarthView::World::Spatial::Display::EVChartLookUpType objXXXX = ptrNativeObject->getChartPointType();
+						return (int)objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_getChartPointType_EVChartLookUpType( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_getChartPointType_EVChartLookUpType_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_getChartPointType_EVChartLookUpType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Spatial_Display_IChartOption_getChartPointType_EVChartLookUpType_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					EarthView::World::Spatial::Display::EVChartLookUpType objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getChartPointType();
+					return (int)objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setChartPointType_void_EVChartLookUpType(void *pObjectXXXX, _in int type )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setChartPointType((EarthView::World::Spatial::Display::EVChartLookUpType)type);
+					else
+						ptrNativeObject->setChartPointType((EarthView::World::Spatial::Display::EVChartLookUpType)type);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setChartPointType_void_EVChartLookUpType( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setChartPointType_void_EVChartLookUpType_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setChartPointType_void_EVChartLookUpType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setChartPointType_void_EVChartLookUpType_NoVirtual(void *pObjectXXXX, _in int type )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setChartPointType((EarthView::World::Spatial::Display::EVChartLookUpType)type);
+				}
+				extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Spatial_Display_IChartOption_getChartAreaType_EVChartLookUpType(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						EarthView::World::Spatial::Display::EVChartLookUpType objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getChartAreaType();
+						return (int)objXXXX;
+					}
+					else
+					{
+						EarthView::World::Spatial::Display::EVChartLookUpType objXXXX = ptrNativeObject->getChartAreaType();
+						return (int)objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_getChartAreaType_EVChartLookUpType( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_getChartAreaType_EVChartLookUpType_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_getChartAreaType_EVChartLookUpType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Spatial_Display_IChartOption_getChartAreaType_EVChartLookUpType_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					EarthView::World::Spatial::Display::EVChartLookUpType objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getChartAreaType();
+					return (int)objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setChartAreaType_void_EVChartLookUpType(void *pObjectXXXX, _in int type )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setChartAreaType((EarthView::World::Spatial::Display::EVChartLookUpType)type);
+					else
+						ptrNativeObject->setChartAreaType((EarthView::World::Spatial::Display::EVChartLookUpType)type);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setChartAreaType_void_EVChartLookUpType( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setChartAreaType_void_EVChartLookUpType_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setChartAreaType_void_EVChartLookUpType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setChartAreaType_void_EVChartLookUpType_NoVirtual(void *pObjectXXXX, _in int type )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setChartAreaType((EarthView::World::Spatial::Display::EVChartLookUpType)type);
+				}
+				extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Spatial_Display_IChartOption_getCartoAssistLineType_EVChartSimpleLineType(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						EarthView::World::Spatial::Display::EVChartSimpleLineType objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getCartoAssistLineType();
+						return (int)objXXXX;
+					}
+					else
+					{
+						EarthView::World::Spatial::Display::EVChartSimpleLineType objXXXX = ptrNativeObject->getCartoAssistLineType();
+						return (int)objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_getCartoAssistLineType_EVChartSimpleLineType( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_getCartoAssistLineType_EVChartSimpleLineType_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_getCartoAssistLineType_EVChartSimpleLineType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Spatial_Display_IChartOption_getCartoAssistLineType_EVChartSimpleLineType_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					EarthView::World::Spatial::Display::EVChartSimpleLineType objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getCartoAssistLineType();
+					return (int)objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setCartoAssistLineType_void_EVChartSimpleLineType(void *pObjectXXXX, _in int type )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setCartoAssistLineType((EarthView::World::Spatial::Display::EVChartSimpleLineType)type);
+					else
+						ptrNativeObject->setCartoAssistLineType((EarthView::World::Spatial::Display::EVChartSimpleLineType)type);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setCartoAssistLineType_void_EVChartSimpleLineType( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setCartoAssistLineType_void_EVChartSimpleLineType_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setCartoAssistLineType_void_EVChartSimpleLineType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setCartoAssistLineType_void_EVChartSimpleLineType_NoVirtual(void *pObjectXXXX, _in int type )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setCartoAssistLineType((EarthView::World::Spatial::Display::EVChartSimpleLineType)type);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setColorType_void_EVChartColorType(void *pObjectXXXX, _in int type )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setColorType((EarthView::World::Spatial::Display::EVChartColorType)type);
+					else
+						ptrNativeObject->setColorType((EarthView::World::Spatial::Display::EVChartColorType)type);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setColorType_void_EVChartColorType( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setColorType_void_EVChartColorType_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setColorType_void_EVChartColorType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setColorType_void_EVChartColorType_NoVirtual(void *pObjectXXXX, _in int type )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setColorType((EarthView::World::Spatial::Display::EVChartColorType)type);
+				}
+				extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Spatial_Display_IChartOption_getColorType_EVChartColorType(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						EarthView::World::Spatial::Display::EVChartColorType objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getColorType();
+						return (int)objXXXX;
+					}
+					else
+					{
+						EarthView::World::Spatial::Display::EVChartColorType objXXXX = ptrNativeObject->getColorType();
+						return (int)objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_getColorType_EVChartColorType( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_getColorType_EVChartColorType_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_getColorType_EVChartColorType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Spatial_Display_IChartOption_getColorType_EVChartColorType_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					EarthView::World::Spatial::Display::EVChartColorType objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getColorType();
+					return (int)objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Spatial_Display_IChartOption_getDisplayCategory_EVChartDisplayCategory(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						EarthView::World::Spatial::Display::EVChartDisplayCategory objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getDisplayCategory();
+						return (int)objXXXX;
+					}
+					else
+					{
+						EarthView::World::Spatial::Display::EVChartDisplayCategory objXXXX = ptrNativeObject->getDisplayCategory();
+						return (int)objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_getDisplayCategory_EVChartDisplayCategory( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_getDisplayCategory_EVChartDisplayCategory_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_getDisplayCategory_EVChartDisplayCategory(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Spatial_Display_IChartOption_getDisplayCategory_EVChartDisplayCategory_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					EarthView::World::Spatial::Display::EVChartDisplayCategory objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getDisplayCategory();
+					return (int)objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setDisplayCategory_void_EVChartDisplayCategory(void *pObjectXXXX, _in int category )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setDisplayCategory((EarthView::World::Spatial::Display::EVChartDisplayCategory)category);
+					else
+						ptrNativeObject->setDisplayCategory((EarthView::World::Spatial::Display::EVChartDisplayCategory)category);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setDisplayCategory_void_EVChartDisplayCategory( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setDisplayCategory_void_EVChartDisplayCategory_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setDisplayCategory_void_EVChartDisplayCategory(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setDisplayCategory_void_EVChartDisplayCategory_NoVirtual(void *pObjectXXXX, _in int category )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setDisplayCategory((EarthView::World::Spatial::Display::EVChartDisplayCategory)category);
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial_Display_IChartOption_getSafetyDeep_ev_real64(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getSafetyDeep();
+						return objXXXX;
+					}
+					else
+					{
+						ev_real64 objXXXX = ptrNativeObject->getSafetyDeep();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_getSafetyDeep_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_getSafetyDeep_ev_real64_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_getSafetyDeep_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial_Display_IChartOption_getSafetyDeep_ev_real64_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getSafetyDeep();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setSafetyDeep_void_ev_real64(void *pObjectXXXX, _in ev_real64 value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setSafetyDeep(value);
+					else
+						ptrNativeObject->setSafetyDeep(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setSafetyDeep_void_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setSafetyDeep_void_ev_real64_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setSafetyDeep_void_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setSafetyDeep_void_ev_real64_NoVirtual(void *pObjectXXXX, _in ev_real64 value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setSafetyDeep(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial_Display_IChartOption_getSafetyContour_ev_real64(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getSafetyContour();
+						return objXXXX;
+					}
+					else
+					{
+						ev_real64 objXXXX = ptrNativeObject->getSafetyContour();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_getSafetyContour_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_getSafetyContour_ev_real64_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_getSafetyContour_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial_Display_IChartOption_getSafetyContour_ev_real64_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getSafetyContour();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setSafetyContour_void_ev_real64(void *pObjectXXXX, _in ev_real64 value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setSafetyContour(value);
+					else
+						ptrNativeObject->setSafetyContour(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setSafetyContour_void_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setSafetyContour_void_ev_real64_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setSafetyContour_void_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setSafetyContour_void_ev_real64_NoVirtual(void *pObjectXXXX, _in ev_real64 value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setSafetyContour(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial_Display_IChartOption_getShallowContour_ev_real64(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getShallowContour();
+						return objXXXX;
+					}
+					else
+					{
+						ev_real64 objXXXX = ptrNativeObject->getShallowContour();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_getShallowContour_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_getShallowContour_ev_real64_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_getShallowContour_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial_Display_IChartOption_getShallowContour_ev_real64_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getShallowContour();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setShallowContour_void_ev_real64(void *pObjectXXXX, _in ev_real64 value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setShallowContour(value);
+					else
+						ptrNativeObject->setShallowContour(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setShallowContour_void_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setShallowContour_void_ev_real64_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setShallowContour_void_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setShallowContour_void_ev_real64_NoVirtual(void *pObjectXXXX, _in ev_real64 value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setShallowContour(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial_Display_IChartOption_getDeepContour_ev_real64(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getDeepContour();
+						return objXXXX;
+					}
+					else
+					{
+						ev_real64 objXXXX = ptrNativeObject->getDeepContour();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_getDeepContour_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_getDeepContour_ev_real64_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_getDeepContour_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial_Display_IChartOption_getDeepContour_ev_real64_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getDeepContour();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setDeepContour_void_ev_real64(void *pObjectXXXX, _in ev_real64 value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setDeepContour(value);
+					else
+						ptrNativeObject->setDeepContour(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setDeepContour_void_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setDeepContour_void_ev_real64_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setDeepContour_void_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setDeepContour_void_ev_real64_NoVirtual(void *pObjectXXXX, _in ev_real64 value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setDeepContour(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isTwoShadesOn_ev_bool(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isTwoShadesOn();
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->isTwoShadesOn();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_isTwoShadesOn_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_isTwoShadesOn_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_isTwoShadesOn_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isTwoShadesOn_ev_bool_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isTwoShadesOn();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setTwoShadesValue_void_ev_bool(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setTwoShadesValue(value);
+					else
+						ptrNativeObject->setTwoShadesValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setTwoShadesValue_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setTwoShadesValue_void_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setTwoShadesValue_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setTwoShadesValue_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setTwoShadesValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isShallowPatternOn_ev_bool(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isShallowPatternOn();
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->isShallowPatternOn();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_isShallowPatternOn_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_isShallowPatternOn_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_isShallowPatternOn_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isShallowPatternOn_ev_bool_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isShallowPatternOn();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setShallowPatternValue_void_ev_bool(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setShallowPatternValue(value);
+					else
+						ptrNativeObject->setShallowPatternValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setShallowPatternValue_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setShallowPatternValue_void_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setShallowPatternValue_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setShallowPatternValue_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setShallowPatternValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isShipOutlineOn_ev_bool(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isShipOutlineOn();
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->isShipOutlineOn();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_isShipOutlineOn_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_isShipOutlineOn_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_isShipOutlineOn_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isShipOutlineOn_ev_bool_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isShipOutlineOn();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setShipOutlineValue_void_ev_bool(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setShipOutlineValue(value);
+					else
+						ptrNativeObject->setShipOutlineValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setShipOutlineValue_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setShipOutlineValue_void_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setShipOutlineValue_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setShipOutlineValue_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setShipOutlineValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isFullSectorsOn_ev_bool(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isFullSectorsOn();
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->isFullSectorsOn();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_isFullSectorsOn_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_isFullSectorsOn_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_isFullSectorsOn_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isFullSectorsOn_ev_bool_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isFullSectorsOn();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setFullSectorsValue_void_ev_bool(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setFullSectorsValue(value);
+					else
+						ptrNativeObject->setFullSectorsValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setFullSectorsValue_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setFullSectorsValue_void_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setFullSectorsValue_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setFullSectorsValue_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setFullSectorsValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial_Display_IChartOption_getDistanceTag_ev_real64(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getDistanceTag();
+						return objXXXX;
+					}
+					else
+					{
+						ev_real64 objXXXX = ptrNativeObject->getDistanceTag();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_getDistanceTag_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_getDistanceTag_ev_real64_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_getDistanceTag_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial_Display_IChartOption_getDistanceTag_ev_real64_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getDistanceTag();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setDistanceTag_void_ev_real64(void *pObjectXXXX, _in ev_real64 value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setDistanceTag(value);
+					else
+						ptrNativeObject->setDistanceTag(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setDistanceTag_void_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setDistanceTag_void_ev_real64_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setDistanceTag_void_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setDistanceTag_void_ev_real64_NoVirtual(void *pObjectXXXX, _in ev_real64 value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setDistanceTag(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_int32  _stdcall EarthView_World_Spatial_Display_IChartOption_getTimeTags_ev_int32(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_int32 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getTimeTags();
+						return objXXXX;
+					}
+					else
+					{
+						ev_int32 objXXXX = ptrNativeObject->getTimeTags();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_getTimeTags_ev_int32( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_getTimeTags_ev_int32_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_getTimeTags_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_int32  _stdcall EarthView_World_Spatial_Display_IChartOption_getTimeTags_ev_int32_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_int32 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getTimeTags();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setTimeTages_void_ev_int32(void *pObjectXXXX, _in ev_int32 value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setTimeTages(value);
+					else
+						ptrNativeObject->setTimeTages(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setTimeTages_void_ev_int32( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setTimeTages_void_ev_int32_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setTimeTages_void_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setTimeTages_void_ev_int32_NoVirtual(void *pObjectXXXX, _in ev_int32 value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setTimeTages(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_int32  _stdcall EarthView_World_Spatial_Display_IChartOption_getSymbolGroup_ev_int32(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_int32 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getSymbolGroup();
+						return objXXXX;
+					}
+					else
+					{
+						ev_int32 objXXXX = ptrNativeObject->getSymbolGroup();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_getSymbolGroup_ev_int32( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_getSymbolGroup_ev_int32_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_getSymbolGroup_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_int32  _stdcall EarthView_World_Spatial_Display_IChartOption_getSymbolGroup_ev_int32_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_int32 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getSymbolGroup();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setSymbolGroup_void_ev_int32(void *pObjectXXXX, _in ev_int32 value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setSymbolGroup(value);
+					else
+						ptrNativeObject->setSymbolGroup(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setSymbolGroup_void_ev_int32( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setSymbolGroup_void_ev_int32_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setSymbolGroup_void_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setSymbolGroup_void_ev_int32_NoVirtual(void *pObjectXXXX, _in ev_int32 value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setSymbolGroup(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_int32  _stdcall EarthView_World_Spatial_Display_IChartOption_getTextGroup_ev_int32(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_int32 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getTextGroup();
+						return objXXXX;
+					}
+					else
+					{
+						ev_int32 objXXXX = ptrNativeObject->getTextGroup();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_getTextGroup_ev_int32( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_getTextGroup_ev_int32_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_getTextGroup_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_int32  _stdcall EarthView_World_Spatial_Display_IChartOption_getTextGroup_ev_int32_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_int32 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getTextGroup();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setTextGroup_void_ev_int32(void *pObjectXXXX, _in ev_int32 group )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setTextGroup(group);
+					else
+						ptrNativeObject->setTextGroup(group);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setTextGroup_void_ev_int32( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setTextGroup_void_ev_int32_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setTextGroup_void_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setTextGroup_void_ev_int32_NoVirtual(void *pObjectXXXX, _in ev_int32 group )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setTextGroup(group);
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial_Display_IChartOption_getChartScale_ev_real64(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getChartScale();
+						return objXXXX;
+					}
+					else
+					{
+						ev_real64 objXXXX = ptrNativeObject->getChartScale();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_getChartScale_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_getChartScale_ev_real64_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_getChartScale_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial_Display_IChartOption_getChartScale_ev_real64_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getChartScale();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setChartScale_void_ev_real64(void *pObjectXXXX, _in ev_real64 scale )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setChartScale(scale);
+					else
+						ptrNativeObject->setChartScale(scale);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setChartScale_void_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setChartScale_void_ev_real64_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setChartScale_void_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setChartScale_void_ev_real64_NoVirtual(void *pObjectXXXX, _in ev_real64 scale )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setChartScale(scale);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isShowOtherVessel_ev_bool(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isShowOtherVessel();
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->isShowOtherVessel();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_isShowOtherVessel_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_isShowOtherVessel_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_isShowOtherVessel_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isShowOtherVessel_ev_bool_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isShowOtherVessel();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setShowOtherVesselValue_void_ev_bool(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setShowOtherVesselValue(value);
+					else
+						ptrNativeObject->setShowOtherVesselValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setShowOtherVesselValue_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setShowOtherVesselValue_void_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setShowOtherVesselValue_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setShowOtherVesselValue_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setShowOtherVesselValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isShowCourseSpeedVessel_ev_bool(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isShowCourseSpeedVessel();
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->isShowCourseSpeedVessel();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_isShowCourseSpeedVessel_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_isShowCourseSpeedVessel_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_isShowCourseSpeedVessel_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isShowCourseSpeedVessel_ev_bool_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isShowCourseSpeedVessel();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setShowCourseSpeedVesselValue_void_ev_bool(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setShowCourseSpeedVesselValue(value);
+					else
+						ptrNativeObject->setShowCourseSpeedVesselValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setShowCourseSpeedVesselValue_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setShowCourseSpeedVesselValue_void_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setShowCourseSpeedVesselValue_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setShowCourseSpeedVesselValue_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setShowCourseSpeedVesselValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isShowBeamBearingLine_ev_bool(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isShowBeamBearingLine();
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->isShowBeamBearingLine();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_isShowBeamBearingLine_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_isShowBeamBearingLine_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_isShowBeamBearingLine_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isShowBeamBearingLine_ev_bool_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isShowBeamBearingLine();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setShowBeamBearingLineValue_void_ev_bool(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setShowBeamBearingLineValue(value);
+					else
+						ptrNativeObject->setShowBeamBearingLineValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setShowBeamBearingLineValue_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setShowBeamBearingLineValue_void_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setShowBeamBearingLineValue_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setShowBeamBearingLineValue_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setShowBeamBearingLineValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isShowStabilization_ev_bool(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isShowStabilization();
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->isShowStabilization();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_isShowStabilization_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_isShowStabilization_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_isShowStabilization_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isShowStabilization_ev_bool_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isShowStabilization();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setShowStabilizationValue_void_ev_bool(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setShowStabilizationValue(value);
+					else
+						ptrNativeObject->setShowStabilizationValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setShowStabilizationValue_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setShowStabilizationValue_void_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setShowStabilizationValue_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setShowStabilizationValue_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setShowStabilizationValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isShowTimeMarks_ev_bool(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isShowTimeMarks();
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->isShowTimeMarks();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_isShowTimeMarks_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_isShowTimeMarks_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_isShowTimeMarks_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isShowTimeMarks_ev_bool_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isShowTimeMarks();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setShowTimeMarksValue_void_ev_bool(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setShowTimeMarksValue(value);
+					else
+						ptrNativeObject->setShowTimeMarksValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setShowTimeMarksValue_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setShowTimeMarksValue_void_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setShowTimeMarksValue_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setShowTimeMarksValue_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setShowTimeMarksValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isShowHeadingLine_ev_bool(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isShowHeadingLine();
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->isShowHeadingLine();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_isShowHeadingLine_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_isShowHeadingLine_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_isShowHeadingLine_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isShowHeadingLine_ev_bool_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isShowHeadingLine();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setShowHeadingLineValue_void_ev_bool(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setShowHeadingLineValue(value);
+					else
+						ptrNativeObject->setShowHeadingLineValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setShowHeadingLineValue_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setShowHeadingLineValue_void_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setShowHeadingLineValue_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setShowHeadingLineValue_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setShowHeadingLineValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_int32  _stdcall EarthView_World_Spatial_Display_IChartOption_getShipBeamLengthValue_ev_int32(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_int32 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getShipBeamLengthValue();
+						return objXXXX;
+					}
+					else
+					{
+						ev_int32 objXXXX = ptrNativeObject->getShipBeamLengthValue();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_getShipBeamLengthValue_ev_int32( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_getShipBeamLengthValue_ev_int32_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_getShipBeamLengthValue_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_int32  _stdcall EarthView_World_Spatial_Display_IChartOption_getShipBeamLengthValue_ev_int32_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_int32 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getShipBeamLengthValue();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setShipBeamLengthValue_void_ev_int32(void *pObjectXXXX, _in ev_int32 value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setShipBeamLengthValue(value);
+					else
+						ptrNativeObject->setShipBeamLengthValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setShipBeamLengthValue_void_ev_int32( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setShipBeamLengthValue_void_ev_int32_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setShipBeamLengthValue_void_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setShipBeamLengthValue_void_ev_int32_NoVirtual(void *pObjectXXXX, _in ev_int32 value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setShipBeamLengthValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_insertVRMRadius_void_ev_real64(void *pObjectXXXX, _in ev_real64 radius )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::insertVRMRadius(radius);
+					else
+						ptrNativeObject->insertVRMRadius(radius);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_insertVRMRadius_void_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_insertVRMRadius_void_ev_real64_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_insertVRMRadius_void_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_insertVRMRadius_void_ev_real64_NoVirtual(void *pObjectXXXX, _in ev_real64 radius )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::insertVRMRadius(radius);
+				}
+				extern "C" EV_DLL_EXPORT  ev_uint32  _stdcall EarthView_World_Spatial_Display_IChartOption_getVRMRadiusNum_ev_uint32(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_uint32 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getVRMRadiusNum();
+						return objXXXX;
+					}
+					else
+					{
+						ev_uint32 objXXXX = ptrNativeObject->getVRMRadiusNum();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_getVRMRadiusNum_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_getVRMRadiusNum_ev_uint32_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_getVRMRadiusNum_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_uint32  _stdcall EarthView_World_Spatial_Display_IChartOption_getVRMRadiusNum_ev_uint32_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_uint32 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getVRMRadiusNum();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial_Display_IChartOption_getVRMRadiusValue_ev_real64_ev_uint32(void *pObjectXXXX, _in ev_uint32 index )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getVRMRadiusValue(index);
+						return objXXXX;
+					}
+					else
+					{
+						ev_real64 objXXXX = ptrNativeObject->getVRMRadiusValue(index);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_getVRMRadiusValue_ev_real64_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_getVRMRadiusValue_ev_real64_ev_uint32_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_getVRMRadiusValue_ev_real64_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial_Display_IChartOption_getVRMRadiusValue_ev_real64_ev_uint32_NoVirtual(void *pObjectXXXX, _in ev_uint32 index )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getVRMRadiusValue(index);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_removeVRMRadius_void_ev_uint32(void *pObjectXXXX, _in ev_uint32 index )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::removeVRMRadius(index);
+					else
+						ptrNativeObject->removeVRMRadius(index);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_removeVRMRadius_void_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_removeVRMRadius_void_ev_uint32_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_removeVRMRadius_void_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_removeVRMRadius_void_ev_uint32_NoVirtual(void *pObjectXXXX, _in ev_uint32 index )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::removeVRMRadius(index);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_clearVRMRadius_void(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::clearVRMRadius();
+					else
+						ptrNativeObject->clearVRMRadius();
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_clearVRMRadius_void( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_clearVRMRadius_void_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_clearVRMRadius_void(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_clearVRMRadius_void_NoVirtual(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::clearVRMRadius();
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isUseVRMEBLSymbolA_ev_bool(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isUseVRMEBLSymbolA();
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->isUseVRMEBLSymbolA();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_isUseVRMEBLSymbolA_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_isUseVRMEBLSymbolA_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_isUseVRMEBLSymbolA_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isUseVRMEBLSymbolA_ev_bool_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isUseVRMEBLSymbolA();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setUseVRMEBLSymbolAValue_void_ev_bool(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setUseVRMEBLSymbolAValue(value);
+					else
+						ptrNativeObject->setUseVRMEBLSymbolAValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setUseVRMEBLSymbolAValue_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setUseVRMEBLSymbolAValue_void_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setUseVRMEBLSymbolAValue_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setUseVRMEBLSymbolAValue_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setUseVRMEBLSymbolAValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial_Display_IChartOption_getEBLLength_ev_real64(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getEBLLength();
+						return objXXXX;
+					}
+					else
+					{
+						ev_real64 objXXXX = ptrNativeObject->getEBLLength();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_getEBLLength_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_getEBLLength_ev_real64_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_getEBLLength_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial_Display_IChartOption_getEBLLength_ev_real64_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getEBLLength();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setEBLLength_void_ev_real64(void *pObjectXXXX, _in ev_real64 length )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setEBLLength(length);
+					else
+						ptrNativeObject->setEBLLength(length);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setEBLLength_void_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setEBLLength_void_ev_real64_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setEBLLength_void_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setEBLLength_void_ev_real64_NoVirtual(void *pObjectXXXX, _in ev_real64 length )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setEBLLength(length);
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial_Display_IChartOption_getEBLAngle_ev_real64(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getEBLAngle();
+						return objXXXX;
+					}
+					else
+					{
+						ev_real64 objXXXX = ptrNativeObject->getEBLAngle();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_getEBLAngle_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_getEBLAngle_ev_real64_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_getEBLAngle_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial_Display_IChartOption_getEBLAngle_ev_real64_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getEBLAngle();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setEBLAngle_void_ev_real64(void *pObjectXXXX, _in ev_real64 angle )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setEBLAngle(angle);
+					else
+						ptrNativeObject->setEBLAngle(angle);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setEBLAngle_void_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setEBLAngle_void_ev_real64_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setEBLAngle_void_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setEBLAngle_void_ev_real64_NoVirtual(void *pObjectXXXX, _in ev_real64 angle )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setEBLAngle(angle);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setUseEnglishValue_void_ev_bool(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setUseEnglishValue(value);
+					else
+						ptrNativeObject->setUseEnglishValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setUseEnglishValue_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setUseEnglishValue_void_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setUseEnglishValue_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setUseEnglishValue_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setUseEnglishValue(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_getUseEnglishValue_ev_bool(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getUseEnglishValue();
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->getUseEnglishValue();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_getUseEnglishValue_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_getUseEnglishValue_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_getUseEnglishValue_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_getUseEnglishValue_ev_bool_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::getUseEnglishValue();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setUseBlurSpatialRelation_void_ev_bool(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setUseBlurSpatialRelation(value);
+					else
+						ptrNativeObject->setUseBlurSpatialRelation(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setUseBlurSpatialRelation_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setUseBlurSpatialRelation_void_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setUseBlurSpatialRelation_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setUseBlurSpatialRelation_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setUseBlurSpatialRelation(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isUseBlurSpatialRelation_ev_bool(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isUseBlurSpatialRelation();
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->isUseBlurSpatialRelation();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_isUseBlurSpatialRelation_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_isUseBlurSpatialRelation_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_isUseBlurSpatialRelation_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isUseBlurSpatialRelation_ev_bool_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isUseBlurSpatialRelation();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setGeneralizeSoundgPoints_void_ev_bool(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setGeneralizeSoundgPoints(value);
+					else
+						ptrNativeObject->setGeneralizeSoundgPoints(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_setGeneralizeSoundgPoints_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_setGeneralizeSoundgPoints_void_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_setGeneralizeSoundgPoints_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Display_IChartOption_setGeneralizeSoundgPoints_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::setGeneralizeSoundgPoints(value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isGeneralizeSoundgPoints_ev_bool(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isGeneralizeSoundgPoints();
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->isGeneralizeSoundgPoints();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_isGeneralizeSoundgPoints_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_isGeneralizeSoundgPoints_ev_bool_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_isGeneralizeSoundgPoints_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Display_IChartOption_isGeneralizeSoundgPoints_ev_bool_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::isGeneralizeSoundgPoints();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  EarthView::World::Spatial::Display::IChartOption*  _stdcall EarthView_World_Spatial_Display_IChartOption_clone_IChartOption(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					if (dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*)ptrNativeObject) != NULL)
+					{
+						EarthView::World::Spatial::Display::IChartOption* objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::clone();
+						return objXXXX;
+					}
+					else
+					{
+						EarthView::World::Spatial::Display::IChartOption* objXXXX = ptrNativeObject->clone();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Display_IChartOption_clone_IChartOption( void *pObjectXXXX, EarthView_World_Spatial_Display_IChartOption_clone_IChartOption_Callback* pCallback )
+				{
+					IChartOptionProxy* ptr = dynamic_cast<IChartOptionProxy*>((EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Display_IChartOption_clone_IChartOption(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  EarthView::World::Spatial::Display::IChartOption*  _stdcall EarthView_World_Spatial_Display_IChartOption_clone_IChartOption_NoVirtual(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial::Display::IChartOption* ptrNativeObject = (EarthView::World::Spatial::Display::IChartOption*) pObjectXXXX;
+					EarthView::World::Spatial::Display::IChartOption* objXXXX = ptrNativeObject->EarthView::World::Spatial::Display::IChartOption::clone();
+					return objXXXX;
+				}
+			}
+		}
+	}
+}

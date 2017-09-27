@@ -1,0 +1,1981 @@
+/* This file is produced by the P/Invoke AutoWrapper Utility 
+ Copyright (c) 2012 by EarthView Image Inc */
+#include "stableheaders.h"
+#include "graphic/resourcebackgroundqueue.h"
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Graphic
+		{
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_canHandleResponse_ev_bool_CResponse_CWorkQueue_Callback)(_in const EarthView::World::Core::CWorkQueue::CResponse* res, _in const EarthView::World::Core::CWorkQueue* srcQ);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_canHandleRequest_ev_bool_CRequest_CWorkQueue_Callback)(_in const EarthView::World::Core::CWorkQueue::CRequest* res, _in const EarthView::World::Core::CWorkQueue* srcQ);
+			typedef void  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_handleResponse_void_CResponse_CWorkQueue_Callback)(_in const EarthView::World::Core::CWorkQueue::CResponse* res, _in const EarthView::World::Core::CWorkQueue* srcQ);
+			typedef EarthView::World::Core::CWorkQueue::CResponse*  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_handleRequest_CResponse_CRequest_CWorkQueue_Callback)(_in const EarthView::World::Core::CWorkQueue::CRequest* req, _in const EarthView::World::Core::CWorkQueue* srcQ);
+			typedef const EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler*  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_getRequestHandlerPtr_CResourceBackgroundQueueInternalRequestHandler_Callback)();
+			typedef const EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler*  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_getResponseHandlerPtr_CResourceBackgroundQueueInternalResponseHandler_Callback)();
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback)(_in char*& name, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_Callback)(_in char*& name);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_CResourceBackgroundQueueListener_Callback)(_in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_Callback)();
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback)(_in char*& name, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_Callback)(_in char*& name);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback)(_in char*& name, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_Callback)(_in char*& name);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_CResourceBackgroundQueueListener_Callback)(_in char*& resType, _in char*& name, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_Callback)(_in char*& resType, _in char*& name);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_CResourceBackgroundQueueListener_Callback)(_in char*& resType, _in ev_uint64 handle, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_Callback)(_in char*& resType, _in ev_uint64 handle);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback)(_in char*& name, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_Callback)(_in char*& name);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener_Callback)(_in char*& resType, _in char*& name, _in char*& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback)(_in char*& resType, _in char*& name, _in char*& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_Callback)(_in char*& resType, _in char*& name, _in char*& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_Callback)(_in char*& resType, _in char*& name, _in char*& group, _in ev_bool isManual);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_Callback)(_in char*& resType, _in char*& name, _in char*& group);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener_Callback)(_in char*& resType, _in char*& name, _in char*& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback)(_in char*& resType, _in char*& name, _in char*& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_Callback)(_in char*& resType, _in char*& name, _in char*& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_Callback)(_in char*& resType, _in char*& name, _in char*& group, _in ev_bool isManual);
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_Callback)(_in char*& resType, _in char*& name, _in char*& group);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_isProcessComplete_ev_bool_ev_uint64_Callback)(_in ev_uint64 ticket);
+			typedef void  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_initialise_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_shutdown_void_Callback)();
+			typedef char*  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_getGroupName_EVString_Callback)();
+			typedef char*  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_getName_EVString_Callback)();
+			class CResourceBackgroundQueueProxy : public EarthView::World::Graphic::CResourceBackgroundQueue
+			{
+			private:
+				EarthView_World_Graphic_CResourceBackgroundQueue_canHandleResponse_ev_bool_CResponse_CWorkQueue_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_canHandleResponse_ev_bool_CResponse_CWorkQueue_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_canHandleRequest_ev_bool_CRequest_CWorkQueue_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_canHandleRequest_ev_bool_CRequest_CWorkQueue_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_handleResponse_void_CResponse_CWorkQueue_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_handleResponse_void_CResponse_CWorkQueue_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_handleRequest_CResponse_CRequest_CWorkQueue_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_handleRequest_CResponse_CRequest_CWorkQueue_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_getRequestHandlerPtr_CResourceBackgroundQueueInternalRequestHandler_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_getRequestHandlerPtr_CResourceBackgroundQueueInternalRequestHandler_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_getResponseHandlerPtr_CResourceBackgroundQueueInternalResponseHandler_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_getResponseHandlerPtr_CResourceBackgroundQueueInternalResponseHandler_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_CResourceBackgroundQueueListener_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_CResourceBackgroundQueueListener_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_CResourceBackgroundQueueListener_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_CResourceBackgroundQueueListener_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_CResourceBackgroundQueueListener_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_CResourceBackgroundQueueListener_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_isProcessComplete_ev_bool_ev_uint64_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_isProcessComplete_ev_bool_ev_uint64_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_initialise_void_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_initialise_void_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_shutdown_void_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_shutdown_void_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_getGroupName_EVString_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_getGroupName_EVString_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_getName_EVString_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_getName_EVString_Callback;
+			public:
+				CResourceBackgroundQueueProxy(EarthView::World::Core::CNameValuePairList *pList) : CResourceBackgroundQueue(pList)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_canHandleResponse_ev_bool_CResponse_CWorkQueue_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_canHandleRequest_ev_bool_CRequest_CWorkQueue_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_handleResponse_void_CResponse_CWorkQueue_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_handleRequest_CResponse_CRequest_CWorkQueue_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_getRequestHandlerPtr_CResourceBackgroundQueueInternalRequestHandler_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_getResponseHandlerPtr_CResourceBackgroundQueueInternalResponseHandler_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_CResourceBackgroundQueueListener_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_CResourceBackgroundQueueListener_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_CResourceBackgroundQueueListener_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_isProcessComplete_ev_bool_ev_uint64_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_initialise_void_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_shutdown_void_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_getGroupName_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_getName_EVString_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_canHandleResponse_ev_bool_CResponse_CWorkQueue(EarthView_World_Graphic_CResourceBackgroundQueue_canHandleResponse_ev_bool_CResponse_CWorkQueue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_canHandleResponse_ev_bool_CResponse_CWorkQueue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_canHandleRequest_ev_bool_CRequest_CWorkQueue(EarthView_World_Graphic_CResourceBackgroundQueue_canHandleRequest_ev_bool_CRequest_CWorkQueue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_canHandleRequest_ev_bool_CRequest_CWorkQueue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_handleResponse_void_CResponse_CWorkQueue(EarthView_World_Graphic_CResourceBackgroundQueue_handleResponse_void_CResponse_CWorkQueue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_handleResponse_void_CResponse_CWorkQueue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_handleRequest_CResponse_CRequest_CWorkQueue(EarthView_World_Graphic_CResourceBackgroundQueue_handleRequest_CResponse_CRequest_CWorkQueue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_handleRequest_CResponse_CRequest_CWorkQueue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_getRequestHandlerPtr_CResourceBackgroundQueueInternalRequestHandler(EarthView_World_Graphic_CResourceBackgroundQueue_getRequestHandlerPtr_CResourceBackgroundQueueInternalRequestHandler_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_getRequestHandlerPtr_CResourceBackgroundQueueInternalRequestHandler_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_getResponseHandlerPtr_CResourceBackgroundQueueInternalResponseHandler(EarthView_World_Graphic_CResourceBackgroundQueue_getResponseHandlerPtr_CResourceBackgroundQueueInternalResponseHandler_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_getResponseHandlerPtr_CResourceBackgroundQueueInternalResponseHandler_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener(EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString(EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_CResourceBackgroundQueueListener(EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_CResourceBackgroundQueueListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_CResourceBackgroundQueueListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64(EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener(EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString(EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener(EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString(EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_CResourceBackgroundQueueListener(EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_CResourceBackgroundQueueListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_CResourceBackgroundQueueListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString(EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_CResourceBackgroundQueueListener(EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_CResourceBackgroundQueueListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_CResourceBackgroundQueueListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64(EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener(EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString(EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener(EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList(EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader(EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool(EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString(EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener(EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList(EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader(EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool(EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString(EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_isProcessComplete_ev_bool_ev_uint64(EarthView_World_Graphic_CResourceBackgroundQueue_isProcessComplete_ev_bool_ev_uint64_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_isProcessComplete_ev_bool_ev_uint64_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_initialise_void(EarthView_World_Graphic_CResourceBackgroundQueue_initialise_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_initialise_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_shutdown_void(EarthView_World_Graphic_CResourceBackgroundQueue_shutdown_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_shutdown_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_getGroupName_EVString(EarthView_World_Graphic_CResourceBackgroundQueue_getGroupName_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_getGroupName_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_getName_EVString(EarthView_World_Graphic_CResourceBackgroundQueue_getName_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_getName_EVString_Callback = pCallback;
+				}
+				virtual EVString getGroupName() const
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_getGroupName_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_getGroupName_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::getGroupName();
+				}
+				virtual EVString getName() const
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_getName_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_getName_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::getName();
+				}
+				virtual ev_bool canHandleResponse(_in const EarthView::World::Core::CWorkQueue::CResponse* res, _in const EarthView::World::Core::CWorkQueue* srcQ)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_canHandleResponse_ev_bool_CResponse_CWorkQueue_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_canHandleResponse_ev_bool_CResponse_CWorkQueue_Callback(res, srcQ);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::canHandleResponse(res, srcQ);
+				}
+				virtual ev_bool canHandleRequest(_in const EarthView::World::Core::CWorkQueue::CRequest* res, _in const EarthView::World::Core::CWorkQueue* srcQ)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_canHandleRequest_ev_bool_CRequest_CWorkQueue_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_canHandleRequest_ev_bool_CRequest_CWorkQueue_Callback(res, srcQ);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::canHandleRequest(res, srcQ);
+				}
+				virtual void handleResponse(_in const EarthView::World::Core::CWorkQueue::CResponse* res, _in const EarthView::World::Core::CWorkQueue* srcQ)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_handleResponse_void_CResponse_CWorkQueue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CResourceBackgroundQueue_handleResponse_void_CResponse_CWorkQueue_Callback(res, srcQ);
+					}
+					else
+						return this->CResourceBackgroundQueue::handleResponse(res, srcQ);
+				}
+				virtual EarthView::World::Core::CWorkQueue::CResponse* handleRequest(_in const EarthView::World::Core::CWorkQueue::CRequest* req, _in const EarthView::World::Core::CWorkQueue* srcQ)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_handleRequest_CResponse_CRequest_CWorkQueue_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Core::CWorkQueue::CResponse* returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_handleRequest_CResponse_CRequest_CWorkQueue_Callback(req, srcQ);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::handleRequest(req, srcQ);
+				}
+				virtual const EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler* getRequestHandlerPtr()
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_getRequestHandlerPtr_CResourceBackgroundQueueInternalRequestHandler_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler* returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_getRequestHandlerPtr_CResourceBackgroundQueueInternalRequestHandler_Callback();
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::getRequestHandlerPtr();
+				}
+				virtual const EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler* getResponseHandlerPtr()
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_getResponseHandlerPtr_CResourceBackgroundQueueInternalResponseHandler_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler* returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_getResponseHandlerPtr_CResourceBackgroundQueueInternalResponseHandler_Callback();
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::getResponseHandlerPtr();
+				}
+				virtual void initialise()
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_initialise_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CResourceBackgroundQueue_initialise_void_Callback();
+					}
+					else
+						return this->CResourceBackgroundQueue::initialise();
+				}
+				virtual void shutdown()
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_shutdown_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CResourceBackgroundQueue_shutdown_void_Callback();
+					}
+					else
+						return this->CResourceBackgroundQueue::shutdown();
+				}
+				virtual ev_uint64 initialiseResourceGroup(_in const EVString& name, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback(name_Char, listener);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::initialiseResourceGroup(name, listener);
+				}
+				virtual ev_uint64 initialiseResourceGroup(_in const EVString& name)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_Callback(name_Char);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::initialiseResourceGroup(name);
+				}
+				virtual ev_uint64 initialiseAllResourceGroups(_in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_CResourceBackgroundQueueListener_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_CResourceBackgroundQueueListener_Callback(listener);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::initialiseAllResourceGroups(listener);
+				}
+				virtual ev_uint64 initialiseAllResourceGroups()
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_Callback();
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::initialiseAllResourceGroups();
+				}
+				virtual ev_uint64 prepareResourceGroup(_in const EVString& name, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback(name_Char, listener);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::prepareResourceGroup(name, listener);
+				}
+				virtual ev_uint64 prepareResourceGroup(_in const EVString& name)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_Callback(name_Char);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::prepareResourceGroup(name);
+				}
+				virtual ev_uint64 loadResourceGroup(_in const EVString& name, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback(name_Char, listener);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::loadResourceGroup(name, listener);
+				}
+				virtual ev_uint64 loadResourceGroup(_in const EVString& name)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_Callback(name_Char);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::loadResourceGroup(name);
+				}
+				virtual ev_uint64 unload(_in const EVString& resType, _in const EVString& name, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_CResourceBackgroundQueueListener_Callback != NULL && this->isCustomExtend())
+					{
+						char* resType_Char = resType.makeBuffer();
+						char* name_Char = name.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_CResourceBackgroundQueueListener_Callback(resType_Char, name_Char, listener);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::unload(resType, name, listener);
+				}
+				virtual ev_uint64 unload(_in const EVString& resType, _in const EVString& name)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* resType_Char = resType.makeBuffer();
+						char* name_Char = name.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_Callback(resType_Char, name_Char);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::unload(resType, name);
+				}
+				virtual ev_uint64 unload(_in const EVString& resType, _in ev_uint64 handle, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_CResourceBackgroundQueueListener_Callback != NULL && this->isCustomExtend())
+					{
+						char* resType_Char = resType.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_CResourceBackgroundQueueListener_Callback(resType_Char, handle, listener);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::unload(resType, handle, listener);
+				}
+				virtual ev_uint64 unload(_in const EVString& resType, _in ev_uint64 handle)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_Callback != NULL && this->isCustomExtend())
+					{
+						char* resType_Char = resType.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_Callback(resType_Char, handle);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::unload(resType, handle);
+				}
+				virtual ev_uint64 unloadResourceGroup(_in const EVString& name, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback(name_Char, listener);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::unloadResourceGroup(name, listener);
+				}
+				virtual ev_uint64 unloadResourceGroup(_in const EVString& name)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_Callback(name_Char);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::unloadResourceGroup(name);
+				}
+				virtual ev_uint64 prepare(_in const EVString& resType, _in const EVString& name, _in const EVString& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener_Callback != NULL && this->isCustomExtend())
+					{
+						char* resType_Char = resType.makeBuffer();
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener_Callback(resType_Char, name_Char, group_Char, isManual, ref_loader, loadParams, listener);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::prepare(resType, name, group, isManual, ref_loader, loadParams, listener);
+				}
+				virtual ev_uint64 prepare(_in const EVString& resType, _in const EVString& name, _in const EVString& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback != NULL && this->isCustomExtend())
+					{
+						char* resType_Char = resType.makeBuffer();
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback(resType_Char, name_Char, group_Char, isManual, ref_loader, loadParams);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::prepare(resType, name, group, isManual, ref_loader, loadParams);
+				}
+				virtual ev_uint64 prepare(_in const EVString& resType, _in const EVString& name, _in const EVString& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_Callback != NULL && this->isCustomExtend())
+					{
+						char* resType_Char = resType.makeBuffer();
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_Callback(resType_Char, name_Char, group_Char, isManual, ref_loader);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::prepare(resType, name, group, isManual, ref_loader);
+				}
+				virtual ev_uint64 prepare(_in const EVString& resType, _in const EVString& name, _in const EVString& group, _in ev_bool isManual)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						char* resType_Char = resType.makeBuffer();
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_Callback(resType_Char, name_Char, group_Char, isManual);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::prepare(resType, name, group, isManual);
+				}
+				virtual ev_uint64 prepare(_in const EVString& resType, _in const EVString& name, _in const EVString& group)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* resType_Char = resType.makeBuffer();
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_Callback(resType_Char, name_Char, group_Char);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::prepare(resType, name, group);
+				}
+				virtual ev_uint64 load(_in const EVString& resType, _in const EVString& name, _in const EVString& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener_Callback != NULL && this->isCustomExtend())
+					{
+						char* resType_Char = resType.makeBuffer();
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener_Callback(resType_Char, name_Char, group_Char, isManual, ref_loader, loadParams, listener);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::load(resType, name, group, isManual, ref_loader, loadParams, listener);
+				}
+				virtual ev_uint64 load(_in const EVString& resType, _in const EVString& name, _in const EVString& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback != NULL && this->isCustomExtend())
+					{
+						char* resType_Char = resType.makeBuffer();
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback(resType_Char, name_Char, group_Char, isManual, ref_loader, loadParams);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::load(resType, name, group, isManual, ref_loader, loadParams);
+				}
+				virtual ev_uint64 load(_in const EVString& resType, _in const EVString& name, _in const EVString& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_Callback != NULL && this->isCustomExtend())
+					{
+						char* resType_Char = resType.makeBuffer();
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_Callback(resType_Char, name_Char, group_Char, isManual, ref_loader);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::load(resType, name, group, isManual, ref_loader);
+				}
+				virtual ev_uint64 load(_in const EVString& resType, _in const EVString& name, _in const EVString& group, _in ev_bool isManual)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						char* resType_Char = resType.makeBuffer();
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_Callback(resType_Char, name_Char, group_Char, isManual);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::load(resType, name, group, isManual);
+				}
+				virtual ev_uint64 load(_in const EVString& resType, _in const EVString& name, _in const EVString& group)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* resType_Char = resType.makeBuffer();
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_Callback(resType_Char, name_Char, group_Char);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::load(resType, name, group);
+				}
+				virtual ev_bool isProcessComplete(_in ev_uint64 ticket)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_isProcessComplete_ev_bool_ev_uint64_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_isProcessComplete_ev_bool_ev_uint64_Callback(ticket);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueue::isProcessComplete(ticket);
+				}
+			};
+			REGISTER_FACTORY_CLASS(CResourceBackgroundQueueProxy);
+			extern "C" EV_DLL_EXPORT  char*  _stdcall Get_EarthView_World_Graphic_CResourceBackgroundQueue_msBackgroundQueueGroupName()
+			{
+				EVString objXXXX = EarthView::World::Graphic::CResourceBackgroundQueue::msBackgroundQueueGroupName;
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Graphic_CResourceBackgroundQueue_msBackgroundQueueGroupName( char*  value )
+			{
+				EarthView::World::Core::ev_string value1 = value;
+				EarthView::World::Graphic::CResourceBackgroundQueue::msBackgroundQueueGroupName = value1;
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall Get_EarthView_World_Graphic_CResourceBackgroundQueue_msBackgroundQueueName()
+			{
+				EVString objXXXX = EarthView::World::Graphic::CResourceBackgroundQueue::msBackgroundQueueName;
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Graphic_CResourceBackgroundQueue_msBackgroundQueueName( char*  value )
+			{
+				EarthView::World::Core::ev_string value1 = value;
+				EarthView::World::Graphic::CResourceBackgroundQueue::msBackgroundQueueName = value1;
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_getGroupName_EVString(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::getGroupName();
+					return objXXXX.makeBuffer();
+				}
+				else
+				{
+					EVString objXXXX = ptrNativeObject->getGroupName();
+					return objXXXX.makeBuffer();
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_getGroupName_EVString( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_getGroupName_EVString_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_getGroupName_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_getGroupName_EVString_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::getGroupName();
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_getName_EVString(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::getName();
+					return objXXXX.makeBuffer();
+				}
+				else
+				{
+					EVString objXXXX = ptrNativeObject->getName();
+					return objXXXX.makeBuffer();
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_getName_EVString( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_getName_EVString_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_getName_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_getName_EVString_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::getName();
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_getSingleton_CResourceBackgroundQueue( )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue& objXXXX = EarthView::World::Graphic::CResourceBackgroundQueue::getSingleton();
+				EarthView::World::Graphic::CResourceBackgroundQueue *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CResourceBackgroundQueue*  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_getSingletonPtr_CResourceBackgroundQueue( )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* objXXXX = EarthView::World::Graphic::CResourceBackgroundQueue::getSingletonPtr();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_canHandleResponse_ev_bool_CResponse_CWorkQueue(void *pObjectXXXX, _in const EarthView::World::Core::CWorkQueue::CResponse* res, _in const EarthView::World::Core::CWorkQueue* srcQ )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::canHandleResponse(res, srcQ);
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->canHandleResponse(res, srcQ);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_canHandleResponse_ev_bool_CResponse_CWorkQueue( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_canHandleResponse_ev_bool_CResponse_CWorkQueue_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_canHandleResponse_ev_bool_CResponse_CWorkQueue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_canHandleResponse_ev_bool_CResponse_CWorkQueue_NoVirtual(void *pObjectXXXX, _in const EarthView::World::Core::CWorkQueue::CResponse* res, _in const EarthView::World::Core::CWorkQueue* srcQ )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::canHandleResponse(res, srcQ);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_canHandleRequest_ev_bool_CRequest_CWorkQueue(void *pObjectXXXX, _in const EarthView::World::Core::CWorkQueue::CRequest* res, _in const EarthView::World::Core::CWorkQueue* srcQ )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::canHandleRequest(res, srcQ);
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->canHandleRequest(res, srcQ);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_canHandleRequest_ev_bool_CRequest_CWorkQueue( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_canHandleRequest_ev_bool_CRequest_CWorkQueue_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_canHandleRequest_ev_bool_CRequest_CWorkQueue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_canHandleRequest_ev_bool_CRequest_CWorkQueue_NoVirtual(void *pObjectXXXX, _in const EarthView::World::Core::CWorkQueue::CRequest* res, _in const EarthView::World::Core::CWorkQueue* srcQ )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::canHandleRequest(res, srcQ);
+				return objXXXX;
+			}
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_canHandleRequest_ev_bool_CRequest_CWorkQueue_Callback)(_in const EarthView::World::Core::CWorkQueue::CRequest* req, _in const EarthView::World::Core::CWorkQueue* srcQ);
+			typedef EarthView::World::Core::CWorkQueue::CResponse*  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_handleRequest_CResponse_CRequest_CWorkQueue_Callback)(_in const EarthView::World::Core::CWorkQueue::CRequest* req, _in const EarthView::World::Core::CWorkQueue* srcQ);
+			class CResourceBackgroundQueueInternalRequestHandlerProxy : public EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler
+			{
+			private:
+				EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_canHandleRequest_ev_bool_CRequest_CWorkQueue_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_canHandleRequest_ev_bool_CRequest_CWorkQueue_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_handleRequest_CResponse_CRequest_CWorkQueue_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_handleRequest_CResponse_CRequest_CWorkQueue_Callback;
+			public:
+				CResourceBackgroundQueueInternalRequestHandlerProxy(EarthView::World::Core::CNameValuePairList *pList) : CResourceBackgroundQueueInternalRequestHandler(pList)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_canHandleRequest_ev_bool_CRequest_CWorkQueue_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_handleRequest_CResponse_CRequest_CWorkQueue_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_canHandleRequest_ev_bool_CRequest_CWorkQueue(EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_canHandleRequest_ev_bool_CRequest_CWorkQueue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_canHandleRequest_ev_bool_CRequest_CWorkQueue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_handleRequest_CResponse_CRequest_CWorkQueue(EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_handleRequest_CResponse_CRequest_CWorkQueue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_handleRequest_CResponse_CRequest_CWorkQueue_Callback = pCallback;
+				}
+				virtual ev_bool canHandleRequest(_in const EarthView::World::Core::CWorkQueue::CRequest* res, _in const EarthView::World::Core::CWorkQueue* srcQ)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_canHandleRequest_ev_bool_CRequest_CWorkQueue_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_canHandleRequest_ev_bool_CRequest_CWorkQueue_Callback(res, srcQ);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueueInternalRequestHandler::canHandleRequest(res, srcQ);
+				}
+				virtual EarthView::World::Core::CWorkQueue::CResponse* handleRequest(_in const EarthView::World::Core::CWorkQueue::CRequest* req, _in const EarthView::World::Core::CWorkQueue* srcQ)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_handleRequest_CResponse_CRequest_CWorkQueue_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Core::CWorkQueue::CResponse* returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_handleRequest_CResponse_CRequest_CWorkQueue_Callback(req, srcQ);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueueInternalRequestHandler::handleRequest(req, srcQ);
+				}
+			};
+			REGISTER_FACTORY_CLASS(CResourceBackgroundQueueInternalRequestHandlerProxy);
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_canHandleRequest_ev_bool_CRequest_CWorkQueue(void *pObjectXXXX, _in const EarthView::World::Core::CWorkQueue::CRequest* res, _in const EarthView::World::Core::CWorkQueue* srcQ )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueInternalRequestHandlerProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler::canHandleRequest(res, srcQ);
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->canHandleRequest(res, srcQ);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_canHandleRequest_ev_bool_CRequest_CWorkQueue( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_canHandleRequest_ev_bool_CRequest_CWorkQueue_Callback* pCallback )
+			{
+				CResourceBackgroundQueueInternalRequestHandlerProxy* ptr = dynamic_cast<CResourceBackgroundQueueInternalRequestHandlerProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_canHandleRequest_ev_bool_CRequest_CWorkQueue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_canHandleRequest_ev_bool_CRequest_CWorkQueue_NoVirtual(void *pObjectXXXX, _in const EarthView::World::Core::CWorkQueue::CRequest* res, _in const EarthView::World::Core::CWorkQueue* srcQ )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler::canHandleRequest(res, srcQ);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Core::CWorkQueue::CResponse*  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_handleRequest_CResponse_CRequest_CWorkQueue(void *pObjectXXXX, _in const EarthView::World::Core::CWorkQueue::CRequest* req, _in const EarthView::World::Core::CWorkQueue* srcQ )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueInternalRequestHandlerProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Core::CWorkQueue::CResponse* objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler::handleRequest(req, srcQ);
+					return objXXXX;
+				}
+				else
+				{
+					EarthView::World::Core::CWorkQueue::CResponse* objXXXX = ptrNativeObject->handleRequest(req, srcQ);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_handleRequest_CResponse_CRequest_CWorkQueue( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_handleRequest_CResponse_CRequest_CWorkQueue_Callback* pCallback )
+			{
+				CResourceBackgroundQueueInternalRequestHandlerProxy* ptr = dynamic_cast<CResourceBackgroundQueueInternalRequestHandlerProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_handleRequest_CResponse_CRequest_CWorkQueue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Core::CWorkQueue::CResponse*  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalRequestHandler_handleRequest_CResponse_CRequest_CWorkQueue_NoVirtual(void *pObjectXXXX, _in const EarthView::World::Core::CWorkQueue::CRequest* req, _in const EarthView::World::Core::CWorkQueue* srcQ )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler*) pObjectXXXX;
+				EarthView::World::Core::CWorkQueue::CResponse* objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler::handleRequest(req, srcQ);
+				return objXXXX;
+			}
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_canHandleResponse_ev_bool_CResponse_CWorkQueue_Callback)(_in const EarthView::World::Core::CWorkQueue::CResponse* res, _in const EarthView::World::Core::CWorkQueue* srcQ);
+			typedef void  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_handleResponse_void_CResponse_CWorkQueue_Callback)(_in const EarthView::World::Core::CWorkQueue::CResponse* res, _in const EarthView::World::Core::CWorkQueue* srcQ);
+			class CResourceBackgroundQueueInternalResponseHandlerProxy : public EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler
+			{
+			private:
+				EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_canHandleResponse_ev_bool_CResponse_CWorkQueue_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_canHandleResponse_ev_bool_CResponse_CWorkQueue_Callback;
+				EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_handleResponse_void_CResponse_CWorkQueue_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_handleResponse_void_CResponse_CWorkQueue_Callback;
+			public:
+				CResourceBackgroundQueueInternalResponseHandlerProxy(EarthView::World::Core::CNameValuePairList *pList) : CResourceBackgroundQueueInternalResponseHandler(pList)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_canHandleResponse_ev_bool_CResponse_CWorkQueue_Callback = NULL;
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_handleResponse_void_CResponse_CWorkQueue_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_canHandleResponse_ev_bool_CResponse_CWorkQueue(EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_canHandleResponse_ev_bool_CResponse_CWorkQueue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_canHandleResponse_ev_bool_CResponse_CWorkQueue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_handleResponse_void_CResponse_CWorkQueue(EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_handleResponse_void_CResponse_CWorkQueue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_handleResponse_void_CResponse_CWorkQueue_Callback = pCallback;
+				}
+				virtual ev_bool canHandleResponse(_in const EarthView::World::Core::CWorkQueue::CResponse* res, _in const EarthView::World::Core::CWorkQueue* srcQ)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_canHandleResponse_ev_bool_CResponse_CWorkQueue_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_canHandleResponse_ev_bool_CResponse_CWorkQueue_Callback(res, srcQ);
+						return returnValue;
+					}
+					else
+						return this->CResourceBackgroundQueueInternalResponseHandler::canHandleResponse(res, srcQ);
+				}
+				virtual void handleResponse(_in const EarthView::World::Core::CWorkQueue::CResponse* res, _in const EarthView::World::Core::CWorkQueue* srcQ)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_handleResponse_void_CResponse_CWorkQueue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_handleResponse_void_CResponse_CWorkQueue_Callback(res, srcQ);
+					}
+					else
+						return this->CResourceBackgroundQueueInternalResponseHandler::handleResponse(res, srcQ);
+				}
+			};
+			REGISTER_FACTORY_CLASS(CResourceBackgroundQueueInternalResponseHandlerProxy);
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_canHandleResponse_ev_bool_CResponse_CWorkQueue(void *pObjectXXXX, _in const EarthView::World::Core::CWorkQueue::CResponse* res, _in const EarthView::World::Core::CWorkQueue* srcQ )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueInternalResponseHandlerProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler::canHandleResponse(res, srcQ);
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->canHandleResponse(res, srcQ);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_canHandleResponse_ev_bool_CResponse_CWorkQueue( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_canHandleResponse_ev_bool_CResponse_CWorkQueue_Callback* pCallback )
+			{
+				CResourceBackgroundQueueInternalResponseHandlerProxy* ptr = dynamic_cast<CResourceBackgroundQueueInternalResponseHandlerProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_canHandleResponse_ev_bool_CResponse_CWorkQueue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_canHandleResponse_ev_bool_CResponse_CWorkQueue_NoVirtual(void *pObjectXXXX, _in const EarthView::World::Core::CWorkQueue::CResponse* res, _in const EarthView::World::Core::CWorkQueue* srcQ )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler::canHandleResponse(res, srcQ);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_handleResponse_void_CResponse_CWorkQueue(void *pObjectXXXX, _in const EarthView::World::Core::CWorkQueue::CResponse* res, _in const EarthView::World::Core::CWorkQueue* srcQ )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueInternalResponseHandlerProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler::handleResponse(res, srcQ);
+				else
+					ptrNativeObject->handleResponse(res, srcQ);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_handleResponse_void_CResponse_CWorkQueue( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_handleResponse_void_CResponse_CWorkQueue_Callback* pCallback )
+			{
+				CResourceBackgroundQueueInternalResponseHandlerProxy* ptr = dynamic_cast<CResourceBackgroundQueueInternalResponseHandlerProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_handleResponse_void_CResponse_CWorkQueue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueInternalResponseHandler_handleResponse_void_CResponse_CWorkQueue_NoVirtual(void *pObjectXXXX, _in const EarthView::World::Core::CWorkQueue::CResponse* res, _in const EarthView::World::Core::CWorkQueue* srcQ )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler::handleResponse(res, srcQ);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_handleResponse_void_CResponse_CWorkQueue(void *pObjectXXXX, _in const EarthView::World::Core::CWorkQueue::CResponse* res, _in const EarthView::World::Core::CWorkQueue* srcQ )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::handleResponse(res, srcQ);
+				else
+					ptrNativeObject->handleResponse(res, srcQ);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_handleResponse_void_CResponse_CWorkQueue( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_handleResponse_void_CResponse_CWorkQueue_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_handleResponse_void_CResponse_CWorkQueue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_handleResponse_void_CResponse_CWorkQueue_NoVirtual(void *pObjectXXXX, _in const EarthView::World::Core::CWorkQueue::CResponse* res, _in const EarthView::World::Core::CWorkQueue* srcQ )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::handleResponse(res, srcQ);
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Core::CWorkQueue::CResponse*  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_handleRequest_CResponse_CRequest_CWorkQueue(void *pObjectXXXX, _in const EarthView::World::Core::CWorkQueue::CRequest* req, _in const EarthView::World::Core::CWorkQueue* srcQ )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Core::CWorkQueue::CResponse* objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::handleRequest(req, srcQ);
+					return objXXXX;
+				}
+				else
+				{
+					EarthView::World::Core::CWorkQueue::CResponse* objXXXX = ptrNativeObject->handleRequest(req, srcQ);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_handleRequest_CResponse_CRequest_CWorkQueue( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_handleRequest_CResponse_CRequest_CWorkQueue_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_handleRequest_CResponse_CRequest_CWorkQueue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Core::CWorkQueue::CResponse*  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_handleRequest_CResponse_CRequest_CWorkQueue_NoVirtual(void *pObjectXXXX, _in const EarthView::World::Core::CWorkQueue::CRequest* req, _in const EarthView::World::Core::CWorkQueue* srcQ )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				EarthView::World::Core::CWorkQueue::CResponse* objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::handleRequest(req, srcQ);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler*  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_getRequestHandlerPtr_CResourceBackgroundQueueInternalRequestHandler(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler* objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::getRequestHandlerPtr();
+					return objXXXX;
+				}
+				else
+				{
+					const EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler* objXXXX = ptrNativeObject->getRequestHandlerPtr();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_getRequestHandlerPtr_CResourceBackgroundQueueInternalRequestHandler( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_getRequestHandlerPtr_CResourceBackgroundQueueInternalRequestHandler_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_getRequestHandlerPtr_CResourceBackgroundQueueInternalRequestHandler(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler*  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_getRequestHandlerPtr_CResourceBackgroundQueueInternalRequestHandler_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				const EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalRequestHandler* objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::getRequestHandlerPtr();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler*  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_getResponseHandlerPtr_CResourceBackgroundQueueInternalResponseHandler(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler* objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::getResponseHandlerPtr();
+					return objXXXX;
+				}
+				else
+				{
+					const EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler* objXXXX = ptrNativeObject->getResponseHandlerPtr();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_getResponseHandlerPtr_CResourceBackgroundQueueInternalResponseHandler( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_getResponseHandlerPtr_CResourceBackgroundQueueInternalResponseHandler_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_getResponseHandlerPtr_CResourceBackgroundQueueInternalResponseHandler(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler*  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_getResponseHandlerPtr_CResourceBackgroundQueueInternalResponseHandler_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				const EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueInternalResponseHandler* objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::getResponseHandlerPtr();
+				return objXXXX;
+			}
+			typedef void  ( _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueListener_operationCompleted_void_ev_uint64_BackgroundProcessResult_Callback)(_in ev_uint64 ticket, _in const void* result);
+			class CResourceBackgroundQueueListenerProxy : public EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener
+			{
+			private:
+				EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueListener_operationCompleted_void_ev_uint64_BackgroundProcessResult_Callback* m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueListener_operationCompleted_void_ev_uint64_BackgroundProcessResult_Callback;
+			public:
+				CResourceBackgroundQueueListenerProxy(EarthView::World::Core::CNameValuePairList *pList) : CResourceBackgroundQueueListener(pList)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueListener_operationCompleted_void_ev_uint64_BackgroundProcessResult_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueListener_operationCompleted_void_ev_uint64_BackgroundProcessResult(EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueListener_operationCompleted_void_ev_uint64_BackgroundProcessResult_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueListener_operationCompleted_void_ev_uint64_BackgroundProcessResult_Callback = pCallback;
+				}
+				virtual void operationCompleted(_in ev_uint64 ticket, _in const EarthView::World::Graphic::BackgroundProcessResult& result)
+				{
+					if(m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueListener_operationCompleted_void_ev_uint64_BackgroundProcessResult_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueListener_operationCompleted_void_ev_uint64_BackgroundProcessResult_Callback(ticket, &result);
+					}
+					else
+						return this->CResourceBackgroundQueueListener::operationCompleted(ticket, result);
+				}
+			};
+			REGISTER_FACTORY_CLASS(CResourceBackgroundQueueListenerProxy);
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueListener_operationCompleted_void_ev_uint64_BackgroundProcessResult(void *pObjectXXXX, _in ev_uint64 ticket, _in const void* result )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueListenerProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener::operationCompleted(ticket, *(EarthView::World::Graphic::BackgroundProcessResult*)result);
+				else
+					ptrNativeObject->operationCompleted(ticket, *(EarthView::World::Graphic::BackgroundProcessResult*)result);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueListener_operationCompleted_void_ev_uint64_BackgroundProcessResult( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueListener_operationCompleted_void_ev_uint64_BackgroundProcessResult_Callback* pCallback )
+			{
+				CResourceBackgroundQueueListenerProxy* ptr = dynamic_cast<CResourceBackgroundQueueListenerProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueListener_operationCompleted_void_ev_uint64_BackgroundProcessResult(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_CResourceBackgroundQueueListener_operationCompleted_void_ev_uint64_BackgroundProcessResult_NoVirtual(void *pObjectXXXX, _in ev_uint64 ticket, _in const void* result )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener::operationCompleted(ticket, *(EarthView::World::Graphic::BackgroundProcessResult*)result);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_initialise_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::initialise();
+				else
+					ptrNativeObject->initialise();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_initialise_void( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_initialise_void_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_initialise_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_initialise_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::initialise();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_shutdown_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::shutdown();
+				else
+					ptrNativeObject->shutdown();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_shutdown_void( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_shutdown_void_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_shutdown_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_shutdown_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::shutdown();
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener(void *pObjectXXXX, _in const char* name, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::initialiseResourceGroup(name1, listener);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->initialiseResourceGroup(name1, listener);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_NoVirtual(void *pObjectXXXX, _in const char* name, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::initialiseResourceGroup(name1, listener);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::initialiseResourceGroup(name1);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->initialiseResourceGroup(name1);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_initialiseResourceGroup_ev_uint64_EVString_NoVirtual(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::initialiseResourceGroup(name1);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_CResourceBackgroundQueueListener(void *pObjectXXXX, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::initialiseAllResourceGroups(listener);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->initialiseAllResourceGroups(listener);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_CResourceBackgroundQueueListener( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_CResourceBackgroundQueueListener_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_CResourceBackgroundQueueListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_CResourceBackgroundQueueListener_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::initialiseAllResourceGroups(listener);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::initialiseAllResourceGroups();
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->initialiseAllResourceGroups();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_initialiseAllResourceGroups_ev_uint64_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::initialiseAllResourceGroups();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener(void *pObjectXXXX, _in const char* name, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::prepareResourceGroup(name1, listener);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->prepareResourceGroup(name1, listener);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_NoVirtual(void *pObjectXXXX, _in const char* name, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::prepareResourceGroup(name1, listener);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::prepareResourceGroup(name1);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->prepareResourceGroup(name1);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepareResourceGroup_ev_uint64_EVString_NoVirtual(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::prepareResourceGroup(name1);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener(void *pObjectXXXX, _in const char* name, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::loadResourceGroup(name1, listener);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->loadResourceGroup(name1, listener);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_NoVirtual(void *pObjectXXXX, _in const char* name, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::loadResourceGroup(name1, listener);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::loadResourceGroup(name1);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->loadResourceGroup(name1);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_loadResourceGroup_ev_uint64_EVString_NoVirtual(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::loadResourceGroup(name1);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_CResourceBackgroundQueueListener(void *pObjectXXXX, _in const char* resType, _in const char* name, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::unload(resType1, name1, listener);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->unload(resType1, name1, listener);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_CResourceBackgroundQueueListener( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_CResourceBackgroundQueueListener_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_CResourceBackgroundQueueListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_CResourceBackgroundQueueListener_NoVirtual(void *pObjectXXXX, _in const char* resType, _in const char* name, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::unload(resType1, name1, listener);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString(void *pObjectXXXX, _in const char* resType, _in const char* name )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::unload(resType1, name1);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->unload(resType1, name1);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_EVString_NoVirtual(void *pObjectXXXX, _in const char* resType, _in const char* name )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::unload(resType1, name1);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_CResourceBackgroundQueueListener(void *pObjectXXXX, _in const char* resType, _in ev_uint64 handle, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::unload(resType1, handle, listener);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->unload(resType1, handle, listener);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_CResourceBackgroundQueueListener( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_CResourceBackgroundQueueListener_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_CResourceBackgroundQueueListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_CResourceBackgroundQueueListener_NoVirtual(void *pObjectXXXX, _in const char* resType, _in ev_uint64 handle, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::unload(resType1, handle, listener);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64(void *pObjectXXXX, _in const char* resType, _in ev_uint64 handle )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::unload(resType1, handle);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->unload(resType1, handle);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_unload_ev_uint64_EVString_ev_uint64_NoVirtual(void *pObjectXXXX, _in const char* resType, _in ev_uint64 handle )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::unload(resType1, handle);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener(void *pObjectXXXX, _in const char* name, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::unloadResourceGroup(name1, listener);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->unloadResourceGroup(name1, listener);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_CResourceBackgroundQueueListener_NoVirtual(void *pObjectXXXX, _in const char* name, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::unloadResourceGroup(name1, listener);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::unloadResourceGroup(name1);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->unloadResourceGroup(name1);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_unloadResourceGroup_ev_uint64_EVString_NoVirtual(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::unloadResourceGroup(name1);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener(void *pObjectXXXX, _in const char* resType, _in const char* name, _in const char* group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::prepare(resType1, name1, group1, isManual, ref_loader, loadParams, listener);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->prepare(resType1, name1, group1, isManual, ref_loader, loadParams, listener);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener_NoVirtual(void *pObjectXXXX, _in const char* resType, _in const char* name, _in const char* group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::prepare(resType1, name1, group1, isManual, ref_loader, loadParams, listener);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList(void *pObjectXXXX, _in const char* resType, _in const char* name, _in const char* group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::prepare(resType1, name1, group1, isManual, ref_loader, loadParams);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->prepare(resType1, name1, group1, isManual, ref_loader, loadParams);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_NoVirtual(void *pObjectXXXX, _in const char* resType, _in const char* name, _in const char* group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::prepare(resType1, name1, group1, isManual, ref_loader, loadParams);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader(void *pObjectXXXX, _in const char* resType, _in const char* name, _in const char* group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::prepare(resType1, name1, group1, isManual, ref_loader);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->prepare(resType1, name1, group1, isManual, ref_loader);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_NoVirtual(void *pObjectXXXX, _in const char* resType, _in const char* name, _in const char* group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::prepare(resType1, name1, group1, isManual, ref_loader);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool(void *pObjectXXXX, _in const char* resType, _in const char* name, _in const char* group, _in ev_bool isManual )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::prepare(resType1, name1, group1, isManual);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->prepare(resType1, name1, group1, isManual);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_ev_bool_NoVirtual(void *pObjectXXXX, _in const char* resType, _in const char* name, _in const char* group, _in ev_bool isManual )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::prepare(resType1, name1, group1, isManual);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString(void *pObjectXXXX, _in const char* resType, _in const char* name, _in const char* group )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::prepare(resType1, name1, group1);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->prepare(resType1, name1, group1);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_prepare_ev_uint64_EVString_EVString_EVString_NoVirtual(void *pObjectXXXX, _in const char* resType, _in const char* name, _in const char* group )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::prepare(resType1, name1, group1);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener(void *pObjectXXXX, _in const char* resType, _in const char* name, _in const char* group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::load(resType1, name1, group1, isManual, ref_loader, loadParams, listener);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->load(resType1, name1, group1, isManual, ref_loader, loadParams, listener);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_CResourceBackgroundQueueListener_NoVirtual(void *pObjectXXXX, _in const char* resType, _in const char* name, _in const char* group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams, _in EarthView::World::Graphic::CResourceBackgroundQueue::CResourceBackgroundQueueListener* listener )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::load(resType1, name1, group1, isManual, ref_loader, loadParams, listener);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList(void *pObjectXXXX, _in const char* resType, _in const char* name, _in const char* group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::load(resType1, name1, group1, isManual, ref_loader, loadParams);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->load(resType1, name1, group1, isManual, ref_loader, loadParams);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_NoVirtual(void *pObjectXXXX, _in const char* resType, _in const char* name, _in const char* group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::load(resType1, name1, group1, isManual, ref_loader, loadParams);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader(void *pObjectXXXX, _in const char* resType, _in const char* name, _in const char* group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::load(resType1, name1, group1, isManual, ref_loader);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->load(resType1, name1, group1, isManual, ref_loader);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_CManualResourceLoader_NoVirtual(void *pObjectXXXX, _in const char* resType, _in const char* name, _in const char* group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::load(resType1, name1, group1, isManual, ref_loader);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool(void *pObjectXXXX, _in const char* resType, _in const char* name, _in const char* group, _in ev_bool isManual )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::load(resType1, name1, group1, isManual);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->load(resType1, name1, group1, isManual);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_ev_bool_NoVirtual(void *pObjectXXXX, _in const char* resType, _in const char* name, _in const char* group, _in ev_bool isManual )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::load(resType1, name1, group1, isManual);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString(void *pObjectXXXX, _in const char* resType, _in const char* name, _in const char* group )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::load(resType1, name1, group1);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->load(resType1, name1, group1);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_load_ev_uint64_EVString_EVString_EVString_NoVirtual(void *pObjectXXXX, _in const char* resType, _in const char* name, _in const char* group )
+			{
+				EarthView::World::Core::ev_string resType1 = resType;
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::load(resType1, name1, group1);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_isProcessComplete_ev_bool_ev_uint64(void *pObjectXXXX, _in ev_uint64 ticket )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				if (dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::isProcessComplete(ticket);
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->isProcessComplete(ticket);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CResourceBackgroundQueue_isProcessComplete_ev_bool_ev_uint64( void *pObjectXXXX, EarthView_World_Graphic_CResourceBackgroundQueue_isProcessComplete_ev_bool_ev_uint64_Callback* pCallback )
+			{
+				CResourceBackgroundQueueProxy* ptr = dynamic_cast<CResourceBackgroundQueueProxy*>((EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CResourceBackgroundQueue_isProcessComplete_ev_bool_ev_uint64(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_isProcessComplete_ev_bool_ev_uint64_NoVirtual(void *pObjectXXXX, _in ev_uint64 ticket )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CResourceBackgroundQueue::isProcessComplete(ticket);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CResourceBackgroundQueue_abortRequest_void_ev_uint64(void *pObjectXXXX, _in ev_uint64 ticket )
+			{
+				EarthView::World::Graphic::CResourceBackgroundQueue* ptrNativeObject = (EarthView::World::Graphic::CResourceBackgroundQueue*) pObjectXXXX;
+				ptrNativeObject->abortRequest(ticket);
+			}
+		}
+	}
+}

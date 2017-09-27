@@ -1,0 +1,2439 @@
+/* This file is produced by the P/Invoke AutoWrapper Utility 
+ Copyright (c) 2012 by EarthView Image Inc */
+#include "geometry3d/geometry3d/imageoverlayer.h"
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Display
+		{
+		}
+	}
+}
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Geometry3D
+		{
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData_Callback)(_in ev_int32 level, _in ev_int32 row, _in ev_int32 col, _inout void* tile);
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_CTileInfo_CTileData_Callback)(_in const void* tileInfo, _inout void* tile);
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_Real_Real_Real_Real_CTileData_Callback)(_in Real minX, _in Real minY, _in Real maxX, _in Real maxY, _inout void* tile);
+			typedef ev_int32  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getMaxLevel_ev_int32_Callback)();
+			typedef ev_int32  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getMinLevel_ev_int32_Callback)();
+			typedef ev_int32  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getMaxVisibleLevel_ev_int32_Callback)();
+			typedef ev_int32  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getMinVisibleLevel_ev_int32_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_setMaxVisibleLevel_ev_bool_ev_int32_Callback)(_in ev_int32 maxlevel);
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_setMinVisibleLevel_ev_bool_ev_int32_Callback)(_in ev_int32 minlevel);
+			typedef void*  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getThemeStream_MemoryDataStreamPtr_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_equalThemeStream_ev_bool_MemoryDataStreamPtr_Callback)(_in void* stream);
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32_Callback)(_in ev_uint32 level, _in ev_uint32 row, _in ev_uint32 col);
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32_Callback)(_in ev_uint32 level, _in ev_uint32 row, _in ev_uint32 col);
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_levelValid_ev_bool_ev_int32_Callback)(_in ev_int32 level);
+			typedef const void*  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getGeoExtent_CEnvelope_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback)(_in ev_real32 minPX, _in ev_real32 minPY, _in ev_real32 maxPX, _in ev_real32 maxPY);
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_setCurtainAlpha_ev_bool_ev_real32_Callback)(_in ev_real32 alpha);
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback)(_out ev_real32& minPX, _out ev_real32& minPY, _out ev_real32& maxPX, _out ev_real32& maxPY);
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getCurtainEnabled_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_setCurtainEnabled_ev_bool_ev_bool_Callback)(_in ev_bool enabled);
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getCurtainAlpha_ev_bool_ev_real32_Callback)(_inout ev_real32& alpha);
+			typedef int  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getClampMode_ClampMode_Callback)();
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_setClampMode_void_ClampMode_Callback)(_in int mode);
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_attachLayer_void_ILayer_Callback)(_in EarthView::World::Spatial::Atlas::ILayer* layer);
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_detachLayer_void_Callback)();
+			typedef EarthView::World::Spatial::Atlas::ILayer*  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getLayer_ILayer_Callback)();
+			typedef EarthView::World::Spatial::Theme::ITheme*  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getTheme_ITheme_Callback)();
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_setTheme_void_ITheme_Callback)(_in const EarthView::World::Spatial::Theme::ITheme* theme);
+			typedef char*  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getSceneName_EVString_Callback)();
+			typedef ev_real64  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getMinX_ev_real64_Callback)();
+			typedef ev_real64  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getMaxX_ev_real64_Callback)();
+			typedef ev_real64  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getMinY_ev_real64_Callback)();
+			typedef ev_real64  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getMaxY_ev_real64_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback)(_in ev_real32 lat, _in ev_real32 lon, _in ev_real32 targetSamplesPerDegrees, _inout ev_real32& height);
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer__notifyLayerAdd_void_CSceneManager_Callback)(_in EarthView::World::Graphic::CSceneManager* pSceneMgr);
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer__notifyLayerRemoved_void_CSceneManager_Callback)(_in EarthView::World::Graphic::CSceneManager* pSceneMgr);
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_LayerRefreshFactor_Callback)(_in const EarthView::World::Graphic::CCamera* camera, _in int updateType);
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_Callback)(_in const EarthView::World::Graphic::CCamera* camera);
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer__notifyDataChanged_void_EVString_EVString_CEvent_Callback)(_in char*& strDataSourceName, _in char*& strDatasetName, _in EarthView::World::Core::CEvent* pEvent);
+			typedef EarthView::World::Graphic::CSceneManager*  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getSceneManager_CSceneManager_Callback)();
+			typedef int  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getType_EVLayerType_Callback)();
+			typedef EarthView::World::Spatial::GeoDataset::IDataset*  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getDataset_IDataset_Callback)();
+			typedef char*  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getDatasetName_EVString_Callback)();
+			typedef EarthView::World::Spatial::GeoDataset::IDataSource*  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getDataSource_IDataSource_Callback)();
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_select_void_IQueryFilter_EVSelectionResultType_Callback)(_in EarthView::World::Spatial::GeoDataset::IQueryFilter* filter, _in int type);
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_clearSelection_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_setLayerSelection_void_ILayerSelection_Callback)(_in EarthView::World::Spatial::Atlas::ILayerSelection* selection);
+			typedef EarthView::World::Spatial::Atlas::ILayerSelection*  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getLayerSelection_ILayerSelection_Callback)();
+			typedef char*  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getName_EVString_Callback)();
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_setName_void_EVString_Callback)(_in char*& name);
+			typedef char*  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getDescription_EVString_Callback)();
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_setDescription_void_EVString_Callback)(_in char*& value);
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_canEdit_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_setCanEdit_void_ev_bool_Callback)(_in ev_bool can);
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_isEditing_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_setEditing_void_ev_bool_Callback)(_in ev_bool editing);
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_isVisible_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_setVisible_void_ev_bool_Callback)(_in ev_bool visible);
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_isValid_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_isSelectable_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_setSelectable_void_ev_bool_Callback)(_in ev_bool selectable);
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_ignoreScale_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_setIgnoreScale_void_ev_bool_Callback)(_in ev_bool bIgnore);
+			typedef ev_real64  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getDisplayMaxScale_ev_real64_Callback)();
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_setDisplayMaxScale_void_ev_real64_Callback)(_in ev_real64 scale);
+			typedef ev_real64  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getDisplayMinScale_ev_real64_Callback)();
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_setDisplayMinScale_void_ev_real64_Callback)(_in ev_real64 scale);
+			typedef EarthView::World::Spatial::Geometry::ISpatialReference*  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getSpatialReference_ISpatialReference_Callback)();
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_setSpatialReference_void_ISpatialReference_Callback)(_in EarthView::World::Spatial::Geometry::ISpatialReference* ref_sr);
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_setTransparentValue_void_ev_uint8_Callback)(_in ev_uint8 transparent);
+			typedef ev_uint8  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getTransparentValue_ev_uint8_Callback)();
+			typedef const EarthView::World::Spatial::Geometry::IEnvelope*  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_getExtent_IEnvelope_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback)(_in EarthView::World::Spatial::Display::ISpatialDisplay* display, _in int type);
+			typedef EarthView::World::Spatial::Atlas::ILayer*  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_clone_ILayer_Callback)();
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_toStream_void_CDataStream_Callback)(_out void* stream);
+			typedef char*  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_toXML_EVString_Callback)();
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_fromXmlElement_void_CXmlElement_Callback)(_in void* element);
+			typedef void*  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_toXmlElement_CXmlElement_Callback)();
+			typedef void  ( _stdcall EarthView_World_Geometry3D_CImageOverlayer_fromStream_void_CDataStream_Callback)(_inout void* stream);
+			class CImageOverlayerProxy : public EarthView::World::Geometry3D::CImageOverlayer
+			{
+			private:
+				EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_CTileInfo_CTileData_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_CTileInfo_CTileData_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_Real_Real_Real_Real_CTileData_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_Real_Real_Real_Real_CTileData_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getMaxLevel_ev_int32_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getMaxLevel_ev_int32_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getMinLevel_ev_int32_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getMinLevel_ev_int32_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getMaxVisibleLevel_ev_int32_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getMaxVisibleLevel_ev_int32_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getMinVisibleLevel_ev_int32_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getMinVisibleLevel_ev_int32_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_setMaxVisibleLevel_ev_bool_ev_int32_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_setMaxVisibleLevel_ev_bool_ev_int32_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_setMinVisibleLevel_ev_bool_ev_int32_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_setMinVisibleLevel_ev_bool_ev_int32_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getThemeStream_MemoryDataStreamPtr_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getThemeStream_MemoryDataStreamPtr_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_equalThemeStream_ev_bool_MemoryDataStreamPtr_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_equalThemeStream_ev_bool_MemoryDataStreamPtr_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32_Callback* m_EarthView_World_Geometry3D_CImageOverlayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32_Callback* m_EarthView_World_Geometry3D_CImageOverlayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_levelValid_ev_bool_ev_int32_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_levelValid_ev_bool_ev_int32_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getGeoExtent_CEnvelope_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getGeoExtent_CEnvelope_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_setCurtainAlpha_ev_bool_ev_real32_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_setCurtainAlpha_ev_bool_ev_real32_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getCurtainEnabled_ev_bool_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getCurtainEnabled_ev_bool_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_setCurtainEnabled_ev_bool_ev_bool_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_setCurtainEnabled_ev_bool_ev_bool_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getCurtainAlpha_ev_bool_ev_real32_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getCurtainAlpha_ev_bool_ev_real32_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getClampMode_ClampMode_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getClampMode_ClampMode_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_setClampMode_void_ClampMode_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_setClampMode_void_ClampMode_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_attachLayer_void_ILayer_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_attachLayer_void_ILayer_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_detachLayer_void_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_detachLayer_void_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getLayer_ILayer_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getLayer_ILayer_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getTheme_ITheme_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getTheme_ITheme_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_setTheme_void_ITheme_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_setTheme_void_ITheme_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getSceneName_EVString_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getSceneName_EVString_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getMinX_ev_real64_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getMinX_ev_real64_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getMaxX_ev_real64_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getMaxX_ev_real64_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getMinY_ev_real64_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getMinY_ev_real64_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getMaxY_ev_real64_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getMaxY_ev_real64_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer__notifyLayerAdd_void_CSceneManager_Callback* m_EarthView_World_Geometry3D_CImageOverlayer__notifyLayerAdd_void_CSceneManager_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer__notifyLayerRemoved_void_CSceneManager_Callback* m_EarthView_World_Geometry3D_CImageOverlayer__notifyLayerRemoved_void_CSceneManager_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_LayerRefreshFactor_Callback* m_EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_LayerRefreshFactor_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_Callback* m_EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer__notifyDataChanged_void_EVString_EVString_CEvent_Callback* m_EarthView_World_Geometry3D_CImageOverlayer__notifyDataChanged_void_EVString_EVString_CEvent_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getSceneManager_CSceneManager_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getSceneManager_CSceneManager_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getType_EVLayerType_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getType_EVLayerType_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getDataset_IDataset_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getDataset_IDataset_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getDatasetName_EVString_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getDatasetName_EVString_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getDataSource_IDataSource_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getDataSource_IDataSource_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_select_void_IQueryFilter_EVSelectionResultType_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_select_void_IQueryFilter_EVSelectionResultType_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_clearSelection_void_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_clearSelection_void_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_setLayerSelection_void_ILayerSelection_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_setLayerSelection_void_ILayerSelection_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getLayerSelection_ILayerSelection_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getLayerSelection_ILayerSelection_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getName_EVString_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getName_EVString_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_setName_void_EVString_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_setName_void_EVString_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getDescription_EVString_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getDescription_EVString_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_setDescription_void_EVString_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_setDescription_void_EVString_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_canEdit_ev_bool_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_canEdit_ev_bool_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_setCanEdit_void_ev_bool_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_setCanEdit_void_ev_bool_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_isEditing_ev_bool_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_isEditing_ev_bool_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_setEditing_void_ev_bool_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_setEditing_void_ev_bool_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_isVisible_ev_bool_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_isVisible_ev_bool_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_setVisible_void_ev_bool_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_setVisible_void_ev_bool_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_isValid_ev_bool_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_isValid_ev_bool_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_isSelectable_ev_bool_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_isSelectable_ev_bool_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_setSelectable_void_ev_bool_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_setSelectable_void_ev_bool_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_ignoreScale_ev_bool_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_ignoreScale_ev_bool_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_setIgnoreScale_void_ev_bool_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_setIgnoreScale_void_ev_bool_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getDisplayMaxScale_ev_real64_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getDisplayMaxScale_ev_real64_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_setDisplayMaxScale_void_ev_real64_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_setDisplayMaxScale_void_ev_real64_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getDisplayMinScale_ev_real64_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getDisplayMinScale_ev_real64_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_setDisplayMinScale_void_ev_real64_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_setDisplayMinScale_void_ev_real64_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getSpatialReference_ISpatialReference_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getSpatialReference_ISpatialReference_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_setSpatialReference_void_ISpatialReference_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_setSpatialReference_void_ISpatialReference_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_setTransparentValue_void_ev_uint8_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_setTransparentValue_void_ev_uint8_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getTransparentValue_ev_uint8_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getTransparentValue_ev_uint8_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_getExtent_IEnvelope_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_getExtent_IEnvelope_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_clone_ILayer_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_clone_ILayer_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_toStream_void_CDataStream_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_toStream_void_CDataStream_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_toXML_EVString_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_toXML_EVString_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_fromXmlElement_void_CXmlElement_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_fromXmlElement_void_CXmlElement_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_toXmlElement_CXmlElement_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_toXmlElement_CXmlElement_Callback;
+				EarthView_World_Geometry3D_CImageOverlayer_fromStream_void_CDataStream_Callback* m_EarthView_World_Geometry3D_CImageOverlayer_fromStream_void_CDataStream_Callback;
+			public:
+				CImageOverlayerProxy(EarthView::World::Core::CNameValuePairList *pList) : CImageOverlayer(pList)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_CTileInfo_CTileData_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_Real_Real_Real_Real_CTileData_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getMaxLevel_ev_int32_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getMinLevel_ev_int32_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getMaxVisibleLevel_ev_int32_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getMinVisibleLevel_ev_int32_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_setMaxVisibleLevel_ev_bool_ev_int32_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_setMinVisibleLevel_ev_bool_ev_int32_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getThemeStream_MemoryDataStreamPtr_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_equalThemeStream_ev_bool_MemoryDataStreamPtr_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_levelValid_ev_bool_ev_int32_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getGeoExtent_CEnvelope_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_setCurtainAlpha_ev_bool_ev_real32_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getCurtainEnabled_ev_bool_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_setCurtainEnabled_ev_bool_ev_bool_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getCurtainAlpha_ev_bool_ev_real32_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getClampMode_ClampMode_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_setClampMode_void_ClampMode_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_attachLayer_void_ILayer_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_detachLayer_void_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getLayer_ILayer_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getTheme_ITheme_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_setTheme_void_ITheme_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getSceneName_EVString_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getMinX_ev_real64_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getMaxX_ev_real64_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getMinY_ev_real64_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getMaxY_ev_real64_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer__notifyLayerAdd_void_CSceneManager_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer__notifyLayerRemoved_void_CSceneManager_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_LayerRefreshFactor_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer__notifyDataChanged_void_EVString_EVString_CEvent_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getSceneManager_CSceneManager_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getType_EVLayerType_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getDataset_IDataset_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getDatasetName_EVString_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getDataSource_IDataSource_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_select_void_IQueryFilter_EVSelectionResultType_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_clearSelection_void_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_setLayerSelection_void_ILayerSelection_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getLayerSelection_ILayerSelection_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getName_EVString_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_setName_void_EVString_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getDescription_EVString_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_setDescription_void_EVString_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_canEdit_ev_bool_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_setCanEdit_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_isEditing_ev_bool_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_setEditing_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_isVisible_ev_bool_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_setVisible_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_isValid_ev_bool_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_isSelectable_ev_bool_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_setSelectable_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_ignoreScale_ev_bool_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_setIgnoreScale_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getDisplayMaxScale_ev_real64_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_setDisplayMaxScale_void_ev_real64_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getDisplayMinScale_ev_real64_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_setDisplayMinScale_void_ev_real64_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getSpatialReference_ISpatialReference_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_setSpatialReference_void_ISpatialReference_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_setTransparentValue_void_ev_uint8_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getTransparentValue_ev_uint8_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_getExtent_IEnvelope_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_clone_ILayer_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_toStream_void_CDataStream_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_toXML_EVString_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_fromXmlElement_void_CXmlElement_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_toXmlElement_CXmlElement_Callback = NULL;
+					m_EarthView_World_Geometry3D_CImageOverlayer_fromStream_void_CDataStream_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData(EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_CTileInfo_CTileData(EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_CTileInfo_CTileData_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_CTileInfo_CTileData_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_Real_Real_Real_Real_CTileData(EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_Real_Real_Real_Real_CTileData_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_Real_Real_Real_Real_CTileData_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getMaxLevel_ev_int32(EarthView_World_Geometry3D_CImageOverlayer_getMaxLevel_ev_int32_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getMaxLevel_ev_int32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getMinLevel_ev_int32(EarthView_World_Geometry3D_CImageOverlayer_getMinLevel_ev_int32_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getMinLevel_ev_int32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getMaxVisibleLevel_ev_int32(EarthView_World_Geometry3D_CImageOverlayer_getMaxVisibleLevel_ev_int32_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getMaxVisibleLevel_ev_int32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getMinVisibleLevel_ev_int32(EarthView_World_Geometry3D_CImageOverlayer_getMinVisibleLevel_ev_int32_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getMinVisibleLevel_ev_int32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setMaxVisibleLevel_ev_bool_ev_int32(EarthView_World_Geometry3D_CImageOverlayer_setMaxVisibleLevel_ev_bool_ev_int32_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_setMaxVisibleLevel_ev_bool_ev_int32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setMinVisibleLevel_ev_bool_ev_int32(EarthView_World_Geometry3D_CImageOverlayer_setMinVisibleLevel_ev_bool_ev_int32_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_setMinVisibleLevel_ev_bool_ev_int32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getThemeStream_MemoryDataStreamPtr(EarthView_World_Geometry3D_CImageOverlayer_getThemeStream_MemoryDataStreamPtr_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getThemeStream_MemoryDataStreamPtr_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_equalThemeStream_ev_bool_MemoryDataStreamPtr(EarthView_World_Geometry3D_CImageOverlayer_equalThemeStream_ev_bool_MemoryDataStreamPtr_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_equalThemeStream_ev_bool_MemoryDataStreamPtr_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32(EarthView_World_Geometry3D_CImageOverlayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32(EarthView_World_Geometry3D_CImageOverlayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_levelValid_ev_bool_ev_int32(EarthView_World_Geometry3D_CImageOverlayer_levelValid_ev_bool_ev_int32_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_levelValid_ev_bool_ev_int32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getGeoExtent_CEnvelope(EarthView_World_Geometry3D_CImageOverlayer_getGeoExtent_CEnvelope_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getGeoExtent_CEnvelope_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32(EarthView_World_Geometry3D_CImageOverlayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setCurtainAlpha_ev_bool_ev_real32(EarthView_World_Geometry3D_CImageOverlayer_setCurtainAlpha_ev_bool_ev_real32_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_setCurtainAlpha_ev_bool_ev_real32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32(EarthView_World_Geometry3D_CImageOverlayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getCurtainEnabled_ev_bool(EarthView_World_Geometry3D_CImageOverlayer_getCurtainEnabled_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getCurtainEnabled_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setCurtainEnabled_ev_bool_ev_bool(EarthView_World_Geometry3D_CImageOverlayer_setCurtainEnabled_ev_bool_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_setCurtainEnabled_ev_bool_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getCurtainAlpha_ev_bool_ev_real32(EarthView_World_Geometry3D_CImageOverlayer_getCurtainAlpha_ev_bool_ev_real32_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getCurtainAlpha_ev_bool_ev_real32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getClampMode_ClampMode(EarthView_World_Geometry3D_CImageOverlayer_getClampMode_ClampMode_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getClampMode_ClampMode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setClampMode_void_ClampMode(EarthView_World_Geometry3D_CImageOverlayer_setClampMode_void_ClampMode_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_setClampMode_void_ClampMode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_attachLayer_void_ILayer(EarthView_World_Geometry3D_CImageOverlayer_attachLayer_void_ILayer_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_attachLayer_void_ILayer_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_detachLayer_void(EarthView_World_Geometry3D_CImageOverlayer_detachLayer_void_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_detachLayer_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getLayer_ILayer(EarthView_World_Geometry3D_CImageOverlayer_getLayer_ILayer_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getLayer_ILayer_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getTheme_ITheme(EarthView_World_Geometry3D_CImageOverlayer_getTheme_ITheme_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getTheme_ITheme_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setTheme_void_ITheme(EarthView_World_Geometry3D_CImageOverlayer_setTheme_void_ITheme_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_setTheme_void_ITheme_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getSceneName_EVString(EarthView_World_Geometry3D_CImageOverlayer_getSceneName_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getSceneName_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getMinX_ev_real64(EarthView_World_Geometry3D_CImageOverlayer_getMinX_ev_real64_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getMinX_ev_real64_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getMaxX_ev_real64(EarthView_World_Geometry3D_CImageOverlayer_getMaxX_ev_real64_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getMaxX_ev_real64_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getMinY_ev_real64(EarthView_World_Geometry3D_CImageOverlayer_getMinY_ev_real64_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getMinY_ev_real64_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getMaxY_ev_real64(EarthView_World_Geometry3D_CImageOverlayer_getMaxY_ev_real64_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getMaxY_ev_real64_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32(EarthView_World_Geometry3D_CImageOverlayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyLayerAdd_void_CSceneManager(EarthView_World_Geometry3D_CImageOverlayer__notifyLayerAdd_void_CSceneManager_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer__notifyLayerAdd_void_CSceneManager_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyLayerRemoved_void_CSceneManager(EarthView_World_Geometry3D_CImageOverlayer__notifyLayerRemoved_void_CSceneManager_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer__notifyLayerRemoved_void_CSceneManager_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_LayerRefreshFactor(EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_LayerRefreshFactor_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_LayerRefreshFactor_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera(EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyDataChanged_void_EVString_EVString_CEvent(EarthView_World_Geometry3D_CImageOverlayer__notifyDataChanged_void_EVString_EVString_CEvent_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer__notifyDataChanged_void_EVString_EVString_CEvent_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getSceneManager_CSceneManager(EarthView_World_Geometry3D_CImageOverlayer_getSceneManager_CSceneManager_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getSceneManager_CSceneManager_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getType_EVLayerType(EarthView_World_Geometry3D_CImageOverlayer_getType_EVLayerType_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getType_EVLayerType_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getDataset_IDataset(EarthView_World_Geometry3D_CImageOverlayer_getDataset_IDataset_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getDataset_IDataset_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getDatasetName_EVString(EarthView_World_Geometry3D_CImageOverlayer_getDatasetName_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getDatasetName_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getDataSource_IDataSource(EarthView_World_Geometry3D_CImageOverlayer_getDataSource_IDataSource_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getDataSource_IDataSource_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_select_void_IQueryFilter_EVSelectionResultType(EarthView_World_Geometry3D_CImageOverlayer_select_void_IQueryFilter_EVSelectionResultType_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_select_void_IQueryFilter_EVSelectionResultType_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_clearSelection_void(EarthView_World_Geometry3D_CImageOverlayer_clearSelection_void_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_clearSelection_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setLayerSelection_void_ILayerSelection(EarthView_World_Geometry3D_CImageOverlayer_setLayerSelection_void_ILayerSelection_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_setLayerSelection_void_ILayerSelection_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getLayerSelection_ILayerSelection(EarthView_World_Geometry3D_CImageOverlayer_getLayerSelection_ILayerSelection_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getLayerSelection_ILayerSelection_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getName_EVString(EarthView_World_Geometry3D_CImageOverlayer_getName_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getName_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setName_void_EVString(EarthView_World_Geometry3D_CImageOverlayer_setName_void_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_setName_void_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getDescription_EVString(EarthView_World_Geometry3D_CImageOverlayer_getDescription_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getDescription_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setDescription_void_EVString(EarthView_World_Geometry3D_CImageOverlayer_setDescription_void_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_setDescription_void_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_canEdit_ev_bool(EarthView_World_Geometry3D_CImageOverlayer_canEdit_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_canEdit_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setCanEdit_void_ev_bool(EarthView_World_Geometry3D_CImageOverlayer_setCanEdit_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_setCanEdit_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_isEditing_ev_bool(EarthView_World_Geometry3D_CImageOverlayer_isEditing_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_isEditing_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setEditing_void_ev_bool(EarthView_World_Geometry3D_CImageOverlayer_setEditing_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_setEditing_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_isVisible_ev_bool(EarthView_World_Geometry3D_CImageOverlayer_isVisible_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_isVisible_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setVisible_void_ev_bool(EarthView_World_Geometry3D_CImageOverlayer_setVisible_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_setVisible_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_isValid_ev_bool(EarthView_World_Geometry3D_CImageOverlayer_isValid_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_isValid_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_isSelectable_ev_bool(EarthView_World_Geometry3D_CImageOverlayer_isSelectable_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_isSelectable_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setSelectable_void_ev_bool(EarthView_World_Geometry3D_CImageOverlayer_setSelectable_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_setSelectable_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_ignoreScale_ev_bool(EarthView_World_Geometry3D_CImageOverlayer_ignoreScale_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_ignoreScale_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setIgnoreScale_void_ev_bool(EarthView_World_Geometry3D_CImageOverlayer_setIgnoreScale_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_setIgnoreScale_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getDisplayMaxScale_ev_real64(EarthView_World_Geometry3D_CImageOverlayer_getDisplayMaxScale_ev_real64_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getDisplayMaxScale_ev_real64_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setDisplayMaxScale_void_ev_real64(EarthView_World_Geometry3D_CImageOverlayer_setDisplayMaxScale_void_ev_real64_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_setDisplayMaxScale_void_ev_real64_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getDisplayMinScale_ev_real64(EarthView_World_Geometry3D_CImageOverlayer_getDisplayMinScale_ev_real64_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getDisplayMinScale_ev_real64_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setDisplayMinScale_void_ev_real64(EarthView_World_Geometry3D_CImageOverlayer_setDisplayMinScale_void_ev_real64_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_setDisplayMinScale_void_ev_real64_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getSpatialReference_ISpatialReference(EarthView_World_Geometry3D_CImageOverlayer_getSpatialReference_ISpatialReference_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getSpatialReference_ISpatialReference_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setSpatialReference_void_ISpatialReference(EarthView_World_Geometry3D_CImageOverlayer_setSpatialReference_void_ISpatialReference_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_setSpatialReference_void_ISpatialReference_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setTransparentValue_void_ev_uint8(EarthView_World_Geometry3D_CImageOverlayer_setTransparentValue_void_ev_uint8_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_setTransparentValue_void_ev_uint8_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getTransparentValue_ev_uint8(EarthView_World_Geometry3D_CImageOverlayer_getTransparentValue_ev_uint8_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getTransparentValue_ev_uint8_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getExtent_IEnvelope(EarthView_World_Geometry3D_CImageOverlayer_getExtent_IEnvelope_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_getExtent_IEnvelope_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType(EarthView_World_Geometry3D_CImageOverlayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_clone_ILayer(EarthView_World_Geometry3D_CImageOverlayer_clone_ILayer_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_clone_ILayer_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_toStream_void_CDataStream(EarthView_World_Geometry3D_CImageOverlayer_toStream_void_CDataStream_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_toStream_void_CDataStream_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_toXML_EVString(EarthView_World_Geometry3D_CImageOverlayer_toXML_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_toXML_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_fromXmlElement_void_CXmlElement(EarthView_World_Geometry3D_CImageOverlayer_fromXmlElement_void_CXmlElement_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_fromXmlElement_void_CXmlElement_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_toXmlElement_CXmlElement(EarthView_World_Geometry3D_CImageOverlayer_toXmlElement_CXmlElement_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_toXmlElement_CXmlElement_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Geometry3D_CImageOverlayer_fromStream_void_CDataStream(EarthView_World_Geometry3D_CImageOverlayer_fromStream_void_CDataStream_Callback* pCallback)
+				{
+					m_EarthView_World_Geometry3D_CImageOverlayer_fromStream_void_CDataStream_Callback = pCallback;
+				}
+				virtual void setSelectable(_in ev_bool selectable)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_setSelectable_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer_setSelectable_void_ev_bool_Callback(selectable);
+					}
+					else
+						return this->CImageOverlayer::setSelectable(selectable);
+				}
+				virtual EarthView::World::Spatial::Atlas::EVLayerType getType() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getType_EVLayerType_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Spatial::Atlas::EVLayerType returnValue = (EarthView::World::Spatial::Atlas::EVLayerType)m_EarthView_World_Geometry3D_CImageOverlayer_getType_EVLayerType_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getType();
+				}
+				virtual ev_bool getTile(_in ev_int32 level, _in ev_int32 row, _in ev_int32 col, _inout EarthView::World::Spatial::CTileData& tile)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData_Callback(level, row, col, &tile);
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getTile(level, row, col, tile);
+				}
+				virtual ev_bool getTile(_in const EarthView::World::Spatial::CTileInfo& tileInfo, _inout EarthView::World::Spatial::CTileData& tile)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_CTileInfo_CTileData_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_CTileInfo_CTileData_Callback(&tileInfo, &tile);
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getTile(tileInfo, tile);
+				}
+				virtual ev_bool getTile(_in Real minX, _in Real minY, _in Real maxX, _in Real maxY, _inout EarthView::World::Spatial::CTileData& tile)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_Real_Real_Real_Real_CTileData_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_Real_Real_Real_Real_CTileData_Callback(minX, minY, maxX, maxY, &tile);
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getTile(minX, minY, maxX, maxY, tile);
+				}
+				virtual void _notifyLayerAdd(_in EarthView::World::Graphic::CSceneManager* pSceneMgr)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer__notifyLayerAdd_void_CSceneManager_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer__notifyLayerAdd_void_CSceneManager_Callback(pSceneMgr);
+					}
+					else
+						return this->CImageOverlayer::_notifyLayerAdd(pSceneMgr);
+				}
+				virtual void _notifyLayerRemoved(_in EarthView::World::Graphic::CSceneManager* pSceneMgr)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer__notifyLayerRemoved_void_CSceneManager_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer__notifyLayerRemoved_void_CSceneManager_Callback(pSceneMgr);
+					}
+					else
+						return this->CImageOverlayer::_notifyLayerRemoved(pSceneMgr);
+				}
+				virtual void setDescription(_in const EVString& description)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_setDescription_void_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* description_Char = description.makeBuffer();
+						m_EarthView_World_Geometry3D_CImageOverlayer_setDescription_void_EVString_Callback(description_Char);
+					}
+					else
+						return this->CImageOverlayer::setDescription(description);
+				}
+				virtual EVString getName()
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getName_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getName_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getName();
+				}
+				virtual ev_int32 getMaxLevel() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getMaxLevel_ev_int32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_int32 returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getMaxLevel_ev_int32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getMaxLevel();
+				}
+				virtual ev_int32 getMinLevel() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getMinLevel_ev_int32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_int32 returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getMinLevel_ev_int32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getMinLevel();
+				}
+				virtual ev_int32 getMaxVisibleLevel() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getMaxVisibleLevel_ev_int32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_int32 returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getMaxVisibleLevel_ev_int32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getMaxVisibleLevel();
+				}
+				virtual ev_int32 getMinVisibleLevel() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getMinVisibleLevel_ev_int32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_int32 returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getMinVisibleLevel_ev_int32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getMinVisibleLevel();
+				}
+				virtual ev_bool setMaxVisibleLevel(_in ev_int32 maxlevel)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_setMaxVisibleLevel_ev_bool_ev_int32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_setMaxVisibleLevel_ev_bool_ev_int32_Callback(maxlevel);
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::setMaxVisibleLevel(maxlevel);
+				}
+				virtual ev_bool setMinVisibleLevel(_in ev_int32 minlevel)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_setMinVisibleLevel_ev_bool_ev_int32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_setMinVisibleLevel_ev_bool_ev_int32_Callback(minlevel);
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::setMinVisibleLevel(minlevel);
+				}
+				virtual ev_real64 getMinX() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getMinX_ev_real64_Callback != NULL && this->isCustomExtend())
+					{
+						ev_real64 returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getMinX_ev_real64_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getMinX();
+				}
+				virtual ev_real64 getMaxX() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getMaxX_ev_real64_Callback != NULL && this->isCustomExtend())
+					{
+						ev_real64 returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getMaxX_ev_real64_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getMaxX();
+				}
+				virtual ev_real64 getMinY() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getMinY_ev_real64_Callback != NULL && this->isCustomExtend())
+					{
+						ev_real64 returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getMinY_ev_real64_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getMinY();
+				}
+				virtual ev_real64 getMaxY() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getMaxY_ev_real64_Callback != NULL && this->isCustomExtend())
+					{
+						ev_real64 returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getMaxY_ev_real64_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getMaxY();
+				}
+				virtual EarthView::World::Spatial::Theme::ITheme* getTheme() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getTheme_ITheme_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Spatial::Theme::ITheme* returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getTheme_ITheme_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getTheme();
+				}
+				virtual void setTheme(_in const EarthView::World::Spatial::Theme::ITheme* theme)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_setTheme_void_ITheme_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer_setTheme_void_ITheme_Callback(theme);
+					}
+					else
+						return this->CImageOverlayer::setTheme(theme);
+				}
+				virtual EarthView::World::Core::MemoryDataStreamPtr getThemeStream()
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getThemeStream_MemoryDataStreamPtr_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Core::MemoryDataStreamPtr returnValue = *(EarthView::World::Core::MemoryDataStreamPtr*)m_EarthView_World_Geometry3D_CImageOverlayer_getThemeStream_MemoryDataStreamPtr_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getThemeStream();
+				}
+				virtual ev_bool equalThemeStream(_in EarthView::World::Core::MemoryDataStreamPtr stream)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_equalThemeStream_ev_bool_MemoryDataStreamPtr_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_equalThemeStream_ev_bool_MemoryDataStreamPtr_Callback(&stream);
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::equalThemeStream(stream);
+				}
+				virtual void _notifyTileCreated(_in ev_uint32 level, _in ev_uint32 row, _in ev_uint32 col)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32_Callback(level, row, col);
+					}
+					else
+						return this->CImageOverlayer::_notifyTileCreated(level, row, col);
+				}
+				virtual void _notifyTileDestroyed(_in ev_uint32 level, _in ev_uint32 row, _in ev_uint32 col)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32_Callback(level, row, col);
+					}
+					else
+						return this->CImageOverlayer::_notifyTileDestroyed(level, row, col);
+				}
+				virtual ev_bool levelValid(_in ev_int32 level) const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_levelValid_ev_bool_ev_int32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_levelValid_ev_bool_ev_int32_Callback(level);
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::levelValid(level);
+				}
+				virtual const EarthView::World::Spatial::Geometry::CEnvelope& getGeoExtent() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getGeoExtent_CEnvelope_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Geometry::CEnvelope& returnValue = *(EarthView::World::Spatial::Geometry::CEnvelope*)m_EarthView_World_Geometry3D_CImageOverlayer_getGeoExtent_CEnvelope_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getGeoExtent();
+				}
+				virtual ev_bool setCurtainExtent(_in ev_real32 minPX, _in ev_real32 minPY, _in ev_real32 maxPX, _in ev_real32 maxPY)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback(minPX, minPY, maxPX, maxPY);
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::setCurtainExtent(minPX, minPY, maxPX, maxPY);
+				}
+				virtual ev_bool setCurtainAlpha(_in ev_real32 alpha)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_setCurtainAlpha_ev_bool_ev_real32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_setCurtainAlpha_ev_bool_ev_real32_Callback(alpha);
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::setCurtainAlpha(alpha);
+				}
+				virtual ev_bool getCurtainExtent(_out ev_real32& minPX, _out ev_real32& minPY, _out ev_real32& maxPX, _out ev_real32& maxPY)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback(minPX, minPY, maxPX, maxPY);
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getCurtainExtent(minPX, minPY, maxPX, maxPY);
+				}
+				virtual ev_bool getCurtainEnabled() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getCurtainEnabled_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getCurtainEnabled_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getCurtainEnabled();
+				}
+				virtual ev_bool setCurtainEnabled(_in ev_bool enabled)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_setCurtainEnabled_ev_bool_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_setCurtainEnabled_ev_bool_ev_bool_Callback(enabled);
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::setCurtainEnabled(enabled);
+				}
+				virtual ev_bool getCurtainAlpha(_inout ev_real32& alpha)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getCurtainAlpha_ev_bool_ev_real32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getCurtainAlpha_ev_bool_ev_real32_Callback(alpha);
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getCurtainAlpha(alpha);
+				}
+				virtual EarthView::World::Spatial3D::Atlas::ClampMode getClampMode() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getClampMode_ClampMode_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Spatial3D::Atlas::ClampMode returnValue = (EarthView::World::Spatial3D::Atlas::ClampMode)m_EarthView_World_Geometry3D_CImageOverlayer_getClampMode_ClampMode_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getClampMode();
+				}
+				virtual void setClampMode(_in EarthView::World::Spatial3D::Atlas::ClampMode mode)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_setClampMode_void_ClampMode_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer_setClampMode_void_ClampMode_Callback((int)mode);
+					}
+					else
+						return this->CImageOverlayer::setClampMode(mode);
+				}
+				virtual void attachLayer(_in EarthView::World::Spatial::Atlas::ILayer* layer)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_attachLayer_void_ILayer_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer_attachLayer_void_ILayer_Callback(layer);
+					}
+					else
+						return this->CImageOverlayer::attachLayer(layer);
+				}
+				virtual void detachLayer()
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_detachLayer_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer_detachLayer_void_Callback();
+					}
+					else
+						return this->CImageOverlayer::detachLayer();
+				}
+				virtual EarthView::World::Spatial::Atlas::ILayer* getLayer() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getLayer_ILayer_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Spatial::Atlas::ILayer* returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getLayer_ILayer_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getLayer();
+				}
+				virtual EarthView::World::Spatial::GeoDataset::IDataset* getDataset()
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getDataset_IDataset_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Spatial::GeoDataset::IDataset* returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getDataset_IDataset_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getDataset();
+				}
+				virtual const EarthView::World::Spatial::Geometry::IEnvelope* getExtent() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getExtent_IEnvelope_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Geometry::IEnvelope* returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getExtent_IEnvelope_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getExtent();
+				}
+				virtual EarthView::World::Spatial::Geometry::ISpatialReference* getSpatialReference() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getSpatialReference_ISpatialReference_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Spatial::Geometry::ISpatialReference* returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getSpatialReference_ISpatialReference_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getSpatialReference();
+				}
+				virtual EarthView::World::Core::CXmlElement toXmlElement() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_toXmlElement_CXmlElement_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Core::CXmlElement returnValue = *(EarthView::World::Core::CXmlElement*)m_EarthView_World_Geometry3D_CImageOverlayer_toXmlElement_CXmlElement_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::toXmlElement();
+				}
+				virtual EVString toXML() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_toXML_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_toXML_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::toXML();
+				}
+				virtual void fromXmlElement(_in EarthView::World::Core::CXmlElement& element)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_fromXmlElement_void_CXmlElement_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer_fromXmlElement_void_CXmlElement_Callback(&element);
+					}
+					else
+						return this->CImageOverlayer::fromXmlElement(element);
+				}
+				virtual EVString getSceneName() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getSceneName_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getSceneName_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getSceneName();
+				}
+				virtual void setName(_in const EVString& name)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_setName_void_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						m_EarthView_World_Geometry3D_CImageOverlayer_setName_void_EVString_Callback(name_Char);
+					}
+					else
+						return this->CImageOverlayer::setName(name);
+				}
+				virtual EVString getDescription() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getDescription_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getDescription_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getDescription();
+				}
+				virtual ev_bool canEdit() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_canEdit_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_canEdit_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::canEdit();
+				}
+				virtual void setCanEdit(_in ev_bool can)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_setCanEdit_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer_setCanEdit_void_ev_bool_Callback(can);
+					}
+					else
+						return this->CImageOverlayer::setCanEdit(can);
+				}
+				virtual ev_bool isEditing() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_isEditing_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_isEditing_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::isEditing();
+				}
+				virtual void setEditing(_in ev_bool editing)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_setEditing_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer_setEditing_void_ev_bool_Callback(editing);
+					}
+					else
+						return this->CImageOverlayer::setEditing(editing);
+				}
+				virtual ev_bool isVisible() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_isVisible_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_isVisible_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::isVisible();
+				}
+				virtual void setVisible(_in ev_bool visible)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_setVisible_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer_setVisible_void_ev_bool_Callback(visible);
+					}
+					else
+						return this->CImageOverlayer::setVisible(visible);
+				}
+				virtual ev_bool isValid() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_isValid_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_isValid_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::isValid();
+				}
+				virtual ev_bool isSelectable() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_isSelectable_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_isSelectable_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::isSelectable();
+				}
+				virtual ev_bool getHeightAt(_in ev_real32 lat, _in ev_real32 lon, _in ev_real32 targetSamplesPerDegrees, _inout ev_real32& height)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback(lat, lon, targetSamplesPerDegrees, height);
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getHeightAt(lat, lon, targetSamplesPerDegrees, height);
+				}
+				virtual void _notifyRefreshed(_in const EarthView::World::Graphic::CCamera* camera, _in EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_LayerRefreshFactor_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_LayerRefreshFactor_Callback(camera, (int)updateType);
+					}
+					else
+						return this->CImageOverlayer::_notifyRefreshed(camera, updateType);
+				}
+				virtual void _notifyRefreshed(_in const EarthView::World::Graphic::CCamera* camera)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_Callback(camera);
+					}
+					else
+						return this->CImageOverlayer::_notifyRefreshed(camera);
+				}
+				virtual void _notifyDataChanged(_in const EVString& strDataSourceName, _in const EVString& strDatasetName, _in EarthView::World::Core::CEvent* pEvent)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer__notifyDataChanged_void_EVString_EVString_CEvent_Callback != NULL && this->isCustomExtend())
+					{
+						char* strDataSourceName_Char = strDataSourceName.makeBuffer();
+						char* strDatasetName_Char = strDatasetName.makeBuffer();
+						m_EarthView_World_Geometry3D_CImageOverlayer__notifyDataChanged_void_EVString_EVString_CEvent_Callback(strDataSourceName_Char, strDatasetName_Char, pEvent);
+					}
+					else
+						return this->CImageOverlayer::_notifyDataChanged(strDataSourceName, strDatasetName, pEvent);
+				}
+				virtual EarthView::World::Graphic::CSceneManager* getSceneManager() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getSceneManager_CSceneManager_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CSceneManager* returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getSceneManager_CSceneManager_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getSceneManager();
+				}
+				virtual void toStream(_out EarthView::World::Core::CDataStream& stream) const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_toStream_void_CDataStream_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer_toStream_void_CDataStream_Callback(&stream);
+					}
+					else
+						return this->CImageOverlayer::toStream(stream);
+				}
+				virtual void fromStream(_inout EarthView::World::Core::CDataStream& stream)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_fromStream_void_CDataStream_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer_fromStream_void_CDataStream_Callback(&stream);
+					}
+					else
+						return this->CImageOverlayer::fromStream(stream);
+				}
+				virtual EVString getDatasetName()
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getDatasetName_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getDatasetName_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getDatasetName();
+				}
+				virtual EarthView::World::Spatial::GeoDataset::IDataSource* getDataSource()
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getDataSource_IDataSource_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Spatial::GeoDataset::IDataSource* returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getDataSource_IDataSource_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getDataSource();
+				}
+				virtual void select(_in EarthView::World::Spatial::GeoDataset::IQueryFilter* filter, _in EarthView::World::Spatial::Atlas::EVSelectionResultType type)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_select_void_IQueryFilter_EVSelectionResultType_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer_select_void_IQueryFilter_EVSelectionResultType_Callback(filter, (int)type);
+					}
+					else
+						return this->CImageOverlayer::select(filter, type);
+				}
+				virtual void clearSelection()
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_clearSelection_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer_clearSelection_void_Callback();
+					}
+					else
+						return this->CImageOverlayer::clearSelection();
+				}
+				virtual void setLayerSelection(_in EarthView::World::Spatial::Atlas::ILayerSelection* selection)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_setLayerSelection_void_ILayerSelection_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer_setLayerSelection_void_ILayerSelection_Callback(selection);
+					}
+					else
+						return this->CImageOverlayer::setLayerSelection(selection);
+				}
+				virtual EarthView::World::Spatial::Atlas::ILayerSelection* getLayerSelection()
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getLayerSelection_ILayerSelection_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Spatial::Atlas::ILayerSelection* returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getLayerSelection_ILayerSelection_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getLayerSelection();
+				}
+				virtual ev_bool ignoreScale() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_ignoreScale_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_ignoreScale_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::ignoreScale();
+				}
+				virtual void setIgnoreScale(_in ev_bool bIgnore)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_setIgnoreScale_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer_setIgnoreScale_void_ev_bool_Callback(bIgnore);
+					}
+					else
+						return this->CImageOverlayer::setIgnoreScale(bIgnore);
+				}
+				virtual ev_real64 getDisplayMaxScale() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getDisplayMaxScale_ev_real64_Callback != NULL && this->isCustomExtend())
+					{
+						ev_real64 returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getDisplayMaxScale_ev_real64_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getDisplayMaxScale();
+				}
+				virtual void setDisplayMaxScale(_in ev_real64 scale)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_setDisplayMaxScale_void_ev_real64_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer_setDisplayMaxScale_void_ev_real64_Callback(scale);
+					}
+					else
+						return this->CImageOverlayer::setDisplayMaxScale(scale);
+				}
+				virtual ev_real64 getDisplayMinScale() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getDisplayMinScale_ev_real64_Callback != NULL && this->isCustomExtend())
+					{
+						ev_real64 returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getDisplayMinScale_ev_real64_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getDisplayMinScale();
+				}
+				virtual void setDisplayMinScale(_in ev_real64 scale)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_setDisplayMinScale_void_ev_real64_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer_setDisplayMinScale_void_ev_real64_Callback(scale);
+					}
+					else
+						return this->CImageOverlayer::setDisplayMinScale(scale);
+				}
+				virtual void setSpatialReference(_in EarthView::World::Spatial::Geometry::ISpatialReference* ref_sr)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_setSpatialReference_void_ISpatialReference_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer_setSpatialReference_void_ISpatialReference_Callback(ref_sr);
+					}
+					else
+						return this->CImageOverlayer::setSpatialReference(ref_sr);
+				}
+				virtual void setTransparentValue(_in ev_uint8 transparent)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_setTransparentValue_void_ev_uint8_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Geometry3D_CImageOverlayer_setTransparentValue_void_ev_uint8_Callback(transparent);
+					}
+					else
+						return this->CImageOverlayer::setTransparentValue(transparent);
+				}
+				virtual ev_uint8 getTransparentValue() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_getTransparentValue_ev_uint8_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint8 returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_getTransparentValue_ev_uint8_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::getTransparentValue();
+				}
+				virtual ev_bool draw(_in EarthView::World::Spatial::Display::ISpatialDisplay* display, _in EarthView::World::Spatial::Atlas::EVVectorLayerRendererType type)
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback(display, (int)type);
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::draw(display, type);
+				}
+				virtual EarthView::World::Spatial::Atlas::ILayer* clone() const
+				{
+					if(m_EarthView_World_Geometry3D_CImageOverlayer_clone_ILayer_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Spatial::Atlas::ILayer* returnValue = m_EarthView_World_Geometry3D_CImageOverlayer_clone_ILayer_Callback();
+						return returnValue;
+					}
+					else
+						return this->CImageOverlayer::clone();
+				}
+			};
+			REGISTER_FACTORY_CLASS(CImageOverlayerProxy);
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Geometry3D_CImageOverlayer_setSelectable_void_ev_bool(void *pObjectXXXX, _in ev_bool selectable )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				if (dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Geometry3D::CImageOverlayer::setSelectable(selectable);
+				else
+					ptrNativeObject->setSelectable(selectable);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_setSelectable_void_ev_bool( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_setSelectable_void_ev_bool_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setSelectable_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Geometry3D_CImageOverlayer_setSelectable_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool selectable )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Geometry3D::CImageOverlayer::setSelectable(selectable);
+			}
+			extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Geometry3D_CImageOverlayer_getType_EVLayerType(void *pObjectXXXX )
+			{
+				const EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				if (dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Spatial::Atlas::EVLayerType objXXXX = ptrNativeObject->EarthView::World::Geometry3D::CImageOverlayer::getType();
+					return (int)objXXXX;
+				}
+				else
+				{
+					EarthView::World::Spatial::Atlas::EVLayerType objXXXX = ptrNativeObject->getType();
+					return (int)objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getType_EVLayerType( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getType_EVLayerType_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getType_EVLayerType(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Geometry3D_CImageOverlayer_getType_EVLayerType_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				EarthView::World::Spatial::Atlas::EVLayerType objXXXX = ptrNativeObject->EarthView::World::Geometry3D::CImageOverlayer::getType();
+				return (int)objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData(void *pObjectXXXX, _in ev_int32 level, _in ev_int32 row, _in ev_int32 col, _inout void* tile )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				if (dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Geometry3D::CImageOverlayer::getTile(level, row, col, *(EarthView::World::Spatial::CTileData*)tile);
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->getTile(level, row, col, *(EarthView::World::Spatial::CTileData*)tile);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData_NoVirtual(void *pObjectXXXX, _in ev_int32 level, _in ev_int32 row, _in ev_int32 col, _inout void* tile )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Geometry3D::CImageOverlayer::getTile(level, row, col, *(EarthView::World::Spatial::CTileData*)tile);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_CTileInfo_CTileData(void *pObjectXXXX, _in const void* tileInfo, _inout void* tile )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				if (dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Geometry3D::CImageOverlayer::getTile(*(EarthView::World::Spatial::CTileInfo*)tileInfo, *(EarthView::World::Spatial::CTileData*)tile);
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->getTile(*(EarthView::World::Spatial::CTileInfo*)tileInfo, *(EarthView::World::Spatial::CTileData*)tile);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_CTileInfo_CTileData( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_CTileInfo_CTileData_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_CTileInfo_CTileData(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_CTileInfo_CTileData_NoVirtual(void *pObjectXXXX, _in const void* tileInfo, _inout void* tile )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Geometry3D::CImageOverlayer::getTile(*(EarthView::World::Spatial::CTileInfo*)tileInfo, *(EarthView::World::Spatial::CTileData*)tile);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_Real_Real_Real_Real_CTileData(void *pObjectXXXX, _in Real minX, _in Real minY, _in Real maxX, _in Real maxY, _inout void* tile )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				if (dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Geometry3D::CImageOverlayer::getTile(minX, minY, maxX, maxY, *(EarthView::World::Spatial::CTileData*)tile);
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->getTile(minX, minY, maxX, maxY, *(EarthView::World::Spatial::CTileData*)tile);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_Real_Real_Real_Real_CTileData( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_Real_Real_Real_Real_CTileData_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_Real_Real_Real_Real_CTileData(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Geometry3D_CImageOverlayer_getTile_ev_bool_Real_Real_Real_Real_CTileData_NoVirtual(void *pObjectXXXX, _in Real minX, _in Real minY, _in Real maxX, _in Real maxY, _inout void* tile )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Geometry3D::CImageOverlayer::getTile(minX, minY, maxX, maxY, *(EarthView::World::Spatial::CTileData*)tile);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Geometry3D_CImageOverlayer__notifyLayerAdd_void_CSceneManager(void *pObjectXXXX, _in EarthView::World::Graphic::CSceneManager* pSceneMgr )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				if (dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Geometry3D::CImageOverlayer::_notifyLayerAdd(pSceneMgr);
+				else
+					ptrNativeObject->_notifyLayerAdd(pSceneMgr);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyLayerAdd_void_CSceneManager( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer__notifyLayerAdd_void_CSceneManager_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyLayerAdd_void_CSceneManager(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Geometry3D_CImageOverlayer__notifyLayerAdd_void_CSceneManager_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CSceneManager* pSceneMgr )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Geometry3D::CImageOverlayer::_notifyLayerAdd(pSceneMgr);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Geometry3D_CImageOverlayer__notifyLayerRemoved_void_CSceneManager(void *pObjectXXXX, _in EarthView::World::Graphic::CSceneManager* pSceneMgr )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				if (dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Geometry3D::CImageOverlayer::_notifyLayerRemoved(pSceneMgr);
+				else
+					ptrNativeObject->_notifyLayerRemoved(pSceneMgr);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyLayerRemoved_void_CSceneManager( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer__notifyLayerRemoved_void_CSceneManager_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyLayerRemoved_void_CSceneManager(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Geometry3D_CImageOverlayer__notifyLayerRemoved_void_CSceneManager_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CSceneManager* pSceneMgr )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Geometry3D::CImageOverlayer::_notifyLayerRemoved(pSceneMgr);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Geometry3D_CImageOverlayer_setRotateAngle_void_ev_real64(void *pObjectXXXX, _in ev_real64 angle )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ptrNativeObject->setRotateAngle(angle);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Geometry3D_CImageOverlayer_setImageFilePath_void_EVString(void *pObjectXXXX, _in const char* filePath )
+			{
+				EarthView::World::Core::ev_string filePath1 = filePath;
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ptrNativeObject->setImageFilePath(filePath1);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Geometry3D_CImageOverlayer_setOpacity_void_ev_real32(void *pObjectXXXX, _in ev_real32 opacity )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ptrNativeObject->setOpacity(opacity);
+			}
+			extern "C" EV_DLL_EXPORT  ev_real32  _stdcall EarthView_World_Geometry3D_CImageOverlayer_getOpacity_ev_real32(void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ev_real32 objXXXX = ptrNativeObject->getOpacity();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Geometry3D_CImageOverlayer_setDescription_void_EVString(void *pObjectXXXX, _in const char* description )
+			{
+				EarthView::World::Core::ev_string description1 = description;
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				if (dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Geometry3D::CImageOverlayer::setDescription(description1);
+				else
+					ptrNativeObject->setDescription(description1);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_setDescription_void_EVString( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_setDescription_void_EVString_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setDescription_void_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Geometry3D_CImageOverlayer_setDescription_void_EVString_NoVirtual(void *pObjectXXXX, _in const char* description )
+			{
+				EarthView::World::Core::ev_string description1 = description;
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Geometry3D::CImageOverlayer::setDescription(description1);
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Geometry3D_CImageOverlayer_getName_EVString(void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				if (dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*)ptrNativeObject) != NULL)
+				{
+					EVString objXXXX = ptrNativeObject->EarthView::World::Geometry3D::CImageOverlayer::getName();
+					return objXXXX.makeBuffer();
+				}
+				else
+				{
+					EVString objXXXX = ptrNativeObject->getName();
+					return objXXXX.makeBuffer();
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getName_EVString( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getName_EVString_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getName_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Geometry3D_CImageOverlayer_getName_EVString_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->EarthView::World::Geometry3D::CImageOverlayer::getName();
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Geometry3D_CImageOverlayer_getImagePath_EVString(void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->getImagePath();
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Geometry3D_CImageOverlayer_setImageAltitudeMode_void_EVAltitudeMode(void *pObjectXXXX, _in int mode )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ptrNativeObject->setImageAltitudeMode((EarthView::World::Spatial::Utility::EVAltitudeMode)mode);
+			}
+			extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Geometry3D_CImageOverlayer_getImageAltitudeMode_EVAltitudeMode(void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				EarthView::World::Spatial::Utility::EVAltitudeMode objXXXX = ptrNativeObject->getImageAltitudeMode();
+				return (int)objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Geometry3D_CImageOverlayer_setAltitude_void_ev_real64(void *pObjectXXXX, _in ev_real64 alt )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ptrNativeObject->setAltitude(alt);
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Spatial::Kml::CGeoObjectExtension*  _stdcall EarthView_World_Geometry3D_CImageOverlayer_getGeoObject_CGeoObjectExtension_ev_bool(void *pObjectXXXX, _in ev_bool isSaveToKml )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				EarthView::World::Spatial::Kml::CGeoObjectExtension* objXXXX = ptrNativeObject->getGeoObject(isSaveToKml);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Geometry3D_CImageOverlayer_setImageID_void_EVString(void *pObjectXXXX, _in const char* id )
+			{
+				EarthView::World::Core::ev_string id1 = id;
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ptrNativeObject->setImageID(id1);
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Geometry3D::CMultiPolygon3DExtension*  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_mpoly( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				EarthView::World::Geometry3D::CMultiPolygon3DExtension* objXXXX = ptrNativeObject->mpoly;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_mpoly( void *pObjectXXXX, EarthView::World::Geometry3D::CMultiPolygon3DExtension*  value )
+			{
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->mpoly = value;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Geometry3D_CImageOverlayer_setSceneManager_void_CSceneManager(void *pObjectXXXX, _in EarthView::World::Graphic::CSceneManager* ref_mSceneMgr )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ptrNativeObject->setSceneManager(ref_mSceneMgr);
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Geometry3D_CImageOverlayer_createCachePath_EVString_ev_bool_EVString_ev_int32_ev_int32_ev_int32(void *pObjectXXXX, _in ev_bool isMercator, _in const char* picId, _in ev_int32 level, _in ev_int32 row, _in ev_int32 col )
+			{
+				EarthView::World::Core::ev_string picId1 = picId;
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->createCachePath(isMercator, picId1, level, row, col);
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_mIsRendering( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->mIsRendering;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_mIsRendering( void *pObjectXXXX, ev_bool  value )
+			{
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->mIsRendering = value;
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_mPictureGUID( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->mPictureGUID;
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_mPictureGUID( void *pObjectXXXX, char*  value )
+			{
+				EarthView::World::Core::ev_string value1 = value;
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->mPictureGUID = value1;
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_imageID( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->imageID;
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_imageID( void *pObjectXXXX, char*  value )
+			{
+				EarthView::World::Core::ev_string value1 = value;
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->imageID = value1;
+			}
+			extern "C" EV_DLL_EXPORT  ev_real64  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_altitude( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ev_real64 objXXXX = ptrNativeObject->altitude;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_altitude( void *pObjectXXXX, ev_real64  value )
+			{
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->altitude = value;
+			}
+			extern "C" EV_DLL_EXPORT  ev_real64  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_north( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ev_real64 objXXXX = ptrNativeObject->north;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_north( void *pObjectXXXX, ev_real64  value )
+			{
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->north = value;
+			}
+			extern "C" EV_DLL_EXPORT  ev_real64  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_south( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ev_real64 objXXXX = ptrNativeObject->south;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_south( void *pObjectXXXX, ev_real64  value )
+			{
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->south = value;
+			}
+			extern "C" EV_DLL_EXPORT  double  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_east( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				double objXXXX = ptrNativeObject->east;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_east( void *pObjectXXXX, double  value )
+			{
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->east = value;
+			}
+			extern "C" EV_DLL_EXPORT  ev_real64  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_west( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ev_real64 objXXXX = ptrNativeObject->west;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_west( void *pObjectXXXX, ev_real64  value )
+			{
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->west = value;
+			}
+			extern "C" EV_DLL_EXPORT  ev_real64  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_sphericalNorth( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ev_real64 objXXXX = ptrNativeObject->sphericalNorth;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_sphericalNorth( void *pObjectXXXX, ev_real64  value )
+			{
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->sphericalNorth = value;
+			}
+			extern "C" EV_DLL_EXPORT  ev_real64  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_sphericalSouth( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ev_real64 objXXXX = ptrNativeObject->sphericalSouth;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_sphericalSouth( void *pObjectXXXX, ev_real64  value )
+			{
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->sphericalSouth = value;
+			}
+			extern "C" EV_DLL_EXPORT  ev_real64  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_sphericalWest( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ev_real64 objXXXX = ptrNativeObject->sphericalWest;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_sphericalWest( void *pObjectXXXX, ev_real64  value )
+			{
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->sphericalWest = value;
+			}
+			extern "C" EV_DLL_EXPORT  ev_real64  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_sphericalEast( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ev_real64 objXXXX = ptrNativeObject->sphericalEast;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_sphericalEast( void *pObjectXXXX, ev_real64  value )
+			{
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->sphericalEast = value;
+			}
+			extern "C" EV_DLL_EXPORT  ev_real64  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_rotateAngle( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ev_real64 objXXXX = ptrNativeObject->rotateAngle;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_rotateAngle( void *pObjectXXXX, ev_real64  value )
+			{
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->rotateAngle = value;
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_imageFilePath( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->imageFilePath;
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_imageFilePath( void *pObjectXXXX, char*  value )
+			{
+				EarthView::World::Core::ev_string value1 = value;
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->imageFilePath = value1;
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_description( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->description;
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_description( void *pObjectXXXX, char*  value )
+			{
+				EarthView::World::Core::ev_string value1 = value;
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->description = value1;
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_name( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->name;
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_name( void *pObjectXXXX, char*  value )
+			{
+				EarthView::World::Core::ev_string value1 = value;
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->name = value1;
+			}
+			extern "C" EV_DLL_EXPORT  ev_real32  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_opacity( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ev_real32 objXXXX = ptrNativeObject->opacity;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_opacity( void *pObjectXXXX, ev_real32  value )
+			{
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->opacity = value;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_mSmooth( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->mSmooth;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_mSmooth( void *pObjectXXXX, ev_bool  value )
+			{
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->mSmooth = value;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_mIsVisible( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->mIsVisible;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_mIsVisible( void *pObjectXXXX, ev_bool  value )
+			{
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->mIsVisible = value;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_mIsRemovePictureCache( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->mIsRemovePictureCache;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_mIsRemovePictureCache( void *pObjectXXXX, ev_bool  value )
+			{
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->mIsRemovePictureCache = value;
+			}
+			extern "C" EV_DLL_EXPORT  int  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_altitudeMode( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				EarthView::World::Spatial::Utility::EVAltitudeMode objXXXX = ptrNativeObject->altitudeMode;
+				return (int)objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_altitudeMode( void *pObjectXXXX, int  value )
+			{
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->altitudeMode = (EarthView::World::Spatial::Utility::EVAltitudeMode)value;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CSceneManager*  _stdcall Get_EarthView_World_Geometry3D_CImageOverlayer_mSceneMgr( void *pObjectXXXX )
+			{
+				EarthView::World::Geometry3D::CImageOverlayer* ptrNativeObject = (EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX;
+				EarthView::World::Graphic::CSceneManager* objXXXX = ptrNativeObject->mSceneMgr;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Geometry3D_CImageOverlayer_mSceneMgr( void *pObjectXXXX, EarthView::World::Graphic::CSceneManager*  value )
+			{
+				((EarthView::World::Geometry3D::CImageOverlayer*)pObjectXXXX)->mSceneMgr = value;
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getMaxLevel_ev_int32( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getMaxLevel_ev_int32_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getMaxLevel_ev_int32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getMinLevel_ev_int32( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getMinLevel_ev_int32_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getMinLevel_ev_int32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getMaxVisibleLevel_ev_int32( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getMaxVisibleLevel_ev_int32_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getMaxVisibleLevel_ev_int32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getMinVisibleLevel_ev_int32( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getMinVisibleLevel_ev_int32_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getMinVisibleLevel_ev_int32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_setMaxVisibleLevel_ev_bool_ev_int32( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_setMaxVisibleLevel_ev_bool_ev_int32_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setMaxVisibleLevel_ev_bool_ev_int32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_setMinVisibleLevel_ev_bool_ev_int32( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_setMinVisibleLevel_ev_bool_ev_int32_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setMinVisibleLevel_ev_bool_ev_int32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getThemeStream_MemoryDataStreamPtr( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getThemeStream_MemoryDataStreamPtr_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getThemeStream_MemoryDataStreamPtr(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_equalThemeStream_ev_bool_MemoryDataStreamPtr( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_equalThemeStream_ev_bool_MemoryDataStreamPtr_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_equalThemeStream_ev_bool_MemoryDataStreamPtr(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_levelValid_ev_bool_ev_int32( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_levelValid_ev_bool_ev_int32_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_levelValid_ev_bool_ev_int32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getGeoExtent_CEnvelope( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getGeoExtent_CEnvelope_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getGeoExtent_CEnvelope(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_setCurtainAlpha_ev_bool_ev_real32( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_setCurtainAlpha_ev_bool_ev_real32_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setCurtainAlpha_ev_bool_ev_real32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getCurtainEnabled_ev_bool( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getCurtainEnabled_ev_bool_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getCurtainEnabled_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_setCurtainEnabled_ev_bool_ev_bool( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_setCurtainEnabled_ev_bool_ev_bool_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setCurtainEnabled_ev_bool_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getCurtainAlpha_ev_bool_ev_real32( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getCurtainAlpha_ev_bool_ev_real32_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getCurtainAlpha_ev_bool_ev_real32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getClampMode_ClampMode( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getClampMode_ClampMode_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getClampMode_ClampMode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_setClampMode_void_ClampMode( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_setClampMode_void_ClampMode_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setClampMode_void_ClampMode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_attachLayer_void_ILayer( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_attachLayer_void_ILayer_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_attachLayer_void_ILayer(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_detachLayer_void( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_detachLayer_void_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_detachLayer_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getLayer_ILayer( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getLayer_ILayer_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getLayer_ILayer(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getTheme_ITheme( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getTheme_ITheme_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getTheme_ITheme(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_setTheme_void_ITheme( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_setTheme_void_ITheme_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setTheme_void_ITheme(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getSceneName_EVString( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getSceneName_EVString_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getSceneName_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getMinX_ev_real64( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getMinX_ev_real64_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getMinX_ev_real64(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getMaxX_ev_real64( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getMaxX_ev_real64_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getMaxX_ev_real64(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getMinY_ev_real64( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getMinY_ev_real64_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getMinY_ev_real64(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getMaxY_ev_real64( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getMaxY_ev_real64_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getMaxY_ev_real64(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_LayerRefreshFactor( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_LayerRefreshFactor_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_LayerRefreshFactor(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyRefreshed_void_CCamera(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyDataChanged_void_EVString_EVString_CEvent( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer__notifyDataChanged_void_EVString_EVString_CEvent_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer__notifyDataChanged_void_EVString_EVString_CEvent(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getSceneManager_CSceneManager( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getSceneManager_CSceneManager_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getSceneManager_CSceneManager(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getDataset_IDataset( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getDataset_IDataset_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getDataset_IDataset(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getDatasetName_EVString( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getDatasetName_EVString_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getDatasetName_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getDataSource_IDataSource( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getDataSource_IDataSource_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getDataSource_IDataSource(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_select_void_IQueryFilter_EVSelectionResultType( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_select_void_IQueryFilter_EVSelectionResultType_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_select_void_IQueryFilter_EVSelectionResultType(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_clearSelection_void( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_clearSelection_void_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_clearSelection_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_setLayerSelection_void_ILayerSelection( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_setLayerSelection_void_ILayerSelection_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setLayerSelection_void_ILayerSelection(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getLayerSelection_ILayerSelection( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getLayerSelection_ILayerSelection_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getLayerSelection_ILayerSelection(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_setName_void_EVString( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_setName_void_EVString_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setName_void_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getDescription_EVString( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getDescription_EVString_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getDescription_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_canEdit_ev_bool( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_canEdit_ev_bool_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_canEdit_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_setCanEdit_void_ev_bool( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_setCanEdit_void_ev_bool_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setCanEdit_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_isEditing_ev_bool( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_isEditing_ev_bool_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_isEditing_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_setEditing_void_ev_bool( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_setEditing_void_ev_bool_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setEditing_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_isVisible_ev_bool( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_isVisible_ev_bool_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_isVisible_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_setVisible_void_ev_bool( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_setVisible_void_ev_bool_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setVisible_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_isValid_ev_bool( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_isValid_ev_bool_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_isValid_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_isSelectable_ev_bool( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_isSelectable_ev_bool_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_isSelectable_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_ignoreScale_ev_bool( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_ignoreScale_ev_bool_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_ignoreScale_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_setIgnoreScale_void_ev_bool( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_setIgnoreScale_void_ev_bool_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setIgnoreScale_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getDisplayMaxScale_ev_real64( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getDisplayMaxScale_ev_real64_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getDisplayMaxScale_ev_real64(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_setDisplayMaxScale_void_ev_real64( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_setDisplayMaxScale_void_ev_real64_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setDisplayMaxScale_void_ev_real64(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getDisplayMinScale_ev_real64( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getDisplayMinScale_ev_real64_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getDisplayMinScale_ev_real64(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_setDisplayMinScale_void_ev_real64( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_setDisplayMinScale_void_ev_real64_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setDisplayMinScale_void_ev_real64(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getSpatialReference_ISpatialReference( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getSpatialReference_ISpatialReference_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getSpatialReference_ISpatialReference(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_setSpatialReference_void_ISpatialReference( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_setSpatialReference_void_ISpatialReference_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setSpatialReference_void_ISpatialReference(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_setTransparentValue_void_ev_uint8( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_setTransparentValue_void_ev_uint8_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_setTransparentValue_void_ev_uint8(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getTransparentValue_ev_uint8( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getTransparentValue_ev_uint8_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getTransparentValue_ev_uint8(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_getExtent_IEnvelope( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_getExtent_IEnvelope_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_getExtent_IEnvelope(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_clone_ILayer( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_clone_ILayer_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_clone_ILayer(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_toStream_void_CDataStream( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_toStream_void_CDataStream_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_toStream_void_CDataStream(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_toXML_EVString( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_toXML_EVString_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_toXML_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_fromXmlElement_void_CXmlElement( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_fromXmlElement_void_CXmlElement_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_fromXmlElement_void_CXmlElement(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_toXmlElement_CXmlElement( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_toXmlElement_CXmlElement_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_toXmlElement_CXmlElement(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Geometry3D_CImageOverlayer_fromStream_void_CDataStream( void *pObjectXXXX, EarthView_World_Geometry3D_CImageOverlayer_fromStream_void_CDataStream_Callback* pCallback )
+			{
+				CImageOverlayerProxy* ptr = dynamic_cast<CImageOverlayerProxy*>((EarthView::World::Geometry3D::CImageOverlayer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Geometry3D_CImageOverlayer_fromStream_void_CDataStream(pCallback);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1YGXPINO-DD1S-52AR-7BG0-FHLQECTWLY1J}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EV_CacheManager_CSharpWrapper</RootNamespace>
+    <AssemblyName>EV_CacheManager_CSharpWrapper</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\bin\Debug\EV_CacheManager_CSharpWrapper.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Debug_x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\bin\Debug_x64\EV_CacheManager_CSharpWrapper.XML</DocumentationFile>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\bin\Release\EV_CacheManager_CSharpWrapper.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\Release_x64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\bin\Release_x64\EV_CacheManager_CSharpWrapper.XML</DocumentationFile>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ev_registclassfactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EV_Core_CSharpWrapper\EV_Core_CSharpWrapper.csproj">
+      <Project>{0J6SKGCV-SQ6U-OHA0-3C55-YF400DIJLL5N}</Project>
+      <Name>EV_Core_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_DatabaseUtility_CSharpWrapper\EV_DatabaseUtility_CSharpWrapper.csproj">
+      <Project>{H2OH5X4V-OAE2-XN5U-SK66-SG5HPE9JNQPG}</Project>
+      <Name>EV_DatabaseUtility_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_TileUtility_CSharpWrapper\EV_TileUtility_CSharpWrapper.csproj">
+      <Project>{VFWN5MJE-XIKI-8DC1-R62D-K265MFLOFNDT}</Project>
+      <Name>EV_TileUtility_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_Download_CSharpWrapper\EV_Download_CSharpWrapper.csproj">
+      <Project>{S5KUVLP1-NYBJ-A63U-TQ5B-22MSJFEAGH5B}</Project>
+      <Name>EV_Download_CSharpWrapper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

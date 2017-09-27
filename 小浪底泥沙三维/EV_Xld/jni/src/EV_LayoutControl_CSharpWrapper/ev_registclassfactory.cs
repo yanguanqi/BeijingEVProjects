@@ -1,0 +1,92 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Runtime.InteropServices;
+
+public static class EV_LayoutControl_ClassFactory
+{
+	public static void RegisterAll()
+	{
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandDeleteElement", new EarthView.World.Layout.Controls.CommandDeleteElementClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandDeleteElementProxy", new EarthView.World.Layout.Controls.CommandDeleteElementClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandElementBottom", new EarthView.World.Layout.Controls.CommandElementBottomClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandElementBottomProxy", new EarthView.World.Layout.Controls.CommandElementBottomClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandElementDownward", new EarthView.World.Layout.Controls.CommandElementDownwardClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandElementDownwardProxy", new EarthView.World.Layout.Controls.CommandElementDownwardClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandElementTop", new EarthView.World.Layout.Controls.CommandElementTopClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandElementTopProxy", new EarthView.World.Layout.Controls.CommandElementTopClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandElementUpward", new EarthView.World.Layout.Controls.CommandElementUpwardClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandElementUpwardProxy", new EarthView.World.Layout.Controls.CommandElementUpwardClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandFullExtentInPage", new EarthView.World.Layout.Controls.CommandFullExtentInPageClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandFullExtentInPageProxy", new EarthView.World.Layout.Controls.CommandFullExtentInPageClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandInsertLegend", new EarthView.World.Layout.Controls.CommandInsertLegendClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandInsertLegendProxy", new EarthView.World.Layout.Controls.CommandInsertLegendClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandInsertMapFrame", new EarthView.World.Layout.Controls.CommandInsertMapFrameClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandInsertMapFrameProxy", new EarthView.World.Layout.Controls.CommandInsertMapFrameClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandInsertMapTitle", new EarthView.World.Layout.Controls.CommandInsertMapTitleClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandInsertMapTitleProxy", new EarthView.World.Layout.Controls.CommandInsertMapTitleClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandInsertNorthArrow", new EarthView.World.Layout.Controls.CommandInsertNorthArrowClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandInsertNorthArrowProxy", new EarthView.World.Layout.Controls.CommandInsertNorthArrowClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandInsertPicture", new EarthView.World.Layout.Controls.CommandInsertPictureClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandInsertPictureProxy", new EarthView.World.Layout.Controls.CommandInsertPictureClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandInsertScaleBar", new EarthView.World.Layout.Controls.CommandInsertScaleBarClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandInsertScaleBarProxy", new EarthView.World.Layout.Controls.CommandInsertScaleBarClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandInsertScaleText", new EarthView.World.Layout.Controls.CommandInsertScaleTextClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandInsertScaleTextProxy", new EarthView.World.Layout.Controls.CommandInsertScaleTextClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandInsertText", new EarthView.World.Layout.Controls.CommandInsertTextClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandInsertTextProxy", new EarthView.World.Layout.Controls.CommandInsertTextClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandLayoutRedo", new EarthView.World.Layout.Controls.CommandLayoutRedoClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandLayoutRedoProxy", new EarthView.World.Layout.Controls.CommandLayoutRedoClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandLayoutUndo", new EarthView.World.Layout.Controls.CommandLayoutUndoClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandLayoutUndoProxy", new EarthView.World.Layout.Controls.CommandLayoutUndoClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandMapExport", new EarthView.World.Layout.Controls.CommandMapExportClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandMapExportProxy", new EarthView.World.Layout.Controls.CommandMapExportClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandNextPageView", new EarthView.World.Layout.Controls.CommandNextPageViewClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandNextPageViewProxy", new EarthView.World.Layout.Controls.CommandNextPageViewClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandNextViewInPage", new EarthView.World.Layout.Controls.CommandNextViewInPageClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandNextViewInPageProxy", new EarthView.World.Layout.Controls.CommandNextViewInPageClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandPageFullExtent", new EarthView.World.Layout.Controls.CommandPageFullExtentClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandPageFullExtentProxy", new EarthView.World.Layout.Controls.CommandPageFullExtentClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandPageNormal", new EarthView.World.Layout.Controls.CommandPageNormalClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandPageNormalProxy", new EarthView.World.Layout.Controls.CommandPageNormalClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandPageSetting", new EarthView.World.Layout.Controls.CommandPageSettingClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandPageSettingProxy", new EarthView.World.Layout.Controls.CommandPageSettingClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandPreviousPageView", new EarthView.World.Layout.Controls.CommandPreviousPageViewClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandPreviousPageViewProxy", new EarthView.World.Layout.Controls.CommandPreviousPageViewClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandPreviousViewInPage", new EarthView.World.Layout.Controls.CommandPreviousViewInPageClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandPreviousViewInPageProxy", new EarthView.World.Layout.Controls.CommandPreviousViewInPageClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandZoomInByFixedScale", new EarthView.World.Layout.Controls.CommandZoomInByFixedScaleClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandZoomInByFixedScaleProxy", new EarthView.World.Layout.Controls.CommandZoomInByFixedScaleClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandZoomOutByFixedScale", new EarthView.World.Layout.Controls.CommandZoomOutByFixedScaleClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CCommandZoomOutByFixedScaleProxy", new EarthView.World.Layout.Controls.CommandZoomOutByFixedScaleClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CLayoutCommand", new EarthView.World.Layout.Controls.LayoutCommandClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CLayoutCommandProxy", new EarthView.World.Layout.Controls.LayoutCommandClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CLayoutControlAgent", new EarthView.World.Layout.Controls.LayoutControlAgentClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CLayoutControlAgentProxy", new EarthView.World.Layout.Controls.LayoutControlAgentClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CLayoutControl", new EarthView.World.Layout.Controls.LayoutControlClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CLayoutControlProxy", new EarthView.World.Layout.Controls.LayoutControlClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CLayoutOperation", new EarthView.World.Layout.Controls.LayoutOperationClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CLayoutOperationProxy", new EarthView.World.Layout.Controls.LayoutOperationClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::ILayoutIndexObserver", new EarthView.World.Layout.Controls.IlayoutindexobserverClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::ILayoutIndexObserverProxy", new EarthView.World.Layout.Controls.IlayoutindexobserverClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CLayoutOperationManager", new EarthView.World.Layout.Controls.LayoutOperationManagerClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CLayoutSublineRender", new EarthView.World.Layout.Controls.LayoutSublineRenderClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CToolElementSelection", new EarthView.World.Layout.Controls.ToolElementSelectionClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CToolElementSelectionProxy", new EarthView.World.Layout.Controls.ToolElementSelectionClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CToolLayout", new EarthView.World.Layout.Controls.ToolLayoutClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CToolLayoutProxy", new EarthView.World.Layout.Controls.ToolLayoutClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CToolPagePan", new EarthView.World.Layout.Controls.ToolPagePanClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CToolPagePanProxy", new EarthView.World.Layout.Controls.ToolPagePanClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CToolPageZoomIn", new EarthView.World.Layout.Controls.ToolPageZoomInClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CToolPageZoomInProxy", new EarthView.World.Layout.Controls.ToolPageZoomInClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CToolPageZoomOut", new EarthView.World.Layout.Controls.ToolPageZoomOutClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CToolPageZoomOutProxy", new EarthView.World.Layout.Controls.ToolPageZoomOutClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CToolPanInPage", new EarthView.World.Layout.Controls.ToolPanInPageClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CToolPanInPageProxy", new EarthView.World.Layout.Controls.ToolPanInPageClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CToolZoomInInPage", new EarthView.World.Layout.Controls.ToolZoomInInPageClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CToolZoomInInPageProxy", new EarthView.World.Layout.Controls.ToolZoomInInPageClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CToolZoomOutInPage", new EarthView.World.Layout.Controls.ToolZoomOutInPageClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Layout::Controls::CToolZoomOutInPageProxy", new EarthView.World.Layout.Controls.ToolZoomOutInPageClassFactory());
+	}
+}
+

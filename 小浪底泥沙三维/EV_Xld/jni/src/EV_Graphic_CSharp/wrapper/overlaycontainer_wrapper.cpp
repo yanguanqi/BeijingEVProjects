@@ -1,0 +1,2445 @@
+/* This file is produced by the P/Invoke AutoWrapper Utility 
+ Copyright (c) 2012 by EarthView Image Inc */
+#include "stableheaders.h"
+#include "graphic/overlaycontainer.h"
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Graphic
+		{
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_addChild_void_COverlayElement_Callback)(_in EarthView::World::Graphic::COverlayElement* ref_elem);
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayElement_Callback)(_in EarthView::World::Graphic::COverlayElement* ref_elem);
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayContainer_Callback)(_in EarthView::World::Graphic::COverlayContainer* ref_cont);
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_removeChild_void_EVString_Callback)(_in char*& name);
+			typedef EarthView::World::Graphic::COverlayElement*  ( _stdcall EarthView_World_Graphic_COverlayContainer_getChild_COverlayElement_EVString_Callback)(_in char*& name);
+			typedef void*  ( _stdcall EarthView_World_Graphic_COverlayContainer_getChildIterator_ChildElementIterator_Callback)();
+			typedef void*  ( _stdcall EarthView_World_Graphic_COverlayContainer_getChildContainerIterator_ChildContainerIterator_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_COverlayContainer_isChildrenProcessEvents_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_setChildrenProcessEvents_void_ev_bool_Callback)(_in ev_bool val);
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_updatePositionGeometry_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_updateTextureGeometry_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_addBaseParameters_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_initialise_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_show_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_hide_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_setEnabled_void_ev_bool_Callback)(_in ev_bool b);
+			typedef char*  ( _stdcall EarthView_World_Graphic_COverlayContainer_getMaterialName_EVString_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_setMaterialName_void_EVString_Callback)(_in char*& matName);
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer__positionsOutOfDate_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer__update_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer__updateFromParent_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer__notifyParent_void_COverlayContainer_COverlay_Callback)(_in EarthView::World::Graphic::COverlayContainer* ref_parent, _in EarthView::World::Graphic::COverlay* ref_overlay);
+			typedef Real  ( _stdcall EarthView_World_Graphic_COverlayContainer__getDerivedLeft_Real_Callback)();
+			typedef Real  ( _stdcall EarthView_World_Graphic_COverlayContainer__getDerivedTop_Real_Callback)();
+			typedef Real  ( _stdcall EarthView_World_Graphic_COverlayContainer__getRelativeWidth_Real_Callback)();
+			typedef Real  ( _stdcall EarthView_World_Graphic_COverlayContainer__getRelativeHeight_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer__getClippingRegion_void_Rectangle_Callback)(_inout void* clippingRegion);
+			typedef ev_uint16  ( _stdcall EarthView_World_Graphic_COverlayContainer__notifyZOrder_ev_uint16_ev_uint16_Callback)(_in ev_uint16 newZOrder);
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer__notifyWorldTransforms_void_CMatrix4_Callback)(_in const void* xform);
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer__notifyViewport_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer__updateRenderQueue_void_CRenderQueue_Callback)(_in EarthView::World::Graphic::CRenderQueue* queue);
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_visitRenderables_void_CVisitor_ev_bool_Callback)(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables);
+			typedef char*  ( _stdcall EarthView_World_Graphic_COverlayContainer_getTypeName_EVString_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_setCaption_void_EarthView_World_Core_DisplayString_Callback)(_in char*& text);
+			typedef char*  ( _stdcall EarthView_World_Graphic_COverlayContainer_getCaption_EarthView_World_Core_DisplayString_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_setColour_void_CColourValue_Callback)(_in const void* col);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_COverlayContainer_getColour_CColourValue_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_setMetricsMode_void_GuiMetricsMode_Callback)(_in int gmm);
+			typedef int  ( _stdcall EarthView_World_Graphic_COverlayContainer_getMetricsMode_GuiMetricsMode_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_setHorizontalAlignment_void_GuiHorizontalAlignment_Callback)(_in int gha);
+			typedef int  ( _stdcall EarthView_World_Graphic_COverlayContainer_getHorizontalAlignment_GuiHorizontalAlignment_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_setVerticalAlignment_void_GuiVerticalAlignment_Callback)(_in int gva);
+			typedef int  ( _stdcall EarthView_World_Graphic_COverlayContainer_getVerticalAlignment_GuiVerticalAlignment_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_COverlayContainer_contains_ev_bool_Real_Real_Callback)(_in Real x, _in Real y);
+			typedef EarthView::World::Graphic::COverlayElement*  ( _stdcall EarthView_World_Graphic_COverlayContainer_findElementAt_COverlayElement_Real_Real_Callback)(_in Real x, _in Real y);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_COverlayContainer_isContainer_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_COverlayContainer_isKeyEnabled_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_COverlayContainer_isCloneable_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_setCloneable_void_ev_bool_Callback)(_in ev_bool c);
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_copyFromTemplate_void_COverlayElement_Callback)(_in EarthView::World::Graphic::COverlayElement* ref_templateOverlay);
+			typedef EarthView::World::Graphic::COverlayElement*  ( _stdcall EarthView_World_Graphic_COverlayContainer_clone_COverlayElement_EVString_Callback)(_in char*& instanceName);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_COverlayContainer_getMaterial_CMaterialPtr_Callback)();
+			typedef EarthView::World::Graphic::CTechnique*  ( _stdcall EarthView_World_Graphic_COverlayContainer_getTechnique_CTechnique_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_getRenderOperation_void_CRenderOperation_Callback)(_inout void* op);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_COverlayContainer_preRender_ev_bool_CSceneManager_CRenderSystem_Callback)(_in EarthView::World::Graphic::CSceneManager* sm, _in EarthView::World::Graphic::CRenderSystem* rsys);
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_postRender_void_CSceneManager_CRenderSystem_Callback)(_in EarthView::World::Graphic::CSceneManager* sm, _in EarthView::World::Graphic::CRenderSystem* rsys);
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_getWorldTransforms_void_CMatrix4_Callback)(_in EarthView::World::Spatial::Math::CMatrix4* xform);
+			typedef ev_uint16  ( _stdcall EarthView_World_Graphic_COverlayContainer_getNumWorldTransforms_ev_uint16_Callback)();
+			typedef Real  ( _stdcall EarthView_World_Graphic_COverlayContainer_getSquaredViewDepth_Real_CCamera_Callback)(_in const EarthView::World::Graphic::CCamera* cam);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_COverlayContainer_getLights_LightList_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_COverlayContainer_getCastsShadows_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback)(_in const void* constantEntry, _in EarthView::World::Graphic::CGpuProgramParameters* params);
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_setPolygonModeOverrideable_void_ev_bool_Callback)(_in ev_bool override);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_COverlayContainer_getPolygonModeOverrideable_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_setCustomAmbient_void_CColourValue_Callback)(_in const void* ambient);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_COverlayContainer_getCustomAmbient_CColourValue_Callback)();
+			typedef bool  ( _stdcall EarthView_World_Graphic_COverlayContainer_getCustomAmbientEnabled_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_setCustomAmbientEnabled_void_ev_bool_Callback)(_in ev_bool enabled);
+			typedef EarthView::World::Graphic::CMovableObject*  ( _stdcall EarthView_World_Graphic_COverlayContainer_getMovableObject_CMovableObject_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_addListener_void_CRenderableListener_Callback)(_in EarthView::World::Graphic::CRenderable::CRenderableListener* ref_listener);
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_removeListener_void_CRenderableListener_Callback)(_in EarthView::World::Graphic::CRenderable::CRenderableListener* listener);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_COverlayContainer_existListener_ev_bool_CRenderableListener_Callback)(_in EarthView::World::Graphic::CRenderable::CRenderableListener* listener);
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_COverlayContainer_getListenerCount_ev_uint32_Callback)();
+			typedef EarthView::World::Graphic::CRenderable::CRenderableListener*  ( _stdcall EarthView_World_Graphic_COverlayContainer_getListener_CRenderableListener_ev_uint32_Callback)(_in ev_uint32 index);
+			typedef EarthView::World::Graphic::CRenderable::CRenderSystemData*  ( _stdcall EarthView_World_Graphic_COverlayContainer_getRenderSystemData_CRenderSystemData_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_COverlayContainer_setRenderSystemData_void_CRenderSystemData_Callback)(_in EarthView::World::Graphic::CRenderable::CRenderSystemData* ref_val);
+			class COverlayContainerProxy : public EarthView::World::Graphic::COverlayContainer
+			{
+			private:
+				EarthView_World_Graphic_COverlayContainer_addChild_void_COverlayElement_Callback* m_EarthView_World_Graphic_COverlayContainer_addChild_void_COverlayElement_Callback;
+				EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayElement_Callback* m_EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayElement_Callback;
+				EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayContainer_Callback* m_EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayContainer_Callback;
+				EarthView_World_Graphic_COverlayContainer_removeChild_void_EVString_Callback* m_EarthView_World_Graphic_COverlayContainer_removeChild_void_EVString_Callback;
+				EarthView_World_Graphic_COverlayContainer_getChild_COverlayElement_EVString_Callback* m_EarthView_World_Graphic_COverlayContainer_getChild_COverlayElement_EVString_Callback;
+				EarthView_World_Graphic_COverlayContainer_getChildIterator_ChildElementIterator_Callback* m_EarthView_World_Graphic_COverlayContainer_getChildIterator_ChildElementIterator_Callback;
+				EarthView_World_Graphic_COverlayContainer_getChildContainerIterator_ChildContainerIterator_Callback* m_EarthView_World_Graphic_COverlayContainer_getChildContainerIterator_ChildContainerIterator_Callback;
+				EarthView_World_Graphic_COverlayContainer_isChildrenProcessEvents_ev_bool_Callback* m_EarthView_World_Graphic_COverlayContainer_isChildrenProcessEvents_ev_bool_Callback;
+				EarthView_World_Graphic_COverlayContainer_setChildrenProcessEvents_void_ev_bool_Callback* m_EarthView_World_Graphic_COverlayContainer_setChildrenProcessEvents_void_ev_bool_Callback;
+				EarthView_World_Graphic_COverlayContainer_updatePositionGeometry_void_Callback* m_EarthView_World_Graphic_COverlayContainer_updatePositionGeometry_void_Callback;
+				EarthView_World_Graphic_COverlayContainer_updateTextureGeometry_void_Callback* m_EarthView_World_Graphic_COverlayContainer_updateTextureGeometry_void_Callback;
+				EarthView_World_Graphic_COverlayContainer_addBaseParameters_void_Callback* m_EarthView_World_Graphic_COverlayContainer_addBaseParameters_void_Callback;
+				EarthView_World_Graphic_COverlayContainer_initialise_void_Callback* m_EarthView_World_Graphic_COverlayContainer_initialise_void_Callback;
+				EarthView_World_Graphic_COverlayContainer_show_void_Callback* m_EarthView_World_Graphic_COverlayContainer_show_void_Callback;
+				EarthView_World_Graphic_COverlayContainer_hide_void_Callback* m_EarthView_World_Graphic_COverlayContainer_hide_void_Callback;
+				EarthView_World_Graphic_COverlayContainer_setEnabled_void_ev_bool_Callback* m_EarthView_World_Graphic_COverlayContainer_setEnabled_void_ev_bool_Callback;
+				EarthView_World_Graphic_COverlayContainer_getMaterialName_EVString_Callback* m_EarthView_World_Graphic_COverlayContainer_getMaterialName_EVString_Callback;
+				EarthView_World_Graphic_COverlayContainer_setMaterialName_void_EVString_Callback* m_EarthView_World_Graphic_COverlayContainer_setMaterialName_void_EVString_Callback;
+				EarthView_World_Graphic_COverlayContainer__positionsOutOfDate_void_Callback* m_EarthView_World_Graphic_COverlayContainer__positionsOutOfDate_void_Callback;
+				EarthView_World_Graphic_COverlayContainer__update_void_Callback* m_EarthView_World_Graphic_COverlayContainer__update_void_Callback;
+				EarthView_World_Graphic_COverlayContainer__updateFromParent_void_Callback* m_EarthView_World_Graphic_COverlayContainer__updateFromParent_void_Callback;
+				EarthView_World_Graphic_COverlayContainer__notifyParent_void_COverlayContainer_COverlay_Callback* m_EarthView_World_Graphic_COverlayContainer__notifyParent_void_COverlayContainer_COverlay_Callback;
+				EarthView_World_Graphic_COverlayContainer__getDerivedLeft_Real_Callback* m_EarthView_World_Graphic_COverlayContainer__getDerivedLeft_Real_Callback;
+				EarthView_World_Graphic_COverlayContainer__getDerivedTop_Real_Callback* m_EarthView_World_Graphic_COverlayContainer__getDerivedTop_Real_Callback;
+				EarthView_World_Graphic_COverlayContainer__getRelativeWidth_Real_Callback* m_EarthView_World_Graphic_COverlayContainer__getRelativeWidth_Real_Callback;
+				EarthView_World_Graphic_COverlayContainer__getRelativeHeight_Real_Callback* m_EarthView_World_Graphic_COverlayContainer__getRelativeHeight_Real_Callback;
+				EarthView_World_Graphic_COverlayContainer__getClippingRegion_void_Rectangle_Callback* m_EarthView_World_Graphic_COverlayContainer__getClippingRegion_void_Rectangle_Callback;
+				EarthView_World_Graphic_COverlayContainer__notifyZOrder_ev_uint16_ev_uint16_Callback* m_EarthView_World_Graphic_COverlayContainer__notifyZOrder_ev_uint16_ev_uint16_Callback;
+				EarthView_World_Graphic_COverlayContainer__notifyWorldTransforms_void_CMatrix4_Callback* m_EarthView_World_Graphic_COverlayContainer__notifyWorldTransforms_void_CMatrix4_Callback;
+				EarthView_World_Graphic_COverlayContainer__notifyViewport_void_Callback* m_EarthView_World_Graphic_COverlayContainer__notifyViewport_void_Callback;
+				EarthView_World_Graphic_COverlayContainer__updateRenderQueue_void_CRenderQueue_Callback* m_EarthView_World_Graphic_COverlayContainer__updateRenderQueue_void_CRenderQueue_Callback;
+				EarthView_World_Graphic_COverlayContainer_visitRenderables_void_CVisitor_ev_bool_Callback* m_EarthView_World_Graphic_COverlayContainer_visitRenderables_void_CVisitor_ev_bool_Callback;
+				EarthView_World_Graphic_COverlayContainer_getTypeName_EVString_Callback* m_EarthView_World_Graphic_COverlayContainer_getTypeName_EVString_Callback;
+				EarthView_World_Graphic_COverlayContainer_setCaption_void_EarthView_World_Core_DisplayString_Callback* m_EarthView_World_Graphic_COverlayContainer_setCaption_void_EarthView_World_Core_DisplayString_Callback;
+				EarthView_World_Graphic_COverlayContainer_getCaption_EarthView_World_Core_DisplayString_Callback* m_EarthView_World_Graphic_COverlayContainer_getCaption_EarthView_World_Core_DisplayString_Callback;
+				EarthView_World_Graphic_COverlayContainer_setColour_void_CColourValue_Callback* m_EarthView_World_Graphic_COverlayContainer_setColour_void_CColourValue_Callback;
+				EarthView_World_Graphic_COverlayContainer_getColour_CColourValue_Callback* m_EarthView_World_Graphic_COverlayContainer_getColour_CColourValue_Callback;
+				EarthView_World_Graphic_COverlayContainer_setMetricsMode_void_GuiMetricsMode_Callback* m_EarthView_World_Graphic_COverlayContainer_setMetricsMode_void_GuiMetricsMode_Callback;
+				EarthView_World_Graphic_COverlayContainer_getMetricsMode_GuiMetricsMode_Callback* m_EarthView_World_Graphic_COverlayContainer_getMetricsMode_GuiMetricsMode_Callback;
+				EarthView_World_Graphic_COverlayContainer_setHorizontalAlignment_void_GuiHorizontalAlignment_Callback* m_EarthView_World_Graphic_COverlayContainer_setHorizontalAlignment_void_GuiHorizontalAlignment_Callback;
+				EarthView_World_Graphic_COverlayContainer_getHorizontalAlignment_GuiHorizontalAlignment_Callback* m_EarthView_World_Graphic_COverlayContainer_getHorizontalAlignment_GuiHorizontalAlignment_Callback;
+				EarthView_World_Graphic_COverlayContainer_setVerticalAlignment_void_GuiVerticalAlignment_Callback* m_EarthView_World_Graphic_COverlayContainer_setVerticalAlignment_void_GuiVerticalAlignment_Callback;
+				EarthView_World_Graphic_COverlayContainer_getVerticalAlignment_GuiVerticalAlignment_Callback* m_EarthView_World_Graphic_COverlayContainer_getVerticalAlignment_GuiVerticalAlignment_Callback;
+				EarthView_World_Graphic_COverlayContainer_contains_ev_bool_Real_Real_Callback* m_EarthView_World_Graphic_COverlayContainer_contains_ev_bool_Real_Real_Callback;
+				EarthView_World_Graphic_COverlayContainer_findElementAt_COverlayElement_Real_Real_Callback* m_EarthView_World_Graphic_COverlayContainer_findElementAt_COverlayElement_Real_Real_Callback;
+				EarthView_World_Graphic_COverlayContainer_isContainer_ev_bool_Callback* m_EarthView_World_Graphic_COverlayContainer_isContainer_ev_bool_Callback;
+				EarthView_World_Graphic_COverlayContainer_isKeyEnabled_ev_bool_Callback* m_EarthView_World_Graphic_COverlayContainer_isKeyEnabled_ev_bool_Callback;
+				EarthView_World_Graphic_COverlayContainer_isCloneable_ev_bool_Callback* m_EarthView_World_Graphic_COverlayContainer_isCloneable_ev_bool_Callback;
+				EarthView_World_Graphic_COverlayContainer_setCloneable_void_ev_bool_Callback* m_EarthView_World_Graphic_COverlayContainer_setCloneable_void_ev_bool_Callback;
+				EarthView_World_Graphic_COverlayContainer_copyFromTemplate_void_COverlayElement_Callback* m_EarthView_World_Graphic_COverlayContainer_copyFromTemplate_void_COverlayElement_Callback;
+				EarthView_World_Graphic_COverlayContainer_clone_COverlayElement_EVString_Callback* m_EarthView_World_Graphic_COverlayContainer_clone_COverlayElement_EVString_Callback;
+				EarthView_World_Graphic_COverlayContainer_getMaterial_CMaterialPtr_Callback* m_EarthView_World_Graphic_COverlayContainer_getMaterial_CMaterialPtr_Callback;
+				EarthView_World_Graphic_COverlayContainer_getTechnique_CTechnique_Callback* m_EarthView_World_Graphic_COverlayContainer_getTechnique_CTechnique_Callback;
+				EarthView_World_Graphic_COverlayContainer_getRenderOperation_void_CRenderOperation_Callback* m_EarthView_World_Graphic_COverlayContainer_getRenderOperation_void_CRenderOperation_Callback;
+				EarthView_World_Graphic_COverlayContainer_preRender_ev_bool_CSceneManager_CRenderSystem_Callback* m_EarthView_World_Graphic_COverlayContainer_preRender_ev_bool_CSceneManager_CRenderSystem_Callback;
+				EarthView_World_Graphic_COverlayContainer_postRender_void_CSceneManager_CRenderSystem_Callback* m_EarthView_World_Graphic_COverlayContainer_postRender_void_CSceneManager_CRenderSystem_Callback;
+				EarthView_World_Graphic_COverlayContainer_getWorldTransforms_void_CMatrix4_Callback* m_EarthView_World_Graphic_COverlayContainer_getWorldTransforms_void_CMatrix4_Callback;
+				EarthView_World_Graphic_COverlayContainer_getNumWorldTransforms_ev_uint16_Callback* m_EarthView_World_Graphic_COverlayContainer_getNumWorldTransforms_ev_uint16_Callback;
+				EarthView_World_Graphic_COverlayContainer_getSquaredViewDepth_Real_CCamera_Callback* m_EarthView_World_Graphic_COverlayContainer_getSquaredViewDepth_Real_CCamera_Callback;
+				EarthView_World_Graphic_COverlayContainer_getLights_LightList_Callback* m_EarthView_World_Graphic_COverlayContainer_getLights_LightList_Callback;
+				EarthView_World_Graphic_COverlayContainer_getCastsShadows_ev_bool_Callback* m_EarthView_World_Graphic_COverlayContainer_getCastsShadows_ev_bool_Callback;
+				EarthView_World_Graphic_COverlayContainer__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback* m_EarthView_World_Graphic_COverlayContainer__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback;
+				EarthView_World_Graphic_COverlayContainer_setPolygonModeOverrideable_void_ev_bool_Callback* m_EarthView_World_Graphic_COverlayContainer_setPolygonModeOverrideable_void_ev_bool_Callback;
+				EarthView_World_Graphic_COverlayContainer_getPolygonModeOverrideable_ev_bool_Callback* m_EarthView_World_Graphic_COverlayContainer_getPolygonModeOverrideable_ev_bool_Callback;
+				EarthView_World_Graphic_COverlayContainer_setCustomAmbient_void_CColourValue_Callback* m_EarthView_World_Graphic_COverlayContainer_setCustomAmbient_void_CColourValue_Callback;
+				EarthView_World_Graphic_COverlayContainer_getCustomAmbient_CColourValue_Callback* m_EarthView_World_Graphic_COverlayContainer_getCustomAmbient_CColourValue_Callback;
+				EarthView_World_Graphic_COverlayContainer_getCustomAmbientEnabled_bool_Callback* m_EarthView_World_Graphic_COverlayContainer_getCustomAmbientEnabled_bool_Callback;
+				EarthView_World_Graphic_COverlayContainer_setCustomAmbientEnabled_void_ev_bool_Callback* m_EarthView_World_Graphic_COverlayContainer_setCustomAmbientEnabled_void_ev_bool_Callback;
+				EarthView_World_Graphic_COverlayContainer_getMovableObject_CMovableObject_Callback* m_EarthView_World_Graphic_COverlayContainer_getMovableObject_CMovableObject_Callback;
+				EarthView_World_Graphic_COverlayContainer_addListener_void_CRenderableListener_Callback* m_EarthView_World_Graphic_COverlayContainer_addListener_void_CRenderableListener_Callback;
+				EarthView_World_Graphic_COverlayContainer_removeListener_void_CRenderableListener_Callback* m_EarthView_World_Graphic_COverlayContainer_removeListener_void_CRenderableListener_Callback;
+				EarthView_World_Graphic_COverlayContainer_existListener_ev_bool_CRenderableListener_Callback* m_EarthView_World_Graphic_COverlayContainer_existListener_ev_bool_CRenderableListener_Callback;
+				EarthView_World_Graphic_COverlayContainer_getListenerCount_ev_uint32_Callback* m_EarthView_World_Graphic_COverlayContainer_getListenerCount_ev_uint32_Callback;
+				EarthView_World_Graphic_COverlayContainer_getListener_CRenderableListener_ev_uint32_Callback* m_EarthView_World_Graphic_COverlayContainer_getListener_CRenderableListener_ev_uint32_Callback;
+				EarthView_World_Graphic_COverlayContainer_getRenderSystemData_CRenderSystemData_Callback* m_EarthView_World_Graphic_COverlayContainer_getRenderSystemData_CRenderSystemData_Callback;
+				EarthView_World_Graphic_COverlayContainer_setRenderSystemData_void_CRenderSystemData_Callback* m_EarthView_World_Graphic_COverlayContainer_setRenderSystemData_void_CRenderSystemData_Callback;
+			public:
+				COverlayContainerProxy(EarthView::World::Core::CNameValuePairList *pList) : COverlayContainer(pList)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_addChild_void_COverlayElement_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayElement_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayContainer_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_removeChild_void_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getChild_COverlayElement_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getChildIterator_ChildElementIterator_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getChildContainerIterator_ChildContainerIterator_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_isChildrenProcessEvents_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_setChildrenProcessEvents_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_updatePositionGeometry_void_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_updateTextureGeometry_void_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_addBaseParameters_void_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_initialise_void_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_show_void_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_hide_void_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_setEnabled_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getMaterialName_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_setMaterialName_void_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer__positionsOutOfDate_void_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer__update_void_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer__updateFromParent_void_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer__notifyParent_void_COverlayContainer_COverlay_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer__getDerivedLeft_Real_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer__getDerivedTop_Real_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer__getRelativeWidth_Real_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer__getRelativeHeight_Real_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer__getClippingRegion_void_Rectangle_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer__notifyZOrder_ev_uint16_ev_uint16_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer__notifyWorldTransforms_void_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer__notifyViewport_void_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer__updateRenderQueue_void_CRenderQueue_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_visitRenderables_void_CVisitor_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getTypeName_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_setCaption_void_EarthView_World_Core_DisplayString_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getCaption_EarthView_World_Core_DisplayString_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_setColour_void_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getColour_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_setMetricsMode_void_GuiMetricsMode_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getMetricsMode_GuiMetricsMode_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_setHorizontalAlignment_void_GuiHorizontalAlignment_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getHorizontalAlignment_GuiHorizontalAlignment_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_setVerticalAlignment_void_GuiVerticalAlignment_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getVerticalAlignment_GuiVerticalAlignment_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_contains_ev_bool_Real_Real_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_findElementAt_COverlayElement_Real_Real_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_isContainer_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_isKeyEnabled_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_isCloneable_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_setCloneable_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_copyFromTemplate_void_COverlayElement_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_clone_COverlayElement_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getMaterial_CMaterialPtr_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getTechnique_CTechnique_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getRenderOperation_void_CRenderOperation_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_preRender_ev_bool_CSceneManager_CRenderSystem_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_postRender_void_CSceneManager_CRenderSystem_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getWorldTransforms_void_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getNumWorldTransforms_ev_uint16_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getSquaredViewDepth_Real_CCamera_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getLights_LightList_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getCastsShadows_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_setPolygonModeOverrideable_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getPolygonModeOverrideable_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_setCustomAmbient_void_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getCustomAmbient_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getCustomAmbientEnabled_bool_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_setCustomAmbientEnabled_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getMovableObject_CMovableObject_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_addListener_void_CRenderableListener_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_removeListener_void_CRenderableListener_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_existListener_ev_bool_CRenderableListener_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getListenerCount_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getListener_CRenderableListener_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_getRenderSystemData_CRenderSystemData_Callback = NULL;
+					m_EarthView_World_Graphic_COverlayContainer_setRenderSystemData_void_CRenderSystemData_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_addChild_void_COverlayElement(EarthView_World_Graphic_COverlayContainer_addChild_void_COverlayElement_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_addChild_void_COverlayElement_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayElement(EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayElement_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayElement_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayContainer(EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayContainer_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayContainer_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_removeChild_void_EVString(EarthView_World_Graphic_COverlayContainer_removeChild_void_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_removeChild_void_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getChild_COverlayElement_EVString(EarthView_World_Graphic_COverlayContainer_getChild_COverlayElement_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getChild_COverlayElement_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getChildIterator_ChildElementIterator(EarthView_World_Graphic_COverlayContainer_getChildIterator_ChildElementIterator_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getChildIterator_ChildElementIterator_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getChildContainerIterator_ChildContainerIterator(EarthView_World_Graphic_COverlayContainer_getChildContainerIterator_ChildContainerIterator_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getChildContainerIterator_ChildContainerIterator_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_isChildrenProcessEvents_ev_bool(EarthView_World_Graphic_COverlayContainer_isChildrenProcessEvents_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_isChildrenProcessEvents_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_setChildrenProcessEvents_void_ev_bool(EarthView_World_Graphic_COverlayContainer_setChildrenProcessEvents_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_setChildrenProcessEvents_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_updatePositionGeometry_void(EarthView_World_Graphic_COverlayContainer_updatePositionGeometry_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_updatePositionGeometry_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_updateTextureGeometry_void(EarthView_World_Graphic_COverlayContainer_updateTextureGeometry_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_updateTextureGeometry_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_addBaseParameters_void(EarthView_World_Graphic_COverlayContainer_addBaseParameters_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_addBaseParameters_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_initialise_void(EarthView_World_Graphic_COverlayContainer_initialise_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_initialise_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_show_void(EarthView_World_Graphic_COverlayContainer_show_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_show_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_hide_void(EarthView_World_Graphic_COverlayContainer_hide_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_hide_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_setEnabled_void_ev_bool(EarthView_World_Graphic_COverlayContainer_setEnabled_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_setEnabled_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getMaterialName_EVString(EarthView_World_Graphic_COverlayContainer_getMaterialName_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getMaterialName_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_setMaterialName_void_EVString(EarthView_World_Graphic_COverlayContainer_setMaterialName_void_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_setMaterialName_void_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer__positionsOutOfDate_void(EarthView_World_Graphic_COverlayContainer__positionsOutOfDate_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer__positionsOutOfDate_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer__update_void(EarthView_World_Graphic_COverlayContainer__update_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer__update_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer__updateFromParent_void(EarthView_World_Graphic_COverlayContainer__updateFromParent_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer__updateFromParent_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer__notifyParent_void_COverlayContainer_COverlay(EarthView_World_Graphic_COverlayContainer__notifyParent_void_COverlayContainer_COverlay_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer__notifyParent_void_COverlayContainer_COverlay_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer__getDerivedLeft_Real(EarthView_World_Graphic_COverlayContainer__getDerivedLeft_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer__getDerivedLeft_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer__getDerivedTop_Real(EarthView_World_Graphic_COverlayContainer__getDerivedTop_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer__getDerivedTop_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer__getRelativeWidth_Real(EarthView_World_Graphic_COverlayContainer__getRelativeWidth_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer__getRelativeWidth_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer__getRelativeHeight_Real(EarthView_World_Graphic_COverlayContainer__getRelativeHeight_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer__getRelativeHeight_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer__getClippingRegion_void_Rectangle(EarthView_World_Graphic_COverlayContainer__getClippingRegion_void_Rectangle_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer__getClippingRegion_void_Rectangle_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer__notifyZOrder_ev_uint16_ev_uint16(EarthView_World_Graphic_COverlayContainer__notifyZOrder_ev_uint16_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer__notifyZOrder_ev_uint16_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer__notifyWorldTransforms_void_CMatrix4(EarthView_World_Graphic_COverlayContainer__notifyWorldTransforms_void_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer__notifyWorldTransforms_void_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer__notifyViewport_void(EarthView_World_Graphic_COverlayContainer__notifyViewport_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer__notifyViewport_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer__updateRenderQueue_void_CRenderQueue(EarthView_World_Graphic_COverlayContainer__updateRenderQueue_void_CRenderQueue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer__updateRenderQueue_void_CRenderQueue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_visitRenderables_void_CVisitor_ev_bool(EarthView_World_Graphic_COverlayContainer_visitRenderables_void_CVisitor_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_visitRenderables_void_CVisitor_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getTypeName_EVString(EarthView_World_Graphic_COverlayContainer_getTypeName_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getTypeName_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_setCaption_void_EarthView_World_Core_DisplayString(EarthView_World_Graphic_COverlayContainer_setCaption_void_EarthView_World_Core_DisplayString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_setCaption_void_EarthView_World_Core_DisplayString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getCaption_EarthView_World_Core_DisplayString(EarthView_World_Graphic_COverlayContainer_getCaption_EarthView_World_Core_DisplayString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getCaption_EarthView_World_Core_DisplayString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_setColour_void_CColourValue(EarthView_World_Graphic_COverlayContainer_setColour_void_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_setColour_void_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getColour_CColourValue(EarthView_World_Graphic_COverlayContainer_getColour_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getColour_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_setMetricsMode_void_GuiMetricsMode(EarthView_World_Graphic_COverlayContainer_setMetricsMode_void_GuiMetricsMode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_setMetricsMode_void_GuiMetricsMode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getMetricsMode_GuiMetricsMode(EarthView_World_Graphic_COverlayContainer_getMetricsMode_GuiMetricsMode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getMetricsMode_GuiMetricsMode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_setHorizontalAlignment_void_GuiHorizontalAlignment(EarthView_World_Graphic_COverlayContainer_setHorizontalAlignment_void_GuiHorizontalAlignment_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_setHorizontalAlignment_void_GuiHorizontalAlignment_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getHorizontalAlignment_GuiHorizontalAlignment(EarthView_World_Graphic_COverlayContainer_getHorizontalAlignment_GuiHorizontalAlignment_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getHorizontalAlignment_GuiHorizontalAlignment_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_setVerticalAlignment_void_GuiVerticalAlignment(EarthView_World_Graphic_COverlayContainer_setVerticalAlignment_void_GuiVerticalAlignment_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_setVerticalAlignment_void_GuiVerticalAlignment_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getVerticalAlignment_GuiVerticalAlignment(EarthView_World_Graphic_COverlayContainer_getVerticalAlignment_GuiVerticalAlignment_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getVerticalAlignment_GuiVerticalAlignment_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_contains_ev_bool_Real_Real(EarthView_World_Graphic_COverlayContainer_contains_ev_bool_Real_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_contains_ev_bool_Real_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_findElementAt_COverlayElement_Real_Real(EarthView_World_Graphic_COverlayContainer_findElementAt_COverlayElement_Real_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_findElementAt_COverlayElement_Real_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_isContainer_ev_bool(EarthView_World_Graphic_COverlayContainer_isContainer_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_isContainer_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_isKeyEnabled_ev_bool(EarthView_World_Graphic_COverlayContainer_isKeyEnabled_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_isKeyEnabled_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_isCloneable_ev_bool(EarthView_World_Graphic_COverlayContainer_isCloneable_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_isCloneable_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_setCloneable_void_ev_bool(EarthView_World_Graphic_COverlayContainer_setCloneable_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_setCloneable_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_copyFromTemplate_void_COverlayElement(EarthView_World_Graphic_COverlayContainer_copyFromTemplate_void_COverlayElement_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_copyFromTemplate_void_COverlayElement_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_clone_COverlayElement_EVString(EarthView_World_Graphic_COverlayContainer_clone_COverlayElement_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_clone_COverlayElement_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getMaterial_CMaterialPtr(EarthView_World_Graphic_COverlayContainer_getMaterial_CMaterialPtr_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getMaterial_CMaterialPtr_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getTechnique_CTechnique(EarthView_World_Graphic_COverlayContainer_getTechnique_CTechnique_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getTechnique_CTechnique_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getRenderOperation_void_CRenderOperation(EarthView_World_Graphic_COverlayContainer_getRenderOperation_void_CRenderOperation_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getRenderOperation_void_CRenderOperation_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_preRender_ev_bool_CSceneManager_CRenderSystem(EarthView_World_Graphic_COverlayContainer_preRender_ev_bool_CSceneManager_CRenderSystem_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_preRender_ev_bool_CSceneManager_CRenderSystem_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_postRender_void_CSceneManager_CRenderSystem(EarthView_World_Graphic_COverlayContainer_postRender_void_CSceneManager_CRenderSystem_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_postRender_void_CSceneManager_CRenderSystem_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getWorldTransforms_void_CMatrix4(EarthView_World_Graphic_COverlayContainer_getWorldTransforms_void_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getWorldTransforms_void_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getNumWorldTransforms_ev_uint16(EarthView_World_Graphic_COverlayContainer_getNumWorldTransforms_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getNumWorldTransforms_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getSquaredViewDepth_Real_CCamera(EarthView_World_Graphic_COverlayContainer_getSquaredViewDepth_Real_CCamera_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getSquaredViewDepth_Real_CCamera_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getLights_LightList(EarthView_World_Graphic_COverlayContainer_getLights_LightList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getLights_LightList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getCastsShadows_ev_bool(EarthView_World_Graphic_COverlayContainer_getCastsShadows_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getCastsShadows_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters(EarthView_World_Graphic_COverlayContainer__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_setPolygonModeOverrideable_void_ev_bool(EarthView_World_Graphic_COverlayContainer_setPolygonModeOverrideable_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_setPolygonModeOverrideable_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getPolygonModeOverrideable_ev_bool(EarthView_World_Graphic_COverlayContainer_getPolygonModeOverrideable_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getPolygonModeOverrideable_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_setCustomAmbient_void_CColourValue(EarthView_World_Graphic_COverlayContainer_setCustomAmbient_void_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_setCustomAmbient_void_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getCustomAmbient_CColourValue(EarthView_World_Graphic_COverlayContainer_getCustomAmbient_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getCustomAmbient_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getCustomAmbientEnabled_bool(EarthView_World_Graphic_COverlayContainer_getCustomAmbientEnabled_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getCustomAmbientEnabled_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_setCustomAmbientEnabled_void_ev_bool(EarthView_World_Graphic_COverlayContainer_setCustomAmbientEnabled_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_setCustomAmbientEnabled_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getMovableObject_CMovableObject(EarthView_World_Graphic_COverlayContainer_getMovableObject_CMovableObject_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getMovableObject_CMovableObject_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_addListener_void_CRenderableListener(EarthView_World_Graphic_COverlayContainer_addListener_void_CRenderableListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_addListener_void_CRenderableListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_removeListener_void_CRenderableListener(EarthView_World_Graphic_COverlayContainer_removeListener_void_CRenderableListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_removeListener_void_CRenderableListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_existListener_ev_bool_CRenderableListener(EarthView_World_Graphic_COverlayContainer_existListener_ev_bool_CRenderableListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_existListener_ev_bool_CRenderableListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getListenerCount_ev_uint32(EarthView_World_Graphic_COverlayContainer_getListenerCount_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getListenerCount_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getListener_CRenderableListener_ev_uint32(EarthView_World_Graphic_COverlayContainer_getListener_CRenderableListener_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getListener_CRenderableListener_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_getRenderSystemData_CRenderSystemData(EarthView_World_Graphic_COverlayContainer_getRenderSystemData_CRenderSystemData_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_getRenderSystemData_CRenderSystemData_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_COverlayContainer_setRenderSystemData_void_CRenderSystemData(EarthView_World_Graphic_COverlayContainer_setRenderSystemData_void_CRenderSystemData_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_COverlayContainer_setRenderSystemData_void_CRenderSystemData_Callback = pCallback;
+				}
+				virtual void addChild(_in EarthView::World::Graphic::COverlayElement* ref_elem)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_addChild_void_COverlayElement_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_addChild_void_COverlayElement_Callback(ref_elem);
+					}
+					else
+						return this->COverlayContainer::addChild(ref_elem);
+				}
+				virtual void addChildImpl(_in EarthView::World::Graphic::COverlayElement* ref_elem)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayElement_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayElement_Callback(ref_elem);
+					}
+					else
+						return this->COverlayContainer::addChildImpl(ref_elem);
+				}
+				virtual void addChildImpl(_in EarthView::World::Graphic::COverlayContainer* ref_cont)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayContainer_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayContainer_Callback(ref_cont);
+					}
+					else
+						return this->COverlayContainer::addChildImpl(ref_cont);
+				}
+				virtual void removeChild(_in const EVString& name)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_removeChild_void_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						m_EarthView_World_Graphic_COverlayContainer_removeChild_void_EVString_Callback(name_Char);
+					}
+					else
+						return this->COverlayContainer::removeChild(name);
+				}
+				virtual EarthView::World::Graphic::COverlayElement* getChild(_in const EVString& name)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getChild_COverlayElement_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::COverlayElement* returnValue = m_EarthView_World_Graphic_COverlayContainer_getChild_COverlayElement_EVString_Callback(name_Char);
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getChild(name);
+				}
+				virtual void initialise()
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_initialise_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_initialise_void_Callback();
+					}
+					else
+						return this->COverlayContainer::initialise();
+				}
+				virtual EarthView::World::Graphic::COverlayContainer::ChildElementIterator getChildIterator()
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getChildIterator_ChildElementIterator_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::COverlayContainer::ChildElementIterator returnValue = *(EarthView::World::Graphic::COverlayContainer::ChildElementIterator*)m_EarthView_World_Graphic_COverlayContainer_getChildIterator_ChildElementIterator_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getChildIterator();
+				}
+				virtual EarthView::World::Graphic::COverlayContainer::ChildContainerIterator getChildContainerIterator()
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getChildContainerIterator_ChildContainerIterator_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::COverlayContainer::ChildContainerIterator returnValue = *(EarthView::World::Graphic::COverlayContainer::ChildContainerIterator*)m_EarthView_World_Graphic_COverlayContainer_getChildContainerIterator_ChildContainerIterator_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getChildContainerIterator();
+				}
+				virtual void _positionsOutOfDate()
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer__positionsOutOfDate_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer__positionsOutOfDate_void_Callback();
+					}
+					else
+						return this->COverlayContainer::_positionsOutOfDate();
+				}
+				virtual void _update()
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer__update_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer__update_void_Callback();
+					}
+					else
+						return this->COverlayContainer::_update();
+				}
+				virtual ev_uint16 _notifyZOrder(_in ev_uint16 newZOrder)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer__notifyZOrder_ev_uint16_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint16 returnValue = m_EarthView_World_Graphic_COverlayContainer__notifyZOrder_ev_uint16_ev_uint16_Callback(newZOrder);
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::_notifyZOrder(newZOrder);
+				}
+				virtual void _notifyViewport()
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer__notifyViewport_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer__notifyViewport_void_Callback();
+					}
+					else
+						return this->COverlayContainer::_notifyViewport();
+				}
+				virtual void _notifyWorldTransforms(_in const EarthView::World::Spatial::Math::CMatrix4& xform)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer__notifyWorldTransforms_void_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer__notifyWorldTransforms_void_CMatrix4_Callback(&xform);
+					}
+					else
+						return this->COverlayContainer::_notifyWorldTransforms(xform);
+				}
+				virtual void _notifyParent(_in EarthView::World::Graphic::COverlayContainer* ref_parent, _in EarthView::World::Graphic::COverlay* ref_overlay)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer__notifyParent_void_COverlayContainer_COverlay_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer__notifyParent_void_COverlayContainer_COverlay_Callback(ref_parent, ref_overlay);
+					}
+					else
+						return this->COverlayContainer::_notifyParent(ref_parent, ref_overlay);
+				}
+				virtual void _updateRenderQueue(_in EarthView::World::Graphic::CRenderQueue* queue)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer__updateRenderQueue_void_CRenderQueue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer__updateRenderQueue_void_CRenderQueue_Callback(queue);
+					}
+					else
+						return this->COverlayContainer::_updateRenderQueue(queue);
+				}
+				virtual ev_bool isContainer() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_isContainer_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_COverlayContainer_isContainer_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::isContainer();
+				}
+				virtual ev_bool isChildrenProcessEvents() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_isChildrenProcessEvents_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_COverlayContainer_isChildrenProcessEvents_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::isChildrenProcessEvents();
+				}
+				virtual void setChildrenProcessEvents(_in ev_bool val)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_setChildrenProcessEvents_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_setChildrenProcessEvents_void_ev_bool_Callback(val);
+					}
+					else
+						return this->COverlayContainer::setChildrenProcessEvents(val);
+				}
+				virtual EarthView::World::Graphic::COverlayElement* findElementAt(_in Real x, _in Real y)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_findElementAt_COverlayElement_Real_Real_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::COverlayElement* returnValue = m_EarthView_World_Graphic_COverlayContainer_findElementAt_COverlayElement_Real_Real_Callback(x, y);
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::findElementAt(x, y);
+				}
+				virtual void copyFromTemplate(_in EarthView::World::Graphic::COverlayElement* templateOverlay)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_copyFromTemplate_void_COverlayElement_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_copyFromTemplate_void_COverlayElement_Callback(templateOverlay);
+					}
+					else
+						return this->COverlayContainer::copyFromTemplate(templateOverlay);
+				}
+				virtual EarthView::World::Graphic::COverlayElement* clone(_in const EVString& instanceName)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_clone_COverlayElement_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* instanceName_Char = instanceName.makeBuffer();
+						EarthView::World::Graphic::COverlayElement* returnValue = m_EarthView_World_Graphic_COverlayContainer_clone_COverlayElement_EVString_Callback(instanceName_Char);
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::clone(instanceName);
+				}
+				virtual void updatePositionGeometry()
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_updatePositionGeometry_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_updatePositionGeometry_void_Callback();
+					}
+					else
+						return this->COverlayContainer::updatePositionGeometry();
+				}
+				virtual void updateTextureGeometry()
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_updateTextureGeometry_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_updateTextureGeometry_void_Callback();
+					}
+					else
+						return this->COverlayContainer::updateTextureGeometry();
+				}
+				virtual void addBaseParameters()
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_addBaseParameters_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_addBaseParameters_void_Callback();
+					}
+					else
+						return this->COverlayContainer::addBaseParameters();
+				}
+				virtual ev_bool preRender(_in EarthView::World::Graphic::CSceneManager* sm, _in EarthView::World::Graphic::CRenderSystem* rsys)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_preRender_ev_bool_CSceneManager_CRenderSystem_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_COverlayContainer_preRender_ev_bool_CSceneManager_CRenderSystem_Callback(sm, rsys);
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::preRender(sm, rsys);
+				}
+				virtual void postRender(_in EarthView::World::Graphic::CSceneManager* sm, _in EarthView::World::Graphic::CRenderSystem* rsys)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_postRender_void_CSceneManager_CRenderSystem_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_postRender_void_CSceneManager_CRenderSystem_Callback(sm, rsys);
+					}
+					else
+						return this->COverlayContainer::postRender(sm, rsys);
+				}
+				virtual void show()
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_show_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_show_void_Callback();
+					}
+					else
+						return this->COverlayContainer::show();
+				}
+				virtual void hide()
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_hide_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_hide_void_Callback();
+					}
+					else
+						return this->COverlayContainer::hide();
+				}
+				virtual void setEnabled(_in ev_bool b)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_setEnabled_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_setEnabled_void_ev_bool_Callback(b);
+					}
+					else
+						return this->COverlayContainer::setEnabled(b);
+				}
+				virtual EVString getMaterialName() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getMaterialName_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_COverlayContainer_getMaterialName_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getMaterialName();
+				}
+				virtual void setMaterialName(_in const EVString& matName)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_setMaterialName_void_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* matName_Char = matName.makeBuffer();
+						m_EarthView_World_Graphic_COverlayContainer_setMaterialName_void_EVString_Callback(matName_Char);
+					}
+					else
+						return this->COverlayContainer::setMaterialName(matName);
+				}
+				virtual const EarthView::World::Graphic::CMaterialPtr& getMaterial() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getMaterial_CMaterialPtr_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CMaterialPtr& returnValue = *(EarthView::World::Graphic::CMaterialPtr*)m_EarthView_World_Graphic_COverlayContainer_getMaterial_CMaterialPtr_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getMaterial();
+				}
+				virtual void getWorldTransforms(_in EarthView::World::Spatial::Math::CMatrix4* xform) const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getWorldTransforms_void_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_getWorldTransforms_void_CMatrix4_Callback(xform);
+					}
+					else
+						return this->COverlayContainer::getWorldTransforms(xform);
+				}
+				virtual void _updateFromParent()
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer__updateFromParent_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer__updateFromParent_void_Callback();
+					}
+					else
+						return this->COverlayContainer::_updateFromParent();
+				}
+				virtual Real _getDerivedLeft()
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer__getDerivedLeft_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_COverlayContainer__getDerivedLeft_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::_getDerivedLeft();
+				}
+				virtual Real _getDerivedTop()
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer__getDerivedTop_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_COverlayContainer__getDerivedTop_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::_getDerivedTop();
+				}
+				virtual Real _getRelativeWidth()
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer__getRelativeWidth_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_COverlayContainer__getRelativeWidth_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::_getRelativeWidth();
+				}
+				virtual Real _getRelativeHeight()
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer__getRelativeHeight_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_COverlayContainer__getRelativeHeight_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::_getRelativeHeight();
+				}
+				virtual void _getClippingRegion(_inout EarthView::World::Graphic::Rectangle& clippingRegion)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer__getClippingRegion_void_Rectangle_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer__getClippingRegion_void_Rectangle_Callback(&clippingRegion);
+					}
+					else
+						return this->COverlayContainer::_getClippingRegion(clippingRegion);
+				}
+				virtual void visitRenderables(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_visitRenderables_void_CVisitor_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_visitRenderables_void_CVisitor_ev_bool_Callback(visitor, debugRenderables);
+					}
+					else
+						return this->COverlayContainer::visitRenderables(visitor, debugRenderables);
+				}
+				virtual EVString getTypeName() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getTypeName_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_COverlayContainer_getTypeName_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getTypeName();
+				}
+				virtual void setCaption(_in const EarthView::World::Core::DisplayString& text)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_setCaption_void_EarthView_World_Core_DisplayString_Callback != NULL && this->isCustomExtend())
+					{
+						char* text_Char = text.makeBuffer();
+						m_EarthView_World_Graphic_COverlayContainer_setCaption_void_EarthView_World_Core_DisplayString_Callback(text_Char);
+					}
+					else
+						return this->COverlayContainer::setCaption(text);
+				}
+				virtual EarthView::World::Core::DisplayString getCaption() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getCaption_EarthView_World_Core_DisplayString_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Core::DisplayString returnValue = m_EarthView_World_Graphic_COverlayContainer_getCaption_EarthView_World_Core_DisplayString_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getCaption();
+				}
+				virtual void setColour(_in const EarthView::World::Graphic::CColourValue& col)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_setColour_void_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_setColour_void_CColourValue_Callback(&col);
+					}
+					else
+						return this->COverlayContainer::setColour(col);
+				}
+				virtual const EarthView::World::Graphic::CColourValue& getColour() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getColour_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CColourValue& returnValue = *(EarthView::World::Graphic::CColourValue*)m_EarthView_World_Graphic_COverlayContainer_getColour_CColourValue_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getColour();
+				}
+				virtual void setMetricsMode(_in EarthView::World::Graphic::GuiMetricsMode gmm)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_setMetricsMode_void_GuiMetricsMode_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_setMetricsMode_void_GuiMetricsMode_Callback((int)gmm);
+					}
+					else
+						return this->COverlayContainer::setMetricsMode(gmm);
+				}
+				virtual EarthView::World::Graphic::GuiMetricsMode getMetricsMode() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getMetricsMode_GuiMetricsMode_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::GuiMetricsMode returnValue = (EarthView::World::Graphic::GuiMetricsMode)m_EarthView_World_Graphic_COverlayContainer_getMetricsMode_GuiMetricsMode_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getMetricsMode();
+				}
+				virtual void setHorizontalAlignment(_in EarthView::World::Graphic::GuiHorizontalAlignment gha)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_setHorizontalAlignment_void_GuiHorizontalAlignment_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_setHorizontalAlignment_void_GuiHorizontalAlignment_Callback((int)gha);
+					}
+					else
+						return this->COverlayContainer::setHorizontalAlignment(gha);
+				}
+				virtual EarthView::World::Graphic::GuiHorizontalAlignment getHorizontalAlignment() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getHorizontalAlignment_GuiHorizontalAlignment_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::GuiHorizontalAlignment returnValue = (EarthView::World::Graphic::GuiHorizontalAlignment)m_EarthView_World_Graphic_COverlayContainer_getHorizontalAlignment_GuiHorizontalAlignment_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getHorizontalAlignment();
+				}
+				virtual void setVerticalAlignment(_in EarthView::World::Graphic::GuiVerticalAlignment gva)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_setVerticalAlignment_void_GuiVerticalAlignment_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_setVerticalAlignment_void_GuiVerticalAlignment_Callback((int)gva);
+					}
+					else
+						return this->COverlayContainer::setVerticalAlignment(gva);
+				}
+				virtual EarthView::World::Graphic::GuiVerticalAlignment getVerticalAlignment() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getVerticalAlignment_GuiVerticalAlignment_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::GuiVerticalAlignment returnValue = (EarthView::World::Graphic::GuiVerticalAlignment)m_EarthView_World_Graphic_COverlayContainer_getVerticalAlignment_GuiVerticalAlignment_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getVerticalAlignment();
+				}
+				virtual ev_bool contains(_in Real x, _in Real y) const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_contains_ev_bool_Real_Real_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_COverlayContainer_contains_ev_bool_Real_Real_Callback(x, y);
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::contains(x, y);
+				}
+				virtual ev_bool isKeyEnabled() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_isKeyEnabled_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_COverlayContainer_isKeyEnabled_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::isKeyEnabled();
+				}
+				virtual ev_bool isCloneable() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_isCloneable_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_COverlayContainer_isCloneable_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::isCloneable();
+				}
+				virtual void setCloneable(_in ev_bool c)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_setCloneable_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_setCloneable_void_ev_bool_Callback(c);
+					}
+					else
+						return this->COverlayContainer::setCloneable(c);
+				}
+				virtual Real getSquaredViewDepth(_in const EarthView::World::Graphic::CCamera* cam) const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getSquaredViewDepth_Real_CCamera_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_COverlayContainer_getSquaredViewDepth_Real_CCamera_Callback(cam);
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getSquaredViewDepth(cam);
+				}
+				virtual const EarthView::World::Graphic::LightList& getLights() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getLights_LightList_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::LightList& returnValue = *(EarthView::World::Graphic::LightList*)m_EarthView_World_Graphic_COverlayContainer_getLights_LightList_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getLights();
+				}
+				virtual EarthView::World::Graphic::CTechnique* getTechnique() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getTechnique_CTechnique_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CTechnique* returnValue = m_EarthView_World_Graphic_COverlayContainer_getTechnique_CTechnique_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getTechnique();
+				}
+				virtual void getRenderOperation(_inout EarthView::World::Graphic::CRenderOperation& op)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getRenderOperation_void_CRenderOperation_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_getRenderOperation_void_CRenderOperation_Callback(&op);
+					}
+					else
+						return this->COverlayContainer::getRenderOperation(op);
+				}
+				virtual ev_uint16 getNumWorldTransforms() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getNumWorldTransforms_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint16 returnValue = m_EarthView_World_Graphic_COverlayContainer_getNumWorldTransforms_ev_uint16_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getNumWorldTransforms();
+				}
+				virtual ev_bool getCastsShadows() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getCastsShadows_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_COverlayContainer_getCastsShadows_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getCastsShadows();
+				}
+				virtual void _updateCustomGpuParameter(_in const EarthView::World::Graphic::CGpuProgramParameters::CAutoConstantEntry& constantEntry, _in EarthView::World::Graphic::CGpuProgramParameters* params) const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback(&constantEntry, params);
+					}
+					else
+						return this->COverlayContainer::_updateCustomGpuParameter(constantEntry, params);
+				}
+				virtual void setPolygonModeOverrideable(_in ev_bool override)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_setPolygonModeOverrideable_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_setPolygonModeOverrideable_void_ev_bool_Callback(override);
+					}
+					else
+						return this->COverlayContainer::setPolygonModeOverrideable(override);
+				}
+				virtual ev_bool getPolygonModeOverrideable() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getPolygonModeOverrideable_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_COverlayContainer_getPolygonModeOverrideable_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getPolygonModeOverrideable();
+				}
+				virtual void setCustomAmbient(_in const EarthView::World::Graphic::CColourValue& ambient)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_setCustomAmbient_void_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_setCustomAmbient_void_CColourValue_Callback(&ambient);
+					}
+					else
+						return this->COverlayContainer::setCustomAmbient(ambient);
+				}
+				virtual const EarthView::World::Graphic::CColourValue& getCustomAmbient() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getCustomAmbient_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CColourValue& returnValue = *(EarthView::World::Graphic::CColourValue*)m_EarthView_World_Graphic_COverlayContainer_getCustomAmbient_CColourValue_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getCustomAmbient();
+				}
+				virtual bool getCustomAmbientEnabled() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getCustomAmbientEnabled_bool_Callback != NULL && this->isCustomExtend())
+					{
+						bool returnValue = m_EarthView_World_Graphic_COverlayContainer_getCustomAmbientEnabled_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getCustomAmbientEnabled();
+				}
+				virtual void setCustomAmbientEnabled(_in ev_bool enabled)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_setCustomAmbientEnabled_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_setCustomAmbientEnabled_void_ev_bool_Callback(enabled);
+					}
+					else
+						return this->COverlayContainer::setCustomAmbientEnabled(enabled);
+				}
+				virtual EarthView::World::Graphic::CMovableObject* getMovableObject() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getMovableObject_CMovableObject_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CMovableObject* returnValue = m_EarthView_World_Graphic_COverlayContainer_getMovableObject_CMovableObject_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getMovableObject();
+				}
+				virtual void addListener(_in EarthView::World::Graphic::CRenderable::CRenderableListener* ref_listener)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_addListener_void_CRenderableListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_addListener_void_CRenderableListener_Callback(ref_listener);
+					}
+					else
+						return this->COverlayContainer::addListener(ref_listener);
+				}
+				virtual void removeListener(_in EarthView::World::Graphic::CRenderable::CRenderableListener* listener)
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_removeListener_void_CRenderableListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_removeListener_void_CRenderableListener_Callback(listener);
+					}
+					else
+						return this->COverlayContainer::removeListener(listener);
+				}
+				virtual ev_bool existListener(_in EarthView::World::Graphic::CRenderable::CRenderableListener* listener) const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_existListener_ev_bool_CRenderableListener_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_COverlayContainer_existListener_ev_bool_CRenderableListener_Callback(listener);
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::existListener(listener);
+				}
+				virtual ev_uint32 getListenerCount() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getListenerCount_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_COverlayContainer_getListenerCount_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getListenerCount();
+				}
+				virtual EarthView::World::Graphic::CRenderable::CRenderableListener* getListener(_in ev_uint32 index) const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getListener_CRenderableListener_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CRenderable::CRenderableListener* returnValue = m_EarthView_World_Graphic_COverlayContainer_getListener_CRenderableListener_ev_uint32_Callback(index);
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getListener(index);
+				}
+				virtual EarthView::World::Graphic::CRenderable::CRenderSystemData* getRenderSystemData() const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_getRenderSystemData_CRenderSystemData_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CRenderable::CRenderSystemData* returnValue = m_EarthView_World_Graphic_COverlayContainer_getRenderSystemData_CRenderSystemData_Callback();
+						return returnValue;
+					}
+					else
+						return this->COverlayContainer::getRenderSystemData();
+				}
+				virtual void setRenderSystemData(_in EarthView::World::Graphic::CRenderable::CRenderSystemData* ref_val) const
+				{
+					if(m_EarthView_World_Graphic_COverlayContainer_setRenderSystemData_void_CRenderSystemData_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_COverlayContainer_setRenderSystemData_void_CRenderSystemData_Callback(ref_val);
+					}
+					else
+						return this->COverlayContainer::setRenderSystemData(ref_val);
+				}
+			};
+			REGISTER_FACTORY_CLASS(COverlayContainerProxy);
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_COverlayContainer_ChildElementMap_push_ev_bool_EVString_COverlayElement(void *pObjectXXXX, _in const char* key, _in EarthView::World::Graphic::COverlayElement*& ref_val )
+			{
+				EarthView::World::Core::ev_string key1 = key;
+				EarthView::World::Graphic::COverlayContainer::ChildElementMap* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildElementMap*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->push(key1, ref_val);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_COverlayContainer_ChildElementMap_exist_ev_bool_EVString(void *pObjectXXXX, _in const char* key )
+			{
+				EarthView::World::Core::ev_string key1 = key;
+				EarthView::World::Graphic::COverlayContainer::ChildElementMap* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildElementMap*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->exist(key1);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::COverlayElement*  _stdcall EarthView_World_Graphic_COverlayContainer_ChildElementMap_OperatorIndex_COverlayElement_EVString(void *pObjXXXX, _in const char* key )
+			{
+				EarthView::World::Graphic::COverlayContainer::ChildElementMap& objYYYY = *(EarthView::World::Graphic::COverlayContainer::ChildElementMap*) pObjXXXX;
+				EarthView::World::Graphic::COverlayElement* objXXXX = objYYYY[key];
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::COverlayElement*  _stdcall EarthView_World_Graphic_COverlayContainer_ChildElementMap_get_COverlayElement_EVString(void *pObjectXXXX, _in const char* key )
+			{
+				EarthView::World::Core::ev_string key1 = key;
+				EarthView::World::Graphic::COverlayContainer::ChildElementMap* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildElementMap*) pObjectXXXX;
+				EarthView::World::Graphic::COverlayElement* objXXXX = ptrNativeObject->get(key1);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer_ChildElementMap_erase_void_EVString(void *pObjectXXXX, _in const char* key )
+			{
+				EarthView::World::Core::ev_string key1 = key;
+				EarthView::World::Graphic::COverlayContainer::ChildElementMap* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildElementMap*) pObjectXXXX;
+				ptrNativeObject->erase(key1);
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64   _stdcall EarthView_World_Graphic_COverlayContainer_ChildElementMap_size_ev_size_t(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::COverlayContainer::ChildElementMap* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildElementMap*) pObjectXXXX;
+				ev_size_t objXXXX = ptrNativeObject->size();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer_ChildElementMap_clear_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer::ChildElementMap* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildElementMap*) pObjectXXXX;
+				ptrNativeObject->clear();
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_COverlayContainer_ChildElementMap_empty_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::COverlayContainer::ChildElementMap* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildElementMap*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->empty();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall Get_EarthView_World_Graphic_COverlayContainer_OverlaycontainerElementPair_first( void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer::OverlaycontainerElementPair* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::OverlaycontainerElementPair*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->first;
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Graphic_COverlayContainer_OverlaycontainerElementPair_first( void *pObjectXXXX, char*  value )
+			{
+				EarthView::World::Core::ev_string value1 = value;
+				((EarthView::World::Graphic::COverlayContainer::OverlaycontainerElementPair*)pObjectXXXX)->first = value1;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::COverlayElement*  _stdcall Get_EarthView_World_Graphic_COverlayContainer_OverlaycontainerElementPair_second( void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer::OverlaycontainerElementPair* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::OverlaycontainerElementPair*) pObjectXXXX;
+				EarthView::World::Graphic::COverlayElement* objXXXX = ptrNativeObject->second;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Graphic_COverlayContainer_OverlaycontainerElementPair_second( void *pObjectXXXX, EarthView::World::Graphic::COverlayElement*  value )
+			{
+				((EarthView::World::Graphic::COverlayContainer::OverlaycontainerElementPair*)pObjectXXXX)->second = value;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_COverlayContainer_ChildContainerMap_push_ev_bool_ev_uint16_COverlayContainer(void *pObjectXXXX, _in const ev_uint16& key, _in EarthView::World::Graphic::COverlayContainer*& ref_val )
+			{
+				EarthView::World::Graphic::COverlayContainer::ChildContainerMap* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildContainerMap*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->push(key, ref_val);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_COverlayContainer_ChildContainerMap_exist_ev_bool_ev_uint16(void *pObjectXXXX, _in const ev_uint16& key )
+			{
+				EarthView::World::Graphic::COverlayContainer::ChildContainerMap* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildContainerMap*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->exist(key);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::COverlayContainer*  _stdcall EarthView_World_Graphic_COverlayContainer_ChildContainerMap_OperatorIndex_COverlayContainer_ev_uint16(void *pObjXXXX, _in const ev_uint16& key )
+			{
+				EarthView::World::Graphic::COverlayContainer::ChildContainerMap& objYYYY = *(EarthView::World::Graphic::COverlayContainer::ChildContainerMap*) pObjXXXX;
+				EarthView::World::Graphic::COverlayContainer* objXXXX = objYYYY[key];
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::COverlayContainer*  _stdcall EarthView_World_Graphic_COverlayContainer_ChildContainerMap_get_COverlayContainer_ev_uint16(void *pObjectXXXX, _in const ev_uint16& key )
+			{
+				EarthView::World::Graphic::COverlayContainer::ChildContainerMap* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildContainerMap*) pObjectXXXX;
+				EarthView::World::Graphic::COverlayContainer* objXXXX = ptrNativeObject->get(key);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer_ChildContainerMap_erase_void_ev_uint16(void *pObjectXXXX, _in const ev_uint16& key )
+			{
+				EarthView::World::Graphic::COverlayContainer::ChildContainerMap* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildContainerMap*) pObjectXXXX;
+				ptrNativeObject->erase(key);
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64   _stdcall EarthView_World_Graphic_COverlayContainer_ChildContainerMap_size_ev_size_t(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::COverlayContainer::ChildContainerMap* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildContainerMap*) pObjectXXXX;
+				ev_size_t objXXXX = ptrNativeObject->size();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer_ChildContainerMap_clear_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer::ChildContainerMap* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildContainerMap*) pObjectXXXX;
+				ptrNativeObject->clear();
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_COverlayContainer_ChildContainerMap_empty_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::COverlayContainer::ChildContainerMap* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildContainerMap*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->empty();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint16  _stdcall Get_EarthView_World_Graphic_COverlayContainer_OverlayContainerPair_first( void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer::OverlayContainerPair* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::OverlayContainerPair*) pObjectXXXX;
+				ev_uint16 objXXXX = ptrNativeObject->first;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Graphic_COverlayContainer_OverlayContainerPair_first( void *pObjectXXXX, ev_uint16  value )
+			{
+				((EarthView::World::Graphic::COverlayContainer::OverlayContainerPair*)pObjectXXXX)->first = value;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::COverlayContainer*  _stdcall Get_EarthView_World_Graphic_COverlayContainer_OverlayContainerPair_second( void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer::OverlayContainerPair* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::OverlayContainerPair*) pObjectXXXX;
+				EarthView::World::Graphic::COverlayContainer* objXXXX = ptrNativeObject->second;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Graphic_COverlayContainer_OverlayContainerPair_second( void *pObjectXXXX, EarthView::World::Graphic::COverlayContainer*  value )
+			{
+				((EarthView::World::Graphic::COverlayContainer::OverlayContainerPair*)pObjectXXXX)->second = value;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_COverlayContainer_ChildContainerIterator_hasMoreElements_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::COverlayContainer::ChildContainerIterator* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildContainerIterator*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->hasMoreElements();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer_ChildContainerIterator_moveNext_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer::ChildContainerIterator* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildContainerIterator*) pObjectXXXX;
+				ptrNativeObject->moveNext();
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint16  _stdcall EarthView_World_Graphic_COverlayContainer_ChildContainerIterator_nextKey_ev_uint16(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::COverlayContainer::ChildContainerIterator* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildContainerIterator*) pObjectXXXX;
+				ev_uint16 objXXXX = ptrNativeObject->nextKey();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::COverlayContainer*  _stdcall EarthView_World_Graphic_COverlayContainer_ChildContainerIterator_nextValue_COverlayContainer(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::COverlayContainer::ChildContainerIterator* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildContainerIterator*) pObjectXXXX;
+				EarthView::World::Graphic::COverlayContainer* objXXXX = ptrNativeObject->nextValue();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::COverlayContainer**  _stdcall EarthView_World_Graphic_COverlayContainer_ChildContainerIterator_nextValuePtr_COverlayContainer(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer::ChildContainerIterator* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildContainerIterator*) pObjectXXXX;
+				EarthView::World::Graphic::COverlayContainer** objXXXX = ptrNativeObject->nextValuePtr();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::COverlayContainer*  _stdcall EarthView_World_Graphic_COverlayContainer_ChildContainerIterator_next_COverlayContainer(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer::ChildContainerIterator* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildContainerIterator*) pObjectXXXX;
+				EarthView::World::Graphic::COverlayContainer* objXXXX = ptrNativeObject->next();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_COverlayContainer_ChildContainerIterator_getBegin_OverlayContainerPair(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer::ChildContainerIterator* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildContainerIterator*) pObjectXXXX;
+				const EarthView::World::Graphic::COverlayContainer::OverlayContainerPair& objXXXX = ptrNativeObject->getBegin();
+				const EarthView::World::Graphic::COverlayContainer::OverlayContainerPair *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_COverlayContainer_ChildContainerIterator_getEnd_OverlayContainerPair(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer::ChildContainerIterator* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildContainerIterator*) pObjectXXXX;
+				const EarthView::World::Graphic::COverlayContainer::OverlayContainerPair& objXXXX = ptrNativeObject->getEnd();
+				const EarthView::World::Graphic::COverlayContainer::OverlayContainerPair *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_COverlayContainer_ChildContainerIterator_getCurrent_OverlayContainerPair(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer::ChildContainerIterator* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer::ChildContainerIterator*) pObjectXXXX;
+				const EarthView::World::Graphic::COverlayContainer::OverlayContainerPair& objXXXX = ptrNativeObject->getCurrent();
+				const EarthView::World::Graphic::COverlayContainer::OverlayContainerPair *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer_addChild_void_COverlayElement(void *pObjectXXXX, _in EarthView::World::Graphic::COverlayElement* ref_elem )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::COverlayContainer::addChild(ref_elem);
+				else
+					ptrNativeObject->addChild(ref_elem);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_addChild_void_COverlayElement( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_addChild_void_COverlayElement_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_addChild_void_COverlayElement(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer_addChild_void_COverlayElement_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::COverlayElement* ref_elem )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::COverlayContainer::addChild(ref_elem);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayElement(void *pObjectXXXX, _in EarthView::World::Graphic::COverlayElement* ref_elem )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::COverlayContainer::addChildImpl(ref_elem);
+				else
+					ptrNativeObject->addChildImpl(ref_elem);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayElement( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayElement_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayElement(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayElement_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::COverlayElement* ref_elem )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::COverlayContainer::addChildImpl(ref_elem);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayContainer(void *pObjectXXXX, _in EarthView::World::Graphic::COverlayContainer* ref_cont )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::COverlayContainer::addChildImpl(ref_cont);
+				else
+					ptrNativeObject->addChildImpl(ref_cont);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayContainer( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayContainer_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayContainer(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer_addChildImpl_void_COverlayContainer_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::COverlayContainer* ref_cont )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::COverlayContainer::addChildImpl(ref_cont);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer_removeChild_void_EVString(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::COverlayContainer::removeChild(name1);
+				else
+					ptrNativeObject->removeChild(name1);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_removeChild_void_EVString( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_removeChild_void_EVString_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_removeChild_void_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer_removeChild_void_EVString_NoVirtual(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::COverlayContainer::removeChild(name1);
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::COverlayElement*  _stdcall EarthView_World_Graphic_COverlayContainer_getChild_COverlayElement_EVString(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::COverlayElement* objXXXX = ptrNativeObject->EarthView::World::Graphic::COverlayContainer::getChild(name1);
+					return objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::COverlayElement* objXXXX = ptrNativeObject->getChild(name1);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getChild_COverlayElement_EVString( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getChild_COverlayElement_EVString_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getChild_COverlayElement_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::COverlayElement*  _stdcall EarthView_World_Graphic_COverlayContainer_getChild_COverlayElement_EVString_NoVirtual(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				EarthView::World::Graphic::COverlayElement* objXXXX = ptrNativeObject->EarthView::World::Graphic::COverlayContainer::getChild(name1);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer_initialise_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::COverlayContainer::initialise();
+				else
+					ptrNativeObject->initialise();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_initialise_void( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_initialise_void_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_initialise_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer_initialise_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::COverlayContainer::initialise();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer__addChild_void_COverlayElement(void *pObjectXXXX, _in EarthView::World::Graphic::COverlayElement* elem )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				ptrNativeObject->_addChild(elem);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer__removeChild_void_COverlayElement(void *pObjectXXXX, _in EarthView::World::Graphic::COverlayElement* elem )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				ptrNativeObject->_removeChild(elem);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer__removeChild_void_EVString(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				ptrNativeObject->_removeChild(name1);
+			}
+			extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Graphic_COverlayContainer_getChildIterator_ChildElementIterator(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::COverlayContainer::ChildElementIterator objXXXX = ptrNativeObject->EarthView::World::Graphic::COverlayContainer::getChildIterator();
+					EarthView::World::Graphic::COverlayContainer::ChildElementIterator *pXXXX = new EarthView::World::Graphic::COverlayContainer::ChildElementIterator(objXXXX);
+					((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+					return (void*)pXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::COverlayContainer::ChildElementIterator objXXXX = ptrNativeObject->getChildIterator();
+					EarthView::World::Graphic::COverlayContainer::ChildElementIterator *pXXXX = new EarthView::World::Graphic::COverlayContainer::ChildElementIterator(objXXXX);
+					((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getChildIterator_ChildElementIterator( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getChildIterator_ChildElementIterator_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getChildIterator_ChildElementIterator(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Graphic_COverlayContainer_getChildIterator_ChildElementIterator_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				EarthView::World::Graphic::COverlayContainer::ChildElementIterator objXXXX = ptrNativeObject->EarthView::World::Graphic::COverlayContainer::getChildIterator();
+				EarthView::World::Graphic::COverlayContainer::ChildElementIterator *pXXXX = new EarthView::World::Graphic::COverlayContainer::ChildElementIterator(objXXXX);
+				((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Graphic_COverlayContainer_getChildContainerIterator_ChildContainerIterator(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::COverlayContainer::ChildContainerIterator objXXXX = ptrNativeObject->EarthView::World::Graphic::COverlayContainer::getChildContainerIterator();
+					EarthView::World::Graphic::COverlayContainer::ChildContainerIterator *pXXXX = new EarthView::World::Graphic::COverlayContainer::ChildContainerIterator(objXXXX);
+					((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+					return (void*)pXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::COverlayContainer::ChildContainerIterator objXXXX = ptrNativeObject->getChildContainerIterator();
+					EarthView::World::Graphic::COverlayContainer::ChildContainerIterator *pXXXX = new EarthView::World::Graphic::COverlayContainer::ChildContainerIterator(objXXXX);
+					((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getChildContainerIterator_ChildContainerIterator( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getChildContainerIterator_ChildContainerIterator_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getChildContainerIterator_ChildContainerIterator(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Graphic_COverlayContainer_getChildContainerIterator_ChildContainerIterator_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				EarthView::World::Graphic::COverlayContainer::ChildContainerIterator objXXXX = ptrNativeObject->EarthView::World::Graphic::COverlayContainer::getChildContainerIterator();
+				EarthView::World::Graphic::COverlayContainer::ChildContainerIterator *pXXXX = new EarthView::World::Graphic::COverlayContainer::ChildContainerIterator(objXXXX);
+				((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer__positionsOutOfDate_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::COverlayContainer::_positionsOutOfDate();
+				else
+					ptrNativeObject->_positionsOutOfDate();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer__positionsOutOfDate_void( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer__positionsOutOfDate_void_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer__positionsOutOfDate_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer__positionsOutOfDate_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::COverlayContainer::_positionsOutOfDate();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer__update_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::COverlayContainer::_update();
+				else
+					ptrNativeObject->_update();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer__update_void( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer__update_void_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer__update_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer__update_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::COverlayContainer::_update();
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint16  _stdcall EarthView_World_Graphic_COverlayContainer__notifyZOrder_ev_uint16_ev_uint16(void *pObjectXXXX, _in ev_uint16 newZOrder )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+				{
+					ev_uint16 objXXXX = ptrNativeObject->EarthView::World::Graphic::COverlayContainer::_notifyZOrder(newZOrder);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint16 objXXXX = ptrNativeObject->_notifyZOrder(newZOrder);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer__notifyZOrder_ev_uint16_ev_uint16( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer__notifyZOrder_ev_uint16_ev_uint16_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer__notifyZOrder_ev_uint16_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint16  _stdcall EarthView_World_Graphic_COverlayContainer__notifyZOrder_ev_uint16_ev_uint16_NoVirtual(void *pObjectXXXX, _in ev_uint16 newZOrder )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				ev_uint16 objXXXX = ptrNativeObject->EarthView::World::Graphic::COverlayContainer::_notifyZOrder(newZOrder);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer__notifyViewport_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::COverlayContainer::_notifyViewport();
+				else
+					ptrNativeObject->_notifyViewport();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer__notifyViewport_void( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer__notifyViewport_void_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer__notifyViewport_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer__notifyViewport_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::COverlayContainer::_notifyViewport();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer__notifyWorldTransforms_void_CMatrix4(void *pObjectXXXX, _in const void* xform )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::COverlayContainer::_notifyWorldTransforms(*(EarthView::World::Spatial::Math::CMatrix4*)xform);
+				else
+					ptrNativeObject->_notifyWorldTransforms(*(EarthView::World::Spatial::Math::CMatrix4*)xform);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer__notifyWorldTransforms_void_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer__notifyWorldTransforms_void_CMatrix4_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer__notifyWorldTransforms_void_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer__notifyWorldTransforms_void_CMatrix4_NoVirtual(void *pObjectXXXX, _in const void* xform )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::COverlayContainer::_notifyWorldTransforms(*(EarthView::World::Spatial::Math::CMatrix4*)xform);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer__notifyParent_void_COverlayContainer_COverlay(void *pObjectXXXX, _in EarthView::World::Graphic::COverlayContainer* ref_parent, _in EarthView::World::Graphic::COverlay* ref_overlay )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::COverlayContainer::_notifyParent(ref_parent, ref_overlay);
+				else
+					ptrNativeObject->_notifyParent(ref_parent, ref_overlay);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer__notifyParent_void_COverlayContainer_COverlay( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer__notifyParent_void_COverlayContainer_COverlay_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer__notifyParent_void_COverlayContainer_COverlay(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer__notifyParent_void_COverlayContainer_COverlay_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::COverlayContainer* ref_parent, _in EarthView::World::Graphic::COverlay* ref_overlay )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::COverlayContainer::_notifyParent(ref_parent, ref_overlay);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer__updateRenderQueue_void_CRenderQueue(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderQueue* queue )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::COverlayContainer::_updateRenderQueue(queue);
+				else
+					ptrNativeObject->_updateRenderQueue(queue);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer__updateRenderQueue_void_CRenderQueue( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer__updateRenderQueue_void_CRenderQueue_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer__updateRenderQueue_void_CRenderQueue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer__updateRenderQueue_void_CRenderQueue_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderQueue* queue )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::COverlayContainer::_updateRenderQueue(queue);
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_COverlayContainer_isContainer_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::COverlayContainer::isContainer();
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->isContainer();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_isContainer_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_isContainer_ev_bool_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_isContainer_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_COverlayContainer_isContainer_ev_bool_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::COverlayContainer::isContainer();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_COverlayContainer_isChildrenProcessEvents_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::COverlayContainer::isChildrenProcessEvents();
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->isChildrenProcessEvents();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_isChildrenProcessEvents_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_isChildrenProcessEvents_ev_bool_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_isChildrenProcessEvents_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_COverlayContainer_isChildrenProcessEvents_ev_bool_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::COverlayContainer::isChildrenProcessEvents();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer_setChildrenProcessEvents_void_ev_bool(void *pObjectXXXX, _in ev_bool val )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::COverlayContainer::setChildrenProcessEvents(val);
+				else
+					ptrNativeObject->setChildrenProcessEvents(val);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_setChildrenProcessEvents_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_setChildrenProcessEvents_void_ev_bool_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_setChildrenProcessEvents_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer_setChildrenProcessEvents_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool val )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::COverlayContainer::setChildrenProcessEvents(val);
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::COverlayElement*  _stdcall EarthView_World_Graphic_COverlayContainer_findElementAt_COverlayElement_Real_Real(void *pObjectXXXX, _in Real x, _in Real y )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::COverlayElement* objXXXX = ptrNativeObject->EarthView::World::Graphic::COverlayContainer::findElementAt(x, y);
+					return objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::COverlayElement* objXXXX = ptrNativeObject->findElementAt(x, y);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_findElementAt_COverlayElement_Real_Real( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_findElementAt_COverlayElement_Real_Real_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_findElementAt_COverlayElement_Real_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::COverlayElement*  _stdcall EarthView_World_Graphic_COverlayContainer_findElementAt_COverlayElement_Real_Real_NoVirtual(void *pObjectXXXX, _in Real x, _in Real y )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				EarthView::World::Graphic::COverlayElement* objXXXX = ptrNativeObject->EarthView::World::Graphic::COverlayContainer::findElementAt(x, y);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer_copyFromTemplate_void_COverlayElement(void *pObjectXXXX, _in EarthView::World::Graphic::COverlayElement* templateOverlay )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::COverlayContainer::copyFromTemplate(templateOverlay);
+				else
+					ptrNativeObject->copyFromTemplate(templateOverlay);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_copyFromTemplate_void_COverlayElement( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_copyFromTemplate_void_COverlayElement_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_copyFromTemplate_void_COverlayElement(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_COverlayContainer_copyFromTemplate_void_COverlayElement_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::COverlayElement* templateOverlay )
+			{
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::COverlayContainer::copyFromTemplate(templateOverlay);
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::COverlayElement*  _stdcall EarthView_World_Graphic_COverlayContainer_clone_COverlayElement_EVString(void *pObjectXXXX, _in const char* instanceName )
+			{
+				EarthView::World::Core::ev_string instanceName1 = instanceName;
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				if (dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::COverlayElement* objXXXX = ptrNativeObject->EarthView::World::Graphic::COverlayContainer::clone(instanceName1);
+					return objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::COverlayElement* objXXXX = ptrNativeObject->clone(instanceName1);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_clone_COverlayElement_EVString( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_clone_COverlayElement_EVString_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_clone_COverlayElement_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::COverlayElement*  _stdcall EarthView_World_Graphic_COverlayContainer_clone_COverlayElement_EVString_NoVirtual(void *pObjectXXXX, _in const char* instanceName )
+			{
+				EarthView::World::Core::ev_string instanceName1 = instanceName;
+				EarthView::World::Graphic::COverlayContainer* ptrNativeObject = (EarthView::World::Graphic::COverlayContainer*) pObjectXXXX;
+				EarthView::World::Graphic::COverlayElement* objXXXX = ptrNativeObject->EarthView::World::Graphic::COverlayContainer::clone(instanceName1);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_updatePositionGeometry_void( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_updatePositionGeometry_void_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_updatePositionGeometry_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_updateTextureGeometry_void( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_updateTextureGeometry_void_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_updateTextureGeometry_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_addBaseParameters_void( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_addBaseParameters_void_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_addBaseParameters_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_show_void( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_show_void_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_show_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_hide_void( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_hide_void_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_hide_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_setEnabled_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_setEnabled_void_ev_bool_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_setEnabled_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getMaterialName_EVString( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getMaterialName_EVString_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getMaterialName_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_setMaterialName_void_EVString( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_setMaterialName_void_EVString_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_setMaterialName_void_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer__updateFromParent_void( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer__updateFromParent_void_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer__updateFromParent_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer__getDerivedLeft_Real( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer__getDerivedLeft_Real_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer__getDerivedLeft_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer__getDerivedTop_Real( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer__getDerivedTop_Real_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer__getDerivedTop_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer__getRelativeWidth_Real( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer__getRelativeWidth_Real_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer__getRelativeWidth_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer__getRelativeHeight_Real( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer__getRelativeHeight_Real_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer__getRelativeHeight_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer__getClippingRegion_void_Rectangle( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer__getClippingRegion_void_Rectangle_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer__getClippingRegion_void_Rectangle(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_visitRenderables_void_CVisitor_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_visitRenderables_void_CVisitor_ev_bool_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_visitRenderables_void_CVisitor_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getTypeName_EVString( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getTypeName_EVString_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getTypeName_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_setCaption_void_EarthView_World_Core_DisplayString( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_setCaption_void_EarthView_World_Core_DisplayString_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_setCaption_void_EarthView_World_Core_DisplayString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getCaption_EarthView_World_Core_DisplayString( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getCaption_EarthView_World_Core_DisplayString_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getCaption_EarthView_World_Core_DisplayString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_setColour_void_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_setColour_void_CColourValue_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_setColour_void_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getColour_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getColour_CColourValue_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getColour_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_setMetricsMode_void_GuiMetricsMode( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_setMetricsMode_void_GuiMetricsMode_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_setMetricsMode_void_GuiMetricsMode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getMetricsMode_GuiMetricsMode( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getMetricsMode_GuiMetricsMode_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getMetricsMode_GuiMetricsMode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_setHorizontalAlignment_void_GuiHorizontalAlignment( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_setHorizontalAlignment_void_GuiHorizontalAlignment_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_setHorizontalAlignment_void_GuiHorizontalAlignment(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getHorizontalAlignment_GuiHorizontalAlignment( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getHorizontalAlignment_GuiHorizontalAlignment_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getHorizontalAlignment_GuiHorizontalAlignment(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_setVerticalAlignment_void_GuiVerticalAlignment( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_setVerticalAlignment_void_GuiVerticalAlignment_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_setVerticalAlignment_void_GuiVerticalAlignment(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getVerticalAlignment_GuiVerticalAlignment( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getVerticalAlignment_GuiVerticalAlignment_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getVerticalAlignment_GuiVerticalAlignment(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_contains_ev_bool_Real_Real( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_contains_ev_bool_Real_Real_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_contains_ev_bool_Real_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_isKeyEnabled_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_isKeyEnabled_ev_bool_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_isKeyEnabled_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_isCloneable_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_isCloneable_ev_bool_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_isCloneable_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_setCloneable_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_setCloneable_void_ev_bool_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_setCloneable_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getMaterial_CMaterialPtr( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getMaterial_CMaterialPtr_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getMaterial_CMaterialPtr(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getTechnique_CTechnique( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getTechnique_CTechnique_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getTechnique_CTechnique(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getRenderOperation_void_CRenderOperation( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getRenderOperation_void_CRenderOperation_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getRenderOperation_void_CRenderOperation(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_preRender_ev_bool_CSceneManager_CRenderSystem( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_preRender_ev_bool_CSceneManager_CRenderSystem_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_preRender_ev_bool_CSceneManager_CRenderSystem(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_postRender_void_CSceneManager_CRenderSystem( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_postRender_void_CSceneManager_CRenderSystem_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_postRender_void_CSceneManager_CRenderSystem(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getWorldTransforms_void_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getWorldTransforms_void_CMatrix4_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getWorldTransforms_void_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getNumWorldTransforms_ev_uint16( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getNumWorldTransforms_ev_uint16_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getNumWorldTransforms_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getSquaredViewDepth_Real_CCamera( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getSquaredViewDepth_Real_CCamera_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getSquaredViewDepth_Real_CCamera(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getLights_LightList( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getLights_LightList_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getLights_LightList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getCastsShadows_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getCastsShadows_ev_bool_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getCastsShadows_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_setPolygonModeOverrideable_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_setPolygonModeOverrideable_void_ev_bool_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_setPolygonModeOverrideable_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getPolygonModeOverrideable_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getPolygonModeOverrideable_ev_bool_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getPolygonModeOverrideable_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_setCustomAmbient_void_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_setCustomAmbient_void_CColourValue_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_setCustomAmbient_void_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getCustomAmbient_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getCustomAmbient_CColourValue_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getCustomAmbient_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getCustomAmbientEnabled_bool( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getCustomAmbientEnabled_bool_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getCustomAmbientEnabled_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_setCustomAmbientEnabled_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_setCustomAmbientEnabled_void_ev_bool_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_setCustomAmbientEnabled_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getMovableObject_CMovableObject( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getMovableObject_CMovableObject_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getMovableObject_CMovableObject(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_addListener_void_CRenderableListener( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_addListener_void_CRenderableListener_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_addListener_void_CRenderableListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_removeListener_void_CRenderableListener( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_removeListener_void_CRenderableListener_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_removeListener_void_CRenderableListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_existListener_ev_bool_CRenderableListener( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_existListener_ev_bool_CRenderableListener_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_existListener_ev_bool_CRenderableListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getListenerCount_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getListenerCount_ev_uint32_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getListenerCount_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getListener_CRenderableListener_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getListener_CRenderableListener_ev_uint32_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getListener_CRenderableListener_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_getRenderSystemData_CRenderSystemData( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_getRenderSystemData_CRenderSystemData_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_getRenderSystemData_CRenderSystemData(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_COverlayContainer_setRenderSystemData_void_CRenderSystemData( void *pObjectXXXX, EarthView_World_Graphic_COverlayContainer_setRenderSystemData_void_CRenderSystemData_Callback* pCallback )
+			{
+				COverlayContainerProxy* ptr = dynamic_cast<COverlayContainerProxy*>((EarthView::World::Graphic::COverlayContainer*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_COverlayContainer_setRenderSystemData_void_CRenderSystemData(pCallback);
+				}
+			}
+		}
+	}
+}

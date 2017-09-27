@@ -1,0 +1,7 @@
+#include "core/global.h"
+
+#ifdef MODELXML2KML_EXPORTS
+#define EV_BUILD_MODEL_XML2KML_DLL EV_DLL_EXPORT
+#else
+#define EV_BUILD_MODEL_XML2KML_DLL EV_DLL_IMPORT
+#endif

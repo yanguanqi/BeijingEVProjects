@@ -1,0 +1,106 @@
+package global;
+
+import com.earthview.world.core.GlobalClassFactoryMap;
+
+public class EV_GA_ClassFactory
+{
+	public static void registerAll()
+	{
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CRoamCameraEvent", new com.earthview.world.spatial3d.controls.RoamCameraEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CRoamCameraEventPtr", new com.earthview.world.spatial3d.controls.RoamCameraEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CZoomCameraEvent", new com.earthview.world.spatial3d.controls.ZoomCameraEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CZoomCameraEventPtr", new com.earthview.world.spatial3d.controls.ZoomCameraEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CRotationCameraEvent", new com.earthview.world.spatial3d.controls.RotationCameraEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CRotationCameraEventPtr", new com.earthview.world.spatial3d.controls.RotationCameraEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CTiltCameraEventEX", new com.earthview.world.spatial3d.controls.TiltCameraEventEXClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CTiltCameraEventEXPtr", new com.earthview.world.spatial3d.controls.TiltCameraEventEXPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CSetCameraRotationratioEventEX", new com.earthview.world.spatial3d.controls.SetCameraRotationratioEventEXClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CSetCameraRotationratioEventEXPtr", new com.earthview.world.spatial3d.controls.SetCameraRotationratioEventEXPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCameraManipulator", new com.earthview.world.spatial3d.controls.CameraManipulatorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCameraManipulatorProxy", new com.earthview.world.spatial3d.controls.CameraManipulatorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCameraNodeTrackSceneManagerListener", new com.earthview.world.spatial3d.controls.CameraNodeTrackSceneManagerListenerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCameraNodeTrackSceneManagerListenerProxy", new com.earthview.world.spatial3d.controls.CameraNodeTrackSceneManagerListenerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCollisionDetectionCameraManipulator", new com.earthview.world.spatial3d.controls.CollisionDetectionCameraManipulatorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCollisionDetectionCameraManipulatorProxy", new com.earthview.world.spatial3d.controls.CollisionDetectionCameraManipulatorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CRecordEvent", new com.earthview.world.spatial3d.controls.RecordEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CControlPointEvent", new com.earthview.world.spatial3d.controls.ControlPointEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCommonSceneCameraManipulator", new com.earthview.world.spatial3d.controls.CommonSceneCameraManipulatorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCommonSceneCameraManipulatorProxy", new com.earthview.world.spatial3d.controls.CommonSceneCameraManipulatorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CPointEditRenderable", new com.earthview.world.spatial3d.controls.PointEditRenderableClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCPointEditRenderableProxy", new com.earthview.world.spatial3d.controls.PointEditRenderableClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CPointEdit", new com.earthview.world.spatial3d.controls.PointEditClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CPointEditList", new com.earthview.world.spatial3d.controls.PointEditListClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CRouteFlyListener", new com.earthview.world.spatial3d.controls.RouteFlyListenerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCRouteFlyListenerProxy", new com.earthview.world.spatial3d.controls.RouteFlyListenerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CControlPoints", new com.earthview.world.spatial3d.controls.ControlPointsClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeAnimationHandler", new com.earthview.world.spatial3d.controls.GlobeAnimationHandlerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCGlobeAnimationHandlerProxy", new com.earthview.world.spatial3d.controls.GlobeAnimationHandlerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeAnimationControlPoint", new com.earthview.world.spatial3d.controls.GlobeAnimationControlPointClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CAnimationControlPointMap", new com.earthview.world.spatial3d.controls.AnimationControlPointMapClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeAnimationPath", new com.earthview.world.spatial3d.controls.GlobeAnimationPathClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGoToTargetListener", new com.earthview.world.spatial3d.controls.GoToTargetListenerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCGoToTargetListenerProxy", new com.earthview.world.spatial3d.controls.GoToTargetListenerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeCameraManipulator", new com.earthview.world.spatial3d.controls.GlobeCameraManipulatorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCGlobeCameraManipulatorProxy", new com.earthview.world.spatial3d.controls.GlobeCameraManipulatorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeCamUnderGroundHandler", new com.earthview.world.spatial3d.controls.GlobeCamUnderGroundHandlerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCGlobeCamUnderGroundHandlerProxy", new com.earthview.world.spatial3d.controls.GlobeCamUnderGroundHandlerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeFlyEvent", new com.earthview.world.spatial3d.controls.GlobeFlyEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeFlyEventPtr", new com.earthview.world.spatial3d.controls.GlobeFlyEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeFlyDataEvent", new com.earthview.world.spatial3d.controls.GlobeFlyDataEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeFlyDataEventPtr", new com.earthview.world.spatial3d.controls.GlobeFlyDataEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeFlyPlayEvent", new com.earthview.world.spatial3d.controls.GlobeFlyPlayEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeFlyPlayEventPtr", new com.earthview.world.spatial3d.controls.GlobeFlyPlayEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeFlyPauseEvent", new com.earthview.world.spatial3d.controls.GlobeFlyPauseEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeFlyPauseEventPtr", new com.earthview.world.spatial3d.controls.GlobeFlyPauseEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeFlyStopEvent", new com.earthview.world.spatial3d.controls.GlobeFlyStopEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeFlyStopEventPtr", new com.earthview.world.spatial3d.controls.GlobeFlyStopEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeFlyStartSamplePointEvent", new com.earthview.world.spatial3d.controls.GlobeFlyStartSamplePointEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeFlyStartSamplePointEventPtr", new com.earthview.world.spatial3d.controls.GlobeFlyStartSamplePointEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeFlyStopSamplePointEvent", new com.earthview.world.spatial3d.controls.GlobeFlyStopSamplePointEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeFlyStopSamplePointEventPtr", new com.earthview.world.spatial3d.controls.GlobeFlyStopSamplePointEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeFlyShowAxisEvent", new com.earthview.world.spatial3d.controls.GlobeFlyShowAxisEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeFlyShowAxisEventPtr", new com.earthview.world.spatial3d.controls.GlobeFlyShowAxisEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeFlyAdjustModeEvent", new com.earthview.world.spatial3d.controls.GlobeFlyAdjustModeEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeFlyAdjustModeEventPtr", new com.earthview.world.spatial3d.controls.GlobeFlyAdjustModeEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGlobeLockCameraHandler", new com.earthview.world.spatial3d.controls.GlobeLockCameraHandlerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCGlobeLockCameraHandlerProxy", new com.earthview.world.spatial3d.controls.GlobeLockCameraHandlerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGoogleCameraManipulator", new com.earthview.world.spatial3d.controls.GoogleCameraManipulatorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCGoogleCameraManipulatorProxy", new com.earthview.world.spatial3d.controls.GoogleCameraManipulatorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGotoEvent", new com.earthview.world.spatial3d.controls.GotoEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGotoEventPtr", new com.earthview.world.spatial3d.controls.GotoEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CLocationEvent", new com.earthview.world.spatial3d.controls.LocationEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CLocationEventPtr", new com.earthview.world.spatial3d.controls.LocationEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CSetCameraControlDepthEvent", new com.earthview.world.spatial3d.controls.SetCameraControlDepthEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CSetCameraControlDepthEventPtr", new com.earthview.world.spatial3d.controls.SetCameraControlDepthEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CRotationAndZoomCameraEvent", new com.earthview.world.spatial3d.controls.RotationAndZoomCameraEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CRotationAndZoomCameraEventPtr", new com.earthview.world.spatial3d.controls.RotationAndZoomCameraEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CTiltCameraEvent", new com.earthview.world.spatial3d.controls.TiltCameraEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CTiltCameraEventPtr", new com.earthview.world.spatial3d.controls.TiltCameraEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CSetCameraRotationratioEvent", new com.earthview.world.spatial3d.controls.SetCameraRotationratioEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CSetCameraRotationratioEventPtr", new com.earthview.world.spatial3d.controls.SetCameraRotationratioEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CSetCameraLockTargetEvent", new com.earthview.world.spatial3d.controls.SetCameraLockTargetEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CSetCameraLockTargetEventPtr", new com.earthview.world.spatial3d.controls.SetCameraLockTargetEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CFadeInOutEvent", new com.earthview.world.spatial3d.controls.FadeInOutEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CFadeInOutEventPtr", new com.earthview.world.spatial3d.controls.FadeInOutEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGUIEventHandler", new com.earthview.world.spatial3d.controls.GuieventhandlerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCGUIEventHandlerProxy", new com.earthview.world.spatial3d.controls.GuieventhandlerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CEvents", new com.earthview.world.spatial3d.controls.EventsClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CGUIEventQueue", new com.earthview.world.spatial3d.controls.GuieventqueueClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CTourEndEvent", new com.earthview.world.spatial3d.controls.TourEndEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CKmlTourEvent", new com.earthview.world.spatial3d.controls.KmlTourEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CKmlTourEventPtr", new com.earthview.world.spatial3d.controls.KmlTourEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CKmlTourPathEvent", new com.earthview.world.spatial3d.controls.KmlTourPathEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CKmlTourPathEventPtr", new com.earthview.world.spatial3d.controls.KmlTourPathEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CKmlStartTourEvent", new com.earthview.world.spatial3d.controls.KmlStartTourEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CKmlStartTourEventPtr", new com.earthview.world.spatial3d.controls.KmlStartTourEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CKmlStopTourEvent", new com.earthview.world.spatial3d.controls.KmlStopTourEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CKmlStopTourEventPtr", new com.earthview.world.spatial3d.controls.KmlStopTourEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CKmlStartRecordTourEvent", new com.earthview.world.spatial3d.controls.KmlStartRecordTourEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CKmlStartRecordTourEventPtr", new com.earthview.world.spatial3d.controls.KmlStartRecordTourEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CKmlStopRecordTourEvent", new com.earthview.world.spatial3d.controls.KmlStopRecordTourEventClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CKmlStopRecordTourEventPtr", new com.earthview.world.spatial3d.controls.KmlStopRecordTourEventPtrClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CKmlTourHandler", new com.earthview.world.spatial3d.controls.KmlTourHandlerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCKmlTourHandlerProxy", new com.earthview.world.spatial3d.controls.KmlTourHandlerClassFactory());
+	}
+}
+

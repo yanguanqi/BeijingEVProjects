@@ -1,0 +1,10 @@
+﻿#ifndef _SPATIAL3DPROXY_COFING_H
+#define _SPATIAL3DPROXY_COFING_H
+#ifdef  EV_BUILD_SPATIAL3DPROXY_MANAGER 
+#define EV_SPATIAL3DPROXY_DLL EV_DLL_EXPORT
+#else
+#define EV_SPATIAL3DPROXY_DLL EV_DLL_IMPORT
+#endif
+
+#endif
+#include "core/global.h"

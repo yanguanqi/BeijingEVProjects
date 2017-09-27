@@ -1,0 +1,103 @@
+package global;
+
+import com.earthview.world.core.GlobalClassFactoryMap;
+
+public class EV_Spatial_ChartProxy_ClassFactory
+{
+	public static void registerAll()
+	{
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::SystemUI::CChartEntryBoxColorMode", new com.earthview.world.spatial.systemui.ChartEntryBoxColorModeClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::SystemUI::JCChartEntryBoxColorModeProxy", new com.earthview.world.spatial.systemui.ChartEntryBoxColorModeClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::SystemUI::CChartEntryBoxColorMode3D", new com.earthview.world.spatial.systemui.ChartEntryBoxColorMode3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::SystemUI::JCChartEntryBoxColorMode3DProxy", new com.earthview.world.spatial.systemui.ChartEntryBoxColorMode3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::SystemUI::CChartEntryBoxLabelType", new com.earthview.world.spatial.systemui.ChartEntryBoxLabelTypeClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::SystemUI::JCChartEntryBoxLabelTypeProxy", new com.earthview.world.spatial.systemui.ChartEntryBoxLabelTypeClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::SystemUI::CChartEntryBoxLabelType3D", new com.earthview.world.spatial.systemui.ChartEntryBoxLabelType3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::SystemUI::JCChartEntryBoxLabelType3DProxy", new com.earthview.world.spatial.systemui.ChartEntryBoxLabelType3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::SystemUI::CChartEntryBoxSaftyContour", new com.earthview.world.spatial.systemui.ChartEntryBoxSaftyContourClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::SystemUI::JCChartEntryBoxSaftyContourProxy", new com.earthview.world.spatial.systemui.ChartEntryBoxSaftyContourClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::SystemUI::CChartEntryBoxSaftyContour3D", new com.earthview.world.spatial.systemui.ChartEntryBoxSaftyContour3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::SystemUI::JCChartEntryBoxSaftyContour3DProxy", new com.earthview.world.spatial.systemui.ChartEntryBoxSaftyContour3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::SystemUI::CChartEntryBoxSymbolType", new com.earthview.world.spatial.systemui.ChartEntryBoxSymbolTypeClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::SystemUI::JCChartEntryBoxSymbolTypeProxy", new com.earthview.world.spatial.systemui.ChartEntryBoxSymbolTypeClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::SystemUI::CChartEntryBoxSymbolType3D", new com.earthview.world.spatial.systemui.ChartEntryBoxSymbolType3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::SystemUI::JCChartEntryBoxSymbolType3DProxy", new com.earthview.world.spatial.systemui.ChartEntryBoxSymbolType3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::SystemUI::CChartEntryBoxViewCategory", new com.earthview.world.spatial.systemui.ChartEntryBoxViewCategoryClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::SystemUI::JCChartEntryBoxViewCategoryProxy", new com.earthview.world.spatial.systemui.ChartEntryBoxViewCategoryClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::SystemUI::CChartEntryBoxViewCategory3D", new com.earthview.world.spatial.systemui.ChartEntryBoxViewCategory3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::SystemUI::JCChartEntryBoxViewCategory3DProxy", new com.earthview.world.spatial.systemui.ChartEntryBoxViewCategory3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CCommandChartBasicView", new com.earthview.world.spatial2d.controls.CommandChartBasicViewClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCCommandChartBasicViewProxy", new com.earthview.world.spatial2d.controls.CommandChartBasicViewClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCommandChartBasicView3D", new com.earthview.world.spatial3d.controls.CommandChartBasicView3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCommandChartBasicView3DProxy", new com.earthview.world.spatial3d.controls.CommandChartBasicView3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CCommandChartBlackBackColor", new com.earthview.world.spatial2d.controls.CommandChartBlackBackColorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCCommandChartBlackBackColorProxy", new com.earthview.world.spatial2d.controls.CommandChartBlackBackColorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCommandChartBlackBackColor3D", new com.earthview.world.spatial3d.controls.CommandChartBlackBackColor3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCommandChartBlackBackColor3DProxy", new com.earthview.world.spatial3d.controls.CommandChartBlackBackColor3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CCommandChartBlurRelationship", new com.earthview.world.spatial2d.controls.CommandChartBlurRelationshipClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCCommandChartBlurRelationshipProxy", new com.earthview.world.spatial2d.controls.CommandChartBlurRelationshipClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCommandChartBlurRelationship3D", new com.earthview.world.spatial3d.controls.CommandChartBlurRelationship3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCommandChartBlurRelationship3DProxy", new com.earthview.world.spatial3d.controls.CommandChartBlurRelationship3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CCommandChartBrightColor", new com.earthview.world.spatial2d.controls.CommandChartBrightColorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCCommandChartBrightColorProxy", new com.earthview.world.spatial2d.controls.CommandChartBrightColorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCommandChartBrightColor3D", new com.earthview.world.spatial3d.controls.CommandChartBrightColor3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCommandChartBrightColor3DProxy", new com.earthview.world.spatial3d.controls.CommandChartBrightColor3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CCommandChartChineseLabel", new com.earthview.world.spatial2d.controls.CommandChartChineseLabelClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCCommandChartChineseLabelProxy", new com.earthview.world.spatial2d.controls.CommandChartChineseLabelClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCommandChartChineseLabel3D", new com.earthview.world.spatial3d.controls.CommandChartChineseLabel3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCommandChartChineseLabel3DProxy", new com.earthview.world.spatial3d.controls.CommandChartChineseLabel3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CCommandChartDuskColor", new com.earthview.world.spatial2d.controls.CommandChartDuskColorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCCommandChartDuskColorProxy", new com.earthview.world.spatial2d.controls.CommandChartDuskColorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCommandChartDuskColor3D", new com.earthview.world.spatial3d.controls.CommandChartDuskColor3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCommandChartDuskColor3DProxy", new com.earthview.world.spatial3d.controls.CommandChartDuskColor3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CCommandChartEnglishLabel", new com.earthview.world.spatial2d.controls.CommandChartEnglishLabelClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCCommandChartEnglishLabelProxy", new com.earthview.world.spatial2d.controls.CommandChartEnglishLabelClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCommandChartEnglishLabel3D", new com.earthview.world.spatial3d.controls.CommandChartEnglishLabel3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCommandChartEnglishLabel3DProxy", new com.earthview.world.spatial3d.controls.CommandChartEnglishLabel3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CCommandChartNightColor", new com.earthview.world.spatial2d.controls.CommandChartNightColorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCCommandChartNightColorProxy", new com.earthview.world.spatial2d.controls.CommandChartNightColorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCommandChartNightColor3D", new com.earthview.world.spatial3d.controls.CommandChartNightColor3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCommandChartNightColor3DProxy", new com.earthview.world.spatial3d.controls.CommandChartNightColor3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CCommandChartOtherView", new com.earthview.world.spatial2d.controls.CommandChartOtherViewClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCCommandChartOtherViewProxy", new com.earthview.world.spatial2d.controls.CommandChartOtherViewClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCommandChartOtherView3D", new com.earthview.world.spatial3d.controls.CommandChartOtherView3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCommandChartOtherView3DProxy", new com.earthview.world.spatial3d.controls.CommandChartOtherView3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CCommandChartSaftyContour10M", new com.earthview.world.spatial2d.controls.CommandChartSaftyContour10MClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCCommandChartSaftyContour10MProxy", new com.earthview.world.spatial2d.controls.CommandChartSaftyContour10MClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCommandChartSaftyContour10M3D", new com.earthview.world.spatial3d.controls.CommandChartSaftyContour10M3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCommandChartSaftyContour10M3DProxy", new com.earthview.world.spatial3d.controls.CommandChartSaftyContour10M3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CCommandChartSaftyContour20M", new com.earthview.world.spatial2d.controls.CommandChartSaftyContour20MClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCCommandChartSaftyContour20MProxy", new com.earthview.world.spatial2d.controls.CommandChartSaftyContour20MClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCommandChartSaftyContour20M3D", new com.earthview.world.spatial3d.controls.CommandChartSaftyContour20M3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCommandChartSaftyContour20M3DProxy", new com.earthview.world.spatial3d.controls.CommandChartSaftyContour20M3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CCommandChartSaftyContour30M", new com.earthview.world.spatial2d.controls.CommandChartSaftyContour30MClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCCommandChartSaftyContour30MProxy", new com.earthview.world.spatial2d.controls.CommandChartSaftyContour30MClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCommandChartSaftyContour30M3D", new com.earthview.world.spatial3d.controls.CommandChartSaftyContour30M3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCommandChartSaftyContour30M3DProxy", new com.earthview.world.spatial3d.controls.CommandChartSaftyContour30M3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CCommandChartSaftyContour5M", new com.earthview.world.spatial2d.controls.CommandChartSaftyContour5MClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCCommandChartSaftyContour5MProxy", new com.earthview.world.spatial2d.controls.CommandChartSaftyContour5MClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCommandChartSaftyContour5M3D", new com.earthview.world.spatial3d.controls.CommandChartSaftyContour5M3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCommandChartSaftyContour5M3DProxy", new com.earthview.world.spatial3d.controls.CommandChartSaftyContour5M3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CCommandChartSimpleSymbol", new com.earthview.world.spatial2d.controls.CommandChartSimpleSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCCommandChartSimpleSymbolProxy", new com.earthview.world.spatial2d.controls.CommandChartSimpleSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCommandChartSimpleSymbol3D", new com.earthview.world.spatial3d.controls.CommandChartSimpleSymbol3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCommandChartSimpleSymbol3DProxy", new com.earthview.world.spatial3d.controls.CommandChartSimpleSymbol3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CCommandChartSpecificRelationship", new com.earthview.world.spatial2d.controls.CommandChartSpecificRelationshipClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCCommandChartSpecificRelationshipProxy", new com.earthview.world.spatial2d.controls.CommandChartSpecificRelationshipClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCommandChartSpecificRelationship3D", new com.earthview.world.spatial3d.controls.CommandChartSpecificRelationship3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCommandChartSpecificRelationship3DProxy", new com.earthview.world.spatial3d.controls.CommandChartSpecificRelationship3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CCommandChartStandardView", new com.earthview.world.spatial2d.controls.CommandChartStandardViewClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCCommandChartStandardViewProxy", new com.earthview.world.spatial2d.controls.CommandChartStandardViewClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCommandChartStandardView3D", new com.earthview.world.spatial3d.controls.CommandChartStandardView3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCommandChartStandardView3DProxy", new com.earthview.world.spatial3d.controls.CommandChartStandardView3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CCommandChartTraditionalSymbol", new com.earthview.world.spatial2d.controls.CommandChartTraditionalSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCCommandChartTraditionalSymbolProxy", new com.earthview.world.spatial2d.controls.CommandChartTraditionalSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCommandChartTraditionalSymbol3D", new com.earthview.world.spatial3d.controls.CommandChartTraditionalSymbol3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCommandChartTraditionalSymbol3DProxy", new com.earthview.world.spatial3d.controls.CommandChartTraditionalSymbol3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CCommandChartWhiteBackColor", new com.earthview.world.spatial2d.controls.CommandChartWhiteBackColorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCCommandChartWhiteBackColorProxy", new com.earthview.world.spatial2d.controls.CommandChartWhiteBackColorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::CCommandChartWhiteBackColor3D", new com.earthview.world.spatial3d.controls.CommandChartWhiteBackColor3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Controls::JCCommandChartWhiteBackColor3DProxy", new com.earthview.world.spatial3d.controls.CommandChartWhiteBackColor3DClassFactory());
+	}
+}
+

@@ -1,0 +1,2756 @@
+/* This file is produced by the P/Invoke AutoWrapper Utility 
+ Copyright (c) 2012 by EarthView Image Inc */
+#include "stableheaders.h"
+#include "graphic/movableplane.h"
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Graphic
+		{
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane__notifyCurrentCamera_void_CCamera_Callback)(_in EarthView::World::Graphic::CCamera* cam);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CMovablePlane_getBoundingBox_CAxisAlignedBox_Callback)();
+			typedef Real  ( _stdcall EarthView_World_Graphic_CMovablePlane_getBoundingRadius_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane__updateRenderQueue_void_CRenderQueue_Callback)(_in EarthView::World::Graphic::CRenderQueue* pQueue);
+			typedef char*  ( _stdcall EarthView_World_Graphic_CMovablePlane_getMovableType_EVString_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_ev_bool_Callback)(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables);
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_Callback)(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor);
+			typedef const EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*  ( _stdcall EarthView_World_Graphic_CMovablePlane_getMovableObjectPtr_CMovablePlaneInternalMovable_Callback)();
+			class CMovablePlaneProxy : public EarthView::World::Graphic::CMovablePlane
+			{
+			private:
+				EarthView_World_Graphic_CMovablePlane__notifyCurrentCamera_void_CCamera_Callback* m_EarthView_World_Graphic_CMovablePlane__notifyCurrentCamera_void_CCamera_Callback;
+				EarthView_World_Graphic_CMovablePlane_getBoundingBox_CAxisAlignedBox_Callback* m_EarthView_World_Graphic_CMovablePlane_getBoundingBox_CAxisAlignedBox_Callback;
+				EarthView_World_Graphic_CMovablePlane_getBoundingRadius_Real_Callback* m_EarthView_World_Graphic_CMovablePlane_getBoundingRadius_Real_Callback;
+				EarthView_World_Graphic_CMovablePlane__updateRenderQueue_void_CRenderQueue_Callback* m_EarthView_World_Graphic_CMovablePlane__updateRenderQueue_void_CRenderQueue_Callback;
+				EarthView_World_Graphic_CMovablePlane_getMovableType_EVString_Callback* m_EarthView_World_Graphic_CMovablePlane_getMovableType_EVString_Callback;
+				EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_ev_bool_Callback* m_EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_ev_bool_Callback;
+				EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_Callback* m_EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_Callback;
+				EarthView_World_Graphic_CMovablePlane_getMovableObjectPtr_CMovablePlaneInternalMovable_Callback* m_EarthView_World_Graphic_CMovablePlane_getMovableObjectPtr_CMovablePlaneInternalMovable_Callback;
+			public:
+				CMovablePlaneProxy(EarthView::World::Core::CNameValuePairList *pList) : CMovablePlane(pList)
+				{
+					m_EarthView_World_Graphic_CMovablePlane__notifyCurrentCamera_void_CCamera_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_getBoundingBox_CAxisAlignedBox_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_getBoundingRadius_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane__updateRenderQueue_void_CRenderQueue_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_getMovableType_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_getMovableObjectPtr_CMovablePlaneInternalMovable_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane__notifyCurrentCamera_void_CCamera(EarthView_World_Graphic_CMovablePlane__notifyCurrentCamera_void_CCamera_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane__notifyCurrentCamera_void_CCamera_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_getBoundingBox_CAxisAlignedBox(EarthView_World_Graphic_CMovablePlane_getBoundingBox_CAxisAlignedBox_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_getBoundingBox_CAxisAlignedBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_getBoundingRadius_Real(EarthView_World_Graphic_CMovablePlane_getBoundingRadius_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_getBoundingRadius_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane__updateRenderQueue_void_CRenderQueue(EarthView_World_Graphic_CMovablePlane__updateRenderQueue_void_CRenderQueue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane__updateRenderQueue_void_CRenderQueue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_getMovableType_EVString(EarthView_World_Graphic_CMovablePlane_getMovableType_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_getMovableType_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_ev_bool(EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor(EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_getMovableObjectPtr_CMovablePlaneInternalMovable(EarthView_World_Graphic_CMovablePlane_getMovableObjectPtr_CMovablePlaneInternalMovable_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_getMovableObjectPtr_CMovablePlaneInternalMovable_Callback = pCallback;
+				}
+				virtual void _notifyCurrentCamera(_in EarthView::World::Graphic::CCamera* cam)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane__notifyCurrentCamera_void_CCamera_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane__notifyCurrentCamera_void_CCamera_Callback(cam);
+					}
+					else
+						return this->CMovablePlane::_notifyCurrentCamera(cam);
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getBoundingBox() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_getBoundingBox_CAxisAlignedBox_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CMovablePlane_getBoundingBox_CAxisAlignedBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlane::getBoundingBox();
+				}
+				virtual Real getBoundingRadius() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_getBoundingRadius_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CMovablePlane_getBoundingRadius_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlane::getBoundingRadius();
+				}
+				virtual void _updateRenderQueue(_in EarthView::World::Graphic::CRenderQueue* pQueue)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane__updateRenderQueue_void_CRenderQueue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane__updateRenderQueue_void_CRenderQueue_Callback(pQueue);
+					}
+					else
+						return this->CMovablePlane::_updateRenderQueue(pQueue);
+				}
+				virtual EVString getMovableType() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_getMovableType_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CMovablePlane_getMovableType_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlane::getMovableType();
+				}
+				virtual void visitRenderables(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_ev_bool_Callback(visitor, debugRenderables);
+					}
+					else
+						return this->CMovablePlane::visitRenderables(visitor, debugRenderables);
+				}
+				virtual void visitRenderables(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_Callback(visitor);
+					}
+					else
+						return this->CMovablePlane::visitRenderables(visitor);
+				}
+				virtual const EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable* getMovableObjectPtr()
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_getMovableObjectPtr_CMovablePlaneInternalMovable_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable* returnValue = m_EarthView_World_Graphic_CMovablePlane_getMovableObjectPtr_CMovablePlaneInternalMovable_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlane::getMovableObjectPtr();
+				}
+			};
+			REGISTER_FACTORY_CLASS(CMovablePlaneProxy);
+			typedef const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback)();
+			typedef ev_uint8  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueId_ev_uint8_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCreator_void_CMovableObjectFactory_Callback)(_in EarthView::World::Graphic::CMovableObjectFactory* ref_fact);
+			typedef EarthView::World::Graphic::CMovableObjectFactory*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getCreator_CMovableObjectFactory_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyManager_void_CSceneManager_Callback)(_in EarthView::World::Graphic::CSceneManager* ref_mgr);
+			typedef EarthView::World::Graphic::CSceneManager*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getManager_CSceneManager_Callback)();
+			typedef char*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getName_EVString_Callback)();
+			typedef char*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getMovableType_EVString_Callback)();
+			typedef EarthView::World::Graphic::CNode*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentNode_CNode_Callback)();
+			typedef EarthView::World::Graphic::CSceneNode*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentSceneNode_CSceneNode_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isParentTagPoint_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_ev_bool_Callback)(_in EarthView::World::Graphic::CNode* ref_parent, _in ev_bool isTagPoint);
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_Callback)(_in EarthView::World::Graphic::CNode* ref_parent);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isAttached_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_detachFromParent_void_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isInScene_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyMoved_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyLightsQueried_void_LightList_Callback)(_in const EarthView::World::Graphic::LightList* lightList);
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightQueriedListener_void_CLightQueriedListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CLightQueriedListener* listener);
+			typedef EarthView::World::Graphic::CMovableObject::CLightQueriedListener*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightQueriedListener_CLightQueriedListener_Callback)();
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightListUpdated_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightListUpdated_void_ev_uint32_Callback)(_in ev_uint32 frame);
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCurrentCamera_void_CCamera_Callback)(_in EarthView::World::Graphic::CCamera* ref_cam);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingBox_CAxisAlignedBox_Callback)();
+			typedef Real  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingRadius_Real_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_ev_bool_Callback)(_in ev_bool derive);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__updateRenderQueue_void_CRenderQueue_Callback)(_in EarthView::World::Graphic::CRenderQueue* queue);
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisible_void_ev_bool_Callback)(_in ev_bool visible);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisible_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isVisible_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMaxDistance_void_Real_Callback)(_in Real dist);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMaxDistance_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinDistance_void_Real_Callback)(_in Real dist);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinDistance_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinPixelSize_void_Real_Callback)(_in Real pixelSize);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinPixelSize_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectionColour_void_CColourValue_Callback)(_in const void* colour);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelected_ev_bool_IntVector_Callback)(_in const void* objIndics);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelected_IntVector_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback)(_in const void* ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out void* point);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback)(_in const void* aabb, _in ev_bool prepareToRenderSelection, _out void* indexVec);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback)(_in const void* sphere, _in ev_bool prepareToRenderSelection, _out void* indexVec);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback)(_in const void* ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out ev_int32& submeshIndex, _out ev_int32& instanceIndex, _out ev_int32& segmentIndex, _out void* point);
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_renderSelection_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_clearSelection_void_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_startEditing_ev_bool_ev_uint32_Callback)(_in ev_uint32 objectIndex);
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_endEditing_void_Callback)();
+			typedef EarthView::World::Graphic::CEditBoundingBox*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEditBoundingBox_CEditBoundingBox_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback)(_in ev_uint32 objectIndex, _inout void* matrix);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback)(_in ev_uint32 objectIndex, _in const void* matrix);
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroup_void_ev_uint8_Callback)(_in ev_uint8 queueID);
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback)(_in ev_uint8 queueID, _in ev_uint16 priority);
+			typedef ev_uint8  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueGroup_ev_uint8_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getParentNodeFullTransform_CMatrix4_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setQueryFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addQueryFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeQueryFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getQueryFlags_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisibilityFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addVisibilityFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeVisibilityFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisibilityFlags_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addListener_void_CMovableObjectListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* ref_listener);
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeListener_void_CMovableObjectListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_existListener_ev_bool_CMovableObjectListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener);
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListenerCount_ev_uint32_Callback)();
+			typedef EarthView::World::Graphic::CMovableObject::CMovableObjectListener*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListener_CMovableObjectListener_ev_uint32_Callback)(_in ev_uint32 index);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_queryLights_LightList_Callback)();
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightMask_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightMask_void_ev_uint32_Callback)(_in ev_uint32 lightMask);
+			typedef EarthView::World::Graphic::LightList*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getLightList_LightList_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setCastShadows_void_ev_bool_Callback)(_in ev_bool enabled);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getReceivesShadows_ev_bool_Callback)();
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getTypeFlags_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_ev_bool_Callback)(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables);
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_Callback)(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor);
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setDebugDisplayEnabled_void_ev_bool_Callback)(_in ev_bool enabled);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isDebugDisplayEnabled_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getCastShadows_ev_bool_Callback)();
+			typedef EarthView::World::Graphic::CEdgeData*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEdgeList_CEdgeData_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_hasEdgeList_ev_bool_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback)(_in ev_bool derive);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightCapBounds_CAxisAlignedBox_Callback)();
+			typedef void*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback)(_in const void* light, _in Real dirLightExtrusionDist);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback)(_in int shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDistance, _in ev_uint32 flags);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback)(_in int shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDistance);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getPointExtrusionDistance_Real_CLight_Callback)(_in const EarthView::World::Graphic::CLight* l);
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback)(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const void* lightPos);
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback)(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const void* indexBuffer, _in const EarthView::World::Graphic::CLight* light, _inout void* shadowRenderables, _in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback)(_inout void* box, _in const void* lightPos, _in Real extrudeDist);
+			class CMovablePlaneInternalMovableProxy : public EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable
+			{
+			private:
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueId_ev_uint8_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueId_ev_uint8_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCreator_void_CMovableObjectFactory_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCreator_void_CMovableObjectFactory_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getCreator_CMovableObjectFactory_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getCreator_CMovableObjectFactory_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyManager_void_CSceneManager_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyManager_void_CSceneManager_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getManager_CSceneManager_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getManager_CSceneManager_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getName_EVString_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getName_EVString_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getMovableType_EVString_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getMovableType_EVString_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentNode_CNode_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentNode_CNode_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentSceneNode_CSceneNode_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentSceneNode_CSceneNode_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isParentTagPoint_ev_bool_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isParentTagPoint_ev_bool_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_ev_bool_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_ev_bool_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isAttached_ev_bool_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isAttached_ev_bool_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_detachFromParent_void_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_detachFromParent_void_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isInScene_ev_bool_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isInScene_ev_bool_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyMoved_void_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyMoved_void_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyLightsQueried_void_LightList_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyLightsQueried_void_LightList_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightQueriedListener_void_CLightQueriedListener_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightQueriedListener_void_CLightQueriedListener_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightQueriedListener_CLightQueriedListener_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightQueriedListener_CLightQueriedListener_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightListUpdated_ev_uint32_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightListUpdated_ev_uint32_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightListUpdated_void_ev_uint32_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightListUpdated_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCurrentCamera_void_CCamera_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCurrentCamera_void_CCamera_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingBox_CAxisAlignedBox_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingBox_CAxisAlignedBox_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingRadius_Real_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingRadius_Real_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_ev_bool_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_ev_bool_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__updateRenderQueue_void_CRenderQueue_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__updateRenderQueue_void_CRenderQueue_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisible_void_ev_bool_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisible_void_ev_bool_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisible_ev_bool_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisible_ev_bool_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isVisible_ev_bool_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isVisible_ev_bool_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMaxDistance_void_Real_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMaxDistance_void_Real_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMaxDistance_Real_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMaxDistance_Real_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinDistance_void_Real_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinDistance_void_Real_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinDistance_Real_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinDistance_Real_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinPixelSize_void_Real_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinPixelSize_void_Real_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinPixelSize_Real_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinPixelSize_Real_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectionColour_void_CColourValue_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectionColour_void_CColourValue_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelected_ev_bool_IntVector_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelected_ev_bool_IntVector_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelected_IntVector_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelected_IntVector_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_renderSelection_void_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_renderSelection_void_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_clearSelection_void_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_clearSelection_void_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_startEditing_ev_bool_ev_uint32_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_startEditing_ev_bool_ev_uint32_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_endEditing_void_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_endEditing_void_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEditBoundingBox_CEditBoundingBox_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEditBoundingBox_CEditBoundingBox_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroup_void_ev_uint8_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroup_void_ev_uint8_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueGroup_ev_uint8_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueGroup_ev_uint8_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getParentNodeFullTransform_CMatrix4_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getParentNodeFullTransform_CMatrix4_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setQueryFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setQueryFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addQueryFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addQueryFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeQueryFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeQueryFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getQueryFlags_ev_uint32_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getQueryFlags_ev_uint32_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisibilityFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisibilityFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addVisibilityFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addVisibilityFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeVisibilityFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeVisibilityFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisibilityFlags_ev_uint32_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisibilityFlags_ev_uint32_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addListener_void_CMovableObjectListener_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addListener_void_CMovableObjectListener_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeListener_void_CMovableObjectListener_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeListener_void_CMovableObjectListener_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_existListener_ev_bool_CMovableObjectListener_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_existListener_ev_bool_CMovableObjectListener_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListenerCount_ev_uint32_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListenerCount_ev_uint32_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListener_CMovableObjectListener_ev_uint32_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListener_CMovableObjectListener_ev_uint32_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_queryLights_LightList_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_queryLights_LightList_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightMask_ev_uint32_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightMask_ev_uint32_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightMask_void_ev_uint32_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightMask_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getLightList_LightList_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getLightList_LightList_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setCastShadows_void_ev_bool_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setCastShadows_void_ev_bool_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getReceivesShadows_ev_bool_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getReceivesShadows_ev_bool_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getTypeFlags_ev_uint32_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getTypeFlags_ev_uint32_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_ev_bool_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_ev_bool_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setDebugDisplayEnabled_void_ev_bool_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setDebugDisplayEnabled_void_ev_bool_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isDebugDisplayEnabled_ev_bool_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isDebugDisplayEnabled_ev_bool_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getCastShadows_ev_bool_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getCastShadows_ev_bool_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEdgeList_CEdgeData_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEdgeList_CEdgeData_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_hasEdgeList_ev_bool_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_hasEdgeList_ev_bool_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightCapBounds_CAxisAlignedBox_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightCapBounds_CAxisAlignedBox_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getPointExtrusionDistance_Real_CLight_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getPointExtrusionDistance_Real_CLight_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback;
+				EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback* m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback;
+			public:
+				CMovablePlaneInternalMovableProxy(EarthView::World::Core::CNameValuePairList *pList) : CMovablePlaneInternalMovable(pList)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueId_ev_uint8_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCreator_void_CMovableObjectFactory_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getCreator_CMovableObjectFactory_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyManager_void_CSceneManager_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getManager_CSceneManager_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getName_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getMovableType_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentNode_CNode_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentSceneNode_CSceneNode_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isParentTagPoint_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isAttached_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_detachFromParent_void_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isInScene_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyMoved_void_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyLightsQueried_void_LightList_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightQueriedListener_void_CLightQueriedListener_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightQueriedListener_CLightQueriedListener_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightListUpdated_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightListUpdated_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCurrentCamera_void_CCamera_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingBox_CAxisAlignedBox_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingRadius_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__updateRenderQueue_void_CRenderQueue_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisible_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisible_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isVisible_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMaxDistance_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMaxDistance_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinDistance_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinDistance_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinPixelSize_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinPixelSize_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectionColour_void_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelected_ev_bool_IntVector_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelected_IntVector_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_renderSelection_void_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_clearSelection_void_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_startEditing_ev_bool_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_endEditing_void_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEditBoundingBox_CEditBoundingBox_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroup_void_ev_uint8_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueGroup_ev_uint8_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getParentNodeFullTransform_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setQueryFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addQueryFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeQueryFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getQueryFlags_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisibilityFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addVisibilityFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeVisibilityFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisibilityFlags_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addListener_void_CMovableObjectListener_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeListener_void_CMovableObjectListener_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_existListener_ev_bool_CMovableObjectListener_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListenerCount_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListener_CMovableObjectListener_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_queryLights_LightList_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightMask_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightMask_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getLightList_LightList_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setCastShadows_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getReceivesShadows_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getTypeFlags_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setDebugDisplayEnabled_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isDebugDisplayEnabled_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getCastShadows_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEdgeList_CEdgeData_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_hasEdgeList_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightCapBounds_CAxisAlignedBox_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getPointExtrusionDistance_Real_CLight_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getAnimableObjectPtr_CMovableObjectInternalAnimableObject(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueId_ev_uint8(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueId_ev_uint8_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueId_ev_uint8_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCreator_void_CMovableObjectFactory(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCreator_void_CMovableObjectFactory_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCreator_void_CMovableObjectFactory_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getCreator_CMovableObjectFactory(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getCreator_CMovableObjectFactory_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getCreator_CMovableObjectFactory_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyManager_void_CSceneManager(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyManager_void_CSceneManager_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyManager_void_CSceneManager_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getManager_CSceneManager(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getManager_CSceneManager_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getManager_CSceneManager_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getName_EVString(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getName_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getName_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getMovableType_EVString(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getMovableType_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getMovableType_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentNode_CNode(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentNode_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentNode_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentSceneNode_CSceneNode(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentSceneNode_CSceneNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentSceneNode_CSceneNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isParentTagPoint_ev_bool(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isParentTagPoint_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isParentTagPoint_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_ev_bool(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isAttached_ev_bool(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isAttached_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isAttached_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_detachFromParent_void(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_detachFromParent_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_detachFromParent_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isInScene_ev_bool(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isInScene_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isInScene_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyMoved_void(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyMoved_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyMoved_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyLightsQueried_void_LightList(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyLightsQueried_void_LightList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyLightsQueried_void_LightList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightQueriedListener_void_CLightQueriedListener(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightQueriedListener_void_CLightQueriedListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightQueriedListener_void_CLightQueriedListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightQueriedListener_CLightQueriedListener(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightQueriedListener_CLightQueriedListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightQueriedListener_CLightQueriedListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightListUpdated_ev_uint32(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightListUpdated_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightListUpdated_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightListUpdated_void_ev_uint32(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightListUpdated_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightListUpdated_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCurrentCamera_void_CCamera(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCurrentCamera_void_CCamera_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCurrentCamera_void_CCamera_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingBox_CAxisAlignedBox(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingBox_CAxisAlignedBox_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingBox_CAxisAlignedBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingRadius_Real(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingRadius_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingRadius_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_ev_bool(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__updateRenderQueue_void_CRenderQueue(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__updateRenderQueue_void_CRenderQueue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__updateRenderQueue_void_CRenderQueue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisible_void_ev_bool(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisible_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisible_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisible_ev_bool(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisible_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisible_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isVisible_ev_bool(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isVisible_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isVisible_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMaxDistance_void_Real(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMaxDistance_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMaxDistance_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMaxDistance_Real(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMaxDistance_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMaxDistance_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinDistance_void_Real(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinDistance_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinDistance_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinDistance_Real(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinDistance_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinDistance_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinPixelSize_void_Real(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinPixelSize_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinPixelSize_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinPixelSize_Real(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinPixelSize_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinPixelSize_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectionColour_void_CColourValue(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectionColour_void_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectionColour_void_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelected_ev_bool_IntVector(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelected_ev_bool_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelected_ev_bool_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelected_IntVector(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelected_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelected_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CSphere_ev_bool_IntVector(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_renderSelection_void(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_renderSelection_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_renderSelection_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_clearSelection_void(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_clearSelection_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_clearSelection_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_startEditing_ev_bool_ev_uint32(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_startEditing_ev_bool_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_startEditing_ev_bool_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_endEditing_void(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_endEditing_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_endEditing_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEditBoundingBox_CEditBoundingBox(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEditBoundingBox_CEditBoundingBox_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEditBoundingBox_CEditBoundingBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroup_void_ev_uint8(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroup_void_ev_uint8_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroup_void_ev_uint8_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueGroup_ev_uint8(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueGroup_ev_uint8_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueGroup_ev_uint8_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getParentNodeFullTransform_CMatrix4(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getParentNodeFullTransform_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getParentNodeFullTransform_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setQueryFlags_void_ev_uint32(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setQueryFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setQueryFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addQueryFlags_void_ev_uint32(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addQueryFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addQueryFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeQueryFlags_void_ev_uint32(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeQueryFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeQueryFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getQueryFlags_ev_uint32(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getQueryFlags_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getQueryFlags_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisibilityFlags_void_ev_uint32(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisibilityFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisibilityFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addVisibilityFlags_void_ev_uint32(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addVisibilityFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addVisibilityFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeVisibilityFlags_void_ev_uint32(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeVisibilityFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeVisibilityFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisibilityFlags_ev_uint32(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisibilityFlags_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisibilityFlags_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addListener_void_CMovableObjectListener(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addListener_void_CMovableObjectListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addListener_void_CMovableObjectListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeListener_void_CMovableObjectListener(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeListener_void_CMovableObjectListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeListener_void_CMovableObjectListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_existListener_ev_bool_CMovableObjectListener(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_existListener_ev_bool_CMovableObjectListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_existListener_ev_bool_CMovableObjectListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListenerCount_ev_uint32(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListenerCount_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListenerCount_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListener_CMovableObjectListener_ev_uint32(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListener_CMovableObjectListener_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListener_CMovableObjectListener_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_queryLights_LightList(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_queryLights_LightList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_queryLights_LightList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightMask_ev_uint32(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightMask_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightMask_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightMask_void_ev_uint32(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightMask_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightMask_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getLightList_LightList(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getLightList_LightList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getLightList_LightList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setCastShadows_void_ev_bool(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setCastShadows_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setCastShadows_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getReceivesShadows_ev_bool(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getReceivesShadows_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getReceivesShadows_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getTypeFlags_ev_uint32(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getTypeFlags_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getTypeFlags_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_ev_bool(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setDebugDisplayEnabled_void_ev_bool(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setDebugDisplayEnabled_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setDebugDisplayEnabled_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isDebugDisplayEnabled_ev_bool(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isDebugDisplayEnabled_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isDebugDisplayEnabled_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getCastShadows_ev_bool(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getCastShadows_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getCastShadows_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEdgeList_CEdgeData(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEdgeList_CEdgeData_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEdgeList_CEdgeData_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_hasEdgeList_ev_bool(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_hasEdgeList_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_hasEdgeList_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_ev_bool(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightCapBounds_CAxisAlignedBox(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightCapBounds_CAxisAlignedBox_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightCapBounds_CAxisAlignedBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getDarkCapBounds_CAxisAlignedBox_CLight_Real(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getPointExtrusionDistance_Real_CLight(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getPointExtrusionDistance_Real_CLight_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getPointExtrusionDistance_Real_CLight_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_updateEdgeListLightFacing_void_CEdgeData_CVector4(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_extrudeBounds_void_CAxisAlignedBox_CVector4_Real(EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback = pCallback;
+				}
+				virtual void _notifyCurrentCamera(_in EarthView::World::Graphic::CCamera* cam)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCurrentCamera_void_CCamera_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCurrentCamera_void_CCamera_Callback(cam);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::_notifyCurrentCamera(cam);
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getBoundingBox() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingBox_CAxisAlignedBox_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingBox_CAxisAlignedBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getBoundingBox();
+				}
+				virtual Real getBoundingRadius() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingRadius_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingRadius_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getBoundingRadius();
+				}
+				virtual void _updateRenderQueue(_in EarthView::World::Graphic::CRenderQueue* pQueue)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__updateRenderQueue_void_CRenderQueue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__updateRenderQueue_void_CRenderQueue_Callback(pQueue);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::_updateRenderQueue(pQueue);
+				}
+				virtual EVString getMovableType() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getMovableType_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getMovableType_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getMovableType();
+				}
+				virtual void visitRenderables(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_ev_bool_Callback(visitor, debugRenderables);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::visitRenderables(visitor, debugRenderables);
+				}
+				virtual void visitRenderables(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_Callback(visitor);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::visitRenderables(visitor);
+				}
+				virtual const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject* getAnimableObjectPtr()
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject* returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getAnimableObjectPtr();
+				}
+				virtual ev_uint8 getRenderQueueId() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueId_ev_uint8_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint8 returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueId_ev_uint8_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getRenderQueueId();
+				}
+				virtual void _notifyCreator(_in EarthView::World::Graphic::CMovableObjectFactory* ref_fact)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCreator_void_CMovableObjectFactory_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCreator_void_CMovableObjectFactory_Callback(ref_fact);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::_notifyCreator(ref_fact);
+				}
+				virtual EarthView::World::Graphic::CMovableObjectFactory* _getCreator() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getCreator_CMovableObjectFactory_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CMovableObjectFactory* returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getCreator_CMovableObjectFactory_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::_getCreator();
+				}
+				virtual void _notifyManager(_in EarthView::World::Graphic::CSceneManager* ref_mgr)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyManager_void_CSceneManager_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyManager_void_CSceneManager_Callback(ref_mgr);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::_notifyManager(ref_mgr);
+				}
+				virtual EarthView::World::Graphic::CSceneManager* _getManager() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getManager_CSceneManager_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CSceneManager* returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getManager_CSceneManager_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::_getManager();
+				}
+				virtual EVString getName() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getName_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getName_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getName();
+				}
+				virtual EarthView::World::Graphic::CNode* getParentNode() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentNode_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CNode* returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentNode_CNode_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getParentNode();
+				}
+				virtual EarthView::World::Graphic::CSceneNode* getParentSceneNode() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentSceneNode_CSceneNode_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CSceneNode* returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentSceneNode_CSceneNode_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getParentSceneNode();
+				}
+				virtual ev_bool isParentTagPoint() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isParentTagPoint_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isParentTagPoint_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::isParentTagPoint();
+				}
+				virtual void _notifyAttached(_in EarthView::World::Graphic::CNode* ref_parent, _in ev_bool isTagPoint)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_ev_bool_Callback(ref_parent, isTagPoint);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::_notifyAttached(ref_parent, isTagPoint);
+				}
+				virtual void _notifyAttached(_in EarthView::World::Graphic::CNode* ref_parent)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_Callback(ref_parent);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::_notifyAttached(ref_parent);
+				}
+				virtual ev_bool isAttached() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isAttached_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isAttached_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::isAttached();
+				}
+				virtual void detachFromParent()
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_detachFromParent_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_detachFromParent_void_Callback();
+					}
+					else
+						return this->CMovablePlaneInternalMovable::detachFromParent();
+				}
+				virtual ev_bool isInScene() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isInScene_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isInScene_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::isInScene();
+				}
+				virtual void _notifyMoved()
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyMoved_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyMoved_void_Callback();
+					}
+					else
+						return this->CMovablePlaneInternalMovable::_notifyMoved();
+				}
+				virtual void _notifyLightsQueried(_in const EarthView::World::Graphic::LightList* lightList)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyLightsQueried_void_LightList_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyLightsQueried_void_LightList_Callback(lightList);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::_notifyLightsQueried(lightList);
+				}
+				virtual void setLightQueriedListener(_in EarthView::World::Graphic::CMovableObject::CLightQueriedListener* listener)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightQueriedListener_void_CLightQueriedListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightQueriedListener_void_CLightQueriedListener_Callback(listener);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::setLightQueriedListener(listener);
+				}
+				virtual EarthView::World::Graphic::CMovableObject::CLightQueriedListener* getLightQueriedListener()
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightQueriedListener_CLightQueriedListener_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CMovableObject::CLightQueriedListener* returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightQueriedListener_CLightQueriedListener_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getLightQueriedListener();
+				}
+				virtual ev_uint32 getLightListUpdated() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightListUpdated_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightListUpdated_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getLightListUpdated();
+				}
+				virtual void setLightListUpdated(_in ev_uint32 frame)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightListUpdated_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightListUpdated_void_ev_uint32_Callback(frame);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::setLightListUpdated(frame);
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getWorldBoundingBox(_in ev_bool derive) const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback(derive);
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getWorldBoundingBox(derive);
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getWorldBoundingBox() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getWorldBoundingBox();
+				}
+				virtual const EarthView::World::Spatial::Math::CSphere& getWorldBoundingSphere(_in ev_bool derive) const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CSphere& returnValue = *(EarthView::World::Spatial::Math::CSphere*)m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_ev_bool_Callback(derive);
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getWorldBoundingSphere(derive);
+				}
+				virtual const EarthView::World::Spatial::Math::CSphere& getWorldBoundingSphere() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CSphere& returnValue = *(EarthView::World::Spatial::Math::CSphere*)m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getWorldBoundingSphere();
+				}
+				virtual void setVisible(_in ev_bool visible)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisible_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisible_void_ev_bool_Callback(visible);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::setVisible(visible);
+				}
+				virtual ev_bool getVisible() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisible_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisible_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getVisible();
+				}
+				virtual ev_bool isVisible() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isVisible_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isVisible_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::isVisible();
+				}
+				virtual void setRenderingMaxDistance(_in Real dist)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMaxDistance_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMaxDistance_void_Real_Callback(dist);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::setRenderingMaxDistance(dist);
+				}
+				virtual Real getRenderingMaxDistance() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMaxDistance_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMaxDistance_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getRenderingMaxDistance();
+				}
+				virtual void setRenderingMinDistance(_in Real dist)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinDistance_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinDistance_void_Real_Callback(dist);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::setRenderingMinDistance(dist);
+				}
+				virtual Real getRenderingMinDistance() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinDistance_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinDistance_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getRenderingMinDistance();
+				}
+				virtual void setRenderingMinPixelSize(_in Real pixelSize)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinPixelSize_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinPixelSize_void_Real_Callback(pixelSize);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::setRenderingMinPixelSize(pixelSize);
+				}
+				virtual Real getRenderingMinPixelSize() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinPixelSize_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinPixelSize_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getRenderingMinPixelSize();
+				}
+				virtual void setSelectionColour(_in const EarthView::World::Graphic::CColourValue& colour)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectionColour_void_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectionColour_void_CColourValue_Callback(&colour);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::setSelectionColour(colour);
+				}
+				virtual ev_bool setSelected(_in const EarthView::World::Core::IntVector& objIndics)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelected_ev_bool_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelected_ev_bool_IntVector_Callback(&objIndics);
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::setSelected(objIndics);
+				}
+				virtual EarthView::World::Core::IntVector getSelected() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelected_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Core::IntVector returnValue = *(EarthView::World::Core::IntVector*)m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelected_IntVector_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getSelected();
+				}
+				virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CRay& ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out EarthView::World::Spatial::Math::CVector3& point)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback(&ray, viewport, prepareToRenderSelection, objIndex, &point);
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::selectBy(ray, viewport, prepareToRenderSelection, objIndex, point);
+				}
+				virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CAxisAlignedBox& aabb, _in ev_bool prepareToRenderSelection, _out EarthView::World::Core::IntVector& indexVec)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback(&aabb, prepareToRenderSelection, &indexVec);
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::selectBy(aabb, prepareToRenderSelection, indexVec);
+				}
+				virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CSphere& sphere, _in ev_bool prepareToRenderSelection, _out EarthView::World::Core::IntVector& indexVec)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback(&sphere, prepareToRenderSelection, &indexVec);
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::selectBy(sphere, prepareToRenderSelection, indexVec);
+				}
+				virtual ev_bool selectComponentBy(_in const EarthView::World::Spatial::Math::CRay& ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out ev_int32& submeshIndex, _out ev_int32& instanceIndex, _out ev_int32& segmentIndex, _out EarthView::World::Spatial::Math::CVector3& point)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback(&ray, viewport, prepareToRenderSelection, objIndex, submeshIndex, instanceIndex, segmentIndex, &point);
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::selectComponentBy(ray, viewport, prepareToRenderSelection, objIndex, submeshIndex, instanceIndex, segmentIndex, point);
+				}
+				virtual void renderSelection()
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_renderSelection_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_renderSelection_void_Callback();
+					}
+					else
+						return this->CMovablePlaneInternalMovable::renderSelection();
+				}
+				virtual void clearSelection()
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_clearSelection_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_clearSelection_void_Callback();
+					}
+					else
+						return this->CMovablePlaneInternalMovable::clearSelection();
+				}
+				virtual ev_bool startEditing(_in ev_uint32 objectIndex)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_startEditing_ev_bool_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_startEditing_ev_bool_ev_uint32_Callback(objectIndex);
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::startEditing(objectIndex);
+				}
+				virtual void endEditing()
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_endEditing_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_endEditing_void_Callback();
+					}
+					else
+						return this->CMovablePlaneInternalMovable::endEditing();
+				}
+				virtual EarthView::World::Graphic::CEditBoundingBox* getEditBoundingBox()
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEditBoundingBox_CEditBoundingBox_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CEditBoundingBox* returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEditBoundingBox_CEditBoundingBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getEditBoundingBox();
+				}
+				virtual ev_bool getSelectedObjectWorldMatrix(_in ev_uint32 objectIndex, _inout EarthView::World::Spatial::Math::CMatrix4& matrix)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback(objectIndex, &matrix);
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getSelectedObjectWorldMatrix(objectIndex, matrix);
+				}
+				virtual ev_bool setSelectedObjectWorldMatrix(_in ev_uint32 objectIndex, _in const EarthView::World::Spatial::Math::CMatrix4& matrix)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback(objectIndex, &matrix);
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::setSelectedObjectWorldMatrix(objectIndex, matrix);
+				}
+				virtual void setRenderQueueGroup(_in ev_uint8 queueID)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroup_void_ev_uint8_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroup_void_ev_uint8_Callback(queueID);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::setRenderQueueGroup(queueID);
+				}
+				virtual void setRenderQueueGroupAndPriority(_in ev_uint8 queueID, _in ev_uint16 priority)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback(queueID, priority);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::setRenderQueueGroupAndPriority(queueID, priority);
+				}
+				virtual ev_uint8 getRenderQueueGroup() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueGroup_ev_uint8_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint8 returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueGroup_ev_uint8_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getRenderQueueGroup();
+				}
+				virtual const EarthView::World::Spatial::Math::CMatrix4& _getParentNodeFullTransform() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getParentNodeFullTransform_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CMatrix4& returnValue = *(EarthView::World::Spatial::Math::CMatrix4*)m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getParentNodeFullTransform_CMatrix4_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::_getParentNodeFullTransform();
+				}
+				virtual void setQueryFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setQueryFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setQueryFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::setQueryFlags(flags);
+				}
+				virtual void addQueryFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addQueryFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addQueryFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::addQueryFlags(flags);
+				}
+				virtual void removeQueryFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeQueryFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeQueryFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::removeQueryFlags(flags);
+				}
+				virtual ev_uint32 getQueryFlags() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getQueryFlags_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getQueryFlags_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getQueryFlags();
+				}
+				virtual void setVisibilityFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisibilityFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisibilityFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::setVisibilityFlags(flags);
+				}
+				virtual void addVisibilityFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addVisibilityFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addVisibilityFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::addVisibilityFlags(flags);
+				}
+				virtual void removeVisibilityFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeVisibilityFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeVisibilityFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::removeVisibilityFlags(flags);
+				}
+				virtual ev_uint32 getVisibilityFlags() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisibilityFlags_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisibilityFlags_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getVisibilityFlags();
+				}
+				virtual void addListener(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* ref_listener)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addListener_void_CMovableObjectListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addListener_void_CMovableObjectListener_Callback(ref_listener);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::addListener(ref_listener);
+				}
+				virtual void removeListener(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeListener_void_CMovableObjectListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeListener_void_CMovableObjectListener_Callback(listener);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::removeListener(listener);
+				}
+				virtual ev_bool existListener(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener) const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_existListener_ev_bool_CMovableObjectListener_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_existListener_ev_bool_CMovableObjectListener_Callback(listener);
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::existListener(listener);
+				}
+				virtual ev_uint32 getListenerCount() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListenerCount_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListenerCount_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getListenerCount();
+				}
+				virtual EarthView::World::Graphic::CMovableObject::CMovableObjectListener* getListener(_in ev_uint32 index) const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListener_CMovableObjectListener_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CMovableObject::CMovableObjectListener* returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListener_CMovableObjectListener_ev_uint32_Callback(index);
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getListener(index);
+				}
+				virtual const EarthView::World::Graphic::LightList& queryLights() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_queryLights_LightList_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::LightList& returnValue = *(EarthView::World::Graphic::LightList*)m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_queryLights_LightList_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::queryLights();
+				}
+				virtual ev_uint32 getLightMask() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightMask_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightMask_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getLightMask();
+				}
+				virtual void setLightMask(_in ev_uint32 lightMask)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightMask_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightMask_void_ev_uint32_Callback(lightMask);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::setLightMask(lightMask);
+				}
+				virtual EarthView::World::Graphic::LightList* _getLightList()
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getLightList_LightList_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::LightList* returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getLightList_LightList_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::_getLightList();
+				}
+				virtual EarthView::World::Graphic::CEdgeData* getEdgeList()
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEdgeList_CEdgeData_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CEdgeData* returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEdgeList_CEdgeData_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getEdgeList();
+				}
+				virtual ev_bool hasEdgeList()
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_hasEdgeList_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_hasEdgeList_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::hasEdgeList();
+				}
+				virtual EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator getShadowVolumeRenderableIterator(_in EarthView::World::Graphic::ShadowTechnique shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDist, _in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator returnValue = *(EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator*)m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback((int)shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist, flags);
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getShadowVolumeRenderableIterator(shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist, flags);
+				}
+				virtual EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator getShadowVolumeRenderableIterator(_in EarthView::World::Graphic::ShadowTechnique shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDist)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator returnValue = *(EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator*)m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback((int)shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist);
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getShadowVolumeRenderableIterator(shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist);
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getLightCapBounds() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightCapBounds_CAxisAlignedBox_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightCapBounds_CAxisAlignedBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getLightCapBounds();
+				}
+				virtual EarthView::World::Spatial::Math::CAxisAlignedBox getDarkCapBounds(_in const EarthView::World::Graphic::CLight& light, _in Real dirLightExtrusionDist) const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Spatial::Math::CAxisAlignedBox returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback(&light, dirLightExtrusionDist);
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getDarkCapBounds(light, dirLightExtrusionDist);
+				}
+				virtual void setCastShadows(_in ev_bool enabled)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setCastShadows_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setCastShadows_void_ev_bool_Callback(enabled);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::setCastShadows(enabled);
+				}
+				virtual ev_bool getCastShadows() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getCastShadows_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getCastShadows_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getCastShadows();
+				}
+				virtual ev_bool getReceivesShadows()
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getReceivesShadows_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getReceivesShadows_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getReceivesShadows();
+				}
+				virtual Real getPointExtrusionDistance(_in const EarthView::World::Graphic::CLight* l) const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getPointExtrusionDistance_Real_CLight_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getPointExtrusionDistance_Real_CLight_Callback(l);
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getPointExtrusionDistance(l);
+				}
+				virtual ev_uint32 getTypeFlags() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getTypeFlags_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getTypeFlags_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::getTypeFlags();
+				}
+				virtual void setDebugDisplayEnabled(_in ev_bool enabled)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setDebugDisplayEnabled_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setDebugDisplayEnabled_void_ev_bool_Callback(enabled);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::setDebugDisplayEnabled(enabled);
+				}
+				virtual ev_bool isDebugDisplayEnabled() const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isDebugDisplayEnabled_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isDebugDisplayEnabled_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CMovablePlaneInternalMovable::isDebugDisplayEnabled();
+				}
+				virtual void updateEdgeListLightFacing(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const EarthView::World::Spatial::Math::CVector4& lightPos)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback(edgeData, &lightPos);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::updateEdgeListLightFacing(edgeData, lightPos);
+				}
+				virtual void generateShadowVolume(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const EarthView::World::Graphic::CHardwareIndexBufferSharedPtr& indexBuffer, _in const EarthView::World::Graphic::CLight* light, _inout EarthView::World::Graphic::CShadowCaster::ShadowRenderableList& shadowRenderables, _in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback(edgeData, &indexBuffer, light, &shadowRenderables, flags);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::generateShadowVolume(edgeData, indexBuffer, light, shadowRenderables, flags);
+				}
+				virtual void extrudeBounds(_inout EarthView::World::Spatial::Math::CAxisAlignedBox& box, _in const EarthView::World::Spatial::Math::CVector4& lightPos, _in Real extrudeDist) const
+				{
+					if(m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback(&box, &lightPos, extrudeDist);
+					}
+					else
+						return this->CMovablePlaneInternalMovable::extrudeBounds(box, lightPos, extrudeDist);
+				}
+			};
+			REGISTER_FACTORY_CLASS(CMovablePlaneInternalMovableProxy);
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCurrentCamera_void_CCamera(void *pObjectXXXX, _in EarthView::World::Graphic::CCamera* cam )
+			{
+				EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX;
+				if (dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable::_notifyCurrentCamera(cam);
+				else
+					ptrNativeObject->_notifyCurrentCamera(cam);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCurrentCamera_void_CCamera( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCurrentCamera_void_CCamera_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCurrentCamera_void_CCamera(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCurrentCamera_void_CCamera_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CCamera* cam )
+			{
+				EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable::_notifyCurrentCamera(cam);
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingBox_CAxisAlignedBox(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX;
+				if (dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Spatial::Math::CAxisAlignedBox& objXXXX = ptrNativeObject->EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable::getBoundingBox();
+					const EarthView::World::Spatial::Math::CAxisAlignedBox *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Spatial::Math::CAxisAlignedBox& objXXXX = ptrNativeObject->getBoundingBox();
+					const EarthView::World::Spatial::Math::CAxisAlignedBox *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingBox_CAxisAlignedBox( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingBox_CAxisAlignedBox_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingBox_CAxisAlignedBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingBox_CAxisAlignedBox_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CAxisAlignedBox& objXXXX = ptrNativeObject->EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable::getBoundingBox();
+				const EarthView::World::Spatial::Math::CAxisAlignedBox *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingRadius_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX;
+				if (dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable::getBoundingRadius();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getBoundingRadius();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingRadius_Real( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingRadius_Real_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingRadius_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getBoundingRadius_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable::getBoundingRadius();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__updateRenderQueue_void_CRenderQueue(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderQueue* pQueue )
+			{
+				EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX;
+				if (dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable::_updateRenderQueue(pQueue);
+				else
+					ptrNativeObject->_updateRenderQueue(pQueue);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__updateRenderQueue_void_CRenderQueue( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__updateRenderQueue_void_CRenderQueue_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__updateRenderQueue_void_CRenderQueue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__updateRenderQueue_void_CRenderQueue_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderQueue* pQueue )
+			{
+				EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable::_updateRenderQueue(pQueue);
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getMovableType_EVString(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX;
+				if (dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*)ptrNativeObject) != NULL)
+				{
+					EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable::getMovableType();
+					return objXXXX.makeBuffer();
+				}
+				else
+				{
+					EVString objXXXX = ptrNativeObject->getMovableType();
+					return objXXXX.makeBuffer();
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getMovableType_EVString( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getMovableType_EVString_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getMovableType_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getMovableType_EVString_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable::getMovableType();
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_ev_bool(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables )
+			{
+				EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX;
+				if (dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable::visitRenderables(visitor, debugRenderables);
+				else
+					ptrNativeObject->visitRenderables(visitor, debugRenderables);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_ev_bool_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_ev_bool_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables )
+			{
+				EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable::visitRenderables(visitor, debugRenderables);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor )
+			{
+				EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX;
+				if (dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable::visitRenderables(visitor);
+				else
+					ptrNativeObject->visitRenderables(visitor);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_visitRenderables_void_CVisitor_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor )
+			{
+				EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable::visitRenderables(visitor);
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getDerivedPlane_CPlane(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CPlane& objXXXX = ptrNativeObject->_getDerivedPlane();
+				const EarthView::World::Spatial::Math::CPlane *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getAnimableObjectPtr_CMovableObjectInternalAnimableObject( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getAnimableObjectPtr_CMovableObjectInternalAnimableObject(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueId_ev_uint8( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueId_ev_uint8_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueId_ev_uint8(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCreator_void_CMovableObjectFactory( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCreator_void_CMovableObjectFactory_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyCreator_void_CMovableObjectFactory(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getCreator_CMovableObjectFactory( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getCreator_CMovableObjectFactory_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getCreator_CMovableObjectFactory(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyManager_void_CSceneManager( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyManager_void_CSceneManager_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyManager_void_CSceneManager(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getManager_CSceneManager( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getManager_CSceneManager_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getManager_CSceneManager(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getName_EVString( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getName_EVString_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getName_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentNode_CNode( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentNode_CNode_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentNode_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentSceneNode_CSceneNode( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentSceneNode_CSceneNode_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getParentSceneNode_CSceneNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isParentTagPoint_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isParentTagPoint_ev_bool_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isParentTagPoint_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_ev_bool_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyAttached_void_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isAttached_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isAttached_ev_bool_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isAttached_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_detachFromParent_void( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_detachFromParent_void_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_detachFromParent_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isInScene_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isInScene_ev_bool_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isInScene_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyMoved_void( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyMoved_void_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyMoved_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyLightsQueried_void_LightList( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyLightsQueried_void_LightList_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__notifyLightsQueried_void_LightList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightQueriedListener_void_CLightQueriedListener( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightQueriedListener_void_CLightQueriedListener_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightQueriedListener_void_CLightQueriedListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightQueriedListener_CLightQueriedListener( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightQueriedListener_CLightQueriedListener_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightQueriedListener_CLightQueriedListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightListUpdated_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightListUpdated_ev_uint32_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightListUpdated_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightListUpdated_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightListUpdated_void_ev_uint32_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightListUpdated_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_ev_bool_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingSphere_CSphere(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisible_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisible_void_ev_bool_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisible_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisible_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisible_ev_bool_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisible_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isVisible_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isVisible_ev_bool_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isVisible_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMaxDistance_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMaxDistance_void_Real_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMaxDistance_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMaxDistance_Real( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMaxDistance_Real_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMaxDistance_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinDistance_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinDistance_void_Real_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinDistance_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinDistance_Real( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinDistance_Real_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinDistance_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinPixelSize_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinPixelSize_void_Real_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderingMinPixelSize_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinPixelSize_Real( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinPixelSize_Real_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderingMinPixelSize_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectionColour_void_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectionColour_void_CColourValue_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectionColour_void_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelected_ev_bool_IntVector( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelected_ev_bool_IntVector_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelected_ev_bool_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelected_IntVector( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelected_IntVector_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelected_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CSphere_ev_bool_IntVector( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectBy_ev_bool_CSphere_ev_bool_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_renderSelection_void( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_renderSelection_void_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_renderSelection_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_clearSelection_void( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_clearSelection_void_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_clearSelection_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_startEditing_ev_bool_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_startEditing_ev_bool_ev_uint32_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_startEditing_ev_bool_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_endEditing_void( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_endEditing_void_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_endEditing_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEditBoundingBox_CEditBoundingBox( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEditBoundingBox_CEditBoundingBox_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEditBoundingBox_CEditBoundingBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroup_void_ev_uint8( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroup_void_ev_uint8_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroup_void_ev_uint8(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueGroup_ev_uint8( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueGroup_ev_uint8_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getRenderQueueGroup_ev_uint8(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getParentNodeFullTransform_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getParentNodeFullTransform_CMatrix4_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getParentNodeFullTransform_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setQueryFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setQueryFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setQueryFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addQueryFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addQueryFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addQueryFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeQueryFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeQueryFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeQueryFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getQueryFlags_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getQueryFlags_ev_uint32_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getQueryFlags_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisibilityFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisibilityFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setVisibilityFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addVisibilityFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addVisibilityFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addVisibilityFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeVisibilityFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeVisibilityFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeVisibilityFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisibilityFlags_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisibilityFlags_ev_uint32_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getVisibilityFlags_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addListener_void_CMovableObjectListener( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addListener_void_CMovableObjectListener_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_addListener_void_CMovableObjectListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeListener_void_CMovableObjectListener( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeListener_void_CMovableObjectListener_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_removeListener_void_CMovableObjectListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_existListener_ev_bool_CMovableObjectListener( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_existListener_ev_bool_CMovableObjectListener_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_existListener_ev_bool_CMovableObjectListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListenerCount_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListenerCount_ev_uint32_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListenerCount_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListener_CMovableObjectListener_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListener_CMovableObjectListener_ev_uint32_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getListener_CMovableObjectListener_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_queryLights_LightList( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_queryLights_LightList_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_queryLights_LightList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightMask_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightMask_ev_uint32_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightMask_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightMask_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightMask_void_ev_uint32_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setLightMask_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getLightList_LightList( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getLightList_LightList_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable__getLightList_LightList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setCastShadows_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setCastShadows_void_ev_bool_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setCastShadows_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getReceivesShadows_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getReceivesShadows_ev_bool_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getReceivesShadows_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getTypeFlags_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getTypeFlags_ev_uint32_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getTypeFlags_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setDebugDisplayEnabled_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setDebugDisplayEnabled_void_ev_bool_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_setDebugDisplayEnabled_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isDebugDisplayEnabled_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isDebugDisplayEnabled_ev_bool_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_isDebugDisplayEnabled_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getCastShadows_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getCastShadows_ev_bool_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getCastShadows_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEdgeList_CEdgeData( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEdgeList_CEdgeData_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getEdgeList_CEdgeData(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_hasEdgeList_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_hasEdgeList_ev_bool_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_hasEdgeList_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getWorldBoundingBox_CAxisAlignedBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightCapBounds_CAxisAlignedBox( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightCapBounds_CAxisAlignedBox_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getLightCapBounds_CAxisAlignedBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getDarkCapBounds_CAxisAlignedBox_CLight_Real( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getDarkCapBounds_CAxisAlignedBox_CLight_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getPointExtrusionDistance_Real_CLight( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getPointExtrusionDistance_Real_CLight_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_getPointExtrusionDistance_Real_CLight(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_updateEdgeListLightFacing_void_CEdgeData_CVector4( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_updateEdgeListLightFacing_void_CEdgeData_CVector4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_extrudeBounds_void_CAxisAlignedBox_CVector4_Real( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback* pCallback )
+			{
+				CMovablePlaneInternalMovableProxy* ptr = dynamic_cast<CMovablePlaneInternalMovableProxy*>((EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_CMovablePlaneInternalMovable_extrudeBounds_void_CAxisAlignedBox_CVector4_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CMovablePlane__notifyCurrentCamera_void_CCamera(void *pObjectXXXX, _in EarthView::World::Graphic::CCamera* cam )
+			{
+				EarthView::World::Graphic::CMovablePlane* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane*) pObjectXXXX;
+				if (dynamic_cast<CMovablePlaneProxy*>((EarthView::World::Graphic::CMovablePlane*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CMovablePlane::_notifyCurrentCamera(cam);
+				else
+					ptrNativeObject->_notifyCurrentCamera(cam);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane__notifyCurrentCamera_void_CCamera( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane__notifyCurrentCamera_void_CCamera_Callback* pCallback )
+			{
+				CMovablePlaneProxy* ptr = dynamic_cast<CMovablePlaneProxy*>((EarthView::World::Graphic::CMovablePlane*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane__notifyCurrentCamera_void_CCamera(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CMovablePlane__notifyCurrentCamera_void_CCamera_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CCamera* cam )
+			{
+				EarthView::World::Graphic::CMovablePlane* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CMovablePlane::_notifyCurrentCamera(cam);
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CMovablePlane_getBoundingBox_CAxisAlignedBox(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CMovablePlane* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane*) pObjectXXXX;
+				if (dynamic_cast<CMovablePlaneProxy*>((EarthView::World::Graphic::CMovablePlane*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Spatial::Math::CAxisAlignedBox& objXXXX = ptrNativeObject->EarthView::World::Graphic::CMovablePlane::getBoundingBox();
+					const EarthView::World::Spatial::Math::CAxisAlignedBox *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Spatial::Math::CAxisAlignedBox& objXXXX = ptrNativeObject->getBoundingBox();
+					const EarthView::World::Spatial::Math::CAxisAlignedBox *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_getBoundingBox_CAxisAlignedBox( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_getBoundingBox_CAxisAlignedBox_Callback* pCallback )
+			{
+				CMovablePlaneProxy* ptr = dynamic_cast<CMovablePlaneProxy*>((EarthView::World::Graphic::CMovablePlane*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_getBoundingBox_CAxisAlignedBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CMovablePlane_getBoundingBox_CAxisAlignedBox_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CMovablePlane* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CAxisAlignedBox& objXXXX = ptrNativeObject->EarthView::World::Graphic::CMovablePlane::getBoundingBox();
+				const EarthView::World::Spatial::Math::CAxisAlignedBox *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CMovablePlane_getBoundingRadius_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CMovablePlane* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane*) pObjectXXXX;
+				if (dynamic_cast<CMovablePlaneProxy*>((EarthView::World::Graphic::CMovablePlane*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CMovablePlane::getBoundingRadius();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getBoundingRadius();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_getBoundingRadius_Real( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_getBoundingRadius_Real_Callback* pCallback )
+			{
+				CMovablePlaneProxy* ptr = dynamic_cast<CMovablePlaneProxy*>((EarthView::World::Graphic::CMovablePlane*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_getBoundingRadius_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CMovablePlane_getBoundingRadius_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CMovablePlane* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CMovablePlane::getBoundingRadius();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CMovablePlane__updateRenderQueue_void_CRenderQueue(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderQueue* pQueue )
+			{
+				EarthView::World::Graphic::CMovablePlane* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane*) pObjectXXXX;
+				if (dynamic_cast<CMovablePlaneProxy*>((EarthView::World::Graphic::CMovablePlane*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CMovablePlane::_updateRenderQueue(pQueue);
+				else
+					ptrNativeObject->_updateRenderQueue(pQueue);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane__updateRenderQueue_void_CRenderQueue( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane__updateRenderQueue_void_CRenderQueue_Callback* pCallback )
+			{
+				CMovablePlaneProxy* ptr = dynamic_cast<CMovablePlaneProxy*>((EarthView::World::Graphic::CMovablePlane*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane__updateRenderQueue_void_CRenderQueue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CMovablePlane__updateRenderQueue_void_CRenderQueue_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderQueue* pQueue )
+			{
+				EarthView::World::Graphic::CMovablePlane* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CMovablePlane::_updateRenderQueue(pQueue);
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CMovablePlane_getMovableType_EVString(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CMovablePlane* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane*) pObjectXXXX;
+				if (dynamic_cast<CMovablePlaneProxy*>((EarthView::World::Graphic::CMovablePlane*)ptrNativeObject) != NULL)
+				{
+					EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CMovablePlane::getMovableType();
+					return objXXXX.makeBuffer();
+				}
+				else
+				{
+					EVString objXXXX = ptrNativeObject->getMovableType();
+					return objXXXX.makeBuffer();
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_getMovableType_EVString( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_getMovableType_EVString_Callback* pCallback )
+			{
+				CMovablePlaneProxy* ptr = dynamic_cast<CMovablePlaneProxy*>((EarthView::World::Graphic::CMovablePlane*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_getMovableType_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CMovablePlane_getMovableType_EVString_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CMovablePlane* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CMovablePlane::getMovableType();
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_ev_bool(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables )
+			{
+				EarthView::World::Graphic::CMovablePlane* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane*) pObjectXXXX;
+				if (dynamic_cast<CMovablePlaneProxy*>((EarthView::World::Graphic::CMovablePlane*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CMovablePlane::visitRenderables(visitor, debugRenderables);
+				else
+					ptrNativeObject->visitRenderables(visitor, debugRenderables);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_ev_bool_Callback* pCallback )
+			{
+				CMovablePlaneProxy* ptr = dynamic_cast<CMovablePlaneProxy*>((EarthView::World::Graphic::CMovablePlane*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_ev_bool_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables )
+			{
+				EarthView::World::Graphic::CMovablePlane* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CMovablePlane::visitRenderables(visitor, debugRenderables);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor )
+			{
+				EarthView::World::Graphic::CMovablePlane* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane*) pObjectXXXX;
+				if (dynamic_cast<CMovablePlaneProxy*>((EarthView::World::Graphic::CMovablePlane*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CMovablePlane::visitRenderables(visitor);
+				else
+					ptrNativeObject->visitRenderables(visitor);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_Callback* pCallback )
+			{
+				CMovablePlaneProxy* ptr = dynamic_cast<CMovablePlaneProxy*>((EarthView::World::Graphic::CMovablePlane*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CMovablePlane_visitRenderables_void_CVisitor_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor )
+			{
+				EarthView::World::Graphic::CMovablePlane* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CMovablePlane::visitRenderables(visitor);
+			}
+			extern "C" EV_DLL_EXPORT  const EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*  _stdcall EarthView_World_Graphic_CMovablePlane_getMovableObjectPtr_CMovablePlaneInternalMovable(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CMovablePlane* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane*) pObjectXXXX;
+				if (dynamic_cast<CMovablePlaneProxy*>((EarthView::World::Graphic::CMovablePlane*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable* objXXXX = ptrNativeObject->EarthView::World::Graphic::CMovablePlane::getMovableObjectPtr();
+					return objXXXX;
+				}
+				else
+				{
+					const EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable* objXXXX = ptrNativeObject->getMovableObjectPtr();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CMovablePlane_getMovableObjectPtr_CMovablePlaneInternalMovable( void *pObjectXXXX, EarthView_World_Graphic_CMovablePlane_getMovableObjectPtr_CMovablePlaneInternalMovable_Callback* pCallback )
+			{
+				CMovablePlaneProxy* ptr = dynamic_cast<CMovablePlaneProxy*>((EarthView::World::Graphic::CMovablePlane*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CMovablePlane_getMovableObjectPtr_CMovablePlaneInternalMovable(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable*  _stdcall EarthView_World_Graphic_CMovablePlane_getMovableObjectPtr_CMovablePlaneInternalMovable_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CMovablePlane* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane*) pObjectXXXX;
+				const EarthView::World::Graphic::CMovablePlane::CMovablePlaneInternalMovable* objXXXX = ptrNativeObject->EarthView::World::Graphic::CMovablePlane::getMovableObjectPtr();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CMovablePlane__getDerivedPlane_CPlane(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CMovablePlane* ptrNativeObject = (EarthView::World::Graphic::CMovablePlane*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CPlane& objXXXX = ptrNativeObject->_getDerivedPlane();
+				const EarthView::World::Spatial::Math::CPlane *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+		}
+	}
+}

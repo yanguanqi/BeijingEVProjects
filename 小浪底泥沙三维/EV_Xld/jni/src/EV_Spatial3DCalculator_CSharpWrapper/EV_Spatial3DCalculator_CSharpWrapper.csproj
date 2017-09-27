@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{YHL2CXUB-8A1Y-627A-RM29-47J6M3FQB29O}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EV_Spatial3DCalculator_CSharpWrapper</RootNamespace>
+    <AssemblyName>EV_Spatial3DCalculator_CSharpWrapper</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\bin\Debug\EV_Spatial3DCalculator_CSharpWrapper.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Debug_x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\bin\Debug_x64\EV_Spatial3DCalculator_CSharpWrapper.XML</DocumentationFile>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\bin\Release\EV_Spatial3DCalculator_CSharpWrapper.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\Release_x64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\bin\Release_x64\EV_Spatial3DCalculator_CSharpWrapper.XML</DocumentationFile>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ev_registclassfactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EV_Core_CSharpWrapper\EV_Core_CSharpWrapper.csproj">
+      <Project>{0J6SKGCV-SQ6U-OHA0-3C55-YF400DIJLL5N}</Project>
+      <Name>EV_Core_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_Graphic_CSharpWrapper\EV_Graphic_CSharpWrapper.csproj">
+      <Project>{QDU4PMV6-IVRX-6VRX-TVM6-L98PR5OG2ST4}</Project>
+      <Name>EV_Graphic_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_MathEngine_CSharpWrapper\EV_MathEngine_CSharpWrapper.csproj">
+      <Project>{0W99KOTP-G7QG-GXQ3-KDPL-KC57ESIYQC5N}</Project>
+      <Name>EV_MathEngine_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_SpatialObject_CSharpWrapper\EV_SpatialObject_CSharpWrapper.csproj">
+      <Project>{OILD0O3L-UHQH-DRJC-XM6D-4QXL0B1M4TUK}</Project>
+      <Name>EV_SpatialObject_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_SpatialInterface_CSharpWrapper\EV_SpatialInterface_CSharpWrapper.csproj">
+      <Project>{4CT1INE3-XWJC-GDTB-F9YA-PJ6QTDHV0YK1}</Project>
+      <Name>EV_SpatialInterface_CSharpWrapper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

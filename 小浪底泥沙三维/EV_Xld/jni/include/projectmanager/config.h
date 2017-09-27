@@ -1,0 +1,10 @@
+﻿#ifndef _PRJMGR_CONFIG_H
+#define _PRJMGR_CONFIG_H
+
+#ifdef  EV_BUILD_PROJECT_MANAGER 
+#define EV_PRJMGR_DLL EV_DLL_EXPORT
+#else
+#define EV_PRJMGR_DLL EV_DLL_IMPORT
+#endif
+
+#endif

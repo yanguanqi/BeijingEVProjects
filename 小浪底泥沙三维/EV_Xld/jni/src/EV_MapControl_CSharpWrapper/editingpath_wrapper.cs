@@ -1,0 +1,3311 @@
+/********* This file is produced by the P/Invoke AutoWrapper Utility 
+ Copyright (c) 2012 by EarthView Image Inc *********/
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Runtime.InteropServices;
+using EarthView.World.Core;
+
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Spatial2D
+		{
+			namespace Controls
+			{
+				public class EditingPath : EarthView.World.Spatial2D.Controls.EditingCurve
+				{
+					public EditingPath() : base(CreatedWhenConstruct.CWC_NotToCreate)
+					{
+						Create("CEditingPathProxy", null);
+						if (!"EarthView.World.Spatial2D.Controls.EditingPath".Equals(((Object)this).GetType().ToString()))
+						{
+							this.SetCustomExtend(true);
+						}
+						RegisterCallBack();
+						this.needDispose = true;
+						GlobalTraceInfoMap.Put(this);
+					}
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingPath_getName_EVString_NoVirtual(IntPtr pNativeObject);
+
+					public new string GetName_NoVirtual()
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingPath_getName_EVString_NoVirtual(this.NativeObject);
+						
+						string ret = Marshal.PtrToStringAnsi(__ptr);
+						ClassFactory.FreeString(ref __ptr);
+						return ret;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingPath_getName_EVString(IntPtr pNativeObject);
+
+					public override string GetName()
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingPath_getName_EVString(this.NativeObject);
+						
+						string ret = Marshal.PtrToStringAnsi(__ptr);
+						ClassFactory.FreeString(ref __ptr);
+						return ret;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern int EarthView_World_Spatial2D_Controls_CEditingPath_getType_EditingObjectType_NoVirtual(IntPtr pNativeObject);
+
+					public new EarthView.World.Spatial2D.Controls.EDITINGOBJECTTYPE GetType_NoVirtual()
+					{
+						int ret=EarthView_World_Spatial2D_Controls_CEditingPath_getType_EditingObjectType_NoVirtual(this.NativeObject);
+						
+						return (EarthView.World.Spatial2D.Controls.EDITINGOBJECTTYPE)ret;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern int EarthView_World_Spatial2D_Controls_CEditingPath_getType_EditingObjectType(IntPtr pNativeObject);
+
+					public override EarthView.World.Spatial2D.Controls.EDITINGOBJECTTYPE GetType()
+					{
+						int ret=EarthView_World_Spatial2D_Controls_CEditingPath_getType_EditingObjectType(this.NativeObject);
+						
+						return (EarthView.World.Spatial2D.Controls.EDITINGOBJECTTYPE)ret;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingPath_getGeometry_IGeometry_NoVirtual(IntPtr pNativeObject);
+
+					public new EarthView.World.Spatial.Geometry.Igeometry GetGeometry_NoVirtual()
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingPath_getGeometry_IGeometry_NoVirtual(this.NativeObject);
+						
+						if(__ptr==IntPtr.Zero)
+						{
+						return null;
+						}
+						EarthView.World.Spatial.Geometry.Igeometry csObj = new EarthView.World.Spatial.Geometry.Igeometry(CreatedWhenConstruct.CWC_NotToCreate);
+						csObj.BindNativeObject(__ptr, "IGeometry");
+						csObj.Delegate = true;
+						IClassFactory csObjClassFactory = GlobalClassFactoryMap.Get(csObj.GetCppInstanceTypeName());
+						if (csObjClassFactory != null)
+						{
+							csObj.Delegate = true;
+							csObj = csObjClassFactory.Create() as EarthView.World.Spatial.Geometry.Igeometry;
+							csObj.BindNativeObject(__ptr, "IGeometry");
+							csObj.Delegate = true;
+						}
+						return csObj;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingPath_getGeometry_IGeometry(IntPtr pNativeObject);
+
+					public override EarthView.World.Spatial.Geometry.Igeometry GetGeometry()
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingPath_getGeometry_IGeometry(this.NativeObject);
+						
+						if(__ptr==IntPtr.Zero)
+						{
+						return null;
+						}
+						EarthView.World.Spatial.Geometry.Igeometry csObj = new EarthView.World.Spatial.Geometry.Igeometry(CreatedWhenConstruct.CWC_NotToCreate);
+						csObj.BindNativeObject(__ptr, "IGeometry");
+						csObj.Delegate = true;
+						IClassFactory csObjClassFactory = GlobalClassFactoryMap.Get(csObj.GetCppInstanceTypeName());
+						if (csObjClassFactory != null)
+						{
+							csObj.Delegate = true;
+							csObj = csObjClassFactory.Create() as EarthView.World.Spatial.Geometry.Igeometry;
+							csObj.BindNativeObject(__ptr, "IGeometry");
+							csObj.Delegate = true;
+						}
+						return csObj;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern int EarthView_World_Spatial2D_Controls_CEditingPath_getPointCount_ev_int32_NoVirtual(IntPtr pNativeObject);
+
+					public new int GetPointCount_NoVirtual()
+					{
+						int ret=EarthView_World_Spatial2D_Controls_CEditingPath_getPointCount_ev_int32_NoVirtual(this.NativeObject);
+						
+						return ret;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern int EarthView_World_Spatial2D_Controls_CEditingPath_getPointCount_ev_int32(IntPtr pNativeObject);
+
+					public override int GetPointCount()
+					{
+						int ret=EarthView_World_Spatial2D_Controls_CEditingPath_getPointCount_ev_int32(this.NativeObject);
+						
+						return ret;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingPath_getPoint_CPoint_ev_int32_ev_bool_NoVirtual(IntPtr pNativeObject, int index, ref bool ok);
+
+					public new EarthView.World.Spatial.Geometry.Point GetPoint_NoVirtual(int index, ref bool ok)
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingPath_getPoint_CPoint_ev_int32_ev_bool_NoVirtual(this.NativeObject, index, ref ok);
+						
+						if(__ptr==IntPtr.Zero)
+						{
+						return null;
+						}
+						EarthView.World.Spatial.Geometry.Point csObj = new EarthView.World.Spatial.Geometry.Point(CreatedWhenConstruct.CWC_NotToCreate);
+						csObj.BindNativeObject(__ptr, "CPoint");
+						csObj.Delegate = true;
+						IClassFactory csObjClassFactory = GlobalClassFactoryMap.Get(csObj.GetCppInstanceTypeName());
+						if (csObjClassFactory != null)
+						{
+							csObj.Delegate = true;
+							csObj = csObjClassFactory.Create() as EarthView.World.Spatial.Geometry.Point;
+							csObj.BindNativeObject(__ptr, "CPoint");
+							csObj.Delegate = true;
+						}
+						return csObj;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingPath_getPoint_CPoint_ev_int32_ev_bool(IntPtr pNativeObject, int index, ref bool ok);
+
+					public override EarthView.World.Spatial.Geometry.Point GetPoint(int index, ref bool ok)
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingPath_getPoint_CPoint_ev_int32_ev_bool(this.NativeObject, index, ref ok);
+						
+						if(__ptr==IntPtr.Zero)
+						{
+						return null;
+						}
+						EarthView.World.Spatial.Geometry.Point csObj = new EarthView.World.Spatial.Geometry.Point(CreatedWhenConstruct.CWC_NotToCreate);
+						csObj.BindNativeObject(__ptr, "CPoint");
+						csObj.Delegate = true;
+						IClassFactory csObjClassFactory = GlobalClassFactoryMap.Get(csObj.GetCppInstanceTypeName());
+						if (csObjClassFactory != null)
+						{
+							csObj.Delegate = true;
+							csObj = csObjClassFactory.Create() as EarthView.World.Spatial.Geometry.Point;
+							csObj.BindNativeObject(__ptr, "CPoint");
+							csObj.Delegate = true;
+						}
+						return csObj;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern int EarthView_World_Spatial2D_Controls_CEditingPath_indexForPoint_ev_int32_CPoint_NoVirtual(IntPtr pNativeObject, IntPtr pnt);
+
+					public new int IndexForPoint_NoVirtual(EarthView.World.Spatial.Geometry.Point pnt)
+					{
+						int ret=EarthView_World_Spatial2D_Controls_CEditingPath_indexForPoint_ev_int32_CPoint_NoVirtual(this.NativeObject, object.Equals(pnt, null) ? IntPtr.Zero : pnt.NativeObject);
+						
+						return ret;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern int EarthView_World_Spatial2D_Controls_CEditingPath_indexForPoint_ev_int32_CPoint(IntPtr pNativeObject, IntPtr pnt);
+
+					public override int IndexForPoint(EarthView.World.Spatial.Geometry.Point pnt)
+					{
+						int ret=EarthView_World_Spatial2D_Controls_CEditingPath_indexForPoint_ev_int32_CPoint(this.NativeObject, object.Equals(pnt, null) ? IntPtr.Zero : pnt.NativeObject);
+						
+						return ret;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingPath_makeSample_IGeometry_CPoint_CPoint_NoVirtual(IntPtr pNativeObject, IntPtr from, IntPtr to);
+
+					public new EarthView.World.Spatial.Geometry.Igeometry MakeSample_NoVirtual(EarthView.World.Spatial.Geometry.Point from, EarthView.World.Spatial.Geometry.Point to)
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingPath_makeSample_IGeometry_CPoint_CPoint_NoVirtual(this.NativeObject, object.Equals(from, null) ? IntPtr.Zero : from.NativeObject, object.Equals(to, null) ? IntPtr.Zero : to.NativeObject);
+						
+						if(__ptr==IntPtr.Zero)
+						{
+						return null;
+						}
+						EarthView.World.Spatial.Geometry.Igeometry csObj = new EarthView.World.Spatial.Geometry.Igeometry(CreatedWhenConstruct.CWC_NotToCreate);
+						csObj.BindNativeObject(__ptr, "IGeometry");
+						IClassFactory csObjClassFactory = GlobalClassFactoryMap.Get(csObj.GetCppInstanceTypeName());
+						if (csObjClassFactory != null)
+						{
+							csObj.Delegate = true;
+							csObj = csObjClassFactory.Create() as EarthView.World.Spatial.Geometry.Igeometry;
+							csObj.BindNativeObject(__ptr, "IGeometry");
+						}
+						return csObj;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingPath_makeSample_IGeometry_CPoint_CPoint(IntPtr pNativeObject, IntPtr from, IntPtr to);
+
+					public override EarthView.World.Spatial.Geometry.Igeometry MakeSample(EarthView.World.Spatial.Geometry.Point from, EarthView.World.Spatial.Geometry.Point to)
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingPath_makeSample_IGeometry_CPoint_CPoint(this.NativeObject, object.Equals(from, null) ? IntPtr.Zero : from.NativeObject, object.Equals(to, null) ? IntPtr.Zero : to.NativeObject);
+						
+						if(__ptr==IntPtr.Zero)
+						{
+						return null;
+						}
+						EarthView.World.Spatial.Geometry.Igeometry csObj = new EarthView.World.Spatial.Geometry.Igeometry(CreatedWhenConstruct.CWC_NotToCreate);
+						csObj.BindNativeObject(__ptr, "IGeometry");
+						IClassFactory csObjClassFactory = GlobalClassFactoryMap.Get(csObj.GetCppInstanceTypeName());
+						if (csObjClassFactory != null)
+						{
+							csObj.Delegate = true;
+							csObj = csObjClassFactory.Create() as EarthView.World.Spatial.Geometry.Igeometry;
+							csObj.BindNativeObject(__ptr, "IGeometry");
+						}
+						return csObj;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern byte EarthView_World_Spatial2D_Controls_CEditingPath_isFine_ev_bool_NoVirtual(IntPtr pNativeObject);
+
+					public new bool IsFine_NoVirtual()
+					{
+						byte ret=EarthView_World_Spatial2D_Controls_CEditingPath_isFine_ev_bool_NoVirtual(this.NativeObject);
+						
+						return Convert.ToBoolean(ret);
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern byte EarthView_World_Spatial2D_Controls_CEditingPath_isFine_ev_bool(IntPtr pNativeObject);
+
+					public override bool IsFine()
+					{
+						byte ret=EarthView_World_Spatial2D_Controls_CEditingPath_isFine_ev_bool(this.NativeObject);
+						
+						return Convert.ToBoolean(ret);
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern byte EarthView_World_Spatial2D_Controls_CEditingPath_isExcellent_ev_bool_NoVirtual(IntPtr pNativeObject);
+
+					public new bool IsExcellent_NoVirtual()
+					{
+						byte ret=EarthView_World_Spatial2D_Controls_CEditingPath_isExcellent_ev_bool_NoVirtual(this.NativeObject);
+						
+						return Convert.ToBoolean(ret);
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern byte EarthView_World_Spatial2D_Controls_CEditingPath_isExcellent_ev_bool(IntPtr pNativeObject);
+
+					public override bool IsExcellent()
+					{
+						byte ret=EarthView_World_Spatial2D_Controls_CEditingPath_isExcellent_ev_bool(this.NativeObject);
+						
+						return Convert.ToBoolean(ret);
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingPath_getFirstPoint_CPoint_ev_bool_NoVirtual(IntPtr pNativeObject, ref bool ok);
+
+					public new EarthView.World.Spatial.Geometry.Point GetFirstPoint_NoVirtual(ref bool ok)
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingPath_getFirstPoint_CPoint_ev_bool_NoVirtual(this.NativeObject, ref ok);
+						
+						if(__ptr==IntPtr.Zero)
+						{
+						return null;
+						}
+						EarthView.World.Spatial.Geometry.Point csObj = new EarthView.World.Spatial.Geometry.Point(CreatedWhenConstruct.CWC_NotToCreate);
+						csObj.BindNativeObject(__ptr, "CPoint");
+						csObj.Delegate = true;
+						IClassFactory csObjClassFactory = GlobalClassFactoryMap.Get(csObj.GetCppInstanceTypeName());
+						if (csObjClassFactory != null)
+						{
+							csObj.Delegate = true;
+							csObj = csObjClassFactory.Create() as EarthView.World.Spatial.Geometry.Point;
+							csObj.BindNativeObject(__ptr, "CPoint");
+							csObj.Delegate = true;
+						}
+						return csObj;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingPath_getFirstPoint_CPoint_ev_bool(IntPtr pNativeObject, ref bool ok);
+
+					public override EarthView.World.Spatial.Geometry.Point GetFirstPoint(ref bool ok)
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingPath_getFirstPoint_CPoint_ev_bool(this.NativeObject, ref ok);
+						
+						if(__ptr==IntPtr.Zero)
+						{
+						return null;
+						}
+						EarthView.World.Spatial.Geometry.Point csObj = new EarthView.World.Spatial.Geometry.Point(CreatedWhenConstruct.CWC_NotToCreate);
+						csObj.BindNativeObject(__ptr, "CPoint");
+						csObj.Delegate = true;
+						IClassFactory csObjClassFactory = GlobalClassFactoryMap.Get(csObj.GetCppInstanceTypeName());
+						if (csObjClassFactory != null)
+						{
+							csObj.Delegate = true;
+							csObj = csObjClassFactory.Create() as EarthView.World.Spatial.Geometry.Point;
+							csObj.BindNativeObject(__ptr, "CPoint");
+							csObj.Delegate = true;
+						}
+						return csObj;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingPath_getLastPoint_CPoint_ev_bool_NoVirtual(IntPtr pNativeObject, ref bool ok);
+
+					public new EarthView.World.Spatial.Geometry.Point GetLastPoint_NoVirtual(ref bool ok)
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingPath_getLastPoint_CPoint_ev_bool_NoVirtual(this.NativeObject, ref ok);
+						
+						if(__ptr==IntPtr.Zero)
+						{
+						return null;
+						}
+						EarthView.World.Spatial.Geometry.Point csObj = new EarthView.World.Spatial.Geometry.Point(CreatedWhenConstruct.CWC_NotToCreate);
+						csObj.BindNativeObject(__ptr, "CPoint");
+						csObj.Delegate = true;
+						IClassFactory csObjClassFactory = GlobalClassFactoryMap.Get(csObj.GetCppInstanceTypeName());
+						if (csObjClassFactory != null)
+						{
+							csObj.Delegate = true;
+							csObj = csObjClassFactory.Create() as EarthView.World.Spatial.Geometry.Point;
+							csObj.BindNativeObject(__ptr, "CPoint");
+							csObj.Delegate = true;
+						}
+						return csObj;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingPath_getLastPoint_CPoint_ev_bool(IntPtr pNativeObject, ref bool ok);
+
+					public override EarthView.World.Spatial.Geometry.Point GetLastPoint(ref bool ok)
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingPath_getLastPoint_CPoint_ev_bool(this.NativeObject, ref ok);
+						
+						if(__ptr==IntPtr.Zero)
+						{
+						return null;
+						}
+						EarthView.World.Spatial.Geometry.Point csObj = new EarthView.World.Spatial.Geometry.Point(CreatedWhenConstruct.CWC_NotToCreate);
+						csObj.BindNativeObject(__ptr, "CPoint");
+						csObj.Delegate = true;
+						IClassFactory csObjClassFactory = GlobalClassFactoryMap.Get(csObj.GetCppInstanceTypeName());
+						if (csObjClassFactory != null)
+						{
+							csObj.Delegate = true;
+							csObj = csObjClassFactory.Create() as EarthView.World.Spatial.Geometry.Point;
+							csObj.BindNativeObject(__ptr, "CPoint");
+							csObj.Delegate = true;
+						}
+						return csObj;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern uint EarthView_World_Spatial2D_Controls_CEditingPath_getCurveCount_ev_uint32(IntPtr pNativeObject);
+
+					public uint GetCurveCount()
+					{
+						uint ret=EarthView_World_Spatial2D_Controls_CEditingPath_getCurveCount_ev_uint32(this.NativeObject);
+						
+						return ret;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingPath_getCurve_CEditingCurve_ev_int32(IntPtr pNativeObject, int index);
+
+					public EarthView.World.Spatial2D.Controls.EditingCurve GetCurve(int index)
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingPath_getCurve_CEditingCurve_ev_int32(this.NativeObject, index);
+						
+						if(__ptr==IntPtr.Zero)
+						{
+						return null;
+						}
+						EarthView.World.Spatial2D.Controls.EditingCurve csObj = new EarthView.World.Spatial2D.Controls.EditingCurve(CreatedWhenConstruct.CWC_NotToCreate);
+						csObj.BindNativeObject(__ptr, "CEditingCurve");
+						csObj.Delegate = true;
+						IClassFactory csObjClassFactory = GlobalClassFactoryMap.Get(csObj.GetCppInstanceTypeName());
+						if (csObjClassFactory != null)
+						{
+							csObj.Delegate = true;
+							csObj = csObjClassFactory.Create() as EarthView.World.Spatial2D.Controls.EditingCurve;
+							csObj.BindNativeObject(__ptr, "CEditingCurve");
+							csObj.Delegate = true;
+						}
+						return csObj;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingPath_getFirstCurve_CEditingCurve(IntPtr pNativeObject);
+
+					public EarthView.World.Spatial2D.Controls.EditingCurve GetFirstCurve()
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingPath_getFirstCurve_CEditingCurve(this.NativeObject);
+						
+						if(__ptr==IntPtr.Zero)
+						{
+						return null;
+						}
+						EarthView.World.Spatial2D.Controls.EditingCurve csObj = new EarthView.World.Spatial2D.Controls.EditingCurve(CreatedWhenConstruct.CWC_NotToCreate);
+						csObj.BindNativeObject(__ptr, "CEditingCurve");
+						csObj.Delegate = true;
+						IClassFactory csObjClassFactory = GlobalClassFactoryMap.Get(csObj.GetCppInstanceTypeName());
+						if (csObjClassFactory != null)
+						{
+							csObj.Delegate = true;
+							csObj = csObjClassFactory.Create() as EarthView.World.Spatial2D.Controls.EditingCurve;
+							csObj.BindNativeObject(__ptr, "CEditingCurve");
+							csObj.Delegate = true;
+						}
+						return csObj;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingPath_getLastCurve_CEditingCurve(IntPtr pNativeObject);
+
+					public EarthView.World.Spatial2D.Controls.EditingCurve GetLastCurve()
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingPath_getLastCurve_CEditingCurve(this.NativeObject);
+						
+						if(__ptr==IntPtr.Zero)
+						{
+						return null;
+						}
+						EarthView.World.Spatial2D.Controls.EditingCurve csObj = new EarthView.World.Spatial2D.Controls.EditingCurve(CreatedWhenConstruct.CWC_NotToCreate);
+						csObj.BindNativeObject(__ptr, "CEditingCurve");
+						csObj.Delegate = true;
+						IClassFactory csObjClassFactory = GlobalClassFactoryMap.Get(csObj.GetCppInstanceTypeName());
+						if (csObjClassFactory != null)
+						{
+							csObj.Delegate = true;
+							csObj = csObjClassFactory.Create() as EarthView.World.Spatial2D.Controls.EditingCurve;
+							csObj.BindNativeObject(__ptr, "CEditingCurve");
+							csObj.Delegate = true;
+						}
+						return csObj;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern int EarthView_World_Spatial2D_Controls_CEditingPath_indexForCurve_ev_int32_CEditingCurve(IntPtr pNativeObject, IntPtr curve);
+
+					public int IndexForCurve(EarthView.World.Spatial2D.Controls.EditingCurve curve)
+					{
+						int ret=EarthView_World_Spatial2D_Controls_CEditingPath_indexForCurve_ev_int32_CEditingCurve(this.NativeObject, object.Equals(curve, null) ? IntPtr.Zero : curve.NativeObject);
+						
+						return ret;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern byte EarthView_World_Spatial2D_Controls_CEditingPath_insertCurve_ev_bool_CEditingCurve_ev_int32(IntPtr pNativeObject, IntPtr curve, int index);
+
+					public bool InsertCurve(EarthView.World.Spatial2D.Controls.EditingCurve curve, int index)
+					{
+						byte ret=EarthView_World_Spatial2D_Controls_CEditingPath_insertCurve_ev_bool_CEditingCurve_ev_int32(this.NativeObject, object.Equals(curve, null) ? IntPtr.Zero : curve.NativeObject, index);
+						
+						return Convert.ToBoolean(ret);
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern byte EarthView_World_Spatial2D_Controls_CEditingPath_removeCurve_ev_bool_ev_int32(IntPtr pNativeObject, int index);
+
+					public bool RemoveCurve(int index)
+					{
+						byte ret=EarthView_World_Spatial2D_Controls_CEditingPath_removeCurve_ev_bool_ev_int32(this.NativeObject, index);
+						
+						return Convert.ToBoolean(ret);
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern byte EarthView_World_Spatial2D_Controls_CEditingPath_removeCurve_ev_bool_CEditingCurve(IntPtr pNativeObject, IntPtr curve);
+
+					public bool RemoveCurve(EarthView.World.Spatial2D.Controls.EditingCurve curve)
+					{
+						byte ret=EarthView_World_Spatial2D_Controls_CEditingPath_removeCurve_ev_bool_CEditingCurve(this.NativeObject, object.Equals(curve, null) ? IntPtr.Zero : curve.NativeObject);
+						
+						return Convert.ToBoolean(ret);
+						
+					}
+
+					#if DEBUG 
+						#if Windows 
+							private static bool bLoadEditingPath = LoadDll.Load("EV_MapControl_d.dll");
+							private static bool csbLoadEditingPath = LoadDll.Load("EV_MapControl_CSharp_d.dll");
+
+						#elif Linux 
+							private static bool bLoadEditingPath = LoadDll.Load("EV_MapControl_d.so");
+							private static bool csbLoadEditingPath = LoadDll.Load("EV_MapControl_CSharp_d.so");
+
+						#else 
+							private static bool bLoadEditingPath = LoadDll.Load("EV_MapControl_d.dll");
+							private static bool csbLoadEditingPath = LoadDll.Load("EV_MapControl_CSharp_d.dll");
+
+						#endif 
+					#else 
+						#if Windows 
+							private static bool bLoadEditingPath = LoadDll.Load("EV_MapControl.dll");
+							private static bool csbLoadEditingPath = LoadDll.Load("EV_MapControl_CSharp.dll");
+
+						#elif Linux 
+							private static bool bLoadEditingPath = LoadDll.Load("EV_MapControl.so");
+							private static bool csbLoadEditingPath = LoadDll.Load("EV_MapControl_CSharp.so");
+
+						#else 
+							private static bool bLoadEditingPath = LoadDll.Load("EV_MapControl.dll");
+							private static bool csbLoadEditingPath = LoadDll.Load("EV_MapControl_CSharp.dll");
+
+						#endif 
+					#endif 
+
+					private static bool registerStatus = GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Controls::CEditingPath", new EditingPathClassFactory());
+
+					private static bool registerProxyStatus = GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Controls::CEditingPathProxy", new EditingPathClassFactory());
+
+					public EditingPath(CreatedWhenConstruct bAutoCreate) : base(bAutoCreate)
+					{
+					}
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_newObject_CEditingObject(IntPtr pObject, newObject_CallBack_CEditingObject pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getName_EVString(IntPtr pObject, getName_CallBack_EVString pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getType_EditingObjectType(IntPtr pObject, getType_CallBack_EditingObjectType pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getGeometry_IGeometry(IntPtr pObject, getGeometry_CallBack_IGeometry pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getPointCount_ev_int32(IntPtr pObject, getPointCount_CallBack_ev_int32 pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getPoint_CPoint_ev_int32_ev_bool(IntPtr pObject, getPoint_CallBack_CPoint_ev_int32_ev_bool pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_indexForPoint_ev_int32_CPoint(IntPtr pObject, indexForPoint_CallBack_ev_int32_CPoint pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_makeSample_IGeometry_CPoint_CPoint(IntPtr pObject, makeSample_CallBack_IGeometry_CPoint_CPoint pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_isFine_ev_bool(IntPtr pObject, isFine_CallBack_ev_bool pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_isExcellent_ev_bool(IntPtr pObject, isExcellent_CallBack_ev_bool pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getFirstPoint_CPoint_ev_bool(IntPtr pObject, getFirstPoint_CallBack_CPoint_ev_bool pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getLastPoint_CPoint_ev_bool(IntPtr pObject, getLastPoint_CallBack_CPoint_ev_bool pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getCenterPoint_CPoint_ev_bool(IntPtr pObject, getCenterPoint_CallBack_CPoint_ev_bool pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_setCenterPoint_void_CPoint(IntPtr pObject, setCenterPoint_CallBack_void_CPoint pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getCentralAngle_ev_real64_ev_bool(IntPtr pObject, getCentralAngle_CallBack_ev_real64_ev_bool pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_setCentralAngle_void_ev_real64(IntPtr pObject, setCentralAngle_CallBack_void_ev_real64 pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getStartAngle_ev_real64_ev_bool(IntPtr pObject, getStartAngle_CallBack_ev_real64_ev_bool pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_setStartAngle_void_ev_real64(IntPtr pObject, setStartAngle_CallBack_void_ev_real64 pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getRotateAngle_ev_real64_ev_bool(IntPtr pObject, getRotateAngle_CallBack_ev_real64_ev_bool pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getRadius_ev_real64_ev_bool(IntPtr pObject, getRadius_CallBack_ev_real64_ev_bool pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_setRadius_void_ev_real64(IntPtr pObject, setRadius_CallBack_void_ev_real64 pCallback);
+
+					public override void RegisterCallBack()
+					{
+						if (this.NativeObject != IntPtr.Zero)
+						{
+							m_newObject_CallBack_CEditingObject = EarthView_World_Spatial2D_Controls_CEditingObject_newObject_CEditingObject_Function;
+							GC.KeepAlive(m_newObject_CallBack_CEditingObject);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_newObject_CEditingObject(this.NativeObject, m_newObject_CallBack_CEditingObject);
+							m_getName_CallBack_EVString = EarthView_World_Spatial2D_Controls_CEditingObject_getName_EVString_Function;
+							GC.KeepAlive(m_getName_CallBack_EVString);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getName_EVString(this.NativeObject, m_getName_CallBack_EVString);
+							m_getType_CallBack_EditingObjectType = EarthView_World_Spatial2D_Controls_CEditingObject_getType_EditingObjectType_Function;
+							GC.KeepAlive(m_getType_CallBack_EditingObjectType);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getType_EditingObjectType(this.NativeObject, m_getType_CallBack_EditingObjectType);
+							m_getGeometry_CallBack_IGeometry = EarthView_World_Spatial2D_Controls_CEditingObject_getGeometry_IGeometry_Function;
+							GC.KeepAlive(m_getGeometry_CallBack_IGeometry);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getGeometry_IGeometry(this.NativeObject, m_getGeometry_CallBack_IGeometry);
+							m_getPointCount_CallBack_ev_int32 = EarthView_World_Spatial2D_Controls_CEditingObject_getPointCount_ev_int32_Function;
+							GC.KeepAlive(m_getPointCount_CallBack_ev_int32);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getPointCount_ev_int32(this.NativeObject, m_getPointCount_CallBack_ev_int32);
+							m_getPoint_CallBack_CPoint_ev_int32_ev_bool = EarthView_World_Spatial2D_Controls_CEditingObject_getPoint_CPoint_ev_int32_ev_bool_Function;
+							GC.KeepAlive(m_getPoint_CallBack_CPoint_ev_int32_ev_bool);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getPoint_CPoint_ev_int32_ev_bool(this.NativeObject, m_getPoint_CallBack_CPoint_ev_int32_ev_bool);
+							m_indexForPoint_CallBack_ev_int32_CPoint = EarthView_World_Spatial2D_Controls_CEditingObject_indexForPoint_ev_int32_CPoint_Function;
+							GC.KeepAlive(m_indexForPoint_CallBack_ev_int32_CPoint);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_indexForPoint_ev_int32_CPoint(this.NativeObject, m_indexForPoint_CallBack_ev_int32_CPoint);
+							m_makeSample_CallBack_IGeometry_CPoint_CPoint = EarthView_World_Spatial2D_Controls_CEditingObject_makeSample_IGeometry_CPoint_CPoint_Function;
+							GC.KeepAlive(m_makeSample_CallBack_IGeometry_CPoint_CPoint);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_makeSample_IGeometry_CPoint_CPoint(this.NativeObject, m_makeSample_CallBack_IGeometry_CPoint_CPoint);
+							m_isFine_CallBack_ev_bool = EarthView_World_Spatial2D_Controls_CEditingObject_isFine_ev_bool_Function;
+							GC.KeepAlive(m_isFine_CallBack_ev_bool);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_isFine_ev_bool(this.NativeObject, m_isFine_CallBack_ev_bool);
+							m_isExcellent_CallBack_ev_bool = EarthView_World_Spatial2D_Controls_CEditingObject_isExcellent_ev_bool_Function;
+							GC.KeepAlive(m_isExcellent_CallBack_ev_bool);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_isExcellent_ev_bool(this.NativeObject, m_isExcellent_CallBack_ev_bool);
+							m_getFirstPoint_CallBack_CPoint_ev_bool = EarthView_World_Spatial2D_Controls_CEditingObject_getFirstPoint_CPoint_ev_bool_Function;
+							GC.KeepAlive(m_getFirstPoint_CallBack_CPoint_ev_bool);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getFirstPoint_CPoint_ev_bool(this.NativeObject, m_getFirstPoint_CallBack_CPoint_ev_bool);
+							m_getLastPoint_CallBack_CPoint_ev_bool = EarthView_World_Spatial2D_Controls_CEditingObject_getLastPoint_CPoint_ev_bool_Function;
+							GC.KeepAlive(m_getLastPoint_CallBack_CPoint_ev_bool);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getLastPoint_CPoint_ev_bool(this.NativeObject, m_getLastPoint_CallBack_CPoint_ev_bool);
+							m_getCenterPoint_CallBack_CPoint_ev_bool = EarthView_World_Spatial2D_Controls_CEditingObject_getCenterPoint_CPoint_ev_bool_Function;
+							GC.KeepAlive(m_getCenterPoint_CallBack_CPoint_ev_bool);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getCenterPoint_CPoint_ev_bool(this.NativeObject, m_getCenterPoint_CallBack_CPoint_ev_bool);
+							m_setCenterPoint_CallBack_void_CPoint = EarthView_World_Spatial2D_Controls_CEditingObject_setCenterPoint_void_CPoint_Function;
+							GC.KeepAlive(m_setCenterPoint_CallBack_void_CPoint);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_setCenterPoint_void_CPoint(this.NativeObject, m_setCenterPoint_CallBack_void_CPoint);
+							m_getCentralAngle_CallBack_ev_real64_ev_bool = EarthView_World_Spatial2D_Controls_CEditingObject_getCentralAngle_ev_real64_ev_bool_Function;
+							GC.KeepAlive(m_getCentralAngle_CallBack_ev_real64_ev_bool);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getCentralAngle_ev_real64_ev_bool(this.NativeObject, m_getCentralAngle_CallBack_ev_real64_ev_bool);
+							m_setCentralAngle_CallBack_void_ev_real64 = EarthView_World_Spatial2D_Controls_CEditingObject_setCentralAngle_void_ev_real64_Function;
+							GC.KeepAlive(m_setCentralAngle_CallBack_void_ev_real64);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_setCentralAngle_void_ev_real64(this.NativeObject, m_setCentralAngle_CallBack_void_ev_real64);
+							m_getStartAngle_CallBack_ev_real64_ev_bool = EarthView_World_Spatial2D_Controls_CEditingObject_getStartAngle_ev_real64_ev_bool_Function;
+							GC.KeepAlive(m_getStartAngle_CallBack_ev_real64_ev_bool);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getStartAngle_ev_real64_ev_bool(this.NativeObject, m_getStartAngle_CallBack_ev_real64_ev_bool);
+							m_setStartAngle_CallBack_void_ev_real64 = EarthView_World_Spatial2D_Controls_CEditingObject_setStartAngle_void_ev_real64_Function;
+							GC.KeepAlive(m_setStartAngle_CallBack_void_ev_real64);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_setStartAngle_void_ev_real64(this.NativeObject, m_setStartAngle_CallBack_void_ev_real64);
+							m_getRotateAngle_CallBack_ev_real64_ev_bool = EarthView_World_Spatial2D_Controls_CEditingObject_getRotateAngle_ev_real64_ev_bool_Function;
+							GC.KeepAlive(m_getRotateAngle_CallBack_ev_real64_ev_bool);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getRotateAngle_ev_real64_ev_bool(this.NativeObject, m_getRotateAngle_CallBack_ev_real64_ev_bool);
+							m_getRadius_CallBack_ev_real64_ev_bool = EarthView_World_Spatial2D_Controls_CEditingObject_getRadius_ev_real64_ev_bool_Function;
+							GC.KeepAlive(m_getRadius_CallBack_ev_real64_ev_bool);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_getRadius_ev_real64_ev_bool(this.NativeObject, m_getRadius_CallBack_ev_real64_ev_bool);
+							m_setRadius_CallBack_void_ev_real64 = EarthView_World_Spatial2D_Controls_CEditingObject_setRadius_void_ev_real64_Function;
+							GC.KeepAlive(m_setRadius_CallBack_void_ev_real64);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingPath_setRadius_void_ev_real64(this.NativeObject, m_setRadius_CallBack_void_ev_real64);
+						}
+					}
+					public override EarthView.World.Spatial2D.Controls.EditingObject NewObject()
+					{
+						return base.NewObject_NoVirtual();
+					}
+					public override EarthView.World.Spatial.Geometry.Point GetCenterPoint(ref bool ok)
+					{
+						return base.GetCenterPoint_NoVirtual(ref ok);
+					}
+					public override void SetCenterPoint(EarthView.World.Spatial.Geometry.Point point)
+					{
+						base.SetCenterPoint_NoVirtual(point);
+					}
+					public override double GetCentralAngle(ref bool ok)
+					{
+						return base.GetCentralAngle_NoVirtual(ref ok);
+					}
+					public override void SetCentralAngle(double angle)
+					{
+						base.SetCentralAngle_NoVirtual(angle);
+					}
+					public override double GetStartAngle(ref bool ok)
+					{
+						return base.GetStartAngle_NoVirtual(ref ok);
+					}
+					public override void SetStartAngle(double angle)
+					{
+						base.SetStartAngle_NoVirtual(angle);
+					}
+					public override double GetRotateAngle(ref bool ok)
+					{
+						return base.GetRotateAngle_NoVirtual(ref ok);
+					}
+					public override double GetRadius(ref bool ok)
+					{
+						return base.GetRadius_NoVirtual(ref ok);
+					}
+					public override void SetRadius(double radius)
+					{
+						base.SetRadius_NoVirtual(radius);
+					}
+					public static EditingPath FromBaseObject(BaseObject baseObj)
+					{
+						if (baseObj == null || baseObj.NativeObject == IntPtr.Zero)
+							return null;
+						EditingPath obj = baseObj as  EditingPath;
+						if (object.Equals(obj, null))
+						{
+							obj = new EditingPath(CreatedWhenConstruct.CWC_NotToCreate);
+							obj.BindNativeObject(baseObj.NativeObject, "CEditingPath");
+							obj.IncreaseCast();
+						}
+
+						return obj;
+					}
+				}
+
+				public class EditingPathClassFactory : IClassFactory
+				{
+					public BaseObject Create()
+					{
+						EditingPath emptyInstance = new EditingPath(CreatedWhenConstruct.CWC_NotToCreate);
+						return emptyInstance;
+					}
+				}
+
+				public class EditingRing : EarthView.World.Spatial2D.Controls.EditingPath
+				{
+					public EditingRing() : base(CreatedWhenConstruct.CWC_NotToCreate)
+					{
+						Create("CEditingRingProxy", null);
+						if (!"EarthView.World.Spatial2D.Controls.EditingRing".Equals(((Object)this).GetType().ToString()))
+						{
+							this.SetCustomExtend(true);
+						}
+						RegisterCallBack();
+						this.needDispose = true;
+						GlobalTraceInfoMap.Put(this);
+					}
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingRing_getName_EVString_NoVirtual(IntPtr pNativeObject);
+
+					public new string GetName_NoVirtual()
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingRing_getName_EVString_NoVirtual(this.NativeObject);
+						
+						string ret = Marshal.PtrToStringAnsi(__ptr);
+						ClassFactory.FreeString(ref __ptr);
+						return ret;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingRing_getName_EVString(IntPtr pNativeObject);
+
+					public override string GetName()
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingRing_getName_EVString(this.NativeObject);
+						
+						string ret = Marshal.PtrToStringAnsi(__ptr);
+						ClassFactory.FreeString(ref __ptr);
+						return ret;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern int EarthView_World_Spatial2D_Controls_CEditingRing_getType_EditingObjectType_NoVirtual(IntPtr pNativeObject);
+
+					public new EarthView.World.Spatial2D.Controls.EDITINGOBJECTTYPE GetType_NoVirtual()
+					{
+						int ret=EarthView_World_Spatial2D_Controls_CEditingRing_getType_EditingObjectType_NoVirtual(this.NativeObject);
+						
+						return (EarthView.World.Spatial2D.Controls.EDITINGOBJECTTYPE)ret;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern int EarthView_World_Spatial2D_Controls_CEditingRing_getType_EditingObjectType(IntPtr pNativeObject);
+
+					public override EarthView.World.Spatial2D.Controls.EDITINGOBJECTTYPE GetType()
+					{
+						int ret=EarthView_World_Spatial2D_Controls_CEditingRing_getType_EditingObjectType(this.NativeObject);
+						
+						return (EarthView.World.Spatial2D.Controls.EDITINGOBJECTTYPE)ret;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingRing_getGeometry_IGeometry_NoVirtual(IntPtr pNativeObject);
+
+					public new EarthView.World.Spatial.Geometry.Igeometry GetGeometry_NoVirtual()
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingRing_getGeometry_IGeometry_NoVirtual(this.NativeObject);
+						
+						if(__ptr==IntPtr.Zero)
+						{
+						return null;
+						}
+						EarthView.World.Spatial.Geometry.Igeometry csObj = new EarthView.World.Spatial.Geometry.Igeometry(CreatedWhenConstruct.CWC_NotToCreate);
+						csObj.BindNativeObject(__ptr, "IGeometry");
+						csObj.Delegate = true;
+						IClassFactory csObjClassFactory = GlobalClassFactoryMap.Get(csObj.GetCppInstanceTypeName());
+						if (csObjClassFactory != null)
+						{
+							csObj.Delegate = true;
+							csObj = csObjClassFactory.Create() as EarthView.World.Spatial.Geometry.Igeometry;
+							csObj.BindNativeObject(__ptr, "IGeometry");
+							csObj.Delegate = true;
+						}
+						return csObj;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingRing_getGeometry_IGeometry(IntPtr pNativeObject);
+
+					public override EarthView.World.Spatial.Geometry.Igeometry GetGeometry()
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingRing_getGeometry_IGeometry(this.NativeObject);
+						
+						if(__ptr==IntPtr.Zero)
+						{
+						return null;
+						}
+						EarthView.World.Spatial.Geometry.Igeometry csObj = new EarthView.World.Spatial.Geometry.Igeometry(CreatedWhenConstruct.CWC_NotToCreate);
+						csObj.BindNativeObject(__ptr, "IGeometry");
+						csObj.Delegate = true;
+						IClassFactory csObjClassFactory = GlobalClassFactoryMap.Get(csObj.GetCppInstanceTypeName());
+						if (csObjClassFactory != null)
+						{
+							csObj.Delegate = true;
+							csObj = csObjClassFactory.Create() as EarthView.World.Spatial.Geometry.Igeometry;
+							csObj.BindNativeObject(__ptr, "IGeometry");
+							csObj.Delegate = true;
+						}
+						return csObj;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingRing_makeSample_IGeometry_CPoint_CPoint_NoVirtual(IntPtr pNativeObject, IntPtr from, IntPtr to);
+
+					public new EarthView.World.Spatial.Geometry.Igeometry MakeSample_NoVirtual(EarthView.World.Spatial.Geometry.Point from, EarthView.World.Spatial.Geometry.Point to)
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingRing_makeSample_IGeometry_CPoint_CPoint_NoVirtual(this.NativeObject, object.Equals(from, null) ? IntPtr.Zero : from.NativeObject, object.Equals(to, null) ? IntPtr.Zero : to.NativeObject);
+						
+						if(__ptr==IntPtr.Zero)
+						{
+						return null;
+						}
+						EarthView.World.Spatial.Geometry.Igeometry csObj = new EarthView.World.Spatial.Geometry.Igeometry(CreatedWhenConstruct.CWC_NotToCreate);
+						csObj.BindNativeObject(__ptr, "IGeometry");
+						IClassFactory csObjClassFactory = GlobalClassFactoryMap.Get(csObj.GetCppInstanceTypeName());
+						if (csObjClassFactory != null)
+						{
+							csObj.Delegate = true;
+							csObj = csObjClassFactory.Create() as EarthView.World.Spatial.Geometry.Igeometry;
+							csObj.BindNativeObject(__ptr, "IGeometry");
+						}
+						return csObj;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern IntPtr EarthView_World_Spatial2D_Controls_CEditingRing_makeSample_IGeometry_CPoint_CPoint(IntPtr pNativeObject, IntPtr from, IntPtr to);
+
+					public override EarthView.World.Spatial.Geometry.Igeometry MakeSample(EarthView.World.Spatial.Geometry.Point from, EarthView.World.Spatial.Geometry.Point to)
+					{
+						IntPtr __ptr = EarthView_World_Spatial2D_Controls_CEditingRing_makeSample_IGeometry_CPoint_CPoint(this.NativeObject, object.Equals(from, null) ? IntPtr.Zero : from.NativeObject, object.Equals(to, null) ? IntPtr.Zero : to.NativeObject);
+						
+						if(__ptr==IntPtr.Zero)
+						{
+						return null;
+						}
+						EarthView.World.Spatial.Geometry.Igeometry csObj = new EarthView.World.Spatial.Geometry.Igeometry(CreatedWhenConstruct.CWC_NotToCreate);
+						csObj.BindNativeObject(__ptr, "IGeometry");
+						IClassFactory csObjClassFactory = GlobalClassFactoryMap.Get(csObj.GetCppInstanceTypeName());
+						if (csObjClassFactory != null)
+						{
+							csObj.Delegate = true;
+							csObj = csObjClassFactory.Create() as EarthView.World.Spatial.Geometry.Igeometry;
+							csObj.BindNativeObject(__ptr, "IGeometry");
+						}
+						return csObj;
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern byte EarthView_World_Spatial2D_Controls_CEditingRing_isFine_ev_bool_NoVirtual(IntPtr pNativeObject);
+
+					public new bool IsFine_NoVirtual()
+					{
+						byte ret=EarthView_World_Spatial2D_Controls_CEditingRing_isFine_ev_bool_NoVirtual(this.NativeObject);
+						
+						return Convert.ToBoolean(ret);
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern byte EarthView_World_Spatial2D_Controls_CEditingRing_isFine_ev_bool(IntPtr pNativeObject);
+
+					public override bool IsFine()
+					{
+						byte ret=EarthView_World_Spatial2D_Controls_CEditingRing_isFine_ev_bool(this.NativeObject);
+						
+						return Convert.ToBoolean(ret);
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern byte EarthView_World_Spatial2D_Controls_CEditingRing_isExcellent_ev_bool_NoVirtual(IntPtr pNativeObject);
+
+					public new bool IsExcellent_NoVirtual()
+					{
+						byte ret=EarthView_World_Spatial2D_Controls_CEditingRing_isExcellent_ev_bool_NoVirtual(this.NativeObject);
+						
+						return Convert.ToBoolean(ret);
+						
+					}
+
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					private static extern byte EarthView_World_Spatial2D_Controls_CEditingRing_isExcellent_ev_bool(IntPtr pNativeObject);
+
+					public override bool IsExcellent()
+					{
+						byte ret=EarthView_World_Spatial2D_Controls_CEditingRing_isExcellent_ev_bool(this.NativeObject);
+						
+						return Convert.ToBoolean(ret);
+						
+					}
+
+					#if DEBUG 
+						#if Windows 
+							private static bool bLoadEditingRing = LoadDll.Load("EV_MapControl_d.dll");
+							private static bool csbLoadEditingRing = LoadDll.Load("EV_MapControl_CSharp_d.dll");
+
+						#elif Linux 
+							private static bool bLoadEditingRing = LoadDll.Load("EV_MapControl_d.so");
+							private static bool csbLoadEditingRing = LoadDll.Load("EV_MapControl_CSharp_d.so");
+
+						#else 
+							private static bool bLoadEditingRing = LoadDll.Load("EV_MapControl_d.dll");
+							private static bool csbLoadEditingRing = LoadDll.Load("EV_MapControl_CSharp_d.dll");
+
+						#endif 
+					#else 
+						#if Windows 
+							private static bool bLoadEditingRing = LoadDll.Load("EV_MapControl.dll");
+							private static bool csbLoadEditingRing = LoadDll.Load("EV_MapControl_CSharp.dll");
+
+						#elif Linux 
+							private static bool bLoadEditingRing = LoadDll.Load("EV_MapControl.so");
+							private static bool csbLoadEditingRing = LoadDll.Load("EV_MapControl_CSharp.so");
+
+						#else 
+							private static bool bLoadEditingRing = LoadDll.Load("EV_MapControl.dll");
+							private static bool csbLoadEditingRing = LoadDll.Load("EV_MapControl_CSharp.dll");
+
+						#endif 
+					#endif 
+
+					private static bool registerStatus = GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Controls::CEditingRing", new EditingRingClassFactory());
+
+					private static bool registerProxyStatus = GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Controls::CEditingRingProxy", new EditingRingClassFactory());
+
+					public EditingRing(CreatedWhenConstruct bAutoCreate) : base(bAutoCreate)
+					{
+					}
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_newObject_CEditingObject(IntPtr pObject, newObject_CallBack_CEditingObject pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getName_EVString(IntPtr pObject, getName_CallBack_EVString pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getType_EditingObjectType(IntPtr pObject, getType_CallBack_EditingObjectType pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getGeometry_IGeometry(IntPtr pObject, getGeometry_CallBack_IGeometry pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getPointCount_ev_int32(IntPtr pObject, getPointCount_CallBack_ev_int32 pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getPoint_CPoint_ev_int32_ev_bool(IntPtr pObject, getPoint_CallBack_CPoint_ev_int32_ev_bool pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_indexForPoint_ev_int32_CPoint(IntPtr pObject, indexForPoint_CallBack_ev_int32_CPoint pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_makeSample_IGeometry_CPoint_CPoint(IntPtr pObject, makeSample_CallBack_IGeometry_CPoint_CPoint pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_isFine_ev_bool(IntPtr pObject, isFine_CallBack_ev_bool pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_isExcellent_ev_bool(IntPtr pObject, isExcellent_CallBack_ev_bool pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getFirstPoint_CPoint_ev_bool(IntPtr pObject, getFirstPoint_CallBack_CPoint_ev_bool pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getLastPoint_CPoint_ev_bool(IntPtr pObject, getLastPoint_CallBack_CPoint_ev_bool pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getCenterPoint_CPoint_ev_bool(IntPtr pObject, getCenterPoint_CallBack_CPoint_ev_bool pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_setCenterPoint_void_CPoint(IntPtr pObject, setCenterPoint_CallBack_void_CPoint pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getCentralAngle_ev_real64_ev_bool(IntPtr pObject, getCentralAngle_CallBack_ev_real64_ev_bool pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_setCentralAngle_void_ev_real64(IntPtr pObject, setCentralAngle_CallBack_void_ev_real64 pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getStartAngle_ev_real64_ev_bool(IntPtr pObject, getStartAngle_CallBack_ev_real64_ev_bool pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_setStartAngle_void_ev_real64(IntPtr pObject, setStartAngle_CallBack_void_ev_real64 pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getRotateAngle_ev_real64_ev_bool(IntPtr pObject, getRotateAngle_CallBack_ev_real64_ev_bool pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getRadius_ev_real64_ev_bool(IntPtr pObject, getRadius_CallBack_ev_real64_ev_bool pCallback);
+
+					#if DEBUG 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#else 
+						#if Windows 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#elif Linux 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Android 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+						#elif Apple 
+							[System.Runtime.InteropServices.DllImport("__Internal")]
+						#else 
+							[System.Runtime.InteropServices.DllImport("EV_MapControl_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+						#endif 
+					#endif 
+					protected static extern void EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_setRadius_void_ev_real64(IntPtr pObject, setRadius_CallBack_void_ev_real64 pCallback);
+
+					public override void RegisterCallBack()
+					{
+						if (this.NativeObject != IntPtr.Zero)
+						{
+							m_newObject_CallBack_CEditingObject = EarthView_World_Spatial2D_Controls_CEditingObject_newObject_CEditingObject_Function;
+							GC.KeepAlive(m_newObject_CallBack_CEditingObject);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_newObject_CEditingObject(this.NativeObject, m_newObject_CallBack_CEditingObject);
+							m_getName_CallBack_EVString = EarthView_World_Spatial2D_Controls_CEditingObject_getName_EVString_Function;
+							GC.KeepAlive(m_getName_CallBack_EVString);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getName_EVString(this.NativeObject, m_getName_CallBack_EVString);
+							m_getType_CallBack_EditingObjectType = EarthView_World_Spatial2D_Controls_CEditingObject_getType_EditingObjectType_Function;
+							GC.KeepAlive(m_getType_CallBack_EditingObjectType);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getType_EditingObjectType(this.NativeObject, m_getType_CallBack_EditingObjectType);
+							m_getGeometry_CallBack_IGeometry = EarthView_World_Spatial2D_Controls_CEditingObject_getGeometry_IGeometry_Function;
+							GC.KeepAlive(m_getGeometry_CallBack_IGeometry);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getGeometry_IGeometry(this.NativeObject, m_getGeometry_CallBack_IGeometry);
+							m_getPointCount_CallBack_ev_int32 = EarthView_World_Spatial2D_Controls_CEditingObject_getPointCount_ev_int32_Function;
+							GC.KeepAlive(m_getPointCount_CallBack_ev_int32);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getPointCount_ev_int32(this.NativeObject, m_getPointCount_CallBack_ev_int32);
+							m_getPoint_CallBack_CPoint_ev_int32_ev_bool = EarthView_World_Spatial2D_Controls_CEditingObject_getPoint_CPoint_ev_int32_ev_bool_Function;
+							GC.KeepAlive(m_getPoint_CallBack_CPoint_ev_int32_ev_bool);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getPoint_CPoint_ev_int32_ev_bool(this.NativeObject, m_getPoint_CallBack_CPoint_ev_int32_ev_bool);
+							m_indexForPoint_CallBack_ev_int32_CPoint = EarthView_World_Spatial2D_Controls_CEditingObject_indexForPoint_ev_int32_CPoint_Function;
+							GC.KeepAlive(m_indexForPoint_CallBack_ev_int32_CPoint);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_indexForPoint_ev_int32_CPoint(this.NativeObject, m_indexForPoint_CallBack_ev_int32_CPoint);
+							m_makeSample_CallBack_IGeometry_CPoint_CPoint = EarthView_World_Spatial2D_Controls_CEditingObject_makeSample_IGeometry_CPoint_CPoint_Function;
+							GC.KeepAlive(m_makeSample_CallBack_IGeometry_CPoint_CPoint);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_makeSample_IGeometry_CPoint_CPoint(this.NativeObject, m_makeSample_CallBack_IGeometry_CPoint_CPoint);
+							m_isFine_CallBack_ev_bool = EarthView_World_Spatial2D_Controls_CEditingObject_isFine_ev_bool_Function;
+							GC.KeepAlive(m_isFine_CallBack_ev_bool);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_isFine_ev_bool(this.NativeObject, m_isFine_CallBack_ev_bool);
+							m_isExcellent_CallBack_ev_bool = EarthView_World_Spatial2D_Controls_CEditingObject_isExcellent_ev_bool_Function;
+							GC.KeepAlive(m_isExcellent_CallBack_ev_bool);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_isExcellent_ev_bool(this.NativeObject, m_isExcellent_CallBack_ev_bool);
+							m_getFirstPoint_CallBack_CPoint_ev_bool = EarthView_World_Spatial2D_Controls_CEditingObject_getFirstPoint_CPoint_ev_bool_Function;
+							GC.KeepAlive(m_getFirstPoint_CallBack_CPoint_ev_bool);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getFirstPoint_CPoint_ev_bool(this.NativeObject, m_getFirstPoint_CallBack_CPoint_ev_bool);
+							m_getLastPoint_CallBack_CPoint_ev_bool = EarthView_World_Spatial2D_Controls_CEditingObject_getLastPoint_CPoint_ev_bool_Function;
+							GC.KeepAlive(m_getLastPoint_CallBack_CPoint_ev_bool);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getLastPoint_CPoint_ev_bool(this.NativeObject, m_getLastPoint_CallBack_CPoint_ev_bool);
+							m_getCenterPoint_CallBack_CPoint_ev_bool = EarthView_World_Spatial2D_Controls_CEditingObject_getCenterPoint_CPoint_ev_bool_Function;
+							GC.KeepAlive(m_getCenterPoint_CallBack_CPoint_ev_bool);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getCenterPoint_CPoint_ev_bool(this.NativeObject, m_getCenterPoint_CallBack_CPoint_ev_bool);
+							m_setCenterPoint_CallBack_void_CPoint = EarthView_World_Spatial2D_Controls_CEditingObject_setCenterPoint_void_CPoint_Function;
+							GC.KeepAlive(m_setCenterPoint_CallBack_void_CPoint);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_setCenterPoint_void_CPoint(this.NativeObject, m_setCenterPoint_CallBack_void_CPoint);
+							m_getCentralAngle_CallBack_ev_real64_ev_bool = EarthView_World_Spatial2D_Controls_CEditingObject_getCentralAngle_ev_real64_ev_bool_Function;
+							GC.KeepAlive(m_getCentralAngle_CallBack_ev_real64_ev_bool);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getCentralAngle_ev_real64_ev_bool(this.NativeObject, m_getCentralAngle_CallBack_ev_real64_ev_bool);
+							m_setCentralAngle_CallBack_void_ev_real64 = EarthView_World_Spatial2D_Controls_CEditingObject_setCentralAngle_void_ev_real64_Function;
+							GC.KeepAlive(m_setCentralAngle_CallBack_void_ev_real64);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_setCentralAngle_void_ev_real64(this.NativeObject, m_setCentralAngle_CallBack_void_ev_real64);
+							m_getStartAngle_CallBack_ev_real64_ev_bool = EarthView_World_Spatial2D_Controls_CEditingObject_getStartAngle_ev_real64_ev_bool_Function;
+							GC.KeepAlive(m_getStartAngle_CallBack_ev_real64_ev_bool);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getStartAngle_ev_real64_ev_bool(this.NativeObject, m_getStartAngle_CallBack_ev_real64_ev_bool);
+							m_setStartAngle_CallBack_void_ev_real64 = EarthView_World_Spatial2D_Controls_CEditingObject_setStartAngle_void_ev_real64_Function;
+							GC.KeepAlive(m_setStartAngle_CallBack_void_ev_real64);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_setStartAngle_void_ev_real64(this.NativeObject, m_setStartAngle_CallBack_void_ev_real64);
+							m_getRotateAngle_CallBack_ev_real64_ev_bool = EarthView_World_Spatial2D_Controls_CEditingObject_getRotateAngle_ev_real64_ev_bool_Function;
+							GC.KeepAlive(m_getRotateAngle_CallBack_ev_real64_ev_bool);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getRotateAngle_ev_real64_ev_bool(this.NativeObject, m_getRotateAngle_CallBack_ev_real64_ev_bool);
+							m_getRadius_CallBack_ev_real64_ev_bool = EarthView_World_Spatial2D_Controls_CEditingObject_getRadius_ev_real64_ev_bool_Function;
+							GC.KeepAlive(m_getRadius_CallBack_ev_real64_ev_bool);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_getRadius_ev_real64_ev_bool(this.NativeObject, m_getRadius_CallBack_ev_real64_ev_bool);
+							m_setRadius_CallBack_void_ev_real64 = EarthView_World_Spatial2D_Controls_CEditingObject_setRadius_void_ev_real64_Function;
+							GC.KeepAlive(m_setRadius_CallBack_void_ev_real64);
+							EV_RegisterCallback_EarthView_World_Spatial2D_Controls_CEditingRing_setRadius_void_ev_real64(this.NativeObject, m_setRadius_CallBack_void_ev_real64);
+						}
+					}
+					public override EarthView.World.Spatial2D.Controls.EditingObject NewObject()
+					{
+						return base.NewObject_NoVirtual();
+					}
+					public override int GetPointCount()
+					{
+						return base.GetPointCount_NoVirtual();
+					}
+					public override EarthView.World.Spatial.Geometry.Point GetPoint(int index, ref bool ok)
+					{
+						return base.GetPoint_NoVirtual(index,ref ok);
+					}
+					public override int IndexForPoint(EarthView.World.Spatial.Geometry.Point pnt)
+					{
+						return base.IndexForPoint_NoVirtual(pnt);
+					}
+					public override EarthView.World.Spatial.Geometry.Point GetFirstPoint(ref bool ok)
+					{
+						return base.GetFirstPoint_NoVirtual(ref ok);
+					}
+					public override EarthView.World.Spatial.Geometry.Point GetLastPoint(ref bool ok)
+					{
+						return base.GetLastPoint_NoVirtual(ref ok);
+					}
+					public override EarthView.World.Spatial.Geometry.Point GetCenterPoint(ref bool ok)
+					{
+						return base.GetCenterPoint_NoVirtual(ref ok);
+					}
+					public override void SetCenterPoint(EarthView.World.Spatial.Geometry.Point point)
+					{
+						base.SetCenterPoint_NoVirtual(point);
+					}
+					public override double GetCentralAngle(ref bool ok)
+					{
+						return base.GetCentralAngle_NoVirtual(ref ok);
+					}
+					public override void SetCentralAngle(double angle)
+					{
+						base.SetCentralAngle_NoVirtual(angle);
+					}
+					public override double GetStartAngle(ref bool ok)
+					{
+						return base.GetStartAngle_NoVirtual(ref ok);
+					}
+					public override void SetStartAngle(double angle)
+					{
+						base.SetStartAngle_NoVirtual(angle);
+					}
+					public override double GetRotateAngle(ref bool ok)
+					{
+						return base.GetRotateAngle_NoVirtual(ref ok);
+					}
+					public override double GetRadius(ref bool ok)
+					{
+						return base.GetRadius_NoVirtual(ref ok);
+					}
+					public override void SetRadius(double radius)
+					{
+						base.SetRadius_NoVirtual(radius);
+					}
+					public static EditingRing FromBaseObject(BaseObject baseObj)
+					{
+						if (baseObj == null || baseObj.NativeObject == IntPtr.Zero)
+							return null;
+						EditingRing obj = baseObj as  EditingRing;
+						if (object.Equals(obj, null))
+						{
+							obj = new EditingRing(CreatedWhenConstruct.CWC_NotToCreate);
+							obj.BindNativeObject(baseObj.NativeObject, "CEditingRing");
+							obj.IncreaseCast();
+						}
+
+						return obj;
+					}
+				}
+
+				public class EditingRingClassFactory : IClassFactory
+				{
+					public BaseObject Create()
+					{
+						EditingRing emptyInstance = new EditingRing(CreatedWhenConstruct.CWC_NotToCreate);
+						return emptyInstance;
+					}
+				}
+
+			}
+		}
+	}
+}

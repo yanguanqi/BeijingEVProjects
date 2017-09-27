@@ -1,0 +1,12 @@
+﻿#ifndef VIEWTOOLBAR_GLOBAL_H
+#define VIEWTOOLBAR_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef VIEWTOOLBAR_LIB
+# define VIEWTOOLBAR_EXPORT Q_DECL_EXPORT
+#else
+# define VIEWTOOLBAR_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // VIEWTOOLBAR_GLOBAL_H

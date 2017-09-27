@@ -1,0 +1,12 @@
+﻿#ifndef EARTHVIEW_WORLD_CHART_CHARTLAYER_H
+#define EARTHVIEW_WORLD_CHART_CHARTLAYER_H
+
+#ifdef EV_CHART_EXPORTS
+#define EVCHART_DLL EV_DLL_EXPORT
+#else
+#define EVCHART_DLL EV_DLL_IMPORT
+#endif
+
+#include "core/core_api.h"
+
+#endif

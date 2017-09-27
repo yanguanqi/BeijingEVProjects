@@ -1,0 +1,4753 @@
+/* This file is produced by the P/Invoke AutoWrapper Utility 
+ Copyright (c) 2012 by EarthView Image Inc */
+#include "stableheaders.h"
+#include "graphic/ribbontrail.h"
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Graphic
+		{
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_addNode_void_CNode_Callback)(_in EarthView::World::Graphic::CNode* ref_n);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_removeNode_void_CNode_Callback)(_in EarthView::World::Graphic::CNode* n);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getNodeIterator_NodeIterator_Callback)();
+			typedef ev_uint64   ( _stdcall EarthView_World_Graphic_CRibbonTrail_getChainIndexForNode_ev_size_t_CNode_Callback)(_in const EarthView::World::Graphic::CNode* n);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setTrailLength_void_Real_Callback)(_in Real len);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getTrailLength_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_CColourValue_Callback)(_in ev_uint64  chainIndex, _in const void* col);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Real_Callback)(_in ev_uint64  chainIndex, _in Real r, _in Real g, _in Real b, _in Real a);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Callback)(_in ev_uint64  chainIndex, _in Real r, _in Real g, _in Real b);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getInitialColour_CColourValue_ev_size_t_Callback)(_in ev_uint64  chainIndex);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_CColourValue_Callback)(_in ev_uint64  chainIndex, _in const void* valuePerSecond);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setInitialWidth_void_ev_size_t_Real_Callback)(_in ev_uint64  chainIndex, _in Real width);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getInitialWidth_Real_ev_size_t_Callback)(_in ev_uint64  chainIndex);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setWidthChange_void_ev_size_t_Real_Callback)(_in ev_uint64  chainIndex, _in Real widthDeltaPerSecond);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getWidthChange_Real_ev_size_t_Callback)(_in ev_uint64  chainIndex);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_Real_Real_Real_Real_Callback)(_in ev_uint64  chainIndex, _in Real r, _in Real g, _in Real b, _in Real a);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getColourChange_CColourValue_ev_size_t_Callback)(_in ev_uint64  chainIndex);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setVelocity_void_Real_Callback)(_in Real velocity);
+			typedef const Real  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getVelocity_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail__timeUpdate_void_Real_Callback)(_in Real time);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_manageController_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_updateTrail_void_ev_size_t_CNode_Callback)(_in ev_uint64  index, _in const EarthView::World::Graphic::CNode* node);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_resetTrail_void_ev_size_t_CNode_Callback)(_in ev_uint64  index, _in const EarthView::World::Graphic::CNode* node);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_resetAllTrails_void_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getMaterial_CMaterialPtr_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getRenderOperation_void_CRenderOperation_Callback)(_out void* op);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getWorldTransforms_void_CMatrix4_Callback)(_in EarthView::World::Spatial::Math::CMatrix4* xform);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getSquaredViewDepth_Real_CCamera_Callback)(_in const EarthView::World::Graphic::CCamera* cam);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getLights_LightList_Callback)();
+			typedef const EarthView::World::Graphic::CBillboardChain::CBillboardChainInternalRenderable*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getRenderablePtr_CBillboardChainInternalRenderable_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setMaxChainElements_void_ev_size_t_Callback)(_in ev_uint64  maxElements);
+			typedef ev_uint64   ( _stdcall EarthView_World_Graphic_CRibbonTrail_getMaxChainElements_ev_size_t_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setNumberOfChains_void_ev_size_t_Callback)(_in ev_uint64  numChains);
+			typedef ev_uint64   ( _stdcall EarthView_World_Graphic_CRibbonTrail_getNumberOfChains_ev_size_t_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setUseTextureCoords_void_ev_bool_Callback)(_in ev_bool use);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getUseTextureCoords_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setTextureCoordDirection_void_TexCoordDirection_Callback)(_in int dir);
+			typedef int  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getTextureCoordDirection_TexCoordDirection_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setOtherTextureCoordRange_void_Real_Real_Callback)(_in Real start, _in Real end);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getOtherTextureCoordRange_void_Real_Real_Callback)(_out Real& start, _out Real& end);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setUseVertexColours_void_ev_bool_Callback)(_in ev_bool use);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getUseVertexColours_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setDynamic_void_ev_bool_Callback)(_in ev_bool dyn);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getDynamic_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_addChainElement_void_ev_size_t_CElement_Callback)(_in ev_uint64  chainIndex, _in const void* billboardChainElement);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_removeChainElement_void_ev_size_t_Callback)(_in ev_uint64  chainIndex);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_updateChainElement_void_ev_size_t_ev_size_t_CElement_Callback)(_in ev_uint64  chainIndex, _in ev_uint64  elementIndex, _in const void* billboardChainElement);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getChainElement_CElement_ev_size_t_ev_size_t_Callback)(_in ev_uint64  chainIndex, _in ev_uint64  elementIndex);
+			typedef ev_uint64   ( _stdcall EarthView_World_Graphic_CRibbonTrail_getNumChainElements_ev_size_t_ev_size_t_Callback)(_in ev_uint64  chainIndex);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_clearChain_void_ev_size_t_Callback)(_in ev_uint64  chainIndex);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_clearAllChains_void_Callback)();
+			typedef char*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getMaterialName_EVString_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_EVString_Callback)(_in char*& name, _in char*& groupName);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_Callback)(_in char*& name);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setupChainContainers_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setupVertexDeclaration_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setupBuffers_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_updateVertexBuffer_void_CCamera_Callback)(_in EarthView::World::Graphic::CCamera* cam);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_updateIndexBuffer_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_updateBoundingBox_void_Callback)();
+			typedef const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback)();
+			typedef ev_uint8  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getRenderQueueId_ev_uint8_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail__notifyCreator_void_CMovableObjectFactory_Callback)(_in EarthView::World::Graphic::CMovableObjectFactory* ref_fact);
+			typedef EarthView::World::Graphic::CMovableObjectFactory*  ( _stdcall EarthView_World_Graphic_CRibbonTrail__getCreator_CMovableObjectFactory_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail__notifyManager_void_CSceneManager_Callback)(_in EarthView::World::Graphic::CSceneManager* ref_mgr);
+			typedef EarthView::World::Graphic::CSceneManager*  ( _stdcall EarthView_World_Graphic_CRibbonTrail__getManager_CSceneManager_Callback)();
+			typedef char*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getName_EVString_Callback)();
+			typedef char*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getMovableType_EVString_Callback)();
+			typedef EarthView::World::Graphic::CNode*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getParentNode_CNode_Callback)();
+			typedef EarthView::World::Graphic::CSceneNode*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getParentSceneNode_CSceneNode_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_isParentTagPoint_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_ev_bool_Callback)(_in EarthView::World::Graphic::CNode* ref_parent, _in ev_bool isTagPoint);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_Callback)(_in EarthView::World::Graphic::CNode* ref_parent);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_isAttached_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_detachFromParent_void_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_isInScene_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail__notifyMoved_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail__notifyLightsQueried_void_LightList_Callback)(_in const EarthView::World::Graphic::LightList* lightList);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setLightQueriedListener_void_CLightQueriedListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CLightQueriedListener* listener);
+			typedef EarthView::World::Graphic::CMovableObject::CLightQueriedListener*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getLightQueriedListener_CLightQueriedListener_Callback)();
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getLightListUpdated_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setLightListUpdated_void_ev_uint32_Callback)(_in ev_uint32 frame);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail__notifyCurrentCamera_void_CCamera_Callback)(_in EarthView::World::Graphic::CCamera* ref_cam);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getBoundingBox_CAxisAlignedBox_Callback)();
+			typedef Real  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getBoundingRadius_Real_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_ev_bool_Callback)(_in ev_bool derive);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail__updateRenderQueue_void_CRenderQueue_Callback)(_in EarthView::World::Graphic::CRenderQueue* queue);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setVisible_void_ev_bool_Callback)(_in ev_bool visible);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getVisible_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_isVisible_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setRenderingMaxDistance_void_Real_Callback)(_in Real dist);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getRenderingMaxDistance_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setRenderingMinDistance_void_Real_Callback)(_in Real dist);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getRenderingMinDistance_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setRenderingMinPixelSize_void_Real_Callback)(_in Real pixelSize);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getRenderingMinPixelSize_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setSelectionColour_void_CColourValue_Callback)(_in const void* colour);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setSelected_ev_bool_IntVector_Callback)(_in const void* objIndics);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getSelected_IntVector_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback)(_in const void* ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out void* point);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback)(_in const void* aabb, _in ev_bool prepareToRenderSelection, _out void* indexVec);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback)(_in const void* sphere, _in ev_bool prepareToRenderSelection, _out void* indexVec);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback)(_in const void* ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out ev_int32& submeshIndex, _out ev_int32& instanceIndex, _out ev_int32& segmentIndex, _out void* point);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_renderSelection_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_clearSelection_void_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_startEditing_ev_bool_ev_uint32_Callback)(_in ev_uint32 objectIndex);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_endEditing_void_Callback)();
+			typedef EarthView::World::Graphic::CEditBoundingBox*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getEditBoundingBox_CEditBoundingBox_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback)(_in ev_uint32 objectIndex, _inout void* matrix);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback)(_in ev_uint32 objectIndex, _in const void* matrix);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroup_void_ev_uint8_Callback)(_in ev_uint8 queueID);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback)(_in ev_uint8 queueID, _in ev_uint16 priority);
+			typedef ev_uint8  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getRenderQueueGroup_ev_uint8_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CRibbonTrail__getParentNodeFullTransform_CMatrix4_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setQueryFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_addQueryFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_removeQueryFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getQueryFlags_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setVisibilityFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_addVisibilityFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_removeVisibilityFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getVisibilityFlags_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_addListener_void_CMovableObjectListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* ref_listener);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_removeListener_void_CMovableObjectListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_existListener_ev_bool_CMovableObjectListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener);
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getListenerCount_ev_uint32_Callback)();
+			typedef EarthView::World::Graphic::CMovableObject::CMovableObjectListener*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getListener_CMovableObjectListener_ev_uint32_Callback)(_in ev_uint32 index);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_queryLights_LightList_Callback)();
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getLightMask_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setLightMask_void_ev_uint32_Callback)(_in ev_uint32 lightMask);
+			typedef EarthView::World::Graphic::LightList*  ( _stdcall EarthView_World_Graphic_CRibbonTrail__getLightList_LightList_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setCastShadows_void_ev_bool_Callback)(_in ev_bool enabled);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getReceivesShadows_ev_bool_Callback)();
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getTypeFlags_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_ev_bool_Callback)(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_Callback)(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_setDebugDisplayEnabled_void_ev_bool_Callback)(_in ev_bool enabled);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_isDebugDisplayEnabled_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getCastShadows_ev_bool_Callback)();
+			typedef EarthView::World::Graphic::CEdgeData*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getEdgeList_CEdgeData_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrail_hasEdgeList_ev_bool_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback)(_in ev_bool derive);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getLightCapBounds_CAxisAlignedBox_Callback)();
+			typedef void*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback)(_in const void* light, _in Real dirLightExtrusionDist);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback)(_in int shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDistance, _in ev_uint32 flags);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback)(_in int shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDistance);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CRibbonTrail_getPointExtrusionDistance_Real_CLight_Callback)(_in const EarthView::World::Graphic::CLight* l);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback)(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const void* lightPos);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback)(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const void* indexBuffer, _in const EarthView::World::Graphic::CLight* light, _inout void* shadowRenderables, _in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback)(_inout void* box, _in const void* lightPos, _in Real extrudeDist);
+			class CRibbonTrailProxy : public EarthView::World::Graphic::CRibbonTrail
+			{
+			private:
+				EarthView_World_Graphic_CRibbonTrail_addNode_void_CNode_Callback* m_EarthView_World_Graphic_CRibbonTrail_addNode_void_CNode_Callback;
+				EarthView_World_Graphic_CRibbonTrail_removeNode_void_CNode_Callback* m_EarthView_World_Graphic_CRibbonTrail_removeNode_void_CNode_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getNodeIterator_NodeIterator_Callback* m_EarthView_World_Graphic_CRibbonTrail_getNodeIterator_NodeIterator_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getChainIndexForNode_ev_size_t_CNode_Callback* m_EarthView_World_Graphic_CRibbonTrail_getChainIndexForNode_ev_size_t_CNode_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setTrailLength_void_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_setTrailLength_void_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getTrailLength_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_getTrailLength_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_CColourValue_Callback* m_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_CColourValue_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getInitialColour_CColourValue_ev_size_t_Callback* m_EarthView_World_Graphic_CRibbonTrail_getInitialColour_CColourValue_ev_size_t_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_CColourValue_Callback* m_EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_CColourValue_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setInitialWidth_void_ev_size_t_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_setInitialWidth_void_ev_size_t_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getInitialWidth_Real_ev_size_t_Callback* m_EarthView_World_Graphic_CRibbonTrail_getInitialWidth_Real_ev_size_t_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setWidthChange_void_ev_size_t_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_setWidthChange_void_ev_size_t_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getWidthChange_Real_ev_size_t_Callback* m_EarthView_World_Graphic_CRibbonTrail_getWidthChange_Real_ev_size_t_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_Real_Real_Real_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_Real_Real_Real_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getColourChange_CColourValue_ev_size_t_Callback* m_EarthView_World_Graphic_CRibbonTrail_getColourChange_CColourValue_ev_size_t_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setVelocity_void_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_setVelocity_void_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getVelocity_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_getVelocity_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail__timeUpdate_void_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail__timeUpdate_void_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail_manageController_void_Callback* m_EarthView_World_Graphic_CRibbonTrail_manageController_void_Callback;
+				EarthView_World_Graphic_CRibbonTrail_updateTrail_void_ev_size_t_CNode_Callback* m_EarthView_World_Graphic_CRibbonTrail_updateTrail_void_ev_size_t_CNode_Callback;
+				EarthView_World_Graphic_CRibbonTrail_resetTrail_void_ev_size_t_CNode_Callback* m_EarthView_World_Graphic_CRibbonTrail_resetTrail_void_ev_size_t_CNode_Callback;
+				EarthView_World_Graphic_CRibbonTrail_resetAllTrails_void_Callback* m_EarthView_World_Graphic_CRibbonTrail_resetAllTrails_void_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getMaterial_CMaterialPtr_Callback* m_EarthView_World_Graphic_CRibbonTrail_getMaterial_CMaterialPtr_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getRenderOperation_void_CRenderOperation_Callback* m_EarthView_World_Graphic_CRibbonTrail_getRenderOperation_void_CRenderOperation_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getWorldTransforms_void_CMatrix4_Callback* m_EarthView_World_Graphic_CRibbonTrail_getWorldTransforms_void_CMatrix4_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getSquaredViewDepth_Real_CCamera_Callback* m_EarthView_World_Graphic_CRibbonTrail_getSquaredViewDepth_Real_CCamera_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getLights_LightList_Callback* m_EarthView_World_Graphic_CRibbonTrail_getLights_LightList_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getRenderablePtr_CBillboardChainInternalRenderable_Callback* m_EarthView_World_Graphic_CRibbonTrail_getRenderablePtr_CBillboardChainInternalRenderable_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setMaxChainElements_void_ev_size_t_Callback* m_EarthView_World_Graphic_CRibbonTrail_setMaxChainElements_void_ev_size_t_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getMaxChainElements_ev_size_t_Callback* m_EarthView_World_Graphic_CRibbonTrail_getMaxChainElements_ev_size_t_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setNumberOfChains_void_ev_size_t_Callback* m_EarthView_World_Graphic_CRibbonTrail_setNumberOfChains_void_ev_size_t_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getNumberOfChains_ev_size_t_Callback* m_EarthView_World_Graphic_CRibbonTrail_getNumberOfChains_ev_size_t_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setUseTextureCoords_void_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_setUseTextureCoords_void_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getUseTextureCoords_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_getUseTextureCoords_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setTextureCoordDirection_void_TexCoordDirection_Callback* m_EarthView_World_Graphic_CRibbonTrail_setTextureCoordDirection_void_TexCoordDirection_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getTextureCoordDirection_TexCoordDirection_Callback* m_EarthView_World_Graphic_CRibbonTrail_getTextureCoordDirection_TexCoordDirection_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setOtherTextureCoordRange_void_Real_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_setOtherTextureCoordRange_void_Real_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getOtherTextureCoordRange_void_Real_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_getOtherTextureCoordRange_void_Real_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setUseVertexColours_void_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_setUseVertexColours_void_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getUseVertexColours_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_getUseVertexColours_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setDynamic_void_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_setDynamic_void_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getDynamic_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_getDynamic_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail_addChainElement_void_ev_size_t_CElement_Callback* m_EarthView_World_Graphic_CRibbonTrail_addChainElement_void_ev_size_t_CElement_Callback;
+				EarthView_World_Graphic_CRibbonTrail_removeChainElement_void_ev_size_t_Callback* m_EarthView_World_Graphic_CRibbonTrail_removeChainElement_void_ev_size_t_Callback;
+				EarthView_World_Graphic_CRibbonTrail_updateChainElement_void_ev_size_t_ev_size_t_CElement_Callback* m_EarthView_World_Graphic_CRibbonTrail_updateChainElement_void_ev_size_t_ev_size_t_CElement_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getChainElement_CElement_ev_size_t_ev_size_t_Callback* m_EarthView_World_Graphic_CRibbonTrail_getChainElement_CElement_ev_size_t_ev_size_t_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getNumChainElements_ev_size_t_ev_size_t_Callback* m_EarthView_World_Graphic_CRibbonTrail_getNumChainElements_ev_size_t_ev_size_t_Callback;
+				EarthView_World_Graphic_CRibbonTrail_clearChain_void_ev_size_t_Callback* m_EarthView_World_Graphic_CRibbonTrail_clearChain_void_ev_size_t_Callback;
+				EarthView_World_Graphic_CRibbonTrail_clearAllChains_void_Callback* m_EarthView_World_Graphic_CRibbonTrail_clearAllChains_void_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getMaterialName_EVString_Callback* m_EarthView_World_Graphic_CRibbonTrail_getMaterialName_EVString_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_EVString_Callback* m_EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_EVString_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_Callback* m_EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setupChainContainers_void_Callback* m_EarthView_World_Graphic_CRibbonTrail_setupChainContainers_void_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setupVertexDeclaration_void_Callback* m_EarthView_World_Graphic_CRibbonTrail_setupVertexDeclaration_void_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setupBuffers_void_Callback* m_EarthView_World_Graphic_CRibbonTrail_setupBuffers_void_Callback;
+				EarthView_World_Graphic_CRibbonTrail_updateVertexBuffer_void_CCamera_Callback* m_EarthView_World_Graphic_CRibbonTrail_updateVertexBuffer_void_CCamera_Callback;
+				EarthView_World_Graphic_CRibbonTrail_updateIndexBuffer_void_Callback* m_EarthView_World_Graphic_CRibbonTrail_updateIndexBuffer_void_Callback;
+				EarthView_World_Graphic_CRibbonTrail_updateBoundingBox_void_Callback* m_EarthView_World_Graphic_CRibbonTrail_updateBoundingBox_void_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback* m_EarthView_World_Graphic_CRibbonTrail_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getRenderQueueId_ev_uint8_Callback* m_EarthView_World_Graphic_CRibbonTrail_getRenderQueueId_ev_uint8_Callback;
+				EarthView_World_Graphic_CRibbonTrail__notifyCreator_void_CMovableObjectFactory_Callback* m_EarthView_World_Graphic_CRibbonTrail__notifyCreator_void_CMovableObjectFactory_Callback;
+				EarthView_World_Graphic_CRibbonTrail__getCreator_CMovableObjectFactory_Callback* m_EarthView_World_Graphic_CRibbonTrail__getCreator_CMovableObjectFactory_Callback;
+				EarthView_World_Graphic_CRibbonTrail__notifyManager_void_CSceneManager_Callback* m_EarthView_World_Graphic_CRibbonTrail__notifyManager_void_CSceneManager_Callback;
+				EarthView_World_Graphic_CRibbonTrail__getManager_CSceneManager_Callback* m_EarthView_World_Graphic_CRibbonTrail__getManager_CSceneManager_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getName_EVString_Callback* m_EarthView_World_Graphic_CRibbonTrail_getName_EVString_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getMovableType_EVString_Callback* m_EarthView_World_Graphic_CRibbonTrail_getMovableType_EVString_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getParentNode_CNode_Callback* m_EarthView_World_Graphic_CRibbonTrail_getParentNode_CNode_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getParentSceneNode_CSceneNode_Callback* m_EarthView_World_Graphic_CRibbonTrail_getParentSceneNode_CSceneNode_Callback;
+				EarthView_World_Graphic_CRibbonTrail_isParentTagPoint_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_isParentTagPoint_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_Callback* m_EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_Callback;
+				EarthView_World_Graphic_CRibbonTrail_isAttached_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_isAttached_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail_detachFromParent_void_Callback* m_EarthView_World_Graphic_CRibbonTrail_detachFromParent_void_Callback;
+				EarthView_World_Graphic_CRibbonTrail_isInScene_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_isInScene_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail__notifyMoved_void_Callback* m_EarthView_World_Graphic_CRibbonTrail__notifyMoved_void_Callback;
+				EarthView_World_Graphic_CRibbonTrail__notifyLightsQueried_void_LightList_Callback* m_EarthView_World_Graphic_CRibbonTrail__notifyLightsQueried_void_LightList_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setLightQueriedListener_void_CLightQueriedListener_Callback* m_EarthView_World_Graphic_CRibbonTrail_setLightQueriedListener_void_CLightQueriedListener_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getLightQueriedListener_CLightQueriedListener_Callback* m_EarthView_World_Graphic_CRibbonTrail_getLightQueriedListener_CLightQueriedListener_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getLightListUpdated_ev_uint32_Callback* m_EarthView_World_Graphic_CRibbonTrail_getLightListUpdated_ev_uint32_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setLightListUpdated_void_ev_uint32_Callback* m_EarthView_World_Graphic_CRibbonTrail_setLightListUpdated_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CRibbonTrail__notifyCurrentCamera_void_CCamera_Callback* m_EarthView_World_Graphic_CRibbonTrail__notifyCurrentCamera_void_CCamera_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getBoundingBox_CAxisAlignedBox_Callback* m_EarthView_World_Graphic_CRibbonTrail_getBoundingBox_CAxisAlignedBox_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getBoundingRadius_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_getBoundingRadius_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_Callback* m_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_Callback;
+				EarthView_World_Graphic_CRibbonTrail__updateRenderQueue_void_CRenderQueue_Callback* m_EarthView_World_Graphic_CRibbonTrail__updateRenderQueue_void_CRenderQueue_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setVisible_void_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_setVisible_void_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getVisible_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_getVisible_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail_isVisible_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_isVisible_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setRenderingMaxDistance_void_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_setRenderingMaxDistance_void_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getRenderingMaxDistance_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_getRenderingMaxDistance_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setRenderingMinDistance_void_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_setRenderingMinDistance_void_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getRenderingMinDistance_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_getRenderingMinDistance_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setRenderingMinPixelSize_void_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_setRenderingMinPixelSize_void_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getRenderingMinPixelSize_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_getRenderingMinPixelSize_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setSelectionColour_void_CColourValue_Callback* m_EarthView_World_Graphic_CRibbonTrail_setSelectionColour_void_CColourValue_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setSelected_ev_bool_IntVector_Callback* m_EarthView_World_Graphic_CRibbonTrail_setSelected_ev_bool_IntVector_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getSelected_IntVector_Callback* m_EarthView_World_Graphic_CRibbonTrail_getSelected_IntVector_Callback;
+				EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* m_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback;
+				EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* m_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback;
+				EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* m_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback;
+				EarthView_World_Graphic_CRibbonTrail_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* m_EarthView_World_Graphic_CRibbonTrail_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback;
+				EarthView_World_Graphic_CRibbonTrail_renderSelection_void_Callback* m_EarthView_World_Graphic_CRibbonTrail_renderSelection_void_Callback;
+				EarthView_World_Graphic_CRibbonTrail_clearSelection_void_Callback* m_EarthView_World_Graphic_CRibbonTrail_clearSelection_void_Callback;
+				EarthView_World_Graphic_CRibbonTrail_startEditing_ev_bool_ev_uint32_Callback* m_EarthView_World_Graphic_CRibbonTrail_startEditing_ev_bool_ev_uint32_Callback;
+				EarthView_World_Graphic_CRibbonTrail_endEditing_void_Callback* m_EarthView_World_Graphic_CRibbonTrail_endEditing_void_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getEditBoundingBox_CEditBoundingBox_Callback* m_EarthView_World_Graphic_CRibbonTrail_getEditBoundingBox_CEditBoundingBox_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* m_EarthView_World_Graphic_CRibbonTrail_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* m_EarthView_World_Graphic_CRibbonTrail_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroup_void_ev_uint8_Callback* m_EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroup_void_ev_uint8_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback* m_EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getRenderQueueGroup_ev_uint8_Callback* m_EarthView_World_Graphic_CRibbonTrail_getRenderQueueGroup_ev_uint8_Callback;
+				EarthView_World_Graphic_CRibbonTrail__getParentNodeFullTransform_CMatrix4_Callback* m_EarthView_World_Graphic_CRibbonTrail__getParentNodeFullTransform_CMatrix4_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setQueryFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CRibbonTrail_setQueryFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CRibbonTrail_addQueryFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CRibbonTrail_addQueryFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CRibbonTrail_removeQueryFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CRibbonTrail_removeQueryFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getQueryFlags_ev_uint32_Callback* m_EarthView_World_Graphic_CRibbonTrail_getQueryFlags_ev_uint32_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setVisibilityFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CRibbonTrail_setVisibilityFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CRibbonTrail_addVisibilityFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CRibbonTrail_addVisibilityFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CRibbonTrail_removeVisibilityFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CRibbonTrail_removeVisibilityFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getVisibilityFlags_ev_uint32_Callback* m_EarthView_World_Graphic_CRibbonTrail_getVisibilityFlags_ev_uint32_Callback;
+				EarthView_World_Graphic_CRibbonTrail_addListener_void_CMovableObjectListener_Callback* m_EarthView_World_Graphic_CRibbonTrail_addListener_void_CMovableObjectListener_Callback;
+				EarthView_World_Graphic_CRibbonTrail_removeListener_void_CMovableObjectListener_Callback* m_EarthView_World_Graphic_CRibbonTrail_removeListener_void_CMovableObjectListener_Callback;
+				EarthView_World_Graphic_CRibbonTrail_existListener_ev_bool_CMovableObjectListener_Callback* m_EarthView_World_Graphic_CRibbonTrail_existListener_ev_bool_CMovableObjectListener_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getListenerCount_ev_uint32_Callback* m_EarthView_World_Graphic_CRibbonTrail_getListenerCount_ev_uint32_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getListener_CMovableObjectListener_ev_uint32_Callback* m_EarthView_World_Graphic_CRibbonTrail_getListener_CMovableObjectListener_ev_uint32_Callback;
+				EarthView_World_Graphic_CRibbonTrail_queryLights_LightList_Callback* m_EarthView_World_Graphic_CRibbonTrail_queryLights_LightList_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getLightMask_ev_uint32_Callback* m_EarthView_World_Graphic_CRibbonTrail_getLightMask_ev_uint32_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setLightMask_void_ev_uint32_Callback* m_EarthView_World_Graphic_CRibbonTrail_setLightMask_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CRibbonTrail__getLightList_LightList_Callback* m_EarthView_World_Graphic_CRibbonTrail__getLightList_LightList_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setCastShadows_void_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_setCastShadows_void_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getReceivesShadows_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_getReceivesShadows_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getTypeFlags_ev_uint32_Callback* m_EarthView_World_Graphic_CRibbonTrail_getTypeFlags_ev_uint32_Callback;
+				EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_Callback* m_EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_Callback;
+				EarthView_World_Graphic_CRibbonTrail_setDebugDisplayEnabled_void_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_setDebugDisplayEnabled_void_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail_isDebugDisplayEnabled_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_isDebugDisplayEnabled_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getCastShadows_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_getCastShadows_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getEdgeList_CEdgeData_Callback* m_EarthView_World_Graphic_CRibbonTrail_getEdgeList_CEdgeData_Callback;
+				EarthView_World_Graphic_CRibbonTrail_hasEdgeList_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_hasEdgeList_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_Callback* m_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getLightCapBounds_CAxisAlignedBox_Callback* m_EarthView_World_Graphic_CRibbonTrail_getLightCapBounds_CAxisAlignedBox_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback* m_EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback;
+				EarthView_World_Graphic_CRibbonTrail_getPointExtrusionDistance_Real_CLight_Callback* m_EarthView_World_Graphic_CRibbonTrail_getPointExtrusionDistance_Real_CLight_Callback;
+				EarthView_World_Graphic_CRibbonTrail_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback* m_EarthView_World_Graphic_CRibbonTrail_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback;
+				EarthView_World_Graphic_CRibbonTrail_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback* m_EarthView_World_Graphic_CRibbonTrail_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback;
+				EarthView_World_Graphic_CRibbonTrail_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback* m_EarthView_World_Graphic_CRibbonTrail_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback;
+			public:
+				CRibbonTrailProxy(EarthView::World::Core::CNameValuePairList *pList) : CRibbonTrail(pList)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_addNode_void_CNode_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_removeNode_void_CNode_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getNodeIterator_NodeIterator_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getChainIndexForNode_ev_size_t_CNode_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setTrailLength_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getTrailLength_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getInitialColour_CColourValue_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setInitialWidth_void_ev_size_t_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getInitialWidth_Real_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setWidthChange_void_ev_size_t_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getWidthChange_Real_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_Real_Real_Real_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getColourChange_CColourValue_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setVelocity_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getVelocity_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail__timeUpdate_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_manageController_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_updateTrail_void_ev_size_t_CNode_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_resetTrail_void_ev_size_t_CNode_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_resetAllTrails_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getMaterial_CMaterialPtr_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getRenderOperation_void_CRenderOperation_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getWorldTransforms_void_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getSquaredViewDepth_Real_CCamera_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getLights_LightList_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getRenderablePtr_CBillboardChainInternalRenderable_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setMaxChainElements_void_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getMaxChainElements_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setNumberOfChains_void_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getNumberOfChains_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setUseTextureCoords_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getUseTextureCoords_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setTextureCoordDirection_void_TexCoordDirection_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getTextureCoordDirection_TexCoordDirection_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setOtherTextureCoordRange_void_Real_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getOtherTextureCoordRange_void_Real_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setUseVertexColours_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getUseVertexColours_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setDynamic_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getDynamic_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_addChainElement_void_ev_size_t_CElement_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_removeChainElement_void_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_updateChainElement_void_ev_size_t_ev_size_t_CElement_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getChainElement_CElement_ev_size_t_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getNumChainElements_ev_size_t_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_clearChain_void_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_clearAllChains_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getMaterialName_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setupChainContainers_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setupVertexDeclaration_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setupBuffers_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_updateVertexBuffer_void_CCamera_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_updateIndexBuffer_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_updateBoundingBox_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getRenderQueueId_ev_uint8_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail__notifyCreator_void_CMovableObjectFactory_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail__getCreator_CMovableObjectFactory_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail__notifyManager_void_CSceneManager_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail__getManager_CSceneManager_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getName_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getMovableType_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getParentNode_CNode_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getParentSceneNode_CSceneNode_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_isParentTagPoint_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_isAttached_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_detachFromParent_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_isInScene_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail__notifyMoved_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail__notifyLightsQueried_void_LightList_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setLightQueriedListener_void_CLightQueriedListener_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getLightQueriedListener_CLightQueriedListener_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getLightListUpdated_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setLightListUpdated_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail__notifyCurrentCamera_void_CCamera_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getBoundingBox_CAxisAlignedBox_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getBoundingRadius_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail__updateRenderQueue_void_CRenderQueue_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setVisible_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getVisible_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_isVisible_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setRenderingMaxDistance_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getRenderingMaxDistance_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setRenderingMinDistance_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getRenderingMinDistance_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setRenderingMinPixelSize_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getRenderingMinPixelSize_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setSelectionColour_void_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setSelected_ev_bool_IntVector_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getSelected_IntVector_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_renderSelection_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_clearSelection_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_startEditing_ev_bool_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_endEditing_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getEditBoundingBox_CEditBoundingBox_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroup_void_ev_uint8_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getRenderQueueGroup_ev_uint8_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail__getParentNodeFullTransform_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setQueryFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_addQueryFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_removeQueryFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getQueryFlags_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setVisibilityFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_addVisibilityFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_removeVisibilityFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getVisibilityFlags_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_addListener_void_CMovableObjectListener_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_removeListener_void_CMovableObjectListener_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_existListener_ev_bool_CMovableObjectListener_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getListenerCount_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getListener_CMovableObjectListener_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_queryLights_LightList_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getLightMask_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setLightMask_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail__getLightList_LightList_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setCastShadows_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getReceivesShadows_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getTypeFlags_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_setDebugDisplayEnabled_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_isDebugDisplayEnabled_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getCastShadows_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getEdgeList_CEdgeData_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_hasEdgeList_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getLightCapBounds_CAxisAlignedBox_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_getPointExtrusionDistance_Real_CLight_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_addNode_void_CNode(EarthView_World_Graphic_CRibbonTrail_addNode_void_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_addNode_void_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_removeNode_void_CNode(EarthView_World_Graphic_CRibbonTrail_removeNode_void_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_removeNode_void_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getNodeIterator_NodeIterator(EarthView_World_Graphic_CRibbonTrail_getNodeIterator_NodeIterator_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getNodeIterator_NodeIterator_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getChainIndexForNode_ev_size_t_CNode(EarthView_World_Graphic_CRibbonTrail_getChainIndexForNode_ev_size_t_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getChainIndexForNode_ev_size_t_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setTrailLength_void_Real(EarthView_World_Graphic_CRibbonTrail_setTrailLength_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setTrailLength_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getTrailLength_Real(EarthView_World_Graphic_CRibbonTrail_getTrailLength_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getTrailLength_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_CColourValue(EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Real(EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real(EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getInitialColour_CColourValue_ev_size_t(EarthView_World_Graphic_CRibbonTrail_getInitialColour_CColourValue_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getInitialColour_CColourValue_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_CColourValue(EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setInitialWidth_void_ev_size_t_Real(EarthView_World_Graphic_CRibbonTrail_setInitialWidth_void_ev_size_t_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setInitialWidth_void_ev_size_t_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getInitialWidth_Real_ev_size_t(EarthView_World_Graphic_CRibbonTrail_getInitialWidth_Real_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getInitialWidth_Real_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setWidthChange_void_ev_size_t_Real(EarthView_World_Graphic_CRibbonTrail_setWidthChange_void_ev_size_t_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setWidthChange_void_ev_size_t_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getWidthChange_Real_ev_size_t(EarthView_World_Graphic_CRibbonTrail_getWidthChange_Real_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getWidthChange_Real_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_Real_Real_Real_Real(EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_Real_Real_Real_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_Real_Real_Real_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getColourChange_CColourValue_ev_size_t(EarthView_World_Graphic_CRibbonTrail_getColourChange_CColourValue_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getColourChange_CColourValue_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setVelocity_void_Real(EarthView_World_Graphic_CRibbonTrail_setVelocity_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setVelocity_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getVelocity_Real(EarthView_World_Graphic_CRibbonTrail_getVelocity_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getVelocity_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail__timeUpdate_void_Real(EarthView_World_Graphic_CRibbonTrail__timeUpdate_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail__timeUpdate_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_manageController_void(EarthView_World_Graphic_CRibbonTrail_manageController_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_manageController_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_updateTrail_void_ev_size_t_CNode(EarthView_World_Graphic_CRibbonTrail_updateTrail_void_ev_size_t_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_updateTrail_void_ev_size_t_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_resetTrail_void_ev_size_t_CNode(EarthView_World_Graphic_CRibbonTrail_resetTrail_void_ev_size_t_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_resetTrail_void_ev_size_t_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_resetAllTrails_void(EarthView_World_Graphic_CRibbonTrail_resetAllTrails_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_resetAllTrails_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getMaterial_CMaterialPtr(EarthView_World_Graphic_CRibbonTrail_getMaterial_CMaterialPtr_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getMaterial_CMaterialPtr_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getRenderOperation_void_CRenderOperation(EarthView_World_Graphic_CRibbonTrail_getRenderOperation_void_CRenderOperation_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getRenderOperation_void_CRenderOperation_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getWorldTransforms_void_CMatrix4(EarthView_World_Graphic_CRibbonTrail_getWorldTransforms_void_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getWorldTransforms_void_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getSquaredViewDepth_Real_CCamera(EarthView_World_Graphic_CRibbonTrail_getSquaredViewDepth_Real_CCamera_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getSquaredViewDepth_Real_CCamera_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getLights_LightList(EarthView_World_Graphic_CRibbonTrail_getLights_LightList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getLights_LightList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getRenderablePtr_CBillboardChainInternalRenderable(EarthView_World_Graphic_CRibbonTrail_getRenderablePtr_CBillboardChainInternalRenderable_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getRenderablePtr_CBillboardChainInternalRenderable_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setMaxChainElements_void_ev_size_t(EarthView_World_Graphic_CRibbonTrail_setMaxChainElements_void_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setMaxChainElements_void_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getMaxChainElements_ev_size_t(EarthView_World_Graphic_CRibbonTrail_getMaxChainElements_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getMaxChainElements_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setNumberOfChains_void_ev_size_t(EarthView_World_Graphic_CRibbonTrail_setNumberOfChains_void_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setNumberOfChains_void_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getNumberOfChains_ev_size_t(EarthView_World_Graphic_CRibbonTrail_getNumberOfChains_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getNumberOfChains_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setUseTextureCoords_void_ev_bool(EarthView_World_Graphic_CRibbonTrail_setUseTextureCoords_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setUseTextureCoords_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getUseTextureCoords_ev_bool(EarthView_World_Graphic_CRibbonTrail_getUseTextureCoords_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getUseTextureCoords_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setTextureCoordDirection_void_TexCoordDirection(EarthView_World_Graphic_CRibbonTrail_setTextureCoordDirection_void_TexCoordDirection_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setTextureCoordDirection_void_TexCoordDirection_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getTextureCoordDirection_TexCoordDirection(EarthView_World_Graphic_CRibbonTrail_getTextureCoordDirection_TexCoordDirection_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getTextureCoordDirection_TexCoordDirection_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setOtherTextureCoordRange_void_Real_Real(EarthView_World_Graphic_CRibbonTrail_setOtherTextureCoordRange_void_Real_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setOtherTextureCoordRange_void_Real_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getOtherTextureCoordRange_void_Real_Real(EarthView_World_Graphic_CRibbonTrail_getOtherTextureCoordRange_void_Real_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getOtherTextureCoordRange_void_Real_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setUseVertexColours_void_ev_bool(EarthView_World_Graphic_CRibbonTrail_setUseVertexColours_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setUseVertexColours_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getUseVertexColours_ev_bool(EarthView_World_Graphic_CRibbonTrail_getUseVertexColours_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getUseVertexColours_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setDynamic_void_ev_bool(EarthView_World_Graphic_CRibbonTrail_setDynamic_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setDynamic_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getDynamic_ev_bool(EarthView_World_Graphic_CRibbonTrail_getDynamic_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getDynamic_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_addChainElement_void_ev_size_t_CElement(EarthView_World_Graphic_CRibbonTrail_addChainElement_void_ev_size_t_CElement_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_addChainElement_void_ev_size_t_CElement_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_removeChainElement_void_ev_size_t(EarthView_World_Graphic_CRibbonTrail_removeChainElement_void_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_removeChainElement_void_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_updateChainElement_void_ev_size_t_ev_size_t_CElement(EarthView_World_Graphic_CRibbonTrail_updateChainElement_void_ev_size_t_ev_size_t_CElement_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_updateChainElement_void_ev_size_t_ev_size_t_CElement_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getChainElement_CElement_ev_size_t_ev_size_t(EarthView_World_Graphic_CRibbonTrail_getChainElement_CElement_ev_size_t_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getChainElement_CElement_ev_size_t_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getNumChainElements_ev_size_t_ev_size_t(EarthView_World_Graphic_CRibbonTrail_getNumChainElements_ev_size_t_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getNumChainElements_ev_size_t_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_clearChain_void_ev_size_t(EarthView_World_Graphic_CRibbonTrail_clearChain_void_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_clearChain_void_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_clearAllChains_void(EarthView_World_Graphic_CRibbonTrail_clearAllChains_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_clearAllChains_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getMaterialName_EVString(EarthView_World_Graphic_CRibbonTrail_getMaterialName_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getMaterialName_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_EVString(EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString(EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setupChainContainers_void(EarthView_World_Graphic_CRibbonTrail_setupChainContainers_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setupChainContainers_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setupVertexDeclaration_void(EarthView_World_Graphic_CRibbonTrail_setupVertexDeclaration_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setupVertexDeclaration_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setupBuffers_void(EarthView_World_Graphic_CRibbonTrail_setupBuffers_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setupBuffers_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_updateVertexBuffer_void_CCamera(EarthView_World_Graphic_CRibbonTrail_updateVertexBuffer_void_CCamera_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_updateVertexBuffer_void_CCamera_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_updateIndexBuffer_void(EarthView_World_Graphic_CRibbonTrail_updateIndexBuffer_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_updateIndexBuffer_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_updateBoundingBox_void(EarthView_World_Graphic_CRibbonTrail_updateBoundingBox_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_updateBoundingBox_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getAnimableObjectPtr_CMovableObjectInternalAnimableObject(EarthView_World_Graphic_CRibbonTrail_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getRenderQueueId_ev_uint8(EarthView_World_Graphic_CRibbonTrail_getRenderQueueId_ev_uint8_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getRenderQueueId_ev_uint8_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail__notifyCreator_void_CMovableObjectFactory(EarthView_World_Graphic_CRibbonTrail__notifyCreator_void_CMovableObjectFactory_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail__notifyCreator_void_CMovableObjectFactory_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail__getCreator_CMovableObjectFactory(EarthView_World_Graphic_CRibbonTrail__getCreator_CMovableObjectFactory_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail__getCreator_CMovableObjectFactory_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail__notifyManager_void_CSceneManager(EarthView_World_Graphic_CRibbonTrail__notifyManager_void_CSceneManager_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail__notifyManager_void_CSceneManager_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail__getManager_CSceneManager(EarthView_World_Graphic_CRibbonTrail__getManager_CSceneManager_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail__getManager_CSceneManager_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getName_EVString(EarthView_World_Graphic_CRibbonTrail_getName_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getName_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getMovableType_EVString(EarthView_World_Graphic_CRibbonTrail_getMovableType_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getMovableType_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getParentNode_CNode(EarthView_World_Graphic_CRibbonTrail_getParentNode_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getParentNode_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getParentSceneNode_CSceneNode(EarthView_World_Graphic_CRibbonTrail_getParentSceneNode_CSceneNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getParentSceneNode_CSceneNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_isParentTagPoint_ev_bool(EarthView_World_Graphic_CRibbonTrail_isParentTagPoint_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_isParentTagPoint_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_ev_bool(EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode(EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_isAttached_ev_bool(EarthView_World_Graphic_CRibbonTrail_isAttached_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_isAttached_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_detachFromParent_void(EarthView_World_Graphic_CRibbonTrail_detachFromParent_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_detachFromParent_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_isInScene_ev_bool(EarthView_World_Graphic_CRibbonTrail_isInScene_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_isInScene_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail__notifyMoved_void(EarthView_World_Graphic_CRibbonTrail__notifyMoved_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail__notifyMoved_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail__notifyLightsQueried_void_LightList(EarthView_World_Graphic_CRibbonTrail__notifyLightsQueried_void_LightList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail__notifyLightsQueried_void_LightList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setLightQueriedListener_void_CLightQueriedListener(EarthView_World_Graphic_CRibbonTrail_setLightQueriedListener_void_CLightQueriedListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setLightQueriedListener_void_CLightQueriedListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getLightQueriedListener_CLightQueriedListener(EarthView_World_Graphic_CRibbonTrail_getLightQueriedListener_CLightQueriedListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getLightQueriedListener_CLightQueriedListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getLightListUpdated_ev_uint32(EarthView_World_Graphic_CRibbonTrail_getLightListUpdated_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getLightListUpdated_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setLightListUpdated_void_ev_uint32(EarthView_World_Graphic_CRibbonTrail_setLightListUpdated_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setLightListUpdated_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail__notifyCurrentCamera_void_CCamera(EarthView_World_Graphic_CRibbonTrail__notifyCurrentCamera_void_CCamera_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail__notifyCurrentCamera_void_CCamera_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getBoundingBox_CAxisAlignedBox(EarthView_World_Graphic_CRibbonTrail_getBoundingBox_CAxisAlignedBox_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getBoundingBox_CAxisAlignedBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getBoundingRadius_Real(EarthView_World_Graphic_CRibbonTrail_getBoundingRadius_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getBoundingRadius_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_ev_bool(EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere(EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail__updateRenderQueue_void_CRenderQueue(EarthView_World_Graphic_CRibbonTrail__updateRenderQueue_void_CRenderQueue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail__updateRenderQueue_void_CRenderQueue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setVisible_void_ev_bool(EarthView_World_Graphic_CRibbonTrail_setVisible_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setVisible_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getVisible_ev_bool(EarthView_World_Graphic_CRibbonTrail_getVisible_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getVisible_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_isVisible_ev_bool(EarthView_World_Graphic_CRibbonTrail_isVisible_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_isVisible_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setRenderingMaxDistance_void_Real(EarthView_World_Graphic_CRibbonTrail_setRenderingMaxDistance_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setRenderingMaxDistance_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getRenderingMaxDistance_Real(EarthView_World_Graphic_CRibbonTrail_getRenderingMaxDistance_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getRenderingMaxDistance_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setRenderingMinDistance_void_Real(EarthView_World_Graphic_CRibbonTrail_setRenderingMinDistance_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setRenderingMinDistance_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getRenderingMinDistance_Real(EarthView_World_Graphic_CRibbonTrail_getRenderingMinDistance_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getRenderingMinDistance_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setRenderingMinPixelSize_void_Real(EarthView_World_Graphic_CRibbonTrail_setRenderingMinPixelSize_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setRenderingMinPixelSize_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getRenderingMinPixelSize_Real(EarthView_World_Graphic_CRibbonTrail_getRenderingMinPixelSize_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getRenderingMinPixelSize_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setSelectionColour_void_CColourValue(EarthView_World_Graphic_CRibbonTrail_setSelectionColour_void_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setSelectionColour_void_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setSelected_ev_bool_IntVector(EarthView_World_Graphic_CRibbonTrail_setSelected_ev_bool_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setSelected_ev_bool_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getSelected_IntVector(EarthView_World_Graphic_CRibbonTrail_getSelected_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getSelected_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3(EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector(EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CSphere_ev_bool_IntVector(EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3(EarthView_World_Graphic_CRibbonTrail_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_renderSelection_void(EarthView_World_Graphic_CRibbonTrail_renderSelection_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_renderSelection_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_clearSelection_void(EarthView_World_Graphic_CRibbonTrail_clearSelection_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_clearSelection_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_startEditing_ev_bool_ev_uint32(EarthView_World_Graphic_CRibbonTrail_startEditing_ev_bool_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_startEditing_ev_bool_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_endEditing_void(EarthView_World_Graphic_CRibbonTrail_endEditing_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_endEditing_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getEditBoundingBox_CEditBoundingBox(EarthView_World_Graphic_CRibbonTrail_getEditBoundingBox_CEditBoundingBox_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getEditBoundingBox_CEditBoundingBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(EarthView_World_Graphic_CRibbonTrail_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(EarthView_World_Graphic_CRibbonTrail_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroup_void_ev_uint8(EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroup_void_ev_uint8_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroup_void_ev_uint8_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16(EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getRenderQueueGroup_ev_uint8(EarthView_World_Graphic_CRibbonTrail_getRenderQueueGroup_ev_uint8_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getRenderQueueGroup_ev_uint8_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail__getParentNodeFullTransform_CMatrix4(EarthView_World_Graphic_CRibbonTrail__getParentNodeFullTransform_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail__getParentNodeFullTransform_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setQueryFlags_void_ev_uint32(EarthView_World_Graphic_CRibbonTrail_setQueryFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setQueryFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_addQueryFlags_void_ev_uint32(EarthView_World_Graphic_CRibbonTrail_addQueryFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_addQueryFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_removeQueryFlags_void_ev_uint32(EarthView_World_Graphic_CRibbonTrail_removeQueryFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_removeQueryFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getQueryFlags_ev_uint32(EarthView_World_Graphic_CRibbonTrail_getQueryFlags_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getQueryFlags_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setVisibilityFlags_void_ev_uint32(EarthView_World_Graphic_CRibbonTrail_setVisibilityFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setVisibilityFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_addVisibilityFlags_void_ev_uint32(EarthView_World_Graphic_CRibbonTrail_addVisibilityFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_addVisibilityFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_removeVisibilityFlags_void_ev_uint32(EarthView_World_Graphic_CRibbonTrail_removeVisibilityFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_removeVisibilityFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getVisibilityFlags_ev_uint32(EarthView_World_Graphic_CRibbonTrail_getVisibilityFlags_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getVisibilityFlags_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_addListener_void_CMovableObjectListener(EarthView_World_Graphic_CRibbonTrail_addListener_void_CMovableObjectListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_addListener_void_CMovableObjectListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_removeListener_void_CMovableObjectListener(EarthView_World_Graphic_CRibbonTrail_removeListener_void_CMovableObjectListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_removeListener_void_CMovableObjectListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_existListener_ev_bool_CMovableObjectListener(EarthView_World_Graphic_CRibbonTrail_existListener_ev_bool_CMovableObjectListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_existListener_ev_bool_CMovableObjectListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getListenerCount_ev_uint32(EarthView_World_Graphic_CRibbonTrail_getListenerCount_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getListenerCount_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getListener_CMovableObjectListener_ev_uint32(EarthView_World_Graphic_CRibbonTrail_getListener_CMovableObjectListener_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getListener_CMovableObjectListener_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_queryLights_LightList(EarthView_World_Graphic_CRibbonTrail_queryLights_LightList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_queryLights_LightList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getLightMask_ev_uint32(EarthView_World_Graphic_CRibbonTrail_getLightMask_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getLightMask_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setLightMask_void_ev_uint32(EarthView_World_Graphic_CRibbonTrail_setLightMask_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setLightMask_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail__getLightList_LightList(EarthView_World_Graphic_CRibbonTrail__getLightList_LightList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail__getLightList_LightList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setCastShadows_void_ev_bool(EarthView_World_Graphic_CRibbonTrail_setCastShadows_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setCastShadows_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getReceivesShadows_ev_bool(EarthView_World_Graphic_CRibbonTrail_getReceivesShadows_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getReceivesShadows_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getTypeFlags_ev_uint32(EarthView_World_Graphic_CRibbonTrail_getTypeFlags_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getTypeFlags_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_ev_bool(EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor(EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_setDebugDisplayEnabled_void_ev_bool(EarthView_World_Graphic_CRibbonTrail_setDebugDisplayEnabled_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_setDebugDisplayEnabled_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_isDebugDisplayEnabled_ev_bool(EarthView_World_Graphic_CRibbonTrail_isDebugDisplayEnabled_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_isDebugDisplayEnabled_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getCastShadows_ev_bool(EarthView_World_Graphic_CRibbonTrail_getCastShadows_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getCastShadows_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getEdgeList_CEdgeData(EarthView_World_Graphic_CRibbonTrail_getEdgeList_CEdgeData_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getEdgeList_CEdgeData_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_hasEdgeList_ev_bool(EarthView_World_Graphic_CRibbonTrail_hasEdgeList_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_hasEdgeList_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_ev_bool(EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox(EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getLightCapBounds_CAxisAlignedBox(EarthView_World_Graphic_CRibbonTrail_getLightCapBounds_CAxisAlignedBox_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getLightCapBounds_CAxisAlignedBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getDarkCapBounds_CAxisAlignedBox_CLight_Real(EarthView_World_Graphic_CRibbonTrail_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32(EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real(EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_getPointExtrusionDistance_Real_CLight(EarthView_World_Graphic_CRibbonTrail_getPointExtrusionDistance_Real_CLight_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_getPointExtrusionDistance_Real_CLight_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_updateEdgeListLightFacing_void_CEdgeData_CVector4(EarthView_World_Graphic_CRibbonTrail_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32(EarthView_World_Graphic_CRibbonTrail_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_extrudeBounds_void_CAxisAlignedBox_CVector4_Real(EarthView_World_Graphic_CRibbonTrail_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback = pCallback;
+				}
+				virtual void getWorldTransforms(_in EarthView::World::Spatial::Math::CMatrix4* xform) const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getWorldTransforms_void_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_getWorldTransforms_void_CMatrix4_Callback(xform);
+					}
+					else
+						return this->CRibbonTrail::getWorldTransforms(xform);
+				}
+				virtual void _notifyAttached(_in EarthView::World::Graphic::CNode* ref_parent, _in ev_bool isTagPoint)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_ev_bool_Callback(ref_parent, isTagPoint);
+					}
+					else
+						return this->CRibbonTrail::_notifyAttached(ref_parent, isTagPoint);
+				}
+				virtual void addNode(_in EarthView::World::Graphic::CNode* ref_n)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_addNode_void_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_addNode_void_CNode_Callback(ref_n);
+					}
+					else
+						return this->CRibbonTrail::addNode(ref_n);
+				}
+				virtual void removeNode(_in EarthView::World::Graphic::CNode* n)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_removeNode_void_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_removeNode_void_CNode_Callback(n);
+					}
+					else
+						return this->CRibbonTrail::removeNode(n);
+				}
+				virtual EarthView::World::Graphic::CRibbonTrail::NodeIterator getNodeIterator() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getNodeIterator_NodeIterator_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CRibbonTrail::NodeIterator returnValue = *(EarthView::World::Graphic::CRibbonTrail::NodeIterator*)m_EarthView_World_Graphic_CRibbonTrail_getNodeIterator_NodeIterator_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getNodeIterator();
+				}
+				virtual ev_size_t getChainIndexForNode(_in const EarthView::World::Graphic::CNode* n)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getChainIndexForNode_ev_size_t_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						ev_size_t returnValue = m_EarthView_World_Graphic_CRibbonTrail_getChainIndexForNode_ev_size_t_CNode_Callback(n);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getChainIndexForNode(n);
+				}
+				virtual void setTrailLength(_in Real len)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setTrailLength_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setTrailLength_void_Real_Callback(len);
+					}
+					else
+						return this->CRibbonTrail::setTrailLength(len);
+				}
+				virtual Real getTrailLength() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getTrailLength_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CRibbonTrail_getTrailLength_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getTrailLength();
+				}
+				virtual void setMaxChainElements(_in ev_size_t maxElements)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setMaxChainElements_void_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setMaxChainElements_void_ev_size_t_Callback(maxElements);
+					}
+					else
+						return this->CRibbonTrail::setMaxChainElements(maxElements);
+				}
+				virtual void setNumberOfChains(_in ev_size_t numChains)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setNumberOfChains_void_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setNumberOfChains_void_ev_size_t_Callback(numChains);
+					}
+					else
+						return this->CRibbonTrail::setNumberOfChains(numChains);
+				}
+				virtual void clearChain(_in ev_size_t chainIndex)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_clearChain_void_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_clearChain_void_ev_size_t_Callback(chainIndex);
+					}
+					else
+						return this->CRibbonTrail::clearChain(chainIndex);
+				}
+				virtual void setInitialColour(_in ev_size_t chainIndex, _in const EarthView::World::Graphic::CColourValue& col)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_CColourValue_Callback(chainIndex, &col);
+					}
+					else
+						return this->CRibbonTrail::setInitialColour(chainIndex, col);
+				}
+				virtual void setInitialColour(_in ev_size_t chainIndex, _in Real r, _in Real g, _in Real b, _in Real a)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Real_Callback(chainIndex, r, g, b, a);
+					}
+					else
+						return this->CRibbonTrail::setInitialColour(chainIndex, r, g, b, a);
+				}
+				virtual void setInitialColour(_in ev_size_t chainIndex, _in Real r, _in Real g, _in Real b)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Callback(chainIndex, r, g, b);
+					}
+					else
+						return this->CRibbonTrail::setInitialColour(chainIndex, r, g, b);
+				}
+				virtual const EarthView::World::Graphic::CColourValue& getInitialColour(_in ev_size_t chainIndex) const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getInitialColour_CColourValue_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CColourValue& returnValue = *(EarthView::World::Graphic::CColourValue*)m_EarthView_World_Graphic_CRibbonTrail_getInitialColour_CColourValue_ev_size_t_Callback(chainIndex);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getInitialColour(chainIndex);
+				}
+				virtual void setColourChange(_in ev_size_t chainIndex, _in const EarthView::World::Graphic::CColourValue& valuePerSecond)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_CColourValue_Callback(chainIndex, &valuePerSecond);
+					}
+					else
+						return this->CRibbonTrail::setColourChange(chainIndex, valuePerSecond);
+				}
+				virtual void setInitialWidth(_in ev_size_t chainIndex, _in Real width)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setInitialWidth_void_ev_size_t_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setInitialWidth_void_ev_size_t_Real_Callback(chainIndex, width);
+					}
+					else
+						return this->CRibbonTrail::setInitialWidth(chainIndex, width);
+				}
+				virtual Real getInitialWidth(_in ev_size_t chainIndex) const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getInitialWidth_Real_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CRibbonTrail_getInitialWidth_Real_ev_size_t_Callback(chainIndex);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getInitialWidth(chainIndex);
+				}
+				virtual void setWidthChange(_in ev_size_t chainIndex, _in Real widthDeltaPerSecond)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setWidthChange_void_ev_size_t_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setWidthChange_void_ev_size_t_Real_Callback(chainIndex, widthDeltaPerSecond);
+					}
+					else
+						return this->CRibbonTrail::setWidthChange(chainIndex, widthDeltaPerSecond);
+				}
+				virtual Real getWidthChange(_in ev_size_t chainIndex) const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getWidthChange_Real_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CRibbonTrail_getWidthChange_Real_ev_size_t_Callback(chainIndex);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getWidthChange(chainIndex);
+				}
+				virtual void setColourChange(_in ev_size_t chainIndex, _in Real r, _in Real g, _in Real b, _in Real a)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_Real_Real_Real_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_Real_Real_Real_Real_Callback(chainIndex, r, g, b, a);
+					}
+					else
+						return this->CRibbonTrail::setColourChange(chainIndex, r, g, b, a);
+				}
+				virtual const EarthView::World::Graphic::CColourValue& getColourChange(_in ev_size_t chainIndex) const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getColourChange_CColourValue_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CColourValue& returnValue = *(EarthView::World::Graphic::CColourValue*)m_EarthView_World_Graphic_CRibbonTrail_getColourChange_CColourValue_ev_size_t_Callback(chainIndex);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getColourChange(chainIndex);
+				}
+				virtual void setVelocity(_in Real velocity)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setVelocity_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setVelocity_void_Real_Callback(velocity);
+					}
+					else
+						return this->CRibbonTrail::setVelocity(velocity);
+				}
+				virtual const Real getVelocity() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getVelocity_Real_Callback != NULL && this->isCustomExtend())
+					{
+						const Real returnValue = m_EarthView_World_Graphic_CRibbonTrail_getVelocity_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getVelocity();
+				}
+				virtual void _timeUpdate(_in Real time)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail__timeUpdate_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail__timeUpdate_void_Real_Callback(time);
+					}
+					else
+						return this->CRibbonTrail::_timeUpdate(time);
+				}
+				virtual EVString getMovableType() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getMovableType_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CRibbonTrail_getMovableType_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getMovableType();
+				}
+				virtual void manageController()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_manageController_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_manageController_void_Callback();
+					}
+					else
+						return this->CRibbonTrail::manageController();
+				}
+				virtual void updateTrail(_in ev_size_t index, _in const EarthView::World::Graphic::CNode* node)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_updateTrail_void_ev_size_t_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_updateTrail_void_ev_size_t_CNode_Callback(index, node);
+					}
+					else
+						return this->CRibbonTrail::updateTrail(index, node);
+				}
+				virtual void resetTrail(_in ev_size_t index, _in const EarthView::World::Graphic::CNode* node)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_resetTrail_void_ev_size_t_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_resetTrail_void_ev_size_t_CNode_Callback(index, node);
+					}
+					else
+						return this->CRibbonTrail::resetTrail(index, node);
+				}
+				virtual void resetAllTrails()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_resetAllTrails_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_resetAllTrails_void_Callback();
+					}
+					else
+						return this->CRibbonTrail::resetAllTrails();
+				}
+				virtual void updateVertexBuffer(_in EarthView::World::Graphic::CCamera* cam)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_updateVertexBuffer_void_CCamera_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_updateVertexBuffer_void_CCamera_Callback(cam);
+					}
+					else
+						return this->CRibbonTrail::updateVertexBuffer(cam);
+				}
+				virtual const EarthView::World::Graphic::CMaterialPtr& getMaterial() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getMaterial_CMaterialPtr_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CMaterialPtr& returnValue = *(EarthView::World::Graphic::CMaterialPtr*)m_EarthView_World_Graphic_CRibbonTrail_getMaterial_CMaterialPtr_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getMaterial();
+				}
+				virtual void getRenderOperation(_out EarthView::World::Graphic::CRenderOperation& op)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getRenderOperation_void_CRenderOperation_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_getRenderOperation_void_CRenderOperation_Callback(&op);
+					}
+					else
+						return this->CRibbonTrail::getRenderOperation(op);
+				}
+				virtual Real getSquaredViewDepth(_in const EarthView::World::Graphic::CCamera* cam) const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getSquaredViewDepth_Real_CCamera_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CRibbonTrail_getSquaredViewDepth_Real_CCamera_Callback(cam);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getSquaredViewDepth(cam);
+				}
+				virtual const EarthView::World::Graphic::LightList& getLights() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getLights_LightList_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::LightList& returnValue = *(EarthView::World::Graphic::LightList*)m_EarthView_World_Graphic_CRibbonTrail_getLights_LightList_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getLights();
+				}
+				virtual const EarthView::World::Graphic::CBillboardChain::CBillboardChainInternalRenderable* getRenderablePtr()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getRenderablePtr_CBillboardChainInternalRenderable_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CBillboardChain::CBillboardChainInternalRenderable* returnValue = m_EarthView_World_Graphic_CRibbonTrail_getRenderablePtr_CBillboardChainInternalRenderable_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getRenderablePtr();
+				}
+				virtual ev_size_t getMaxChainElements() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getMaxChainElements_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						ev_size_t returnValue = m_EarthView_World_Graphic_CRibbonTrail_getMaxChainElements_ev_size_t_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getMaxChainElements();
+				}
+				virtual ev_size_t getNumberOfChains() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getNumberOfChains_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						ev_size_t returnValue = m_EarthView_World_Graphic_CRibbonTrail_getNumberOfChains_ev_size_t_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getNumberOfChains();
+				}
+				virtual void setUseTextureCoords(_in ev_bool use)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setUseTextureCoords_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setUseTextureCoords_void_ev_bool_Callback(use);
+					}
+					else
+						return this->CRibbonTrail::setUseTextureCoords(use);
+				}
+				virtual ev_bool getUseTextureCoords() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getUseTextureCoords_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_getUseTextureCoords_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getUseTextureCoords();
+				}
+				virtual void setTextureCoordDirection(_in EarthView::World::Graphic::CBillboardChain::TexCoordDirection dir)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setTextureCoordDirection_void_TexCoordDirection_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setTextureCoordDirection_void_TexCoordDirection_Callback((int)dir);
+					}
+					else
+						return this->CRibbonTrail::setTextureCoordDirection(dir);
+				}
+				virtual EarthView::World::Graphic::CBillboardChain::TexCoordDirection getTextureCoordDirection()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getTextureCoordDirection_TexCoordDirection_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CBillboardChain::TexCoordDirection returnValue = (EarthView::World::Graphic::CBillboardChain::TexCoordDirection)m_EarthView_World_Graphic_CRibbonTrail_getTextureCoordDirection_TexCoordDirection_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getTextureCoordDirection();
+				}
+				virtual void setOtherTextureCoordRange(_in Real start, _in Real end)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setOtherTextureCoordRange_void_Real_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setOtherTextureCoordRange_void_Real_Real_Callback(start, end);
+					}
+					else
+						return this->CRibbonTrail::setOtherTextureCoordRange(start, end);
+				}
+				virtual void getOtherTextureCoordRange(_out Real& start, _out Real& end) const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getOtherTextureCoordRange_void_Real_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_getOtherTextureCoordRange_void_Real_Real_Callback(start, end);
+					}
+					else
+						return this->CRibbonTrail::getOtherTextureCoordRange(start, end);
+				}
+				virtual void setUseVertexColours(_in ev_bool use)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setUseVertexColours_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setUseVertexColours_void_ev_bool_Callback(use);
+					}
+					else
+						return this->CRibbonTrail::setUseVertexColours(use);
+				}
+				virtual ev_bool getUseVertexColours() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getUseVertexColours_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_getUseVertexColours_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getUseVertexColours();
+				}
+				virtual void setDynamic(_in ev_bool dyn)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setDynamic_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setDynamic_void_ev_bool_Callback(dyn);
+					}
+					else
+						return this->CRibbonTrail::setDynamic(dyn);
+				}
+				virtual ev_bool getDynamic() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getDynamic_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_getDynamic_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getDynamic();
+				}
+				virtual void addChainElement(_in ev_size_t chainIndex, _in const EarthView::World::Graphic::CBillboardChain::CElement& billboardChainElement)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_addChainElement_void_ev_size_t_CElement_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_addChainElement_void_ev_size_t_CElement_Callback(chainIndex, &billboardChainElement);
+					}
+					else
+						return this->CRibbonTrail::addChainElement(chainIndex, billboardChainElement);
+				}
+				virtual void removeChainElement(_in ev_size_t chainIndex)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_removeChainElement_void_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_removeChainElement_void_ev_size_t_Callback(chainIndex);
+					}
+					else
+						return this->CRibbonTrail::removeChainElement(chainIndex);
+				}
+				virtual void updateChainElement(_in ev_size_t chainIndex, _in ev_size_t elementIndex, _in const EarthView::World::Graphic::CBillboardChain::CElement& billboardChainElement)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_updateChainElement_void_ev_size_t_ev_size_t_CElement_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_updateChainElement_void_ev_size_t_ev_size_t_CElement_Callback(chainIndex, elementIndex, &billboardChainElement);
+					}
+					else
+						return this->CRibbonTrail::updateChainElement(chainIndex, elementIndex, billboardChainElement);
+				}
+				virtual const EarthView::World::Graphic::CBillboardChain::CElement& getChainElement(_in ev_size_t chainIndex, _in ev_size_t elementIndex) const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getChainElement_CElement_ev_size_t_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CBillboardChain::CElement& returnValue = *(EarthView::World::Graphic::CBillboardChain::CElement*)m_EarthView_World_Graphic_CRibbonTrail_getChainElement_CElement_ev_size_t_ev_size_t_Callback(chainIndex, elementIndex);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getChainElement(chainIndex, elementIndex);
+				}
+				virtual ev_size_t getNumChainElements(_in ev_size_t chainIndex) const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getNumChainElements_ev_size_t_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						ev_size_t returnValue = m_EarthView_World_Graphic_CRibbonTrail_getNumChainElements_ev_size_t_ev_size_t_Callback(chainIndex);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getNumChainElements(chainIndex);
+				}
+				virtual void clearAllChains()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_clearAllChains_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_clearAllChains_void_Callback();
+					}
+					else
+						return this->CRibbonTrail::clearAllChains();
+				}
+				virtual EVString getMaterialName() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getMaterialName_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CRibbonTrail_getMaterialName_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getMaterialName();
+				}
+				virtual void setMaterialName(_in const EVString& name, _in const EVString& groupName)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* groupName_Char = groupName.makeBuffer();
+						m_EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_EVString_Callback(name_Char, groupName_Char);
+					}
+					else
+						return this->CRibbonTrail::setMaterialName(name, groupName);
+				}
+				virtual void setMaterialName(_in const EVString& name)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						m_EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_Callback(name_Char);
+					}
+					else
+						return this->CRibbonTrail::setMaterialName(name);
+				}
+				virtual void _notifyCurrentCamera(_in EarthView::World::Graphic::CCamera* cam)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail__notifyCurrentCamera_void_CCamera_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail__notifyCurrentCamera_void_CCamera_Callback(cam);
+					}
+					else
+						return this->CRibbonTrail::_notifyCurrentCamera(cam);
+				}
+				virtual Real getBoundingRadius() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getBoundingRadius_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CRibbonTrail_getBoundingRadius_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getBoundingRadius();
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getBoundingBox() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getBoundingBox_CAxisAlignedBox_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CRibbonTrail_getBoundingBox_CAxisAlignedBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getBoundingBox();
+				}
+				virtual void _updateRenderQueue(_in EarthView::World::Graphic::CRenderQueue* queue)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail__updateRenderQueue_void_CRenderQueue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail__updateRenderQueue_void_CRenderQueue_Callback(queue);
+					}
+					else
+						return this->CRibbonTrail::_updateRenderQueue(queue);
+				}
+				virtual void visitRenderables(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_ev_bool_Callback(visitor, debugRenderables);
+					}
+					else
+						return this->CRibbonTrail::visitRenderables(visitor, debugRenderables);
+				}
+				virtual void visitRenderables(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_Callback(visitor);
+					}
+					else
+						return this->CRibbonTrail::visitRenderables(visitor);
+				}
+				virtual void setupChainContainers()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setupChainContainers_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setupChainContainers_void_Callback();
+					}
+					else
+						return this->CRibbonTrail::setupChainContainers();
+				}
+				virtual void setupVertexDeclaration()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setupVertexDeclaration_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setupVertexDeclaration_void_Callback();
+					}
+					else
+						return this->CRibbonTrail::setupVertexDeclaration();
+				}
+				virtual void setupBuffers()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setupBuffers_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setupBuffers_void_Callback();
+					}
+					else
+						return this->CRibbonTrail::setupBuffers();
+				}
+				virtual void updateIndexBuffer()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_updateIndexBuffer_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_updateIndexBuffer_void_Callback();
+					}
+					else
+						return this->CRibbonTrail::updateIndexBuffer();
+				}
+				virtual void updateBoundingBox() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_updateBoundingBox_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_updateBoundingBox_void_Callback();
+					}
+					else
+						return this->CRibbonTrail::updateBoundingBox();
+				}
+				virtual const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject* getAnimableObjectPtr()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject* returnValue = m_EarthView_World_Graphic_CRibbonTrail_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getAnimableObjectPtr();
+				}
+				virtual ev_uint8 getRenderQueueId() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getRenderQueueId_ev_uint8_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint8 returnValue = m_EarthView_World_Graphic_CRibbonTrail_getRenderQueueId_ev_uint8_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getRenderQueueId();
+				}
+				virtual void _notifyCreator(_in EarthView::World::Graphic::CMovableObjectFactory* ref_fact)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail__notifyCreator_void_CMovableObjectFactory_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail__notifyCreator_void_CMovableObjectFactory_Callback(ref_fact);
+					}
+					else
+						return this->CRibbonTrail::_notifyCreator(ref_fact);
+				}
+				virtual EarthView::World::Graphic::CMovableObjectFactory* _getCreator() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail__getCreator_CMovableObjectFactory_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CMovableObjectFactory* returnValue = m_EarthView_World_Graphic_CRibbonTrail__getCreator_CMovableObjectFactory_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::_getCreator();
+				}
+				virtual void _notifyManager(_in EarthView::World::Graphic::CSceneManager* ref_mgr)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail__notifyManager_void_CSceneManager_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail__notifyManager_void_CSceneManager_Callback(ref_mgr);
+					}
+					else
+						return this->CRibbonTrail::_notifyManager(ref_mgr);
+				}
+				virtual EarthView::World::Graphic::CSceneManager* _getManager() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail__getManager_CSceneManager_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CSceneManager* returnValue = m_EarthView_World_Graphic_CRibbonTrail__getManager_CSceneManager_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::_getManager();
+				}
+				virtual EVString getName() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getName_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CRibbonTrail_getName_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getName();
+				}
+				virtual EarthView::World::Graphic::CNode* getParentNode() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getParentNode_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CNode* returnValue = m_EarthView_World_Graphic_CRibbonTrail_getParentNode_CNode_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getParentNode();
+				}
+				virtual EarthView::World::Graphic::CSceneNode* getParentSceneNode() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getParentSceneNode_CSceneNode_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CSceneNode* returnValue = m_EarthView_World_Graphic_CRibbonTrail_getParentSceneNode_CSceneNode_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getParentSceneNode();
+				}
+				virtual ev_bool isParentTagPoint() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_isParentTagPoint_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_isParentTagPoint_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::isParentTagPoint();
+				}
+				virtual ev_bool isAttached() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_isAttached_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_isAttached_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::isAttached();
+				}
+				virtual void detachFromParent()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_detachFromParent_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_detachFromParent_void_Callback();
+					}
+					else
+						return this->CRibbonTrail::detachFromParent();
+				}
+				virtual ev_bool isInScene() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_isInScene_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_isInScene_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::isInScene();
+				}
+				virtual void _notifyMoved()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail__notifyMoved_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail__notifyMoved_void_Callback();
+					}
+					else
+						return this->CRibbonTrail::_notifyMoved();
+				}
+				virtual void _notifyLightsQueried(_in const EarthView::World::Graphic::LightList* lightList)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail__notifyLightsQueried_void_LightList_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail__notifyLightsQueried_void_LightList_Callback(lightList);
+					}
+					else
+						return this->CRibbonTrail::_notifyLightsQueried(lightList);
+				}
+				virtual void setLightQueriedListener(_in EarthView::World::Graphic::CMovableObject::CLightQueriedListener* listener)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setLightQueriedListener_void_CLightQueriedListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setLightQueriedListener_void_CLightQueriedListener_Callback(listener);
+					}
+					else
+						return this->CRibbonTrail::setLightQueriedListener(listener);
+				}
+				virtual EarthView::World::Graphic::CMovableObject::CLightQueriedListener* getLightQueriedListener()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getLightQueriedListener_CLightQueriedListener_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CMovableObject::CLightQueriedListener* returnValue = m_EarthView_World_Graphic_CRibbonTrail_getLightQueriedListener_CLightQueriedListener_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getLightQueriedListener();
+				}
+				virtual ev_uint32 getLightListUpdated() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getLightListUpdated_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CRibbonTrail_getLightListUpdated_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getLightListUpdated();
+				}
+				virtual void setLightListUpdated(_in ev_uint32 frame)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setLightListUpdated_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setLightListUpdated_void_ev_uint32_Callback(frame);
+					}
+					else
+						return this->CRibbonTrail::setLightListUpdated(frame);
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getWorldBoundingBox(_in ev_bool derive) const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback(derive);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getWorldBoundingBox(derive);
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getWorldBoundingBox() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getWorldBoundingBox();
+				}
+				virtual const EarthView::World::Spatial::Math::CSphere& getWorldBoundingSphere(_in ev_bool derive) const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CSphere& returnValue = *(EarthView::World::Spatial::Math::CSphere*)m_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_ev_bool_Callback(derive);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getWorldBoundingSphere(derive);
+				}
+				virtual const EarthView::World::Spatial::Math::CSphere& getWorldBoundingSphere() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CSphere& returnValue = *(EarthView::World::Spatial::Math::CSphere*)m_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getWorldBoundingSphere();
+				}
+				virtual void setVisible(_in ev_bool visible)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setVisible_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setVisible_void_ev_bool_Callback(visible);
+					}
+					else
+						return this->CRibbonTrail::setVisible(visible);
+				}
+				virtual ev_bool getVisible() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getVisible_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_getVisible_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getVisible();
+				}
+				virtual ev_bool isVisible() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_isVisible_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_isVisible_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::isVisible();
+				}
+				virtual void setRenderingMaxDistance(_in Real dist)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setRenderingMaxDistance_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setRenderingMaxDistance_void_Real_Callback(dist);
+					}
+					else
+						return this->CRibbonTrail::setRenderingMaxDistance(dist);
+				}
+				virtual Real getRenderingMaxDistance() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getRenderingMaxDistance_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CRibbonTrail_getRenderingMaxDistance_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getRenderingMaxDistance();
+				}
+				virtual void setRenderingMinDistance(_in Real dist)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setRenderingMinDistance_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setRenderingMinDistance_void_Real_Callback(dist);
+					}
+					else
+						return this->CRibbonTrail::setRenderingMinDistance(dist);
+				}
+				virtual Real getRenderingMinDistance() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getRenderingMinDistance_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CRibbonTrail_getRenderingMinDistance_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getRenderingMinDistance();
+				}
+				virtual void setRenderingMinPixelSize(_in Real pixelSize)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setRenderingMinPixelSize_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setRenderingMinPixelSize_void_Real_Callback(pixelSize);
+					}
+					else
+						return this->CRibbonTrail::setRenderingMinPixelSize(pixelSize);
+				}
+				virtual Real getRenderingMinPixelSize() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getRenderingMinPixelSize_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CRibbonTrail_getRenderingMinPixelSize_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getRenderingMinPixelSize();
+				}
+				virtual void setSelectionColour(_in const EarthView::World::Graphic::CColourValue& colour)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setSelectionColour_void_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setSelectionColour_void_CColourValue_Callback(&colour);
+					}
+					else
+						return this->CRibbonTrail::setSelectionColour(colour);
+				}
+				virtual ev_bool setSelected(_in const EarthView::World::Core::IntVector& objIndics)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setSelected_ev_bool_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_setSelected_ev_bool_IntVector_Callback(&objIndics);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::setSelected(objIndics);
+				}
+				virtual EarthView::World::Core::IntVector getSelected() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getSelected_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Core::IntVector returnValue = *(EarthView::World::Core::IntVector*)m_EarthView_World_Graphic_CRibbonTrail_getSelected_IntVector_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getSelected();
+				}
+				virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CRay& ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out EarthView::World::Spatial::Math::CVector3& point)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback(&ray, viewport, prepareToRenderSelection, objIndex, &point);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::selectBy(ray, viewport, prepareToRenderSelection, objIndex, point);
+				}
+				virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CAxisAlignedBox& aabb, _in ev_bool prepareToRenderSelection, _out EarthView::World::Core::IntVector& indexVec)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback(&aabb, prepareToRenderSelection, &indexVec);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::selectBy(aabb, prepareToRenderSelection, indexVec);
+				}
+				virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CSphere& sphere, _in ev_bool prepareToRenderSelection, _out EarthView::World::Core::IntVector& indexVec)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback(&sphere, prepareToRenderSelection, &indexVec);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::selectBy(sphere, prepareToRenderSelection, indexVec);
+				}
+				virtual ev_bool selectComponentBy(_in const EarthView::World::Spatial::Math::CRay& ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out ev_int32& submeshIndex, _out ev_int32& instanceIndex, _out ev_int32& segmentIndex, _out EarthView::World::Spatial::Math::CVector3& point)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback(&ray, viewport, prepareToRenderSelection, objIndex, submeshIndex, instanceIndex, segmentIndex, &point);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::selectComponentBy(ray, viewport, prepareToRenderSelection, objIndex, submeshIndex, instanceIndex, segmentIndex, point);
+				}
+				virtual void renderSelection()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_renderSelection_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_renderSelection_void_Callback();
+					}
+					else
+						return this->CRibbonTrail::renderSelection();
+				}
+				virtual void clearSelection()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_clearSelection_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_clearSelection_void_Callback();
+					}
+					else
+						return this->CRibbonTrail::clearSelection();
+				}
+				virtual ev_bool startEditing(_in ev_uint32 objectIndex)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_startEditing_ev_bool_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_startEditing_ev_bool_ev_uint32_Callback(objectIndex);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::startEditing(objectIndex);
+				}
+				virtual void endEditing()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_endEditing_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_endEditing_void_Callback();
+					}
+					else
+						return this->CRibbonTrail::endEditing();
+				}
+				virtual EarthView::World::Graphic::CEditBoundingBox* getEditBoundingBox()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getEditBoundingBox_CEditBoundingBox_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CEditBoundingBox* returnValue = m_EarthView_World_Graphic_CRibbonTrail_getEditBoundingBox_CEditBoundingBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getEditBoundingBox();
+				}
+				virtual ev_bool getSelectedObjectWorldMatrix(_in ev_uint32 objectIndex, _inout EarthView::World::Spatial::Math::CMatrix4& matrix)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback(objectIndex, &matrix);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getSelectedObjectWorldMatrix(objectIndex, matrix);
+				}
+				virtual ev_bool setSelectedObjectWorldMatrix(_in ev_uint32 objectIndex, _in const EarthView::World::Spatial::Math::CMatrix4& matrix)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback(objectIndex, &matrix);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::setSelectedObjectWorldMatrix(objectIndex, matrix);
+				}
+				virtual void setRenderQueueGroup(_in ev_uint8 queueID)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroup_void_ev_uint8_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroup_void_ev_uint8_Callback(queueID);
+					}
+					else
+						return this->CRibbonTrail::setRenderQueueGroup(queueID);
+				}
+				virtual void setRenderQueueGroupAndPriority(_in ev_uint8 queueID, _in ev_uint16 priority)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback(queueID, priority);
+					}
+					else
+						return this->CRibbonTrail::setRenderQueueGroupAndPriority(queueID, priority);
+				}
+				virtual ev_uint8 getRenderQueueGroup() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getRenderQueueGroup_ev_uint8_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint8 returnValue = m_EarthView_World_Graphic_CRibbonTrail_getRenderQueueGroup_ev_uint8_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getRenderQueueGroup();
+				}
+				virtual const EarthView::World::Spatial::Math::CMatrix4& _getParentNodeFullTransform() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail__getParentNodeFullTransform_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CMatrix4& returnValue = *(EarthView::World::Spatial::Math::CMatrix4*)m_EarthView_World_Graphic_CRibbonTrail__getParentNodeFullTransform_CMatrix4_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::_getParentNodeFullTransform();
+				}
+				virtual void setQueryFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setQueryFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setQueryFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CRibbonTrail::setQueryFlags(flags);
+				}
+				virtual void addQueryFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_addQueryFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_addQueryFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CRibbonTrail::addQueryFlags(flags);
+				}
+				virtual void removeQueryFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_removeQueryFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_removeQueryFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CRibbonTrail::removeQueryFlags(flags);
+				}
+				virtual ev_uint32 getQueryFlags() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getQueryFlags_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CRibbonTrail_getQueryFlags_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getQueryFlags();
+				}
+				virtual void setVisibilityFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setVisibilityFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setVisibilityFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CRibbonTrail::setVisibilityFlags(flags);
+				}
+				virtual void addVisibilityFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_addVisibilityFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_addVisibilityFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CRibbonTrail::addVisibilityFlags(flags);
+				}
+				virtual void removeVisibilityFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_removeVisibilityFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_removeVisibilityFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CRibbonTrail::removeVisibilityFlags(flags);
+				}
+				virtual ev_uint32 getVisibilityFlags() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getVisibilityFlags_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CRibbonTrail_getVisibilityFlags_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getVisibilityFlags();
+				}
+				virtual void addListener(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* ref_listener)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_addListener_void_CMovableObjectListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_addListener_void_CMovableObjectListener_Callback(ref_listener);
+					}
+					else
+						return this->CRibbonTrail::addListener(ref_listener);
+				}
+				virtual void removeListener(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_removeListener_void_CMovableObjectListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_removeListener_void_CMovableObjectListener_Callback(listener);
+					}
+					else
+						return this->CRibbonTrail::removeListener(listener);
+				}
+				virtual ev_bool existListener(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener) const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_existListener_ev_bool_CMovableObjectListener_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_existListener_ev_bool_CMovableObjectListener_Callback(listener);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::existListener(listener);
+				}
+				virtual ev_uint32 getListenerCount() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getListenerCount_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CRibbonTrail_getListenerCount_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getListenerCount();
+				}
+				virtual EarthView::World::Graphic::CMovableObject::CMovableObjectListener* getListener(_in ev_uint32 index) const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getListener_CMovableObjectListener_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CMovableObject::CMovableObjectListener* returnValue = m_EarthView_World_Graphic_CRibbonTrail_getListener_CMovableObjectListener_ev_uint32_Callback(index);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getListener(index);
+				}
+				virtual const EarthView::World::Graphic::LightList& queryLights() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_queryLights_LightList_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::LightList& returnValue = *(EarthView::World::Graphic::LightList*)m_EarthView_World_Graphic_CRibbonTrail_queryLights_LightList_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::queryLights();
+				}
+				virtual ev_uint32 getLightMask() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getLightMask_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CRibbonTrail_getLightMask_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getLightMask();
+				}
+				virtual void setLightMask(_in ev_uint32 lightMask)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setLightMask_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setLightMask_void_ev_uint32_Callback(lightMask);
+					}
+					else
+						return this->CRibbonTrail::setLightMask(lightMask);
+				}
+				virtual EarthView::World::Graphic::LightList* _getLightList()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail__getLightList_LightList_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::LightList* returnValue = m_EarthView_World_Graphic_CRibbonTrail__getLightList_LightList_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::_getLightList();
+				}
+				virtual EarthView::World::Graphic::CEdgeData* getEdgeList()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getEdgeList_CEdgeData_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CEdgeData* returnValue = m_EarthView_World_Graphic_CRibbonTrail_getEdgeList_CEdgeData_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getEdgeList();
+				}
+				virtual ev_bool hasEdgeList()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_hasEdgeList_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_hasEdgeList_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::hasEdgeList();
+				}
+				virtual EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator getShadowVolumeRenderableIterator(_in EarthView::World::Graphic::ShadowTechnique shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDist, _in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator returnValue = *(EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator*)m_EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback((int)shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist, flags);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getShadowVolumeRenderableIterator(shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist, flags);
+				}
+				virtual EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator getShadowVolumeRenderableIterator(_in EarthView::World::Graphic::ShadowTechnique shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDist)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator returnValue = *(EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator*)m_EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback((int)shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getShadowVolumeRenderableIterator(shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist);
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getLightCapBounds() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getLightCapBounds_CAxisAlignedBox_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CRibbonTrail_getLightCapBounds_CAxisAlignedBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getLightCapBounds();
+				}
+				virtual EarthView::World::Spatial::Math::CAxisAlignedBox getDarkCapBounds(_in const EarthView::World::Graphic::CLight& light, _in Real dirLightExtrusionDist) const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Spatial::Math::CAxisAlignedBox returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CRibbonTrail_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback(&light, dirLightExtrusionDist);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getDarkCapBounds(light, dirLightExtrusionDist);
+				}
+				virtual void setCastShadows(_in ev_bool enabled)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setCastShadows_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setCastShadows_void_ev_bool_Callback(enabled);
+					}
+					else
+						return this->CRibbonTrail::setCastShadows(enabled);
+				}
+				virtual ev_bool getCastShadows() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getCastShadows_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_getCastShadows_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getCastShadows();
+				}
+				virtual ev_bool getReceivesShadows()
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getReceivesShadows_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_getReceivesShadows_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getReceivesShadows();
+				}
+				virtual Real getPointExtrusionDistance(_in const EarthView::World::Graphic::CLight* l) const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getPointExtrusionDistance_Real_CLight_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CRibbonTrail_getPointExtrusionDistance_Real_CLight_Callback(l);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getPointExtrusionDistance(l);
+				}
+				virtual ev_uint32 getTypeFlags() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_getTypeFlags_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CRibbonTrail_getTypeFlags_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::getTypeFlags();
+				}
+				virtual void setDebugDisplayEnabled(_in ev_bool enabled)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_setDebugDisplayEnabled_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_setDebugDisplayEnabled_void_ev_bool_Callback(enabled);
+					}
+					else
+						return this->CRibbonTrail::setDebugDisplayEnabled(enabled);
+				}
+				virtual ev_bool isDebugDisplayEnabled() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_isDebugDisplayEnabled_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrail_isDebugDisplayEnabled_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrail::isDebugDisplayEnabled();
+				}
+				virtual void updateEdgeListLightFacing(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const EarthView::World::Spatial::Math::CVector4& lightPos)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback(edgeData, &lightPos);
+					}
+					else
+						return this->CRibbonTrail::updateEdgeListLightFacing(edgeData, lightPos);
+				}
+				virtual void generateShadowVolume(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const EarthView::World::Graphic::CHardwareIndexBufferSharedPtr& indexBuffer, _in const EarthView::World::Graphic::CLight* light, _inout EarthView::World::Graphic::CShadowCaster::ShadowRenderableList& shadowRenderables, _in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback(edgeData, &indexBuffer, light, &shadowRenderables, flags);
+					}
+					else
+						return this->CRibbonTrail::generateShadowVolume(edgeData, indexBuffer, light, shadowRenderables, flags);
+				}
+				virtual void extrudeBounds(_inout EarthView::World::Spatial::Math::CAxisAlignedBox& box, _in const EarthView::World::Spatial::Math::CVector4& lightPos, _in Real extrudeDist) const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback(&box, &lightPos, extrudeDist);
+					}
+					else
+						return this->CRibbonTrail::extrudeBounds(box, lightPos, extrudeDist);
+				}
+			};
+			REGISTER_FACTORY_CLASS(CRibbonTrailProxy);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeUpdated_void_CNode_Callback)(_in const EarthView::World::Graphic::CNode* pNode);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDestroyed_void_CNode_Callback)(_in const EarthView::World::Graphic::CNode* pNode);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeAttached_void_CNode_Callback)(_in const EarthView::World::Graphic::CNode* pNode);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDetached_void_CNode_Callback)(_in const EarthView::World::Graphic::CNode* pNode);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeMoved_void_CNode_Callback)(_in const EarthView::World::Graphic::CNode* pNode);
+			class CRibbonTrailListenerProxy : public EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener
+			{
+			private:
+				EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeUpdated_void_CNode_Callback* m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeUpdated_void_CNode_Callback;
+				EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDestroyed_void_CNode_Callback* m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDestroyed_void_CNode_Callback;
+				EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeAttached_void_CNode_Callback* m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeAttached_void_CNode_Callback;
+				EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDetached_void_CNode_Callback* m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDetached_void_CNode_Callback;
+				EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeMoved_void_CNode_Callback* m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeMoved_void_CNode_Callback;
+			public:
+				CRibbonTrailListenerProxy(EarthView::World::Core::CNameValuePairList *pList) : CRibbonTrailListener(pList)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeUpdated_void_CNode_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDestroyed_void_CNode_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeAttached_void_CNode_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDetached_void_CNode_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeMoved_void_CNode_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeUpdated_void_CNode(EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeUpdated_void_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeUpdated_void_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDestroyed_void_CNode(EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDestroyed_void_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDestroyed_void_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeAttached_void_CNode(EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeAttached_void_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeAttached_void_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDetached_void_CNode(EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDetached_void_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDetached_void_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeMoved_void_CNode(EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeMoved_void_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeMoved_void_CNode_Callback = pCallback;
+				}
+				virtual void nodeUpdated(_in const EarthView::World::Graphic::CNode* node)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeUpdated_void_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeUpdated_void_CNode_Callback(node);
+					}
+					else
+						return this->CRibbonTrailListener::nodeUpdated(node);
+				}
+				virtual void nodeDestroyed(_in const EarthView::World::Graphic::CNode* node)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDestroyed_void_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDestroyed_void_CNode_Callback(node);
+					}
+					else
+						return this->CRibbonTrailListener::nodeDestroyed(node);
+				}
+				virtual void nodeAttached(_in const EarthView::World::Graphic::CNode* pNode)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeAttached_void_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeAttached_void_CNode_Callback(pNode);
+					}
+					else
+						return this->CRibbonTrailListener::nodeAttached(pNode);
+				}
+				virtual void nodeDetached(_in const EarthView::World::Graphic::CNode* pNode)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDetached_void_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDetached_void_CNode_Callback(pNode);
+					}
+					else
+						return this->CRibbonTrailListener::nodeDetached(pNode);
+				}
+				virtual void nodeMoved(_in const EarthView::World::Graphic::CNode* pNode)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeMoved_void_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeMoved_void_CNode_Callback(pNode);
+					}
+					else
+						return this->CRibbonTrailListener::nodeMoved(pNode);
+				}
+			};
+			REGISTER_FACTORY_CLASS(CRibbonTrailListenerProxy);
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeUpdated_void_CNode(void *pObjectXXXX, _in const EarthView::World::Graphic::CNode* node )
+			{
+				EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailListenerProxy*>((EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener::nodeUpdated(node);
+				else
+					ptrNativeObject->nodeUpdated(node);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeUpdated_void_CNode( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeUpdated_void_CNode_Callback* pCallback )
+			{
+				CRibbonTrailListenerProxy* ptr = dynamic_cast<CRibbonTrailListenerProxy*>((EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeUpdated_void_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeUpdated_void_CNode_NoVirtual(void *pObjectXXXX, _in const EarthView::World::Graphic::CNode* node )
+			{
+				EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener::nodeUpdated(node);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDestroyed_void_CNode(void *pObjectXXXX, _in const EarthView::World::Graphic::CNode* node )
+			{
+				EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailListenerProxy*>((EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener::nodeDestroyed(node);
+				else
+					ptrNativeObject->nodeDestroyed(node);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDestroyed_void_CNode( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDestroyed_void_CNode_Callback* pCallback )
+			{
+				CRibbonTrailListenerProxy* ptr = dynamic_cast<CRibbonTrailListenerProxy*>((EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDestroyed_void_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDestroyed_void_CNode_NoVirtual(void *pObjectXXXX, _in const EarthView::World::Graphic::CNode* node )
+			{
+				EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener::nodeDestroyed(node);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeAttached_void_CNode( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeAttached_void_CNode_Callback* pCallback )
+			{
+				CRibbonTrailListenerProxy* ptr = dynamic_cast<CRibbonTrailListenerProxy*>((EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeAttached_void_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDetached_void_CNode( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDetached_void_CNode_Callback* pCallback )
+			{
+				CRibbonTrailListenerProxy* ptr = dynamic_cast<CRibbonTrailListenerProxy*>((EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeDetached_void_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeMoved_void_CNode( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeMoved_void_CNode_Callback* pCallback )
+			{
+				CRibbonTrailListenerProxy* ptr = dynamic_cast<CRibbonTrailListenerProxy*>((EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_CRibbonTrailListener_nodeMoved_void_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener*  _stdcall EarthView_World_Graphic_CRibbonTrail_getNodeListenerPtr_CRibbonTrailListener(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				const EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener* objXXXX = ptrNativeObject->getNodeListenerPtr();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CRibbonTrail_getNodeListener_CRibbonTrailListener(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				const EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener& objXXXX = ptrNativeObject->getNodeListener();
+				const EarthView::World::Graphic::CRibbonTrail::CRibbonTrailListener *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_NodeList_push_back_void_CNode(void *pObjectXXXX, _in EarthView::World::Graphic::CNode*& ref_t )
+			{
+				EarthView::World::Graphic::CRibbonTrail::NodeList* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::NodeList*) pObjectXXXX;
+				ptrNativeObject->push_back(ref_t);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_NodeList_pop_back_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CRibbonTrail::NodeList* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::NodeList*) pObjectXXXX;
+				ptrNativeObject->pop_back();
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CNode*  _stdcall EarthView_World_Graphic_CRibbonTrail_NodeList_front_CNode(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CRibbonTrail::NodeList* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::NodeList*) pObjectXXXX;
+				EarthView::World::Graphic::CNode* objXXXX = ptrNativeObject->front();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CNode*  _stdcall EarthView_World_Graphic_CRibbonTrail_NodeList_back_CNode(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CRibbonTrail::NodeList* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::NodeList*) pObjectXXXX;
+				EarthView::World::Graphic::CNode* objXXXX = ptrNativeObject->back();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_NodeList_insert_void_ev_uint32_CNode(void *pObjectXXXX, _in ev_uint32 pos, _in EarthView::World::Graphic::CNode*& ref_t )
+			{
+				EarthView::World::Graphic::CRibbonTrail::NodeList* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::NodeList*) pObjectXXXX;
+				ptrNativeObject->insert(pos, ref_t);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_NodeList_remove_void_ev_size_t(void *pObjectXXXX, _in ev_uint64  pos )
+			{
+				EarthView::World::Graphic::CRibbonTrail::NodeList* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::NodeList*) pObjectXXXX;
+				ptrNativeObject->remove(pos);
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CRibbonTrail_NodeList_empty_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRibbonTrail::NodeList* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::NodeList*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->empty();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CNode*  _stdcall EarthView_World_Graphic_CRibbonTrail_NodeList_OperatorIndex_CNode_ev_size_t(void *pObjXXXX, _in ev_uint64  n )
+			{
+				EarthView::World::Graphic::CRibbonTrail::NodeList& objYYYY = *(EarthView::World::Graphic::CRibbonTrail::NodeList*) pObjXXXX;
+				EarthView::World::Graphic::CNode* objXXXX = objYYYY[n];
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CNode*  _stdcall EarthView_World_Graphic_CRibbonTrail_NodeList_at_CNode_ev_size_t(void *pObjectXXXX, _in ev_uint64  n )
+			{
+				EarthView::World::Graphic::CRibbonTrail::NodeList* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::NodeList*) pObjectXXXX;
+				EarthView::World::Graphic::CNode* objXXXX = ptrNativeObject->at(n);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64   _stdcall EarthView_World_Graphic_CRibbonTrail_NodeList_size_ev_size_t(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRibbonTrail::NodeList* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::NodeList*) pObjectXXXX;
+				ev_size_t objXXXX = ptrNativeObject->size();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_NodeList_resize_void_ev_size_t(void *pObjectXXXX, _in ev_uint64  newSize )
+			{
+				EarthView::World::Graphic::CRibbonTrail::NodeList* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::NodeList*) pObjectXXXX;
+				ptrNativeObject->resize(newSize);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_NodeList_reserve_void_ev_size_t(void *pObjectXXXX, _in ev_uint64  count )
+			{
+				EarthView::World::Graphic::CRibbonTrail::NodeList* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::NodeList*) pObjectXXXX;
+				ptrNativeObject->reserve(count);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_NodeList_clear_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CRibbonTrail::NodeList* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::NodeList*) pObjectXXXX;
+				ptrNativeObject->clear();
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CRibbonTrail_NodeIterator_hasMoreElements_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRibbonTrail::NodeIterator* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::NodeIterator*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->hasMoreElements();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_NodeIterator_moveNext_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CRibbonTrail::NodeIterator* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::NodeIterator*) pObjectXXXX;
+				ptrNativeObject->moveNext();
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CNode*  _stdcall EarthView_World_Graphic_CRibbonTrail_NodeIterator_getCurrent_CNode(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CRibbonTrail::NodeIterator* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::NodeIterator*) pObjectXXXX;
+				EarthView::World::Graphic::CNode* objXXXX = ptrNativeObject->getCurrent();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CNode*  _stdcall EarthView_World_Graphic_CRibbonTrail_NodeIterator_next_CNode(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CRibbonTrail::NodeIterator* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::NodeIterator*) pObjectXXXX;
+				EarthView::World::Graphic::CNode* objXXXX = ptrNativeObject->next();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CNode*  _stdcall EarthView_World_Graphic_CRibbonTrail_NodeIterator_getBegin_CNode(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CRibbonTrail::NodeIterator* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::NodeIterator*) pObjectXXXX;
+				EarthView::World::Graphic::CNode* objXXXX = ptrNativeObject->getBegin();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CNode*  _stdcall EarthView_World_Graphic_CRibbonTrail_NodeIterator_getEnd_CNode(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CRibbonTrail::NodeIterator* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail::NodeIterator*) pObjectXXXX;
+				EarthView::World::Graphic::CNode* objXXXX = ptrNativeObject->getEnd();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CRibbonTrail_getAutoListenToParentNode_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->getAutoListenToParentNode();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CRibbonTrail_setAutoListenToParentNode_ev_bool_ev_bool(void *pObjectXXXX, _in ev_bool autoListen )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->setAutoListenToParentNode(autoListen);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_getWorldTransforms_void_CMatrix4(void *pObjectXXXX, _in EarthView::World::Spatial::Math::CMatrix4* xform )
+			{
+				const EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::getWorldTransforms(xform);
+				else
+					ptrNativeObject->getWorldTransforms(xform);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getWorldTransforms_void_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getWorldTransforms_void_CMatrix4_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getWorldTransforms_void_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_getWorldTransforms_void_CMatrix4_NoVirtual(void *pObjectXXXX, _in EarthView::World::Spatial::Math::CMatrix4* xform )
+			{
+				const EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::getWorldTransforms(xform);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_ev_bool(void *pObjectXXXX, _in EarthView::World::Graphic::CNode* ref_parent, _in ev_bool isTagPoint )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::_notifyAttached(ref_parent, isTagPoint);
+				else
+					ptrNativeObject->_notifyAttached(ref_parent, isTagPoint);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_ev_bool_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CNode* ref_parent, _in ev_bool isTagPoint )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::_notifyAttached(ref_parent, isTagPoint);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_addNode_void_CNode(void *pObjectXXXX, _in EarthView::World::Graphic::CNode* ref_n )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::addNode(ref_n);
+				else
+					ptrNativeObject->addNode(ref_n);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_addNode_void_CNode( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_addNode_void_CNode_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_addNode_void_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_addNode_void_CNode_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CNode* ref_n )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::addNode(ref_n);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_removeNode_void_CNode(void *pObjectXXXX, _in EarthView::World::Graphic::CNode* n )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::removeNode(n);
+				else
+					ptrNativeObject->removeNode(n);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_removeNode_void_CNode( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_removeNode_void_CNode_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_removeNode_void_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_removeNode_void_CNode_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CNode* n )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::removeNode(n);
+			}
+			extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Graphic_CRibbonTrail_getNodeIterator_NodeIterator(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::CRibbonTrail::NodeIterator objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::getNodeIterator();
+					EarthView::World::Graphic::CRibbonTrail::NodeIterator *pXXXX = new EarthView::World::Graphic::CRibbonTrail::NodeIterator(objXXXX);
+					((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+					return (void*)pXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::CRibbonTrail::NodeIterator objXXXX = ptrNativeObject->getNodeIterator();
+					EarthView::World::Graphic::CRibbonTrail::NodeIterator *pXXXX = new EarthView::World::Graphic::CRibbonTrail::NodeIterator(objXXXX);
+					((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getNodeIterator_NodeIterator( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getNodeIterator_NodeIterator_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getNodeIterator_NodeIterator(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Graphic_CRibbonTrail_getNodeIterator_NodeIterator_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				EarthView::World::Graphic::CRibbonTrail::NodeIterator objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::getNodeIterator();
+				EarthView::World::Graphic::CRibbonTrail::NodeIterator *pXXXX = new EarthView::World::Graphic::CRibbonTrail::NodeIterator(objXXXX);
+				((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64   _stdcall EarthView_World_Graphic_CRibbonTrail_getChainIndexForNode_ev_size_t_CNode(void *pObjectXXXX, _in const EarthView::World::Graphic::CNode* n )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+				{
+					ev_size_t objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::getChainIndexForNode(n);
+					return objXXXX;
+				}
+				else
+				{
+					ev_size_t objXXXX = ptrNativeObject->getChainIndexForNode(n);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getChainIndexForNode_ev_size_t_CNode( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getChainIndexForNode_ev_size_t_CNode_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getChainIndexForNode_ev_size_t_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64   _stdcall EarthView_World_Graphic_CRibbonTrail_getChainIndexForNode_ev_size_t_CNode_NoVirtual(void *pObjectXXXX, _in const EarthView::World::Graphic::CNode* n )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ev_size_t objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::getChainIndexForNode(n);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setTrailLength_void_Real(void *pObjectXXXX, _in Real len )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setTrailLength(len);
+				else
+					ptrNativeObject->setTrailLength(len);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setTrailLength_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setTrailLength_void_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setTrailLength_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setTrailLength_void_Real_NoVirtual(void *pObjectXXXX, _in Real len )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setTrailLength(len);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CRibbonTrail_getTrailLength_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::getTrailLength();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getTrailLength();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getTrailLength_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getTrailLength_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getTrailLength_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CRibbonTrail_getTrailLength_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::getTrailLength();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setMaxChainElements_void_ev_size_t(void *pObjectXXXX, _in ev_uint64  maxElements )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setMaxChainElements(maxElements);
+				else
+					ptrNativeObject->setMaxChainElements(maxElements);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setMaxChainElements_void_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setMaxChainElements_void_ev_size_t_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setMaxChainElements_void_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setMaxChainElements_void_ev_size_t_NoVirtual(void *pObjectXXXX, _in ev_uint64  maxElements )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setMaxChainElements(maxElements);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setNumberOfChains_void_ev_size_t(void *pObjectXXXX, _in ev_uint64  numChains )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setNumberOfChains(numChains);
+				else
+					ptrNativeObject->setNumberOfChains(numChains);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setNumberOfChains_void_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setNumberOfChains_void_ev_size_t_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setNumberOfChains_void_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setNumberOfChains_void_ev_size_t_NoVirtual(void *pObjectXXXX, _in ev_uint64  numChains )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setNumberOfChains(numChains);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_clearChain_void_ev_size_t(void *pObjectXXXX, _in ev_uint64  chainIndex )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::clearChain(chainIndex);
+				else
+					ptrNativeObject->clearChain(chainIndex);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_clearChain_void_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_clearChain_void_ev_size_t_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_clearChain_void_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_clearChain_void_ev_size_t_NoVirtual(void *pObjectXXXX, _in ev_uint64  chainIndex )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::clearChain(chainIndex);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setNeedUpdateDistance_void_Real(void *pObjectXXXX, _in Real distance )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->setNeedUpdateDistance(distance);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_CColourValue(void *pObjectXXXX, _in ev_uint64  chainIndex, _in const void* col )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setInitialColour(chainIndex, *(EarthView::World::Graphic::CColourValue*)col);
+				else
+					ptrNativeObject->setInitialColour(chainIndex, *(EarthView::World::Graphic::CColourValue*)col);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_CColourValue_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_CColourValue_NoVirtual(void *pObjectXXXX, _in ev_uint64  chainIndex, _in const void* col )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setInitialColour(chainIndex, *(EarthView::World::Graphic::CColourValue*)col);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Real(void *pObjectXXXX, _in ev_uint64  chainIndex, _in Real r, _in Real g, _in Real b, _in Real a )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setInitialColour(chainIndex, r, g, b, a);
+				else
+					ptrNativeObject->setInitialColour(chainIndex, r, g, b, a);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Real_NoVirtual(void *pObjectXXXX, _in ev_uint64  chainIndex, _in Real r, _in Real g, _in Real b, _in Real a )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setInitialColour(chainIndex, r, g, b, a);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real(void *pObjectXXXX, _in ev_uint64  chainIndex, _in Real r, _in Real g, _in Real b )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setInitialColour(chainIndex, r, g, b);
+				else
+					ptrNativeObject->setInitialColour(chainIndex, r, g, b);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setInitialColour_void_ev_size_t_Real_Real_Real_NoVirtual(void *pObjectXXXX, _in ev_uint64  chainIndex, _in Real r, _in Real g, _in Real b )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setInitialColour(chainIndex, r, g, b);
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CRibbonTrail_getInitialColour_CColourValue_ev_size_t(void *pObjectXXXX, _in ev_uint64  chainIndex )
+			{
+				const EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Graphic::CColourValue& objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::getInitialColour(chainIndex);
+					const EarthView::World::Graphic::CColourValue *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Graphic::CColourValue& objXXXX = ptrNativeObject->getInitialColour(chainIndex);
+					const EarthView::World::Graphic::CColourValue *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getInitialColour_CColourValue_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getInitialColour_CColourValue_ev_size_t_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getInitialColour_CColourValue_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CRibbonTrail_getInitialColour_CColourValue_ev_size_t_NoVirtual(void *pObjectXXXX, _in ev_uint64  chainIndex )
+			{
+				const EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				const EarthView::World::Graphic::CColourValue& objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::getInitialColour(chainIndex);
+				const EarthView::World::Graphic::CColourValue *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_CColourValue(void *pObjectXXXX, _in ev_uint64  chainIndex, _in const void* valuePerSecond )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setColourChange(chainIndex, *(EarthView::World::Graphic::CColourValue*)valuePerSecond);
+				else
+					ptrNativeObject->setColourChange(chainIndex, *(EarthView::World::Graphic::CColourValue*)valuePerSecond);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_CColourValue_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_CColourValue_NoVirtual(void *pObjectXXXX, _in ev_uint64  chainIndex, _in const void* valuePerSecond )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setColourChange(chainIndex, *(EarthView::World::Graphic::CColourValue*)valuePerSecond);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setInitialWidth_void_ev_size_t_Real(void *pObjectXXXX, _in ev_uint64  chainIndex, _in Real width )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setInitialWidth(chainIndex, width);
+				else
+					ptrNativeObject->setInitialWidth(chainIndex, width);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setInitialWidth_void_ev_size_t_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setInitialWidth_void_ev_size_t_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setInitialWidth_void_ev_size_t_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setInitialWidth_void_ev_size_t_Real_NoVirtual(void *pObjectXXXX, _in ev_uint64  chainIndex, _in Real width )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setInitialWidth(chainIndex, width);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CRibbonTrail_getInitialWidth_Real_ev_size_t(void *pObjectXXXX, _in ev_uint64  chainIndex )
+			{
+				const EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::getInitialWidth(chainIndex);
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getInitialWidth(chainIndex);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getInitialWidth_Real_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getInitialWidth_Real_ev_size_t_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getInitialWidth_Real_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CRibbonTrail_getInitialWidth_Real_ev_size_t_NoVirtual(void *pObjectXXXX, _in ev_uint64  chainIndex )
+			{
+				const EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::getInitialWidth(chainIndex);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setWidthChange_void_ev_size_t_Real(void *pObjectXXXX, _in ev_uint64  chainIndex, _in Real widthDeltaPerSecond )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setWidthChange(chainIndex, widthDeltaPerSecond);
+				else
+					ptrNativeObject->setWidthChange(chainIndex, widthDeltaPerSecond);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setWidthChange_void_ev_size_t_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setWidthChange_void_ev_size_t_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setWidthChange_void_ev_size_t_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setWidthChange_void_ev_size_t_Real_NoVirtual(void *pObjectXXXX, _in ev_uint64  chainIndex, _in Real widthDeltaPerSecond )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setWidthChange(chainIndex, widthDeltaPerSecond);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CRibbonTrail_getWidthChange_Real_ev_size_t(void *pObjectXXXX, _in ev_uint64  chainIndex )
+			{
+				const EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::getWidthChange(chainIndex);
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getWidthChange(chainIndex);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getWidthChange_Real_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getWidthChange_Real_ev_size_t_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getWidthChange_Real_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CRibbonTrail_getWidthChange_Real_ev_size_t_NoVirtual(void *pObjectXXXX, _in ev_uint64  chainIndex )
+			{
+				const EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::getWidthChange(chainIndex);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_Real_Real_Real_Real(void *pObjectXXXX, _in ev_uint64  chainIndex, _in Real r, _in Real g, _in Real b, _in Real a )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setColourChange(chainIndex, r, g, b, a);
+				else
+					ptrNativeObject->setColourChange(chainIndex, r, g, b, a);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_Real_Real_Real_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_Real_Real_Real_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_Real_Real_Real_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setColourChange_void_ev_size_t_Real_Real_Real_Real_NoVirtual(void *pObjectXXXX, _in ev_uint64  chainIndex, _in Real r, _in Real g, _in Real b, _in Real a )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setColourChange(chainIndex, r, g, b, a);
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CRibbonTrail_getColourChange_CColourValue_ev_size_t(void *pObjectXXXX, _in ev_uint64  chainIndex )
+			{
+				const EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Graphic::CColourValue& objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::getColourChange(chainIndex);
+					const EarthView::World::Graphic::CColourValue *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Graphic::CColourValue& objXXXX = ptrNativeObject->getColourChange(chainIndex);
+					const EarthView::World::Graphic::CColourValue *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getColourChange_CColourValue_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getColourChange_CColourValue_ev_size_t_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getColourChange_CColourValue_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CRibbonTrail_getColourChange_CColourValue_ev_size_t_NoVirtual(void *pObjectXXXX, _in ev_uint64  chainIndex )
+			{
+				const EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				const EarthView::World::Graphic::CColourValue& objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::getColourChange(chainIndex);
+				const EarthView::World::Graphic::CColourValue *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setVelocity_void_Real(void *pObjectXXXX, _in Real velocity )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setVelocity(velocity);
+				else
+					ptrNativeObject->setVelocity(velocity);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setVelocity_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setVelocity_void_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setVelocity_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_setVelocity_void_Real_NoVirtual(void *pObjectXXXX, _in Real velocity )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::setVelocity(velocity);
+			}
+			extern "C" EV_DLL_EXPORT  const Real  _stdcall EarthView_World_Graphic_CRibbonTrail_getVelocity_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+				{
+					const Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::getVelocity();
+					return objXXXX;
+				}
+				else
+				{
+					const Real objXXXX = ptrNativeObject->getVelocity();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getVelocity_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getVelocity_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getVelocity_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const Real  _stdcall EarthView_World_Graphic_CRibbonTrail_getVelocity_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				const Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::getVelocity();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail__timeUpdate_void_Real(void *pObjectXXXX, _in Real time )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::_timeUpdate(time);
+				else
+					ptrNativeObject->_timeUpdate(time);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail__timeUpdate_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail__timeUpdate_void_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail__timeUpdate_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail__timeUpdate_void_Real_NoVirtual(void *pObjectXXXX, _in Real time )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::_timeUpdate(time);
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CRibbonTrail_getMovableType_EVString(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+				{
+					EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::getMovableType();
+					return objXXXX.makeBuffer();
+				}
+				else
+				{
+					EVString objXXXX = ptrNativeObject->getMovableType();
+					return objXXXX.makeBuffer();
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getMovableType_EVString( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getMovableType_EVString_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getMovableType_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CRibbonTrail_getMovableType_EVString_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::getMovableType();
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_manageController_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::manageController();
+				else
+					ptrNativeObject->manageController();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_manageController_void( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_manageController_void_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_manageController_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_manageController_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::manageController();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_updateTrail_void_ev_size_t_CNode(void *pObjectXXXX, _in ev_uint64  index, _in const EarthView::World::Graphic::CNode* node )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::updateTrail(index, node);
+				else
+					ptrNativeObject->updateTrail(index, node);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_updateTrail_void_ev_size_t_CNode( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_updateTrail_void_ev_size_t_CNode_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_updateTrail_void_ev_size_t_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_updateTrail_void_ev_size_t_CNode_NoVirtual(void *pObjectXXXX, _in ev_uint64  index, _in const EarthView::World::Graphic::CNode* node )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::updateTrail(index, node);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_resetTrail_void_ev_size_t_CNode(void *pObjectXXXX, _in ev_uint64  index, _in const EarthView::World::Graphic::CNode* node )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::resetTrail(index, node);
+				else
+					ptrNativeObject->resetTrail(index, node);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_resetTrail_void_ev_size_t_CNode( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_resetTrail_void_ev_size_t_CNode_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_resetTrail_void_ev_size_t_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_resetTrail_void_ev_size_t_CNode_NoVirtual(void *pObjectXXXX, _in ev_uint64  index, _in const EarthView::World::Graphic::CNode* node )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::resetTrail(index, node);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_resetAllTrails_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::resetAllTrails();
+				else
+					ptrNativeObject->resetAllTrails();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_resetAllTrails_void( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_resetAllTrails_void_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_resetAllTrails_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_resetAllTrails_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::resetAllTrails();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_updateVertexBuffer_void_CCamera(void *pObjectXXXX, _in EarthView::World::Graphic::CCamera* cam )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::updateVertexBuffer(cam);
+				else
+					ptrNativeObject->updateVertexBuffer(cam);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_updateVertexBuffer_void_CCamera( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_updateVertexBuffer_void_CCamera_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_updateVertexBuffer_void_CCamera(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrail_updateVertexBuffer_void_CCamera_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CCamera* cam )
+			{
+				EarthView::World::Graphic::CRibbonTrail* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrail::updateVertexBuffer(cam);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getMaterial_CMaterialPtr( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getMaterial_CMaterialPtr_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getMaterial_CMaterialPtr(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getRenderOperation_void_CRenderOperation( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getRenderOperation_void_CRenderOperation_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getRenderOperation_void_CRenderOperation(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getSquaredViewDepth_Real_CCamera( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getSquaredViewDepth_Real_CCamera_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getSquaredViewDepth_Real_CCamera(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getLights_LightList( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getLights_LightList_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getLights_LightList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getRenderablePtr_CBillboardChainInternalRenderable( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getRenderablePtr_CBillboardChainInternalRenderable_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getRenderablePtr_CBillboardChainInternalRenderable(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getMaxChainElements_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getMaxChainElements_ev_size_t_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getMaxChainElements_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getNumberOfChains_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getNumberOfChains_ev_size_t_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getNumberOfChains_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setUseTextureCoords_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setUseTextureCoords_void_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setUseTextureCoords_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getUseTextureCoords_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getUseTextureCoords_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getUseTextureCoords_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setTextureCoordDirection_void_TexCoordDirection( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setTextureCoordDirection_void_TexCoordDirection_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setTextureCoordDirection_void_TexCoordDirection(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getTextureCoordDirection_TexCoordDirection( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getTextureCoordDirection_TexCoordDirection_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getTextureCoordDirection_TexCoordDirection(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setOtherTextureCoordRange_void_Real_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setOtherTextureCoordRange_void_Real_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setOtherTextureCoordRange_void_Real_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getOtherTextureCoordRange_void_Real_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getOtherTextureCoordRange_void_Real_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getOtherTextureCoordRange_void_Real_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setUseVertexColours_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setUseVertexColours_void_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setUseVertexColours_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getUseVertexColours_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getUseVertexColours_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getUseVertexColours_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setDynamic_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setDynamic_void_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setDynamic_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getDynamic_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getDynamic_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getDynamic_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_addChainElement_void_ev_size_t_CElement( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_addChainElement_void_ev_size_t_CElement_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_addChainElement_void_ev_size_t_CElement(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_removeChainElement_void_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_removeChainElement_void_ev_size_t_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_removeChainElement_void_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_updateChainElement_void_ev_size_t_ev_size_t_CElement( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_updateChainElement_void_ev_size_t_ev_size_t_CElement_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_updateChainElement_void_ev_size_t_ev_size_t_CElement(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getChainElement_CElement_ev_size_t_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getChainElement_CElement_ev_size_t_ev_size_t_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getChainElement_CElement_ev_size_t_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getNumChainElements_ev_size_t_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getNumChainElements_ev_size_t_ev_size_t_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getNumChainElements_ev_size_t_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_clearAllChains_void( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_clearAllChains_void_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_clearAllChains_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getMaterialName_EVString( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getMaterialName_EVString_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getMaterialName_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_EVString( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_EVString_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setMaterialName_void_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setupChainContainers_void( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setupChainContainers_void_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setupChainContainers_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setupVertexDeclaration_void( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setupVertexDeclaration_void_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setupVertexDeclaration_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setupBuffers_void( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setupBuffers_void_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setupBuffers_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_updateIndexBuffer_void( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_updateIndexBuffer_void_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_updateIndexBuffer_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_updateBoundingBox_void( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_updateBoundingBox_void_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_updateBoundingBox_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getAnimableObjectPtr_CMovableObjectInternalAnimableObject( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getAnimableObjectPtr_CMovableObjectInternalAnimableObject(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getRenderQueueId_ev_uint8( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getRenderQueueId_ev_uint8_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getRenderQueueId_ev_uint8(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail__notifyCreator_void_CMovableObjectFactory( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail__notifyCreator_void_CMovableObjectFactory_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail__notifyCreator_void_CMovableObjectFactory(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail__getCreator_CMovableObjectFactory( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail__getCreator_CMovableObjectFactory_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail__getCreator_CMovableObjectFactory(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail__notifyManager_void_CSceneManager( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail__notifyManager_void_CSceneManager_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail__notifyManager_void_CSceneManager(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail__getManager_CSceneManager( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail__getManager_CSceneManager_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail__getManager_CSceneManager(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getName_EVString( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getName_EVString_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getName_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getParentNode_CNode( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getParentNode_CNode_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getParentNode_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getParentSceneNode_CSceneNode( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getParentSceneNode_CSceneNode_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getParentSceneNode_CSceneNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_isParentTagPoint_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_isParentTagPoint_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_isParentTagPoint_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail__notifyAttached_void_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_isAttached_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_isAttached_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_isAttached_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_detachFromParent_void( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_detachFromParent_void_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_detachFromParent_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_isInScene_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_isInScene_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_isInScene_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail__notifyMoved_void( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail__notifyMoved_void_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail__notifyMoved_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail__notifyLightsQueried_void_LightList( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail__notifyLightsQueried_void_LightList_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail__notifyLightsQueried_void_LightList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setLightQueriedListener_void_CLightQueriedListener( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setLightQueriedListener_void_CLightQueriedListener_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setLightQueriedListener_void_CLightQueriedListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getLightQueriedListener_CLightQueriedListener( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getLightQueriedListener_CLightQueriedListener_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getLightQueriedListener_CLightQueriedListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getLightListUpdated_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getLightListUpdated_ev_uint32_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getLightListUpdated_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setLightListUpdated_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setLightListUpdated_void_ev_uint32_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setLightListUpdated_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail__notifyCurrentCamera_void_CCamera( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail__notifyCurrentCamera_void_CCamera_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail__notifyCurrentCamera_void_CCamera(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getBoundingBox_CAxisAlignedBox( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getBoundingBox_CAxisAlignedBox_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getBoundingBox_CAxisAlignedBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getBoundingRadius_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getBoundingRadius_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getBoundingRadius_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingSphere_CSphere(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail__updateRenderQueue_void_CRenderQueue( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail__updateRenderQueue_void_CRenderQueue_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail__updateRenderQueue_void_CRenderQueue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setVisible_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setVisible_void_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setVisible_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getVisible_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getVisible_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getVisible_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_isVisible_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_isVisible_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_isVisible_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setRenderingMaxDistance_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setRenderingMaxDistance_void_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setRenderingMaxDistance_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getRenderingMaxDistance_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getRenderingMaxDistance_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getRenderingMaxDistance_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setRenderingMinDistance_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setRenderingMinDistance_void_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setRenderingMinDistance_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getRenderingMinDistance_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getRenderingMinDistance_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getRenderingMinDistance_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setRenderingMinPixelSize_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setRenderingMinPixelSize_void_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setRenderingMinPixelSize_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getRenderingMinPixelSize_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getRenderingMinPixelSize_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getRenderingMinPixelSize_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setSelectionColour_void_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setSelectionColour_void_CColourValue_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setSelectionColour_void_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setSelected_ev_bool_IntVector( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setSelected_ev_bool_IntVector_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setSelected_ev_bool_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getSelected_IntVector( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getSelected_IntVector_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getSelected_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CSphere_ev_bool_IntVector( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_selectBy_ev_bool_CSphere_ev_bool_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_renderSelection_void( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_renderSelection_void_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_renderSelection_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_clearSelection_void( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_clearSelection_void_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_clearSelection_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_startEditing_ev_bool_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_startEditing_ev_bool_ev_uint32_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_startEditing_ev_bool_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_endEditing_void( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_endEditing_void_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_endEditing_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getEditBoundingBox_CEditBoundingBox( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getEditBoundingBox_CEditBoundingBox_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getEditBoundingBox_CEditBoundingBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroup_void_ev_uint8( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroup_void_ev_uint8_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroup_void_ev_uint8(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getRenderQueueGroup_ev_uint8( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getRenderQueueGroup_ev_uint8_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getRenderQueueGroup_ev_uint8(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail__getParentNodeFullTransform_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail__getParentNodeFullTransform_CMatrix4_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail__getParentNodeFullTransform_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setQueryFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setQueryFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setQueryFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_addQueryFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_addQueryFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_addQueryFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_removeQueryFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_removeQueryFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_removeQueryFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getQueryFlags_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getQueryFlags_ev_uint32_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getQueryFlags_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setVisibilityFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setVisibilityFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setVisibilityFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_addVisibilityFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_addVisibilityFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_addVisibilityFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_removeVisibilityFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_removeVisibilityFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_removeVisibilityFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getVisibilityFlags_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getVisibilityFlags_ev_uint32_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getVisibilityFlags_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_addListener_void_CMovableObjectListener( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_addListener_void_CMovableObjectListener_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_addListener_void_CMovableObjectListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_removeListener_void_CMovableObjectListener( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_removeListener_void_CMovableObjectListener_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_removeListener_void_CMovableObjectListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_existListener_ev_bool_CMovableObjectListener( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_existListener_ev_bool_CMovableObjectListener_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_existListener_ev_bool_CMovableObjectListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getListenerCount_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getListenerCount_ev_uint32_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getListenerCount_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getListener_CMovableObjectListener_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getListener_CMovableObjectListener_ev_uint32_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getListener_CMovableObjectListener_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_queryLights_LightList( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_queryLights_LightList_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_queryLights_LightList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getLightMask_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getLightMask_ev_uint32_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getLightMask_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setLightMask_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setLightMask_void_ev_uint32_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setLightMask_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail__getLightList_LightList( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail__getLightList_LightList_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail__getLightList_LightList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setCastShadows_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setCastShadows_void_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setCastShadows_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getReceivesShadows_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getReceivesShadows_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getReceivesShadows_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getTypeFlags_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getTypeFlags_ev_uint32_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getTypeFlags_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_visitRenderables_void_CVisitor(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_setDebugDisplayEnabled_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_setDebugDisplayEnabled_void_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_setDebugDisplayEnabled_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_isDebugDisplayEnabled_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_isDebugDisplayEnabled_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_isDebugDisplayEnabled_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getCastShadows_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getCastShadows_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getCastShadows_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getEdgeList_CEdgeData( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getEdgeList_CEdgeData_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getEdgeList_CEdgeData(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_hasEdgeList_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_hasEdgeList_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_hasEdgeList_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getWorldBoundingBox_CAxisAlignedBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getLightCapBounds_CAxisAlignedBox( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getLightCapBounds_CAxisAlignedBox_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getLightCapBounds_CAxisAlignedBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getDarkCapBounds_CAxisAlignedBox_CLight_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getDarkCapBounds_CAxisAlignedBox_CLight_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_getPointExtrusionDistance_Real_CLight( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_getPointExtrusionDistance_Real_CLight_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_getPointExtrusionDistance_Real_CLight(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_updateEdgeListLightFacing_void_CEdgeData_CVector4( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_updateEdgeListLightFacing_void_CEdgeData_CVector4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrail_extrudeBounds_void_CAxisAlignedBox_CVector4_Real( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrail_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback* pCallback )
+			{
+				CRibbonTrailProxy* ptr = dynamic_cast<CRibbonTrailProxy*>((EarthView::World::Graphic::CRibbonTrail*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrail_extrudeBounds_void_CAxisAlignedBox_CVector4_Real(pCallback);
+				}
+			}
+			typedef EarthView::World::Graphic::CMovableObject*  ( _stdcall EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback)(_in char*& name, _in const EarthView::World::Core::CommonStringPairList* params);
+			typedef EarthView::World::Graphic::CMovableObject*  ( _stdcall EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_Callback)(_in char*& name);
+			typedef char*  ( _stdcall EarthView_World_Graphic_CRibbonTrailFactory_getType_EVString_Callback)();
+			typedef EarthView::World::Graphic::CMovableObject*  ( _stdcall EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback)(_in char*& name, _in EarthView::World::Graphic::CSceneManager* ref_manager, _in const EarthView::World::Core::CommonStringPairList* params);
+			typedef EarthView::World::Graphic::CMovableObject*  ( _stdcall EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback)(_in char*& name, _in EarthView::World::Graphic::CSceneManager* ref_manager);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRibbonTrailFactory_destroyInstance_void_CMovableObject_Callback)(_in EarthView::World::Graphic::CMovableObject* obj);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRibbonTrailFactory_requestTypeFlags_ev_bool_Callback)();
+			class CRibbonTrailFactoryProxy : public EarthView::World::Graphic::CRibbonTrailFactory
+			{
+			private:
+				EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback* m_EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback;
+				EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_Callback* m_EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_Callback;
+				EarthView_World_Graphic_CRibbonTrailFactory_getType_EVString_Callback* m_EarthView_World_Graphic_CRibbonTrailFactory_getType_EVString_Callback;
+				EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback* m_EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback;
+				EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback* m_EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback;
+				EarthView_World_Graphic_CRibbonTrailFactory_destroyInstance_void_CMovableObject_Callback* m_EarthView_World_Graphic_CRibbonTrailFactory_destroyInstance_void_CMovableObject_Callback;
+				EarthView_World_Graphic_CRibbonTrailFactory_requestTypeFlags_ev_bool_Callback* m_EarthView_World_Graphic_CRibbonTrailFactory_requestTypeFlags_ev_bool_Callback;
+			public:
+				CRibbonTrailFactoryProxy(EarthView::World::Core::CNameValuePairList *pList) : CRibbonTrailFactory(pList)
+				{
+					m_EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrailFactory_getType_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrailFactory_destroyInstance_void_CMovableObject_Callback = NULL;
+					m_EarthView_World_Graphic_CRibbonTrailFactory_requestTypeFlags_ev_bool_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList(EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString(EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrailFactory_getType_EVString(EarthView_World_Graphic_CRibbonTrailFactory_getType_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrailFactory_getType_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList(EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager(EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrailFactory_destroyInstance_void_CMovableObject(EarthView_World_Graphic_CRibbonTrailFactory_destroyInstance_void_CMovableObject_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrailFactory_destroyInstance_void_CMovableObject_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRibbonTrailFactory_requestTypeFlags_ev_bool(EarthView_World_Graphic_CRibbonTrailFactory_requestTypeFlags_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRibbonTrailFactory_requestTypeFlags_ev_bool_Callback = pCallback;
+				}
+				virtual EarthView::World::Graphic::CMovableObject* createInstanceImpl(_in const EVString& name, _in const EarthView::World::Core::CommonStringPairList* params)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::CMovableObject* returnValue = m_EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback(name_Char, params);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrailFactory::createInstanceImpl(name, params);
+				}
+				virtual EVString getType() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrailFactory_getType_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CRibbonTrailFactory_getType_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrailFactory::getType();
+				}
+				virtual void destroyInstance(_in EarthView::World::Graphic::CMovableObject* obj)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrailFactory_destroyInstance_void_CMovableObject_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRibbonTrailFactory_destroyInstance_void_CMovableObject_Callback(obj);
+					}
+					else
+						return this->CRibbonTrailFactory::destroyInstance(obj);
+				}
+				virtual EarthView::World::Graphic::CMovableObject* createInstance(_in const EVString& name, _in EarthView::World::Graphic::CSceneManager* ref_manager, _in const EarthView::World::Core::CommonStringPairList* params)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::CMovableObject* returnValue = m_EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback(name_Char, ref_manager, params);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrailFactory::createInstance(name, ref_manager, params);
+				}
+				virtual EarthView::World::Graphic::CMovableObject* createInstance(_in const EVString& name, _in EarthView::World::Graphic::CSceneManager* ref_manager)
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::CMovableObject* returnValue = m_EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback(name_Char, ref_manager);
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrailFactory::createInstance(name, ref_manager);
+				}
+				virtual ev_bool requestTypeFlags() const
+				{
+					if(m_EarthView_World_Graphic_CRibbonTrailFactory_requestTypeFlags_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRibbonTrailFactory_requestTypeFlags_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRibbonTrailFactory::requestTypeFlags();
+				}
+			};
+			REGISTER_FACTORY_CLASS(CRibbonTrailFactoryProxy);
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CMovableObject*  _stdcall EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList(void *pObjectXXXX, _in const char* name, _in const EarthView::World::Core::CommonStringPairList* params )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CRibbonTrailFactory* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrailFactory*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailFactoryProxy*>((EarthView::World::Graphic::CRibbonTrailFactory*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::CMovableObject* objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrailFactory::createInstanceImpl(name1, params);
+					return objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::CMovableObject* objXXXX = ptrNativeObject->createInstanceImpl(name1, params);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback* pCallback )
+			{
+				CRibbonTrailFactoryProxy* ptr = dynamic_cast<CRibbonTrailFactoryProxy*>((EarthView::World::Graphic::CRibbonTrailFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CMovableObject*  _stdcall EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_NoVirtual(void *pObjectXXXX, _in const char* name, _in const EarthView::World::Core::CommonStringPairList* params )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CRibbonTrailFactory* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrailFactory*) pObjectXXXX;
+				EarthView::World::Graphic::CMovableObject* objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrailFactory::createInstanceImpl(name1, params);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall Get_EarthView_World_Graphic_CRibbonTrailFactory_FACTORY_TYPE_NAME()
+			{
+				EVString objXXXX = EarthView::World::Graphic::CRibbonTrailFactory::FACTORY_TYPE_NAME;
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Graphic_CRibbonTrailFactory_FACTORY_TYPE_NAME( char*  value )
+			{
+				EarthView::World::Core::ev_string value1 = value;
+				EarthView::World::Graphic::CRibbonTrailFactory::FACTORY_TYPE_NAME = value1;
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CRibbonTrailFactory_getType_EVString(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRibbonTrailFactory* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrailFactory*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailFactoryProxy*>((EarthView::World::Graphic::CRibbonTrailFactory*)ptrNativeObject) != NULL)
+				{
+					EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrailFactory::getType();
+					return objXXXX.makeBuffer();
+				}
+				else
+				{
+					EVString objXXXX = ptrNativeObject->getType();
+					return objXXXX.makeBuffer();
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrailFactory_getType_EVString( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrailFactory_getType_EVString_Callback* pCallback )
+			{
+				CRibbonTrailFactoryProxy* ptr = dynamic_cast<CRibbonTrailFactoryProxy*>((EarthView::World::Graphic::CRibbonTrailFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrailFactory_getType_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CRibbonTrailFactory_getType_EVString_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRibbonTrailFactory* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrailFactory*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CRibbonTrailFactory::getType();
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrailFactory_destroyInstance_void_CMovableObject(void *pObjectXXXX, _in EarthView::World::Graphic::CMovableObject* obj )
+			{
+				EarthView::World::Graphic::CRibbonTrailFactory* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrailFactory*) pObjectXXXX;
+				if (dynamic_cast<CRibbonTrailFactoryProxy*>((EarthView::World::Graphic::CRibbonTrailFactory*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRibbonTrailFactory::destroyInstance(obj);
+				else
+					ptrNativeObject->destroyInstance(obj);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrailFactory_destroyInstance_void_CMovableObject( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrailFactory_destroyInstance_void_CMovableObject_Callback* pCallback )
+			{
+				CRibbonTrailFactoryProxy* ptr = dynamic_cast<CRibbonTrailFactoryProxy*>((EarthView::World::Graphic::CRibbonTrailFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrailFactory_destroyInstance_void_CMovableObject(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRibbonTrailFactory_destroyInstance_void_CMovableObject_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CMovableObject* obj )
+			{
+				EarthView::World::Graphic::CRibbonTrailFactory* ptrNativeObject = (EarthView::World::Graphic::CRibbonTrailFactory*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRibbonTrailFactory::destroyInstance(obj);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString_Callback* pCallback )
+			{
+				CRibbonTrailFactoryProxy* ptr = dynamic_cast<CRibbonTrailFactoryProxy*>((EarthView::World::Graphic::CRibbonTrailFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrailFactory_createInstanceImpl_CMovableObject_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback* pCallback )
+			{
+				CRibbonTrailFactoryProxy* ptr = dynamic_cast<CRibbonTrailFactoryProxy*>((EarthView::World::Graphic::CRibbonTrailFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback* pCallback )
+			{
+				CRibbonTrailFactoryProxy* ptr = dynamic_cast<CRibbonTrailFactoryProxy*>((EarthView::World::Graphic::CRibbonTrailFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrailFactory_createInstance_CMovableObject_EVString_CSceneManager(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRibbonTrailFactory_requestTypeFlags_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRibbonTrailFactory_requestTypeFlags_ev_bool_Callback* pCallback )
+			{
+				CRibbonTrailFactoryProxy* ptr = dynamic_cast<CRibbonTrailFactoryProxy*>((EarthView::World::Graphic::CRibbonTrailFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRibbonTrailFactory_requestTypeFlags_ev_bool(pCallback);
+				}
+			}
+		}
+	}
+}

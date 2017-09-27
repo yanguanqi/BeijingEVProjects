@@ -1,0 +1,24 @@
+﻿#ifndef EARTHVIEW_WORLD_DESKTOP_QT_SYMBOLHOUSECONFIG_H
+#define EARTHVIEW_WORLD_DESKTOP_QT_SYMBOLHOUSECONFIG_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef EV_BUILD_SYMBOLLIBRARY
+# define EV_SYMBOLLIBRARY_DLL Q_DECL_EXPORT
+#else
+# define EV_SYMBOLLIBRARY_DLL Q_DECL_IMPORT
+#endif
+
+enum EV_SYMBOLLIBRARY_DLL EVSymbolMode {
+	SM_Unknown = 0,
+	SM_Marker = 1,
+	SM_Line = 2,
+	SM_Fill = 3,
+};
+enum EV_SYMBOLLIBRARY_DLL EVColorRampMode {
+	CRM_Unknown = 0,
+	CRM_All = 1,
+	CRM_Random = 2,
+	CRM_Gradient = 3
+};
+#endif // EV_SYMBOLHOUSE_QT_GLOBAL_H

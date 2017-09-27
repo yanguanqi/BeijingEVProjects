@@ -1,0 +1,2720 @@
+/* This file is produced by the P/Invoke AutoWrapper Utility 
+ Copyright (c) 2012 by EarthView Image Inc */
+#include "stableheaders.h"
+#include "graphic/particleemitter.h"
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Graphic
+		{
+			typedef EarthView::World::Graphic::CParticleEmitter::CParticleEmitterInternalStringInterface*  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getStringInterfacePtr_CParticleEmitterInternalStringInterface_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_genEmissionDirectionNoRandom_void_CVector3_Callback)(_inout void* destVector);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_genEmissionDirection_void_CVector3_Callback)(_inout void* destVector);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_genEmissionVelocity_void_CVector3_Callback)(_inout void* destVector);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CParticleEmitter_genEmissionTTL_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_genEmissionColour_void_CColourValue_Callback)(_inout void* destColour);
+			typedef ev_uint16  ( _stdcall EarthView_World_Graphic_CParticleEmitter_genConstantEmissionCount_ev_uint16_Real_Callback)(_in Real timeElapsed);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setPosition_void_CVector3_Callback)(_in const void* pos);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getPosition_CVector3_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setDirection_void_CVector3_Callback)(_in const void* direction);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getDirection_CVector3_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setUp_void_CVector3_Callback)(_in const void* up);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getUp_CVector3_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setAngle_void_CRadian_Callback)(_in const void* angle);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getAngle_CRadian_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Callback)(_in Real speed);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Real_Callback)(_in Real min, _in Real max);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setMinParticleVelocity_void_Real_Callback)(_in Real min);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setMaxParticleVelocity_void_Real_Callback)(_in Real max);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getParticleVelocity_Real_Callback)();
+			typedef Real  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getMinParticleVelocity_Real_Callback)();
+			typedef Real  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getMaxParticleVelocity_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setEmissionRate_void_Real_Callback)(_in Real particlesPerSecond);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getEmissionRate_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Callback)(_in Real ttl);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Real_Callback)(_in Real minTtl, _in Real maxTtl);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setMinTimeToLive_void_Real_Callback)(_in Real min);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setMaxTimeToLive_void_Real_Callback)(_in Real max);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getTimeToLive_Real_Callback)();
+			typedef Real  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getMinTimeToLive_Real_Callback)();
+			typedef Real  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getMaxTimeToLive_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_Callback)(_in const void* colour);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_CColourValue_Callback)(_in const void* colourStart, _in const void* colourEnd);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setColourRangeStart_void_CColourValue_Callback)(_in const void* colour);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setColourRangeEnd_void_CColourValue_Callback)(_in const void* colour);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getColour_CColourValue_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getColourRangeStart_CColourValue_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getColourRangeEnd_CColourValue_Callback)();
+			typedef ev_uint16  ( _stdcall EarthView_World_Graphic_CParticleEmitter__getEmissionCount_ev_uint16_Real_Callback)(_in Real timeElapsed);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter__initParticle_void_CParticle_Callback)(_in EarthView::World::Graphic::CParticle* pParticle);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setEnabled_void_ev_bool_Callback)(_in ev_bool enabled);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getEnabled_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setStartTime_void_Real_Callback)(_in Real startTime);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getStartTime_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Callback)(_in Real duration);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getDuration_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Real_Callback)(_in Real min, _in Real max);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setMinDuration_void_Real_Callback)(_in Real min);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setMaxDuration_void_Real_Callback)(_in Real max);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getMinDuration_Real_Callback)();
+			typedef Real  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getMaxDuration_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Callback)(_in Real duration);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getRepeatDelay_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Real_Callback)(_in Real min, _in Real max);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setMinRepeatDelay_void_Real_Callback)(_in Real min);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setMaxRepeatDelay_void_Real_Callback)(_in Real max);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getMinRepeatDelay_Real_Callback)();
+			typedef Real  ( _stdcall EarthView_World_Graphic_CParticleEmitter_getMaxRepeatDelay_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setName_void_EVString_Callback)(_in char*& newName);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setEmittedEmitter_void_EVString_Callback)(_in char*& emittedEmitter);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CParticleEmitter_isEmitted_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_setEmitted_void_ev_bool_Callback)(_in ev_bool emitted);
+			class CParticleEmitterProxy : public EarthView::World::Graphic::CParticleEmitter
+			{
+			private:
+				EarthView_World_Graphic_CParticleEmitter_getStringInterfacePtr_CParticleEmitterInternalStringInterface_Callback* m_EarthView_World_Graphic_CParticleEmitter_getStringInterfacePtr_CParticleEmitterInternalStringInterface_Callback;
+				EarthView_World_Graphic_CParticleEmitter_genEmissionDirectionNoRandom_void_CVector3_Callback* m_EarthView_World_Graphic_CParticleEmitter_genEmissionDirectionNoRandom_void_CVector3_Callback;
+				EarthView_World_Graphic_CParticleEmitter_genEmissionDirection_void_CVector3_Callback* m_EarthView_World_Graphic_CParticleEmitter_genEmissionDirection_void_CVector3_Callback;
+				EarthView_World_Graphic_CParticleEmitter_genEmissionVelocity_void_CVector3_Callback* m_EarthView_World_Graphic_CParticleEmitter_genEmissionVelocity_void_CVector3_Callback;
+				EarthView_World_Graphic_CParticleEmitter_genEmissionTTL_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_genEmissionTTL_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_genEmissionColour_void_CColourValue_Callback* m_EarthView_World_Graphic_CParticleEmitter_genEmissionColour_void_CColourValue_Callback;
+				EarthView_World_Graphic_CParticleEmitter_genConstantEmissionCount_ev_uint16_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_genConstantEmissionCount_ev_uint16_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setPosition_void_CVector3_Callback* m_EarthView_World_Graphic_CParticleEmitter_setPosition_void_CVector3_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getPosition_CVector3_Callback* m_EarthView_World_Graphic_CParticleEmitter_getPosition_CVector3_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setDirection_void_CVector3_Callback* m_EarthView_World_Graphic_CParticleEmitter_setDirection_void_CVector3_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getDirection_CVector3_Callback* m_EarthView_World_Graphic_CParticleEmitter_getDirection_CVector3_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setUp_void_CVector3_Callback* m_EarthView_World_Graphic_CParticleEmitter_setUp_void_CVector3_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getUp_CVector3_Callback* m_EarthView_World_Graphic_CParticleEmitter_getUp_CVector3_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setAngle_void_CRadian_Callback* m_EarthView_World_Graphic_CParticleEmitter_setAngle_void_CRadian_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getAngle_CRadian_Callback* m_EarthView_World_Graphic_CParticleEmitter_getAngle_CRadian_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setMinParticleVelocity_void_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_setMinParticleVelocity_void_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setMaxParticleVelocity_void_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_setMaxParticleVelocity_void_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getParticleVelocity_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_getParticleVelocity_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getMinParticleVelocity_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_getMinParticleVelocity_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getMaxParticleVelocity_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_getMaxParticleVelocity_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setEmissionRate_void_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_setEmissionRate_void_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getEmissionRate_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_getEmissionRate_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setMinTimeToLive_void_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_setMinTimeToLive_void_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setMaxTimeToLive_void_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_setMaxTimeToLive_void_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getTimeToLive_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_getTimeToLive_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getMinTimeToLive_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_getMinTimeToLive_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getMaxTimeToLive_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_getMaxTimeToLive_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_Callback* m_EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_CColourValue_Callback* m_EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_CColourValue_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setColourRangeStart_void_CColourValue_Callback* m_EarthView_World_Graphic_CParticleEmitter_setColourRangeStart_void_CColourValue_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setColourRangeEnd_void_CColourValue_Callback* m_EarthView_World_Graphic_CParticleEmitter_setColourRangeEnd_void_CColourValue_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getColour_CColourValue_Callback* m_EarthView_World_Graphic_CParticleEmitter_getColour_CColourValue_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getColourRangeStart_CColourValue_Callback* m_EarthView_World_Graphic_CParticleEmitter_getColourRangeStart_CColourValue_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getColourRangeEnd_CColourValue_Callback* m_EarthView_World_Graphic_CParticleEmitter_getColourRangeEnd_CColourValue_Callback;
+				EarthView_World_Graphic_CParticleEmitter__getEmissionCount_ev_uint16_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter__getEmissionCount_ev_uint16_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter__initParticle_void_CParticle_Callback* m_EarthView_World_Graphic_CParticleEmitter__initParticle_void_CParticle_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setEnabled_void_ev_bool_Callback* m_EarthView_World_Graphic_CParticleEmitter_setEnabled_void_ev_bool_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getEnabled_ev_bool_Callback* m_EarthView_World_Graphic_CParticleEmitter_getEnabled_ev_bool_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setStartTime_void_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_setStartTime_void_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getStartTime_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_getStartTime_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getDuration_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_getDuration_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setMinDuration_void_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_setMinDuration_void_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setMaxDuration_void_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_setMaxDuration_void_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getMinDuration_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_getMinDuration_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getMaxDuration_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_getMaxDuration_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getRepeatDelay_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_getRepeatDelay_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setMinRepeatDelay_void_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_setMinRepeatDelay_void_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setMaxRepeatDelay_void_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_setMaxRepeatDelay_void_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getMinRepeatDelay_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_getMinRepeatDelay_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_getMaxRepeatDelay_Real_Callback* m_EarthView_World_Graphic_CParticleEmitter_getMaxRepeatDelay_Real_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setName_void_EVString_Callback* m_EarthView_World_Graphic_CParticleEmitter_setName_void_EVString_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setEmittedEmitter_void_EVString_Callback* m_EarthView_World_Graphic_CParticleEmitter_setEmittedEmitter_void_EVString_Callback;
+				EarthView_World_Graphic_CParticleEmitter_isEmitted_ev_bool_Callback* m_EarthView_World_Graphic_CParticleEmitter_isEmitted_ev_bool_Callback;
+				EarthView_World_Graphic_CParticleEmitter_setEmitted_void_ev_bool_Callback* m_EarthView_World_Graphic_CParticleEmitter_setEmitted_void_ev_bool_Callback;
+			public:
+				CParticleEmitterProxy(EarthView::World::Core::CNameValuePairList *pList) : CParticleEmitter(pList)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getStringInterfacePtr_CParticleEmitterInternalStringInterface_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_genEmissionDirectionNoRandom_void_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_genEmissionDirection_void_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_genEmissionVelocity_void_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_genEmissionTTL_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_genEmissionColour_void_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_genConstantEmissionCount_ev_uint16_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setPosition_void_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getPosition_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setDirection_void_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getDirection_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setUp_void_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getUp_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setAngle_void_CRadian_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getAngle_CRadian_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setMinParticleVelocity_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setMaxParticleVelocity_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getParticleVelocity_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getMinParticleVelocity_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getMaxParticleVelocity_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setEmissionRate_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getEmissionRate_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setMinTimeToLive_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setMaxTimeToLive_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getTimeToLive_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getMinTimeToLive_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getMaxTimeToLive_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setColourRangeStart_void_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setColourRangeEnd_void_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getColour_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getColourRangeStart_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getColourRangeEnd_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter__getEmissionCount_ev_uint16_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter__initParticle_void_CParticle_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setEnabled_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getEnabled_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setStartTime_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getStartTime_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getDuration_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setMinDuration_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setMaxDuration_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getMinDuration_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getMaxDuration_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getRepeatDelay_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setMinRepeatDelay_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setMaxRepeatDelay_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getMinRepeatDelay_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_getMaxRepeatDelay_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setName_void_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setEmittedEmitter_void_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_isEmitted_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_setEmitted_void_ev_bool_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getStringInterfacePtr_CParticleEmitterInternalStringInterface(EarthView_World_Graphic_CParticleEmitter_getStringInterfacePtr_CParticleEmitterInternalStringInterface_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getStringInterfacePtr_CParticleEmitterInternalStringInterface_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_genEmissionDirectionNoRandom_void_CVector3(EarthView_World_Graphic_CParticleEmitter_genEmissionDirectionNoRandom_void_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_genEmissionDirectionNoRandom_void_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_genEmissionDirection_void_CVector3(EarthView_World_Graphic_CParticleEmitter_genEmissionDirection_void_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_genEmissionDirection_void_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_genEmissionVelocity_void_CVector3(EarthView_World_Graphic_CParticleEmitter_genEmissionVelocity_void_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_genEmissionVelocity_void_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_genEmissionTTL_Real(EarthView_World_Graphic_CParticleEmitter_genEmissionTTL_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_genEmissionTTL_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_genEmissionColour_void_CColourValue(EarthView_World_Graphic_CParticleEmitter_genEmissionColour_void_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_genEmissionColour_void_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_genConstantEmissionCount_ev_uint16_Real(EarthView_World_Graphic_CParticleEmitter_genConstantEmissionCount_ev_uint16_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_genConstantEmissionCount_ev_uint16_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setPosition_void_CVector3(EarthView_World_Graphic_CParticleEmitter_setPosition_void_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setPosition_void_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getPosition_CVector3(EarthView_World_Graphic_CParticleEmitter_getPosition_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getPosition_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setDirection_void_CVector3(EarthView_World_Graphic_CParticleEmitter_setDirection_void_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setDirection_void_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getDirection_CVector3(EarthView_World_Graphic_CParticleEmitter_getDirection_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getDirection_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setUp_void_CVector3(EarthView_World_Graphic_CParticleEmitter_setUp_void_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setUp_void_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getUp_CVector3(EarthView_World_Graphic_CParticleEmitter_getUp_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getUp_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setAngle_void_CRadian(EarthView_World_Graphic_CParticleEmitter_setAngle_void_CRadian_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setAngle_void_CRadian_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getAngle_CRadian(EarthView_World_Graphic_CParticleEmitter_getAngle_CRadian_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getAngle_CRadian_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real(EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Real(EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setMinParticleVelocity_void_Real(EarthView_World_Graphic_CParticleEmitter_setMinParticleVelocity_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setMinParticleVelocity_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setMaxParticleVelocity_void_Real(EarthView_World_Graphic_CParticleEmitter_setMaxParticleVelocity_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setMaxParticleVelocity_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getParticleVelocity_Real(EarthView_World_Graphic_CParticleEmitter_getParticleVelocity_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getParticleVelocity_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getMinParticleVelocity_Real(EarthView_World_Graphic_CParticleEmitter_getMinParticleVelocity_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getMinParticleVelocity_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getMaxParticleVelocity_Real(EarthView_World_Graphic_CParticleEmitter_getMaxParticleVelocity_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getMaxParticleVelocity_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setEmissionRate_void_Real(EarthView_World_Graphic_CParticleEmitter_setEmissionRate_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setEmissionRate_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getEmissionRate_Real(EarthView_World_Graphic_CParticleEmitter_getEmissionRate_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getEmissionRate_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real(EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Real(EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setMinTimeToLive_void_Real(EarthView_World_Graphic_CParticleEmitter_setMinTimeToLive_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setMinTimeToLive_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setMaxTimeToLive_void_Real(EarthView_World_Graphic_CParticleEmitter_setMaxTimeToLive_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setMaxTimeToLive_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getTimeToLive_Real(EarthView_World_Graphic_CParticleEmitter_getTimeToLive_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getTimeToLive_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getMinTimeToLive_Real(EarthView_World_Graphic_CParticleEmitter_getMinTimeToLive_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getMinTimeToLive_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getMaxTimeToLive_Real(EarthView_World_Graphic_CParticleEmitter_getMaxTimeToLive_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getMaxTimeToLive_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue(EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_CColourValue(EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setColourRangeStart_void_CColourValue(EarthView_World_Graphic_CParticleEmitter_setColourRangeStart_void_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setColourRangeStart_void_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setColourRangeEnd_void_CColourValue(EarthView_World_Graphic_CParticleEmitter_setColourRangeEnd_void_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setColourRangeEnd_void_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getColour_CColourValue(EarthView_World_Graphic_CParticleEmitter_getColour_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getColour_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getColourRangeStart_CColourValue(EarthView_World_Graphic_CParticleEmitter_getColourRangeStart_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getColourRangeStart_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getColourRangeEnd_CColourValue(EarthView_World_Graphic_CParticleEmitter_getColourRangeEnd_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getColourRangeEnd_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter__getEmissionCount_ev_uint16_Real(EarthView_World_Graphic_CParticleEmitter__getEmissionCount_ev_uint16_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter__getEmissionCount_ev_uint16_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter__initParticle_void_CParticle(EarthView_World_Graphic_CParticleEmitter__initParticle_void_CParticle_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter__initParticle_void_CParticle_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setEnabled_void_ev_bool(EarthView_World_Graphic_CParticleEmitter_setEnabled_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setEnabled_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getEnabled_ev_bool(EarthView_World_Graphic_CParticleEmitter_getEnabled_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getEnabled_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setStartTime_void_Real(EarthView_World_Graphic_CParticleEmitter_setStartTime_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setStartTime_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getStartTime_Real(EarthView_World_Graphic_CParticleEmitter_getStartTime_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getStartTime_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real(EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getDuration_Real(EarthView_World_Graphic_CParticleEmitter_getDuration_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getDuration_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Real(EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setMinDuration_void_Real(EarthView_World_Graphic_CParticleEmitter_setMinDuration_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setMinDuration_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setMaxDuration_void_Real(EarthView_World_Graphic_CParticleEmitter_setMaxDuration_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setMaxDuration_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getMinDuration_Real(EarthView_World_Graphic_CParticleEmitter_getMinDuration_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getMinDuration_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getMaxDuration_Real(EarthView_World_Graphic_CParticleEmitter_getMaxDuration_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getMaxDuration_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real(EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getRepeatDelay_Real(EarthView_World_Graphic_CParticleEmitter_getRepeatDelay_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getRepeatDelay_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Real(EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setMinRepeatDelay_void_Real(EarthView_World_Graphic_CParticleEmitter_setMinRepeatDelay_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setMinRepeatDelay_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setMaxRepeatDelay_void_Real(EarthView_World_Graphic_CParticleEmitter_setMaxRepeatDelay_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setMaxRepeatDelay_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getMinRepeatDelay_Real(EarthView_World_Graphic_CParticleEmitter_getMinRepeatDelay_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getMinRepeatDelay_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_getMaxRepeatDelay_Real(EarthView_World_Graphic_CParticleEmitter_getMaxRepeatDelay_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_getMaxRepeatDelay_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setName_void_EVString(EarthView_World_Graphic_CParticleEmitter_setName_void_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setName_void_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setEmittedEmitter_void_EVString(EarthView_World_Graphic_CParticleEmitter_setEmittedEmitter_void_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setEmittedEmitter_void_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_isEmitted_ev_bool(EarthView_World_Graphic_CParticleEmitter_isEmitted_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_isEmitted_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_setEmitted_void_ev_bool(EarthView_World_Graphic_CParticleEmitter_setEmitted_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_setEmitted_void_ev_bool_Callback = pCallback;
+				}
+				virtual EarthView::World::Graphic::CParticleEmitter::CParticleEmitterInternalStringInterface* getStringInterfacePtr()
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getStringInterfacePtr_CParticleEmitterInternalStringInterface_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CParticleEmitter::CParticleEmitterInternalStringInterface* returnValue = m_EarthView_World_Graphic_CParticleEmitter_getStringInterfacePtr_CParticleEmitterInternalStringInterface_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getStringInterfacePtr();
+				}
+				virtual void genEmissionDirectionNoRandom(_inout EarthView::World::Spatial::Math::CVector3& destVector)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_genEmissionDirectionNoRandom_void_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_genEmissionDirectionNoRandom_void_CVector3_Callback(&destVector);
+					}
+					else
+						return this->CParticleEmitter::genEmissionDirectionNoRandom(destVector);
+				}
+				virtual void genEmissionDirection(_inout EarthView::World::Spatial::Math::CVector3& destVector)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_genEmissionDirection_void_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_genEmissionDirection_void_CVector3_Callback(&destVector);
+					}
+					else
+						return this->CParticleEmitter::genEmissionDirection(destVector);
+				}
+				virtual void genEmissionVelocity(_inout EarthView::World::Spatial::Math::CVector3& destVector)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_genEmissionVelocity_void_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_genEmissionVelocity_void_CVector3_Callback(&destVector);
+					}
+					else
+						return this->CParticleEmitter::genEmissionVelocity(destVector);
+				}
+				virtual Real genEmissionTTL()
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_genEmissionTTL_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CParticleEmitter_genEmissionTTL_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::genEmissionTTL();
+				}
+				virtual void genEmissionColour(_inout EarthView::World::Graphic::CColourValue& destColour)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_genEmissionColour_void_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_genEmissionColour_void_CColourValue_Callback(&destColour);
+					}
+					else
+						return this->CParticleEmitter::genEmissionColour(destColour);
+				}
+				virtual ev_uint16 genConstantEmissionCount(_in Real timeElapsed)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_genConstantEmissionCount_ev_uint16_Real_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint16 returnValue = m_EarthView_World_Graphic_CParticleEmitter_genConstantEmissionCount_ev_uint16_Real_Callback(timeElapsed);
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::genConstantEmissionCount(timeElapsed);
+				}
+				virtual void setPosition(_in const EarthView::World::Spatial::Math::CVector3& pos)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setPosition_void_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setPosition_void_CVector3_Callback(&pos);
+					}
+					else
+						return this->CParticleEmitter::setPosition(pos);
+				}
+				virtual const EarthView::World::Spatial::Math::CVector3& getPosition() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getPosition_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CVector3& returnValue = *(EarthView::World::Spatial::Math::CVector3*)m_EarthView_World_Graphic_CParticleEmitter_getPosition_CVector3_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getPosition();
+				}
+				virtual void setDirection(_in const EarthView::World::Spatial::Math::CVector3& direction)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setDirection_void_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setDirection_void_CVector3_Callback(&direction);
+					}
+					else
+						return this->CParticleEmitter::setDirection(direction);
+				}
+				virtual const EarthView::World::Spatial::Math::CVector3& getDirection() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getDirection_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CVector3& returnValue = *(EarthView::World::Spatial::Math::CVector3*)m_EarthView_World_Graphic_CParticleEmitter_getDirection_CVector3_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getDirection();
+				}
+				virtual void setUp(_in const EarthView::World::Spatial::Math::CVector3& up)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setUp_void_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setUp_void_CVector3_Callback(&up);
+					}
+					else
+						return this->CParticleEmitter::setUp(up);
+				}
+				virtual const EarthView::World::Spatial::Math::CVector3& getUp() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getUp_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CVector3& returnValue = *(EarthView::World::Spatial::Math::CVector3*)m_EarthView_World_Graphic_CParticleEmitter_getUp_CVector3_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getUp();
+				}
+				virtual void setAngle(_in const EarthView::World::Spatial::Math::CRadian& angle)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setAngle_void_CRadian_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setAngle_void_CRadian_Callback(&angle);
+					}
+					else
+						return this->CParticleEmitter::setAngle(angle);
+				}
+				virtual const EarthView::World::Spatial::Math::CRadian& getAngle() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getAngle_CRadian_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CRadian& returnValue = *(EarthView::World::Spatial::Math::CRadian*)m_EarthView_World_Graphic_CParticleEmitter_getAngle_CRadian_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getAngle();
+				}
+				virtual void setParticleVelocity(_in Real speed)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Callback(speed);
+					}
+					else
+						return this->CParticleEmitter::setParticleVelocity(speed);
+				}
+				virtual void setParticleVelocity(_in Real min, _in Real max)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Real_Callback(min, max);
+					}
+					else
+						return this->CParticleEmitter::setParticleVelocity(min, max);
+				}
+				virtual void setMinParticleVelocity(_in Real min)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setMinParticleVelocity_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setMinParticleVelocity_void_Real_Callback(min);
+					}
+					else
+						return this->CParticleEmitter::setMinParticleVelocity(min);
+				}
+				virtual void setMaxParticleVelocity(_in Real max)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setMaxParticleVelocity_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setMaxParticleVelocity_void_Real_Callback(max);
+					}
+					else
+						return this->CParticleEmitter::setMaxParticleVelocity(max);
+				}
+				virtual Real getParticleVelocity() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getParticleVelocity_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CParticleEmitter_getParticleVelocity_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getParticleVelocity();
+				}
+				virtual Real getMinParticleVelocity() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getMinParticleVelocity_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CParticleEmitter_getMinParticleVelocity_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getMinParticleVelocity();
+				}
+				virtual Real getMaxParticleVelocity() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getMaxParticleVelocity_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CParticleEmitter_getMaxParticleVelocity_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getMaxParticleVelocity();
+				}
+				virtual void setEmissionRate(_in Real particlesPerSecond)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setEmissionRate_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setEmissionRate_void_Real_Callback(particlesPerSecond);
+					}
+					else
+						return this->CParticleEmitter::setEmissionRate(particlesPerSecond);
+				}
+				virtual Real getEmissionRate() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getEmissionRate_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CParticleEmitter_getEmissionRate_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getEmissionRate();
+				}
+				virtual void setTimeToLive(_in Real ttl)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Callback(ttl);
+					}
+					else
+						return this->CParticleEmitter::setTimeToLive(ttl);
+				}
+				virtual void setTimeToLive(_in Real minTtl, _in Real maxTtl)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Real_Callback(minTtl, maxTtl);
+					}
+					else
+						return this->CParticleEmitter::setTimeToLive(minTtl, maxTtl);
+				}
+				virtual void setMinTimeToLive(_in Real min)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setMinTimeToLive_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setMinTimeToLive_void_Real_Callback(min);
+					}
+					else
+						return this->CParticleEmitter::setMinTimeToLive(min);
+				}
+				virtual void setMaxTimeToLive(_in Real max)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setMaxTimeToLive_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setMaxTimeToLive_void_Real_Callback(max);
+					}
+					else
+						return this->CParticleEmitter::setMaxTimeToLive(max);
+				}
+				virtual Real getTimeToLive() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getTimeToLive_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CParticleEmitter_getTimeToLive_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getTimeToLive();
+				}
+				virtual Real getMinTimeToLive() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getMinTimeToLive_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CParticleEmitter_getMinTimeToLive_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getMinTimeToLive();
+				}
+				virtual Real getMaxTimeToLive() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getMaxTimeToLive_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CParticleEmitter_getMaxTimeToLive_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getMaxTimeToLive();
+				}
+				virtual void setColour(_in const EarthView::World::Graphic::CColourValue& colour)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_Callback(&colour);
+					}
+					else
+						return this->CParticleEmitter::setColour(colour);
+				}
+				virtual void setColour(_in const EarthView::World::Graphic::CColourValue& colourStart, _in const EarthView::World::Graphic::CColourValue& colourEnd)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_CColourValue_Callback(&colourStart, &colourEnd);
+					}
+					else
+						return this->CParticleEmitter::setColour(colourStart, colourEnd);
+				}
+				virtual void setColourRangeStart(_in const EarthView::World::Graphic::CColourValue& colour)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setColourRangeStart_void_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setColourRangeStart_void_CColourValue_Callback(&colour);
+					}
+					else
+						return this->CParticleEmitter::setColourRangeStart(colour);
+				}
+				virtual void setColourRangeEnd(_in const EarthView::World::Graphic::CColourValue& colour)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setColourRangeEnd_void_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setColourRangeEnd_void_CColourValue_Callback(&colour);
+					}
+					else
+						return this->CParticleEmitter::setColourRangeEnd(colour);
+				}
+				virtual const EarthView::World::Graphic::CColourValue& getColour() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getColour_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CColourValue& returnValue = *(EarthView::World::Graphic::CColourValue*)m_EarthView_World_Graphic_CParticleEmitter_getColour_CColourValue_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getColour();
+				}
+				virtual const EarthView::World::Graphic::CColourValue& getColourRangeStart() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getColourRangeStart_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CColourValue& returnValue = *(EarthView::World::Graphic::CColourValue*)m_EarthView_World_Graphic_CParticleEmitter_getColourRangeStart_CColourValue_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getColourRangeStart();
+				}
+				virtual const EarthView::World::Graphic::CColourValue& getColourRangeEnd() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getColourRangeEnd_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CColourValue& returnValue = *(EarthView::World::Graphic::CColourValue*)m_EarthView_World_Graphic_CParticleEmitter_getColourRangeEnd_CColourValue_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getColourRangeEnd();
+				}
+				virtual ev_uint16 _getEmissionCount(_in Real timeElapsed)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter__getEmissionCount_ev_uint16_Real_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint16 returnValue = m_EarthView_World_Graphic_CParticleEmitter__getEmissionCount_ev_uint16_Real_Callback(timeElapsed);
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::_getEmissionCount(timeElapsed);
+				}
+				virtual void _initParticle(_in EarthView::World::Graphic::CParticle* pParticle)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter__initParticle_void_CParticle_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter__initParticle_void_CParticle_Callback(pParticle);
+					}
+					else
+						return this->CParticleEmitter::_initParticle(pParticle);
+				}
+				virtual void setEnabled(_in ev_bool enabled)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setEnabled_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setEnabled_void_ev_bool_Callback(enabled);
+					}
+					else
+						return this->CParticleEmitter::setEnabled(enabled);
+				}
+				virtual ev_bool getEnabled() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getEnabled_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CParticleEmitter_getEnabled_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getEnabled();
+				}
+				virtual void setStartTime(_in Real startTime)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setStartTime_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setStartTime_void_Real_Callback(startTime);
+					}
+					else
+						return this->CParticleEmitter::setStartTime(startTime);
+				}
+				virtual Real getStartTime() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getStartTime_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CParticleEmitter_getStartTime_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getStartTime();
+				}
+				virtual void setDuration(_in Real duration)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Callback(duration);
+					}
+					else
+						return this->CParticleEmitter::setDuration(duration);
+				}
+				virtual Real getDuration() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getDuration_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CParticleEmitter_getDuration_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getDuration();
+				}
+				virtual void setDuration(_in Real min, _in Real max)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Real_Callback(min, max);
+					}
+					else
+						return this->CParticleEmitter::setDuration(min, max);
+				}
+				virtual void setMinDuration(_in Real min)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setMinDuration_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setMinDuration_void_Real_Callback(min);
+					}
+					else
+						return this->CParticleEmitter::setMinDuration(min);
+				}
+				virtual void setMaxDuration(_in Real max)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setMaxDuration_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setMaxDuration_void_Real_Callback(max);
+					}
+					else
+						return this->CParticleEmitter::setMaxDuration(max);
+				}
+				virtual Real getMinDuration() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getMinDuration_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CParticleEmitter_getMinDuration_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getMinDuration();
+				}
+				virtual Real getMaxDuration() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getMaxDuration_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CParticleEmitter_getMaxDuration_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getMaxDuration();
+				}
+				virtual void setRepeatDelay(_in Real duration)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Callback(duration);
+					}
+					else
+						return this->CParticleEmitter::setRepeatDelay(duration);
+				}
+				virtual Real getRepeatDelay() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getRepeatDelay_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CParticleEmitter_getRepeatDelay_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getRepeatDelay();
+				}
+				virtual void setRepeatDelay(_in Real min, _in Real max)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Real_Callback(min, max);
+					}
+					else
+						return this->CParticleEmitter::setRepeatDelay(min, max);
+				}
+				virtual void setMinRepeatDelay(_in Real min)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setMinRepeatDelay_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setMinRepeatDelay_void_Real_Callback(min);
+					}
+					else
+						return this->CParticleEmitter::setMinRepeatDelay(min);
+				}
+				virtual void setMaxRepeatDelay(_in Real max)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setMaxRepeatDelay_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setMaxRepeatDelay_void_Real_Callback(max);
+					}
+					else
+						return this->CParticleEmitter::setMaxRepeatDelay(max);
+				}
+				virtual Real getMinRepeatDelay() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getMinRepeatDelay_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CParticleEmitter_getMinRepeatDelay_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getMinRepeatDelay();
+				}
+				virtual Real getMaxRepeatDelay() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_getMaxRepeatDelay_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CParticleEmitter_getMaxRepeatDelay_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::getMaxRepeatDelay();
+				}
+				virtual void setName(_in const EVString& newName)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setName_void_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* newName_Char = newName.makeBuffer();
+						m_EarthView_World_Graphic_CParticleEmitter_setName_void_EVString_Callback(newName_Char);
+					}
+					else
+						return this->CParticleEmitter::setName(newName);
+				}
+				virtual void setEmittedEmitter(_in const EVString& emittedEmitter)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setEmittedEmitter_void_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* emittedEmitter_Char = emittedEmitter.makeBuffer();
+						m_EarthView_World_Graphic_CParticleEmitter_setEmittedEmitter_void_EVString_Callback(emittedEmitter_Char);
+					}
+					else
+						return this->CParticleEmitter::setEmittedEmitter(emittedEmitter);
+				}
+				virtual ev_bool isEmitted() const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_isEmitted_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CParticleEmitter_isEmitted_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitter::isEmitted();
+				}
+				virtual void setEmitted(_in ev_bool emitted)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_setEmitted_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_setEmitted_void_ev_bool_Callback(emitted);
+					}
+					else
+						return this->CParticleEmitter::setEmitted(emitted);
+				}
+			};
+			REGISTER_FACTORY_CLASS(CParticleEmitterProxy);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_EVString_Callback)(_in char*& name, _in char*& value);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_ev_bool_ev_bool_Callback)(_in char*& name, _in ev_bool readOnly, _in ev_bool enable);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameterList_void_CommonStringPairList_Callback)(_in const void* paramList);
+			typedef char*  ( _stdcall EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_getParameter_EVString_EVString_Callback)(_in char*& name);
+			typedef void  ( _stdcall EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_copyParametersTo_void_CStringInterface_Callback)(_in EarthView::World::Core::CStringInterface* dest);
+			class CParticleEmitterInternalStringInterfaceProxy : public EarthView::World::Graphic::CParticleEmitter::CParticleEmitterInternalStringInterface
+			{
+			private:
+				EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_EVString_Callback* m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_EVString_Callback;
+				EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_ev_bool_ev_bool_Callback* m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_ev_bool_ev_bool_Callback;
+				EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameterList_void_CommonStringPairList_Callback* m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameterList_void_CommonStringPairList_Callback;
+				EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_getParameter_EVString_EVString_Callback* m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_getParameter_EVString_EVString_Callback;
+				EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_copyParametersTo_void_CStringInterface_Callback* m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_copyParametersTo_void_CStringInterface_Callback;
+			public:
+				CParticleEmitterInternalStringInterfaceProxy(EarthView::World::Core::CNameValuePairList *pList) : CParticleEmitterInternalStringInterface(pList)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_ev_bool_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameterList_void_CommonStringPairList_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_getParameter_EVString_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_copyParametersTo_void_CStringInterface_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_EVString(EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_ev_bool_ev_bool(EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_ev_bool_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_ev_bool_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameterList_void_CommonStringPairList(EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameterList_void_CommonStringPairList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameterList_void_CommonStringPairList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_getParameter_EVString_EVString(EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_getParameter_EVString_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_getParameter_EVString_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_copyParametersTo_void_CStringInterface(EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_copyParametersTo_void_CStringInterface_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_copyParametersTo_void_CStringInterface_Callback = pCallback;
+				}
+				virtual ev_bool setParameter(_in const EVString& name, _in const EVString& value)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* value_Char = value.makeBuffer();
+						ev_bool returnValue = m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_EVString_Callback(name_Char, value_Char);
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitterInternalStringInterface::setParameter(name, value);
+				}
+				virtual ev_bool setParameter(_in const EVString& name, _in ev_bool readOnly, _in ev_bool enable)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_ev_bool_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						ev_bool returnValue = m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_ev_bool_ev_bool_Callback(name_Char, readOnly, enable);
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitterInternalStringInterface::setParameter(name, readOnly, enable);
+				}
+				virtual void setParameterList(_in const EarthView::World::Core::CommonStringPairList& paramList)
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameterList_void_CommonStringPairList_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameterList_void_CommonStringPairList_Callback(&paramList);
+					}
+					else
+						return this->CParticleEmitterInternalStringInterface::setParameterList(paramList);
+				}
+				virtual EVString getParameter(_in const EVString& name) const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_getParameter_EVString_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EVString returnValue = m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_getParameter_EVString_EVString_Callback(name_Char);
+						return returnValue;
+					}
+					else
+						return this->CParticleEmitterInternalStringInterface::getParameter(name);
+				}
+				virtual void copyParametersTo(_in EarthView::World::Core::CStringInterface* dest) const
+				{
+					if(m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_copyParametersTo_void_CStringInterface_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_copyParametersTo_void_CStringInterface_Callback(dest);
+					}
+					else
+						return this->CParticleEmitterInternalStringInterface::copyParametersTo(dest);
+				}
+			};
+			REGISTER_FACTORY_CLASS(CParticleEmitterInternalStringInterfaceProxy);
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_EVString( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_EVString_Callback* pCallback )
+			{
+				CParticleEmitterInternalStringInterfaceProxy* ptr = dynamic_cast<CParticleEmitterInternalStringInterfaceProxy*>((EarthView::World::Graphic::CParticleEmitter::CParticleEmitterInternalStringInterface*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_ev_bool_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_ev_bool_ev_bool_Callback* pCallback )
+			{
+				CParticleEmitterInternalStringInterfaceProxy* ptr = dynamic_cast<CParticleEmitterInternalStringInterfaceProxy*>((EarthView::World::Graphic::CParticleEmitter::CParticleEmitterInternalStringInterface*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameter_ev_bool_EVString_ev_bool_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameterList_void_CommonStringPairList( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameterList_void_CommonStringPairList_Callback* pCallback )
+			{
+				CParticleEmitterInternalStringInterfaceProxy* ptr = dynamic_cast<CParticleEmitterInternalStringInterfaceProxy*>((EarthView::World::Graphic::CParticleEmitter::CParticleEmitterInternalStringInterface*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_setParameterList_void_CommonStringPairList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_getParameter_EVString_EVString( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_getParameter_EVString_EVString_Callback* pCallback )
+			{
+				CParticleEmitterInternalStringInterfaceProxy* ptr = dynamic_cast<CParticleEmitterInternalStringInterfaceProxy*>((EarthView::World::Graphic::CParticleEmitter::CParticleEmitterInternalStringInterface*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_getParameter_EVString_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_copyParametersTo_void_CStringInterface( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_copyParametersTo_void_CStringInterface_Callback* pCallback )
+			{
+				CParticleEmitterInternalStringInterfaceProxy* ptr = dynamic_cast<CParticleEmitterInternalStringInterfaceProxy*>((EarthView::World::Graphic::CParticleEmitter::CParticleEmitterInternalStringInterface*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_CParticleEmitterInternalStringInterface_copyParametersTo_void_CStringInterface(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CParticleEmitter::CParticleEmitterInternalStringInterface*  _stdcall EarthView_World_Graphic_CParticleEmitter_getStringInterfacePtr_CParticleEmitterInternalStringInterface(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::CParticleEmitter::CParticleEmitterInternalStringInterface* objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getStringInterfacePtr();
+					return objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::CParticleEmitter::CParticleEmitterInternalStringInterface* objXXXX = ptrNativeObject->getStringInterfacePtr();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getStringInterfacePtr_CParticleEmitterInternalStringInterface( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getStringInterfacePtr_CParticleEmitterInternalStringInterface_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getStringInterfacePtr_CParticleEmitterInternalStringInterface(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CParticleEmitter::CParticleEmitterInternalStringInterface*  _stdcall EarthView_World_Graphic_CParticleEmitter_getStringInterfacePtr_CParticleEmitterInternalStringInterface_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				EarthView::World::Graphic::CParticleEmitter::CParticleEmitterInternalStringInterface* objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getStringInterfacePtr();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_genEmissionDirectionNoRandom_void_CVector3(void *pObjectXXXX, _inout void* destVector )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::genEmissionDirectionNoRandom(*(EarthView::World::Spatial::Math::CVector3*)destVector);
+				else
+					ptrNativeObject->genEmissionDirectionNoRandom(*(EarthView::World::Spatial::Math::CVector3*)destVector);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_genEmissionDirectionNoRandom_void_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_genEmissionDirectionNoRandom_void_CVector3_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_genEmissionDirectionNoRandom_void_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_genEmissionDirectionNoRandom_void_CVector3_NoVirtual(void *pObjectXXXX, _inout void* destVector )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::genEmissionDirectionNoRandom(*(EarthView::World::Spatial::Math::CVector3*)destVector);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_genEmissionDirection_void_CVector3(void *pObjectXXXX, _inout void* destVector )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::genEmissionDirection(*(EarthView::World::Spatial::Math::CVector3*)destVector);
+				else
+					ptrNativeObject->genEmissionDirection(*(EarthView::World::Spatial::Math::CVector3*)destVector);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_genEmissionDirection_void_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_genEmissionDirection_void_CVector3_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_genEmissionDirection_void_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_genEmissionDirection_void_CVector3_NoVirtual(void *pObjectXXXX, _inout void* destVector )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::genEmissionDirection(*(EarthView::World::Spatial::Math::CVector3*)destVector);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_genEmissionVelocity_void_CVector3(void *pObjectXXXX, _inout void* destVector )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::genEmissionVelocity(*(EarthView::World::Spatial::Math::CVector3*)destVector);
+				else
+					ptrNativeObject->genEmissionVelocity(*(EarthView::World::Spatial::Math::CVector3*)destVector);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_genEmissionVelocity_void_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_genEmissionVelocity_void_CVector3_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_genEmissionVelocity_void_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_genEmissionVelocity_void_CVector3_NoVirtual(void *pObjectXXXX, _inout void* destVector )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::genEmissionVelocity(*(EarthView::World::Spatial::Math::CVector3*)destVector);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_genEmissionTTL_Real(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::genEmissionTTL();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->genEmissionTTL();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_genEmissionTTL_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_genEmissionTTL_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_genEmissionTTL_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_genEmissionTTL_Real_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::genEmissionTTL();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_genEmissionColour_void_CColourValue(void *pObjectXXXX, _inout void* destColour )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::genEmissionColour(*(EarthView::World::Graphic::CColourValue*)destColour);
+				else
+					ptrNativeObject->genEmissionColour(*(EarthView::World::Graphic::CColourValue*)destColour);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_genEmissionColour_void_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_genEmissionColour_void_CColourValue_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_genEmissionColour_void_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_genEmissionColour_void_CColourValue_NoVirtual(void *pObjectXXXX, _inout void* destColour )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::genEmissionColour(*(EarthView::World::Graphic::CColourValue*)destColour);
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint16  _stdcall EarthView_World_Graphic_CParticleEmitter_genConstantEmissionCount_ev_uint16_Real(void *pObjectXXXX, _in Real timeElapsed )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					ev_uint16 objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::genConstantEmissionCount(timeElapsed);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint16 objXXXX = ptrNativeObject->genConstantEmissionCount(timeElapsed);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_genConstantEmissionCount_ev_uint16_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_genConstantEmissionCount_ev_uint16_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_genConstantEmissionCount_ev_uint16_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint16  _stdcall EarthView_World_Graphic_CParticleEmitter_genConstantEmissionCount_ev_uint16_Real_NoVirtual(void *pObjectXXXX, _in Real timeElapsed )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ev_uint16 objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::genConstantEmissionCount(timeElapsed);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_addBaseParameters_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->addBaseParameters();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setPosition_void_CVector3(void *pObjectXXXX, _in const void* pos )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setPosition(*(EarthView::World::Spatial::Math::CVector3*)pos);
+				else
+					ptrNativeObject->setPosition(*(EarthView::World::Spatial::Math::CVector3*)pos);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setPosition_void_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setPosition_void_CVector3_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setPosition_void_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setPosition_void_CVector3_NoVirtual(void *pObjectXXXX, _in const void* pos )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setPosition(*(EarthView::World::Spatial::Math::CVector3*)pos);
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CParticleEmitter_getPosition_CVector3(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Spatial::Math::CVector3& objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getPosition();
+					const EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Spatial::Math::CVector3& objXXXX = ptrNativeObject->getPosition();
+					const EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getPosition_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getPosition_CVector3_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getPosition_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CParticleEmitter_getPosition_CVector3_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CVector3& objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getPosition();
+				const EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setDirection_void_CVector3(void *pObjectXXXX, _in const void* direction )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setDirection(*(EarthView::World::Spatial::Math::CVector3*)direction);
+				else
+					ptrNativeObject->setDirection(*(EarthView::World::Spatial::Math::CVector3*)direction);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setDirection_void_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setDirection_void_CVector3_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setDirection_void_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setDirection_void_CVector3_NoVirtual(void *pObjectXXXX, _in const void* direction )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setDirection(*(EarthView::World::Spatial::Math::CVector3*)direction);
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CParticleEmitter_getDirection_CVector3(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Spatial::Math::CVector3& objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getDirection();
+					const EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Spatial::Math::CVector3& objXXXX = ptrNativeObject->getDirection();
+					const EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getDirection_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getDirection_CVector3_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getDirection_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CParticleEmitter_getDirection_CVector3_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CVector3& objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getDirection();
+				const EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setUp_void_CVector3(void *pObjectXXXX, _in const void* up )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setUp(*(EarthView::World::Spatial::Math::CVector3*)up);
+				else
+					ptrNativeObject->setUp(*(EarthView::World::Spatial::Math::CVector3*)up);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setUp_void_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setUp_void_CVector3_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setUp_void_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setUp_void_CVector3_NoVirtual(void *pObjectXXXX, _in const void* up )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setUp(*(EarthView::World::Spatial::Math::CVector3*)up);
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CParticleEmitter_getUp_CVector3(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Spatial::Math::CVector3& objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getUp();
+					const EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Spatial::Math::CVector3& objXXXX = ptrNativeObject->getUp();
+					const EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getUp_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getUp_CVector3_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getUp_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CParticleEmitter_getUp_CVector3_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CVector3& objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getUp();
+				const EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setAngle_void_CRadian(void *pObjectXXXX, _in const void* angle )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setAngle(*(EarthView::World::Spatial::Math::CRadian*)angle);
+				else
+					ptrNativeObject->setAngle(*(EarthView::World::Spatial::Math::CRadian*)angle);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setAngle_void_CRadian( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setAngle_void_CRadian_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setAngle_void_CRadian(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setAngle_void_CRadian_NoVirtual(void *pObjectXXXX, _in const void* angle )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setAngle(*(EarthView::World::Spatial::Math::CRadian*)angle);
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CParticleEmitter_getAngle_CRadian(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Spatial::Math::CRadian& objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getAngle();
+					const EarthView::World::Spatial::Math::CRadian *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Spatial::Math::CRadian& objXXXX = ptrNativeObject->getAngle();
+					const EarthView::World::Spatial::Math::CRadian *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getAngle_CRadian( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getAngle_CRadian_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getAngle_CRadian(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CParticleEmitter_getAngle_CRadian_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CRadian& objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getAngle();
+				const EarthView::World::Spatial::Math::CRadian *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real(void *pObjectXXXX, _in Real speed )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setParticleVelocity(speed);
+				else
+					ptrNativeObject->setParticleVelocity(speed);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_NoVirtual(void *pObjectXXXX, _in Real speed )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setParticleVelocity(speed);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Real(void *pObjectXXXX, _in Real min, _in Real max )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setParticleVelocity(min, max);
+				else
+					ptrNativeObject->setParticleVelocity(min, max);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setParticleVelocity_void_Real_Real_NoVirtual(void *pObjectXXXX, _in Real min, _in Real max )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setParticleVelocity(min, max);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setMinParticleVelocity_void_Real(void *pObjectXXXX, _in Real min )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setMinParticleVelocity(min);
+				else
+					ptrNativeObject->setMinParticleVelocity(min);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setMinParticleVelocity_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setMinParticleVelocity_void_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setMinParticleVelocity_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setMinParticleVelocity_void_Real_NoVirtual(void *pObjectXXXX, _in Real min )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setMinParticleVelocity(min);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setMaxParticleVelocity_void_Real(void *pObjectXXXX, _in Real max )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setMaxParticleVelocity(max);
+				else
+					ptrNativeObject->setMaxParticleVelocity(max);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setMaxParticleVelocity_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setMaxParticleVelocity_void_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setMaxParticleVelocity_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setMaxParticleVelocity_void_Real_NoVirtual(void *pObjectXXXX, _in Real max )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setMaxParticleVelocity(max);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getParticleVelocity_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getParticleVelocity();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getParticleVelocity();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getParticleVelocity_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getParticleVelocity_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getParticleVelocity_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getParticleVelocity_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getParticleVelocity();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getMinParticleVelocity_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getMinParticleVelocity();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getMinParticleVelocity();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getMinParticleVelocity_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getMinParticleVelocity_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getMinParticleVelocity_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getMinParticleVelocity_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getMinParticleVelocity();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getMaxParticleVelocity_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getMaxParticleVelocity();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getMaxParticleVelocity();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getMaxParticleVelocity_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getMaxParticleVelocity_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getMaxParticleVelocity_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getMaxParticleVelocity_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getMaxParticleVelocity();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setEmissionRate_void_Real(void *pObjectXXXX, _in Real particlesPerSecond )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setEmissionRate(particlesPerSecond);
+				else
+					ptrNativeObject->setEmissionRate(particlesPerSecond);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setEmissionRate_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setEmissionRate_void_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setEmissionRate_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setEmissionRate_void_Real_NoVirtual(void *pObjectXXXX, _in Real particlesPerSecond )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setEmissionRate(particlesPerSecond);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getEmissionRate_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getEmissionRate();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getEmissionRate();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getEmissionRate_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getEmissionRate_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getEmissionRate_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getEmissionRate_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getEmissionRate();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real(void *pObjectXXXX, _in Real ttl )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setTimeToLive(ttl);
+				else
+					ptrNativeObject->setTimeToLive(ttl);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_NoVirtual(void *pObjectXXXX, _in Real ttl )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setTimeToLive(ttl);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Real(void *pObjectXXXX, _in Real minTtl, _in Real maxTtl )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setTimeToLive(minTtl, maxTtl);
+				else
+					ptrNativeObject->setTimeToLive(minTtl, maxTtl);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setTimeToLive_void_Real_Real_NoVirtual(void *pObjectXXXX, _in Real minTtl, _in Real maxTtl )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setTimeToLive(minTtl, maxTtl);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setMinTimeToLive_void_Real(void *pObjectXXXX, _in Real min )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setMinTimeToLive(min);
+				else
+					ptrNativeObject->setMinTimeToLive(min);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setMinTimeToLive_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setMinTimeToLive_void_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setMinTimeToLive_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setMinTimeToLive_void_Real_NoVirtual(void *pObjectXXXX, _in Real min )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setMinTimeToLive(min);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setMaxTimeToLive_void_Real(void *pObjectXXXX, _in Real max )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setMaxTimeToLive(max);
+				else
+					ptrNativeObject->setMaxTimeToLive(max);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setMaxTimeToLive_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setMaxTimeToLive_void_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setMaxTimeToLive_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setMaxTimeToLive_void_Real_NoVirtual(void *pObjectXXXX, _in Real max )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setMaxTimeToLive(max);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getTimeToLive_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getTimeToLive();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getTimeToLive();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getTimeToLive_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getTimeToLive_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getTimeToLive_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getTimeToLive_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getTimeToLive();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getMinTimeToLive_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getMinTimeToLive();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getMinTimeToLive();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getMinTimeToLive_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getMinTimeToLive_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getMinTimeToLive_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getMinTimeToLive_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getMinTimeToLive();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getMaxTimeToLive_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getMaxTimeToLive();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getMaxTimeToLive();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getMaxTimeToLive_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getMaxTimeToLive_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getMaxTimeToLive_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getMaxTimeToLive_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getMaxTimeToLive();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue(void *pObjectXXXX, _in const void* colour )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setColour(*(EarthView::World::Graphic::CColourValue*)colour);
+				else
+					ptrNativeObject->setColour(*(EarthView::World::Graphic::CColourValue*)colour);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_NoVirtual(void *pObjectXXXX, _in const void* colour )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setColour(*(EarthView::World::Graphic::CColourValue*)colour);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_CColourValue(void *pObjectXXXX, _in const void* colourStart, _in const void* colourEnd )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setColour(*(EarthView::World::Graphic::CColourValue*)colourStart, *(EarthView::World::Graphic::CColourValue*)colourEnd);
+				else
+					ptrNativeObject->setColour(*(EarthView::World::Graphic::CColourValue*)colourStart, *(EarthView::World::Graphic::CColourValue*)colourEnd);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_CColourValue_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setColour_void_CColourValue_CColourValue_NoVirtual(void *pObjectXXXX, _in const void* colourStart, _in const void* colourEnd )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setColour(*(EarthView::World::Graphic::CColourValue*)colourStart, *(EarthView::World::Graphic::CColourValue*)colourEnd);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setColourRangeStart_void_CColourValue(void *pObjectXXXX, _in const void* colour )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setColourRangeStart(*(EarthView::World::Graphic::CColourValue*)colour);
+				else
+					ptrNativeObject->setColourRangeStart(*(EarthView::World::Graphic::CColourValue*)colour);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setColourRangeStart_void_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setColourRangeStart_void_CColourValue_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setColourRangeStart_void_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setColourRangeStart_void_CColourValue_NoVirtual(void *pObjectXXXX, _in const void* colour )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setColourRangeStart(*(EarthView::World::Graphic::CColourValue*)colour);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setColourRangeEnd_void_CColourValue(void *pObjectXXXX, _in const void* colour )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setColourRangeEnd(*(EarthView::World::Graphic::CColourValue*)colour);
+				else
+					ptrNativeObject->setColourRangeEnd(*(EarthView::World::Graphic::CColourValue*)colour);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setColourRangeEnd_void_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setColourRangeEnd_void_CColourValue_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setColourRangeEnd_void_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setColourRangeEnd_void_CColourValue_NoVirtual(void *pObjectXXXX, _in const void* colour )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setColourRangeEnd(*(EarthView::World::Graphic::CColourValue*)colour);
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CParticleEmitter_getColour_CColourValue(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Graphic::CColourValue& objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getColour();
+					const EarthView::World::Graphic::CColourValue *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Graphic::CColourValue& objXXXX = ptrNativeObject->getColour();
+					const EarthView::World::Graphic::CColourValue *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getColour_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getColour_CColourValue_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getColour_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CParticleEmitter_getColour_CColourValue_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				const EarthView::World::Graphic::CColourValue& objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getColour();
+				const EarthView::World::Graphic::CColourValue *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CParticleEmitter_getColourRangeStart_CColourValue(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Graphic::CColourValue& objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getColourRangeStart();
+					const EarthView::World::Graphic::CColourValue *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Graphic::CColourValue& objXXXX = ptrNativeObject->getColourRangeStart();
+					const EarthView::World::Graphic::CColourValue *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getColourRangeStart_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getColourRangeStart_CColourValue_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getColourRangeStart_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CParticleEmitter_getColourRangeStart_CColourValue_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				const EarthView::World::Graphic::CColourValue& objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getColourRangeStart();
+				const EarthView::World::Graphic::CColourValue *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CParticleEmitter_getColourRangeEnd_CColourValue(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Graphic::CColourValue& objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getColourRangeEnd();
+					const EarthView::World::Graphic::CColourValue *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Graphic::CColourValue& objXXXX = ptrNativeObject->getColourRangeEnd();
+					const EarthView::World::Graphic::CColourValue *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getColourRangeEnd_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getColourRangeEnd_CColourValue_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getColourRangeEnd_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CParticleEmitter_getColourRangeEnd_CColourValue_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				const EarthView::World::Graphic::CColourValue& objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getColourRangeEnd();
+				const EarthView::World::Graphic::CColourValue *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint16  _stdcall EarthView_World_Graphic_CParticleEmitter__getEmissionCount_ev_uint16_Real(void *pObjectXXXX, _in Real timeElapsed )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					ev_uint16 objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::_getEmissionCount(timeElapsed);
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint16 objXXXX = ptrNativeObject->_getEmissionCount(timeElapsed);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter__getEmissionCount_ev_uint16_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter__getEmissionCount_ev_uint16_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter__getEmissionCount_ev_uint16_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint16  _stdcall EarthView_World_Graphic_CParticleEmitter__getEmissionCount_ev_uint16_Real_NoVirtual(void *pObjectXXXX, _in Real timeElapsed )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ev_uint16 objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::_getEmissionCount(timeElapsed);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter__initParticle_void_CParticle(void *pObjectXXXX, _in EarthView::World::Graphic::CParticle* pParticle )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::_initParticle(pParticle);
+				else
+					ptrNativeObject->_initParticle(pParticle);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter__initParticle_void_CParticle( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter__initParticle_void_CParticle_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter__initParticle_void_CParticle(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter__initParticle_void_CParticle_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CParticle* pParticle )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::_initParticle(pParticle);
+			}
+			extern "C" EV_DLL_EXPORT  const char*  _stdcall EarthView_World_Graphic_CParticleEmitter_getType_EVString(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				const EVString& objXXXX = ptrNativeObject->getType();
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setEnabled_void_ev_bool(void *pObjectXXXX, _in ev_bool enabled )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setEnabled(enabled);
+				else
+					ptrNativeObject->setEnabled(enabled);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setEnabled_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setEnabled_void_ev_bool_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setEnabled_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setEnabled_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool enabled )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setEnabled(enabled);
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CParticleEmitter_getEnabled_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getEnabled();
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->getEnabled();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getEnabled_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getEnabled_ev_bool_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getEnabled_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CParticleEmitter_getEnabled_ev_bool_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getEnabled();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setStartTime_void_Real(void *pObjectXXXX, _in Real startTime )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setStartTime(startTime);
+				else
+					ptrNativeObject->setStartTime(startTime);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setStartTime_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setStartTime_void_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setStartTime_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setStartTime_void_Real_NoVirtual(void *pObjectXXXX, _in Real startTime )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setStartTime(startTime);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getStartTime_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getStartTime();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getStartTime();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getStartTime_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getStartTime_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getStartTime_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getStartTime_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getStartTime();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real(void *pObjectXXXX, _in Real duration )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setDuration(duration);
+				else
+					ptrNativeObject->setDuration(duration);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_NoVirtual(void *pObjectXXXX, _in Real duration )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setDuration(duration);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getDuration_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getDuration();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getDuration();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getDuration_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getDuration_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getDuration_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getDuration_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getDuration();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Real(void *pObjectXXXX, _in Real min, _in Real max )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setDuration(min, max);
+				else
+					ptrNativeObject->setDuration(min, max);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setDuration_void_Real_Real_NoVirtual(void *pObjectXXXX, _in Real min, _in Real max )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setDuration(min, max);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setMinDuration_void_Real(void *pObjectXXXX, _in Real min )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setMinDuration(min);
+				else
+					ptrNativeObject->setMinDuration(min);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setMinDuration_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setMinDuration_void_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setMinDuration_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setMinDuration_void_Real_NoVirtual(void *pObjectXXXX, _in Real min )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setMinDuration(min);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setMaxDuration_void_Real(void *pObjectXXXX, _in Real max )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setMaxDuration(max);
+				else
+					ptrNativeObject->setMaxDuration(max);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setMaxDuration_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setMaxDuration_void_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setMaxDuration_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setMaxDuration_void_Real_NoVirtual(void *pObjectXXXX, _in Real max )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setMaxDuration(max);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getMinDuration_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getMinDuration();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getMinDuration();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getMinDuration_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getMinDuration_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getMinDuration_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getMinDuration_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getMinDuration();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getMaxDuration_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getMaxDuration();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getMaxDuration();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getMaxDuration_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getMaxDuration_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getMaxDuration_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getMaxDuration_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getMaxDuration();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real(void *pObjectXXXX, _in Real duration )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setRepeatDelay(duration);
+				else
+					ptrNativeObject->setRepeatDelay(duration);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_NoVirtual(void *pObjectXXXX, _in Real duration )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setRepeatDelay(duration);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getRepeatDelay_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getRepeatDelay();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getRepeatDelay();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getRepeatDelay_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getRepeatDelay_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getRepeatDelay_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getRepeatDelay_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getRepeatDelay();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Real(void *pObjectXXXX, _in Real min, _in Real max )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setRepeatDelay(min, max);
+				else
+					ptrNativeObject->setRepeatDelay(min, max);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setRepeatDelay_void_Real_Real_NoVirtual(void *pObjectXXXX, _in Real min, _in Real max )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setRepeatDelay(min, max);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setMinRepeatDelay_void_Real(void *pObjectXXXX, _in Real min )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setMinRepeatDelay(min);
+				else
+					ptrNativeObject->setMinRepeatDelay(min);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setMinRepeatDelay_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setMinRepeatDelay_void_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setMinRepeatDelay_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setMinRepeatDelay_void_Real_NoVirtual(void *pObjectXXXX, _in Real min )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setMinRepeatDelay(min);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setMaxRepeatDelay_void_Real(void *pObjectXXXX, _in Real max )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setMaxRepeatDelay(max);
+				else
+					ptrNativeObject->setMaxRepeatDelay(max);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setMaxRepeatDelay_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setMaxRepeatDelay_void_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setMaxRepeatDelay_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setMaxRepeatDelay_void_Real_NoVirtual(void *pObjectXXXX, _in Real max )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setMaxRepeatDelay(max);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getMinRepeatDelay_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getMinRepeatDelay();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getMinRepeatDelay();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getMinRepeatDelay_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getMinRepeatDelay_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getMinRepeatDelay_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getMinRepeatDelay_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getMinRepeatDelay();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getMaxRepeatDelay_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getMaxRepeatDelay();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getMaxRepeatDelay();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_getMaxRepeatDelay_Real( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_getMaxRepeatDelay_Real_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_getMaxRepeatDelay_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CParticleEmitter_getMaxRepeatDelay_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::getMaxRepeatDelay();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const char*  _stdcall EarthView_World_Graphic_CParticleEmitter_getName_EVString(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				const EVString& objXXXX = ptrNativeObject->getName();
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setName_void_EVString(void *pObjectXXXX, _in const char* newName )
+			{
+				EarthView::World::Core::ev_string newName1 = newName;
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setName(newName1);
+				else
+					ptrNativeObject->setName(newName1);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setName_void_EVString( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setName_void_EVString_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setName_void_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setName_void_EVString_NoVirtual(void *pObjectXXXX, _in const char* newName )
+			{
+				EarthView::World::Core::ev_string newName1 = newName;
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setName(newName1);
+			}
+			extern "C" EV_DLL_EXPORT  const char*  _stdcall EarthView_World_Graphic_CParticleEmitter_getEmittedEmitter_EVString(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				const EVString& objXXXX = ptrNativeObject->getEmittedEmitter();
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setEmittedEmitter_void_EVString(void *pObjectXXXX, _in const char* emittedEmitter )
+			{
+				EarthView::World::Core::ev_string emittedEmitter1 = emittedEmitter;
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setEmittedEmitter(emittedEmitter1);
+				else
+					ptrNativeObject->setEmittedEmitter(emittedEmitter1);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setEmittedEmitter_void_EVString( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setEmittedEmitter_void_EVString_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setEmittedEmitter_void_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setEmittedEmitter_void_EVString_NoVirtual(void *pObjectXXXX, _in const char* emittedEmitter )
+			{
+				EarthView::World::Core::ev_string emittedEmitter1 = emittedEmitter;
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setEmittedEmitter(emittedEmitter1);
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CParticleEmitter_isEmitted_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::isEmitted();
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->isEmitted();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_isEmitted_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_isEmitted_ev_bool_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_isEmitted_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CParticleEmitter_isEmitted_ev_bool_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::isEmitted();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setEmitted_void_ev_bool(void *pObjectXXXX, _in ev_bool emitted )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				if (dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setEmitted(emitted);
+				else
+					ptrNativeObject->setEmitted(emitted);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CParticleEmitter_setEmitted_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CParticleEmitter_setEmitted_void_ev_bool_Callback* pCallback )
+			{
+				CParticleEmitterProxy* ptr = dynamic_cast<CParticleEmitterProxy*>((EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CParticleEmitter_setEmitted_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CParticleEmitter_setEmitted_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool emitted )
+			{
+				EarthView::World::Graphic::CParticleEmitter* ptrNativeObject = (EarthView::World::Graphic::CParticleEmitter*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CParticleEmitter::setEmitted(emitted);
+			}
+		}
+	}
+}

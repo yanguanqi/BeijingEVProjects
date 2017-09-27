@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ABBB89F5-DC5D-4E1A-B354-6EE9D41DA010}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EV_XldMain_CSharp</RootNamespace>
+    <AssemblyName>EV_XldMain_CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EarthViewControls">
+      <HintPath>..\..\..\..\..\..\SDKS\EV\64bit\20160812\SDK\samples\Bin\EarthViewControls.dll</HintPath>
+    </Reference>
+    <Reference Include="EarthViewControls_Designer">
+      <HintPath>..\..\..\..\..\..\SDKS\EV\64bit\20160812\SDK\samples\Bin\EarthViewControls_Designer.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Annotation_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Annotation_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_CacheManager_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_CacheManager_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Chart_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Chart_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Color_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Color_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Core_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Core_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_DataAnalyst_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_DataAnalyst_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_DatabaseUtility_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_DatabaseUtility_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Display_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Display_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Download_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Download_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_DynamicModelLibrary_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_DynamicModelLibrary_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Effect3D_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Effect3D_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_GA_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_GA_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Geometry3D_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Geometry3D_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_GlobeControl_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_GlobeControl_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Graphic_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Graphic_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_IndustryGraphic_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_IndustryGraphic_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_KmlSerializer_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_KmlSerializer_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_LayoutControl_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_LayoutControl_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Locker_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Locker_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_MapControl_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_MapControl_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_MathEngine_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_MathEngine_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_MeshOptimize_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_MeshOptimize_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_NetworkAnalysis_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_NetworkAnalysis_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Plugin_OctreeSceneManager_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Plugin_OctreeSceneManager_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Plugin_ParticleFX_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Plugin_ParticleFX_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_ProjectManager_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_ProjectManager_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_RasterAnalysis_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_RasterAnalysis_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_RasterDataset_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_RasterDataset_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_RTShaderSystem_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_RTShaderSystem_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Spatial2DAtlas_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Spatial2DAtlas_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Spatial2DCarto_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Spatial2DCarto_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Spatial2DDataExchange_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Spatial2DDataExchange_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Spatial2DDisplay_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Spatial2DDisplay_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Spatial2DGeoDatabase_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Spatial2DGeoDatabase_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Spatial2DServer_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Spatial2DServer_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Spatial3DAnalysisObject_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Spatial3DAnalysisObject_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Spatial3DAnalysis_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Spatial3DAnalysis_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Spatial3DCalculator_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Spatial3DCalculator_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Spatial3DDataExchange_CSharpWrapper, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Spatial3DDataExchange_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Spatial3DDataset_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Spatial3DDataset_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Spatial3DEngine_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Spatial3DEngine_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Spatial3DLayer_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Spatial3DLayer_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_SpatialDatabase_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_SpatialDatabase_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_SpatialDisplay_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_SpatialDisplay_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_SpatialIndex_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_SpatialIndex_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_SpatialInterface_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_SpatialInterface_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_SpatialObject_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_SpatialObject_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_SpatialServerClient_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_SpatialServerClient_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_SpatialTheme_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_SpatialTheme_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Spatial_2DProxy_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Spatial_2DProxy_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Spatial_3DProxy_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Spatial_3DProxy_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Spatial_ChartProxy_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Spatial_ChartProxy_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Spatial_FrameWorkProxy_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Spatial_FrameWorkProxy_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Spatial_GUI_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Spatial_GUI_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Spatial_LASConvertProxy_CSharpWrapper, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Spatial_LASConvertProxy_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_Symbol_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_Symbol_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_TileUtility_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_TileUtility_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_VectorCache_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_VectorCache_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_VectorFileParser_CSharpWrapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_VectorFileParser_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_VideoRecordingProxy_CSharpWrapper, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_VideoRecordingProxy_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EV_XldManager_CSharpWrapper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin64\EV_XldManager_CSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\..\..\..\..\SDKS\EV\64bit\20160812\SDK\samples\Bin\EarthViewControls.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

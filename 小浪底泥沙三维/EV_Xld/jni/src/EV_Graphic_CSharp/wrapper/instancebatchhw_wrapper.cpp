@@ -1,0 +1,1637 @@
+/* This file is produced by the P/Invoke AutoWrapper Utility 
+ Copyright (c) 2012 by EarthView Image Inc */
+#include "stableheaders.h"
+#include "graphic/instancebatchhw.h"
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Graphic
+		{
+			typedef char*  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getMovableType_EVString_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW__notifyCurrentCamera_void_CCamera_Callback)(_in EarthView::World::Graphic::CCamera* ref_cam);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getBoundingBox_CAxisAlignedBox_Callback)();
+			typedef Real  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getBoundingRadius_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW__updateRenderQueue_void_CRenderQueue_Callback)(_in EarthView::World::Graphic::CRenderQueue* queue);
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_Callback)(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor);
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_ev_bool_Callback)(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables);
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW__notifyAttached_void_CNode_ev_bool_Callback)(_in EarthView::World::Graphic::CNode* ref_parent, _in ev_bool isTagPoint);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getReceivesShadows_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback)(_in const void* ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out void* point);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback)(_in const void* aabb, _in ev_bool prepareToRenderSelection, _out void* indexVec);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback)(_in const void* sphere, _in ev_bool prepareToRenderSelection, _out void* indexVec);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback)(_in const void* ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out ev_int32& submeshIndex, _out ev_int32& instanceIndex, _out ev_int32& segmentIndex, _out void* point);
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_renderSelection_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_clearSelection_void_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_startEditing_ev_bool_ev_uint32_Callback)(_in ev_uint32 objectIndex);
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_endEditing_void_Callback)();
+			typedef EarthView::World::Graphic::CEditBoundingBox*  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getEditBoundingBox_CEditBoundingBox_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback)(_in ev_uint32 objectIndex, _inout void* matrix);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback)(_in ev_uint32 objectIndex, _in const void* matrix);
+			typedef EarthView::World::Graphic::CInstancedEntity*  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getInstanceEntity_CInstancedEntity_ev_uint32_Callback)(_in ev_uint32 objectIndex);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_trackParentNode_ev_bool_CNode_Callback)(_in EarthView::World::Graphic::CNode* pNode);
+			typedef EarthView::World::Graphic::CNode*  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getTrackingNode_CNode_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_onInstancedEntityStateChanged_void_CInstancedEntity_Callback)(_in EarthView::World::Graphic::CInstancedEntity* instancedEntity);
+			typedef ev_uint64   ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_calculateMaxNumInstances_ev_size_t_CSubMesh_ev_uint16_Callback)(_in const EarthView::World::Graphic::CSubMesh* baseSubMesh, _in ev_uint16 flags);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_build_CRenderOperation_CSubMesh_Callback)(_in const EarthView::World::Graphic::CSubMesh* baseSubMesh);
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_buildFrom_void_CSubMesh_CRenderOperation_Callback)(_in const EarthView::World::Graphic::CSubMesh* baseSubMesh, _in const void* renderOperation);
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW__boundsDirty_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_setStaticAndUpdate_void_ev_bool_Callback)(_in ev_bool bStatic);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_isStatic_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_useBoneWorldMatrices_ev_bool_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getMaterial_CMaterialPtr_Callback)();
+			typedef EarthView::World::Graphic::CTechnique*  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getTechnique_CTechnique_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getRenderOperation_void_CRenderOperation_Callback)(_inout void* op);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_preRender_ev_bool_CSceneManager_CRenderSystem_Callback)(_in EarthView::World::Graphic::CSceneManager* sm, _in EarthView::World::Graphic::CRenderSystem* rsys);
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_postRender_void_CSceneManager_CRenderSystem_Callback)(_in EarthView::World::Graphic::CSceneManager* sm, _in EarthView::World::Graphic::CRenderSystem* rsys);
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getWorldTransforms_void_CMatrix4_Callback)(_in EarthView::World::Spatial::Math::CMatrix4* xform);
+			typedef ev_uint16  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getNumWorldTransforms_ev_uint16_Callback)();
+			typedef Real  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getSquaredViewDepth_Real_CCamera_Callback)(_in const EarthView::World::Graphic::CCamera* cam);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getLights_LightList_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getCastsShadows_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback)(_in const void* constantEntry, _in EarthView::World::Graphic::CGpuProgramParameters* params);
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_setPolygonModeOverrideable_void_ev_bool_Callback)(_in ev_bool override);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getPolygonModeOverrideable_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbient_void_CColourValue_Callback)(_in const void* ambient);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbient_CColourValue_Callback)();
+			typedef bool  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbientEnabled_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbientEnabled_void_ev_bool_Callback)(_in ev_bool enabled);
+			typedef EarthView::World::Graphic::CMovableObject*  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getMovableObject_CMovableObject_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_addListener_void_CRenderableListener_Callback)(_in EarthView::World::Graphic::CRenderable::CRenderableListener* ref_listener);
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_removeListener_void_CRenderableListener_Callback)(_in EarthView::World::Graphic::CRenderable::CRenderableListener* listener);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_existListener_ev_bool_CRenderableListener_Callback)(_in EarthView::World::Graphic::CRenderable::CRenderableListener* listener);
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getListenerCount_ev_uint32_Callback)();
+			typedef EarthView::World::Graphic::CRenderable::CRenderableListener*  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getListener_CRenderableListener_ev_uint32_Callback)(_in ev_uint32 index);
+			typedef EarthView::World::Graphic::CRenderable::CRenderSystemData*  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_getRenderSystemData_CRenderSystemData_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CInstanceBatchHW_setRenderSystemData_void_CRenderSystemData_Callback)(_in EarthView::World::Graphic::CRenderable::CRenderSystemData* ref_val);
+			class CInstanceBatchHWProxy : public EarthView::World::Graphic::CInstanceBatchHW
+			{
+			private:
+				EarthView_World_Graphic_CInstanceBatchHW_getMovableType_EVString_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getMovableType_EVString_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW__notifyCurrentCamera_void_CCamera_Callback* m_EarthView_World_Graphic_CInstanceBatchHW__notifyCurrentCamera_void_CCamera_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getBoundingBox_CAxisAlignedBox_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getBoundingBox_CAxisAlignedBox_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getBoundingRadius_Real_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getBoundingRadius_Real_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW__updateRenderQueue_void_CRenderQueue_Callback* m_EarthView_World_Graphic_CInstanceBatchHW__updateRenderQueue_void_CRenderQueue_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_ev_bool_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_ev_bool_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW__notifyAttached_void_CNode_ev_bool_Callback* m_EarthView_World_Graphic_CInstanceBatchHW__notifyAttached_void_CNode_ev_bool_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getReceivesShadows_ev_bool_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getReceivesShadows_ev_bool_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_renderSelection_void_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_renderSelection_void_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_clearSelection_void_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_clearSelection_void_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_startEditing_ev_bool_ev_uint32_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_startEditing_ev_bool_ev_uint32_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_endEditing_void_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_endEditing_void_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getEditBoundingBox_CEditBoundingBox_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getEditBoundingBox_CEditBoundingBox_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getInstanceEntity_CInstancedEntity_ev_uint32_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getInstanceEntity_CInstancedEntity_ev_uint32_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_trackParentNode_ev_bool_CNode_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_trackParentNode_ev_bool_CNode_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getTrackingNode_CNode_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getTrackingNode_CNode_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_onInstancedEntityStateChanged_void_CInstancedEntity_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_onInstancedEntityStateChanged_void_CInstancedEntity_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_calculateMaxNumInstances_ev_size_t_CSubMesh_ev_uint16_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_calculateMaxNumInstances_ev_size_t_CSubMesh_ev_uint16_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_build_CRenderOperation_CSubMesh_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_build_CRenderOperation_CSubMesh_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_buildFrom_void_CSubMesh_CRenderOperation_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_buildFrom_void_CSubMesh_CRenderOperation_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW__boundsDirty_void_Callback* m_EarthView_World_Graphic_CInstanceBatchHW__boundsDirty_void_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_setStaticAndUpdate_void_ev_bool_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_setStaticAndUpdate_void_ev_bool_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_isStatic_ev_bool_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_isStatic_ev_bool_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_useBoneWorldMatrices_ev_bool_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_useBoneWorldMatrices_ev_bool_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getMaterial_CMaterialPtr_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getMaterial_CMaterialPtr_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getTechnique_CTechnique_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getTechnique_CTechnique_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getRenderOperation_void_CRenderOperation_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getRenderOperation_void_CRenderOperation_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_preRender_ev_bool_CSceneManager_CRenderSystem_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_preRender_ev_bool_CSceneManager_CRenderSystem_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_postRender_void_CSceneManager_CRenderSystem_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_postRender_void_CSceneManager_CRenderSystem_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getWorldTransforms_void_CMatrix4_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getWorldTransforms_void_CMatrix4_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getNumWorldTransforms_ev_uint16_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getNumWorldTransforms_ev_uint16_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getSquaredViewDepth_Real_CCamera_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getSquaredViewDepth_Real_CCamera_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getLights_LightList_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getLights_LightList_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getCastsShadows_ev_bool_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getCastsShadows_ev_bool_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback* m_EarthView_World_Graphic_CInstanceBatchHW__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_setPolygonModeOverrideable_void_ev_bool_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_setPolygonModeOverrideable_void_ev_bool_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getPolygonModeOverrideable_ev_bool_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getPolygonModeOverrideable_ev_bool_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbient_void_CColourValue_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbient_void_CColourValue_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbient_CColourValue_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbient_CColourValue_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbientEnabled_bool_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbientEnabled_bool_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbientEnabled_void_ev_bool_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbientEnabled_void_ev_bool_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getMovableObject_CMovableObject_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getMovableObject_CMovableObject_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_addListener_void_CRenderableListener_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_addListener_void_CRenderableListener_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_removeListener_void_CRenderableListener_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_removeListener_void_CRenderableListener_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_existListener_ev_bool_CRenderableListener_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_existListener_ev_bool_CRenderableListener_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getListenerCount_ev_uint32_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getListenerCount_ev_uint32_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getListener_CRenderableListener_ev_uint32_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getListener_CRenderableListener_ev_uint32_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_getRenderSystemData_CRenderSystemData_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_getRenderSystemData_CRenderSystemData_Callback;
+				EarthView_World_Graphic_CInstanceBatchHW_setRenderSystemData_void_CRenderSystemData_Callback* m_EarthView_World_Graphic_CInstanceBatchHW_setRenderSystemData_void_CRenderSystemData_Callback;
+			public:
+				CInstanceBatchHWProxy(EarthView::World::Core::CNameValuePairList *pList) : CInstanceBatchHW(pList)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getMovableType_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW__notifyCurrentCamera_void_CCamera_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getBoundingBox_CAxisAlignedBox_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getBoundingRadius_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW__updateRenderQueue_void_CRenderQueue_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW__notifyAttached_void_CNode_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getReceivesShadows_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_renderSelection_void_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_clearSelection_void_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_startEditing_ev_bool_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_endEditing_void_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getEditBoundingBox_CEditBoundingBox_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getInstanceEntity_CInstancedEntity_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_trackParentNode_ev_bool_CNode_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getTrackingNode_CNode_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_onInstancedEntityStateChanged_void_CInstancedEntity_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_calculateMaxNumInstances_ev_size_t_CSubMesh_ev_uint16_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_build_CRenderOperation_CSubMesh_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_buildFrom_void_CSubMesh_CRenderOperation_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW__boundsDirty_void_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_setStaticAndUpdate_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_isStatic_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_useBoneWorldMatrices_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getMaterial_CMaterialPtr_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getTechnique_CTechnique_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getRenderOperation_void_CRenderOperation_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_preRender_ev_bool_CSceneManager_CRenderSystem_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_postRender_void_CSceneManager_CRenderSystem_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getWorldTransforms_void_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getNumWorldTransforms_ev_uint16_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getSquaredViewDepth_Real_CCamera_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getLights_LightList_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getCastsShadows_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_setPolygonModeOverrideable_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getPolygonModeOverrideable_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbient_void_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbient_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbientEnabled_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbientEnabled_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getMovableObject_CMovableObject_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_addListener_void_CRenderableListener_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_removeListener_void_CRenderableListener_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_existListener_ev_bool_CRenderableListener_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getListenerCount_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getListener_CRenderableListener_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_getRenderSystemData_CRenderSystemData_Callback = NULL;
+					m_EarthView_World_Graphic_CInstanceBatchHW_setRenderSystemData_void_CRenderSystemData_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getMovableType_EVString(EarthView_World_Graphic_CInstanceBatchHW_getMovableType_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getMovableType_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW__notifyCurrentCamera_void_CCamera(EarthView_World_Graphic_CInstanceBatchHW__notifyCurrentCamera_void_CCamera_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW__notifyCurrentCamera_void_CCamera_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getBoundingBox_CAxisAlignedBox(EarthView_World_Graphic_CInstanceBatchHW_getBoundingBox_CAxisAlignedBox_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getBoundingBox_CAxisAlignedBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getBoundingRadius_Real(EarthView_World_Graphic_CInstanceBatchHW_getBoundingRadius_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getBoundingRadius_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW__updateRenderQueue_void_CRenderQueue(EarthView_World_Graphic_CInstanceBatchHW__updateRenderQueue_void_CRenderQueue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW__updateRenderQueue_void_CRenderQueue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor(EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_ev_bool(EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW__notifyAttached_void_CNode_ev_bool(EarthView_World_Graphic_CInstanceBatchHW__notifyAttached_void_CNode_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW__notifyAttached_void_CNode_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getReceivesShadows_ev_bool(EarthView_World_Graphic_CInstanceBatchHW_getReceivesShadows_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getReceivesShadows_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3(EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector(EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CSphere_ev_bool_IntVector(EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3(EarthView_World_Graphic_CInstanceBatchHW_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_renderSelection_void(EarthView_World_Graphic_CInstanceBatchHW_renderSelection_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_renderSelection_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_clearSelection_void(EarthView_World_Graphic_CInstanceBatchHW_clearSelection_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_clearSelection_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_startEditing_ev_bool_ev_uint32(EarthView_World_Graphic_CInstanceBatchHW_startEditing_ev_bool_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_startEditing_ev_bool_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_endEditing_void(EarthView_World_Graphic_CInstanceBatchHW_endEditing_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_endEditing_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getEditBoundingBox_CEditBoundingBox(EarthView_World_Graphic_CInstanceBatchHW_getEditBoundingBox_CEditBoundingBox_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getEditBoundingBox_CEditBoundingBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(EarthView_World_Graphic_CInstanceBatchHW_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(EarthView_World_Graphic_CInstanceBatchHW_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getInstanceEntity_CInstancedEntity_ev_uint32(EarthView_World_Graphic_CInstanceBatchHW_getInstanceEntity_CInstancedEntity_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getInstanceEntity_CInstancedEntity_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_trackParentNode_ev_bool_CNode(EarthView_World_Graphic_CInstanceBatchHW_trackParentNode_ev_bool_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_trackParentNode_ev_bool_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getTrackingNode_CNode(EarthView_World_Graphic_CInstanceBatchHW_getTrackingNode_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getTrackingNode_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_onInstancedEntityStateChanged_void_CInstancedEntity(EarthView_World_Graphic_CInstanceBatchHW_onInstancedEntityStateChanged_void_CInstancedEntity_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_onInstancedEntityStateChanged_void_CInstancedEntity_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_calculateMaxNumInstances_ev_size_t_CSubMesh_ev_uint16(EarthView_World_Graphic_CInstanceBatchHW_calculateMaxNumInstances_ev_size_t_CSubMesh_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_calculateMaxNumInstances_ev_size_t_CSubMesh_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_build_CRenderOperation_CSubMesh(EarthView_World_Graphic_CInstanceBatchHW_build_CRenderOperation_CSubMesh_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_build_CRenderOperation_CSubMesh_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_buildFrom_void_CSubMesh_CRenderOperation(EarthView_World_Graphic_CInstanceBatchHW_buildFrom_void_CSubMesh_CRenderOperation_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_buildFrom_void_CSubMesh_CRenderOperation_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW__boundsDirty_void(EarthView_World_Graphic_CInstanceBatchHW__boundsDirty_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW__boundsDirty_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_setStaticAndUpdate_void_ev_bool(EarthView_World_Graphic_CInstanceBatchHW_setStaticAndUpdate_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_setStaticAndUpdate_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_isStatic_ev_bool(EarthView_World_Graphic_CInstanceBatchHW_isStatic_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_isStatic_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_useBoneWorldMatrices_ev_bool(EarthView_World_Graphic_CInstanceBatchHW_useBoneWorldMatrices_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_useBoneWorldMatrices_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getMaterial_CMaterialPtr(EarthView_World_Graphic_CInstanceBatchHW_getMaterial_CMaterialPtr_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getMaterial_CMaterialPtr_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getTechnique_CTechnique(EarthView_World_Graphic_CInstanceBatchHW_getTechnique_CTechnique_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getTechnique_CTechnique_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getRenderOperation_void_CRenderOperation(EarthView_World_Graphic_CInstanceBatchHW_getRenderOperation_void_CRenderOperation_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getRenderOperation_void_CRenderOperation_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_preRender_ev_bool_CSceneManager_CRenderSystem(EarthView_World_Graphic_CInstanceBatchHW_preRender_ev_bool_CSceneManager_CRenderSystem_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_preRender_ev_bool_CSceneManager_CRenderSystem_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_postRender_void_CSceneManager_CRenderSystem(EarthView_World_Graphic_CInstanceBatchHW_postRender_void_CSceneManager_CRenderSystem_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_postRender_void_CSceneManager_CRenderSystem_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getWorldTransforms_void_CMatrix4(EarthView_World_Graphic_CInstanceBatchHW_getWorldTransforms_void_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getWorldTransforms_void_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getNumWorldTransforms_ev_uint16(EarthView_World_Graphic_CInstanceBatchHW_getNumWorldTransforms_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getNumWorldTransforms_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getSquaredViewDepth_Real_CCamera(EarthView_World_Graphic_CInstanceBatchHW_getSquaredViewDepth_Real_CCamera_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getSquaredViewDepth_Real_CCamera_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getLights_LightList(EarthView_World_Graphic_CInstanceBatchHW_getLights_LightList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getLights_LightList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getCastsShadows_ev_bool(EarthView_World_Graphic_CInstanceBatchHW_getCastsShadows_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getCastsShadows_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters(EarthView_World_Graphic_CInstanceBatchHW__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_setPolygonModeOverrideable_void_ev_bool(EarthView_World_Graphic_CInstanceBatchHW_setPolygonModeOverrideable_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_setPolygonModeOverrideable_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getPolygonModeOverrideable_ev_bool(EarthView_World_Graphic_CInstanceBatchHW_getPolygonModeOverrideable_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getPolygonModeOverrideable_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbient_void_CColourValue(EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbient_void_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbient_void_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbient_CColourValue(EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbient_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbient_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbientEnabled_bool(EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbientEnabled_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbientEnabled_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbientEnabled_void_ev_bool(EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbientEnabled_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbientEnabled_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getMovableObject_CMovableObject(EarthView_World_Graphic_CInstanceBatchHW_getMovableObject_CMovableObject_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getMovableObject_CMovableObject_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_addListener_void_CRenderableListener(EarthView_World_Graphic_CInstanceBatchHW_addListener_void_CRenderableListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_addListener_void_CRenderableListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_removeListener_void_CRenderableListener(EarthView_World_Graphic_CInstanceBatchHW_removeListener_void_CRenderableListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_removeListener_void_CRenderableListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_existListener_ev_bool_CRenderableListener(EarthView_World_Graphic_CInstanceBatchHW_existListener_ev_bool_CRenderableListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_existListener_ev_bool_CRenderableListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getListenerCount_ev_uint32(EarthView_World_Graphic_CInstanceBatchHW_getListenerCount_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getListenerCount_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getListener_CRenderableListener_ev_uint32(EarthView_World_Graphic_CInstanceBatchHW_getListener_CRenderableListener_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getListener_CRenderableListener_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getRenderSystemData_CRenderSystemData(EarthView_World_Graphic_CInstanceBatchHW_getRenderSystemData_CRenderSystemData_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_getRenderSystemData_CRenderSystemData_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CInstanceBatchHW_setRenderSystemData_void_CRenderSystemData(EarthView_World_Graphic_CInstanceBatchHW_setRenderSystemData_void_CRenderSystemData_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CInstanceBatchHW_setRenderSystemData_void_CRenderSystemData_Callback = pCallback;
+				}
+				virtual ev_size_t calculateMaxNumInstances(_in const EarthView::World::Graphic::CSubMesh* baseSubMesh, _in ev_uint16 flags) const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_calculateMaxNumInstances_ev_size_t_CSubMesh_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						ev_size_t returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_calculateMaxNumInstances_ev_size_t_CSubMesh_ev_uint16_Callback(baseSubMesh, flags);
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::calculateMaxNumInstances(baseSubMesh, flags);
+				}
+				virtual void buildFrom(_in const EarthView::World::Graphic::CSubMesh* baseSubMesh, _in const EarthView::World::Graphic::CRenderOperation& renderOperation)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_buildFrom_void_CSubMesh_CRenderOperation_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW_buildFrom_void_CSubMesh_CRenderOperation_Callback(baseSubMesh, &renderOperation);
+					}
+					else
+						return this->CInstanceBatchHW::buildFrom(baseSubMesh, renderOperation);
+				}
+				virtual void _boundsDirty()
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW__boundsDirty_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW__boundsDirty_void_Callback();
+					}
+					else
+						return this->CInstanceBatchHW::_boundsDirty();
+				}
+				virtual void setStaticAndUpdate(_in ev_bool bStatic)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_setStaticAndUpdate_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW_setStaticAndUpdate_void_ev_bool_Callback(bStatic);
+					}
+					else
+						return this->CInstanceBatchHW::setStaticAndUpdate(bStatic);
+				}
+				virtual ev_bool isStatic() const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_isStatic_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_isStatic_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::isStatic();
+				}
+				virtual void getWorldTransforms(_in EarthView::World::Spatial::Math::CMatrix4* xform) const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getWorldTransforms_void_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW_getWorldTransforms_void_CMatrix4_Callback(xform);
+					}
+					else
+						return this->CInstanceBatchHW::getWorldTransforms(xform);
+				}
+				virtual ev_uint16 getNumWorldTransforms() const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getNumWorldTransforms_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint16 returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_getNumWorldTransforms_ev_uint16_Callback();
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getNumWorldTransforms();
+				}
+				virtual void _updateRenderQueue(_in EarthView::World::Graphic::CRenderQueue* queue)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW__updateRenderQueue_void_CRenderQueue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW__updateRenderQueue_void_CRenderQueue_Callback(queue);
+					}
+					else
+						return this->CInstanceBatchHW::_updateRenderQueue(queue);
+				}
+				virtual void getRenderOperation(_inout EarthView::World::Graphic::CRenderOperation& op)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getRenderOperation_void_CRenderOperation_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW_getRenderOperation_void_CRenderOperation_Callback(&op);
+					}
+					else
+						return this->CInstanceBatchHW::getRenderOperation(op);
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getBoundingBox() const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getBoundingBox_CAxisAlignedBox_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CInstanceBatchHW_getBoundingBox_CAxisAlignedBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getBoundingBox();
+				}
+				virtual ev_bool trackParentNode(_in EarthView::World::Graphic::CNode* pNode)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_trackParentNode_ev_bool_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_trackParentNode_ev_bool_CNode_Callback(pNode);
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::trackParentNode(pNode);
+				}
+				virtual EarthView::World::Graphic::CNode* getTrackingNode() const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getTrackingNode_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CNode* returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_getTrackingNode_CNode_Callback();
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getTrackingNode();
+				}
+				virtual void onInstancedEntityStateChanged(_in EarthView::World::Graphic::CInstancedEntity* instancedEntity)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_onInstancedEntityStateChanged_void_CInstancedEntity_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW_onInstancedEntityStateChanged_void_CInstancedEntity_Callback(instancedEntity);
+					}
+					else
+						return this->CInstanceBatchHW::onInstancedEntityStateChanged(instancedEntity);
+				}
+				virtual EVString getMovableType() const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getMovableType_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_getMovableType_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getMovableType();
+				}
+				virtual void _notifyCurrentCamera(_in EarthView::World::Graphic::CCamera* ref_cam)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW__notifyCurrentCamera_void_CCamera_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW__notifyCurrentCamera_void_CCamera_Callback(ref_cam);
+					}
+					else
+						return this->CInstanceBatchHW::_notifyCurrentCamera(ref_cam);
+				}
+				virtual Real getBoundingRadius() const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getBoundingRadius_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_getBoundingRadius_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getBoundingRadius();
+				}
+				virtual void visitRenderables(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_Callback(visitor);
+					}
+					else
+						return this->CInstanceBatchHW::visitRenderables(visitor);
+				}
+				virtual void visitRenderables(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_ev_bool_Callback(visitor, debugRenderables);
+					}
+					else
+						return this->CInstanceBatchHW::visitRenderables(visitor, debugRenderables);
+				}
+				virtual void _notifyAttached(_in EarthView::World::Graphic::CNode* ref_parent, _in ev_bool isTagPoint)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW__notifyAttached_void_CNode_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW__notifyAttached_void_CNode_ev_bool_Callback(ref_parent, isTagPoint);
+					}
+					else
+						return this->CInstanceBatchHW::_notifyAttached(ref_parent, isTagPoint);
+				}
+				virtual ev_bool preRender(_in EarthView::World::Graphic::CSceneManager* sm, _in EarthView::World::Graphic::CRenderSystem* rsys)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_preRender_ev_bool_CSceneManager_CRenderSystem_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_preRender_ev_bool_CSceneManager_CRenderSystem_Callback(sm, rsys);
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::preRender(sm, rsys);
+				}
+				virtual void postRender(_in EarthView::World::Graphic::CSceneManager* sm, _in EarthView::World::Graphic::CRenderSystem* rsys)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_postRender_void_CSceneManager_CRenderSystem_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW_postRender_void_CSceneManager_CRenderSystem_Callback(sm, rsys);
+					}
+					else
+						return this->CInstanceBatchHW::postRender(sm, rsys);
+				}
+				virtual ev_bool getReceivesShadows()
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getReceivesShadows_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_getReceivesShadows_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getReceivesShadows();
+				}
+				virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CRay& ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out EarthView::World::Spatial::Math::CVector3& point)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback(&ray, viewport, prepareToRenderSelection, objIndex, &point);
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::selectBy(ray, viewport, prepareToRenderSelection, objIndex, point);
+				}
+				virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CAxisAlignedBox& aabb, _in ev_bool prepareToRenderSelection, _out EarthView::World::Core::IntVector& indexVec)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback(&aabb, prepareToRenderSelection, &indexVec);
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::selectBy(aabb, prepareToRenderSelection, indexVec);
+				}
+				virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CSphere& sphere, _in ev_bool prepareToRenderSelection, _out EarthView::World::Core::IntVector& indexVec)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback(&sphere, prepareToRenderSelection, &indexVec);
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::selectBy(sphere, prepareToRenderSelection, indexVec);
+				}
+				virtual ev_bool selectComponentBy(_in const EarthView::World::Spatial::Math::CRay& ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out ev_int32& submeshIndex, _out ev_int32& instanceIndex, _out ev_int32& segmentIndex, _out EarthView::World::Spatial::Math::CVector3& point)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback(&ray, viewport, prepareToRenderSelection, objIndex, submeshIndex, instanceIndex, segmentIndex, &point);
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::selectComponentBy(ray, viewport, prepareToRenderSelection, objIndex, submeshIndex, instanceIndex, segmentIndex, point);
+				}
+				virtual void renderSelection()
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_renderSelection_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW_renderSelection_void_Callback();
+					}
+					else
+						return this->CInstanceBatchHW::renderSelection();
+				}
+				virtual void clearSelection()
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_clearSelection_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW_clearSelection_void_Callback();
+					}
+					else
+						return this->CInstanceBatchHW::clearSelection();
+				}
+				virtual ev_bool startEditing(_in ev_uint32 objectIndex)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_startEditing_ev_bool_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_startEditing_ev_bool_ev_uint32_Callback(objectIndex);
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::startEditing(objectIndex);
+				}
+				virtual void endEditing()
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_endEditing_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW_endEditing_void_Callback();
+					}
+					else
+						return this->CInstanceBatchHW::endEditing();
+				}
+				virtual EarthView::World::Graphic::CEditBoundingBox* getEditBoundingBox()
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getEditBoundingBox_CEditBoundingBox_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CEditBoundingBox* returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_getEditBoundingBox_CEditBoundingBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getEditBoundingBox();
+				}
+				virtual ev_bool getSelectedObjectWorldMatrix(_in ev_uint32 objectIndex, _inout EarthView::World::Spatial::Math::CMatrix4& matrix)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback(objectIndex, &matrix);
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getSelectedObjectWorldMatrix(objectIndex, matrix);
+				}
+				virtual ev_bool setSelectedObjectWorldMatrix(_in ev_uint32 objectIndex, _in const EarthView::World::Spatial::Math::CMatrix4& matrix)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback(objectIndex, &matrix);
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::setSelectedObjectWorldMatrix(objectIndex, matrix);
+				}
+				virtual EarthView::World::Graphic::CInstancedEntity* getInstanceEntity(_in ev_uint32 objectIndex)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getInstanceEntity_CInstancedEntity_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CInstancedEntity* returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_getInstanceEntity_CInstancedEntity_ev_uint32_Callback(objectIndex);
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getInstanceEntity(objectIndex);
+				}
+				virtual EarthView::World::Graphic::CMovableObject* getMovableObject() const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getMovableObject_CMovableObject_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CMovableObject* returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_getMovableObject_CMovableObject_Callback();
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getMovableObject();
+				}
+				virtual EarthView::World::Graphic::CRenderOperation build(_in const EarthView::World::Graphic::CSubMesh* baseSubMesh)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_build_CRenderOperation_CSubMesh_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CRenderOperation returnValue = *(EarthView::World::Graphic::CRenderOperation*)m_EarthView_World_Graphic_CInstanceBatchHW_build_CRenderOperation_CSubMesh_Callback(baseSubMesh);
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::build(baseSubMesh);
+				}
+				virtual ev_bool useBoneWorldMatrices() const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_useBoneWorldMatrices_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_useBoneWorldMatrices_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::useBoneWorldMatrices();
+				}
+				virtual const EarthView::World::Graphic::CMaterialPtr& getMaterial() const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getMaterial_CMaterialPtr_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CMaterialPtr& returnValue = *(EarthView::World::Graphic::CMaterialPtr*)m_EarthView_World_Graphic_CInstanceBatchHW_getMaterial_CMaterialPtr_Callback();
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getMaterial();
+				}
+				virtual Real getSquaredViewDepth(_in const EarthView::World::Graphic::CCamera* cam) const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getSquaredViewDepth_Real_CCamera_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_getSquaredViewDepth_Real_CCamera_Callback(cam);
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getSquaredViewDepth(cam);
+				}
+				virtual const EarthView::World::Graphic::LightList& getLights() const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getLights_LightList_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::LightList& returnValue = *(EarthView::World::Graphic::LightList*)m_EarthView_World_Graphic_CInstanceBatchHW_getLights_LightList_Callback();
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getLights();
+				}
+				virtual EarthView::World::Graphic::CTechnique* getTechnique() const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getTechnique_CTechnique_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CTechnique* returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_getTechnique_CTechnique_Callback();
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getTechnique();
+				}
+				virtual ev_bool getCastsShadows() const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getCastsShadows_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_getCastsShadows_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getCastsShadows();
+				}
+				virtual void _updateCustomGpuParameter(_in const EarthView::World::Graphic::CGpuProgramParameters::CAutoConstantEntry& constantEntry, _in EarthView::World::Graphic::CGpuProgramParameters* params) const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback(&constantEntry, params);
+					}
+					else
+						return this->CInstanceBatchHW::_updateCustomGpuParameter(constantEntry, params);
+				}
+				virtual void setPolygonModeOverrideable(_in ev_bool override)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_setPolygonModeOverrideable_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW_setPolygonModeOverrideable_void_ev_bool_Callback(override);
+					}
+					else
+						return this->CInstanceBatchHW::setPolygonModeOverrideable(override);
+				}
+				virtual ev_bool getPolygonModeOverrideable() const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getPolygonModeOverrideable_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_getPolygonModeOverrideable_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getPolygonModeOverrideable();
+				}
+				virtual void setCustomAmbient(_in const EarthView::World::Graphic::CColourValue& ambient)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbient_void_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbient_void_CColourValue_Callback(&ambient);
+					}
+					else
+						return this->CInstanceBatchHW::setCustomAmbient(ambient);
+				}
+				virtual const EarthView::World::Graphic::CColourValue& getCustomAmbient() const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbient_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CColourValue& returnValue = *(EarthView::World::Graphic::CColourValue*)m_EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbient_CColourValue_Callback();
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getCustomAmbient();
+				}
+				virtual bool getCustomAmbientEnabled() const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbientEnabled_bool_Callback != NULL && this->isCustomExtend())
+					{
+						bool returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbientEnabled_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getCustomAmbientEnabled();
+				}
+				virtual void setCustomAmbientEnabled(_in ev_bool enabled)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbientEnabled_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbientEnabled_void_ev_bool_Callback(enabled);
+					}
+					else
+						return this->CInstanceBatchHW::setCustomAmbientEnabled(enabled);
+				}
+				virtual void addListener(_in EarthView::World::Graphic::CRenderable::CRenderableListener* ref_listener)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_addListener_void_CRenderableListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW_addListener_void_CRenderableListener_Callback(ref_listener);
+					}
+					else
+						return this->CInstanceBatchHW::addListener(ref_listener);
+				}
+				virtual void removeListener(_in EarthView::World::Graphic::CRenderable::CRenderableListener* listener)
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_removeListener_void_CRenderableListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW_removeListener_void_CRenderableListener_Callback(listener);
+					}
+					else
+						return this->CInstanceBatchHW::removeListener(listener);
+				}
+				virtual ev_bool existListener(_in EarthView::World::Graphic::CRenderable::CRenderableListener* listener) const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_existListener_ev_bool_CRenderableListener_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_existListener_ev_bool_CRenderableListener_Callback(listener);
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::existListener(listener);
+				}
+				virtual ev_uint32 getListenerCount() const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getListenerCount_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_getListenerCount_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getListenerCount();
+				}
+				virtual EarthView::World::Graphic::CRenderable::CRenderableListener* getListener(_in ev_uint32 index) const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getListener_CRenderableListener_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CRenderable::CRenderableListener* returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_getListener_CRenderableListener_ev_uint32_Callback(index);
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getListener(index);
+				}
+				virtual EarthView::World::Graphic::CRenderable::CRenderSystemData* getRenderSystemData() const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_getRenderSystemData_CRenderSystemData_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CRenderable::CRenderSystemData* returnValue = m_EarthView_World_Graphic_CInstanceBatchHW_getRenderSystemData_CRenderSystemData_Callback();
+						return returnValue;
+					}
+					else
+						return this->CInstanceBatchHW::getRenderSystemData();
+				}
+				virtual void setRenderSystemData(_in EarthView::World::Graphic::CRenderable::CRenderSystemData* ref_val) const
+				{
+					if(m_EarthView_World_Graphic_CInstanceBatchHW_setRenderSystemData_void_CRenderSystemData_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CInstanceBatchHW_setRenderSystemData_void_CRenderSystemData_Callback(ref_val);
+					}
+					else
+						return this->CInstanceBatchHW::setRenderSystemData(ref_val);
+				}
+			};
+			REGISTER_FACTORY_CLASS(CInstanceBatchHWProxy);
+			extern "C" EV_DLL_EXPORT  ev_uint64   _stdcall EarthView_World_Graphic_CInstanceBatchHW_calculateMaxNumInstances_ev_size_t_CSubMesh_ev_uint16(void *pObjectXXXX, _in const EarthView::World::Graphic::CSubMesh* baseSubMesh, _in ev_uint16 flags )
+			{
+				const EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				if (dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*)ptrNativeObject) != NULL)
+				{
+					ev_size_t objXXXX = ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::calculateMaxNumInstances(baseSubMesh, flags);
+					return objXXXX;
+				}
+				else
+				{
+					ev_size_t objXXXX = ptrNativeObject->calculateMaxNumInstances(baseSubMesh, flags);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_calculateMaxNumInstances_ev_size_t_CSubMesh_ev_uint16( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_calculateMaxNumInstances_ev_size_t_CSubMesh_ev_uint16_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_calculateMaxNumInstances_ev_size_t_CSubMesh_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64   _stdcall EarthView_World_Graphic_CInstanceBatchHW_calculateMaxNumInstances_ev_size_t_CSubMesh_ev_uint16_NoVirtual(void *pObjectXXXX, _in const EarthView::World::Graphic::CSubMesh* baseSubMesh, _in ev_uint16 flags )
+			{
+				const EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				ev_size_t objXXXX = ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::calculateMaxNumInstances(baseSubMesh, flags);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CInstanceBatchHW_buildFrom_void_CSubMesh_CRenderOperation(void *pObjectXXXX, _in const EarthView::World::Graphic::CSubMesh* baseSubMesh, _in const void* renderOperation )
+			{
+				EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				if (dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::buildFrom(baseSubMesh, *(EarthView::World::Graphic::CRenderOperation*)renderOperation);
+				else
+					ptrNativeObject->buildFrom(baseSubMesh, *(EarthView::World::Graphic::CRenderOperation*)renderOperation);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_buildFrom_void_CSubMesh_CRenderOperation( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_buildFrom_void_CSubMesh_CRenderOperation_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_buildFrom_void_CSubMesh_CRenderOperation(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CInstanceBatchHW_buildFrom_void_CSubMesh_CRenderOperation_NoVirtual(void *pObjectXXXX, _in const EarthView::World::Graphic::CSubMesh* baseSubMesh, _in const void* renderOperation )
+			{
+				EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::buildFrom(baseSubMesh, *(EarthView::World::Graphic::CRenderOperation*)renderOperation);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CInstanceBatchHW__boundsDirty_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				if (dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::_boundsDirty();
+				else
+					ptrNativeObject->_boundsDirty();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW__boundsDirty_void( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW__boundsDirty_void_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW__boundsDirty_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CInstanceBatchHW__boundsDirty_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::_boundsDirty();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CInstanceBatchHW_setStaticAndUpdate_void_ev_bool(void *pObjectXXXX, _in ev_bool bStatic )
+			{
+				EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				if (dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::setStaticAndUpdate(bStatic);
+				else
+					ptrNativeObject->setStaticAndUpdate(bStatic);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_setStaticAndUpdate_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_setStaticAndUpdate_void_ev_bool_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_setStaticAndUpdate_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CInstanceBatchHW_setStaticAndUpdate_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool bStatic )
+			{
+				EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::setStaticAndUpdate(bStatic);
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CInstanceBatchHW_isStatic_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				if (dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::isStatic();
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->isStatic();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_isStatic_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_isStatic_ev_bool_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_isStatic_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CInstanceBatchHW_isStatic_ev_bool_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::isStatic();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CInstanceBatchHW_getWorldTransforms_void_CMatrix4(void *pObjectXXXX, _in EarthView::World::Spatial::Math::CMatrix4* xform )
+			{
+				const EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				if (dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::getWorldTransforms(xform);
+				else
+					ptrNativeObject->getWorldTransforms(xform);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getWorldTransforms_void_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getWorldTransforms_void_CMatrix4_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getWorldTransforms_void_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CInstanceBatchHW_getWorldTransforms_void_CMatrix4_NoVirtual(void *pObjectXXXX, _in EarthView::World::Spatial::Math::CMatrix4* xform )
+			{
+				const EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::getWorldTransforms(xform);
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint16  _stdcall EarthView_World_Graphic_CInstanceBatchHW_getNumWorldTransforms_ev_uint16(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				if (dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*)ptrNativeObject) != NULL)
+				{
+					ev_uint16 objXXXX = ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::getNumWorldTransforms();
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint16 objXXXX = ptrNativeObject->getNumWorldTransforms();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getNumWorldTransforms_ev_uint16( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getNumWorldTransforms_ev_uint16_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getNumWorldTransforms_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint16  _stdcall EarthView_World_Graphic_CInstanceBatchHW_getNumWorldTransforms_ev_uint16_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				ev_uint16 objXXXX = ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::getNumWorldTransforms();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CInstanceBatchHW__updateRenderQueue_void_CRenderQueue(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderQueue* queue )
+			{
+				EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				if (dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::_updateRenderQueue(queue);
+				else
+					ptrNativeObject->_updateRenderQueue(queue);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW__updateRenderQueue_void_CRenderQueue( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW__updateRenderQueue_void_CRenderQueue_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW__updateRenderQueue_void_CRenderQueue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CInstanceBatchHW__updateRenderQueue_void_CRenderQueue_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderQueue* queue )
+			{
+				EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::_updateRenderQueue(queue);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CInstanceBatchHW_getRenderOperation_void_CRenderOperation(void *pObjectXXXX, _inout void* op )
+			{
+				EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				if (dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::getRenderOperation(*(EarthView::World::Graphic::CRenderOperation*)op);
+				else
+					ptrNativeObject->getRenderOperation(*(EarthView::World::Graphic::CRenderOperation*)op);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getRenderOperation_void_CRenderOperation( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getRenderOperation_void_CRenderOperation_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getRenderOperation_void_CRenderOperation(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CInstanceBatchHW_getRenderOperation_void_CRenderOperation_NoVirtual(void *pObjectXXXX, _inout void* op )
+			{
+				EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::getRenderOperation(*(EarthView::World::Graphic::CRenderOperation*)op);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CInstanceBatchHW_prepareMatrixBuffer_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				ptrNativeObject->prepareMatrixBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CInstanceBatchHW_getBoundingBox_CAxisAlignedBox(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				if (dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Spatial::Math::CAxisAlignedBox& objXXXX = ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::getBoundingBox();
+					const EarthView::World::Spatial::Math::CAxisAlignedBox *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Spatial::Math::CAxisAlignedBox& objXXXX = ptrNativeObject->getBoundingBox();
+					const EarthView::World::Spatial::Math::CAxisAlignedBox *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getBoundingBox_CAxisAlignedBox( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getBoundingBox_CAxisAlignedBox_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getBoundingBox_CAxisAlignedBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CInstanceBatchHW_getBoundingBox_CAxisAlignedBox_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CAxisAlignedBox& objXXXX = ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::getBoundingBox();
+				const EarthView::World::Spatial::Math::CAxisAlignedBox *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CInstanceBatchHW_trackParentNode_ev_bool_CNode(void *pObjectXXXX, _in EarthView::World::Graphic::CNode* pNode )
+			{
+				EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				if (dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::trackParentNode(pNode);
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->trackParentNode(pNode);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_trackParentNode_ev_bool_CNode( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_trackParentNode_ev_bool_CNode_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_trackParentNode_ev_bool_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CInstanceBatchHW_trackParentNode_ev_bool_CNode_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CNode* pNode )
+			{
+				EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::trackParentNode(pNode);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CNode*  _stdcall EarthView_World_Graphic_CInstanceBatchHW_getTrackingNode_CNode(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				if (dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::CNode* objXXXX = ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::getTrackingNode();
+					return objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::CNode* objXXXX = ptrNativeObject->getTrackingNode();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getTrackingNode_CNode( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getTrackingNode_CNode_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getTrackingNode_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CNode*  _stdcall EarthView_World_Graphic_CInstanceBatchHW_getTrackingNode_CNode_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				EarthView::World::Graphic::CNode* objXXXX = ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::getTrackingNode();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CInstanceBatchHW_onInstancedEntityStateChanged_void_CInstancedEntity(void *pObjectXXXX, _in EarthView::World::Graphic::CInstancedEntity* instancedEntity )
+			{
+				EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				if (dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::onInstancedEntityStateChanged(instancedEntity);
+				else
+					ptrNativeObject->onInstancedEntityStateChanged(instancedEntity);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_onInstancedEntityStateChanged_void_CInstancedEntity( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_onInstancedEntityStateChanged_void_CInstancedEntity_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_onInstancedEntityStateChanged_void_CInstancedEntity(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CInstanceBatchHW_onInstancedEntityStateChanged_void_CInstancedEntity_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CInstancedEntity* instancedEntity )
+			{
+				EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CInstanceBatchHW::onInstancedEntityStateChanged(instancedEntity);
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CInstanceBatchHW_linkEntity_ev_bool_CEntity(void *pObjectXXXX, _in EarthView::World::Graphic::CEntity* pEntity )
+			{
+				EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->linkEntity(pEntity);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CInstanceBatchHW_isAsyncUpdatingBuffer_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->isAsyncUpdatingBuffer();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CInstanceBatchHW_setAsyncUpdateBuffer_void_ev_bool(void *pObjectXXXX, _in ev_bool async )
+			{
+				EarthView::World::Graphic::CInstanceBatchHW* ptrNativeObject = (EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX;
+				ptrNativeObject->setAsyncUpdateBuffer(async);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getMovableType_EVString( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getMovableType_EVString_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getMovableType_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW__notifyCurrentCamera_void_CCamera( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW__notifyCurrentCamera_void_CCamera_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW__notifyCurrentCamera_void_CCamera(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getBoundingRadius_Real( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getBoundingRadius_Real_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getBoundingRadius_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_ev_bool_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_visitRenderables_void_CVisitor_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW__notifyAttached_void_CNode_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW__notifyAttached_void_CNode_ev_bool_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW__notifyAttached_void_CNode_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getReceivesShadows_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getReceivesShadows_ev_bool_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getReceivesShadows_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CSphere_ev_bool_IntVector( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_selectBy_ev_bool_CSphere_ev_bool_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_renderSelection_void( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_renderSelection_void_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_renderSelection_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_clearSelection_void( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_clearSelection_void_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_clearSelection_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_startEditing_ev_bool_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_startEditing_ev_bool_ev_uint32_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_startEditing_ev_bool_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_endEditing_void( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_endEditing_void_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_endEditing_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getEditBoundingBox_CEditBoundingBox( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getEditBoundingBox_CEditBoundingBox_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getEditBoundingBox_CEditBoundingBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getInstanceEntity_CInstancedEntity_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getInstanceEntity_CInstancedEntity_ev_uint32_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getInstanceEntity_CInstancedEntity_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_build_CRenderOperation_CSubMesh( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_build_CRenderOperation_CSubMesh_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_build_CRenderOperation_CSubMesh(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_useBoneWorldMatrices_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_useBoneWorldMatrices_ev_bool_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_useBoneWorldMatrices_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getMaterial_CMaterialPtr( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getMaterial_CMaterialPtr_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getMaterial_CMaterialPtr(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getTechnique_CTechnique( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getTechnique_CTechnique_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getTechnique_CTechnique(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_preRender_ev_bool_CSceneManager_CRenderSystem( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_preRender_ev_bool_CSceneManager_CRenderSystem_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_preRender_ev_bool_CSceneManager_CRenderSystem(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_postRender_void_CSceneManager_CRenderSystem( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_postRender_void_CSceneManager_CRenderSystem_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_postRender_void_CSceneManager_CRenderSystem(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getSquaredViewDepth_Real_CCamera( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getSquaredViewDepth_Real_CCamera_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getSquaredViewDepth_Real_CCamera(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getLights_LightList( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getLights_LightList_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getLights_LightList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getCastsShadows_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getCastsShadows_ev_bool_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getCastsShadows_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_setPolygonModeOverrideable_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_setPolygonModeOverrideable_void_ev_bool_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_setPolygonModeOverrideable_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getPolygonModeOverrideable_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getPolygonModeOverrideable_ev_bool_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getPolygonModeOverrideable_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbient_void_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbient_void_CColourValue_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbient_void_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbient_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbient_CColourValue_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbient_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbientEnabled_bool( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbientEnabled_bool_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getCustomAmbientEnabled_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbientEnabled_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbientEnabled_void_ev_bool_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_setCustomAmbientEnabled_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getMovableObject_CMovableObject( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getMovableObject_CMovableObject_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getMovableObject_CMovableObject(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_addListener_void_CRenderableListener( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_addListener_void_CRenderableListener_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_addListener_void_CRenderableListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_removeListener_void_CRenderableListener( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_removeListener_void_CRenderableListener_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_removeListener_void_CRenderableListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_existListener_ev_bool_CRenderableListener( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_existListener_ev_bool_CRenderableListener_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_existListener_ev_bool_CRenderableListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getListenerCount_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getListenerCount_ev_uint32_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getListenerCount_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getListener_CRenderableListener_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getListener_CRenderableListener_ev_uint32_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getListener_CRenderableListener_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_getRenderSystemData_CRenderSystemData( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_getRenderSystemData_CRenderSystemData_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_getRenderSystemData_CRenderSystemData(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CInstanceBatchHW_setRenderSystemData_void_CRenderSystemData( void *pObjectXXXX, EarthView_World_Graphic_CInstanceBatchHW_setRenderSystemData_void_CRenderSystemData_Callback* pCallback )
+			{
+				CInstanceBatchHWProxy* ptr = dynamic_cast<CInstanceBatchHWProxy*>((EarthView::World::Graphic::CInstanceBatchHW*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CInstanceBatchHW_setRenderSystemData_void_CRenderSystemData(pCallback);
+				}
+			}
+		}
+	}
+}

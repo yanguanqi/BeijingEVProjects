@@ -1,0 +1,104 @@
+package global;
+
+import com.earthview.world.core.GlobalClassFactoryMap;
+
+public class EV_Symbol_ClassFactory
+{
+	public static void registerAll()
+	{
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CArrowMarkerSymbol", new com.earthview.world.spatial.display.ArrowMarkerSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCArrowMarkerSymbolProxy", new com.earthview.world.spatial.display.ArrowMarkerSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CBarStatistics3DSymbol", new com.earthview.world.spatial.display.BarStatistics3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCBarStatistics3DSymbolProxy", new com.earthview.world.spatial.display.BarStatistics3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CBarStatisticsSymbol", new com.earthview.world.spatial.display.BarStatisticsSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCBarStatisticsSymbolProxy", new com.earthview.world.spatial.display.BarStatisticsSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CBillboard3DSymbol", new com.earthview.world.spatial.display.Billboard3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCBillboard3DSymbolProxy", new com.earthview.world.spatial.display.Billboard3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CCartographicLineSymbol", new com.earthview.world.spatial.display.CartographicLineSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCCartographicLineSymbolProxy", new com.earthview.world.spatial.display.CartographicLineSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CFillSymbol", new com.earthview.world.spatial.display.FillSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCFillSymbolProxy", new com.earthview.world.spatial.display.FillSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CFontMarkerSymbol", new com.earthview.world.spatial.display.FontMarkerSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCFontMarkerSymbolProxy", new com.earthview.world.spatial.display.FontMarkerSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CFormattedTextSymbol", new com.earthview.world.spatial.display.FormattedTextSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCFormattedTextSymbolProxy", new com.earthview.world.spatial.display.FormattedTextSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CFresnelSurface3DSymbol", new com.earthview.world.spatial.display.FresnelSurface3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCFresnelSurface3DSymbolProxy", new com.earthview.world.spatial.display.FresnelSurface3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CGradientFillSymbol", new com.earthview.world.spatial.display.GradientFillSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCGradientFillSymbolProxy", new com.earthview.world.spatial.display.GradientFillSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CIcon3DSymbol", new com.earthview.world.spatial.display.Icon3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCIcon3DSymbolProxy", new com.earthview.world.spatial.display.Icon3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CLineFillSymbol", new com.earthview.world.spatial.display.LineFillSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCLineFillSymbolProxy", new com.earthview.world.spatial.display.LineFillSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CLineSymbol", new com.earthview.world.spatial.display.LineSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCLineSymbolProxy", new com.earthview.world.spatial.display.LineSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CMarkerFillSymbol", new com.earthview.world.spatial.display.MarkerFillSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCMarkerFillSymbolProxy", new com.earthview.world.spatial.display.MarkerFillSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CMarkerSymbol", new com.earthview.world.spatial.display.MarkerSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCMarkerSymbolProxy", new com.earthview.world.spatial.display.MarkerSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CModel3DSymbol", new com.earthview.world.spatial.display.Model3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCModel3DSymbolProxy", new com.earthview.world.spatial.display.Model3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CMultiFillSymbol", new com.earthview.world.spatial.display.MultiFillSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCMultiFillSymbolProxy", new com.earthview.world.spatial.display.MultiFillSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CMultiLineSymbol", new com.earthview.world.spatial.display.MultiLineSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCMultiLineSymbolProxy", new com.earthview.world.spatial.display.MultiLineSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CMultiMarkerSymbol", new com.earthview.world.spatial.display.MultiMarkerSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCMultiMarkerSymbolProxy", new com.earthview.world.spatial.display.MultiMarkerSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CMultiSymbol", new com.earthview.world.spatial.display.MultiSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCMultiSymbolProxy", new com.earthview.world.spatial.display.MultiSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CPhoto3DSymbol", new com.earthview.world.spatial.display.Photo3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCPhoto3DSymbolProxy", new com.earthview.world.spatial.display.Photo3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CPictureFillSymbol", new com.earthview.world.spatial.display.PictureFillSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCPictureFillSymbolProxy", new com.earthview.world.spatial.display.PictureFillSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CPictureMarkerSymbol", new com.earthview.world.spatial.display.PictureMarkerSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCPictureMarkerSymbolProxy", new com.earthview.world.spatial.display.PictureMarkerSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CPieStatistics3DSymbol", new com.earthview.world.spatial.display.PieStatistics3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCPieStatistics3DSymbolProxy", new com.earthview.world.spatial.display.PieStatistics3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CPieStatisticsSymbol", new com.earthview.world.spatial.display.PieStatisticsSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCPieStatisticsSymbolProxy", new com.earthview.world.spatial.display.PieStatisticsSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CSimpleFill3DSymbol", new com.earthview.world.spatial.display.SimpleFill3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCSimpleFill3DSymbolProxy", new com.earthview.world.spatial.display.SimpleFill3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CSimpleFillSymbol", new com.earthview.world.spatial.display.SimpleFillSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCSimpleFillSymbolProxy", new com.earthview.world.spatial.display.SimpleFillSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::KeyValuePair", new com.earthview.world.spatial.display.KeyValuePairClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CSimpleLine3DSymbol", new com.earthview.world.spatial.display.SimpleLine3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCSimpleLine3DSymbolProxy", new com.earthview.world.spatial.display.SimpleLine3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CSimpleLineSymbol", new com.earthview.world.spatial.display.SimpleLineSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCSimpleLineSymbolProxy", new com.earthview.world.spatial.display.SimpleLineSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CSimpleMarkerSymbol", new com.earthview.world.spatial.display.SimpleMarkerSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCSimpleMarkerSymbolProxy", new com.earthview.world.spatial.display.SimpleMarkerSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CSimpleTextSymbol", new com.earthview.world.spatial.display.SimpleTextSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCSimpleTextSymbolProxy", new com.earthview.world.spatial.display.SimpleTextSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CStackedStatistics3DSymbol", new com.earthview.world.spatial.display.StackedStatistics3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCStackedStatistics3DSymbolProxy", new com.earthview.world.spatial.display.StackedStatistics3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CStackedStatisticsSymbol", new com.earthview.world.spatial.display.StackedStatisticsSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCStackedStatisticsSymbolProxy", new com.earthview.world.spatial.display.StackedStatisticsSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::TagStatistics3DSymbol", new com.earthview.world.spatial.display.TagStatistics3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CStatistics3DSymbol", new com.earthview.world.spatial.display.Statistics3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCStatistics3DSymbolProxy", new com.earthview.world.spatial.display.Statistics3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CStatisticsSymbol", new com.earthview.world.spatial.display.StatisticsSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCStatisticsSymbolProxy", new com.earthview.world.spatial.display.StatisticsSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CSVGMarkerSymbol", new com.earthview.world.spatial.display.SvgmarkersymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCSVGMarkerSymbolProxy", new com.earthview.world.spatial.display.SvgmarkersymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CSymbol", new com.earthview.world.spatial.display.SymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCSymbolProxy", new com.earthview.world.spatial.display.SymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CTextureInfo", new com.earthview.world.spatial.display.TextureInfoClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CSymbol3D", new com.earthview.world.spatial.display.Symbol3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCSymbol3DProxy", new com.earthview.world.spatial.display.Symbol3DClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CSymbolDisplay", new com.earthview.world.spatial.display.SymbolDisplayClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCSymbolDisplayProxy", new com.earthview.world.spatial.display.SymbolDisplayClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CSymbolFactory", new com.earthview.world.spatial.display.SymbolFactoryClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCSymbolFactoryProxy", new com.earthview.world.spatial.display.SymbolFactoryClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CSymbolLayer", new com.earthview.world.spatial.display.SymbolLayerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCSymbolLayerProxy", new com.earthview.world.spatial.display.SymbolLayerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CSymbolRenderer", new com.earthview.world.spatial.display.SymbolRendererClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCSymbolRendererProxy", new com.earthview.world.spatial.display.SymbolRendererClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CTextSymbol", new com.earthview.world.spatial.display.TextSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCTextSymbolProxy", new com.earthview.world.spatial.display.TextSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CTextureFill3DSymbol", new com.earthview.world.spatial.display.TextureFill3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCTextureFill3DSymbolProxy", new com.earthview.world.spatial.display.TextureFill3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CTextureLine3DSymbol", new com.earthview.world.spatial.display.TextureLine3DSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCTextureLine3DSymbolProxy", new com.earthview.world.spatial.display.TextureLine3DSymbolClassFactory());
+	}
+}
+

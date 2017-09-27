@@ -1,0 +1,2532 @@
+/* This file is produced by the P/Invoke AutoWrapper Utility 
+ Copyright (c) 2012 by EarthView Image Inc */
+#include "stableheaders.h"
+#include "graphic/renderwindow.h"
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Graphic
+		{
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_create_void_EVString_ev_uint32_ev_uint32_ev_bool_CommonStringPairList_Callback)(_in char*& name, _in ev_uint32 width, _in ev_uint32 height, _in ev_bool fullScreen, _in const EarthView::World::Core::CommonStringPairList* miscParams);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_setFullscreen_void_ev_bool_ev_uint32_ev_uint32_Callback)(_in ev_bool fullScreen, _in ev_uint32 width, _in ev_uint32 height);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_destroy_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_resize_void_ev_uint32_ev_uint32_Callback)(_in ev_uint32 width, _in ev_uint32 height);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_windowMovedOrResized_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_reposition_void_ev_int32_ev_int32_Callback)(_in ev_int32 left, _in ev_int32 top);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRenderWindow_isVisible_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_setVisible_void_ev_bool_Callback)(_in ev_bool visible);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRenderWindow_isHidden_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_setHidden_void_ev_bool_Callback)(_in ev_bool hidden);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_setVSyncEnabled_void_ev_bool_Callback)(_in ev_bool vsync);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRenderWindow_isVSyncEnabled_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_setVSyncInterval_void_ev_uint32_Callback)(_in ev_uint32 interval);
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CRenderWindow_getVSyncInterval_ev_uint32_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRenderWindow_isClosed_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRenderWindow_isFullScreen_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_ev_int32_ev_int32_Callback)(_inout ev_uint32& width, _inout ev_uint32& height, _inout ev_uint32& colourDepth, _inout ev_int32& left, _inout ev_int32& top);
+			typedef const char*  ( _stdcall EarthView_World_Graphic_CRenderWindow_getName_EVString_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_Callback)(_out ev_uint32& width, _out ev_uint32& height, _out ev_uint32& colourDepth);
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CRenderWindow_getWidth_ev_uint32_Callback)();
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CRenderWindow_getHeight_ev_uint32_Callback)();
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CRenderWindow_getColourDepth_ev_uint32_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRenderWindow_attachDepthBuffer_ev_bool_CDepthBuffer_Callback)(_in EarthView::World::Graphic::CDepthBuffer* ref_depthBuffer);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_detachDepthBuffer_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow__detachDepthBuffer_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_update_void_ev_bool_Callback)(_in ev_bool swapBuffers);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_update_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_swapBuffers_void_ev_bool_Callback)(_in ev_bool waitForVSync);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_swapBuffers_void_Callback)();
+			typedef EarthView::World::Graphic::CViewport*  ( _stdcall EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_ev_real32_Callback)(_in EarthView::World::Graphic::CCamera* ref_cam, _in ev_int32 ZOrder, _in ev_real32 left, _in ev_real32 top, _in ev_real32 width, _in ev_real32 height);
+			typedef EarthView::World::Graphic::CViewport*  ( _stdcall EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_Callback)(_in EarthView::World::Graphic::CCamera* ref_cam, _in ev_int32 ZOrder, _in ev_real32 left, _in ev_real32 top, _in ev_real32 width);
+			typedef EarthView::World::Graphic::CViewport*  ( _stdcall EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_Callback)(_in EarthView::World::Graphic::CCamera* ref_cam, _in ev_int32 ZOrder, _in ev_real32 left, _in ev_real32 top);
+			typedef EarthView::World::Graphic::CViewport*  ( _stdcall EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_Callback)(_in EarthView::World::Graphic::CCamera* ref_cam, _in ev_int32 ZOrder, _in ev_real32 left);
+			typedef EarthView::World::Graphic::CViewport*  ( _stdcall EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_Callback)(_in EarthView::World::Graphic::CCamera* ref_cam, _in ev_int32 ZOrder);
+			typedef EarthView::World::Graphic::CViewport*  ( _stdcall EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_Callback)(_in EarthView::World::Graphic::CCamera* ref_cam);
+			typedef ev_uint16  ( _stdcall EarthView_World_Graphic_CRenderWindow_getNumViewports_ev_uint16_Callback)();
+			typedef EarthView::World::Graphic::CViewport*  ( _stdcall EarthView_World_Graphic_CRenderWindow_getViewport_CViewport_ev_uint16_Callback)(_in ev_uint16 index);
+			typedef EarthView::World::Graphic::CViewport*  ( _stdcall EarthView_World_Graphic_CRenderWindow_getViewportByZOrder_CViewport_ev_int32_Callback)(_in ev_int32 ZOrder);
+			typedef bool  ( _stdcall EarthView_World_Graphic_CRenderWindow_hasViewportWithZOrder_bool_ev_int32_Callback)(_in ev_int32 ZOrder);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_removeViewport_void_ev_int32_Callback)(_in ev_int32 ZOrder);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_removeAllViewports_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_getStatistics_void_ev_real32_ev_real32_ev_real32_ev_real32_Callback)(_inout ev_real32& lastFPS, _inout ev_real32& avgFPS, _inout ev_real32& bestFPS, _inout ev_real32& worstFPS);
+			typedef const EarthView::World::Graphic::CRenderTarget::FrameStats&  ( _stdcall EarthView_World_Graphic_CRenderWindow_getStatistics_FrameStats_Callback)();
+			typedef ev_real32  ( _stdcall EarthView_World_Graphic_CRenderWindow_getLastFPS_ev_real32_Callback)();
+			typedef ev_real32  ( _stdcall EarthView_World_Graphic_CRenderWindow_getAverageFPS_ev_real32_Callback)();
+			typedef ev_real32  ( _stdcall EarthView_World_Graphic_CRenderWindow_getBestFPS_ev_real32_Callback)();
+			typedef ev_real32  ( _stdcall EarthView_World_Graphic_CRenderWindow_getWorstFPS_ev_real32_Callback)();
+			typedef ev_real32  ( _stdcall EarthView_World_Graphic_CRenderWindow_getBestFrameTime_ev_real32_Callback)();
+			typedef ev_real32  ( _stdcall EarthView_World_Graphic_CRenderWindow_getWorstFrameTime_ev_real32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_resetStatistics_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_getCustomAttribute_void_EVString_void_Callback)(_in char*& name, _inout void* pData);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_addListener_void_CRenderTargetListener_Callback)(_in EarthView::World::Graphic::CRenderTargetListener* ref_listener);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_removeListener_void_CRenderTargetListener_Callback)(_in EarthView::World::Graphic::CRenderTargetListener* listener);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_removeAllListeners_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_setPriority_void_ev_uchar_Callback)(_in ev_uchar priority);
+			typedef ev_uchar  ( _stdcall EarthView_World_Graphic_CRenderWindow_getPriority_ev_uchar_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRenderWindow_isActive_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_setActive_void_ev_bool_Callback)(_in ev_bool state);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_setAutoUpdated_void_ev_bool_Callback)(_in ev_bool autoupdate);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRenderWindow_isAutoUpdated_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_FrameBuffer_Callback)(_in const void* dst, _in int buffer);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_Callback)(_in const void* dst);
+			typedef int  ( _stdcall EarthView_World_Graphic_CRenderWindow_suggestPixelFormat_PixelFormat_Callback)();
+			typedef char*  ( _stdcall EarthView_World_Graphic_CRenderWindow_writeContentsToTimestampedFile_EVString_EVString_EVString_Callback)(_in char*& filenamePrefix, _in char*& filenameSuffix);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRenderWindow_requiresTextureFlipping_ev_bool_Callback)();
+			typedef ev_uint64   ( _stdcall EarthView_World_Graphic_CRenderWindow_getTriangleCount_ev_size_t_Callback)();
+			typedef ev_uint64   ( _stdcall EarthView_World_Graphic_CRenderWindow_getBatchCount_ev_size_t_Callback)();
+			typedef ev_uint64   ( _stdcall EarthView_World_Graphic_CRenderWindow_getVertexCount_ev_size_t_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow__notifyCameraRemoved_void_CCamera_Callback)(_in const EarthView::World::Graphic::CCamera* cam);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRenderWindow_isPrimary_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CRenderWindow_isHardwareGammaEnabled_ev_bool_Callback)();
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CRenderWindow_getFSAA_ev_uint32_Callback)();
+			typedef char*  ( _stdcall EarthView_World_Graphic_CRenderWindow_getFSAAHint_EVString_Callback)();
+			typedef EarthView::World::Graphic::CRenderTarget::Impl*  ( _stdcall EarthView_World_Graphic_CRenderWindow__getImpl_Impl_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow__beginUpdate_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_ev_bool_Callback)(_in ev_int32 zorder, _in ev_bool updateStatistics);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_Callback)(_in ev_int32 zorder);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_ev_bool_Callback)(_in EarthView::World::Graphic::CViewport* viewport, _in ev_bool updateStatistics);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_Callback)(_in EarthView::World::Graphic::CViewport* viewport);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_ev_bool_Callback)(_in ev_bool updateStatistics);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow__endUpdate_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_firePreUpdate_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_firePostUpdate_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_fireViewportPreUpdate_void_CViewport_Callback)(_in EarthView::World::Graphic::CViewport* vp);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_fireViewportPostUpdate_void_CViewport_Callback)(_in EarthView::World::Graphic::CViewport* vp);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_fireViewportAdded_void_CViewport_Callback)(_in EarthView::World::Graphic::CViewport* vp);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_fireViewportRemoved_void_CViewport_Callback)(_in EarthView::World::Graphic::CViewport* vp);
+			typedef void  ( _stdcall EarthView_World_Graphic_CRenderWindow_updateImpl_void_Callback)();
+			class CRenderWindowProxy : public EarthView::World::Graphic::CRenderWindow
+			{
+			private:
+				EarthView_World_Graphic_CRenderWindow_create_void_EVString_ev_uint32_ev_uint32_ev_bool_CommonStringPairList_Callback* m_EarthView_World_Graphic_CRenderWindow_create_void_EVString_ev_uint32_ev_uint32_ev_bool_CommonStringPairList_Callback;
+				EarthView_World_Graphic_CRenderWindow_setFullscreen_void_ev_bool_ev_uint32_ev_uint32_Callback* m_EarthView_World_Graphic_CRenderWindow_setFullscreen_void_ev_bool_ev_uint32_ev_uint32_Callback;
+				EarthView_World_Graphic_CRenderWindow_destroy_void_Callback* m_EarthView_World_Graphic_CRenderWindow_destroy_void_Callback;
+				EarthView_World_Graphic_CRenderWindow_resize_void_ev_uint32_ev_uint32_Callback* m_EarthView_World_Graphic_CRenderWindow_resize_void_ev_uint32_ev_uint32_Callback;
+				EarthView_World_Graphic_CRenderWindow_windowMovedOrResized_void_Callback* m_EarthView_World_Graphic_CRenderWindow_windowMovedOrResized_void_Callback;
+				EarthView_World_Graphic_CRenderWindow_reposition_void_ev_int32_ev_int32_Callback* m_EarthView_World_Graphic_CRenderWindow_reposition_void_ev_int32_ev_int32_Callback;
+				EarthView_World_Graphic_CRenderWindow_isVisible_ev_bool_Callback* m_EarthView_World_Graphic_CRenderWindow_isVisible_ev_bool_Callback;
+				EarthView_World_Graphic_CRenderWindow_setVisible_void_ev_bool_Callback* m_EarthView_World_Graphic_CRenderWindow_setVisible_void_ev_bool_Callback;
+				EarthView_World_Graphic_CRenderWindow_isHidden_ev_bool_Callback* m_EarthView_World_Graphic_CRenderWindow_isHidden_ev_bool_Callback;
+				EarthView_World_Graphic_CRenderWindow_setHidden_void_ev_bool_Callback* m_EarthView_World_Graphic_CRenderWindow_setHidden_void_ev_bool_Callback;
+				EarthView_World_Graphic_CRenderWindow_setVSyncEnabled_void_ev_bool_Callback* m_EarthView_World_Graphic_CRenderWindow_setVSyncEnabled_void_ev_bool_Callback;
+				EarthView_World_Graphic_CRenderWindow_isVSyncEnabled_ev_bool_Callback* m_EarthView_World_Graphic_CRenderWindow_isVSyncEnabled_ev_bool_Callback;
+				EarthView_World_Graphic_CRenderWindow_setVSyncInterval_void_ev_uint32_Callback* m_EarthView_World_Graphic_CRenderWindow_setVSyncInterval_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CRenderWindow_getVSyncInterval_ev_uint32_Callback* m_EarthView_World_Graphic_CRenderWindow_getVSyncInterval_ev_uint32_Callback;
+				EarthView_World_Graphic_CRenderWindow_isClosed_ev_bool_Callback* m_EarthView_World_Graphic_CRenderWindow_isClosed_ev_bool_Callback;
+				EarthView_World_Graphic_CRenderWindow_isFullScreen_ev_bool_Callback* m_EarthView_World_Graphic_CRenderWindow_isFullScreen_ev_bool_Callback;
+				EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_ev_int32_ev_int32_Callback* m_EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_ev_int32_ev_int32_Callback;
+				EarthView_World_Graphic_CRenderWindow_getName_EVString_Callback* m_EarthView_World_Graphic_CRenderWindow_getName_EVString_Callback;
+				EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_Callback* m_EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_Callback;
+				EarthView_World_Graphic_CRenderWindow_getWidth_ev_uint32_Callback* m_EarthView_World_Graphic_CRenderWindow_getWidth_ev_uint32_Callback;
+				EarthView_World_Graphic_CRenderWindow_getHeight_ev_uint32_Callback* m_EarthView_World_Graphic_CRenderWindow_getHeight_ev_uint32_Callback;
+				EarthView_World_Graphic_CRenderWindow_getColourDepth_ev_uint32_Callback* m_EarthView_World_Graphic_CRenderWindow_getColourDepth_ev_uint32_Callback;
+				EarthView_World_Graphic_CRenderWindow_attachDepthBuffer_ev_bool_CDepthBuffer_Callback* m_EarthView_World_Graphic_CRenderWindow_attachDepthBuffer_ev_bool_CDepthBuffer_Callback;
+				EarthView_World_Graphic_CRenderWindow_detachDepthBuffer_void_Callback* m_EarthView_World_Graphic_CRenderWindow_detachDepthBuffer_void_Callback;
+				EarthView_World_Graphic_CRenderWindow__detachDepthBuffer_void_Callback* m_EarthView_World_Graphic_CRenderWindow__detachDepthBuffer_void_Callback;
+				EarthView_World_Graphic_CRenderWindow_update_void_ev_bool_Callback* m_EarthView_World_Graphic_CRenderWindow_update_void_ev_bool_Callback;
+				EarthView_World_Graphic_CRenderWindow_update_void_Callback* m_EarthView_World_Graphic_CRenderWindow_update_void_Callback;
+				EarthView_World_Graphic_CRenderWindow_swapBuffers_void_ev_bool_Callback* m_EarthView_World_Graphic_CRenderWindow_swapBuffers_void_ev_bool_Callback;
+				EarthView_World_Graphic_CRenderWindow_swapBuffers_void_Callback* m_EarthView_World_Graphic_CRenderWindow_swapBuffers_void_Callback;
+				EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_ev_real32_Callback* m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_ev_real32_Callback;
+				EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_Callback* m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_Callback;
+				EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_Callback* m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_Callback;
+				EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_Callback* m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_Callback;
+				EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_Callback* m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_Callback;
+				EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_Callback* m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_Callback;
+				EarthView_World_Graphic_CRenderWindow_getNumViewports_ev_uint16_Callback* m_EarthView_World_Graphic_CRenderWindow_getNumViewports_ev_uint16_Callback;
+				EarthView_World_Graphic_CRenderWindow_getViewport_CViewport_ev_uint16_Callback* m_EarthView_World_Graphic_CRenderWindow_getViewport_CViewport_ev_uint16_Callback;
+				EarthView_World_Graphic_CRenderWindow_getViewportByZOrder_CViewport_ev_int32_Callback* m_EarthView_World_Graphic_CRenderWindow_getViewportByZOrder_CViewport_ev_int32_Callback;
+				EarthView_World_Graphic_CRenderWindow_hasViewportWithZOrder_bool_ev_int32_Callback* m_EarthView_World_Graphic_CRenderWindow_hasViewportWithZOrder_bool_ev_int32_Callback;
+				EarthView_World_Graphic_CRenderWindow_removeViewport_void_ev_int32_Callback* m_EarthView_World_Graphic_CRenderWindow_removeViewport_void_ev_int32_Callback;
+				EarthView_World_Graphic_CRenderWindow_removeAllViewports_void_Callback* m_EarthView_World_Graphic_CRenderWindow_removeAllViewports_void_Callback;
+				EarthView_World_Graphic_CRenderWindow_getStatistics_void_ev_real32_ev_real32_ev_real32_ev_real32_Callback* m_EarthView_World_Graphic_CRenderWindow_getStatistics_void_ev_real32_ev_real32_ev_real32_ev_real32_Callback;
+				EarthView_World_Graphic_CRenderWindow_getStatistics_FrameStats_Callback* m_EarthView_World_Graphic_CRenderWindow_getStatistics_FrameStats_Callback;
+				EarthView_World_Graphic_CRenderWindow_getLastFPS_ev_real32_Callback* m_EarthView_World_Graphic_CRenderWindow_getLastFPS_ev_real32_Callback;
+				EarthView_World_Graphic_CRenderWindow_getAverageFPS_ev_real32_Callback* m_EarthView_World_Graphic_CRenderWindow_getAverageFPS_ev_real32_Callback;
+				EarthView_World_Graphic_CRenderWindow_getBestFPS_ev_real32_Callback* m_EarthView_World_Graphic_CRenderWindow_getBestFPS_ev_real32_Callback;
+				EarthView_World_Graphic_CRenderWindow_getWorstFPS_ev_real32_Callback* m_EarthView_World_Graphic_CRenderWindow_getWorstFPS_ev_real32_Callback;
+				EarthView_World_Graphic_CRenderWindow_getBestFrameTime_ev_real32_Callback* m_EarthView_World_Graphic_CRenderWindow_getBestFrameTime_ev_real32_Callback;
+				EarthView_World_Graphic_CRenderWindow_getWorstFrameTime_ev_real32_Callback* m_EarthView_World_Graphic_CRenderWindow_getWorstFrameTime_ev_real32_Callback;
+				EarthView_World_Graphic_CRenderWindow_resetStatistics_void_Callback* m_EarthView_World_Graphic_CRenderWindow_resetStatistics_void_Callback;
+				EarthView_World_Graphic_CRenderWindow_getCustomAttribute_void_EVString_void_Callback* m_EarthView_World_Graphic_CRenderWindow_getCustomAttribute_void_EVString_void_Callback;
+				EarthView_World_Graphic_CRenderWindow_addListener_void_CRenderTargetListener_Callback* m_EarthView_World_Graphic_CRenderWindow_addListener_void_CRenderTargetListener_Callback;
+				EarthView_World_Graphic_CRenderWindow_removeListener_void_CRenderTargetListener_Callback* m_EarthView_World_Graphic_CRenderWindow_removeListener_void_CRenderTargetListener_Callback;
+				EarthView_World_Graphic_CRenderWindow_removeAllListeners_void_Callback* m_EarthView_World_Graphic_CRenderWindow_removeAllListeners_void_Callback;
+				EarthView_World_Graphic_CRenderWindow_setPriority_void_ev_uchar_Callback* m_EarthView_World_Graphic_CRenderWindow_setPriority_void_ev_uchar_Callback;
+				EarthView_World_Graphic_CRenderWindow_getPriority_ev_uchar_Callback* m_EarthView_World_Graphic_CRenderWindow_getPriority_ev_uchar_Callback;
+				EarthView_World_Graphic_CRenderWindow_isActive_ev_bool_Callback* m_EarthView_World_Graphic_CRenderWindow_isActive_ev_bool_Callback;
+				EarthView_World_Graphic_CRenderWindow_setActive_void_ev_bool_Callback* m_EarthView_World_Graphic_CRenderWindow_setActive_void_ev_bool_Callback;
+				EarthView_World_Graphic_CRenderWindow_setAutoUpdated_void_ev_bool_Callback* m_EarthView_World_Graphic_CRenderWindow_setAutoUpdated_void_ev_bool_Callback;
+				EarthView_World_Graphic_CRenderWindow_isAutoUpdated_ev_bool_Callback* m_EarthView_World_Graphic_CRenderWindow_isAutoUpdated_ev_bool_Callback;
+				EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_FrameBuffer_Callback* m_EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_FrameBuffer_Callback;
+				EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_Callback* m_EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_Callback;
+				EarthView_World_Graphic_CRenderWindow_suggestPixelFormat_PixelFormat_Callback* m_EarthView_World_Graphic_CRenderWindow_suggestPixelFormat_PixelFormat_Callback;
+				EarthView_World_Graphic_CRenderWindow_writeContentsToTimestampedFile_EVString_EVString_EVString_Callback* m_EarthView_World_Graphic_CRenderWindow_writeContentsToTimestampedFile_EVString_EVString_EVString_Callback;
+				EarthView_World_Graphic_CRenderWindow_requiresTextureFlipping_ev_bool_Callback* m_EarthView_World_Graphic_CRenderWindow_requiresTextureFlipping_ev_bool_Callback;
+				EarthView_World_Graphic_CRenderWindow_getTriangleCount_ev_size_t_Callback* m_EarthView_World_Graphic_CRenderWindow_getTriangleCount_ev_size_t_Callback;
+				EarthView_World_Graphic_CRenderWindow_getBatchCount_ev_size_t_Callback* m_EarthView_World_Graphic_CRenderWindow_getBatchCount_ev_size_t_Callback;
+				EarthView_World_Graphic_CRenderWindow_getVertexCount_ev_size_t_Callback* m_EarthView_World_Graphic_CRenderWindow_getVertexCount_ev_size_t_Callback;
+				EarthView_World_Graphic_CRenderWindow__notifyCameraRemoved_void_CCamera_Callback* m_EarthView_World_Graphic_CRenderWindow__notifyCameraRemoved_void_CCamera_Callback;
+				EarthView_World_Graphic_CRenderWindow_isPrimary_ev_bool_Callback* m_EarthView_World_Graphic_CRenderWindow_isPrimary_ev_bool_Callback;
+				EarthView_World_Graphic_CRenderWindow_isHardwareGammaEnabled_ev_bool_Callback* m_EarthView_World_Graphic_CRenderWindow_isHardwareGammaEnabled_ev_bool_Callback;
+				EarthView_World_Graphic_CRenderWindow_getFSAA_ev_uint32_Callback* m_EarthView_World_Graphic_CRenderWindow_getFSAA_ev_uint32_Callback;
+				EarthView_World_Graphic_CRenderWindow_getFSAAHint_EVString_Callback* m_EarthView_World_Graphic_CRenderWindow_getFSAAHint_EVString_Callback;
+				EarthView_World_Graphic_CRenderWindow__getImpl_Impl_Callback* m_EarthView_World_Graphic_CRenderWindow__getImpl_Impl_Callback;
+				EarthView_World_Graphic_CRenderWindow__beginUpdate_void_Callback* m_EarthView_World_Graphic_CRenderWindow__beginUpdate_void_Callback;
+				EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_ev_bool_Callback* m_EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_ev_bool_Callback;
+				EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_Callback* m_EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_Callback;
+				EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_ev_bool_Callback* m_EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_ev_bool_Callback;
+				EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_Callback* m_EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_Callback;
+				EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_ev_bool_Callback* m_EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_ev_bool_Callback;
+				EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_Callback* m_EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_Callback;
+				EarthView_World_Graphic_CRenderWindow__endUpdate_void_Callback* m_EarthView_World_Graphic_CRenderWindow__endUpdate_void_Callback;
+				EarthView_World_Graphic_CRenderWindow_firePreUpdate_void_Callback* m_EarthView_World_Graphic_CRenderWindow_firePreUpdate_void_Callback;
+				EarthView_World_Graphic_CRenderWindow_firePostUpdate_void_Callback* m_EarthView_World_Graphic_CRenderWindow_firePostUpdate_void_Callback;
+				EarthView_World_Graphic_CRenderWindow_fireViewportPreUpdate_void_CViewport_Callback* m_EarthView_World_Graphic_CRenderWindow_fireViewportPreUpdate_void_CViewport_Callback;
+				EarthView_World_Graphic_CRenderWindow_fireViewportPostUpdate_void_CViewport_Callback* m_EarthView_World_Graphic_CRenderWindow_fireViewportPostUpdate_void_CViewport_Callback;
+				EarthView_World_Graphic_CRenderWindow_fireViewportAdded_void_CViewport_Callback* m_EarthView_World_Graphic_CRenderWindow_fireViewportAdded_void_CViewport_Callback;
+				EarthView_World_Graphic_CRenderWindow_fireViewportRemoved_void_CViewport_Callback* m_EarthView_World_Graphic_CRenderWindow_fireViewportRemoved_void_CViewport_Callback;
+				EarthView_World_Graphic_CRenderWindow_updateImpl_void_Callback* m_EarthView_World_Graphic_CRenderWindow_updateImpl_void_Callback;
+			public:
+				CRenderWindowProxy(EarthView::World::Core::CNameValuePairList *pList) : CRenderWindow(pList)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_create_void_EVString_ev_uint32_ev_uint32_ev_bool_CommonStringPairList_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_setFullscreen_void_ev_bool_ev_uint32_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_destroy_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_resize_void_ev_uint32_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_windowMovedOrResized_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_reposition_void_ev_int32_ev_int32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_isVisible_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_setVisible_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_isHidden_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_setHidden_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_setVSyncEnabled_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_isVSyncEnabled_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_setVSyncInterval_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getVSyncInterval_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_isClosed_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_isFullScreen_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_ev_int32_ev_int32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getName_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getWidth_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getHeight_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getColourDepth_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_attachDepthBuffer_ev_bool_CDepthBuffer_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_detachDepthBuffer_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow__detachDepthBuffer_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_update_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_update_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_swapBuffers_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_swapBuffers_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_ev_real32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getNumViewports_ev_uint16_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getViewport_CViewport_ev_uint16_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getViewportByZOrder_CViewport_ev_int32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_hasViewportWithZOrder_bool_ev_int32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_removeViewport_void_ev_int32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_removeAllViewports_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getStatistics_void_ev_real32_ev_real32_ev_real32_ev_real32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getStatistics_FrameStats_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getLastFPS_ev_real32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getAverageFPS_ev_real32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getBestFPS_ev_real32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getWorstFPS_ev_real32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getBestFrameTime_ev_real32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getWorstFrameTime_ev_real32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_resetStatistics_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getCustomAttribute_void_EVString_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_addListener_void_CRenderTargetListener_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_removeListener_void_CRenderTargetListener_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_removeAllListeners_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_setPriority_void_ev_uchar_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getPriority_ev_uchar_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_isActive_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_setActive_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_setAutoUpdated_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_isAutoUpdated_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_FrameBuffer_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_suggestPixelFormat_PixelFormat_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_writeContentsToTimestampedFile_EVString_EVString_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_requiresTextureFlipping_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getTriangleCount_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getBatchCount_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getVertexCount_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow__notifyCameraRemoved_void_CCamera_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_isPrimary_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_isHardwareGammaEnabled_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getFSAA_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_getFSAAHint_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow__getImpl_Impl_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow__beginUpdate_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow__endUpdate_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_firePreUpdate_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_firePostUpdate_void_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_fireViewportPreUpdate_void_CViewport_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_fireViewportPostUpdate_void_CViewport_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_fireViewportAdded_void_CViewport_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_fireViewportRemoved_void_CViewport_Callback = NULL;
+					m_EarthView_World_Graphic_CRenderWindow_updateImpl_void_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_create_void_EVString_ev_uint32_ev_uint32_ev_bool_CommonStringPairList(EarthView_World_Graphic_CRenderWindow_create_void_EVString_ev_uint32_ev_uint32_ev_bool_CommonStringPairList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_create_void_EVString_ev_uint32_ev_uint32_ev_bool_CommonStringPairList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_setFullscreen_void_ev_bool_ev_uint32_ev_uint32(EarthView_World_Graphic_CRenderWindow_setFullscreen_void_ev_bool_ev_uint32_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_setFullscreen_void_ev_bool_ev_uint32_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_destroy_void(EarthView_World_Graphic_CRenderWindow_destroy_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_destroy_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_resize_void_ev_uint32_ev_uint32(EarthView_World_Graphic_CRenderWindow_resize_void_ev_uint32_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_resize_void_ev_uint32_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_windowMovedOrResized_void(EarthView_World_Graphic_CRenderWindow_windowMovedOrResized_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_windowMovedOrResized_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_reposition_void_ev_int32_ev_int32(EarthView_World_Graphic_CRenderWindow_reposition_void_ev_int32_ev_int32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_reposition_void_ev_int32_ev_int32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_isVisible_ev_bool(EarthView_World_Graphic_CRenderWindow_isVisible_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_isVisible_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_setVisible_void_ev_bool(EarthView_World_Graphic_CRenderWindow_setVisible_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_setVisible_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_isHidden_ev_bool(EarthView_World_Graphic_CRenderWindow_isHidden_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_isHidden_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_setHidden_void_ev_bool(EarthView_World_Graphic_CRenderWindow_setHidden_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_setHidden_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_setVSyncEnabled_void_ev_bool(EarthView_World_Graphic_CRenderWindow_setVSyncEnabled_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_setVSyncEnabled_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_isVSyncEnabled_ev_bool(EarthView_World_Graphic_CRenderWindow_isVSyncEnabled_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_isVSyncEnabled_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_setVSyncInterval_void_ev_uint32(EarthView_World_Graphic_CRenderWindow_setVSyncInterval_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_setVSyncInterval_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getVSyncInterval_ev_uint32(EarthView_World_Graphic_CRenderWindow_getVSyncInterval_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getVSyncInterval_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_isClosed_ev_bool(EarthView_World_Graphic_CRenderWindow_isClosed_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_isClosed_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_isFullScreen_ev_bool(EarthView_World_Graphic_CRenderWindow_isFullScreen_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_isFullScreen_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_ev_int32_ev_int32(EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_ev_int32_ev_int32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_ev_int32_ev_int32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getName_EVString(EarthView_World_Graphic_CRenderWindow_getName_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getName_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32(EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getWidth_ev_uint32(EarthView_World_Graphic_CRenderWindow_getWidth_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getWidth_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getHeight_ev_uint32(EarthView_World_Graphic_CRenderWindow_getHeight_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getHeight_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getColourDepth_ev_uint32(EarthView_World_Graphic_CRenderWindow_getColourDepth_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getColourDepth_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_attachDepthBuffer_ev_bool_CDepthBuffer(EarthView_World_Graphic_CRenderWindow_attachDepthBuffer_ev_bool_CDepthBuffer_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_attachDepthBuffer_ev_bool_CDepthBuffer_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_detachDepthBuffer_void(EarthView_World_Graphic_CRenderWindow_detachDepthBuffer_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_detachDepthBuffer_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow__detachDepthBuffer_void(EarthView_World_Graphic_CRenderWindow__detachDepthBuffer_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow__detachDepthBuffer_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_update_void_ev_bool(EarthView_World_Graphic_CRenderWindow_update_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_update_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_update_void(EarthView_World_Graphic_CRenderWindow_update_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_update_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_swapBuffers_void_ev_bool(EarthView_World_Graphic_CRenderWindow_swapBuffers_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_swapBuffers_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_swapBuffers_void(EarthView_World_Graphic_CRenderWindow_swapBuffers_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_swapBuffers_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_ev_real32(EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_ev_real32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_ev_real32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32(EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32(EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32(EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32(EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera(EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getNumViewports_ev_uint16(EarthView_World_Graphic_CRenderWindow_getNumViewports_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getNumViewports_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getViewport_CViewport_ev_uint16(EarthView_World_Graphic_CRenderWindow_getViewport_CViewport_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getViewport_CViewport_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getViewportByZOrder_CViewport_ev_int32(EarthView_World_Graphic_CRenderWindow_getViewportByZOrder_CViewport_ev_int32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getViewportByZOrder_CViewport_ev_int32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_hasViewportWithZOrder_bool_ev_int32(EarthView_World_Graphic_CRenderWindow_hasViewportWithZOrder_bool_ev_int32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_hasViewportWithZOrder_bool_ev_int32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_removeViewport_void_ev_int32(EarthView_World_Graphic_CRenderWindow_removeViewport_void_ev_int32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_removeViewport_void_ev_int32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_removeAllViewports_void(EarthView_World_Graphic_CRenderWindow_removeAllViewports_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_removeAllViewports_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getStatistics_void_ev_real32_ev_real32_ev_real32_ev_real32(EarthView_World_Graphic_CRenderWindow_getStatistics_void_ev_real32_ev_real32_ev_real32_ev_real32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getStatistics_void_ev_real32_ev_real32_ev_real32_ev_real32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getStatistics_FrameStats(EarthView_World_Graphic_CRenderWindow_getStatistics_FrameStats_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getStatistics_FrameStats_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getLastFPS_ev_real32(EarthView_World_Graphic_CRenderWindow_getLastFPS_ev_real32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getLastFPS_ev_real32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getAverageFPS_ev_real32(EarthView_World_Graphic_CRenderWindow_getAverageFPS_ev_real32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getAverageFPS_ev_real32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getBestFPS_ev_real32(EarthView_World_Graphic_CRenderWindow_getBestFPS_ev_real32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getBestFPS_ev_real32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getWorstFPS_ev_real32(EarthView_World_Graphic_CRenderWindow_getWorstFPS_ev_real32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getWorstFPS_ev_real32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getBestFrameTime_ev_real32(EarthView_World_Graphic_CRenderWindow_getBestFrameTime_ev_real32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getBestFrameTime_ev_real32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getWorstFrameTime_ev_real32(EarthView_World_Graphic_CRenderWindow_getWorstFrameTime_ev_real32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getWorstFrameTime_ev_real32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_resetStatistics_void(EarthView_World_Graphic_CRenderWindow_resetStatistics_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_resetStatistics_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getCustomAttribute_void_EVString_void(EarthView_World_Graphic_CRenderWindow_getCustomAttribute_void_EVString_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getCustomAttribute_void_EVString_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_addListener_void_CRenderTargetListener(EarthView_World_Graphic_CRenderWindow_addListener_void_CRenderTargetListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_addListener_void_CRenderTargetListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_removeListener_void_CRenderTargetListener(EarthView_World_Graphic_CRenderWindow_removeListener_void_CRenderTargetListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_removeListener_void_CRenderTargetListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_removeAllListeners_void(EarthView_World_Graphic_CRenderWindow_removeAllListeners_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_removeAllListeners_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_setPriority_void_ev_uchar(EarthView_World_Graphic_CRenderWindow_setPriority_void_ev_uchar_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_setPriority_void_ev_uchar_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getPriority_ev_uchar(EarthView_World_Graphic_CRenderWindow_getPriority_ev_uchar_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getPriority_ev_uchar_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_isActive_ev_bool(EarthView_World_Graphic_CRenderWindow_isActive_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_isActive_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_setActive_void_ev_bool(EarthView_World_Graphic_CRenderWindow_setActive_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_setActive_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_setAutoUpdated_void_ev_bool(EarthView_World_Graphic_CRenderWindow_setAutoUpdated_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_setAutoUpdated_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_isAutoUpdated_ev_bool(EarthView_World_Graphic_CRenderWindow_isAutoUpdated_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_isAutoUpdated_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_FrameBuffer(EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_FrameBuffer_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_FrameBuffer_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox(EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_suggestPixelFormat_PixelFormat(EarthView_World_Graphic_CRenderWindow_suggestPixelFormat_PixelFormat_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_suggestPixelFormat_PixelFormat_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_writeContentsToTimestampedFile_EVString_EVString_EVString(EarthView_World_Graphic_CRenderWindow_writeContentsToTimestampedFile_EVString_EVString_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_writeContentsToTimestampedFile_EVString_EVString_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_requiresTextureFlipping_ev_bool(EarthView_World_Graphic_CRenderWindow_requiresTextureFlipping_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_requiresTextureFlipping_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getTriangleCount_ev_size_t(EarthView_World_Graphic_CRenderWindow_getTriangleCount_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getTriangleCount_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getBatchCount_ev_size_t(EarthView_World_Graphic_CRenderWindow_getBatchCount_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getBatchCount_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getVertexCount_ev_size_t(EarthView_World_Graphic_CRenderWindow_getVertexCount_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getVertexCount_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow__notifyCameraRemoved_void_CCamera(EarthView_World_Graphic_CRenderWindow__notifyCameraRemoved_void_CCamera_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow__notifyCameraRemoved_void_CCamera_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_isPrimary_ev_bool(EarthView_World_Graphic_CRenderWindow_isPrimary_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_isPrimary_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_isHardwareGammaEnabled_ev_bool(EarthView_World_Graphic_CRenderWindow_isHardwareGammaEnabled_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_isHardwareGammaEnabled_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getFSAA_ev_uint32(EarthView_World_Graphic_CRenderWindow_getFSAA_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getFSAA_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_getFSAAHint_EVString(EarthView_World_Graphic_CRenderWindow_getFSAAHint_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_getFSAAHint_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow__getImpl_Impl(EarthView_World_Graphic_CRenderWindow__getImpl_Impl_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow__getImpl_Impl_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow__beginUpdate_void(EarthView_World_Graphic_CRenderWindow__beginUpdate_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow__beginUpdate_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_ev_bool(EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32(EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_ev_bool(EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport(EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_ev_bool(EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void(EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow__endUpdate_void(EarthView_World_Graphic_CRenderWindow__endUpdate_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow__endUpdate_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_firePreUpdate_void(EarthView_World_Graphic_CRenderWindow_firePreUpdate_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_firePreUpdate_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_firePostUpdate_void(EarthView_World_Graphic_CRenderWindow_firePostUpdate_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_firePostUpdate_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_fireViewportPreUpdate_void_CViewport(EarthView_World_Graphic_CRenderWindow_fireViewportPreUpdate_void_CViewport_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_fireViewportPreUpdate_void_CViewport_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_fireViewportPostUpdate_void_CViewport(EarthView_World_Graphic_CRenderWindow_fireViewportPostUpdate_void_CViewport_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_fireViewportPostUpdate_void_CViewport_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_fireViewportAdded_void_CViewport(EarthView_World_Graphic_CRenderWindow_fireViewportAdded_void_CViewport_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_fireViewportAdded_void_CViewport_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_fireViewportRemoved_void_CViewport(EarthView_World_Graphic_CRenderWindow_fireViewportRemoved_void_CViewport_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_fireViewportRemoved_void_CViewport_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CRenderWindow_updateImpl_void(EarthView_World_Graphic_CRenderWindow_updateImpl_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CRenderWindow_updateImpl_void_Callback = pCallback;
+				}
+				virtual void create(_in const EVString& name, _in ev_uint32 width, _in ev_uint32 height, _in ev_bool fullScreen, _in const EarthView::World::Core::CommonStringPairList* miscParams)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_create_void_EVString_ev_uint32_ev_uint32_ev_bool_CommonStringPairList_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						m_EarthView_World_Graphic_CRenderWindow_create_void_EVString_ev_uint32_ev_uint32_ev_bool_CommonStringPairList_Callback(name_Char, width, height, fullScreen, miscParams);
+					}
+					else
+						return this->CRenderWindow::create(name, width, height, fullScreen, miscParams);
+				}
+				virtual void setFullscreen(_in ev_bool fullScreen, _in ev_uint32 width, _in ev_uint32 height)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_setFullscreen_void_ev_bool_ev_uint32_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_setFullscreen_void_ev_bool_ev_uint32_ev_uint32_Callback(fullScreen, width, height);
+					}
+					else
+						return this->CRenderWindow::setFullscreen(fullScreen, width, height);
+				}
+				virtual void destroy()
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_destroy_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_destroy_void_Callback();
+					}
+					else
+						return this->CRenderWindow::destroy();
+				}
+				virtual void resize(_in ev_uint32 width, _in ev_uint32 height)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_resize_void_ev_uint32_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_resize_void_ev_uint32_ev_uint32_Callback(width, height);
+					}
+					else
+						return this->CRenderWindow::resize(width, height);
+				}
+				virtual void windowMovedOrResized()
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_windowMovedOrResized_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_windowMovedOrResized_void_Callback();
+					}
+					else
+						return this->CRenderWindow::windowMovedOrResized();
+				}
+				virtual void reposition(_in ev_int32 left, _in ev_int32 top)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_reposition_void_ev_int32_ev_int32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_reposition_void_ev_int32_ev_int32_Callback(left, top);
+					}
+					else
+						return this->CRenderWindow::reposition(left, top);
+				}
+				virtual ev_bool isVisible() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_isVisible_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRenderWindow_isVisible_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::isVisible();
+				}
+				virtual void setVisible(_in ev_bool visible)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_setVisible_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_setVisible_void_ev_bool_Callback(visible);
+					}
+					else
+						return this->CRenderWindow::setVisible(visible);
+				}
+				virtual ev_bool isHidden() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_isHidden_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRenderWindow_isHidden_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::isHidden();
+				}
+				virtual void setHidden(_in ev_bool hidden)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_setHidden_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_setHidden_void_ev_bool_Callback(hidden);
+					}
+					else
+						return this->CRenderWindow::setHidden(hidden);
+				}
+				virtual void setVSyncEnabled(_in ev_bool vsync)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_setVSyncEnabled_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_setVSyncEnabled_void_ev_bool_Callback(vsync);
+					}
+					else
+						return this->CRenderWindow::setVSyncEnabled(vsync);
+				}
+				virtual ev_bool isVSyncEnabled() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_isVSyncEnabled_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRenderWindow_isVSyncEnabled_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::isVSyncEnabled();
+				}
+				virtual void setVSyncInterval(_in ev_uint32 interval)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_setVSyncInterval_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_setVSyncInterval_void_ev_uint32_Callback(interval);
+					}
+					else
+						return this->CRenderWindow::setVSyncInterval(interval);
+				}
+				virtual ev_uint32 getVSyncInterval() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getVSyncInterval_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CRenderWindow_getVSyncInterval_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getVSyncInterval();
+				}
+				virtual ev_bool isActive() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_isActive_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRenderWindow_isActive_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::isActive();
+				}
+				virtual ev_bool isClosed() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_isClosed_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRenderWindow_isClosed_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::isClosed();
+				}
+				virtual ev_bool isPrimary() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_isPrimary_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRenderWindow_isPrimary_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::isPrimary();
+				}
+				virtual ev_bool isFullScreen() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_isFullScreen_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRenderWindow_isFullScreen_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::isFullScreen();
+				}
+				virtual void getMetrics(_inout ev_uint32& width, _inout ev_uint32& height, _inout ev_uint32& colourDepth, _inout ev_int32& left, _inout ev_int32& top)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_ev_int32_ev_int32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_ev_int32_ev_int32_Callback(width, height, colourDepth, left, top);
+					}
+					else
+						return this->CRenderWindow::getMetrics(width, height, colourDepth, left, top);
+				}
+				virtual EarthView::World::Graphic::PixelFormat suggestPixelFormat() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_suggestPixelFormat_PixelFormat_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::PixelFormat returnValue = (EarthView::World::Graphic::PixelFormat)m_EarthView_World_Graphic_CRenderWindow_suggestPixelFormat_PixelFormat_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::suggestPixelFormat();
+				}
+				virtual const EVString& getName() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getName_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						const EVString& returnValue = m_EarthView_World_Graphic_CRenderWindow_getName_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getName();
+				}
+				virtual ev_uint32 getWidth() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getWidth_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CRenderWindow_getWidth_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getWidth();
+				}
+				virtual ev_uint32 getHeight() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getHeight_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CRenderWindow_getHeight_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getHeight();
+				}
+				virtual ev_uint32 getColourDepth() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getColourDepth_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CRenderWindow_getColourDepth_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getColourDepth();
+				}
+				virtual ev_bool attachDepthBuffer(_in EarthView::World::Graphic::CDepthBuffer* ref_depthBuffer)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_attachDepthBuffer_ev_bool_CDepthBuffer_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRenderWindow_attachDepthBuffer_ev_bool_CDepthBuffer_Callback(ref_depthBuffer);
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::attachDepthBuffer(ref_depthBuffer);
+				}
+				virtual void detachDepthBuffer()
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_detachDepthBuffer_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_detachDepthBuffer_void_Callback();
+					}
+					else
+						return this->CRenderWindow::detachDepthBuffer();
+				}
+				virtual void _detachDepthBuffer()
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow__detachDepthBuffer_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow__detachDepthBuffer_void_Callback();
+					}
+					else
+						return this->CRenderWindow::_detachDepthBuffer();
+				}
+				virtual void update(_in ev_bool swapBuffers)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_update_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_update_void_ev_bool_Callback(swapBuffers);
+					}
+					else
+						return this->CRenderWindow::update(swapBuffers);
+				}
+				virtual void update()
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_update_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_update_void_Callback();
+					}
+					else
+						return this->CRenderWindow::update();
+				}
+				virtual void swapBuffers(_in ev_bool waitForVSync)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_swapBuffers_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_swapBuffers_void_ev_bool_Callback(waitForVSync);
+					}
+					else
+						return this->CRenderWindow::swapBuffers(waitForVSync);
+				}
+				virtual void swapBuffers()
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_swapBuffers_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_swapBuffers_void_Callback();
+					}
+					else
+						return this->CRenderWindow::swapBuffers();
+				}
+				virtual EarthView::World::Graphic::CViewport* addViewport(_in EarthView::World::Graphic::CCamera* ref_cam, _in ev_int32 ZOrder, _in ev_real32 left, _in ev_real32 top, _in ev_real32 width, _in ev_real32 height)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_ev_real32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CViewport* returnValue = m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_ev_real32_Callback(ref_cam, ZOrder, left, top, width, height);
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::addViewport(ref_cam, ZOrder, left, top, width, height);
+				}
+				virtual EarthView::World::Graphic::CViewport* addViewport(_in EarthView::World::Graphic::CCamera* ref_cam, _in ev_int32 ZOrder, _in ev_real32 left, _in ev_real32 top, _in ev_real32 width)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CViewport* returnValue = m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_Callback(ref_cam, ZOrder, left, top, width);
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::addViewport(ref_cam, ZOrder, left, top, width);
+				}
+				virtual EarthView::World::Graphic::CViewport* addViewport(_in EarthView::World::Graphic::CCamera* ref_cam, _in ev_int32 ZOrder, _in ev_real32 left, _in ev_real32 top)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CViewport* returnValue = m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_Callback(ref_cam, ZOrder, left, top);
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::addViewport(ref_cam, ZOrder, left, top);
+				}
+				virtual EarthView::World::Graphic::CViewport* addViewport(_in EarthView::World::Graphic::CCamera* ref_cam, _in ev_int32 ZOrder, _in ev_real32 left)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CViewport* returnValue = m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_Callback(ref_cam, ZOrder, left);
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::addViewport(ref_cam, ZOrder, left);
+				}
+				virtual EarthView::World::Graphic::CViewport* addViewport(_in EarthView::World::Graphic::CCamera* ref_cam, _in ev_int32 ZOrder)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CViewport* returnValue = m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_Callback(ref_cam, ZOrder);
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::addViewport(ref_cam, ZOrder);
+				}
+				virtual EarthView::World::Graphic::CViewport* addViewport(_in EarthView::World::Graphic::CCamera* ref_cam)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CViewport* returnValue = m_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_Callback(ref_cam);
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::addViewport(ref_cam);
+				}
+				virtual ev_uint16 getNumViewports() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getNumViewports_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint16 returnValue = m_EarthView_World_Graphic_CRenderWindow_getNumViewports_ev_uint16_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getNumViewports();
+				}
+				virtual EarthView::World::Graphic::CViewport* getViewport(_in ev_uint16 index)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getViewport_CViewport_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CViewport* returnValue = m_EarthView_World_Graphic_CRenderWindow_getViewport_CViewport_ev_uint16_Callback(index);
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getViewport(index);
+				}
+				virtual EarthView::World::Graphic::CViewport* getViewportByZOrder(_in ev_int32 ZOrder)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getViewportByZOrder_CViewport_ev_int32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CViewport* returnValue = m_EarthView_World_Graphic_CRenderWindow_getViewportByZOrder_CViewport_ev_int32_Callback(ZOrder);
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getViewportByZOrder(ZOrder);
+				}
+				virtual bool hasViewportWithZOrder(_in ev_int32 ZOrder)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_hasViewportWithZOrder_bool_ev_int32_Callback != NULL && this->isCustomExtend())
+					{
+						bool returnValue = m_EarthView_World_Graphic_CRenderWindow_hasViewportWithZOrder_bool_ev_int32_Callback(ZOrder);
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::hasViewportWithZOrder(ZOrder);
+				}
+				virtual void removeViewport(_in ev_int32 ZOrder)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_removeViewport_void_ev_int32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_removeViewport_void_ev_int32_Callback(ZOrder);
+					}
+					else
+						return this->CRenderWindow::removeViewport(ZOrder);
+				}
+				virtual void removeAllViewports()
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_removeAllViewports_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_removeAllViewports_void_Callback();
+					}
+					else
+						return this->CRenderWindow::removeAllViewports();
+				}
+				virtual void getStatistics(_inout ev_real32& lastFPS, _inout ev_real32& avgFPS, _inout ev_real32& bestFPS, _inout ev_real32& worstFPS) const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getStatistics_void_ev_real32_ev_real32_ev_real32_ev_real32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_getStatistics_void_ev_real32_ev_real32_ev_real32_ev_real32_Callback(lastFPS, avgFPS, bestFPS, worstFPS);
+					}
+					else
+						return this->CRenderWindow::getStatistics(lastFPS, avgFPS, bestFPS, worstFPS);
+				}
+				virtual const EarthView::World::Graphic::CRenderTarget::FrameStats& getStatistics() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getStatistics_FrameStats_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CRenderTarget::FrameStats& returnValue = m_EarthView_World_Graphic_CRenderWindow_getStatistics_FrameStats_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getStatistics();
+				}
+				virtual ev_real32 getLastFPS() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getLastFPS_ev_real32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_real32 returnValue = m_EarthView_World_Graphic_CRenderWindow_getLastFPS_ev_real32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getLastFPS();
+				}
+				virtual ev_real32 getAverageFPS() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getAverageFPS_ev_real32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_real32 returnValue = m_EarthView_World_Graphic_CRenderWindow_getAverageFPS_ev_real32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getAverageFPS();
+				}
+				virtual ev_real32 getBestFPS() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getBestFPS_ev_real32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_real32 returnValue = m_EarthView_World_Graphic_CRenderWindow_getBestFPS_ev_real32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getBestFPS();
+				}
+				virtual ev_real32 getWorstFPS() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getWorstFPS_ev_real32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_real32 returnValue = m_EarthView_World_Graphic_CRenderWindow_getWorstFPS_ev_real32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getWorstFPS();
+				}
+				virtual ev_real32 getBestFrameTime() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getBestFrameTime_ev_real32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_real32 returnValue = m_EarthView_World_Graphic_CRenderWindow_getBestFrameTime_ev_real32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getBestFrameTime();
+				}
+				virtual ev_real32 getWorstFrameTime() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getWorstFrameTime_ev_real32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_real32 returnValue = m_EarthView_World_Graphic_CRenderWindow_getWorstFrameTime_ev_real32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getWorstFrameTime();
+				}
+				virtual void resetStatistics()
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_resetStatistics_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_resetStatistics_void_Callback();
+					}
+					else
+						return this->CRenderWindow::resetStatistics();
+				}
+				virtual void getCustomAttribute(_in const EVString& name, _inout void* pData)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getCustomAttribute_void_EVString_void_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						m_EarthView_World_Graphic_CRenderWindow_getCustomAttribute_void_EVString_void_Callback(name_Char, pData);
+					}
+					else
+						return this->CRenderWindow::getCustomAttribute(name, pData);
+				}
+				virtual void addListener(_in EarthView::World::Graphic::CRenderTargetListener* ref_listener)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_addListener_void_CRenderTargetListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_addListener_void_CRenderTargetListener_Callback(ref_listener);
+					}
+					else
+						return this->CRenderWindow::addListener(ref_listener);
+				}
+				virtual void removeListener(_in EarthView::World::Graphic::CRenderTargetListener* listener)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_removeListener_void_CRenderTargetListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_removeListener_void_CRenderTargetListener_Callback(listener);
+					}
+					else
+						return this->CRenderWindow::removeListener(listener);
+				}
+				virtual void removeAllListeners()
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_removeAllListeners_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_removeAllListeners_void_Callback();
+					}
+					else
+						return this->CRenderWindow::removeAllListeners();
+				}
+				virtual void setPriority(_in ev_uchar priority)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_setPriority_void_ev_uchar_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_setPriority_void_ev_uchar_Callback(priority);
+					}
+					else
+						return this->CRenderWindow::setPriority(priority);
+				}
+				virtual ev_uchar getPriority() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getPriority_ev_uchar_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uchar returnValue = m_EarthView_World_Graphic_CRenderWindow_getPriority_ev_uchar_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getPriority();
+				}
+				virtual void setActive(_in ev_bool state)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_setActive_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_setActive_void_ev_bool_Callback(state);
+					}
+					else
+						return this->CRenderWindow::setActive(state);
+				}
+				virtual void setAutoUpdated(_in ev_bool autoupdate)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_setAutoUpdated_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_setAutoUpdated_void_ev_bool_Callback(autoupdate);
+					}
+					else
+						return this->CRenderWindow::setAutoUpdated(autoupdate);
+				}
+				virtual ev_bool isAutoUpdated() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_isAutoUpdated_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRenderWindow_isAutoUpdated_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::isAutoUpdated();
+				}
+				virtual void copyContentsToMemory(_in const EarthView::World::Graphic::CPixelBox& dst, _in EarthView::World::Graphic::CRenderTarget::FrameBuffer buffer)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_FrameBuffer_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_FrameBuffer_Callback(&dst, (int)buffer);
+					}
+					else
+						return this->CRenderWindow::copyContentsToMemory(dst, buffer);
+				}
+				virtual void copyContentsToMemory(_in const EarthView::World::Graphic::CPixelBox& dst)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_Callback(&dst);
+					}
+					else
+						return this->CRenderWindow::copyContentsToMemory(dst);
+				}
+				virtual EVString writeContentsToTimestampedFile(_in const EVString& filenamePrefix, _in const EVString& filenameSuffix)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_writeContentsToTimestampedFile_EVString_EVString_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* filenamePrefix_Char = filenamePrefix.makeBuffer();
+						char* filenameSuffix_Char = filenameSuffix.makeBuffer();
+						EVString returnValue = m_EarthView_World_Graphic_CRenderWindow_writeContentsToTimestampedFile_EVString_EVString_EVString_Callback(filenamePrefix_Char, filenameSuffix_Char);
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::writeContentsToTimestampedFile(filenamePrefix, filenameSuffix);
+				}
+				virtual ev_bool requiresTextureFlipping() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_requiresTextureFlipping_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRenderWindow_requiresTextureFlipping_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::requiresTextureFlipping();
+				}
+				virtual ev_size_t getTriangleCount() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getTriangleCount_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						ev_size_t returnValue = m_EarthView_World_Graphic_CRenderWindow_getTriangleCount_ev_size_t_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getTriangleCount();
+				}
+				virtual ev_size_t getBatchCount() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getBatchCount_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						ev_size_t returnValue = m_EarthView_World_Graphic_CRenderWindow_getBatchCount_ev_size_t_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getBatchCount();
+				}
+				virtual ev_size_t getVertexCount() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getVertexCount_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						ev_size_t returnValue = m_EarthView_World_Graphic_CRenderWindow_getVertexCount_ev_size_t_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getVertexCount();
+				}
+				virtual void _notifyCameraRemoved(_in const EarthView::World::Graphic::CCamera* cam)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow__notifyCameraRemoved_void_CCamera_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow__notifyCameraRemoved_void_CCamera_Callback(cam);
+					}
+					else
+						return this->CRenderWindow::_notifyCameraRemoved(cam);
+				}
+				virtual ev_bool isHardwareGammaEnabled() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_isHardwareGammaEnabled_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CRenderWindow_isHardwareGammaEnabled_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::isHardwareGammaEnabled();
+				}
+				virtual ev_uint32 getFSAA() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getFSAA_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CRenderWindow_getFSAA_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getFSAA();
+				}
+				virtual EVString getFSAAHint() const
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_getFSAAHint_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CRenderWindow_getFSAAHint_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::getFSAAHint();
+				}
+				virtual EarthView::World::Graphic::CRenderTarget::Impl* _getImpl()
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow__getImpl_Impl_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CRenderTarget::Impl* returnValue = m_EarthView_World_Graphic_CRenderWindow__getImpl_Impl_Callback();
+						return returnValue;
+					}
+					else
+						return this->CRenderWindow::_getImpl();
+				}
+				virtual void _beginUpdate()
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow__beginUpdate_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow__beginUpdate_void_Callback();
+					}
+					else
+						return this->CRenderWindow::_beginUpdate();
+				}
+				virtual void _updateViewport(_in ev_int32 zorder, _in ev_bool updateStatistics)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_ev_bool_Callback(zorder, updateStatistics);
+					}
+					else
+						return this->CRenderWindow::_updateViewport(zorder, updateStatistics);
+				}
+				virtual void _updateViewport(_in ev_int32 zorder)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_Callback(zorder);
+					}
+					else
+						return this->CRenderWindow::_updateViewport(zorder);
+				}
+				virtual void _updateViewport(_in EarthView::World::Graphic::CViewport* viewport, _in ev_bool updateStatistics)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_ev_bool_Callback(viewport, updateStatistics);
+					}
+					else
+						return this->CRenderWindow::_updateViewport(viewport, updateStatistics);
+				}
+				virtual void _updateViewport(_in EarthView::World::Graphic::CViewport* viewport)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_Callback(viewport);
+					}
+					else
+						return this->CRenderWindow::_updateViewport(viewport);
+				}
+				virtual void _updateAutoUpdatedViewports(_in ev_bool updateStatistics)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_ev_bool_Callback(updateStatistics);
+					}
+					else
+						return this->CRenderWindow::_updateAutoUpdatedViewports(updateStatistics);
+				}
+				virtual void _updateAutoUpdatedViewports()
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_Callback();
+					}
+					else
+						return this->CRenderWindow::_updateAutoUpdatedViewports();
+				}
+				virtual void _endUpdate()
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow__endUpdate_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow__endUpdate_void_Callback();
+					}
+					else
+						return this->CRenderWindow::_endUpdate();
+				}
+				virtual void firePreUpdate()
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_firePreUpdate_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_firePreUpdate_void_Callback();
+					}
+					else
+						return this->CRenderWindow::firePreUpdate();
+				}
+				virtual void firePostUpdate()
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_firePostUpdate_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_firePostUpdate_void_Callback();
+					}
+					else
+						return this->CRenderWindow::firePostUpdate();
+				}
+				virtual void fireViewportPreUpdate(_in EarthView::World::Graphic::CViewport* vp)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_fireViewportPreUpdate_void_CViewport_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_fireViewportPreUpdate_void_CViewport_Callback(vp);
+					}
+					else
+						return this->CRenderWindow::fireViewportPreUpdate(vp);
+				}
+				virtual void fireViewportPostUpdate(_in EarthView::World::Graphic::CViewport* vp)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_fireViewportPostUpdate_void_CViewport_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_fireViewportPostUpdate_void_CViewport_Callback(vp);
+					}
+					else
+						return this->CRenderWindow::fireViewportPostUpdate(vp);
+				}
+				virtual void fireViewportAdded(_in EarthView::World::Graphic::CViewport* vp)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_fireViewportAdded_void_CViewport_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_fireViewportAdded_void_CViewport_Callback(vp);
+					}
+					else
+						return this->CRenderWindow::fireViewportAdded(vp);
+				}
+				virtual void fireViewportRemoved(_in EarthView::World::Graphic::CViewport* vp)
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_fireViewportRemoved_void_CViewport_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_fireViewportRemoved_void_CViewport_Callback(vp);
+					}
+					else
+						return this->CRenderWindow::fireViewportRemoved(vp);
+				}
+				virtual void updateImpl()
+				{
+					if(m_EarthView_World_Graphic_CRenderWindow_updateImpl_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CRenderWindow_updateImpl_void_Callback();
+					}
+					else
+						return this->CRenderWindow::updateImpl();
+				}
+			};
+			REGISTER_FACTORY_CLASS(CRenderWindowProxy);
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_create_void_EVString_ev_uint32_ev_uint32_ev_bool_CommonStringPairList(void *pObjectXXXX, _in const char* name, _in ev_uint32 width, _in ev_uint32 height, _in ev_bool fullScreen, _in const EarthView::World::Core::CommonStringPairList* miscParams )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				if (dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRenderWindow::create(name1, width, height, fullScreen, miscParams);
+				else
+					ptrNativeObject->create(name1, width, height, fullScreen, miscParams);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_create_void_EVString_ev_uint32_ev_uint32_ev_bool_CommonStringPairList( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_create_void_EVString_ev_uint32_ev_uint32_ev_bool_CommonStringPairList_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_create_void_EVString_ev_uint32_ev_uint32_ev_bool_CommonStringPairList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_create_void_EVString_ev_uint32_ev_uint32_ev_bool_CommonStringPairList_NoVirtual(void *pObjectXXXX, _in const char* name, _in ev_uint32 width, _in ev_uint32 height, _in ev_bool fullScreen, _in const EarthView::World::Core::CommonStringPairList* miscParams )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRenderWindow::create(name1, width, height, fullScreen, miscParams);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_setFullscreen_void_ev_bool_ev_uint32_ev_uint32(void *pObjectXXXX, _in ev_bool fullScreen, _in ev_uint32 width, _in ev_uint32 height )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				if (dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRenderWindow::setFullscreen(fullScreen, width, height);
+				else
+					ptrNativeObject->setFullscreen(fullScreen, width, height);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_setFullscreen_void_ev_bool_ev_uint32_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_setFullscreen_void_ev_bool_ev_uint32_ev_uint32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_setFullscreen_void_ev_bool_ev_uint32_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_setFullscreen_void_ev_bool_ev_uint32_ev_uint32_NoVirtual(void *pObjectXXXX, _in ev_bool fullScreen, _in ev_uint32 width, _in ev_uint32 height )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRenderWindow::setFullscreen(fullScreen, width, height);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_destroy_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				if (dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRenderWindow::destroy();
+				else
+					ptrNativeObject->destroy();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_destroy_void( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_destroy_void_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_destroy_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_destroy_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRenderWindow::destroy();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_resize_void_ev_uint32_ev_uint32(void *pObjectXXXX, _in ev_uint32 width, _in ev_uint32 height )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				if (dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRenderWindow::resize(width, height);
+				else
+					ptrNativeObject->resize(width, height);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_resize_void_ev_uint32_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_resize_void_ev_uint32_ev_uint32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_resize_void_ev_uint32_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_resize_void_ev_uint32_ev_uint32_NoVirtual(void *pObjectXXXX, _in ev_uint32 width, _in ev_uint32 height )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRenderWindow::resize(width, height);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_windowMovedOrResized_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				if (dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRenderWindow::windowMovedOrResized();
+				else
+					ptrNativeObject->windowMovedOrResized();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_windowMovedOrResized_void( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_windowMovedOrResized_void_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_windowMovedOrResized_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_windowMovedOrResized_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRenderWindow::windowMovedOrResized();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_reposition_void_ev_int32_ev_int32(void *pObjectXXXX, _in ev_int32 left, _in ev_int32 top )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				if (dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRenderWindow::reposition(left, top);
+				else
+					ptrNativeObject->reposition(left, top);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_reposition_void_ev_int32_ev_int32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_reposition_void_ev_int32_ev_int32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_reposition_void_ev_int32_ev_int32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_reposition_void_ev_int32_ev_int32_NoVirtual(void *pObjectXXXX, _in ev_int32 left, _in ev_int32 top )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRenderWindow::reposition(left, top);
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CRenderWindow_isVisible_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				if (dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CRenderWindow::isVisible();
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->isVisible();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_isVisible_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_isVisible_ev_bool_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_isVisible_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CRenderWindow_isVisible_ev_bool_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CRenderWindow::isVisible();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_setVisible_void_ev_bool(void *pObjectXXXX, _in ev_bool visible )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				if (dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRenderWindow::setVisible(visible);
+				else
+					ptrNativeObject->setVisible(visible);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_setVisible_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_setVisible_void_ev_bool_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_setVisible_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_setVisible_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool visible )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRenderWindow::setVisible(visible);
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CRenderWindow_isHidden_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				if (dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CRenderWindow::isHidden();
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->isHidden();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_isHidden_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_isHidden_ev_bool_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_isHidden_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CRenderWindow_isHidden_ev_bool_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CRenderWindow::isHidden();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_setHidden_void_ev_bool(void *pObjectXXXX, _in ev_bool hidden )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				if (dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRenderWindow::setHidden(hidden);
+				else
+					ptrNativeObject->setHidden(hidden);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_setHidden_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_setHidden_void_ev_bool_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_setHidden_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_setHidden_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool hidden )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRenderWindow::setHidden(hidden);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_setVSyncEnabled_void_ev_bool(void *pObjectXXXX, _in ev_bool vsync )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				if (dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRenderWindow::setVSyncEnabled(vsync);
+				else
+					ptrNativeObject->setVSyncEnabled(vsync);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_setVSyncEnabled_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_setVSyncEnabled_void_ev_bool_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_setVSyncEnabled_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_setVSyncEnabled_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool vsync )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRenderWindow::setVSyncEnabled(vsync);
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CRenderWindow_isVSyncEnabled_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				if (dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CRenderWindow::isVSyncEnabled();
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->isVSyncEnabled();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_isVSyncEnabled_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_isVSyncEnabled_ev_bool_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_isVSyncEnabled_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CRenderWindow_isVSyncEnabled_ev_bool_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CRenderWindow::isVSyncEnabled();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_setVSyncInterval_void_ev_uint32(void *pObjectXXXX, _in ev_uint32 interval )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				if (dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRenderWindow::setVSyncInterval(interval);
+				else
+					ptrNativeObject->setVSyncInterval(interval);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_setVSyncInterval_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_setVSyncInterval_void_ev_uint32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_setVSyncInterval_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_setVSyncInterval_void_ev_uint32_NoVirtual(void *pObjectXXXX, _in ev_uint32 interval )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRenderWindow::setVSyncInterval(interval);
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint32  _stdcall EarthView_World_Graphic_CRenderWindow_getVSyncInterval_ev_uint32(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				if (dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*)ptrNativeObject) != NULL)
+				{
+					ev_uint32 objXXXX = ptrNativeObject->EarthView::World::Graphic::CRenderWindow::getVSyncInterval();
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint32 objXXXX = ptrNativeObject->getVSyncInterval();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getVSyncInterval_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getVSyncInterval_ev_uint32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getVSyncInterval_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint32  _stdcall EarthView_World_Graphic_CRenderWindow_getVSyncInterval_ev_uint32_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ev_uint32 objXXXX = ptrNativeObject->EarthView::World::Graphic::CRenderWindow::getVSyncInterval();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CRenderWindow_isActive_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				if (dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CRenderWindow::isActive();
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->isActive();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_isActive_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_isActive_ev_bool_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_isActive_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CRenderWindow_isActive_ev_bool_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CRenderWindow::isActive();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CRenderWindow_isClosed_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				if (dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CRenderWindow::isClosed();
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->isClosed();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_isClosed_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_isClosed_ev_bool_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_isClosed_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CRenderWindow_isClosed_ev_bool_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CRenderWindow::isClosed();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CRenderWindow_isPrimary_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				if (dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CRenderWindow::isPrimary();
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->isPrimary();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_isPrimary_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_isPrimary_ev_bool_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_isPrimary_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CRenderWindow_isPrimary_ev_bool_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CRenderWindow::isPrimary();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CRenderWindow_isFullScreen_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				if (dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CRenderWindow::isFullScreen();
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->isFullScreen();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_isFullScreen_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_isFullScreen_ev_bool_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_isFullScreen_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CRenderWindow_isFullScreen_ev_bool_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CRenderWindow::isFullScreen();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_ev_int32_ev_int32(void *pObjectXXXX, _inout ev_uint32& width, _inout ev_uint32& height, _inout ev_uint32& colourDepth, _inout ev_int32& left, _inout ev_int32& top )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				if (dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CRenderWindow::getMetrics(width, height, colourDepth, left, top);
+				else
+					ptrNativeObject->getMetrics(width, height, colourDepth, left, top);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_ev_int32_ev_int32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_ev_int32_ev_int32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_ev_int32_ev_int32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_ev_int32_ev_int32_NoVirtual(void *pObjectXXXX, _inout ev_uint32& width, _inout ev_uint32& height, _inout ev_uint32& colourDepth, _inout ev_int32& left, _inout ev_int32& top )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CRenderWindow::getMetrics(width, height, colourDepth, left, top);
+			}
+			extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Graphic_CRenderWindow_suggestPixelFormat_PixelFormat(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				if (dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::PixelFormat objXXXX = ptrNativeObject->EarthView::World::Graphic::CRenderWindow::suggestPixelFormat();
+					return (int)objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::PixelFormat objXXXX = ptrNativeObject->suggestPixelFormat();
+					return (int)objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_suggestPixelFormat_PixelFormat( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_suggestPixelFormat_PixelFormat_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_suggestPixelFormat_PixelFormat(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Graphic_CRenderWindow_suggestPixelFormat_PixelFormat_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				EarthView::World::Graphic::PixelFormat objXXXX = ptrNativeObject->EarthView::World::Graphic::CRenderWindow::suggestPixelFormat();
+				return (int)objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CRenderWindow_isDeactivatedOnFocusChange_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->isDeactivatedOnFocusChange();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CRenderWindow_setDeactivateOnFocusChange_void_ev_bool(void *pObjectXXXX, _in ev_bool deactivate )
+			{
+				EarthView::World::Graphic::CRenderWindow* ptrNativeObject = (EarthView::World::Graphic::CRenderWindow*) pObjectXXXX;
+				ptrNativeObject->setDeactivateOnFocusChange(deactivate);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getName_EVString( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getName_EVString_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getName_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getMetrics_void_ev_uint32_ev_uint32_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getWidth_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getWidth_ev_uint32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getWidth_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getHeight_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getHeight_ev_uint32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getHeight_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getColourDepth_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getColourDepth_ev_uint32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getColourDepth_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_attachDepthBuffer_ev_bool_CDepthBuffer( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_attachDepthBuffer_ev_bool_CDepthBuffer_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_attachDepthBuffer_ev_bool_CDepthBuffer(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_detachDepthBuffer_void( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_detachDepthBuffer_void_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_detachDepthBuffer_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow__detachDepthBuffer_void( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow__detachDepthBuffer_void_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow__detachDepthBuffer_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_update_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_update_void_ev_bool_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_update_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_update_void( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_update_void_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_update_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_swapBuffers_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_swapBuffers_void_ev_bool_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_swapBuffers_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_swapBuffers_void( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_swapBuffers_void_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_swapBuffers_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_ev_real32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_ev_real32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_ev_real32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_ev_real32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_ev_real32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_ev_real32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_ev_int32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_addViewport_CViewport_CCamera(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getNumViewports_ev_uint16( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getNumViewports_ev_uint16_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getNumViewports_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getViewport_CViewport_ev_uint16( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getViewport_CViewport_ev_uint16_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getViewport_CViewport_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getViewportByZOrder_CViewport_ev_int32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getViewportByZOrder_CViewport_ev_int32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getViewportByZOrder_CViewport_ev_int32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_hasViewportWithZOrder_bool_ev_int32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_hasViewportWithZOrder_bool_ev_int32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_hasViewportWithZOrder_bool_ev_int32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_removeViewport_void_ev_int32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_removeViewport_void_ev_int32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_removeViewport_void_ev_int32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_removeAllViewports_void( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_removeAllViewports_void_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_removeAllViewports_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getStatistics_void_ev_real32_ev_real32_ev_real32_ev_real32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getStatistics_void_ev_real32_ev_real32_ev_real32_ev_real32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getStatistics_void_ev_real32_ev_real32_ev_real32_ev_real32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getStatistics_FrameStats( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getStatistics_FrameStats_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getStatistics_FrameStats(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getLastFPS_ev_real32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getLastFPS_ev_real32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getLastFPS_ev_real32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getAverageFPS_ev_real32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getAverageFPS_ev_real32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getAverageFPS_ev_real32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getBestFPS_ev_real32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getBestFPS_ev_real32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getBestFPS_ev_real32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getWorstFPS_ev_real32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getWorstFPS_ev_real32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getWorstFPS_ev_real32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getBestFrameTime_ev_real32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getBestFrameTime_ev_real32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getBestFrameTime_ev_real32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getWorstFrameTime_ev_real32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getWorstFrameTime_ev_real32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getWorstFrameTime_ev_real32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_resetStatistics_void( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_resetStatistics_void_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_resetStatistics_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getCustomAttribute_void_EVString_void( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getCustomAttribute_void_EVString_void_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getCustomAttribute_void_EVString_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_addListener_void_CRenderTargetListener( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_addListener_void_CRenderTargetListener_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_addListener_void_CRenderTargetListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_removeListener_void_CRenderTargetListener( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_removeListener_void_CRenderTargetListener_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_removeListener_void_CRenderTargetListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_removeAllListeners_void( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_removeAllListeners_void_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_removeAllListeners_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_setPriority_void_ev_uchar( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_setPriority_void_ev_uchar_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_setPriority_void_ev_uchar(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getPriority_ev_uchar( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getPriority_ev_uchar_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getPriority_ev_uchar(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_setActive_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_setActive_void_ev_bool_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_setActive_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_setAutoUpdated_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_setAutoUpdated_void_ev_bool_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_setAutoUpdated_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_isAutoUpdated_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_isAutoUpdated_ev_bool_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_isAutoUpdated_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_FrameBuffer( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_FrameBuffer_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_FrameBuffer(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_copyContentsToMemory_void_CPixelBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_writeContentsToTimestampedFile_EVString_EVString_EVString( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_writeContentsToTimestampedFile_EVString_EVString_EVString_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_writeContentsToTimestampedFile_EVString_EVString_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_requiresTextureFlipping_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_requiresTextureFlipping_ev_bool_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_requiresTextureFlipping_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getTriangleCount_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getTriangleCount_ev_size_t_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getTriangleCount_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getBatchCount_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getBatchCount_ev_size_t_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getBatchCount_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getVertexCount_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getVertexCount_ev_size_t_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getVertexCount_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow__notifyCameraRemoved_void_CCamera( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow__notifyCameraRemoved_void_CCamera_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow__notifyCameraRemoved_void_CCamera(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_isHardwareGammaEnabled_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_isHardwareGammaEnabled_ev_bool_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_isHardwareGammaEnabled_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getFSAA_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getFSAA_ev_uint32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getFSAA_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_getFSAAHint_EVString( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_getFSAAHint_EVString_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_getFSAAHint_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow__getImpl_Impl( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow__getImpl_Impl_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow__getImpl_Impl(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow__beginUpdate_void( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow__beginUpdate_void_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow__beginUpdate_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_ev_bool_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow__updateViewport_void_ev_int32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_ev_bool_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow__updateViewport_void_CViewport(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_ev_bool_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow__updateAutoUpdatedViewports_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow__endUpdate_void( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow__endUpdate_void_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow__endUpdate_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_firePreUpdate_void( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_firePreUpdate_void_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_firePreUpdate_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_firePostUpdate_void( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_firePostUpdate_void_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_firePostUpdate_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_fireViewportPreUpdate_void_CViewport( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_fireViewportPreUpdate_void_CViewport_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_fireViewportPreUpdate_void_CViewport(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_fireViewportPostUpdate_void_CViewport( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_fireViewportPostUpdate_void_CViewport_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_fireViewportPostUpdate_void_CViewport(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_fireViewportAdded_void_CViewport( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_fireViewportAdded_void_CViewport_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_fireViewportAdded_void_CViewport(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_fireViewportRemoved_void_CViewport( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_fireViewportRemoved_void_CViewport_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_fireViewportRemoved_void_CViewport(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CRenderWindow_updateImpl_void( void *pObjectXXXX, EarthView_World_Graphic_CRenderWindow_updateImpl_void_Callback* pCallback )
+			{
+				CRenderWindowProxy* ptr = dynamic_cast<CRenderWindowProxy*>((EarthView::World::Graphic::CRenderWindow*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CRenderWindow_updateImpl_void(pCallback);
+				}
+			}
+		}
+	}
+}

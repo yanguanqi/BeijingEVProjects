@@ -1,0 +1,2538 @@
+/* This file is produced by the P/Invoke AutoWrapper Utility 
+ Copyright (c) 2012 by EarthView Image Inc */
+#include "spatialinterface/ichartlayer.h"
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Spatial
+		{
+			namespace Atlas
+			{
+				typedef ev_uint32  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassNum_ev_uint32_Callback)();
+				typedef const char*  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassName_EVString_ev_uint32_Callback)(_in ev_uint32 index);
+				typedef ev_int32  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassType_ev_int32_EVString_Callback)(_in char*& name);
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_ev_uint32_ev_bool_Callback)(_in ev_uint32 index, _in ev_bool value);
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_EVString_ev_bool_Callback)(_in char*& name, _in ev_bool value);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_ev_uint32_Callback)(_in ev_uint32 index);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_EVString_Callback)(_in char*& name);
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassSelected_void_ev_uint32_ev_bool_Callback)(_in ev_uint32 index, _in ev_bool value);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_ev_uint32_Callback)(_in ev_uint32 index);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_EVString_Callback)(_in char*& name);
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setDataset_void_IDataset_Callback)(_in EarthView::World::Spatial::GeoDataset::IDataset* ref_pDataset);
+				typedef EarthView::World::Spatial::Display::IChartOption*  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getOptionRef_IChartOption_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setEnvironment_void_IChartOption_Callback)(_in const EarthView::World::Spatial::Display::IChartOption* uniformOption);
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_EVString_ev_real64_Callback)(_in char*& className, _in const ev_real64 scale);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_EVString_ev_real64_Callback)(_in char*& className, _inout ev_real64& minScale);
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_EVString_ev_real64_Callback)(_in char*& className, _in const ev_real64 scale);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_EVString_ev_real64_Callback)(_in char*& className, _inout ev_real64& maxScale);
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_EVString_ev_bool_Callback)(_in char*& className, _in const ev_bool classIgnore);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_EVString_Callback)(_in char*& className);
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_ev_uint32_ev_real64_Callback)(_in const ev_uint32 index, _in const ev_real64 scale);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_ev_uint32_ev_real64_Callback)(_in const ev_uint32 index, _inout ev_real64& scale);
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_ev_uint32_ev_real64_Callback)(_in const ev_uint32 index, _in const ev_real64 scale);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_ev_uint32_ev_real64_Callback)(_in const ev_uint32 index, _inout ev_real64& scale);
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_ev_uint32_ev_bool_Callback)(_in const ev_uint32 index, _in const ev_bool classIgnore);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_ev_uint32_Callback)(_in const ev_uint32 index);
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControl_void_EVString_ev_bool_Callback)(_in char*& className, _in ev_bool IsUse);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControl_ev_bool_EVString_Callback)(_in char*& className);
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlSize_void_EVString_ev_uint32_Callback)(_in char*& className, _in ev_uint32 sizeFactor);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlSize_ev_bool_EVString_ev_uint32_Callback)(_in char*& className, _inout ev_uint32& sizeFactor);
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColor_void_EVString_IColor_Callback)(_in char*& className, _in const EarthView::World::Spatial::Display::IColor* color);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColor_ev_bool_EVString_IColor_Callback)(_in char*& className, _in EarthView::World::Spatial::Display::IColor*& pColor);
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControlColor_void_EVString_ev_bool_Callback)(_in char*& className, _in ev_bool useColor);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControlColor_ev_bool_EVString_Callback)(_in char*& className);
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColorBlendMode_void_EVString_EVColorBlendOperation_Callback)(_in char*& className, _in int mode);
+				typedef int  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColorBlendMode_EVColorBlendOperation_EVString_Callback)(_in char*& className);
+				typedef int  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getType_EVLayerType_Callback)();
+				typedef EarthView::World::Spatial::GeoDataset::IDataset*  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getDataset_IDataset_Callback)();
+				typedef char*  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getDatasetName_EVString_Callback)();
+				typedef EarthView::World::Spatial::GeoDataset::IDataSource*  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getDataSource_IDataSource_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_select_void_IQueryFilter_EVSelectionResultType_Callback)(_in EarthView::World::Spatial::GeoDataset::IQueryFilter* filter, _in int type);
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_clearSelection_void_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setLayerSelection_void_ILayerSelection_Callback)(_in EarthView::World::Spatial::Atlas::ILayerSelection* selection);
+				typedef EarthView::World::Spatial::Atlas::ILayerSelection*  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getLayerSelection_ILayerSelection_Callback)();
+				typedef char*  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getName_EVString_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setName_void_EVString_Callback)(_in char*& name);
+				typedef char*  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getDescription_EVString_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setDescription_void_EVString_Callback)(_in char*& value);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_canEdit_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setCanEdit_void_ev_bool_Callback)(_in ev_bool can);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_isEditing_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setEditing_void_ev_bool_Callback)(_in ev_bool editing);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_isVisible_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setVisible_void_ev_bool_Callback)(_in ev_bool visible);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_isValid_ev_bool_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_isSelectable_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setSelectable_void_ev_bool_Callback)(_in ev_bool selectable);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_ignoreScale_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setIgnoreScale_void_ev_bool_Callback)(_in ev_bool bIgnore);
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMaxScale_ev_real64_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMaxScale_void_ev_real64_Callback)(_in ev_real64 scale);
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMinScale_ev_real64_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMinScale_void_ev_real64_Callback)(_in ev_real64 scale);
+				typedef EarthView::World::Spatial::Geometry::ISpatialReference*  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getSpatialReference_ISpatialReference_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setSpatialReference_void_ISpatialReference_Callback)(_in EarthView::World::Spatial::Geometry::ISpatialReference* ref_sr);
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setTransparentValue_void_ev_uint8_Callback)(_in ev_uint8 transparent);
+				typedef ev_uint8  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getTransparentValue_ev_uint8_Callback)();
+				typedef const EarthView::World::Spatial::Geometry::IEnvelope*  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getExtent_IEnvelope_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback)(_in EarthView::World::Spatial::Display::ISpatialDisplay* display, _in int type);
+				typedef EarthView::World::Spatial::Atlas::ILayer*  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_clone_ILayer_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_toStream_void_CDataStream_Callback)(_out void* stream);
+				typedef char*  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_toXML_EVString_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_fromXmlElement_void_CXmlElement_Callback)(_in void* element);
+				typedef void*  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_toXmlElement_CXmlElement_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial_Atlas_IChartLayer_fromStream_void_CDataStream_Callback)(_inout void* stream);
+				class IChartLayerProxy : public EarthView::World::Spatial::Atlas::IChartLayer
+				{
+				private:
+					EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassNum_ev_uint32_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassNum_ev_uint32_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassName_EVString_ev_uint32_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassName_EVString_ev_uint32_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassType_ev_int32_EVString_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassType_ev_int32_EVString_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_ev_uint32_ev_bool_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_ev_uint32_ev_bool_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_EVString_ev_bool_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_EVString_ev_bool_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_ev_uint32_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_ev_uint32_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_EVString_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_EVString_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setClassSelected_void_ev_uint32_ev_bool_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setClassSelected_void_ev_uint32_ev_bool_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_ev_uint32_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_ev_uint32_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_EVString_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_EVString_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setDataset_void_IDataset_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setDataset_void_IDataset_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getOptionRef_IChartOption_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getOptionRef_IChartOption_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setEnvironment_void_IChartOption_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setEnvironment_void_IChartOption_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_EVString_ev_real64_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_EVString_ev_real64_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_EVString_ev_real64_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_EVString_ev_real64_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_EVString_ev_real64_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_EVString_ev_real64_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_EVString_ev_real64_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_EVString_ev_real64_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_EVString_ev_bool_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_EVString_ev_bool_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_EVString_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_EVString_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_ev_uint32_ev_real64_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_ev_uint32_ev_real64_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_ev_uint32_ev_real64_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_ev_uint32_ev_real64_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_ev_uint32_ev_real64_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_ev_uint32_ev_real64_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_ev_uint32_ev_real64_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_ev_uint32_ev_real64_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_ev_uint32_ev_bool_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_ev_uint32_ev_bool_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_ev_uint32_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_ev_uint32_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControl_void_EVString_ev_bool_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControl_void_EVString_ev_bool_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControl_ev_bool_EVString_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControl_ev_bool_EVString_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlSize_void_EVString_ev_uint32_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlSize_void_EVString_ev_uint32_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlSize_ev_bool_EVString_ev_uint32_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlSize_ev_bool_EVString_ev_uint32_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColor_void_EVString_IColor_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColor_void_EVString_IColor_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColor_ev_bool_EVString_IColor_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColor_ev_bool_EVString_IColor_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControlColor_void_EVString_ev_bool_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControlColor_void_EVString_ev_bool_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControlColor_ev_bool_EVString_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControlColor_ev_bool_EVString_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColorBlendMode_void_EVString_EVColorBlendOperation_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColorBlendMode_void_EVString_EVColorBlendOperation_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColorBlendMode_EVColorBlendOperation_EVString_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColorBlendMode_EVColorBlendOperation_EVString_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getType_EVLayerType_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getType_EVLayerType_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getDataset_IDataset_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getDataset_IDataset_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getDatasetName_EVString_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getDatasetName_EVString_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getDataSource_IDataSource_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getDataSource_IDataSource_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_select_void_IQueryFilter_EVSelectionResultType_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_select_void_IQueryFilter_EVSelectionResultType_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_clearSelection_void_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_clearSelection_void_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setLayerSelection_void_ILayerSelection_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setLayerSelection_void_ILayerSelection_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getLayerSelection_ILayerSelection_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getLayerSelection_ILayerSelection_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getName_EVString_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getName_EVString_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setName_void_EVString_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setName_void_EVString_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getDescription_EVString_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getDescription_EVString_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setDescription_void_EVString_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setDescription_void_EVString_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_canEdit_ev_bool_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_canEdit_ev_bool_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setCanEdit_void_ev_bool_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setCanEdit_void_ev_bool_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_isEditing_ev_bool_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_isEditing_ev_bool_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setEditing_void_ev_bool_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setEditing_void_ev_bool_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_isVisible_ev_bool_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_isVisible_ev_bool_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setVisible_void_ev_bool_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setVisible_void_ev_bool_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_isValid_ev_bool_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_isValid_ev_bool_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_isSelectable_ev_bool_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_isSelectable_ev_bool_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setSelectable_void_ev_bool_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setSelectable_void_ev_bool_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_ignoreScale_ev_bool_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_ignoreScale_ev_bool_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setIgnoreScale_void_ev_bool_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setIgnoreScale_void_ev_bool_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMaxScale_ev_real64_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMaxScale_ev_real64_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMaxScale_void_ev_real64_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMaxScale_void_ev_real64_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMinScale_ev_real64_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMinScale_ev_real64_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMinScale_void_ev_real64_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMinScale_void_ev_real64_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getSpatialReference_ISpatialReference_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getSpatialReference_ISpatialReference_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setSpatialReference_void_ISpatialReference_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setSpatialReference_void_ISpatialReference_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_setTransparentValue_void_ev_uint8_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_setTransparentValue_void_ev_uint8_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getTransparentValue_ev_uint8_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getTransparentValue_ev_uint8_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_getExtent_IEnvelope_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_getExtent_IEnvelope_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_clone_ILayer_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_clone_ILayer_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_toStream_void_CDataStream_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_toStream_void_CDataStream_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_toXML_EVString_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_toXML_EVString_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_fromXmlElement_void_CXmlElement_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_fromXmlElement_void_CXmlElement_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_toXmlElement_CXmlElement_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_toXmlElement_CXmlElement_Callback;
+					EarthView_World_Spatial_Atlas_IChartLayer_fromStream_void_CDataStream_Callback* m_EarthView_World_Spatial_Atlas_IChartLayer_fromStream_void_CDataStream_Callback;
+				public:
+					IChartLayerProxy(EarthView::World::Core::CNameValuePairList *pList) : IChartLayer(pList)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassNum_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassName_EVString_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassType_ev_int32_EVString_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_ev_uint32_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_EVString_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_EVString_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setClassSelected_void_ev_uint32_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_EVString_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setDataset_void_IDataset_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getOptionRef_IChartOption_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setEnvironment_void_IChartOption_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_EVString_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_EVString_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_EVString_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_EVString_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_EVString_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_EVString_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_ev_uint32_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_ev_uint32_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_ev_uint32_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_ev_uint32_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_ev_uint32_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControl_void_EVString_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControl_ev_bool_EVString_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlSize_void_EVString_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlSize_ev_bool_EVString_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColor_void_EVString_IColor_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColor_ev_bool_EVString_IColor_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControlColor_void_EVString_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControlColor_ev_bool_EVString_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColorBlendMode_void_EVString_EVColorBlendOperation_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColorBlendMode_EVColorBlendOperation_EVString_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getType_EVLayerType_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getDataset_IDataset_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getDatasetName_EVString_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getDataSource_IDataSource_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_select_void_IQueryFilter_EVSelectionResultType_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_clearSelection_void_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setLayerSelection_void_ILayerSelection_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getLayerSelection_ILayerSelection_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getName_EVString_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setName_void_EVString_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getDescription_EVString_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setDescription_void_EVString_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_canEdit_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setCanEdit_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_isEditing_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setEditing_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_isVisible_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setVisible_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_isValid_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_isSelectable_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setSelectable_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_ignoreScale_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setIgnoreScale_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMaxScale_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMaxScale_void_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMinScale_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMinScale_void_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getSpatialReference_ISpatialReference_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setSpatialReference_void_ISpatialReference_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setTransparentValue_void_ev_uint8_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getTransparentValue_ev_uint8_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getExtent_IEnvelope_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_clone_ILayer_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_toStream_void_CDataStream_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_toXML_EVString_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_fromXmlElement_void_CXmlElement_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_toXmlElement_CXmlElement_Callback = NULL;
+						m_EarthView_World_Spatial_Atlas_IChartLayer_fromStream_void_CDataStream_Callback = NULL;
+					}
+				public:
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassNum_ev_uint32(EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassNum_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassNum_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassName_EVString_ev_uint32(EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassName_EVString_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassName_EVString_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassType_ev_int32_EVString(EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassType_ev_int32_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassType_ev_int32_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_ev_uint32_ev_bool(EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_ev_uint32_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_ev_uint32_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_EVString_ev_bool(EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_EVString_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_EVString_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_ev_uint32(EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_EVString(EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassSelected_void_ev_uint32_ev_bool(EarthView_World_Spatial_Atlas_IChartLayer_setClassSelected_void_ev_uint32_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setClassSelected_void_ev_uint32_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_ev_uint32(EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_EVString(EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setDataset_void_IDataset(EarthView_World_Spatial_Atlas_IChartLayer_setDataset_void_IDataset_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setDataset_void_IDataset_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getOptionRef_IChartOption(EarthView_World_Spatial_Atlas_IChartLayer_getOptionRef_IChartOption_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getOptionRef_IChartOption_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setEnvironment_void_IChartOption(EarthView_World_Spatial_Atlas_IChartLayer_setEnvironment_void_IChartOption_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setEnvironment_void_IChartOption_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_EVString_ev_real64(EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_EVString_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_EVString_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_EVString_ev_real64(EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_EVString_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_EVString_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_EVString_ev_real64(EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_EVString_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_EVString_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_EVString_ev_real64(EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_EVString_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_EVString_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_EVString_ev_bool(EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_EVString_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_EVString_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_EVString(EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_ev_uint32_ev_real64(EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_ev_uint32_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_ev_uint32_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_ev_uint32_ev_real64(EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_ev_uint32_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_ev_uint32_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_ev_uint32_ev_real64(EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_ev_uint32_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_ev_uint32_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_ev_uint32_ev_real64(EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_ev_uint32_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_ev_uint32_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_ev_uint32_ev_bool(EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_ev_uint32_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_ev_uint32_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_ev_uint32(EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControl_void_EVString_ev_bool(EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControl_void_EVString_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControl_void_EVString_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControl_ev_bool_EVString(EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControl_ev_bool_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControl_ev_bool_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlSize_void_EVString_ev_uint32(EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlSize_void_EVString_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlSize_void_EVString_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlSize_ev_bool_EVString_ev_uint32(EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlSize_ev_bool_EVString_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlSize_ev_bool_EVString_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColor_void_EVString_IColor(EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColor_void_EVString_IColor_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColor_void_EVString_IColor_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColor_ev_bool_EVString_IColor(EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColor_ev_bool_EVString_IColor_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColor_ev_bool_EVString_IColor_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControlColor_void_EVString_ev_bool(EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControlColor_void_EVString_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControlColor_void_EVString_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControlColor_ev_bool_EVString(EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControlColor_ev_bool_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControlColor_ev_bool_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColorBlendMode_void_EVString_EVColorBlendOperation(EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColorBlendMode_void_EVString_EVColorBlendOperation_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColorBlendMode_void_EVString_EVColorBlendOperation_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColorBlendMode_EVColorBlendOperation_EVString(EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColorBlendMode_EVColorBlendOperation_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColorBlendMode_EVColorBlendOperation_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getType_EVLayerType(EarthView_World_Spatial_Atlas_IChartLayer_getType_EVLayerType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getType_EVLayerType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getDataset_IDataset(EarthView_World_Spatial_Atlas_IChartLayer_getDataset_IDataset_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getDataset_IDataset_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getDatasetName_EVString(EarthView_World_Spatial_Atlas_IChartLayer_getDatasetName_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getDatasetName_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getDataSource_IDataSource(EarthView_World_Spatial_Atlas_IChartLayer_getDataSource_IDataSource_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getDataSource_IDataSource_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_select_void_IQueryFilter_EVSelectionResultType(EarthView_World_Spatial_Atlas_IChartLayer_select_void_IQueryFilter_EVSelectionResultType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_select_void_IQueryFilter_EVSelectionResultType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_clearSelection_void(EarthView_World_Spatial_Atlas_IChartLayer_clearSelection_void_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_clearSelection_void_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setLayerSelection_void_ILayerSelection(EarthView_World_Spatial_Atlas_IChartLayer_setLayerSelection_void_ILayerSelection_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setLayerSelection_void_ILayerSelection_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getLayerSelection_ILayerSelection(EarthView_World_Spatial_Atlas_IChartLayer_getLayerSelection_ILayerSelection_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getLayerSelection_ILayerSelection_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getName_EVString(EarthView_World_Spatial_Atlas_IChartLayer_getName_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getName_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setName_void_EVString(EarthView_World_Spatial_Atlas_IChartLayer_setName_void_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setName_void_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getDescription_EVString(EarthView_World_Spatial_Atlas_IChartLayer_getDescription_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getDescription_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setDescription_void_EVString(EarthView_World_Spatial_Atlas_IChartLayer_setDescription_void_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setDescription_void_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_canEdit_ev_bool(EarthView_World_Spatial_Atlas_IChartLayer_canEdit_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_canEdit_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setCanEdit_void_ev_bool(EarthView_World_Spatial_Atlas_IChartLayer_setCanEdit_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setCanEdit_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_isEditing_ev_bool(EarthView_World_Spatial_Atlas_IChartLayer_isEditing_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_isEditing_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setEditing_void_ev_bool(EarthView_World_Spatial_Atlas_IChartLayer_setEditing_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setEditing_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_isVisible_ev_bool(EarthView_World_Spatial_Atlas_IChartLayer_isVisible_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_isVisible_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setVisible_void_ev_bool(EarthView_World_Spatial_Atlas_IChartLayer_setVisible_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setVisible_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_isValid_ev_bool(EarthView_World_Spatial_Atlas_IChartLayer_isValid_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_isValid_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_isSelectable_ev_bool(EarthView_World_Spatial_Atlas_IChartLayer_isSelectable_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_isSelectable_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setSelectable_void_ev_bool(EarthView_World_Spatial_Atlas_IChartLayer_setSelectable_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setSelectable_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_ignoreScale_ev_bool(EarthView_World_Spatial_Atlas_IChartLayer_ignoreScale_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_ignoreScale_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setIgnoreScale_void_ev_bool(EarthView_World_Spatial_Atlas_IChartLayer_setIgnoreScale_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setIgnoreScale_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMaxScale_ev_real64(EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMaxScale_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMaxScale_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMaxScale_void_ev_real64(EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMaxScale_void_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMaxScale_void_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMinScale_ev_real64(EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMinScale_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMinScale_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMinScale_void_ev_real64(EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMinScale_void_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMinScale_void_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getSpatialReference_ISpatialReference(EarthView_World_Spatial_Atlas_IChartLayer_getSpatialReference_ISpatialReference_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getSpatialReference_ISpatialReference_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setSpatialReference_void_ISpatialReference(EarthView_World_Spatial_Atlas_IChartLayer_setSpatialReference_void_ISpatialReference_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setSpatialReference_void_ISpatialReference_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setTransparentValue_void_ev_uint8(EarthView_World_Spatial_Atlas_IChartLayer_setTransparentValue_void_ev_uint8_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_setTransparentValue_void_ev_uint8_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getTransparentValue_ev_uint8(EarthView_World_Spatial_Atlas_IChartLayer_getTransparentValue_ev_uint8_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getTransparentValue_ev_uint8_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getExtent_IEnvelope(EarthView_World_Spatial_Atlas_IChartLayer_getExtent_IEnvelope_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_getExtent_IEnvelope_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType(EarthView_World_Spatial_Atlas_IChartLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_clone_ILayer(EarthView_World_Spatial_Atlas_IChartLayer_clone_ILayer_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_clone_ILayer_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_toStream_void_CDataStream(EarthView_World_Spatial_Atlas_IChartLayer_toStream_void_CDataStream_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_toStream_void_CDataStream_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_toXML_EVString(EarthView_World_Spatial_Atlas_IChartLayer_toXML_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_toXML_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_fromXmlElement_void_CXmlElement(EarthView_World_Spatial_Atlas_IChartLayer_fromXmlElement_void_CXmlElement_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_fromXmlElement_void_CXmlElement_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_toXmlElement_CXmlElement(EarthView_World_Spatial_Atlas_IChartLayer_toXmlElement_CXmlElement_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_toXmlElement_CXmlElement_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_fromStream_void_CDataStream(EarthView_World_Spatial_Atlas_IChartLayer_fromStream_void_CDataStream_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial_Atlas_IChartLayer_fromStream_void_CDataStream_Callback = pCallback;
+					}
+					virtual ev_uint32 getObjectClassNum() const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassNum_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_uint32 returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassNum_ev_uint32_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getObjectClassNum();
+					}
+					virtual const EVString getObjectClassName(_in ev_uint32 index)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassName_EVString_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							const EVString returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassName_EVString_ev_uint32_Callback(index);
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getObjectClassName(index);
+					}
+					virtual ev_int32 getObjectClassType(_in const EVString& name)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassType_ev_int32_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							char* name_Char = name.makeBuffer();
+							ev_int32 returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassType_ev_int32_EVString_Callback(name_Char);
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getObjectClassType(name);
+					}
+					virtual void setClassVisible(_in ev_uint32 index, _in ev_bool value)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_ev_uint32_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_ev_uint32_ev_bool_Callback(index, value);
+						}
+						else
+							return this->IChartLayer::setClassVisible(index, value);
+					}
+					virtual void setClassVisible(_in const EVString& name, _in ev_bool value)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_EVString_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							char* name_Char = name.makeBuffer();
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_EVString_ev_bool_Callback(name_Char, value);
+						}
+						else
+							return this->IChartLayer::setClassVisible(name, value);
+					}
+					virtual ev_bool isClassVisible(_in ev_uint32 index)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_ev_uint32_Callback(index);
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::isClassVisible(index);
+					}
+					virtual ev_bool isClassVisible(_in const EVString& name)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							char* name_Char = name.makeBuffer();
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_EVString_Callback(name_Char);
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::isClassVisible(name);
+					}
+					virtual void setClassSelected(_in ev_uint32 index, _in ev_bool value)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setClassSelected_void_ev_uint32_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setClassSelected_void_ev_uint32_ev_bool_Callback(index, value);
+						}
+						else
+							return this->IChartLayer::setClassSelected(index, value);
+					}
+					virtual ev_bool isClassSelected(_in ev_uint32 index)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_ev_uint32_Callback(index);
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::isClassSelected(index);
+					}
+					virtual ev_bool isClassSelected(_in const EVString& name)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							char* name_Char = name.makeBuffer();
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_EVString_Callback(name_Char);
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::isClassSelected(name);
+					}
+					virtual void setDataset(_in EarthView::World::Spatial::GeoDataset::IDataset* ref_pDataset)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setDataset_void_IDataset_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setDataset_void_IDataset_Callback(ref_pDataset);
+						}
+						else
+							return this->IChartLayer::setDataset(ref_pDataset);
+					}
+					virtual void select(_in EarthView::World::Spatial::GeoDataset::IQueryFilter* filter, _in EarthView::World::Spatial::Atlas::EVSelectionResultType type)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_select_void_IQueryFilter_EVSelectionResultType_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_select_void_IQueryFilter_EVSelectionResultType_Callback(filter, (int)type);
+						}
+						else
+							return this->IChartLayer::select(filter, type);
+					}
+					virtual void clearSelection()
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_clearSelection_void_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_clearSelection_void_Callback();
+						}
+						else
+							return this->IChartLayer::clearSelection();
+					}
+					virtual EarthView::World::Spatial::Atlas::ILayerSelection* getLayerSelection()
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getLayerSelection_ILayerSelection_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Atlas::ILayerSelection* returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getLayerSelection_ILayerSelection_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getLayerSelection();
+					}
+					virtual EarthView::World::Spatial::Display::IChartOption* getOptionRef()
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getOptionRef_IChartOption_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Display::IChartOption* returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getOptionRef_IChartOption_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getOptionRef();
+					}
+					virtual void setEnvironment(_in const EarthView::World::Spatial::Display::IChartOption* uniformOption)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setEnvironment_void_IChartOption_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setEnvironment_void_IChartOption_Callback(uniformOption);
+						}
+						else
+							return this->IChartLayer::setEnvironment(uniformOption);
+					}
+					virtual void setClassDisplayMinScale(_in const EVString& className, _in const ev_real64 scale)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_EVString_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							char* className_Char = className.makeBuffer();
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_EVString_ev_real64_Callback(className_Char, scale);
+						}
+						else
+							return this->IChartLayer::setClassDisplayMinScale(className, scale);
+					}
+					virtual ev_bool getClassDisplayMinScale(_in const EVString& className, _inout ev_real64& minScale) const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_EVString_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							char* className_Char = className.makeBuffer();
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_EVString_ev_real64_Callback(className_Char, minScale);
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getClassDisplayMinScale(className, minScale);
+					}
+					virtual void setClassDisplayMaxScale(_in const EVString& className, _in const ev_real64 scale)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_EVString_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							char* className_Char = className.makeBuffer();
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_EVString_ev_real64_Callback(className_Char, scale);
+						}
+						else
+							return this->IChartLayer::setClassDisplayMaxScale(className, scale);
+					}
+					virtual ev_bool getClassDisplayMaxScale(_in const EVString& className, _inout ev_real64& maxScale) const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_EVString_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							char* className_Char = className.makeBuffer();
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_EVString_ev_real64_Callback(className_Char, maxScale);
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getClassDisplayMaxScale(className, maxScale);
+					}
+					virtual void setClassIgnoreScale(_in const EVString& className, _in const ev_bool classIgnore)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_EVString_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							char* className_Char = className.makeBuffer();
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_EVString_ev_bool_Callback(className_Char, classIgnore);
+						}
+						else
+							return this->IChartLayer::setClassIgnoreScale(className, classIgnore);
+					}
+					virtual ev_bool getClassIgnoreScale(_in const EVString& className) const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							char* className_Char = className.makeBuffer();
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_EVString_Callback(className_Char);
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getClassIgnoreScale(className);
+					}
+					virtual void setClassDisplayMinScale(_in const ev_uint32 index, _in const ev_real64 scale)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_ev_uint32_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_ev_uint32_ev_real64_Callback(index, scale);
+						}
+						else
+							return this->IChartLayer::setClassDisplayMinScale(index, scale);
+					}
+					virtual ev_bool getClassDisplayMinScale(_in const ev_uint32 index, _inout ev_real64& scale) const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_ev_uint32_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_ev_uint32_ev_real64_Callback(index, scale);
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getClassDisplayMinScale(index, scale);
+					}
+					virtual void setClassDisplayMaxScale(_in const ev_uint32 index, _in const ev_real64 scale)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_ev_uint32_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_ev_uint32_ev_real64_Callback(index, scale);
+						}
+						else
+							return this->IChartLayer::setClassDisplayMaxScale(index, scale);
+					}
+					virtual ev_bool getClassDisplayMaxScale(_in const ev_uint32 index, _inout ev_real64& scale) const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_ev_uint32_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_ev_uint32_ev_real64_Callback(index, scale);
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getClassDisplayMaxScale(index, scale);
+					}
+					virtual void setClassIgnoreScale(_in const ev_uint32 index, _in const ev_bool classIgnore)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_ev_uint32_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_ev_uint32_ev_bool_Callback(index, classIgnore);
+						}
+						else
+							return this->IChartLayer::setClassIgnoreScale(index, classIgnore);
+					}
+					virtual ev_bool getClassIgnoreScale(_in const ev_uint32 index) const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_ev_uint32_Callback(index);
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getClassIgnoreScale(index);
+					}
+					virtual void setUseChartClassControl(_in const EVString& className, _in ev_bool IsUse)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControl_void_EVString_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							char* className_Char = className.makeBuffer();
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControl_void_EVString_ev_bool_Callback(className_Char, IsUse);
+						}
+						else
+							return this->IChartLayer::setUseChartClassControl(className, IsUse);
+					}
+					virtual ev_bool getUseChartClassControl(_in const EVString& className) const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControl_ev_bool_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							char* className_Char = className.makeBuffer();
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControl_ev_bool_EVString_Callback(className_Char);
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getUseChartClassControl(className);
+					}
+					virtual void setChartClassControlSize(_in const EVString& className, _in ev_uint32 sizeFactor)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlSize_void_EVString_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							char* className_Char = className.makeBuffer();
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlSize_void_EVString_ev_uint32_Callback(className_Char, sizeFactor);
+						}
+						else
+							return this->IChartLayer::setChartClassControlSize(className, sizeFactor);
+					}
+					virtual ev_bool getChartClassControlSize(_in const EVString& className, _inout ev_uint32& sizeFactor) const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlSize_ev_bool_EVString_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							char* className_Char = className.makeBuffer();
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlSize_ev_bool_EVString_ev_uint32_Callback(className_Char, sizeFactor);
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getChartClassControlSize(className, sizeFactor);
+					}
+					virtual void setChartClassControlColor(_in const EVString& className, _in const EarthView::World::Spatial::Display::IColor* color)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColor_void_EVString_IColor_Callback != NULL && this->isCustomExtend())
+						{
+							char* className_Char = className.makeBuffer();
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColor_void_EVString_IColor_Callback(className_Char, color);
+						}
+						else
+							return this->IChartLayer::setChartClassControlColor(className, color);
+					}
+					virtual ev_bool getChartClassControlColor(_in const EVString& className, _in EarthView::World::Spatial::Display::IColor*& pColor) const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColor_ev_bool_EVString_IColor_Callback != NULL && this->isCustomExtend())
+						{
+							char* className_Char = className.makeBuffer();
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColor_ev_bool_EVString_IColor_Callback(className_Char, pColor);
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getChartClassControlColor(className, pColor);
+					}
+					virtual void setUseChartClassControlColor(_in const EVString& className, _in ev_bool useColor)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControlColor_void_EVString_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							char* className_Char = className.makeBuffer();
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControlColor_void_EVString_ev_bool_Callback(className_Char, useColor);
+						}
+						else
+							return this->IChartLayer::setUseChartClassControlColor(className, useColor);
+					}
+					virtual ev_bool getUseChartClassControlColor(_in const EVString& className) const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControlColor_ev_bool_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							char* className_Char = className.makeBuffer();
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControlColor_ev_bool_EVString_Callback(className_Char);
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getUseChartClassControlColor(className);
+					}
+					virtual void setChartClassControlColorBlendMode(_in const EVString& className, _in EarthView::World::Spatial::Display::EVColorBlendOperation mode)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColorBlendMode_void_EVString_EVColorBlendOperation_Callback != NULL && this->isCustomExtend())
+						{
+							char* className_Char = className.makeBuffer();
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColorBlendMode_void_EVString_EVColorBlendOperation_Callback(className_Char, (int)mode);
+						}
+						else
+							return this->IChartLayer::setChartClassControlColorBlendMode(className, mode);
+					}
+					virtual EarthView::World::Spatial::Display::EVColorBlendOperation getChartClassControlColorBlendMode(_in const EVString& className) const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColorBlendMode_EVColorBlendOperation_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							char* className_Char = className.makeBuffer();
+							EarthView::World::Spatial::Display::EVColorBlendOperation returnValue = (EarthView::World::Spatial::Display::EVColorBlendOperation)m_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColorBlendMode_EVColorBlendOperation_EVString_Callback(className_Char);
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getChartClassControlColorBlendMode(className);
+					}
+					virtual EarthView::World::Spatial::Atlas::EVLayerType getType() const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getType_EVLayerType_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Atlas::EVLayerType returnValue = (EarthView::World::Spatial::Atlas::EVLayerType)m_EarthView_World_Spatial_Atlas_IChartLayer_getType_EVLayerType_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getType();
+					}
+					virtual EarthView::World::Spatial::GeoDataset::IDataset* getDataset()
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getDataset_IDataset_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::GeoDataset::IDataset* returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getDataset_IDataset_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getDataset();
+					}
+					virtual EVString getDatasetName()
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getDatasetName_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							EVString returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getDatasetName_EVString_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getDatasetName();
+					}
+					virtual EarthView::World::Spatial::GeoDataset::IDataSource* getDataSource()
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getDataSource_IDataSource_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::GeoDataset::IDataSource* returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getDataSource_IDataSource_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getDataSource();
+					}
+					virtual void setLayerSelection(_in EarthView::World::Spatial::Atlas::ILayerSelection* selection)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setLayerSelection_void_ILayerSelection_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setLayerSelection_void_ILayerSelection_Callback(selection);
+						}
+						else
+							return this->IChartLayer::setLayerSelection(selection);
+					}
+					virtual EVString getName() const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getName_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							EVString returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getName_EVString_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getName();
+					}
+					virtual void setName(_in const EVString& name)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setName_void_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							char* name_Char = name.makeBuffer();
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setName_void_EVString_Callback(name_Char);
+						}
+						else
+							return this->IChartLayer::setName(name);
+					}
+					virtual EVString getDescription() const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getDescription_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							EVString returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getDescription_EVString_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getDescription();
+					}
+					virtual void setDescription(_in const EVString& value)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setDescription_void_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							char* value_Char = value.makeBuffer();
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setDescription_void_EVString_Callback(value_Char);
+						}
+						else
+							return this->IChartLayer::setDescription(value);
+					}
+					virtual ev_bool canEdit() const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_canEdit_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_canEdit_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::canEdit();
+					}
+					virtual void setCanEdit(_in ev_bool can)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setCanEdit_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setCanEdit_void_ev_bool_Callback(can);
+						}
+						else
+							return this->IChartLayer::setCanEdit(can);
+					}
+					virtual ev_bool isEditing() const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_isEditing_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_isEditing_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::isEditing();
+					}
+					virtual void setEditing(_in ev_bool editing)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setEditing_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setEditing_void_ev_bool_Callback(editing);
+						}
+						else
+							return this->IChartLayer::setEditing(editing);
+					}
+					virtual ev_bool isVisible() const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_isVisible_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_isVisible_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::isVisible();
+					}
+					virtual void setVisible(_in ev_bool visible)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setVisible_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setVisible_void_ev_bool_Callback(visible);
+						}
+						else
+							return this->IChartLayer::setVisible(visible);
+					}
+					virtual ev_bool isValid() const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_isValid_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_isValid_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::isValid();
+					}
+					virtual ev_bool isSelectable() const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_isSelectable_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_isSelectable_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::isSelectable();
+					}
+					virtual void setSelectable(_in ev_bool selectable)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setSelectable_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setSelectable_void_ev_bool_Callback(selectable);
+						}
+						else
+							return this->IChartLayer::setSelectable(selectable);
+					}
+					virtual ev_bool ignoreScale() const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_ignoreScale_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_ignoreScale_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::ignoreScale();
+					}
+					virtual void setIgnoreScale(_in ev_bool bIgnore)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setIgnoreScale_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setIgnoreScale_void_ev_bool_Callback(bIgnore);
+						}
+						else
+							return this->IChartLayer::setIgnoreScale(bIgnore);
+					}
+					virtual ev_real64 getDisplayMaxScale() const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMaxScale_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMaxScale_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getDisplayMaxScale();
+					}
+					virtual void setDisplayMaxScale(_in ev_real64 scale)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMaxScale_void_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMaxScale_void_ev_real64_Callback(scale);
+						}
+						else
+							return this->IChartLayer::setDisplayMaxScale(scale);
+					}
+					virtual ev_real64 getDisplayMinScale() const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMinScale_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMinScale_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getDisplayMinScale();
+					}
+					virtual void setDisplayMinScale(_in ev_real64 scale)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMinScale_void_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMinScale_void_ev_real64_Callback(scale);
+						}
+						else
+							return this->IChartLayer::setDisplayMinScale(scale);
+					}
+					virtual EarthView::World::Spatial::Geometry::ISpatialReference* getSpatialReference() const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getSpatialReference_ISpatialReference_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::ISpatialReference* returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getSpatialReference_ISpatialReference_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getSpatialReference();
+					}
+					virtual void setSpatialReference(_in EarthView::World::Spatial::Geometry::ISpatialReference* ref_sr)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setSpatialReference_void_ISpatialReference_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setSpatialReference_void_ISpatialReference_Callback(ref_sr);
+						}
+						else
+							return this->IChartLayer::setSpatialReference(ref_sr);
+					}
+					virtual void setTransparentValue(_in ev_uint8 transparent)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_setTransparentValue_void_ev_uint8_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_setTransparentValue_void_ev_uint8_Callback(transparent);
+						}
+						else
+							return this->IChartLayer::setTransparentValue(transparent);
+					}
+					virtual ev_uint8 getTransparentValue() const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getTransparentValue_ev_uint8_Callback != NULL && this->isCustomExtend())
+						{
+							ev_uint8 returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getTransparentValue_ev_uint8_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getTransparentValue();
+					}
+					virtual const EarthView::World::Spatial::Geometry::IEnvelope* getExtent() const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_getExtent_IEnvelope_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Spatial::Geometry::IEnvelope* returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_getExtent_IEnvelope_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::getExtent();
+					}
+					virtual ev_bool draw(_in EarthView::World::Spatial::Display::ISpatialDisplay* display, _in EarthView::World::Spatial::Atlas::EVVectorLayerRendererType type)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback(display, (int)type);
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::draw(display, type);
+					}
+					virtual EarthView::World::Spatial::Atlas::ILayer* clone() const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_clone_ILayer_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Atlas::ILayer* returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_clone_ILayer_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::clone();
+					}
+					virtual void toStream(_out EarthView::World::Core::CDataStream& stream) const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_toStream_void_CDataStream_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_toStream_void_CDataStream_Callback(&stream);
+						}
+						else
+							return this->IChartLayer::toStream(stream);
+					}
+					virtual EVString toXML() const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_toXML_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							EVString returnValue = m_EarthView_World_Spatial_Atlas_IChartLayer_toXML_EVString_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::toXML();
+					}
+					virtual void fromXmlElement(_in EarthView::World::Core::CXmlElement& element)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_fromXmlElement_void_CXmlElement_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_fromXmlElement_void_CXmlElement_Callback(&element);
+						}
+						else
+							return this->IChartLayer::fromXmlElement(element);
+					}
+					virtual EarthView::World::Core::CXmlElement toXmlElement() const
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_toXmlElement_CXmlElement_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Core::CXmlElement returnValue = *(EarthView::World::Core::CXmlElement*)m_EarthView_World_Spatial_Atlas_IChartLayer_toXmlElement_CXmlElement_Callback();
+							return returnValue;
+						}
+						else
+							return this->IChartLayer::toXmlElement();
+					}
+					virtual void fromStream(_inout EarthView::World::Core::CDataStream& stream)
+					{
+						if(m_EarthView_World_Spatial_Atlas_IChartLayer_fromStream_void_CDataStream_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial_Atlas_IChartLayer_fromStream_void_CDataStream_Callback(&stream);
+						}
+						else
+							return this->IChartLayer::fromStream(stream);
+					}
+				};
+				REGISTER_FACTORY_CLASS(IChartLayerProxy);
+				extern "C" EV_DLL_EXPORT  ev_uint32  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassNum_ev_uint32(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+					{
+						ev_uint32 objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getObjectClassNum();
+						return objXXXX;
+					}
+					else
+					{
+						ev_uint32 objXXXX = ptrNativeObject->getObjectClassNum();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassNum_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassNum_ev_uint32_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassNum_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_uint32  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassNum_ev_uint32_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ev_uint32 objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getObjectClassNum();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  const char*  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassName_EVString_ev_uint32(void *pObjectXXXX, _in ev_uint32 index )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+					{
+						const EVString objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getObjectClassName(index);
+						return objXXXX.makeBuffer();
+					}
+					else
+					{
+						const EVString objXXXX = ptrNativeObject->getObjectClassName(index);
+						return objXXXX.makeBuffer();
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassName_EVString_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassName_EVString_ev_uint32_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassName_EVString_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  const char*  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassName_EVString_ev_uint32_NoVirtual(void *pObjectXXXX, _in ev_uint32 index )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					const EVString objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getObjectClassName(index);
+					return objXXXX.makeBuffer();
+				}
+				extern "C" EV_DLL_EXPORT  ev_int32  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassType_ev_int32_EVString(void *pObjectXXXX, _in const char* name )
+				{
+					EarthView::World::Core::ev_string name1 = name;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+					{
+						ev_int32 objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getObjectClassType(name1);
+						return objXXXX;
+					}
+					else
+					{
+						ev_int32 objXXXX = ptrNativeObject->getObjectClassType(name1);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassType_ev_int32_EVString( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassType_ev_int32_EVString_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassType_ev_int32_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_int32  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getObjectClassType_ev_int32_EVString_NoVirtual(void *pObjectXXXX, _in const char* name )
+				{
+					EarthView::World::Core::ev_string name1 = name;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ev_int32 objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getObjectClassType(name1);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_ev_uint32_ev_bool(void *pObjectXXXX, _in ev_uint32 index, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setClassVisible(index, value);
+					else
+						ptrNativeObject->setClassVisible(index, value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_ev_uint32_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_ev_uint32_ev_bool_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_ev_uint32_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_ev_uint32_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_uint32 index, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setClassVisible(index, value);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_EVString_ev_bool(void *pObjectXXXX, _in const char* name, _in ev_bool value )
+				{
+					EarthView::World::Core::ev_string name1 = name;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setClassVisible(name1, value);
+					else
+						ptrNativeObject->setClassVisible(name1, value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_EVString_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_EVString_ev_bool_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_EVString_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassVisible_void_EVString_ev_bool_NoVirtual(void *pObjectXXXX, _in const char* name, _in ev_bool value )
+				{
+					EarthView::World::Core::ev_string name1 = name;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setClassVisible(name1, value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_ev_uint32(void *pObjectXXXX, _in ev_uint32 index )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::isClassVisible(index);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->isClassVisible(index);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_ev_uint32_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_ev_uint32_NoVirtual(void *pObjectXXXX, _in ev_uint32 index )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::isClassVisible(index);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_EVString(void *pObjectXXXX, _in const char* name )
+				{
+					EarthView::World::Core::ev_string name1 = name;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::isClassVisible(name1);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->isClassVisible(name1);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_EVString( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_EVString_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_isClassVisible_ev_bool_EVString_NoVirtual(void *pObjectXXXX, _in const char* name )
+				{
+					EarthView::World::Core::ev_string name1 = name;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::isClassVisible(name1);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassSelected_void_ev_uint32_ev_bool(void *pObjectXXXX, _in ev_uint32 index, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setClassSelected(index, value);
+					else
+						ptrNativeObject->setClassSelected(index, value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassSelected_void_ev_uint32_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setClassSelected_void_ev_uint32_ev_bool_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassSelected_void_ev_uint32_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassSelected_void_ev_uint32_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_uint32 index, _in ev_bool value )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setClassSelected(index, value);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_ev_uint32(void *pObjectXXXX, _in ev_uint32 index )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::isClassSelected(index);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->isClassSelected(index);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_ev_uint32_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_ev_uint32_NoVirtual(void *pObjectXXXX, _in ev_uint32 index )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::isClassSelected(index);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_EVString(void *pObjectXXXX, _in const char* name )
+				{
+					EarthView::World::Core::ev_string name1 = name;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::isClassSelected(name1);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->isClassSelected(name1);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_EVString( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_EVString_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_isClassSelected_ev_bool_EVString_NoVirtual(void *pObjectXXXX, _in const char* name )
+				{
+					EarthView::World::Core::ev_string name1 = name;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::isClassSelected(name1);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setDataset_void_IDataset(void *pObjectXXXX, _in EarthView::World::Spatial::GeoDataset::IDataset* ref_pDataset )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setDataset(ref_pDataset);
+					else
+						ptrNativeObject->setDataset(ref_pDataset);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setDataset_void_IDataset( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setDataset_void_IDataset_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setDataset_void_IDataset(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setDataset_void_IDataset_NoVirtual(void *pObjectXXXX, _in EarthView::World::Spatial::GeoDataset::IDataset* ref_pDataset )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setDataset(ref_pDataset);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_select_void_IQueryFilter_EVSelectionResultType(void *pObjectXXXX, _in EarthView::World::Spatial::GeoDataset::IQueryFilter* filter, _in int type )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::select(filter, (EarthView::World::Spatial::Atlas::EVSelectionResultType)type);
+					else
+						ptrNativeObject->select(filter, (EarthView::World::Spatial::Atlas::EVSelectionResultType)type);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_select_void_IQueryFilter_EVSelectionResultType( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_select_void_IQueryFilter_EVSelectionResultType_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_select_void_IQueryFilter_EVSelectionResultType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_select_void_IQueryFilter_EVSelectionResultType_NoVirtual(void *pObjectXXXX, _in EarthView::World::Spatial::GeoDataset::IQueryFilter* filter, _in int type )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::select(filter, (EarthView::World::Spatial::Atlas::EVSelectionResultType)type);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_clearSelection_void(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::clearSelection();
+					else
+						ptrNativeObject->clearSelection();
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_clearSelection_void( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_clearSelection_void_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_clearSelection_void(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_clearSelection_void_NoVirtual(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::clearSelection();
+				}
+				extern "C" EV_DLL_EXPORT  EarthView::World::Spatial::Atlas::ILayerSelection*  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getLayerSelection_ILayerSelection(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+					{
+						EarthView::World::Spatial::Atlas::ILayerSelection* objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getLayerSelection();
+						return objXXXX;
+					}
+					else
+					{
+						EarthView::World::Spatial::Atlas::ILayerSelection* objXXXX = ptrNativeObject->getLayerSelection();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getLayerSelection_ILayerSelection( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getLayerSelection_ILayerSelection_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getLayerSelection_ILayerSelection(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  EarthView::World::Spatial::Atlas::ILayerSelection*  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getLayerSelection_ILayerSelection_NoVirtual(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					EarthView::World::Spatial::Atlas::ILayerSelection* objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getLayerSelection();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  EarthView::World::Spatial::Display::IChartOption*  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getOptionRef_IChartOption(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+					{
+						EarthView::World::Spatial::Display::IChartOption* objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getOptionRef();
+						return objXXXX;
+					}
+					else
+					{
+						EarthView::World::Spatial::Display::IChartOption* objXXXX = ptrNativeObject->getOptionRef();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getOptionRef_IChartOption( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getOptionRef_IChartOption_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getOptionRef_IChartOption(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  EarthView::World::Spatial::Display::IChartOption*  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getOptionRef_IChartOption_NoVirtual(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					EarthView::World::Spatial::Display::IChartOption* objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getOptionRef();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setEnvironment_void_IChartOption(void *pObjectXXXX, _in const EarthView::World::Spatial::Display::IChartOption* uniformOption )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setEnvironment(uniformOption);
+					else
+						ptrNativeObject->setEnvironment(uniformOption);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setEnvironment_void_IChartOption( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setEnvironment_void_IChartOption_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setEnvironment_void_IChartOption(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setEnvironment_void_IChartOption_NoVirtual(void *pObjectXXXX, _in const EarthView::World::Spatial::Display::IChartOption* uniformOption )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setEnvironment(uniformOption);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_EVString_ev_real64(void *pObjectXXXX, _in const char* className, _in const ev_real64 scale )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setClassDisplayMinScale(className1, scale);
+					else
+						ptrNativeObject->setClassDisplayMinScale(className1, scale);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_EVString_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_EVString_ev_real64_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_EVString_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_EVString_ev_real64_NoVirtual(void *pObjectXXXX, _in const char* className, _in const ev_real64 scale )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setClassDisplayMinScale(className1, scale);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_EVString_ev_real64(void *pObjectXXXX, _in const char* className, _inout ev_real64& minScale )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getClassDisplayMinScale(className1, minScale);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->getClassDisplayMinScale(className1, minScale);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_EVString_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_EVString_ev_real64_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_EVString_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_EVString_ev_real64_NoVirtual(void *pObjectXXXX, _in const char* className, _inout ev_real64& minScale )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getClassDisplayMinScale(className1, minScale);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_EVString_ev_real64(void *pObjectXXXX, _in const char* className, _in const ev_real64 scale )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setClassDisplayMaxScale(className1, scale);
+					else
+						ptrNativeObject->setClassDisplayMaxScale(className1, scale);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_EVString_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_EVString_ev_real64_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_EVString_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_EVString_ev_real64_NoVirtual(void *pObjectXXXX, _in const char* className, _in const ev_real64 scale )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setClassDisplayMaxScale(className1, scale);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_EVString_ev_real64(void *pObjectXXXX, _in const char* className, _inout ev_real64& maxScale )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getClassDisplayMaxScale(className1, maxScale);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->getClassDisplayMaxScale(className1, maxScale);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_EVString_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_EVString_ev_real64_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_EVString_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_EVString_ev_real64_NoVirtual(void *pObjectXXXX, _in const char* className, _inout ev_real64& maxScale )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getClassDisplayMaxScale(className1, maxScale);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_EVString_ev_bool(void *pObjectXXXX, _in const char* className, _in const ev_bool classIgnore )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setClassIgnoreScale(className1, classIgnore);
+					else
+						ptrNativeObject->setClassIgnoreScale(className1, classIgnore);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_EVString_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_EVString_ev_bool_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_EVString_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_EVString_ev_bool_NoVirtual(void *pObjectXXXX, _in const char* className, _in const ev_bool classIgnore )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setClassIgnoreScale(className1, classIgnore);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_EVString(void *pObjectXXXX, _in const char* className )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getClassIgnoreScale(className1);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->getClassIgnoreScale(className1);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_EVString( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_EVString_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_EVString_NoVirtual(void *pObjectXXXX, _in const char* className )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getClassIgnoreScale(className1);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_ev_uint32_ev_real64(void *pObjectXXXX, _in const ev_uint32 index, _in const ev_real64 scale )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setClassDisplayMinScale(index, scale);
+					else
+						ptrNativeObject->setClassDisplayMinScale(index, scale);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_ev_uint32_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_ev_uint32_ev_real64_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_ev_uint32_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMinScale_void_ev_uint32_ev_real64_NoVirtual(void *pObjectXXXX, _in const ev_uint32 index, _in const ev_real64 scale )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setClassDisplayMinScale(index, scale);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_ev_uint32_ev_real64(void *pObjectXXXX, _in const ev_uint32 index, _inout ev_real64& scale )
+				{
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getClassDisplayMinScale(index, scale);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->getClassDisplayMinScale(index, scale);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_ev_uint32_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_ev_uint32_ev_real64_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_ev_uint32_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMinScale_ev_bool_ev_uint32_ev_real64_NoVirtual(void *pObjectXXXX, _in const ev_uint32 index, _inout ev_real64& scale )
+				{
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getClassDisplayMinScale(index, scale);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_ev_uint32_ev_real64(void *pObjectXXXX, _in const ev_uint32 index, _in const ev_real64 scale )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setClassDisplayMaxScale(index, scale);
+					else
+						ptrNativeObject->setClassDisplayMaxScale(index, scale);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_ev_uint32_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_ev_uint32_ev_real64_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_ev_uint32_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassDisplayMaxScale_void_ev_uint32_ev_real64_NoVirtual(void *pObjectXXXX, _in const ev_uint32 index, _in const ev_real64 scale )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setClassDisplayMaxScale(index, scale);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_ev_uint32_ev_real64(void *pObjectXXXX, _in const ev_uint32 index, _inout ev_real64& scale )
+				{
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getClassDisplayMaxScale(index, scale);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->getClassDisplayMaxScale(index, scale);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_ev_uint32_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_ev_uint32_ev_real64_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_ev_uint32_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getClassDisplayMaxScale_ev_bool_ev_uint32_ev_real64_NoVirtual(void *pObjectXXXX, _in const ev_uint32 index, _inout ev_real64& scale )
+				{
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getClassDisplayMaxScale(index, scale);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_ev_uint32_ev_bool(void *pObjectXXXX, _in const ev_uint32 index, _in const ev_bool classIgnore )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setClassIgnoreScale(index, classIgnore);
+					else
+						ptrNativeObject->setClassIgnoreScale(index, classIgnore);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_ev_uint32_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_ev_uint32_ev_bool_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_ev_uint32_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setClassIgnoreScale_void_ev_uint32_ev_bool_NoVirtual(void *pObjectXXXX, _in const ev_uint32 index, _in const ev_bool classIgnore )
+				{
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setClassIgnoreScale(index, classIgnore);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_ev_uint32(void *pObjectXXXX, _in const ev_uint32 index )
+				{
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getClassIgnoreScale(index);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->getClassIgnoreScale(index);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_ev_uint32_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getClassIgnoreScale_ev_bool_ev_uint32_NoVirtual(void *pObjectXXXX, _in const ev_uint32 index )
+				{
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getClassIgnoreScale(index);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControl_void_EVString_ev_bool(void *pObjectXXXX, _in const char* className, _in ev_bool IsUse )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setUseChartClassControl(className1, IsUse);
+					else
+						ptrNativeObject->setUseChartClassControl(className1, IsUse);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControl_void_EVString_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControl_void_EVString_ev_bool_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControl_void_EVString_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControl_void_EVString_ev_bool_NoVirtual(void *pObjectXXXX, _in const char* className, _in ev_bool IsUse )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setUseChartClassControl(className1, IsUse);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControl_ev_bool_EVString(void *pObjectXXXX, _in const char* className )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getUseChartClassControl(className1);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->getUseChartClassControl(className1);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControl_ev_bool_EVString( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControl_ev_bool_EVString_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControl_ev_bool_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControl_ev_bool_EVString_NoVirtual(void *pObjectXXXX, _in const char* className )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getUseChartClassControl(className1);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlSize_void_EVString_ev_uint32(void *pObjectXXXX, _in const char* className, _in ev_uint32 sizeFactor )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setChartClassControlSize(className1, sizeFactor);
+					else
+						ptrNativeObject->setChartClassControlSize(className1, sizeFactor);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlSize_void_EVString_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlSize_void_EVString_ev_uint32_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlSize_void_EVString_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlSize_void_EVString_ev_uint32_NoVirtual(void *pObjectXXXX, _in const char* className, _in ev_uint32 sizeFactor )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setChartClassControlSize(className1, sizeFactor);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlSize_ev_bool_EVString_ev_uint32(void *pObjectXXXX, _in const char* className, _inout ev_uint32& sizeFactor )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getChartClassControlSize(className1, sizeFactor);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->getChartClassControlSize(className1, sizeFactor);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlSize_ev_bool_EVString_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlSize_ev_bool_EVString_ev_uint32_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlSize_ev_bool_EVString_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlSize_ev_bool_EVString_ev_uint32_NoVirtual(void *pObjectXXXX, _in const char* className, _inout ev_uint32& sizeFactor )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getChartClassControlSize(className1, sizeFactor);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColor_void_EVString_IColor(void *pObjectXXXX, _in const char* className, _in const EarthView::World::Spatial::Display::IColor* color )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setChartClassControlColor(className1, color);
+					else
+						ptrNativeObject->setChartClassControlColor(className1, color);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColor_void_EVString_IColor( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColor_void_EVString_IColor_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColor_void_EVString_IColor(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColor_void_EVString_IColor_NoVirtual(void *pObjectXXXX, _in const char* className, _in const EarthView::World::Spatial::Display::IColor* color )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setChartClassControlColor(className1, color);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColor_ev_bool_EVString_IColor(void *pObjectXXXX, _in const char* className, _in EarthView::World::Spatial::Display::IColor*& pColor )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getChartClassControlColor(className1, pColor);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->getChartClassControlColor(className1, pColor);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColor_ev_bool_EVString_IColor( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColor_ev_bool_EVString_IColor_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColor_ev_bool_EVString_IColor(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColor_ev_bool_EVString_IColor_NoVirtual(void *pObjectXXXX, _in const char* className, _in EarthView::World::Spatial::Display::IColor*& pColor )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getChartClassControlColor(className1, pColor);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControlColor_void_EVString_ev_bool(void *pObjectXXXX, _in const char* className, _in ev_bool useColor )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setUseChartClassControlColor(className1, useColor);
+					else
+						ptrNativeObject->setUseChartClassControlColor(className1, useColor);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControlColor_void_EVString_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControlColor_void_EVString_ev_bool_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControlColor_void_EVString_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setUseChartClassControlColor_void_EVString_ev_bool_NoVirtual(void *pObjectXXXX, _in const char* className, _in ev_bool useColor )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setUseChartClassControlColor(className1, useColor);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControlColor_ev_bool_EVString(void *pObjectXXXX, _in const char* className )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getUseChartClassControlColor(className1);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->getUseChartClassControlColor(className1);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControlColor_ev_bool_EVString( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControlColor_ev_bool_EVString_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControlColor_ev_bool_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getUseChartClassControlColor_ev_bool_EVString_NoVirtual(void *pObjectXXXX, _in const char* className )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getUseChartClassControlColor(className1);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColorBlendMode_void_EVString_EVColorBlendOperation(void *pObjectXXXX, _in const char* className, _in int mode )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setChartClassControlColorBlendMode(className1, (EarthView::World::Spatial::Display::EVColorBlendOperation)mode);
+					else
+						ptrNativeObject->setChartClassControlColorBlendMode(className1, (EarthView::World::Spatial::Display::EVColorBlendOperation)mode);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColorBlendMode_void_EVString_EVColorBlendOperation( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColorBlendMode_void_EVString_EVColorBlendOperation_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColorBlendMode_void_EVString_EVColorBlendOperation(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_setChartClassControlColorBlendMode_void_EVString_EVColorBlendOperation_NoVirtual(void *pObjectXXXX, _in const char* className, _in int mode )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::setChartClassControlColorBlendMode(className1, (EarthView::World::Spatial::Display::EVColorBlendOperation)mode);
+				}
+				extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColorBlendMode_EVColorBlendOperation_EVString(void *pObjectXXXX, _in const char* className )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					if (dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*)ptrNativeObject) != NULL)
+					{
+						EarthView::World::Spatial::Display::EVColorBlendOperation objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getChartClassControlColorBlendMode(className1);
+						return (int)objXXXX;
+					}
+					else
+					{
+						EarthView::World::Spatial::Display::EVColorBlendOperation objXXXX = ptrNativeObject->getChartClassControlColorBlendMode(className1);
+						return (int)objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColorBlendMode_EVColorBlendOperation_EVString( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColorBlendMode_EVColorBlendOperation_EVString_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColorBlendMode_EVColorBlendOperation_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Spatial_Atlas_IChartLayer_getChartClassControlColorBlendMode_EVColorBlendOperation_EVString_NoVirtual(void *pObjectXXXX, _in const char* className )
+				{
+					EarthView::World::Core::ev_string className1 = className;
+					const EarthView::World::Spatial::Atlas::IChartLayer* ptrNativeObject = (EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX;
+					EarthView::World::Spatial::Display::EVColorBlendOperation objXXXX = ptrNativeObject->EarthView::World::Spatial::Atlas::IChartLayer::getChartClassControlColorBlendMode(className1);
+					return (int)objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getType_EVLayerType( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getType_EVLayerType_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getType_EVLayerType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getDataset_IDataset( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getDataset_IDataset_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getDataset_IDataset(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getDatasetName_EVString( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getDatasetName_EVString_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getDatasetName_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getDataSource_IDataSource( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getDataSource_IDataSource_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getDataSource_IDataSource(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setLayerSelection_void_ILayerSelection( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setLayerSelection_void_ILayerSelection_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setLayerSelection_void_ILayerSelection(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getName_EVString( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getName_EVString_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getName_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setName_void_EVString( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setName_void_EVString_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setName_void_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getDescription_EVString( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getDescription_EVString_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getDescription_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setDescription_void_EVString( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setDescription_void_EVString_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setDescription_void_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_canEdit_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_canEdit_ev_bool_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_canEdit_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setCanEdit_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setCanEdit_void_ev_bool_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setCanEdit_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_isEditing_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_isEditing_ev_bool_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_isEditing_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setEditing_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setEditing_void_ev_bool_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setEditing_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_isVisible_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_isVisible_ev_bool_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_isVisible_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setVisible_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setVisible_void_ev_bool_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setVisible_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_isValid_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_isValid_ev_bool_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_isValid_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_isSelectable_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_isSelectable_ev_bool_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_isSelectable_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setSelectable_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setSelectable_void_ev_bool_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setSelectable_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_ignoreScale_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_ignoreScale_ev_bool_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_ignoreScale_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setIgnoreScale_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setIgnoreScale_void_ev_bool_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setIgnoreScale_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMaxScale_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMaxScale_ev_real64_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMaxScale_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMaxScale_void_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMaxScale_void_ev_real64_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMaxScale_void_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMinScale_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMinScale_ev_real64_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getDisplayMinScale_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMinScale_void_ev_real64( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMinScale_void_ev_real64_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setDisplayMinScale_void_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getSpatialReference_ISpatialReference( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getSpatialReference_ISpatialReference_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getSpatialReference_ISpatialReference(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setSpatialReference_void_ISpatialReference( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setSpatialReference_void_ISpatialReference_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setSpatialReference_void_ISpatialReference(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_setTransparentValue_void_ev_uint8( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_setTransparentValue_void_ev_uint8_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_setTransparentValue_void_ev_uint8(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getTransparentValue_ev_uint8( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getTransparentValue_ev_uint8_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getTransparentValue_ev_uint8(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_getExtent_IEnvelope( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_getExtent_IEnvelope_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_getExtent_IEnvelope(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_clone_ILayer( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_clone_ILayer_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_clone_ILayer(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_toStream_void_CDataStream( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_toStream_void_CDataStream_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_toStream_void_CDataStream(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_toXML_EVString( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_toXML_EVString_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_toXML_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_fromXmlElement_void_CXmlElement( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_fromXmlElement_void_CXmlElement_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_fromXmlElement_void_CXmlElement(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_toXmlElement_CXmlElement( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_toXmlElement_CXmlElement_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_toXmlElement_CXmlElement(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial_Atlas_IChartLayer_fromStream_void_CDataStream( void *pObjectXXXX, EarthView_World_Spatial_Atlas_IChartLayer_fromStream_void_CDataStream_Callback* pCallback )
+				{
+					IChartLayerProxy* ptr = dynamic_cast<IChartLayerProxy*>((EarthView::World::Spatial::Atlas::IChartLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial_Atlas_IChartLayer_fromStream_void_CDataStream(pCallback);
+					}
+				}
+			}
+		}
+	}
+}

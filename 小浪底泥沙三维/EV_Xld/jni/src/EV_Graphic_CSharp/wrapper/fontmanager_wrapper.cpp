@@ -1,0 +1,1685 @@
+/* This file is produced by the P/Invoke AutoWrapper Utility 
+ Copyright (c) 2012 by EarthView Image Inc */
+#include "stableheaders.h"
+#include "graphic/fontmanager.h"
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Graphic
+		{
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback)(_in char*& name, _in char*& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* createParams);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback)(_in char*& name, _in char*& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_Callback)(_in char*& name, _in char*& group, _in ev_bool isManual);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_Callback)(_in char*& name, _in char*& group);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback)(_in char*& name, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* createParams);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_Callback)(_in char*& name, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_Callback)(_in char*& name, _in ev_bool isManual);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_Callback)(_in char*& name);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback)(_in char*& name, _in char*& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* createParams);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_Callback)(_in char*& name, _in char*& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_Callback)(_in char*& name, _in char*& group, _in ev_bool isManual);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_Callback)(_in char*& name, _in char*& group);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_setMemoryBudget_void_ev_size_t_Callback)(_in ev_uint64  bytes);
+			typedef ev_uint64   ( _stdcall EarthView_World_Graphic_CFontManager_getMemoryBudget_ev_size_t_Callback)();
+			typedef ev_uint64   ( _stdcall EarthView_World_Graphic_CFontManager_getMemoryUsage_ev_size_t_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_unload_void_EVString_Callback)(_in char*& name);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_unload_void_ev_uint64_Callback)(_in ev_uint64 handle);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_unloadAll_void_ev_bool_Callback)(_in ev_bool reloadableOnly);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_unloadAll_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_reloadAll_void_ev_bool_Callback)(_in ev_bool reloadableOnly);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_reloadAll_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_ev_bool_Callback)(_in ev_bool reloadableOnly);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_ev_bool_Callback)(_in ev_bool reloadableOnly);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_remove_void_ResourcePtr_Callback)(_inout void* r);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_remove_void_EVString_Callback)(_in char*& name);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_remove_void_ev_uint64_Callback)(_in ev_uint64 handle);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_remove_void_EVString_EVString_Callback)(_in char*& name, _in char*& groupname);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_removeAll_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_ev_bool_Callback)(_in ev_bool reloadableOnly);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_Callback)(_in char*& name);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_EVString_Callback)(_in char*& name, _in char*& groupName);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_Callback)(_in char*& name, _in char*& groupName);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_ev_uint16_Callback)(_in char*& name, _in char*& groupName, _in ev_uint16 useCount);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_EVString_Callback)(_in char*& name, _in char*& groupName);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_Callback)(_in char*& name);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_getByHandle_ResourcePtr_ev_uint64_Callback)(_in ev_uint64 handle);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_EVString_Callback)(_in char*& name);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_ev_uint64_Callback)(_in ev_uint64 handle);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager__notifyResourceTouched_void_CResource_Callback)(_in EarthView::World::Graphic::CResource* res);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager__notifyResourceLoaded_void_CResource_Callback)(_in EarthView::World::Graphic::CResource* res);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager__notifyResourceUnloaded_void_CResource_Callback)(_in EarthView::World::Graphic::CResource* res);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool_Callback)(_in char*& name, _in char*& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams, _in ev_bool backgroundThread);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback)(_in char*& name, _in char*& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback)(_in char*& name, _in char*& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_Callback)(_in char*& name, _in char*& group, _in ev_bool isManual);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool_Callback)(_in char*& name, _in char*& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams, _in ev_bool backgroundThread);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback)(_in char*& name, _in char*& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback)(_in char*& name, _in char*& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_Callback)(_in char*& name, _in char*& group, _in ev_bool isManual);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_Callback)(_in char*& name, _in char*& group);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_setVerbose_void_ev_bool_Callback)(_in ev_bool v);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CFontManager_getVerbose_ev_bool_Callback)();
+			typedef EarthView::World::Graphic::CResource*  ( _stdcall EarthView_World_Graphic_CFontManager_createImpl_CResource_EVString_ev_uint64_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback)(_in char*& name, _in ev_uint64 handle, _in char*& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* loader, _in const EarthView::World::Core::CommonStringPairList* createParams);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_addImpl_void_ResourcePtr_Callback)(_inout void* res);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_removeImpl_void_ResourcePtr_Callback)(_inout void* res);
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_checkUsage_void_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CFontManager_getScriptPatterns_StringVector_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CFontManager_parseScript_void_DataStreamPtr_EVString_Callback)(_inout void* stream, _in char*& groupName);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CFontManager_getLoadingOrder_Real_Callback)();
+			class CFontManagerProxy : public EarthView::World::Graphic::CFontManager
+			{
+			private:
+				EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* m_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback;
+				EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback* m_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback;
+				EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_Callback* m_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_Callback;
+				EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_Callback* m_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_Callback;
+				EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* m_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback;
+				EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_Callback* m_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_Callback;
+				EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_Callback* m_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_Callback;
+				EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_Callback* m_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_Callback;
+				EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* m_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback;
+				EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_Callback* m_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_Callback;
+				EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_Callback* m_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_Callback;
+				EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_Callback* m_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_Callback;
+				EarthView_World_Graphic_CFontManager_setMemoryBudget_void_ev_size_t_Callback* m_EarthView_World_Graphic_CFontManager_setMemoryBudget_void_ev_size_t_Callback;
+				EarthView_World_Graphic_CFontManager_getMemoryBudget_ev_size_t_Callback* m_EarthView_World_Graphic_CFontManager_getMemoryBudget_ev_size_t_Callback;
+				EarthView_World_Graphic_CFontManager_getMemoryUsage_ev_size_t_Callback* m_EarthView_World_Graphic_CFontManager_getMemoryUsage_ev_size_t_Callback;
+				EarthView_World_Graphic_CFontManager_unload_void_EVString_Callback* m_EarthView_World_Graphic_CFontManager_unload_void_EVString_Callback;
+				EarthView_World_Graphic_CFontManager_unload_void_ev_uint64_Callback* m_EarthView_World_Graphic_CFontManager_unload_void_ev_uint64_Callback;
+				EarthView_World_Graphic_CFontManager_unloadAll_void_ev_bool_Callback* m_EarthView_World_Graphic_CFontManager_unloadAll_void_ev_bool_Callback;
+				EarthView_World_Graphic_CFontManager_unloadAll_void_Callback* m_EarthView_World_Graphic_CFontManager_unloadAll_void_Callback;
+				EarthView_World_Graphic_CFontManager_reloadAll_void_ev_bool_Callback* m_EarthView_World_Graphic_CFontManager_reloadAll_void_ev_bool_Callback;
+				EarthView_World_Graphic_CFontManager_reloadAll_void_Callback* m_EarthView_World_Graphic_CFontManager_reloadAll_void_Callback;
+				EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_ev_bool_Callback* m_EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_ev_bool_Callback;
+				EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_Callback* m_EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_Callback;
+				EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_ev_bool_Callback* m_EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_ev_bool_Callback;
+				EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_Callback* m_EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_Callback;
+				EarthView_World_Graphic_CFontManager_remove_void_ResourcePtr_Callback* m_EarthView_World_Graphic_CFontManager_remove_void_ResourcePtr_Callback;
+				EarthView_World_Graphic_CFontManager_remove_void_EVString_Callback* m_EarthView_World_Graphic_CFontManager_remove_void_EVString_Callback;
+				EarthView_World_Graphic_CFontManager_remove_void_ev_uint64_Callback* m_EarthView_World_Graphic_CFontManager_remove_void_ev_uint64_Callback;
+				EarthView_World_Graphic_CFontManager_remove_void_EVString_EVString_Callback* m_EarthView_World_Graphic_CFontManager_remove_void_EVString_EVString_Callback;
+				EarthView_World_Graphic_CFontManager_removeAll_void_Callback* m_EarthView_World_Graphic_CFontManager_removeAll_void_Callback;
+				EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_ev_bool_Callback* m_EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_ev_bool_Callback;
+				EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_Callback* m_EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_Callback;
+				EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_Callback* m_EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_Callback;
+				EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_EVString_Callback* m_EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_EVString_Callback;
+				EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_Callback* m_EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_Callback;
+				EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_ev_uint16_Callback* m_EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_ev_uint16_Callback;
+				EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_EVString_Callback* m_EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_EVString_Callback;
+				EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_Callback* m_EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_Callback;
+				EarthView_World_Graphic_CFontManager_getByHandle_ResourcePtr_ev_uint64_Callback* m_EarthView_World_Graphic_CFontManager_getByHandle_ResourcePtr_ev_uint64_Callback;
+				EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_EVString_Callback* m_EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_EVString_Callback;
+				EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_ev_uint64_Callback* m_EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_ev_uint64_Callback;
+				EarthView_World_Graphic_CFontManager__notifyResourceTouched_void_CResource_Callback* m_EarthView_World_Graphic_CFontManager__notifyResourceTouched_void_CResource_Callback;
+				EarthView_World_Graphic_CFontManager__notifyResourceLoaded_void_CResource_Callback* m_EarthView_World_Graphic_CFontManager__notifyResourceLoaded_void_CResource_Callback;
+				EarthView_World_Graphic_CFontManager__notifyResourceUnloaded_void_CResource_Callback* m_EarthView_World_Graphic_CFontManager__notifyResourceUnloaded_void_CResource_Callback;
+				EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool_Callback* m_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool_Callback;
+				EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* m_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback;
+				EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback* m_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback;
+				EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_Callback* m_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_Callback;
+				EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool_Callback* m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool_Callback;
+				EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback;
+				EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback* m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback;
+				EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_Callback* m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_Callback;
+				EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_Callback* m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_Callback;
+				EarthView_World_Graphic_CFontManager_setVerbose_void_ev_bool_Callback* m_EarthView_World_Graphic_CFontManager_setVerbose_void_ev_bool_Callback;
+				EarthView_World_Graphic_CFontManager_getVerbose_ev_bool_Callback* m_EarthView_World_Graphic_CFontManager_getVerbose_ev_bool_Callback;
+				EarthView_World_Graphic_CFontManager_createImpl_CResource_EVString_ev_uint64_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* m_EarthView_World_Graphic_CFontManager_createImpl_CResource_EVString_ev_uint64_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback;
+				EarthView_World_Graphic_CFontManager_addImpl_void_ResourcePtr_Callback* m_EarthView_World_Graphic_CFontManager_addImpl_void_ResourcePtr_Callback;
+				EarthView_World_Graphic_CFontManager_removeImpl_void_ResourcePtr_Callback* m_EarthView_World_Graphic_CFontManager_removeImpl_void_ResourcePtr_Callback;
+				EarthView_World_Graphic_CFontManager_checkUsage_void_Callback* m_EarthView_World_Graphic_CFontManager_checkUsage_void_Callback;
+				EarthView_World_Graphic_CFontManager_getScriptPatterns_StringVector_Callback* m_EarthView_World_Graphic_CFontManager_getScriptPatterns_StringVector_Callback;
+				EarthView_World_Graphic_CFontManager_parseScript_void_DataStreamPtr_EVString_Callback* m_EarthView_World_Graphic_CFontManager_parseScript_void_DataStreamPtr_EVString_Callback;
+				EarthView_World_Graphic_CFontManager_getLoadingOrder_Real_Callback* m_EarthView_World_Graphic_CFontManager_getLoadingOrder_Real_Callback;
+			public:
+				CFontManagerProxy(EarthView::World::Core::CNameValuePairList *pList) : CFontManager(pList)
+				{
+					m_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_setMemoryBudget_void_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_getMemoryBudget_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_getMemoryUsage_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_unload_void_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_unload_void_ev_uint64_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_unloadAll_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_unloadAll_void_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_reloadAll_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_reloadAll_void_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_remove_void_ResourcePtr_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_remove_void_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_remove_void_ev_uint64_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_remove_void_EVString_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_removeAll_void_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_ev_uint16_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_getByHandle_ResourcePtr_ev_uint64_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_ev_uint64_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager__notifyResourceTouched_void_CResource_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager__notifyResourceLoaded_void_CResource_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager__notifyResourceUnloaded_void_CResource_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_setVerbose_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_getVerbose_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_createImpl_CResource_EVString_ev_uint64_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_addImpl_void_ResourcePtr_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_removeImpl_void_ResourcePtr_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_checkUsage_void_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_getScriptPatterns_StringVector_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_parseScript_void_DataStreamPtr_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CFontManager_getLoadingOrder_Real_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList(EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader(EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool(EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString(EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_CommonStringPairList(EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader(EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool(EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString(EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList(EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader(EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool(EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString(EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_setMemoryBudget_void_ev_size_t(EarthView_World_Graphic_CFontManager_setMemoryBudget_void_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_setMemoryBudget_void_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_getMemoryBudget_ev_size_t(EarthView_World_Graphic_CFontManager_getMemoryBudget_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_getMemoryBudget_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_getMemoryUsage_ev_size_t(EarthView_World_Graphic_CFontManager_getMemoryUsage_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_getMemoryUsage_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_unload_void_EVString(EarthView_World_Graphic_CFontManager_unload_void_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_unload_void_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_unload_void_ev_uint64(EarthView_World_Graphic_CFontManager_unload_void_ev_uint64_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_unload_void_ev_uint64_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_unloadAll_void_ev_bool(EarthView_World_Graphic_CFontManager_unloadAll_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_unloadAll_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_unloadAll_void(EarthView_World_Graphic_CFontManager_unloadAll_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_unloadAll_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_reloadAll_void_ev_bool(EarthView_World_Graphic_CFontManager_reloadAll_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_reloadAll_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_reloadAll_void(EarthView_World_Graphic_CFontManager_reloadAll_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_reloadAll_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_ev_bool(EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void(EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_ev_bool(EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void(EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_remove_void_ResourcePtr(EarthView_World_Graphic_CFontManager_remove_void_ResourcePtr_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_remove_void_ResourcePtr_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_remove_void_EVString(EarthView_World_Graphic_CFontManager_remove_void_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_remove_void_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_remove_void_ev_uint64(EarthView_World_Graphic_CFontManager_remove_void_ev_uint64_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_remove_void_ev_uint64_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_remove_void_EVString_EVString(EarthView_World_Graphic_CFontManager_remove_void_EVString_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_remove_void_EVString_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_removeAll_void(EarthView_World_Graphic_CFontManager_removeAll_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_removeAll_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_ev_bool(EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void(EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString(EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_EVString(EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString(EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_ev_uint16(EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_EVString(EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString(EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_getByHandle_ResourcePtr_ev_uint64(EarthView_World_Graphic_CFontManager_getByHandle_ResourcePtr_ev_uint64_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_getByHandle_ResourcePtr_ev_uint64_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_EVString(EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_ev_uint64(EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_ev_uint64_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_ev_uint64_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager__notifyResourceTouched_void_CResource(EarthView_World_Graphic_CFontManager__notifyResourceTouched_void_CResource_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager__notifyResourceTouched_void_CResource_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager__notifyResourceLoaded_void_CResource(EarthView_World_Graphic_CFontManager__notifyResourceLoaded_void_CResource_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager__notifyResourceLoaded_void_CResource_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager__notifyResourceUnloaded_void_CResource(EarthView_World_Graphic_CFontManager__notifyResourceUnloaded_void_CResource_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager__notifyResourceUnloaded_void_CResource_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool(EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList(EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader(EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool(EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool(EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList(EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader(EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool(EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString(EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_setVerbose_void_ev_bool(EarthView_World_Graphic_CFontManager_setVerbose_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_setVerbose_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_getVerbose_ev_bool(EarthView_World_Graphic_CFontManager_getVerbose_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_getVerbose_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_createImpl_CResource_EVString_ev_uint64_EVString_ev_bool_CManualResourceLoader_CommonStringPairList(EarthView_World_Graphic_CFontManager_createImpl_CResource_EVString_ev_uint64_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_createImpl_CResource_EVString_ev_uint64_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_addImpl_void_ResourcePtr(EarthView_World_Graphic_CFontManager_addImpl_void_ResourcePtr_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_addImpl_void_ResourcePtr_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_removeImpl_void_ResourcePtr(EarthView_World_Graphic_CFontManager_removeImpl_void_ResourcePtr_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_removeImpl_void_ResourcePtr_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_checkUsage_void(EarthView_World_Graphic_CFontManager_checkUsage_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_checkUsage_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_getScriptPatterns_StringVector(EarthView_World_Graphic_CFontManager_getScriptPatterns_StringVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_getScriptPatterns_StringVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_parseScript_void_DataStreamPtr_EVString(EarthView_World_Graphic_CFontManager_parseScript_void_DataStreamPtr_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_parseScript_void_DataStreamPtr_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CFontManager_getLoadingOrder_Real(EarthView_World_Graphic_CFontManager_getLoadingOrder_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CFontManager_getLoadingOrder_Real_Callback = pCallback;
+				}
+				virtual void parseScript(_inout EarthView::World::Core::DataStreamPtr& stream, _in const EVString& groupName)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_parseScript_void_DataStreamPtr_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* groupName_Char = groupName.makeBuffer();
+						m_EarthView_World_Graphic_CFontManager_parseScript_void_DataStreamPtr_EVString_Callback(&stream, groupName_Char);
+					}
+					else
+						return this->CFontManager::parseScript(stream, groupName);
+				}
+				virtual EarthView::World::Graphic::CResource* createImpl(_in const EVString& name, _in ev_uint64 handle, _in const EVString& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* loader, _in const EarthView::World::Core::CommonStringPairList* params)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_createImpl_CResource_EVString_ev_uint64_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						EarthView::World::Graphic::CResource* returnValue = m_EarthView_World_Graphic_CFontManager_createImpl_CResource_EVString_ev_uint64_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback(name_Char, handle, group_Char, isManual, loader, params);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::createImpl(name, handle, group, isManual, loader, params);
+				}
+				virtual EarthView::World::Graphic::ResourcePtr create(_in const EVString& name, _in const EVString& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* createParams)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						EarthView::World::Graphic::ResourcePtr returnValue = *(EarthView::World::Graphic::ResourcePtr*)m_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback(name_Char, group_Char, isManual, ref_loader, createParams);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::create(name, group, isManual, ref_loader, createParams);
+				}
+				virtual EarthView::World::Graphic::ResourcePtr create(_in const EVString& name, _in const EVString& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						EarthView::World::Graphic::ResourcePtr returnValue = *(EarthView::World::Graphic::ResourcePtr*)m_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback(name_Char, group_Char, isManual, ref_loader);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::create(name, group, isManual, ref_loader);
+				}
+				virtual EarthView::World::Graphic::ResourcePtr create(_in const EVString& name, _in const EVString& group, _in ev_bool isManual)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						EarthView::World::Graphic::ResourcePtr returnValue = *(EarthView::World::Graphic::ResourcePtr*)m_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_Callback(name_Char, group_Char, isManual);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::create(name, group, isManual);
+				}
+				virtual EarthView::World::Graphic::ResourcePtr create(_in const EVString& name, _in const EVString& group)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						EarthView::World::Graphic::ResourcePtr returnValue = *(EarthView::World::Graphic::ResourcePtr*)m_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_Callback(name_Char, group_Char);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::create(name, group);
+				}
+				virtual EarthView::World::Graphic::ResourcePtr createUnmanaged(_in const EVString& name, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* createParams)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::ResourcePtr returnValue = *(EarthView::World::Graphic::ResourcePtr*)m_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback(name_Char, isManual, ref_loader, createParams);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::createUnmanaged(name, isManual, ref_loader, createParams);
+				}
+				virtual EarthView::World::Graphic::ResourcePtr createUnmanaged(_in const EVString& name, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::ResourcePtr returnValue = *(EarthView::World::Graphic::ResourcePtr*)m_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_Callback(name_Char, isManual, ref_loader);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::createUnmanaged(name, isManual, ref_loader);
+				}
+				virtual EarthView::World::Graphic::ResourcePtr createUnmanaged(_in const EVString& name, _in ev_bool isManual)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::ResourcePtr returnValue = *(EarthView::World::Graphic::ResourcePtr*)m_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_Callback(name_Char, isManual);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::createUnmanaged(name, isManual);
+				}
+				virtual EarthView::World::Graphic::ResourcePtr createUnmanaged(_in const EVString& name)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::ResourcePtr returnValue = *(EarthView::World::Graphic::ResourcePtr*)m_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_Callback(name_Char);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::createUnmanaged(name);
+				}
+				virtual EarthView::World::Graphic::CResourceManager::ResourceCreateOrRetrieveResult createOrRetrieve(_in const EVString& name, _in const EVString& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* createParams)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						EarthView::World::Graphic::CResourceManager::ResourceCreateOrRetrieveResult returnValue = *(EarthView::World::Graphic::CResourceManager::ResourceCreateOrRetrieveResult*)m_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback(name_Char, group_Char, isManual, ref_loader, createParams);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::createOrRetrieve(name, group, isManual, ref_loader, createParams);
+				}
+				virtual EarthView::World::Graphic::CResourceManager::ResourceCreateOrRetrieveResult createOrRetrieve(_in const EVString& name, _in const EVString& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						EarthView::World::Graphic::CResourceManager::ResourceCreateOrRetrieveResult returnValue = *(EarthView::World::Graphic::CResourceManager::ResourceCreateOrRetrieveResult*)m_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_Callback(name_Char, group_Char, isManual, ref_loader);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::createOrRetrieve(name, group, isManual, ref_loader);
+				}
+				virtual EarthView::World::Graphic::CResourceManager::ResourceCreateOrRetrieveResult createOrRetrieve(_in const EVString& name, _in const EVString& group, _in ev_bool isManual)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						EarthView::World::Graphic::CResourceManager::ResourceCreateOrRetrieveResult returnValue = *(EarthView::World::Graphic::CResourceManager::ResourceCreateOrRetrieveResult*)m_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_Callback(name_Char, group_Char, isManual);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::createOrRetrieve(name, group, isManual);
+				}
+				virtual EarthView::World::Graphic::CResourceManager::ResourceCreateOrRetrieveResult createOrRetrieve(_in const EVString& name, _in const EVString& group)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						EarthView::World::Graphic::CResourceManager::ResourceCreateOrRetrieveResult returnValue = *(EarthView::World::Graphic::CResourceManager::ResourceCreateOrRetrieveResult*)m_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_Callback(name_Char, group_Char);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::createOrRetrieve(name, group);
+				}
+				virtual void setMemoryBudget(_in ev_size_t bytes)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_setMemoryBudget_void_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager_setMemoryBudget_void_ev_size_t_Callback(bytes);
+					}
+					else
+						return this->CFontManager::setMemoryBudget(bytes);
+				}
+				virtual ev_size_t getMemoryBudget() const
+				{
+					if(m_EarthView_World_Graphic_CFontManager_getMemoryBudget_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						ev_size_t returnValue = m_EarthView_World_Graphic_CFontManager_getMemoryBudget_ev_size_t_Callback();
+						return returnValue;
+					}
+					else
+						return this->CFontManager::getMemoryBudget();
+				}
+				virtual ev_size_t getMemoryUsage() const
+				{
+					if(m_EarthView_World_Graphic_CFontManager_getMemoryUsage_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						ev_size_t returnValue = m_EarthView_World_Graphic_CFontManager_getMemoryUsage_ev_size_t_Callback();
+						return returnValue;
+					}
+					else
+						return this->CFontManager::getMemoryUsage();
+				}
+				virtual void unload(_in const EVString& name)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_unload_void_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						m_EarthView_World_Graphic_CFontManager_unload_void_EVString_Callback(name_Char);
+					}
+					else
+						return this->CFontManager::unload(name);
+				}
+				virtual void unload(_in ev_uint64 handle)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_unload_void_ev_uint64_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager_unload_void_ev_uint64_Callback(handle);
+					}
+					else
+						return this->CFontManager::unload(handle);
+				}
+				virtual void unloadAll(_in ev_bool reloadableOnly)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_unloadAll_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager_unloadAll_void_ev_bool_Callback(reloadableOnly);
+					}
+					else
+						return this->CFontManager::unloadAll(reloadableOnly);
+				}
+				virtual void unloadAll()
+				{
+					if(m_EarthView_World_Graphic_CFontManager_unloadAll_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager_unloadAll_void_Callback();
+					}
+					else
+						return this->CFontManager::unloadAll();
+				}
+				virtual void reloadAll(_in ev_bool reloadableOnly)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_reloadAll_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager_reloadAll_void_ev_bool_Callback(reloadableOnly);
+					}
+					else
+						return this->CFontManager::reloadAll(reloadableOnly);
+				}
+				virtual void reloadAll()
+				{
+					if(m_EarthView_World_Graphic_CFontManager_reloadAll_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager_reloadAll_void_Callback();
+					}
+					else
+						return this->CFontManager::reloadAll();
+				}
+				virtual void unloadUnreferencedResources(_in ev_bool reloadableOnly)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_ev_bool_Callback(reloadableOnly);
+					}
+					else
+						return this->CFontManager::unloadUnreferencedResources(reloadableOnly);
+				}
+				virtual void unloadUnreferencedResources()
+				{
+					if(m_EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_Callback();
+					}
+					else
+						return this->CFontManager::unloadUnreferencedResources();
+				}
+				virtual void reloadUnreferencedResources(_in ev_bool reloadableOnly)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_ev_bool_Callback(reloadableOnly);
+					}
+					else
+						return this->CFontManager::reloadUnreferencedResources(reloadableOnly);
+				}
+				virtual void reloadUnreferencedResources()
+				{
+					if(m_EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_Callback();
+					}
+					else
+						return this->CFontManager::reloadUnreferencedResources();
+				}
+				virtual void remove(_inout EarthView::World::Graphic::ResourcePtr& r)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_remove_void_ResourcePtr_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager_remove_void_ResourcePtr_Callback(&r);
+					}
+					else
+						return this->CFontManager::remove(r);
+				}
+				virtual void remove(_in const EVString& name)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_remove_void_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						m_EarthView_World_Graphic_CFontManager_remove_void_EVString_Callback(name_Char);
+					}
+					else
+						return this->CFontManager::remove(name);
+				}
+				virtual void remove(_in ev_uint64 handle)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_remove_void_ev_uint64_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager_remove_void_ev_uint64_Callback(handle);
+					}
+					else
+						return this->CFontManager::remove(handle);
+				}
+				virtual void remove(_in const EVString& name, _in const EVString& groupname)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_remove_void_EVString_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* groupname_Char = groupname.makeBuffer();
+						m_EarthView_World_Graphic_CFontManager_remove_void_EVString_EVString_Callback(name_Char, groupname_Char);
+					}
+					else
+						return this->CFontManager::remove(name, groupname);
+				}
+				virtual void removeAll()
+				{
+					if(m_EarthView_World_Graphic_CFontManager_removeAll_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager_removeAll_void_Callback();
+					}
+					else
+						return this->CFontManager::removeAll();
+				}
+				virtual void removeUnreferencedResources(_in ev_bool reloadableOnly)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_ev_bool_Callback(reloadableOnly);
+					}
+					else
+						return this->CFontManager::removeUnreferencedResources(reloadableOnly);
+				}
+				virtual void removeUnreferencedResources()
+				{
+					if(m_EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_Callback();
+					}
+					else
+						return this->CFontManager::removeUnreferencedResources();
+				}
+				virtual void removeUnreferencedResource(_in const EVString& name)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						m_EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_Callback(name_Char);
+					}
+					else
+						return this->CFontManager::removeUnreferencedResource(name);
+				}
+				virtual void removeUnreferencedResource(_in const EVString& name, _in const EVString& groupName)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* groupName_Char = groupName.makeBuffer();
+						m_EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_EVString_Callback(name_Char, groupName_Char);
+					}
+					else
+						return this->CFontManager::removeUnreferencedResource(name, groupName);
+				}
+				virtual void unloadUnreferencedResource(_in const EVString& name, _in const EVString& groupName)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* groupName_Char = groupName.makeBuffer();
+						m_EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_Callback(name_Char, groupName_Char);
+					}
+					else
+						return this->CFontManager::unloadUnreferencedResource(name, groupName);
+				}
+				virtual void unloadUnreferencedResource(_in const EVString& name, _in const EVString& groupName, _in ev_uint16 useCount)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* groupName_Char = groupName.makeBuffer();
+						m_EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_ev_uint16_Callback(name_Char, groupName_Char, useCount);
+					}
+					else
+						return this->CFontManager::unloadUnreferencedResource(name, groupName, useCount);
+				}
+				virtual EarthView::World::Graphic::ResourcePtr getByName(_in const EVString& name, _in const EVString& groupName)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* groupName_Char = groupName.makeBuffer();
+						EarthView::World::Graphic::ResourcePtr returnValue = *(EarthView::World::Graphic::ResourcePtr*)m_EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_EVString_Callback(name_Char, groupName_Char);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::getByName(name, groupName);
+				}
+				virtual EarthView::World::Graphic::ResourcePtr getByName(_in const EVString& name)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::ResourcePtr returnValue = *(EarthView::World::Graphic::ResourcePtr*)m_EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_Callback(name_Char);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::getByName(name);
+				}
+				virtual EarthView::World::Graphic::ResourcePtr getByHandle(_in ev_uint64 handle)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_getByHandle_ResourcePtr_ev_uint64_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::ResourcePtr returnValue = *(EarthView::World::Graphic::ResourcePtr*)m_EarthView_World_Graphic_CFontManager_getByHandle_ResourcePtr_ev_uint64_Callback(handle);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::getByHandle(handle);
+				}
+				virtual ev_bool resourceExists(_in const EVString& name)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						ev_bool returnValue = m_EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_EVString_Callback(name_Char);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::resourceExists(name);
+				}
+				virtual ev_bool resourceExists(_in ev_uint64 handle)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_ev_uint64_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_ev_uint64_Callback(handle);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::resourceExists(handle);
+				}
+				virtual void _notifyResourceTouched(_in EarthView::World::Graphic::CResource* res)
+				{
+					if(m_EarthView_World_Graphic_CFontManager__notifyResourceTouched_void_CResource_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager__notifyResourceTouched_void_CResource_Callback(res);
+					}
+					else
+						return this->CFontManager::_notifyResourceTouched(res);
+				}
+				virtual void _notifyResourceLoaded(_in EarthView::World::Graphic::CResource* res)
+				{
+					if(m_EarthView_World_Graphic_CFontManager__notifyResourceLoaded_void_CResource_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager__notifyResourceLoaded_void_CResource_Callback(res);
+					}
+					else
+						return this->CFontManager::_notifyResourceLoaded(res);
+				}
+				virtual void _notifyResourceUnloaded(_in EarthView::World::Graphic::CResource* res)
+				{
+					if(m_EarthView_World_Graphic_CFontManager__notifyResourceUnloaded_void_CResource_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager__notifyResourceUnloaded_void_CResource_Callback(res);
+					}
+					else
+						return this->CFontManager::_notifyResourceUnloaded(res);
+				}
+				virtual EarthView::World::Graphic::ResourcePtr prepare(_in const EVString& name, _in const EVString& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams, _in ev_bool backgroundThread)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						EarthView::World::Graphic::ResourcePtr returnValue = *(EarthView::World::Graphic::ResourcePtr*)m_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool_Callback(name_Char, group_Char, isManual, ref_loader, loadParams, backgroundThread);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::prepare(name, group, isManual, ref_loader, loadParams, backgroundThread);
+				}
+				virtual EarthView::World::Graphic::ResourcePtr prepare(_in const EVString& name, _in const EVString& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						EarthView::World::Graphic::ResourcePtr returnValue = *(EarthView::World::Graphic::ResourcePtr*)m_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback(name_Char, group_Char, isManual, ref_loader, loadParams);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::prepare(name, group, isManual, ref_loader, loadParams);
+				}
+				virtual EarthView::World::Graphic::ResourcePtr prepare(_in const EVString& name, _in const EVString& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						EarthView::World::Graphic::ResourcePtr returnValue = *(EarthView::World::Graphic::ResourcePtr*)m_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback(name_Char, group_Char, isManual, ref_loader);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::prepare(name, group, isManual, ref_loader);
+				}
+				virtual EarthView::World::Graphic::ResourcePtr prepare(_in const EVString& name, _in const EVString& group, _in ev_bool isManual)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						EarthView::World::Graphic::ResourcePtr returnValue = *(EarthView::World::Graphic::ResourcePtr*)m_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_Callback(name_Char, group_Char, isManual);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::prepare(name, group, isManual);
+				}
+				virtual EarthView::World::Graphic::ResourcePtr load(_in const EVString& name, _in const EVString& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams, _in ev_bool backgroundThread)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						EarthView::World::Graphic::ResourcePtr returnValue = *(EarthView::World::Graphic::ResourcePtr*)m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool_Callback(name_Char, group_Char, isManual, ref_loader, loadParams, backgroundThread);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::load(name, group, isManual, ref_loader, loadParams, backgroundThread);
+				}
+				virtual EarthView::World::Graphic::ResourcePtr load(_in const EVString& name, _in const EVString& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader, _in const EarthView::World::Core::CommonStringPairList* loadParams)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						EarthView::World::Graphic::ResourcePtr returnValue = *(EarthView::World::Graphic::ResourcePtr*)m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback(name_Char, group_Char, isManual, ref_loader, loadParams);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::load(name, group, isManual, ref_loader, loadParams);
+				}
+				virtual EarthView::World::Graphic::ResourcePtr load(_in const EVString& name, _in const EVString& group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* ref_loader)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						EarthView::World::Graphic::ResourcePtr returnValue = *(EarthView::World::Graphic::ResourcePtr*)m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback(name_Char, group_Char, isManual, ref_loader);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::load(name, group, isManual, ref_loader);
+				}
+				virtual EarthView::World::Graphic::ResourcePtr load(_in const EVString& name, _in const EVString& group, _in ev_bool isManual)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						EarthView::World::Graphic::ResourcePtr returnValue = *(EarthView::World::Graphic::ResourcePtr*)m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_Callback(name_Char, group_Char, isManual);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::load(name, group, isManual);
+				}
+				virtual EarthView::World::Graphic::ResourcePtr load(_in const EVString& name, _in const EVString& group)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						EarthView::World::Graphic::ResourcePtr returnValue = *(EarthView::World::Graphic::ResourcePtr*)m_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_Callback(name_Char, group_Char);
+						return returnValue;
+					}
+					else
+						return this->CFontManager::load(name, group);
+				}
+				virtual const EarthView::World::Core::StringVector& getScriptPatterns() const
+				{
+					if(m_EarthView_World_Graphic_CFontManager_getScriptPatterns_StringVector_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Core::StringVector& returnValue = *(EarthView::World::Core::StringVector*)m_EarthView_World_Graphic_CFontManager_getScriptPatterns_StringVector_Callback();
+						return returnValue;
+					}
+					else
+						return this->CFontManager::getScriptPatterns();
+				}
+				virtual Real getLoadingOrder() const
+				{
+					if(m_EarthView_World_Graphic_CFontManager_getLoadingOrder_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CFontManager_getLoadingOrder_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CFontManager::getLoadingOrder();
+				}
+				virtual void setVerbose(_in ev_bool v)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_setVerbose_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager_setVerbose_void_ev_bool_Callback(v);
+					}
+					else
+						return this->CFontManager::setVerbose(v);
+				}
+				virtual ev_bool getVerbose()
+				{
+					if(m_EarthView_World_Graphic_CFontManager_getVerbose_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CFontManager_getVerbose_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CFontManager::getVerbose();
+				}
+				virtual void addImpl(_inout EarthView::World::Graphic::ResourcePtr& res)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_addImpl_void_ResourcePtr_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager_addImpl_void_ResourcePtr_Callback(&res);
+					}
+					else
+						return this->CFontManager::addImpl(res);
+				}
+				virtual void removeImpl(_inout EarthView::World::Graphic::ResourcePtr& res)
+				{
+					if(m_EarthView_World_Graphic_CFontManager_removeImpl_void_ResourcePtr_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager_removeImpl_void_ResourcePtr_Callback(&res);
+					}
+					else
+						return this->CFontManager::removeImpl(res);
+				}
+				virtual void checkUsage()
+				{
+					if(m_EarthView_World_Graphic_CFontManager_checkUsage_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CFontManager_checkUsage_void_Callback();
+					}
+					else
+						return this->CFontManager::checkUsage();
+				}
+			};
+			REGISTER_FACTORY_CLASS(CFontManagerProxy);
+			extern "C" EV_DLL_EXPORT  const char*  _stdcall Get_EarthView_World_Graphic_CFontManager_FONT_RESGRP_NAME()
+			{
+				const EVString objXXXX = EarthView::World::Graphic::CFontManager::FONT_RESGRP_NAME;
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  const char*  _stdcall Get_EarthView_World_Graphic_CFontManager_MAIN_FONTDEF_FILE()
+			{
+				const EVString objXXXX = EarthView::World::Graphic::CFontManager::MAIN_FONTDEF_FILE;
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Graphic_CFontManager_getFont_CFontPtr_FontStyle_FontUsage(void *pObjectXXXX, _in const void* style, _in int usage )
+			{
+				EarthView::World::Graphic::CFontManager* ptrNativeObject = (EarthView::World::Graphic::CFontManager*) pObjectXXXX;
+				EarthView::World::Graphic::CFontPtr objXXXX = ptrNativeObject->getFont(*(EarthView::World::Graphic::FontStyle*)style, (EarthView::World::Graphic::CFontManager::FontUsage)usage);
+				EarthView::World::Graphic::CFontPtr *pXXXX = new EarthView::World::Graphic::CFontPtr(objXXXX);
+				((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const ev_char*  _stdcall EarthView_World_Graphic_CFontManager_getDefaultFontFamily_ev_char(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CFontManager* ptrNativeObject = (EarthView::World::Graphic::CFontManager*) pObjectXXXX;
+				const ev_char* objXXXX = ptrNativeObject->getDefaultFontFamily();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Graphic_CFontManager_getSingleton_CFontManager( )
+			{
+				EarthView::World::Graphic::CFontManager& objXXXX = EarthView::World::Graphic::CFontManager::getSingleton();
+				EarthView::World::Graphic::CFontManager *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CFontManager*  _stdcall EarthView_World_Graphic_CFontManager_getSingletonPtr_CFontManager( )
+			{
+				EarthView::World::Graphic::CFontManager* objXXXX = EarthView::World::Graphic::CFontManager::getSingletonPtr();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const char*  _stdcall EarthView_World_Graphic_CFontManager_getFontFamily_EVString_ev_size_t(void *pObjectXXXX, _in ev_uint64  index )
+			{
+				const EarthView::World::Graphic::CFontManager* ptrNativeObject = (EarthView::World::Graphic::CFontManager*) pObjectXXXX;
+				const EVString& objXXXX = ptrNativeObject->getFontFamily(index);
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint16  _stdcall EarthView_World_Graphic_CFontManager_getFontFamilyCount_ev_uint16(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CFontManager* ptrNativeObject = (EarthView::World::Graphic::CFontManager*) pObjectXXXX;
+				ev_uint16 objXXXX = ptrNativeObject->getFontFamilyCount();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CFontManager_parseScript_void_DataStreamPtr_EVString(void *pObjectXXXX, _inout void* stream, _in const char* groupName )
+			{
+				EarthView::World::Core::ev_string groupName1 = groupName;
+				EarthView::World::Graphic::CFontManager* ptrNativeObject = (EarthView::World::Graphic::CFontManager*) pObjectXXXX;
+				if (dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CFontManager::parseScript(*(EarthView::World::Core::DataStreamPtr*)stream, groupName1);
+				else
+					ptrNativeObject->parseScript(*(EarthView::World::Core::DataStreamPtr*)stream, groupName1);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_parseScript_void_DataStreamPtr_EVString( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_parseScript_void_DataStreamPtr_EVString_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_parseScript_void_DataStreamPtr_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CFontManager_parseScript_void_DataStreamPtr_EVString_NoVirtual(void *pObjectXXXX, _inout void* stream, _in const char* groupName )
+			{
+				EarthView::World::Core::ev_string groupName1 = groupName;
+				EarthView::World::Graphic::CFontManager* ptrNativeObject = (EarthView::World::Graphic::CFontManager*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CFontManager::parseScript(*(EarthView::World::Core::DataStreamPtr*)stream, groupName1);
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CResource*  _stdcall EarthView_World_Graphic_CFontManager_createImpl_CResource_EVString_ev_uint64_EVString_ev_bool_CManualResourceLoader_CommonStringPairList(void *pObjectXXXX, _in const char* name, _in ev_uint64 handle, _in const char* group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* loader, _in const EarthView::World::Core::CommonStringPairList* params )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CFontManager* ptrNativeObject = (EarthView::World::Graphic::CFontManager*) pObjectXXXX;
+				if (dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::CResource* objXXXX = ptrNativeObject->EarthView::World::Graphic::CFontManager::createImpl(name1, handle, group1, isManual, loader, params);
+					return objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::CResource* objXXXX = ptrNativeObject->createImpl(name1, handle, group1, isManual, loader, params);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_createImpl_CResource_EVString_ev_uint64_EVString_ev_bool_CManualResourceLoader_CommonStringPairList( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_createImpl_CResource_EVString_ev_uint64_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_createImpl_CResource_EVString_ev_uint64_EVString_ev_bool_CManualResourceLoader_CommonStringPairList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CResource*  _stdcall EarthView_World_Graphic_CFontManager_createImpl_CResource_EVString_ev_uint64_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_NoVirtual(void *pObjectXXXX, _in const char* name, _in ev_uint64 handle, _in const char* group, _in ev_bool isManual, _in EarthView::World::Graphic::CManualResourceLoader* loader, _in const EarthView::World::Core::CommonStringPairList* params )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string group1 = group;
+				EarthView::World::Graphic::CFontManager* ptrNativeObject = (EarthView::World::Graphic::CFontManager*) pObjectXXXX;
+				EarthView::World::Graphic::CResource* objXXXX = ptrNativeObject->EarthView::World::Graphic::CFontManager::createImpl(name1, handle, group1, isManual, loader, params);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_create_ResourcePtr_EVString_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_CommonStringPairList( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_CommonStringPairList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_CManualResourceLoader(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_createUnmanaged_ResourcePtr_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_CManualResourceLoader(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_createOrRetrieve_ResourceCreateOrRetrieveResult_EVString_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_setMemoryBudget_void_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_setMemoryBudget_void_ev_size_t_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_setMemoryBudget_void_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_getMemoryBudget_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_getMemoryBudget_ev_size_t_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_getMemoryBudget_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_getMemoryUsage_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_getMemoryUsage_ev_size_t_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_getMemoryUsage_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_unload_void_EVString( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_unload_void_EVString_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_unload_void_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_unload_void_ev_uint64( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_unload_void_ev_uint64_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_unload_void_ev_uint64(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_unloadAll_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_unloadAll_void_ev_bool_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_unloadAll_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_unloadAll_void( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_unloadAll_void_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_unloadAll_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_reloadAll_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_reloadAll_void_ev_bool_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_reloadAll_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_reloadAll_void( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_reloadAll_void_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_reloadAll_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_ev_bool_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_unloadUnreferencedResources_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_ev_bool_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_reloadUnreferencedResources_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_remove_void_ResourcePtr( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_remove_void_ResourcePtr_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_remove_void_ResourcePtr(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_remove_void_EVString( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_remove_void_EVString_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_remove_void_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_remove_void_ev_uint64( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_remove_void_ev_uint64_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_remove_void_ev_uint64(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_remove_void_EVString_EVString( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_remove_void_EVString_EVString_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_remove_void_EVString_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_removeAll_void( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_removeAll_void_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_removeAll_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_ev_bool_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_removeUnreferencedResources_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_EVString( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_EVString_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_removeUnreferencedResource_void_EVString_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_ev_uint16( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_ev_uint16_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_unloadUnreferencedResource_void_EVString_EVString_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_EVString( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_EVString_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_getByName_ResourcePtr_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_getByHandle_ResourcePtr_ev_uint64( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_getByHandle_ResourcePtr_ev_uint64_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_getByHandle_ResourcePtr_ev_uint64(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_EVString( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_EVString_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_ev_uint64( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_ev_uint64_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_resourceExists_ev_bool_ev_uint64(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager__notifyResourceTouched_void_CResource( void *pObjectXXXX, EarthView_World_Graphic_CFontManager__notifyResourceTouched_void_CResource_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager__notifyResourceTouched_void_CResource(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager__notifyResourceLoaded_void_CResource( void *pObjectXXXX, EarthView_World_Graphic_CFontManager__notifyResourceLoaded_void_CResource_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager__notifyResourceLoaded_void_CResource(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager__notifyResourceUnloaded_void_CResource( void *pObjectXXXX, EarthView_World_Graphic_CFontManager__notifyResourceUnloaded_void_CResource_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager__notifyResourceUnloaded_void_CResource(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_prepare_ResourcePtr_EVString_EVString_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_CommonStringPairList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_CManualResourceLoader(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_load_ResourcePtr_EVString_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_setVerbose_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_setVerbose_void_ev_bool_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_setVerbose_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_getVerbose_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_getVerbose_ev_bool_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_getVerbose_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_addImpl_void_ResourcePtr( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_addImpl_void_ResourcePtr_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_addImpl_void_ResourcePtr(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_removeImpl_void_ResourcePtr( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_removeImpl_void_ResourcePtr_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_removeImpl_void_ResourcePtr(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_checkUsage_void( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_checkUsage_void_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_checkUsage_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_getScriptPatterns_StringVector( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_getScriptPatterns_StringVector_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_getScriptPatterns_StringVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CFontManager_getLoadingOrder_Real( void *pObjectXXXX, EarthView_World_Graphic_CFontManager_getLoadingOrder_Real_Callback* pCallback )
+			{
+				CFontManagerProxy* ptr = dynamic_cast<CFontManagerProxy*>((EarthView::World::Graphic::CFontManager*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CFontManager_getLoadingOrder_Real(pCallback);
+				}
+			}
+		}
+	}
+}

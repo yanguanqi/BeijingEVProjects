@@ -1,0 +1,10 @@
+﻿#ifndef EARTHVIEW_WORLD_MATHENGINE_COFING_H
+#define EARTHVIEW_WORLD_MATHENGINE_COFING_H
+#include <core/global.h>
+#ifdef EV_BUILD_MATH_ENGINE 
+#define EV_MATHENGINE_DLL EV_DLL_EXPORT
+#else
+#define EV_MATHENGINE_DLL EV_DLL_IMPORT
+#endif
+
+#endif

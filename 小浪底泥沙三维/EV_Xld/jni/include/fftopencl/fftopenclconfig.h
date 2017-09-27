@@ -1,0 +1,19 @@
+﻿#ifndef EARTHVIEW_WORLD_GRAPHIC_FFTOPENCL_CONFIG_H
+#define EARTHVIEW_WORLD_GRAPHIC_FFTOPENCL_CONFIG_H
+
+#include "core/global.h"
+
+#ifdef EV_BUILD_FFTOPENCL
+#define EV_FFTOPENCL_DLL EV_DLL_EXPORT
+#else
+#define EV_FFTOPENCL_DLL EV_DLL_IMPORT
+#endif
+
+
+#ifndef UNWARP_EXPORT
+#define UNWARP_EXPORT EV_FFTOPENCL_DLL
+#endif
+
+#include <core/platform.h>
+
+#endif

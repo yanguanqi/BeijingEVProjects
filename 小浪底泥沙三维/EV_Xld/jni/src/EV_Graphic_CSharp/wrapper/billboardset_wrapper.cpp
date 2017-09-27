@@ -1,0 +1,5936 @@
+/* This file is produced by the P/Invoke AutoWrapper Utility 
+ Copyright (c) 2012 by EarthView Image Inc */
+#include "stableheaders.h"
+#include "graphic/billboardset.h"
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Spatial
+		{
+			namespace Math
+			{
+			}
+		}
+	}
+}
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Graphic
+		{
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getMaterial_CMaterialPtr_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_getRenderOperation_void_CRenderOperation_Callback)(_inout void* op);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_getWorldTransforms_void_CMatrix4_Callback)(_in EarthView::World::Spatial::Math::CMatrix4* xform);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CBillboardSet_getSquaredViewDepth_Real_CCamera_Callback)(_in const EarthView::World::Graphic::CCamera* cam);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getLights_LightList_Callback)();
+			typedef const EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getRenderablePtr_CBillboardSetInternalRenderable_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_increasePool_void_ev_size_t_Callback)(_in ev_uint64  size);
+			typedef ev_int32  ( _stdcall EarthView_World_Graphic_CBillboardSet_getNumBillboards_ev_int32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setAutoextend_void_ev_bool_Callback)(_in ev_bool autoextend);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_getAutoextend_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setSortingEnabled_void_ev_bool_Callback)(_in ev_bool sortenable);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_getSortingEnabled_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setPoolSize_void_ev_size_t_Callback)(_in ev_uint64  size);
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CBillboardSet_getPoolSize_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_clear_void_Callback)();
+			typedef EarthView::World::Graphic::CBillboard*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getBillboard_CBillboard_ev_uint32_Callback)(_in ev_uint32 index);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_removeBillboard_void_ev_uint32_Callback)(_in ev_uint32 index);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_removeBillboard_void_CBillboard_Callback)(_in EarthView::World::Graphic::CBillboard* pBill);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setBillboardOrigin_void_BillboardOrigin_Callback)(_in int origin);
+			typedef int  ( _stdcall EarthView_World_Graphic_CBillboardSet_getBillboardOrigin_BillboardOrigin_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setBillboardRotationType_void_BillboardRotationType_Callback)(_in int rotationType);
+			typedef int  ( _stdcall EarthView_World_Graphic_CBillboardSet_getBillboardRotationType_BillboardRotationType_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setDefaultDimensions_void_Real_Real_Callback)(_in Real width, _in Real height);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setDefaultWidth_void_Real_Callback)(_in Real width);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CBillboardSet_getDefaultWidth_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setDefaultHeight_void_Real_Callback)(_in Real height);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CBillboardSet_getDefaultHeight_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_EVString_Callback)(_in char*& name, _in char*& groupName);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_Callback)(_in char*& name);
+			typedef char*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getMaterialName_EVString_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setMaterial_void_CMaterialPtr_Callback)(_in const void* material);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet__notifyBillboardResized_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet__notifyBillboardRotated_void_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_getCullIndividually_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setCullIndividually_void_ev_bool_Callback)(_in ev_bool cullIndividual);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setBillboardType_void_BillboardType_Callback)(_in int bbt);
+			typedef int  ( _stdcall EarthView_World_Graphic_CBillboardSet_getBillboardType_BillboardType_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setCommonDirection_void_CVector3_Callback)(_in const void* vec);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getCommonDirection_CVector3_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setCommonUpVector_void_CVector3_Callback)(_in const void* vec);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getCommonUpVector_CVector3_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setUseAccurateFacing_void_ev_bool_Callback)(_in ev_bool acc);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_getUseAccurateFacing_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet__updateBounds_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet__sortBillboards_void_CCamera_Callback)(_in EarthView::World::Graphic::CCamera* cam);
+			typedef int  ( _stdcall EarthView_World_Graphic_CBillboardSet__getSortMode_SortMode_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setBillboardsInWorldSpace_void_ev_bool_Callback)(_in ev_bool ws);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setTextureCoords_void_FloatRect_ev_uint16_Callback)(_in EarthView::World::Graphic::FloatRect* coords, _in ev_uint16 numCoords);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setTextureStacksAndSlices_void_ev_uchar_ev_uchar_Callback)(_in ev_uchar stacks, _in ev_uchar slices);
+			typedef const EarthView::World::Graphic::FloatRect*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getTextureCoords_FloatRect_ev_uint16_Callback)(_out ev_uint16* oNumCoords);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setPointRenderingEnabled_void_ev_bool_Callback)(_in ev_bool enabled);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_isPointRenderingEnabled_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_getAutoFitCamera_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setAutoFitCamera_void_ev_bool_Callback)(_in ev_bool autofit);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CBillboardSet_getReduceDistance_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setReduceDistance_void_Real_Callback)(_in Real reduceDis);
+			typedef const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback)();
+			typedef ev_uint8  ( _stdcall EarthView_World_Graphic_CBillboardSet_getRenderQueueId_ev_uint8_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet__notifyCreator_void_CMovableObjectFactory_Callback)(_in EarthView::World::Graphic::CMovableObjectFactory* ref_fact);
+			typedef EarthView::World::Graphic::CMovableObjectFactory*  ( _stdcall EarthView_World_Graphic_CBillboardSet__getCreator_CMovableObjectFactory_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet__notifyManager_void_CSceneManager_Callback)(_in EarthView::World::Graphic::CSceneManager* ref_mgr);
+			typedef EarthView::World::Graphic::CSceneManager*  ( _stdcall EarthView_World_Graphic_CBillboardSet__getManager_CSceneManager_Callback)();
+			typedef char*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getName_EVString_Callback)();
+			typedef char*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getMovableType_EVString_Callback)();
+			typedef EarthView::World::Graphic::CNode*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getParentNode_CNode_Callback)();
+			typedef EarthView::World::Graphic::CSceneNode*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getParentSceneNode_CSceneNode_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_isParentTagPoint_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_ev_bool_Callback)(_in EarthView::World::Graphic::CNode* ref_parent, _in ev_bool isTagPoint);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_Callback)(_in EarthView::World::Graphic::CNode* ref_parent);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_isAttached_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_detachFromParent_void_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_isInScene_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet__notifyMoved_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet__notifyLightsQueried_void_LightList_Callback)(_in const EarthView::World::Graphic::LightList* lightList);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setLightQueriedListener_void_CLightQueriedListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CLightQueriedListener* listener);
+			typedef EarthView::World::Graphic::CMovableObject::CLightQueriedListener*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getLightQueriedListener_CLightQueriedListener_Callback)();
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CBillboardSet_getLightListUpdated_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setLightListUpdated_void_ev_uint32_Callback)(_in ev_uint32 frame);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet__notifyCurrentCamera_void_CCamera_Callback)(_in EarthView::World::Graphic::CCamera* ref_cam);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getBoundingBox_CAxisAlignedBox_Callback)();
+			typedef Real  ( _stdcall EarthView_World_Graphic_CBillboardSet_getBoundingRadius_Real_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_ev_bool_Callback)(_in ev_bool derive);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet__updateRenderQueue_void_CRenderQueue_Callback)(_in EarthView::World::Graphic::CRenderQueue* queue);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setVisible_void_ev_bool_Callback)(_in ev_bool visible);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_getVisible_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_isVisible_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setRenderingMaxDistance_void_Real_Callback)(_in Real dist);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CBillboardSet_getRenderingMaxDistance_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setRenderingMinDistance_void_Real_Callback)(_in Real dist);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CBillboardSet_getRenderingMinDistance_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setRenderingMinPixelSize_void_Real_Callback)(_in Real pixelSize);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CBillboardSet_getRenderingMinPixelSize_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setSelectionColour_void_CColourValue_Callback)(_in const void* colour);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_setSelected_ev_bool_IntVector_Callback)(_in const void* objIndics);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getSelected_IntVector_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback)(_in const void* ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out void* point);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback)(_in const void* aabb, _in ev_bool prepareToRenderSelection, _out void* indexVec);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback)(_in const void* sphere, _in ev_bool prepareToRenderSelection, _out void* indexVec);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback)(_in const void* ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out ev_int32& submeshIndex, _out ev_int32& instanceIndex, _out ev_int32& segmentIndex, _out void* point);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_renderSelection_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_clearSelection_void_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_startEditing_ev_bool_ev_uint32_Callback)(_in ev_uint32 objectIndex);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_endEditing_void_Callback)();
+			typedef EarthView::World::Graphic::CEditBoundingBox*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getEditBoundingBox_CEditBoundingBox_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback)(_in ev_uint32 objectIndex, _inout void* matrix);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback)(_in ev_uint32 objectIndex, _in const void* matrix);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setRenderQueueGroup_void_ev_uint8_Callback)(_in ev_uint8 queueID);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback)(_in ev_uint8 queueID, _in ev_uint16 priority);
+			typedef ev_uint8  ( _stdcall EarthView_World_Graphic_CBillboardSet_getRenderQueueGroup_ev_uint8_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CBillboardSet__getParentNodeFullTransform_CMatrix4_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setQueryFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_addQueryFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_removeQueryFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CBillboardSet_getQueryFlags_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setVisibilityFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_addVisibilityFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_removeVisibilityFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CBillboardSet_getVisibilityFlags_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_addListener_void_CMovableObjectListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* ref_listener);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_removeListener_void_CMovableObjectListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_existListener_ev_bool_CMovableObjectListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener);
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CBillboardSet_getListenerCount_ev_uint32_Callback)();
+			typedef EarthView::World::Graphic::CMovableObject::CMovableObjectListener*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getListener_CMovableObjectListener_ev_uint32_Callback)(_in ev_uint32 index);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CBillboardSet_queryLights_LightList_Callback)();
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CBillboardSet_getLightMask_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setLightMask_void_ev_uint32_Callback)(_in ev_uint32 lightMask);
+			typedef EarthView::World::Graphic::LightList*  ( _stdcall EarthView_World_Graphic_CBillboardSet__getLightList_LightList_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setCastShadows_void_ev_bool_Callback)(_in ev_bool enabled);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_getReceivesShadows_ev_bool_Callback)();
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CBillboardSet_getTypeFlags_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_ev_bool_Callback)(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_Callback)(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_setDebugDisplayEnabled_void_ev_bool_Callback)(_in ev_bool enabled);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_isDebugDisplayEnabled_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_getCastShadows_ev_bool_Callback)();
+			typedef EarthView::World::Graphic::CEdgeData*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getEdgeList_CEdgeData_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_hasEdgeList_ev_bool_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback)(_in ev_bool derive);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getLightCapBounds_CAxisAlignedBox_Callback)();
+			typedef void*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback)(_in const void* light, _in Real dirLightExtrusionDist);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback)(_in int shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDistance, _in ev_uint32 flags);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback)(_in int shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDistance);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CBillboardSet_getPointExtrusionDistance_Real_CLight_Callback)(_in const EarthView::World::Graphic::CLight* l);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback)(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const void* lightPos);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback)(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const void* indexBuffer, _in const EarthView::World::Graphic::CLight* light, _inout void* shadowRenderables, _in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback)(_inout void* box, _in const void* lightPos, _in Real extrudeDist);
+			class CBillboardSetProxy : public EarthView::World::Graphic::CBillboardSet
+			{
+			private:
+				EarthView_World_Graphic_CBillboardSet_getMaterial_CMaterialPtr_Callback* m_EarthView_World_Graphic_CBillboardSet_getMaterial_CMaterialPtr_Callback;
+				EarthView_World_Graphic_CBillboardSet_getRenderOperation_void_CRenderOperation_Callback* m_EarthView_World_Graphic_CBillboardSet_getRenderOperation_void_CRenderOperation_Callback;
+				EarthView_World_Graphic_CBillboardSet_getWorldTransforms_void_CMatrix4_Callback* m_EarthView_World_Graphic_CBillboardSet_getWorldTransforms_void_CMatrix4_Callback;
+				EarthView_World_Graphic_CBillboardSet_getSquaredViewDepth_Real_CCamera_Callback* m_EarthView_World_Graphic_CBillboardSet_getSquaredViewDepth_Real_CCamera_Callback;
+				EarthView_World_Graphic_CBillboardSet_getLights_LightList_Callback* m_EarthView_World_Graphic_CBillboardSet_getLights_LightList_Callback;
+				EarthView_World_Graphic_CBillboardSet_getRenderablePtr_CBillboardSetInternalRenderable_Callback* m_EarthView_World_Graphic_CBillboardSet_getRenderablePtr_CBillboardSetInternalRenderable_Callback;
+				EarthView_World_Graphic_CBillboardSet_increasePool_void_ev_size_t_Callback* m_EarthView_World_Graphic_CBillboardSet_increasePool_void_ev_size_t_Callback;
+				EarthView_World_Graphic_CBillboardSet_getNumBillboards_ev_int32_Callback* m_EarthView_World_Graphic_CBillboardSet_getNumBillboards_ev_int32_Callback;
+				EarthView_World_Graphic_CBillboardSet_setAutoextend_void_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_setAutoextend_void_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_getAutoextend_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_getAutoextend_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_setSortingEnabled_void_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_setSortingEnabled_void_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_getSortingEnabled_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_getSortingEnabled_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_setPoolSize_void_ev_size_t_Callback* m_EarthView_World_Graphic_CBillboardSet_setPoolSize_void_ev_size_t_Callback;
+				EarthView_World_Graphic_CBillboardSet_getPoolSize_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_getPoolSize_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_clear_void_Callback* m_EarthView_World_Graphic_CBillboardSet_clear_void_Callback;
+				EarthView_World_Graphic_CBillboardSet_getBillboard_CBillboard_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_getBillboard_CBillboard_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_removeBillboard_void_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_removeBillboard_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_removeBillboard_void_CBillboard_Callback* m_EarthView_World_Graphic_CBillboardSet_removeBillboard_void_CBillboard_Callback;
+				EarthView_World_Graphic_CBillboardSet_setBillboardOrigin_void_BillboardOrigin_Callback* m_EarthView_World_Graphic_CBillboardSet_setBillboardOrigin_void_BillboardOrigin_Callback;
+				EarthView_World_Graphic_CBillboardSet_getBillboardOrigin_BillboardOrigin_Callback* m_EarthView_World_Graphic_CBillboardSet_getBillboardOrigin_BillboardOrigin_Callback;
+				EarthView_World_Graphic_CBillboardSet_setBillboardRotationType_void_BillboardRotationType_Callback* m_EarthView_World_Graphic_CBillboardSet_setBillboardRotationType_void_BillboardRotationType_Callback;
+				EarthView_World_Graphic_CBillboardSet_getBillboardRotationType_BillboardRotationType_Callback* m_EarthView_World_Graphic_CBillboardSet_getBillboardRotationType_BillboardRotationType_Callback;
+				EarthView_World_Graphic_CBillboardSet_setDefaultDimensions_void_Real_Real_Callback* m_EarthView_World_Graphic_CBillboardSet_setDefaultDimensions_void_Real_Real_Callback;
+				EarthView_World_Graphic_CBillboardSet_setDefaultWidth_void_Real_Callback* m_EarthView_World_Graphic_CBillboardSet_setDefaultWidth_void_Real_Callback;
+				EarthView_World_Graphic_CBillboardSet_getDefaultWidth_Real_Callback* m_EarthView_World_Graphic_CBillboardSet_getDefaultWidth_Real_Callback;
+				EarthView_World_Graphic_CBillboardSet_setDefaultHeight_void_Real_Callback* m_EarthView_World_Graphic_CBillboardSet_setDefaultHeight_void_Real_Callback;
+				EarthView_World_Graphic_CBillboardSet_getDefaultHeight_Real_Callback* m_EarthView_World_Graphic_CBillboardSet_getDefaultHeight_Real_Callback;
+				EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_EVString_Callback* m_EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_EVString_Callback;
+				EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_Callback* m_EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_Callback;
+				EarthView_World_Graphic_CBillboardSet_getMaterialName_EVString_Callback* m_EarthView_World_Graphic_CBillboardSet_getMaterialName_EVString_Callback;
+				EarthView_World_Graphic_CBillboardSet_setMaterial_void_CMaterialPtr_Callback* m_EarthView_World_Graphic_CBillboardSet_setMaterial_void_CMaterialPtr_Callback;
+				EarthView_World_Graphic_CBillboardSet__notifyBillboardResized_void_Callback* m_EarthView_World_Graphic_CBillboardSet__notifyBillboardResized_void_Callback;
+				EarthView_World_Graphic_CBillboardSet__notifyBillboardRotated_void_Callback* m_EarthView_World_Graphic_CBillboardSet__notifyBillboardRotated_void_Callback;
+				EarthView_World_Graphic_CBillboardSet_getCullIndividually_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_getCullIndividually_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_setCullIndividually_void_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_setCullIndividually_void_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_setBillboardType_void_BillboardType_Callback* m_EarthView_World_Graphic_CBillboardSet_setBillboardType_void_BillboardType_Callback;
+				EarthView_World_Graphic_CBillboardSet_getBillboardType_BillboardType_Callback* m_EarthView_World_Graphic_CBillboardSet_getBillboardType_BillboardType_Callback;
+				EarthView_World_Graphic_CBillboardSet_setCommonDirection_void_CVector3_Callback* m_EarthView_World_Graphic_CBillboardSet_setCommonDirection_void_CVector3_Callback;
+				EarthView_World_Graphic_CBillboardSet_getCommonDirection_CVector3_Callback* m_EarthView_World_Graphic_CBillboardSet_getCommonDirection_CVector3_Callback;
+				EarthView_World_Graphic_CBillboardSet_setCommonUpVector_void_CVector3_Callback* m_EarthView_World_Graphic_CBillboardSet_setCommonUpVector_void_CVector3_Callback;
+				EarthView_World_Graphic_CBillboardSet_getCommonUpVector_CVector3_Callback* m_EarthView_World_Graphic_CBillboardSet_getCommonUpVector_CVector3_Callback;
+				EarthView_World_Graphic_CBillboardSet_setUseAccurateFacing_void_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_setUseAccurateFacing_void_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_getUseAccurateFacing_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_getUseAccurateFacing_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet__updateBounds_void_Callback* m_EarthView_World_Graphic_CBillboardSet__updateBounds_void_Callback;
+				EarthView_World_Graphic_CBillboardSet__sortBillboards_void_CCamera_Callback* m_EarthView_World_Graphic_CBillboardSet__sortBillboards_void_CCamera_Callback;
+				EarthView_World_Graphic_CBillboardSet__getSortMode_SortMode_Callback* m_EarthView_World_Graphic_CBillboardSet__getSortMode_SortMode_Callback;
+				EarthView_World_Graphic_CBillboardSet_setBillboardsInWorldSpace_void_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_setBillboardsInWorldSpace_void_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_setTextureCoords_void_FloatRect_ev_uint16_Callback* m_EarthView_World_Graphic_CBillboardSet_setTextureCoords_void_FloatRect_ev_uint16_Callback;
+				EarthView_World_Graphic_CBillboardSet_setTextureStacksAndSlices_void_ev_uchar_ev_uchar_Callback* m_EarthView_World_Graphic_CBillboardSet_setTextureStacksAndSlices_void_ev_uchar_ev_uchar_Callback;
+				EarthView_World_Graphic_CBillboardSet_getTextureCoords_FloatRect_ev_uint16_Callback* m_EarthView_World_Graphic_CBillboardSet_getTextureCoords_FloatRect_ev_uint16_Callback;
+				EarthView_World_Graphic_CBillboardSet_setPointRenderingEnabled_void_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_setPointRenderingEnabled_void_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_isPointRenderingEnabled_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_isPointRenderingEnabled_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_getAutoFitCamera_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_getAutoFitCamera_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_setAutoFitCamera_void_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_setAutoFitCamera_void_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_getReduceDistance_Real_Callback* m_EarthView_World_Graphic_CBillboardSet_getReduceDistance_Real_Callback;
+				EarthView_World_Graphic_CBillboardSet_setReduceDistance_void_Real_Callback* m_EarthView_World_Graphic_CBillboardSet_setReduceDistance_void_Real_Callback;
+				EarthView_World_Graphic_CBillboardSet_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback* m_EarthView_World_Graphic_CBillboardSet_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback;
+				EarthView_World_Graphic_CBillboardSet_getRenderQueueId_ev_uint8_Callback* m_EarthView_World_Graphic_CBillboardSet_getRenderQueueId_ev_uint8_Callback;
+				EarthView_World_Graphic_CBillboardSet__notifyCreator_void_CMovableObjectFactory_Callback* m_EarthView_World_Graphic_CBillboardSet__notifyCreator_void_CMovableObjectFactory_Callback;
+				EarthView_World_Graphic_CBillboardSet__getCreator_CMovableObjectFactory_Callback* m_EarthView_World_Graphic_CBillboardSet__getCreator_CMovableObjectFactory_Callback;
+				EarthView_World_Graphic_CBillboardSet__notifyManager_void_CSceneManager_Callback* m_EarthView_World_Graphic_CBillboardSet__notifyManager_void_CSceneManager_Callback;
+				EarthView_World_Graphic_CBillboardSet__getManager_CSceneManager_Callback* m_EarthView_World_Graphic_CBillboardSet__getManager_CSceneManager_Callback;
+				EarthView_World_Graphic_CBillboardSet_getName_EVString_Callback* m_EarthView_World_Graphic_CBillboardSet_getName_EVString_Callback;
+				EarthView_World_Graphic_CBillboardSet_getMovableType_EVString_Callback* m_EarthView_World_Graphic_CBillboardSet_getMovableType_EVString_Callback;
+				EarthView_World_Graphic_CBillboardSet_getParentNode_CNode_Callback* m_EarthView_World_Graphic_CBillboardSet_getParentNode_CNode_Callback;
+				EarthView_World_Graphic_CBillboardSet_getParentSceneNode_CSceneNode_Callback* m_EarthView_World_Graphic_CBillboardSet_getParentSceneNode_CSceneNode_Callback;
+				EarthView_World_Graphic_CBillboardSet_isParentTagPoint_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_isParentTagPoint_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_Callback* m_EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_Callback;
+				EarthView_World_Graphic_CBillboardSet_isAttached_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_isAttached_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_detachFromParent_void_Callback* m_EarthView_World_Graphic_CBillboardSet_detachFromParent_void_Callback;
+				EarthView_World_Graphic_CBillboardSet_isInScene_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_isInScene_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet__notifyMoved_void_Callback* m_EarthView_World_Graphic_CBillboardSet__notifyMoved_void_Callback;
+				EarthView_World_Graphic_CBillboardSet__notifyLightsQueried_void_LightList_Callback* m_EarthView_World_Graphic_CBillboardSet__notifyLightsQueried_void_LightList_Callback;
+				EarthView_World_Graphic_CBillboardSet_setLightQueriedListener_void_CLightQueriedListener_Callback* m_EarthView_World_Graphic_CBillboardSet_setLightQueriedListener_void_CLightQueriedListener_Callback;
+				EarthView_World_Graphic_CBillboardSet_getLightQueriedListener_CLightQueriedListener_Callback* m_EarthView_World_Graphic_CBillboardSet_getLightQueriedListener_CLightQueriedListener_Callback;
+				EarthView_World_Graphic_CBillboardSet_getLightListUpdated_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_getLightListUpdated_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_setLightListUpdated_void_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_setLightListUpdated_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet__notifyCurrentCamera_void_CCamera_Callback* m_EarthView_World_Graphic_CBillboardSet__notifyCurrentCamera_void_CCamera_Callback;
+				EarthView_World_Graphic_CBillboardSet_getBoundingBox_CAxisAlignedBox_Callback* m_EarthView_World_Graphic_CBillboardSet_getBoundingBox_CAxisAlignedBox_Callback;
+				EarthView_World_Graphic_CBillboardSet_getBoundingRadius_Real_Callback* m_EarthView_World_Graphic_CBillboardSet_getBoundingRadius_Real_Callback;
+				EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_Callback* m_EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_Callback;
+				EarthView_World_Graphic_CBillboardSet__updateRenderQueue_void_CRenderQueue_Callback* m_EarthView_World_Graphic_CBillboardSet__updateRenderQueue_void_CRenderQueue_Callback;
+				EarthView_World_Graphic_CBillboardSet_setVisible_void_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_setVisible_void_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_getVisible_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_getVisible_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_isVisible_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_isVisible_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_setRenderingMaxDistance_void_Real_Callback* m_EarthView_World_Graphic_CBillboardSet_setRenderingMaxDistance_void_Real_Callback;
+				EarthView_World_Graphic_CBillboardSet_getRenderingMaxDistance_Real_Callback* m_EarthView_World_Graphic_CBillboardSet_getRenderingMaxDistance_Real_Callback;
+				EarthView_World_Graphic_CBillboardSet_setRenderingMinDistance_void_Real_Callback* m_EarthView_World_Graphic_CBillboardSet_setRenderingMinDistance_void_Real_Callback;
+				EarthView_World_Graphic_CBillboardSet_getRenderingMinDistance_Real_Callback* m_EarthView_World_Graphic_CBillboardSet_getRenderingMinDistance_Real_Callback;
+				EarthView_World_Graphic_CBillboardSet_setRenderingMinPixelSize_void_Real_Callback* m_EarthView_World_Graphic_CBillboardSet_setRenderingMinPixelSize_void_Real_Callback;
+				EarthView_World_Graphic_CBillboardSet_getRenderingMinPixelSize_Real_Callback* m_EarthView_World_Graphic_CBillboardSet_getRenderingMinPixelSize_Real_Callback;
+				EarthView_World_Graphic_CBillboardSet_setSelectionColour_void_CColourValue_Callback* m_EarthView_World_Graphic_CBillboardSet_setSelectionColour_void_CColourValue_Callback;
+				EarthView_World_Graphic_CBillboardSet_setSelected_ev_bool_IntVector_Callback* m_EarthView_World_Graphic_CBillboardSet_setSelected_ev_bool_IntVector_Callback;
+				EarthView_World_Graphic_CBillboardSet_getSelected_IntVector_Callback* m_EarthView_World_Graphic_CBillboardSet_getSelected_IntVector_Callback;
+				EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* m_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback;
+				EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* m_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback;
+				EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* m_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback;
+				EarthView_World_Graphic_CBillboardSet_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* m_EarthView_World_Graphic_CBillboardSet_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback;
+				EarthView_World_Graphic_CBillboardSet_renderSelection_void_Callback* m_EarthView_World_Graphic_CBillboardSet_renderSelection_void_Callback;
+				EarthView_World_Graphic_CBillboardSet_clearSelection_void_Callback* m_EarthView_World_Graphic_CBillboardSet_clearSelection_void_Callback;
+				EarthView_World_Graphic_CBillboardSet_startEditing_ev_bool_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_startEditing_ev_bool_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_endEditing_void_Callback* m_EarthView_World_Graphic_CBillboardSet_endEditing_void_Callback;
+				EarthView_World_Graphic_CBillboardSet_getEditBoundingBox_CEditBoundingBox_Callback* m_EarthView_World_Graphic_CBillboardSet_getEditBoundingBox_CEditBoundingBox_Callback;
+				EarthView_World_Graphic_CBillboardSet_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* m_EarthView_World_Graphic_CBillboardSet_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback;
+				EarthView_World_Graphic_CBillboardSet_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* m_EarthView_World_Graphic_CBillboardSet_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback;
+				EarthView_World_Graphic_CBillboardSet_setRenderQueueGroup_void_ev_uint8_Callback* m_EarthView_World_Graphic_CBillboardSet_setRenderQueueGroup_void_ev_uint8_Callback;
+				EarthView_World_Graphic_CBillboardSet_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback* m_EarthView_World_Graphic_CBillboardSet_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback;
+				EarthView_World_Graphic_CBillboardSet_getRenderQueueGroup_ev_uint8_Callback* m_EarthView_World_Graphic_CBillboardSet_getRenderQueueGroup_ev_uint8_Callback;
+				EarthView_World_Graphic_CBillboardSet__getParentNodeFullTransform_CMatrix4_Callback* m_EarthView_World_Graphic_CBillboardSet__getParentNodeFullTransform_CMatrix4_Callback;
+				EarthView_World_Graphic_CBillboardSet_setQueryFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_setQueryFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_addQueryFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_addQueryFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_removeQueryFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_removeQueryFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_getQueryFlags_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_getQueryFlags_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_setVisibilityFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_setVisibilityFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_addVisibilityFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_addVisibilityFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_removeVisibilityFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_removeVisibilityFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_getVisibilityFlags_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_getVisibilityFlags_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_addListener_void_CMovableObjectListener_Callback* m_EarthView_World_Graphic_CBillboardSet_addListener_void_CMovableObjectListener_Callback;
+				EarthView_World_Graphic_CBillboardSet_removeListener_void_CMovableObjectListener_Callback* m_EarthView_World_Graphic_CBillboardSet_removeListener_void_CMovableObjectListener_Callback;
+				EarthView_World_Graphic_CBillboardSet_existListener_ev_bool_CMovableObjectListener_Callback* m_EarthView_World_Graphic_CBillboardSet_existListener_ev_bool_CMovableObjectListener_Callback;
+				EarthView_World_Graphic_CBillboardSet_getListenerCount_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_getListenerCount_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_getListener_CMovableObjectListener_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_getListener_CMovableObjectListener_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_queryLights_LightList_Callback* m_EarthView_World_Graphic_CBillboardSet_queryLights_LightList_Callback;
+				EarthView_World_Graphic_CBillboardSet_getLightMask_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_getLightMask_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_setLightMask_void_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_setLightMask_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet__getLightList_LightList_Callback* m_EarthView_World_Graphic_CBillboardSet__getLightList_LightList_Callback;
+				EarthView_World_Graphic_CBillboardSet_setCastShadows_void_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_setCastShadows_void_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_getReceivesShadows_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_getReceivesShadows_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_getTypeFlags_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_getTypeFlags_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_Callback* m_EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_Callback;
+				EarthView_World_Graphic_CBillboardSet_setDebugDisplayEnabled_void_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_setDebugDisplayEnabled_void_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_isDebugDisplayEnabled_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_isDebugDisplayEnabled_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_getCastShadows_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_getCastShadows_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_getEdgeList_CEdgeData_Callback* m_EarthView_World_Graphic_CBillboardSet_getEdgeList_CEdgeData_Callback;
+				EarthView_World_Graphic_CBillboardSet_hasEdgeList_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_hasEdgeList_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_Callback* m_EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_Callback;
+				EarthView_World_Graphic_CBillboardSet_getLightCapBounds_CAxisAlignedBox_Callback* m_EarthView_World_Graphic_CBillboardSet_getLightCapBounds_CAxisAlignedBox_Callback;
+				EarthView_World_Graphic_CBillboardSet_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback* m_EarthView_World_Graphic_CBillboardSet_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback;
+				EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback* m_EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback;
+				EarthView_World_Graphic_CBillboardSet_getPointExtrusionDistance_Real_CLight_Callback* m_EarthView_World_Graphic_CBillboardSet_getPointExtrusionDistance_Real_CLight_Callback;
+				EarthView_World_Graphic_CBillboardSet_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback* m_EarthView_World_Graphic_CBillboardSet_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback;
+				EarthView_World_Graphic_CBillboardSet_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback* m_EarthView_World_Graphic_CBillboardSet_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback;
+			public:
+				CBillboardSetProxy(EarthView::World::Core::CNameValuePairList *pList) : CBillboardSet(pList)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getMaterial_CMaterialPtr_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getRenderOperation_void_CRenderOperation_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getWorldTransforms_void_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getSquaredViewDepth_Real_CCamera_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getLights_LightList_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getRenderablePtr_CBillboardSetInternalRenderable_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_increasePool_void_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getNumBillboards_ev_int32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setAutoextend_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getAutoextend_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setSortingEnabled_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getSortingEnabled_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setPoolSize_void_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getPoolSize_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_clear_void_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getBillboard_CBillboard_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_removeBillboard_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_removeBillboard_void_CBillboard_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setBillboardOrigin_void_BillboardOrigin_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getBillboardOrigin_BillboardOrigin_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setBillboardRotationType_void_BillboardRotationType_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getBillboardRotationType_BillboardRotationType_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setDefaultDimensions_void_Real_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setDefaultWidth_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getDefaultWidth_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setDefaultHeight_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getDefaultHeight_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getMaterialName_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setMaterial_void_CMaterialPtr_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet__notifyBillboardResized_void_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet__notifyBillboardRotated_void_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getCullIndividually_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setCullIndividually_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setBillboardType_void_BillboardType_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getBillboardType_BillboardType_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setCommonDirection_void_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getCommonDirection_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setCommonUpVector_void_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getCommonUpVector_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setUseAccurateFacing_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getUseAccurateFacing_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet__updateBounds_void_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet__sortBillboards_void_CCamera_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet__getSortMode_SortMode_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setBillboardsInWorldSpace_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setTextureCoords_void_FloatRect_ev_uint16_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setTextureStacksAndSlices_void_ev_uchar_ev_uchar_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getTextureCoords_FloatRect_ev_uint16_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setPointRenderingEnabled_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_isPointRenderingEnabled_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getAutoFitCamera_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setAutoFitCamera_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getReduceDistance_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setReduceDistance_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getRenderQueueId_ev_uint8_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet__notifyCreator_void_CMovableObjectFactory_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet__getCreator_CMovableObjectFactory_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet__notifyManager_void_CSceneManager_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet__getManager_CSceneManager_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getName_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getMovableType_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getParentNode_CNode_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getParentSceneNode_CSceneNode_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_isParentTagPoint_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_isAttached_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_detachFromParent_void_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_isInScene_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet__notifyMoved_void_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet__notifyLightsQueried_void_LightList_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setLightQueriedListener_void_CLightQueriedListener_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getLightQueriedListener_CLightQueriedListener_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getLightListUpdated_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setLightListUpdated_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet__notifyCurrentCamera_void_CCamera_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getBoundingBox_CAxisAlignedBox_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getBoundingRadius_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet__updateRenderQueue_void_CRenderQueue_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setVisible_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getVisible_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_isVisible_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setRenderingMaxDistance_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getRenderingMaxDistance_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setRenderingMinDistance_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getRenderingMinDistance_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setRenderingMinPixelSize_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getRenderingMinPixelSize_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setSelectionColour_void_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setSelected_ev_bool_IntVector_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getSelected_IntVector_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_renderSelection_void_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_clearSelection_void_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_startEditing_ev_bool_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_endEditing_void_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getEditBoundingBox_CEditBoundingBox_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setRenderQueueGroup_void_ev_uint8_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getRenderQueueGroup_ev_uint8_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet__getParentNodeFullTransform_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setQueryFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_addQueryFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_removeQueryFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getQueryFlags_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setVisibilityFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_addVisibilityFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_removeVisibilityFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getVisibilityFlags_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_addListener_void_CMovableObjectListener_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_removeListener_void_CMovableObjectListener_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_existListener_ev_bool_CMovableObjectListener_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getListenerCount_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getListener_CMovableObjectListener_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_queryLights_LightList_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getLightMask_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setLightMask_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet__getLightList_LightList_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setCastShadows_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getReceivesShadows_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getTypeFlags_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_setDebugDisplayEnabled_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_isDebugDisplayEnabled_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getCastShadows_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getEdgeList_CEdgeData_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_hasEdgeList_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getLightCapBounds_CAxisAlignedBox_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_getPointExtrusionDistance_Real_CLight_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getMaterial_CMaterialPtr(EarthView_World_Graphic_CBillboardSet_getMaterial_CMaterialPtr_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getMaterial_CMaterialPtr_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getRenderOperation_void_CRenderOperation(EarthView_World_Graphic_CBillboardSet_getRenderOperation_void_CRenderOperation_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getRenderOperation_void_CRenderOperation_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getWorldTransforms_void_CMatrix4(EarthView_World_Graphic_CBillboardSet_getWorldTransforms_void_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getWorldTransforms_void_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getSquaredViewDepth_Real_CCamera(EarthView_World_Graphic_CBillboardSet_getSquaredViewDepth_Real_CCamera_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getSquaredViewDepth_Real_CCamera_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getLights_LightList(EarthView_World_Graphic_CBillboardSet_getLights_LightList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getLights_LightList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getRenderablePtr_CBillboardSetInternalRenderable(EarthView_World_Graphic_CBillboardSet_getRenderablePtr_CBillboardSetInternalRenderable_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getRenderablePtr_CBillboardSetInternalRenderable_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_increasePool_void_ev_size_t(EarthView_World_Graphic_CBillboardSet_increasePool_void_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_increasePool_void_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getNumBillboards_ev_int32(EarthView_World_Graphic_CBillboardSet_getNumBillboards_ev_int32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getNumBillboards_ev_int32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setAutoextend_void_ev_bool(EarthView_World_Graphic_CBillboardSet_setAutoextend_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setAutoextend_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getAutoextend_ev_bool(EarthView_World_Graphic_CBillboardSet_getAutoextend_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getAutoextend_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setSortingEnabled_void_ev_bool(EarthView_World_Graphic_CBillboardSet_setSortingEnabled_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setSortingEnabled_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getSortingEnabled_ev_bool(EarthView_World_Graphic_CBillboardSet_getSortingEnabled_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getSortingEnabled_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setPoolSize_void_ev_size_t(EarthView_World_Graphic_CBillboardSet_setPoolSize_void_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setPoolSize_void_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getPoolSize_ev_uint32(EarthView_World_Graphic_CBillboardSet_getPoolSize_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getPoolSize_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_clear_void(EarthView_World_Graphic_CBillboardSet_clear_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_clear_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getBillboard_CBillboard_ev_uint32(EarthView_World_Graphic_CBillboardSet_getBillboard_CBillboard_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getBillboard_CBillboard_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_removeBillboard_void_ev_uint32(EarthView_World_Graphic_CBillboardSet_removeBillboard_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_removeBillboard_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_removeBillboard_void_CBillboard(EarthView_World_Graphic_CBillboardSet_removeBillboard_void_CBillboard_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_removeBillboard_void_CBillboard_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setBillboardOrigin_void_BillboardOrigin(EarthView_World_Graphic_CBillboardSet_setBillboardOrigin_void_BillboardOrigin_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setBillboardOrigin_void_BillboardOrigin_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getBillboardOrigin_BillboardOrigin(EarthView_World_Graphic_CBillboardSet_getBillboardOrigin_BillboardOrigin_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getBillboardOrigin_BillboardOrigin_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setBillboardRotationType_void_BillboardRotationType(EarthView_World_Graphic_CBillboardSet_setBillboardRotationType_void_BillboardRotationType_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setBillboardRotationType_void_BillboardRotationType_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getBillboardRotationType_BillboardRotationType(EarthView_World_Graphic_CBillboardSet_getBillboardRotationType_BillboardRotationType_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getBillboardRotationType_BillboardRotationType_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setDefaultDimensions_void_Real_Real(EarthView_World_Graphic_CBillboardSet_setDefaultDimensions_void_Real_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setDefaultDimensions_void_Real_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setDefaultWidth_void_Real(EarthView_World_Graphic_CBillboardSet_setDefaultWidth_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setDefaultWidth_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getDefaultWidth_Real(EarthView_World_Graphic_CBillboardSet_getDefaultWidth_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getDefaultWidth_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setDefaultHeight_void_Real(EarthView_World_Graphic_CBillboardSet_setDefaultHeight_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setDefaultHeight_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getDefaultHeight_Real(EarthView_World_Graphic_CBillboardSet_getDefaultHeight_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getDefaultHeight_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_EVString(EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString(EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getMaterialName_EVString(EarthView_World_Graphic_CBillboardSet_getMaterialName_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getMaterialName_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setMaterial_void_CMaterialPtr(EarthView_World_Graphic_CBillboardSet_setMaterial_void_CMaterialPtr_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setMaterial_void_CMaterialPtr_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet__notifyBillboardResized_void(EarthView_World_Graphic_CBillboardSet__notifyBillboardResized_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet__notifyBillboardResized_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet__notifyBillboardRotated_void(EarthView_World_Graphic_CBillboardSet__notifyBillboardRotated_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet__notifyBillboardRotated_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getCullIndividually_ev_bool(EarthView_World_Graphic_CBillboardSet_getCullIndividually_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getCullIndividually_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setCullIndividually_void_ev_bool(EarthView_World_Graphic_CBillboardSet_setCullIndividually_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setCullIndividually_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setBillboardType_void_BillboardType(EarthView_World_Graphic_CBillboardSet_setBillboardType_void_BillboardType_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setBillboardType_void_BillboardType_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getBillboardType_BillboardType(EarthView_World_Graphic_CBillboardSet_getBillboardType_BillboardType_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getBillboardType_BillboardType_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setCommonDirection_void_CVector3(EarthView_World_Graphic_CBillboardSet_setCommonDirection_void_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setCommonDirection_void_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getCommonDirection_CVector3(EarthView_World_Graphic_CBillboardSet_getCommonDirection_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getCommonDirection_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setCommonUpVector_void_CVector3(EarthView_World_Graphic_CBillboardSet_setCommonUpVector_void_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setCommonUpVector_void_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getCommonUpVector_CVector3(EarthView_World_Graphic_CBillboardSet_getCommonUpVector_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getCommonUpVector_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setUseAccurateFacing_void_ev_bool(EarthView_World_Graphic_CBillboardSet_setUseAccurateFacing_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setUseAccurateFacing_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getUseAccurateFacing_ev_bool(EarthView_World_Graphic_CBillboardSet_getUseAccurateFacing_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getUseAccurateFacing_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet__updateBounds_void(EarthView_World_Graphic_CBillboardSet__updateBounds_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet__updateBounds_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet__sortBillboards_void_CCamera(EarthView_World_Graphic_CBillboardSet__sortBillboards_void_CCamera_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet__sortBillboards_void_CCamera_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet__getSortMode_SortMode(EarthView_World_Graphic_CBillboardSet__getSortMode_SortMode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet__getSortMode_SortMode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setBillboardsInWorldSpace_void_ev_bool(EarthView_World_Graphic_CBillboardSet_setBillboardsInWorldSpace_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setBillboardsInWorldSpace_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setTextureCoords_void_FloatRect_ev_uint16(EarthView_World_Graphic_CBillboardSet_setTextureCoords_void_FloatRect_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setTextureCoords_void_FloatRect_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setTextureStacksAndSlices_void_ev_uchar_ev_uchar(EarthView_World_Graphic_CBillboardSet_setTextureStacksAndSlices_void_ev_uchar_ev_uchar_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setTextureStacksAndSlices_void_ev_uchar_ev_uchar_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getTextureCoords_FloatRect_ev_uint16(EarthView_World_Graphic_CBillboardSet_getTextureCoords_FloatRect_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getTextureCoords_FloatRect_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setPointRenderingEnabled_void_ev_bool(EarthView_World_Graphic_CBillboardSet_setPointRenderingEnabled_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setPointRenderingEnabled_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_isPointRenderingEnabled_ev_bool(EarthView_World_Graphic_CBillboardSet_isPointRenderingEnabled_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_isPointRenderingEnabled_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getAutoFitCamera_ev_bool(EarthView_World_Graphic_CBillboardSet_getAutoFitCamera_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getAutoFitCamera_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setAutoFitCamera_void_ev_bool(EarthView_World_Graphic_CBillboardSet_setAutoFitCamera_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setAutoFitCamera_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getReduceDistance_Real(EarthView_World_Graphic_CBillboardSet_getReduceDistance_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getReduceDistance_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setReduceDistance_void_Real(EarthView_World_Graphic_CBillboardSet_setReduceDistance_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setReduceDistance_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getAnimableObjectPtr_CMovableObjectInternalAnimableObject(EarthView_World_Graphic_CBillboardSet_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getRenderQueueId_ev_uint8(EarthView_World_Graphic_CBillboardSet_getRenderQueueId_ev_uint8_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getRenderQueueId_ev_uint8_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet__notifyCreator_void_CMovableObjectFactory(EarthView_World_Graphic_CBillboardSet__notifyCreator_void_CMovableObjectFactory_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet__notifyCreator_void_CMovableObjectFactory_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet__getCreator_CMovableObjectFactory(EarthView_World_Graphic_CBillboardSet__getCreator_CMovableObjectFactory_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet__getCreator_CMovableObjectFactory_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet__notifyManager_void_CSceneManager(EarthView_World_Graphic_CBillboardSet__notifyManager_void_CSceneManager_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet__notifyManager_void_CSceneManager_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet__getManager_CSceneManager(EarthView_World_Graphic_CBillboardSet__getManager_CSceneManager_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet__getManager_CSceneManager_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getName_EVString(EarthView_World_Graphic_CBillboardSet_getName_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getName_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getMovableType_EVString(EarthView_World_Graphic_CBillboardSet_getMovableType_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getMovableType_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getParentNode_CNode(EarthView_World_Graphic_CBillboardSet_getParentNode_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getParentNode_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getParentSceneNode_CSceneNode(EarthView_World_Graphic_CBillboardSet_getParentSceneNode_CSceneNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getParentSceneNode_CSceneNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_isParentTagPoint_ev_bool(EarthView_World_Graphic_CBillboardSet_isParentTagPoint_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_isParentTagPoint_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_ev_bool(EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode(EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_isAttached_ev_bool(EarthView_World_Graphic_CBillboardSet_isAttached_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_isAttached_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_detachFromParent_void(EarthView_World_Graphic_CBillboardSet_detachFromParent_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_detachFromParent_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_isInScene_ev_bool(EarthView_World_Graphic_CBillboardSet_isInScene_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_isInScene_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet__notifyMoved_void(EarthView_World_Graphic_CBillboardSet__notifyMoved_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet__notifyMoved_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet__notifyLightsQueried_void_LightList(EarthView_World_Graphic_CBillboardSet__notifyLightsQueried_void_LightList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet__notifyLightsQueried_void_LightList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setLightQueriedListener_void_CLightQueriedListener(EarthView_World_Graphic_CBillboardSet_setLightQueriedListener_void_CLightQueriedListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setLightQueriedListener_void_CLightQueriedListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getLightQueriedListener_CLightQueriedListener(EarthView_World_Graphic_CBillboardSet_getLightQueriedListener_CLightQueriedListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getLightQueriedListener_CLightQueriedListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getLightListUpdated_ev_uint32(EarthView_World_Graphic_CBillboardSet_getLightListUpdated_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getLightListUpdated_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setLightListUpdated_void_ev_uint32(EarthView_World_Graphic_CBillboardSet_setLightListUpdated_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setLightListUpdated_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet__notifyCurrentCamera_void_CCamera(EarthView_World_Graphic_CBillboardSet__notifyCurrentCamera_void_CCamera_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet__notifyCurrentCamera_void_CCamera_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getBoundingBox_CAxisAlignedBox(EarthView_World_Graphic_CBillboardSet_getBoundingBox_CAxisAlignedBox_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getBoundingBox_CAxisAlignedBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getBoundingRadius_Real(EarthView_World_Graphic_CBillboardSet_getBoundingRadius_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getBoundingRadius_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_ev_bool(EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere(EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet__updateRenderQueue_void_CRenderQueue(EarthView_World_Graphic_CBillboardSet__updateRenderQueue_void_CRenderQueue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet__updateRenderQueue_void_CRenderQueue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setVisible_void_ev_bool(EarthView_World_Graphic_CBillboardSet_setVisible_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setVisible_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getVisible_ev_bool(EarthView_World_Graphic_CBillboardSet_getVisible_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getVisible_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_isVisible_ev_bool(EarthView_World_Graphic_CBillboardSet_isVisible_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_isVisible_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setRenderingMaxDistance_void_Real(EarthView_World_Graphic_CBillboardSet_setRenderingMaxDistance_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setRenderingMaxDistance_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getRenderingMaxDistance_Real(EarthView_World_Graphic_CBillboardSet_getRenderingMaxDistance_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getRenderingMaxDistance_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setRenderingMinDistance_void_Real(EarthView_World_Graphic_CBillboardSet_setRenderingMinDistance_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setRenderingMinDistance_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getRenderingMinDistance_Real(EarthView_World_Graphic_CBillboardSet_getRenderingMinDistance_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getRenderingMinDistance_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setRenderingMinPixelSize_void_Real(EarthView_World_Graphic_CBillboardSet_setRenderingMinPixelSize_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setRenderingMinPixelSize_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getRenderingMinPixelSize_Real(EarthView_World_Graphic_CBillboardSet_getRenderingMinPixelSize_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getRenderingMinPixelSize_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setSelectionColour_void_CColourValue(EarthView_World_Graphic_CBillboardSet_setSelectionColour_void_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setSelectionColour_void_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setSelected_ev_bool_IntVector(EarthView_World_Graphic_CBillboardSet_setSelected_ev_bool_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setSelected_ev_bool_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getSelected_IntVector(EarthView_World_Graphic_CBillboardSet_getSelected_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getSelected_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3(EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector(EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CSphere_ev_bool_IntVector(EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3(EarthView_World_Graphic_CBillboardSet_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_renderSelection_void(EarthView_World_Graphic_CBillboardSet_renderSelection_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_renderSelection_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_clearSelection_void(EarthView_World_Graphic_CBillboardSet_clearSelection_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_clearSelection_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_startEditing_ev_bool_ev_uint32(EarthView_World_Graphic_CBillboardSet_startEditing_ev_bool_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_startEditing_ev_bool_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_endEditing_void(EarthView_World_Graphic_CBillboardSet_endEditing_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_endEditing_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getEditBoundingBox_CEditBoundingBox(EarthView_World_Graphic_CBillboardSet_getEditBoundingBox_CEditBoundingBox_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getEditBoundingBox_CEditBoundingBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(EarthView_World_Graphic_CBillboardSet_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(EarthView_World_Graphic_CBillboardSet_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setRenderQueueGroup_void_ev_uint8(EarthView_World_Graphic_CBillboardSet_setRenderQueueGroup_void_ev_uint8_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setRenderQueueGroup_void_ev_uint8_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16(EarthView_World_Graphic_CBillboardSet_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getRenderQueueGroup_ev_uint8(EarthView_World_Graphic_CBillboardSet_getRenderQueueGroup_ev_uint8_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getRenderQueueGroup_ev_uint8_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet__getParentNodeFullTransform_CMatrix4(EarthView_World_Graphic_CBillboardSet__getParentNodeFullTransform_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet__getParentNodeFullTransform_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setQueryFlags_void_ev_uint32(EarthView_World_Graphic_CBillboardSet_setQueryFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setQueryFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_addQueryFlags_void_ev_uint32(EarthView_World_Graphic_CBillboardSet_addQueryFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_addQueryFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_removeQueryFlags_void_ev_uint32(EarthView_World_Graphic_CBillboardSet_removeQueryFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_removeQueryFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getQueryFlags_ev_uint32(EarthView_World_Graphic_CBillboardSet_getQueryFlags_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getQueryFlags_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setVisibilityFlags_void_ev_uint32(EarthView_World_Graphic_CBillboardSet_setVisibilityFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setVisibilityFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_addVisibilityFlags_void_ev_uint32(EarthView_World_Graphic_CBillboardSet_addVisibilityFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_addVisibilityFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_removeVisibilityFlags_void_ev_uint32(EarthView_World_Graphic_CBillboardSet_removeVisibilityFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_removeVisibilityFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getVisibilityFlags_ev_uint32(EarthView_World_Graphic_CBillboardSet_getVisibilityFlags_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getVisibilityFlags_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_addListener_void_CMovableObjectListener(EarthView_World_Graphic_CBillboardSet_addListener_void_CMovableObjectListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_addListener_void_CMovableObjectListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_removeListener_void_CMovableObjectListener(EarthView_World_Graphic_CBillboardSet_removeListener_void_CMovableObjectListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_removeListener_void_CMovableObjectListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_existListener_ev_bool_CMovableObjectListener(EarthView_World_Graphic_CBillboardSet_existListener_ev_bool_CMovableObjectListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_existListener_ev_bool_CMovableObjectListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getListenerCount_ev_uint32(EarthView_World_Graphic_CBillboardSet_getListenerCount_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getListenerCount_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getListener_CMovableObjectListener_ev_uint32(EarthView_World_Graphic_CBillboardSet_getListener_CMovableObjectListener_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getListener_CMovableObjectListener_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_queryLights_LightList(EarthView_World_Graphic_CBillboardSet_queryLights_LightList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_queryLights_LightList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getLightMask_ev_uint32(EarthView_World_Graphic_CBillboardSet_getLightMask_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getLightMask_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setLightMask_void_ev_uint32(EarthView_World_Graphic_CBillboardSet_setLightMask_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setLightMask_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet__getLightList_LightList(EarthView_World_Graphic_CBillboardSet__getLightList_LightList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet__getLightList_LightList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setCastShadows_void_ev_bool(EarthView_World_Graphic_CBillboardSet_setCastShadows_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setCastShadows_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getReceivesShadows_ev_bool(EarthView_World_Graphic_CBillboardSet_getReceivesShadows_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getReceivesShadows_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getTypeFlags_ev_uint32(EarthView_World_Graphic_CBillboardSet_getTypeFlags_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getTypeFlags_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_ev_bool(EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor(EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_setDebugDisplayEnabled_void_ev_bool(EarthView_World_Graphic_CBillboardSet_setDebugDisplayEnabled_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_setDebugDisplayEnabled_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_isDebugDisplayEnabled_ev_bool(EarthView_World_Graphic_CBillboardSet_isDebugDisplayEnabled_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_isDebugDisplayEnabled_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getCastShadows_ev_bool(EarthView_World_Graphic_CBillboardSet_getCastShadows_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getCastShadows_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getEdgeList_CEdgeData(EarthView_World_Graphic_CBillboardSet_getEdgeList_CEdgeData_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getEdgeList_CEdgeData_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_hasEdgeList_ev_bool(EarthView_World_Graphic_CBillboardSet_hasEdgeList_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_hasEdgeList_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_ev_bool(EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox(EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getLightCapBounds_CAxisAlignedBox(EarthView_World_Graphic_CBillboardSet_getLightCapBounds_CAxisAlignedBox_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getLightCapBounds_CAxisAlignedBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getDarkCapBounds_CAxisAlignedBox_CLight_Real(EarthView_World_Graphic_CBillboardSet_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32(EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real(EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_getPointExtrusionDistance_Real_CLight(EarthView_World_Graphic_CBillboardSet_getPointExtrusionDistance_Real_CLight_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_getPointExtrusionDistance_Real_CLight_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_updateEdgeListLightFacing_void_CEdgeData_CVector4(EarthView_World_Graphic_CBillboardSet_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32(EarthView_World_Graphic_CBillboardSet_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_extrudeBounds_void_CAxisAlignedBox_CVector4_Real(EarthView_World_Graphic_CBillboardSet_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback = pCallback;
+				}
+				virtual const EarthView::World::Graphic::CMaterialPtr& getMaterial() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getMaterial_CMaterialPtr_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CMaterialPtr& returnValue = *(EarthView::World::Graphic::CMaterialPtr*)m_EarthView_World_Graphic_CBillboardSet_getMaterial_CMaterialPtr_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getMaterial();
+				}
+				virtual void getRenderOperation(_inout EarthView::World::Graphic::CRenderOperation& op)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getRenderOperation_void_CRenderOperation_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_getRenderOperation_void_CRenderOperation_Callback(&op);
+					}
+					else
+						return this->CBillboardSet::getRenderOperation(op);
+				}
+				virtual void getWorldTransforms(_in EarthView::World::Spatial::Math::CMatrix4* xform) const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getWorldTransforms_void_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_getWorldTransforms_void_CMatrix4_Callback(xform);
+					}
+					else
+						return this->CBillboardSet::getWorldTransforms(xform);
+				}
+				virtual Real getSquaredViewDepth(_in const EarthView::World::Graphic::CCamera* cam) const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getSquaredViewDepth_Real_CCamera_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CBillboardSet_getSquaredViewDepth_Real_CCamera_Callback(cam);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getSquaredViewDepth(cam);
+				}
+				virtual const EarthView::World::Graphic::LightList& getLights() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getLights_LightList_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::LightList& returnValue = *(EarthView::World::Graphic::LightList*)m_EarthView_World_Graphic_CBillboardSet_getLights_LightList_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getLights();
+				}
+				virtual const EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable* getRenderablePtr()
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getRenderablePtr_CBillboardSetInternalRenderable_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable* returnValue = m_EarthView_World_Graphic_CBillboardSet_getRenderablePtr_CBillboardSetInternalRenderable_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getRenderablePtr();
+				}
+				virtual void increasePool(_in ev_size_t size)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_increasePool_void_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_increasePool_void_ev_size_t_Callback(size);
+					}
+					else
+						return this->CBillboardSet::increasePool(size);
+				}
+				virtual ev_int32 getNumBillboards() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getNumBillboards_ev_int32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_int32 returnValue = m_EarthView_World_Graphic_CBillboardSet_getNumBillboards_ev_int32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getNumBillboards();
+				}
+				virtual void setAutoextend(_in ev_bool autoextend)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setAutoextend_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setAutoextend_void_ev_bool_Callback(autoextend);
+					}
+					else
+						return this->CBillboardSet::setAutoextend(autoextend);
+				}
+				virtual ev_bool getAutoextend() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getAutoextend_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_getAutoextend_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getAutoextend();
+				}
+				virtual void setSortingEnabled(_in ev_bool sortenable)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setSortingEnabled_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setSortingEnabled_void_ev_bool_Callback(sortenable);
+					}
+					else
+						return this->CBillboardSet::setSortingEnabled(sortenable);
+				}
+				virtual ev_bool getSortingEnabled() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getSortingEnabled_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_getSortingEnabled_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getSortingEnabled();
+				}
+				virtual void setPoolSize(_in ev_size_t size)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setPoolSize_void_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setPoolSize_void_ev_size_t_Callback(size);
+					}
+					else
+						return this->CBillboardSet::setPoolSize(size);
+				}
+				virtual ev_uint32 getPoolSize() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getPoolSize_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CBillboardSet_getPoolSize_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getPoolSize();
+				}
+				virtual void clear()
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_clear_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_clear_void_Callback();
+					}
+					else
+						return this->CBillboardSet::clear();
+				}
+				virtual EarthView::World::Graphic::CBillboard* getBillboard(_in ev_uint32 index) const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getBillboard_CBillboard_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CBillboard* returnValue = m_EarthView_World_Graphic_CBillboardSet_getBillboard_CBillboard_ev_uint32_Callback(index);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getBillboard(index);
+				}
+				virtual void removeBillboard(_in ev_uint32 index)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_removeBillboard_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_removeBillboard_void_ev_uint32_Callback(index);
+					}
+					else
+						return this->CBillboardSet::removeBillboard(index);
+				}
+				virtual void removeBillboard(_in EarthView::World::Graphic::CBillboard* pBill)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_removeBillboard_void_CBillboard_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_removeBillboard_void_CBillboard_Callback(pBill);
+					}
+					else
+						return this->CBillboardSet::removeBillboard(pBill);
+				}
+				virtual void setBillboardOrigin(_in EarthView::World::Graphic::BillboardOrigin origin)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setBillboardOrigin_void_BillboardOrigin_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setBillboardOrigin_void_BillboardOrigin_Callback((int)origin);
+					}
+					else
+						return this->CBillboardSet::setBillboardOrigin(origin);
+				}
+				virtual EarthView::World::Graphic::BillboardOrigin getBillboardOrigin() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getBillboardOrigin_BillboardOrigin_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::BillboardOrigin returnValue = (EarthView::World::Graphic::BillboardOrigin)m_EarthView_World_Graphic_CBillboardSet_getBillboardOrigin_BillboardOrigin_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getBillboardOrigin();
+				}
+				virtual void setBillboardRotationType(_in EarthView::World::Graphic::BillboardRotationType rotationType)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setBillboardRotationType_void_BillboardRotationType_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setBillboardRotationType_void_BillboardRotationType_Callback((int)rotationType);
+					}
+					else
+						return this->CBillboardSet::setBillboardRotationType(rotationType);
+				}
+				virtual EarthView::World::Graphic::BillboardRotationType getBillboardRotationType() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getBillboardRotationType_BillboardRotationType_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::BillboardRotationType returnValue = (EarthView::World::Graphic::BillboardRotationType)m_EarthView_World_Graphic_CBillboardSet_getBillboardRotationType_BillboardRotationType_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getBillboardRotationType();
+				}
+				virtual void setDefaultDimensions(_in Real width, _in Real height)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setDefaultDimensions_void_Real_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setDefaultDimensions_void_Real_Real_Callback(width, height);
+					}
+					else
+						return this->CBillboardSet::setDefaultDimensions(width, height);
+				}
+				virtual void setDefaultWidth(_in Real width)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setDefaultWidth_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setDefaultWidth_void_Real_Callback(width);
+					}
+					else
+						return this->CBillboardSet::setDefaultWidth(width);
+				}
+				virtual Real getDefaultWidth() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getDefaultWidth_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CBillboardSet_getDefaultWidth_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getDefaultWidth();
+				}
+				virtual void setDefaultHeight(_in Real height)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setDefaultHeight_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setDefaultHeight_void_Real_Callback(height);
+					}
+					else
+						return this->CBillboardSet::setDefaultHeight(height);
+				}
+				virtual Real getDefaultHeight() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getDefaultHeight_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CBillboardSet_getDefaultHeight_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getDefaultHeight();
+				}
+				virtual void setMaterialName(_in const EVString& name, _in const EVString& groupName)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* groupName_Char = groupName.makeBuffer();
+						m_EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_EVString_Callback(name_Char, groupName_Char);
+					}
+					else
+						return this->CBillboardSet::setMaterialName(name, groupName);
+				}
+				virtual void setMaterialName(_in const EVString& name)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						m_EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_Callback(name_Char);
+					}
+					else
+						return this->CBillboardSet::setMaterialName(name);
+				}
+				virtual EVString getMaterialName() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getMaterialName_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CBillboardSet_getMaterialName_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getMaterialName();
+				}
+				virtual void _notifyCurrentCamera(_in EarthView::World::Graphic::CCamera* cam)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet__notifyCurrentCamera_void_CCamera_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet__notifyCurrentCamera_void_CCamera_Callback(cam);
+					}
+					else
+						return this->CBillboardSet::_notifyCurrentCamera(cam);
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getBoundingBox() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getBoundingBox_CAxisAlignedBox_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CBillboardSet_getBoundingBox_CAxisAlignedBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getBoundingBox();
+				}
+				virtual Real getBoundingRadius() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getBoundingRadius_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CBillboardSet_getBoundingRadius_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getBoundingRadius();
+				}
+				virtual void _updateRenderQueue(_in EarthView::World::Graphic::CRenderQueue* queue)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet__updateRenderQueue_void_CRenderQueue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet__updateRenderQueue_void_CRenderQueue_Callback(queue);
+					}
+					else
+						return this->CBillboardSet::_updateRenderQueue(queue);
+				}
+				virtual void setMaterial(_in const EarthView::World::Graphic::CMaterialPtr& material)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setMaterial_void_CMaterialPtr_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setMaterial_void_CMaterialPtr_Callback(&material);
+					}
+					else
+						return this->CBillboardSet::setMaterial(material);
+				}
+				virtual void _notifyBillboardResized()
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet__notifyBillboardResized_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet__notifyBillboardResized_void_Callback();
+					}
+					else
+						return this->CBillboardSet::_notifyBillboardResized();
+				}
+				virtual void _notifyBillboardRotated()
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet__notifyBillboardRotated_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet__notifyBillboardRotated_void_Callback();
+					}
+					else
+						return this->CBillboardSet::_notifyBillboardRotated();
+				}
+				virtual ev_bool getCullIndividually() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getCullIndividually_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_getCullIndividually_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getCullIndividually();
+				}
+				virtual void setCullIndividually(_in ev_bool cullIndividual)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setCullIndividually_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setCullIndividually_void_ev_bool_Callback(cullIndividual);
+					}
+					else
+						return this->CBillboardSet::setCullIndividually(cullIndividual);
+				}
+				virtual void setBillboardType(_in EarthView::World::Graphic::BillboardType bbt)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setBillboardType_void_BillboardType_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setBillboardType_void_BillboardType_Callback((int)bbt);
+					}
+					else
+						return this->CBillboardSet::setBillboardType(bbt);
+				}
+				virtual EarthView::World::Graphic::BillboardType getBillboardType() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getBillboardType_BillboardType_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::BillboardType returnValue = (EarthView::World::Graphic::BillboardType)m_EarthView_World_Graphic_CBillboardSet_getBillboardType_BillboardType_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getBillboardType();
+				}
+				virtual void setCommonDirection(_in const EarthView::World::Spatial::Math::CVector3& vec)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setCommonDirection_void_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setCommonDirection_void_CVector3_Callback(&vec);
+					}
+					else
+						return this->CBillboardSet::setCommonDirection(vec);
+				}
+				virtual const EarthView::World::Spatial::Math::CVector3& getCommonDirection() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getCommonDirection_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CVector3& returnValue = *(EarthView::World::Spatial::Math::CVector3*)m_EarthView_World_Graphic_CBillboardSet_getCommonDirection_CVector3_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getCommonDirection();
+				}
+				virtual void setCommonUpVector(_in const EarthView::World::Spatial::Math::CVector3& vec)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setCommonUpVector_void_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setCommonUpVector_void_CVector3_Callback(&vec);
+					}
+					else
+						return this->CBillboardSet::setCommonUpVector(vec);
+				}
+				virtual const EarthView::World::Spatial::Math::CVector3& getCommonUpVector() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getCommonUpVector_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CVector3& returnValue = *(EarthView::World::Spatial::Math::CVector3*)m_EarthView_World_Graphic_CBillboardSet_getCommonUpVector_CVector3_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getCommonUpVector();
+				}
+				virtual void setUseAccurateFacing(_in ev_bool acc)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setUseAccurateFacing_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setUseAccurateFacing_void_ev_bool_Callback(acc);
+					}
+					else
+						return this->CBillboardSet::setUseAccurateFacing(acc);
+				}
+				virtual ev_bool getUseAccurateFacing() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getUseAccurateFacing_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_getUseAccurateFacing_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getUseAccurateFacing();
+				}
+				virtual EVString getMovableType() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getMovableType_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CBillboardSet_getMovableType_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getMovableType();
+				}
+				virtual void _updateBounds()
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet__updateBounds_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet__updateBounds_void_Callback();
+					}
+					else
+						return this->CBillboardSet::_updateBounds();
+				}
+				virtual void visitRenderables(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_ev_bool_Callback(visitor, debugRenderables);
+					}
+					else
+						return this->CBillboardSet::visitRenderables(visitor, debugRenderables);
+				}
+				virtual void visitRenderables(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_Callback(visitor);
+					}
+					else
+						return this->CBillboardSet::visitRenderables(visitor);
+				}
+				virtual void _sortBillboards(_in EarthView::World::Graphic::CCamera* cam)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet__sortBillboards_void_CCamera_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet__sortBillboards_void_CCamera_Callback(cam);
+					}
+					else
+						return this->CBillboardSet::_sortBillboards(cam);
+				}
+				virtual EarthView::World::Graphic::SortMode _getSortMode() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet__getSortMode_SortMode_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::SortMode returnValue = (EarthView::World::Graphic::SortMode)m_EarthView_World_Graphic_CBillboardSet__getSortMode_SortMode_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::_getSortMode();
+				}
+				virtual void setBillboardsInWorldSpace(_in ev_bool ws)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setBillboardsInWorldSpace_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setBillboardsInWorldSpace_void_ev_bool_Callback(ws);
+					}
+					else
+						return this->CBillboardSet::setBillboardsInWorldSpace(ws);
+				}
+				virtual void setTextureCoords(_in EarthView::World::Graphic::FloatRect* coords, _in ev_uint16 numCoords)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setTextureCoords_void_FloatRect_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setTextureCoords_void_FloatRect_ev_uint16_Callback(coords, numCoords);
+					}
+					else
+						return this->CBillboardSet::setTextureCoords(coords, numCoords);
+				}
+				virtual void setTextureStacksAndSlices(_in ev_uchar stacks, _in ev_uchar slices)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setTextureStacksAndSlices_void_ev_uchar_ev_uchar_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setTextureStacksAndSlices_void_ev_uchar_ev_uchar_Callback(stacks, slices);
+					}
+					else
+						return this->CBillboardSet::setTextureStacksAndSlices(stacks, slices);
+				}
+				virtual const EarthView::World::Graphic::FloatRect* getTextureCoords(_out ev_uint16* oNumCoords)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getTextureCoords_FloatRect_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::FloatRect* returnValue = m_EarthView_World_Graphic_CBillboardSet_getTextureCoords_FloatRect_ev_uint16_Callback(oNumCoords);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getTextureCoords(oNumCoords);
+				}
+				virtual void setPointRenderingEnabled(_in ev_bool enabled)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setPointRenderingEnabled_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setPointRenderingEnabled_void_ev_bool_Callback(enabled);
+					}
+					else
+						return this->CBillboardSet::setPointRenderingEnabled(enabled);
+				}
+				virtual ev_bool isPointRenderingEnabled() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_isPointRenderingEnabled_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_isPointRenderingEnabled_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::isPointRenderingEnabled();
+				}
+				virtual ev_uint32 getTypeFlags() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getTypeFlags_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CBillboardSet_getTypeFlags_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getTypeFlags();
+				}
+				virtual ev_bool setSelected(_in const EarthView::World::Core::IntVector& objIndics)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setSelected_ev_bool_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_setSelected_ev_bool_IntVector_Callback(&objIndics);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::setSelected(objIndics);
+				}
+				virtual EarthView::World::Core::IntVector getSelected() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getSelected_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Core::IntVector returnValue = *(EarthView::World::Core::IntVector*)m_EarthView_World_Graphic_CBillboardSet_getSelected_IntVector_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getSelected();
+				}
+				virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CRay& ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out EarthView::World::Spatial::Math::CVector3& point)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback(&ray, viewport, prepareToRenderSelection, objIndex, &point);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::selectBy(ray, viewport, prepareToRenderSelection, objIndex, point);
+				}
+				virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CAxisAlignedBox& aabb, _in ev_bool prepareToRenderSelection, _out EarthView::World::Core::IntVector& indexVec)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback(&aabb, prepareToRenderSelection, &indexVec);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::selectBy(aabb, prepareToRenderSelection, indexVec);
+				}
+				virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CSphere& sphere, _in ev_bool prepareToRenderSelection, _out EarthView::World::Core::IntVector& indexVec)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback(&sphere, prepareToRenderSelection, &indexVec);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::selectBy(sphere, prepareToRenderSelection, indexVec);
+				}
+				virtual ev_bool selectComponentBy(_in const EarthView::World::Spatial::Math::CRay& ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out ev_int32& submeshIndex, _out ev_int32& instanceIndex, _out ev_int32& segmentIndex, _out EarthView::World::Spatial::Math::CVector3& point)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback(&ray, viewport, prepareToRenderSelection, objIndex, submeshIndex, instanceIndex, segmentIndex, &point);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::selectComponentBy(ray, viewport, prepareToRenderSelection, objIndex, submeshIndex, instanceIndex, segmentIndex, point);
+				}
+				virtual void renderSelection()
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_renderSelection_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_renderSelection_void_Callback();
+					}
+					else
+						return this->CBillboardSet::renderSelection();
+				}
+				virtual void clearSelection()
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_clearSelection_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_clearSelection_void_Callback();
+					}
+					else
+						return this->CBillboardSet::clearSelection();
+				}
+				virtual ev_bool getAutoFitCamera() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getAutoFitCamera_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_getAutoFitCamera_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getAutoFitCamera();
+				}
+				virtual void setAutoFitCamera(_in ev_bool autofit)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setAutoFitCamera_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setAutoFitCamera_void_ev_bool_Callback(autofit);
+					}
+					else
+						return this->CBillboardSet::setAutoFitCamera(autofit);
+				}
+				virtual Real getReduceDistance() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getReduceDistance_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CBillboardSet_getReduceDistance_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getReduceDistance();
+				}
+				virtual void setReduceDistance(_in Real reduceDis)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setReduceDistance_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setReduceDistance_void_Real_Callback(reduceDis);
+					}
+					else
+						return this->CBillboardSet::setReduceDistance(reduceDis);
+				}
+				virtual const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject* getAnimableObjectPtr()
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject* returnValue = m_EarthView_World_Graphic_CBillboardSet_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getAnimableObjectPtr();
+				}
+				virtual ev_uint8 getRenderQueueId() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getRenderQueueId_ev_uint8_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint8 returnValue = m_EarthView_World_Graphic_CBillboardSet_getRenderQueueId_ev_uint8_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getRenderQueueId();
+				}
+				virtual void _notifyCreator(_in EarthView::World::Graphic::CMovableObjectFactory* ref_fact)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet__notifyCreator_void_CMovableObjectFactory_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet__notifyCreator_void_CMovableObjectFactory_Callback(ref_fact);
+					}
+					else
+						return this->CBillboardSet::_notifyCreator(ref_fact);
+				}
+				virtual EarthView::World::Graphic::CMovableObjectFactory* _getCreator() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet__getCreator_CMovableObjectFactory_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CMovableObjectFactory* returnValue = m_EarthView_World_Graphic_CBillboardSet__getCreator_CMovableObjectFactory_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::_getCreator();
+				}
+				virtual void _notifyManager(_in EarthView::World::Graphic::CSceneManager* ref_mgr)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet__notifyManager_void_CSceneManager_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet__notifyManager_void_CSceneManager_Callback(ref_mgr);
+					}
+					else
+						return this->CBillboardSet::_notifyManager(ref_mgr);
+				}
+				virtual EarthView::World::Graphic::CSceneManager* _getManager() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet__getManager_CSceneManager_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CSceneManager* returnValue = m_EarthView_World_Graphic_CBillboardSet__getManager_CSceneManager_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::_getManager();
+				}
+				virtual EVString getName() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getName_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CBillboardSet_getName_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getName();
+				}
+				virtual EarthView::World::Graphic::CNode* getParentNode() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getParentNode_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CNode* returnValue = m_EarthView_World_Graphic_CBillboardSet_getParentNode_CNode_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getParentNode();
+				}
+				virtual EarthView::World::Graphic::CSceneNode* getParentSceneNode() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getParentSceneNode_CSceneNode_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CSceneNode* returnValue = m_EarthView_World_Graphic_CBillboardSet_getParentSceneNode_CSceneNode_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getParentSceneNode();
+				}
+				virtual ev_bool isParentTagPoint() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_isParentTagPoint_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_isParentTagPoint_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::isParentTagPoint();
+				}
+				virtual void _notifyAttached(_in EarthView::World::Graphic::CNode* ref_parent, _in ev_bool isTagPoint)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_ev_bool_Callback(ref_parent, isTagPoint);
+					}
+					else
+						return this->CBillboardSet::_notifyAttached(ref_parent, isTagPoint);
+				}
+				virtual void _notifyAttached(_in EarthView::World::Graphic::CNode* ref_parent)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_Callback(ref_parent);
+					}
+					else
+						return this->CBillboardSet::_notifyAttached(ref_parent);
+				}
+				virtual ev_bool isAttached() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_isAttached_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_isAttached_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::isAttached();
+				}
+				virtual void detachFromParent()
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_detachFromParent_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_detachFromParent_void_Callback();
+					}
+					else
+						return this->CBillboardSet::detachFromParent();
+				}
+				virtual ev_bool isInScene() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_isInScene_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_isInScene_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::isInScene();
+				}
+				virtual void _notifyMoved()
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet__notifyMoved_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet__notifyMoved_void_Callback();
+					}
+					else
+						return this->CBillboardSet::_notifyMoved();
+				}
+				virtual void _notifyLightsQueried(_in const EarthView::World::Graphic::LightList* lightList)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet__notifyLightsQueried_void_LightList_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet__notifyLightsQueried_void_LightList_Callback(lightList);
+					}
+					else
+						return this->CBillboardSet::_notifyLightsQueried(lightList);
+				}
+				virtual void setLightQueriedListener(_in EarthView::World::Graphic::CMovableObject::CLightQueriedListener* listener)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setLightQueriedListener_void_CLightQueriedListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setLightQueriedListener_void_CLightQueriedListener_Callback(listener);
+					}
+					else
+						return this->CBillboardSet::setLightQueriedListener(listener);
+				}
+				virtual EarthView::World::Graphic::CMovableObject::CLightQueriedListener* getLightQueriedListener()
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getLightQueriedListener_CLightQueriedListener_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CMovableObject::CLightQueriedListener* returnValue = m_EarthView_World_Graphic_CBillboardSet_getLightQueriedListener_CLightQueriedListener_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getLightQueriedListener();
+				}
+				virtual ev_uint32 getLightListUpdated() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getLightListUpdated_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CBillboardSet_getLightListUpdated_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getLightListUpdated();
+				}
+				virtual void setLightListUpdated(_in ev_uint32 frame)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setLightListUpdated_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setLightListUpdated_void_ev_uint32_Callback(frame);
+					}
+					else
+						return this->CBillboardSet::setLightListUpdated(frame);
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getWorldBoundingBox(_in ev_bool derive) const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback(derive);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getWorldBoundingBox(derive);
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getWorldBoundingBox() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getWorldBoundingBox();
+				}
+				virtual const EarthView::World::Spatial::Math::CSphere& getWorldBoundingSphere(_in ev_bool derive) const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CSphere& returnValue = *(EarthView::World::Spatial::Math::CSphere*)m_EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_ev_bool_Callback(derive);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getWorldBoundingSphere(derive);
+				}
+				virtual const EarthView::World::Spatial::Math::CSphere& getWorldBoundingSphere() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CSphere& returnValue = *(EarthView::World::Spatial::Math::CSphere*)m_EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getWorldBoundingSphere();
+				}
+				virtual void setVisible(_in ev_bool visible)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setVisible_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setVisible_void_ev_bool_Callback(visible);
+					}
+					else
+						return this->CBillboardSet::setVisible(visible);
+				}
+				virtual ev_bool getVisible() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getVisible_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_getVisible_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getVisible();
+				}
+				virtual ev_bool isVisible() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_isVisible_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_isVisible_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::isVisible();
+				}
+				virtual void setRenderingMaxDistance(_in Real dist)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setRenderingMaxDistance_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setRenderingMaxDistance_void_Real_Callback(dist);
+					}
+					else
+						return this->CBillboardSet::setRenderingMaxDistance(dist);
+				}
+				virtual Real getRenderingMaxDistance() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getRenderingMaxDistance_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CBillboardSet_getRenderingMaxDistance_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getRenderingMaxDistance();
+				}
+				virtual void setRenderingMinDistance(_in Real dist)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setRenderingMinDistance_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setRenderingMinDistance_void_Real_Callback(dist);
+					}
+					else
+						return this->CBillboardSet::setRenderingMinDistance(dist);
+				}
+				virtual Real getRenderingMinDistance() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getRenderingMinDistance_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CBillboardSet_getRenderingMinDistance_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getRenderingMinDistance();
+				}
+				virtual void setRenderingMinPixelSize(_in Real pixelSize)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setRenderingMinPixelSize_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setRenderingMinPixelSize_void_Real_Callback(pixelSize);
+					}
+					else
+						return this->CBillboardSet::setRenderingMinPixelSize(pixelSize);
+				}
+				virtual Real getRenderingMinPixelSize() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getRenderingMinPixelSize_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CBillboardSet_getRenderingMinPixelSize_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getRenderingMinPixelSize();
+				}
+				virtual void setSelectionColour(_in const EarthView::World::Graphic::CColourValue& colour)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setSelectionColour_void_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setSelectionColour_void_CColourValue_Callback(&colour);
+					}
+					else
+						return this->CBillboardSet::setSelectionColour(colour);
+				}
+				virtual ev_bool startEditing(_in ev_uint32 objectIndex)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_startEditing_ev_bool_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_startEditing_ev_bool_ev_uint32_Callback(objectIndex);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::startEditing(objectIndex);
+				}
+				virtual void endEditing()
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_endEditing_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_endEditing_void_Callback();
+					}
+					else
+						return this->CBillboardSet::endEditing();
+				}
+				virtual EarthView::World::Graphic::CEditBoundingBox* getEditBoundingBox()
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getEditBoundingBox_CEditBoundingBox_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CEditBoundingBox* returnValue = m_EarthView_World_Graphic_CBillboardSet_getEditBoundingBox_CEditBoundingBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getEditBoundingBox();
+				}
+				virtual ev_bool getSelectedObjectWorldMatrix(_in ev_uint32 objectIndex, _inout EarthView::World::Spatial::Math::CMatrix4& matrix)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback(objectIndex, &matrix);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getSelectedObjectWorldMatrix(objectIndex, matrix);
+				}
+				virtual ev_bool setSelectedObjectWorldMatrix(_in ev_uint32 objectIndex, _in const EarthView::World::Spatial::Math::CMatrix4& matrix)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback(objectIndex, &matrix);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::setSelectedObjectWorldMatrix(objectIndex, matrix);
+				}
+				virtual void setRenderQueueGroup(_in ev_uint8 queueID)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setRenderQueueGroup_void_ev_uint8_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setRenderQueueGroup_void_ev_uint8_Callback(queueID);
+					}
+					else
+						return this->CBillboardSet::setRenderQueueGroup(queueID);
+				}
+				virtual void setRenderQueueGroupAndPriority(_in ev_uint8 queueID, _in ev_uint16 priority)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback(queueID, priority);
+					}
+					else
+						return this->CBillboardSet::setRenderQueueGroupAndPriority(queueID, priority);
+				}
+				virtual ev_uint8 getRenderQueueGroup() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getRenderQueueGroup_ev_uint8_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint8 returnValue = m_EarthView_World_Graphic_CBillboardSet_getRenderQueueGroup_ev_uint8_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getRenderQueueGroup();
+				}
+				virtual const EarthView::World::Spatial::Math::CMatrix4& _getParentNodeFullTransform() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet__getParentNodeFullTransform_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CMatrix4& returnValue = *(EarthView::World::Spatial::Math::CMatrix4*)m_EarthView_World_Graphic_CBillboardSet__getParentNodeFullTransform_CMatrix4_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::_getParentNodeFullTransform();
+				}
+				virtual void setQueryFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setQueryFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setQueryFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CBillboardSet::setQueryFlags(flags);
+				}
+				virtual void addQueryFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_addQueryFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_addQueryFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CBillboardSet::addQueryFlags(flags);
+				}
+				virtual void removeQueryFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_removeQueryFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_removeQueryFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CBillboardSet::removeQueryFlags(flags);
+				}
+				virtual ev_uint32 getQueryFlags() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getQueryFlags_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CBillboardSet_getQueryFlags_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getQueryFlags();
+				}
+				virtual void setVisibilityFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setVisibilityFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setVisibilityFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CBillboardSet::setVisibilityFlags(flags);
+				}
+				virtual void addVisibilityFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_addVisibilityFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_addVisibilityFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CBillboardSet::addVisibilityFlags(flags);
+				}
+				virtual void removeVisibilityFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_removeVisibilityFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_removeVisibilityFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CBillboardSet::removeVisibilityFlags(flags);
+				}
+				virtual ev_uint32 getVisibilityFlags() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getVisibilityFlags_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CBillboardSet_getVisibilityFlags_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getVisibilityFlags();
+				}
+				virtual void addListener(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* ref_listener)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_addListener_void_CMovableObjectListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_addListener_void_CMovableObjectListener_Callback(ref_listener);
+					}
+					else
+						return this->CBillboardSet::addListener(ref_listener);
+				}
+				virtual void removeListener(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_removeListener_void_CMovableObjectListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_removeListener_void_CMovableObjectListener_Callback(listener);
+					}
+					else
+						return this->CBillboardSet::removeListener(listener);
+				}
+				virtual ev_bool existListener(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener) const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_existListener_ev_bool_CMovableObjectListener_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_existListener_ev_bool_CMovableObjectListener_Callback(listener);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::existListener(listener);
+				}
+				virtual ev_uint32 getListenerCount() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getListenerCount_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CBillboardSet_getListenerCount_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getListenerCount();
+				}
+				virtual EarthView::World::Graphic::CMovableObject::CMovableObjectListener* getListener(_in ev_uint32 index) const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getListener_CMovableObjectListener_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CMovableObject::CMovableObjectListener* returnValue = m_EarthView_World_Graphic_CBillboardSet_getListener_CMovableObjectListener_ev_uint32_Callback(index);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getListener(index);
+				}
+				virtual const EarthView::World::Graphic::LightList& queryLights() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_queryLights_LightList_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::LightList& returnValue = *(EarthView::World::Graphic::LightList*)m_EarthView_World_Graphic_CBillboardSet_queryLights_LightList_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::queryLights();
+				}
+				virtual ev_uint32 getLightMask() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getLightMask_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CBillboardSet_getLightMask_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getLightMask();
+				}
+				virtual void setLightMask(_in ev_uint32 lightMask)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setLightMask_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setLightMask_void_ev_uint32_Callback(lightMask);
+					}
+					else
+						return this->CBillboardSet::setLightMask(lightMask);
+				}
+				virtual EarthView::World::Graphic::LightList* _getLightList()
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet__getLightList_LightList_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::LightList* returnValue = m_EarthView_World_Graphic_CBillboardSet__getLightList_LightList_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::_getLightList();
+				}
+				virtual EarthView::World::Graphic::CEdgeData* getEdgeList()
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getEdgeList_CEdgeData_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CEdgeData* returnValue = m_EarthView_World_Graphic_CBillboardSet_getEdgeList_CEdgeData_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getEdgeList();
+				}
+				virtual ev_bool hasEdgeList()
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_hasEdgeList_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_hasEdgeList_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::hasEdgeList();
+				}
+				virtual EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator getShadowVolumeRenderableIterator(_in EarthView::World::Graphic::ShadowTechnique shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDist, _in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator returnValue = *(EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator*)m_EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback((int)shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist, flags);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getShadowVolumeRenderableIterator(shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist, flags);
+				}
+				virtual EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator getShadowVolumeRenderableIterator(_in EarthView::World::Graphic::ShadowTechnique shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDist)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator returnValue = *(EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator*)m_EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback((int)shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getShadowVolumeRenderableIterator(shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist);
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getLightCapBounds() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getLightCapBounds_CAxisAlignedBox_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CBillboardSet_getLightCapBounds_CAxisAlignedBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getLightCapBounds();
+				}
+				virtual EarthView::World::Spatial::Math::CAxisAlignedBox getDarkCapBounds(_in const EarthView::World::Graphic::CLight& light, _in Real dirLightExtrusionDist) const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Spatial::Math::CAxisAlignedBox returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CBillboardSet_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback(&light, dirLightExtrusionDist);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getDarkCapBounds(light, dirLightExtrusionDist);
+				}
+				virtual void setCastShadows(_in ev_bool enabled)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setCastShadows_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setCastShadows_void_ev_bool_Callback(enabled);
+					}
+					else
+						return this->CBillboardSet::setCastShadows(enabled);
+				}
+				virtual ev_bool getCastShadows() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getCastShadows_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_getCastShadows_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getCastShadows();
+				}
+				virtual ev_bool getReceivesShadows()
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getReceivesShadows_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_getReceivesShadows_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getReceivesShadows();
+				}
+				virtual Real getPointExtrusionDistance(_in const EarthView::World::Graphic::CLight* l) const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_getPointExtrusionDistance_Real_CLight_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CBillboardSet_getPointExtrusionDistance_Real_CLight_Callback(l);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::getPointExtrusionDistance(l);
+				}
+				virtual void setDebugDisplayEnabled(_in ev_bool enabled)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_setDebugDisplayEnabled_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_setDebugDisplayEnabled_void_ev_bool_Callback(enabled);
+					}
+					else
+						return this->CBillboardSet::setDebugDisplayEnabled(enabled);
+				}
+				virtual ev_bool isDebugDisplayEnabled() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_isDebugDisplayEnabled_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_isDebugDisplayEnabled_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSet::isDebugDisplayEnabled();
+				}
+				virtual void updateEdgeListLightFacing(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const EarthView::World::Spatial::Math::CVector4& lightPos)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback(edgeData, &lightPos);
+					}
+					else
+						return this->CBillboardSet::updateEdgeListLightFacing(edgeData, lightPos);
+				}
+				virtual void generateShadowVolume(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const EarthView::World::Graphic::CHardwareIndexBufferSharedPtr& indexBuffer, _in const EarthView::World::Graphic::CLight* light, _inout EarthView::World::Graphic::CShadowCaster::ShadowRenderableList& shadowRenderables, _in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback(edgeData, &indexBuffer, light, &shadowRenderables, flags);
+					}
+					else
+						return this->CBillboardSet::generateShadowVolume(edgeData, indexBuffer, light, shadowRenderables, flags);
+				}
+				virtual void extrudeBounds(_inout EarthView::World::Spatial::Math::CAxisAlignedBox& box, _in const EarthView::World::Spatial::Math::CVector4& lightPos, _in Real extrudeDist) const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback(&box, &lightPos, extrudeDist);
+					}
+					else
+						return this->CBillboardSet::extrudeBounds(box, lightPos, extrudeDist);
+				}
+			};
+			REGISTER_FACTORY_CLASS(CBillboardSetProxy);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMaterial_CMaterialPtr_Callback)();
+			typedef EarthView::World::Graphic::CTechnique*  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getTechnique_CTechnique_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderOperation_void_CRenderOperation_Callback)(_inout void* op);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_preRender_ev_bool_CSceneManager_CRenderSystem_Callback)(_in EarthView::World::Graphic::CSceneManager* sm, _in EarthView::World::Graphic::CRenderSystem* rsys);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_postRender_void_CSceneManager_CRenderSystem_Callback)(_in EarthView::World::Graphic::CSceneManager* sm, _in EarthView::World::Graphic::CRenderSystem* rsys);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getWorldTransforms_void_CMatrix4_Callback)(_in EarthView::World::Spatial::Math::CMatrix4* xform);
+			typedef ev_uint16  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getNumWorldTransforms_ev_uint16_Callback)();
+			typedef Real  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getSquaredViewDepth_Real_CCamera_Callback)(_in const EarthView::World::Graphic::CCamera* cam);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getLights_LightList_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCastsShadows_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback)(_in const void* constantEntry, _in EarthView::World::Graphic::CGpuProgramParameters* params);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setPolygonModeOverrideable_void_ev_bool_Callback)(_in ev_bool override);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getPolygonModeOverrideable_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbient_void_CColourValue_Callback)(_in const void* ambient);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbient_CColourValue_Callback)();
+			typedef bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbientEnabled_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbientEnabled_void_ev_bool_Callback)(_in ev_bool enabled);
+			typedef EarthView::World::Graphic::CMovableObject*  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMovableObject_CMovableObject_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_addListener_void_CRenderableListener_Callback)(_in EarthView::World::Graphic::CRenderable::CRenderableListener* ref_listener);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_removeListener_void_CRenderableListener_Callback)(_in EarthView::World::Graphic::CRenderable::CRenderableListener* listener);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_existListener_ev_bool_CRenderableListener_Callback)(_in EarthView::World::Graphic::CRenderable::CRenderableListener* listener);
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListenerCount_ev_uint32_Callback)();
+			typedef EarthView::World::Graphic::CRenderable::CRenderableListener*  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListener_CRenderableListener_ev_uint32_Callback)(_in ev_uint32 index);
+			typedef EarthView::World::Graphic::CRenderable::CRenderSystemData*  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderSystemData_CRenderSystemData_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setRenderSystemData_void_CRenderSystemData_Callback)(_in EarthView::World::Graphic::CRenderable::CRenderSystemData* ref_val);
+			class CBillboardSetInternalRenderableProxy : public EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable
+			{
+			private:
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMaterial_CMaterialPtr_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMaterial_CMaterialPtr_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getTechnique_CTechnique_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getTechnique_CTechnique_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderOperation_void_CRenderOperation_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderOperation_void_CRenderOperation_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_preRender_ev_bool_CSceneManager_CRenderSystem_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_preRender_ev_bool_CSceneManager_CRenderSystem_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_postRender_void_CSceneManager_CRenderSystem_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_postRender_void_CSceneManager_CRenderSystem_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getWorldTransforms_void_CMatrix4_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getWorldTransforms_void_CMatrix4_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getNumWorldTransforms_ev_uint16_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getNumWorldTransforms_ev_uint16_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getSquaredViewDepth_Real_CCamera_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getSquaredViewDepth_Real_CCamera_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getLights_LightList_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getLights_LightList_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCastsShadows_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCastsShadows_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setPolygonModeOverrideable_void_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setPolygonModeOverrideable_void_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getPolygonModeOverrideable_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getPolygonModeOverrideable_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbient_void_CColourValue_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbient_void_CColourValue_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbient_CColourValue_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbient_CColourValue_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbientEnabled_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbientEnabled_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbientEnabled_void_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbientEnabled_void_ev_bool_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMovableObject_CMovableObject_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMovableObject_CMovableObject_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_addListener_void_CRenderableListener_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_addListener_void_CRenderableListener_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_removeListener_void_CRenderableListener_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_removeListener_void_CRenderableListener_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_existListener_ev_bool_CRenderableListener_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_existListener_ev_bool_CRenderableListener_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListenerCount_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListenerCount_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListener_CRenderableListener_ev_uint32_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListener_CRenderableListener_ev_uint32_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderSystemData_CRenderSystemData_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderSystemData_CRenderSystemData_Callback;
+				EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setRenderSystemData_void_CRenderSystemData_Callback* m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setRenderSystemData_void_CRenderSystemData_Callback;
+			public:
+				CBillboardSetInternalRenderableProxy(EarthView::World::Core::CNameValuePairList *pList) : CBillboardSetInternalRenderable(pList)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMaterial_CMaterialPtr_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getTechnique_CTechnique_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderOperation_void_CRenderOperation_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_preRender_ev_bool_CSceneManager_CRenderSystem_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_postRender_void_CSceneManager_CRenderSystem_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getWorldTransforms_void_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getNumWorldTransforms_ev_uint16_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getSquaredViewDepth_Real_CCamera_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getLights_LightList_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCastsShadows_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setPolygonModeOverrideable_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getPolygonModeOverrideable_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbient_void_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbient_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbientEnabled_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbientEnabled_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMovableObject_CMovableObject_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_addListener_void_CRenderableListener_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_removeListener_void_CRenderableListener_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_existListener_ev_bool_CRenderableListener_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListenerCount_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListener_CRenderableListener_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderSystemData_CRenderSystemData_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setRenderSystemData_void_CRenderSystemData_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMaterial_CMaterialPtr(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMaterial_CMaterialPtr_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMaterial_CMaterialPtr_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getTechnique_CTechnique(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getTechnique_CTechnique_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getTechnique_CTechnique_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderOperation_void_CRenderOperation(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderOperation_void_CRenderOperation_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderOperation_void_CRenderOperation_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_preRender_ev_bool_CSceneManager_CRenderSystem(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_preRender_ev_bool_CSceneManager_CRenderSystem_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_preRender_ev_bool_CSceneManager_CRenderSystem_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_postRender_void_CSceneManager_CRenderSystem(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_postRender_void_CSceneManager_CRenderSystem_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_postRender_void_CSceneManager_CRenderSystem_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getWorldTransforms_void_CMatrix4(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getWorldTransforms_void_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getWorldTransforms_void_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getNumWorldTransforms_ev_uint16(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getNumWorldTransforms_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getNumWorldTransforms_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getSquaredViewDepth_Real_CCamera(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getSquaredViewDepth_Real_CCamera_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getSquaredViewDepth_Real_CCamera_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getLights_LightList(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getLights_LightList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getLights_LightList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCastsShadows_ev_bool(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCastsShadows_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCastsShadows_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setPolygonModeOverrideable_void_ev_bool(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setPolygonModeOverrideable_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setPolygonModeOverrideable_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getPolygonModeOverrideable_ev_bool(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getPolygonModeOverrideable_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getPolygonModeOverrideable_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbient_void_CColourValue(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbient_void_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbient_void_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbient_CColourValue(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbient_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbient_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbientEnabled_bool(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbientEnabled_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbientEnabled_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbientEnabled_void_ev_bool(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbientEnabled_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbientEnabled_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMovableObject_CMovableObject(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMovableObject_CMovableObject_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMovableObject_CMovableObject_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_addListener_void_CRenderableListener(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_addListener_void_CRenderableListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_addListener_void_CRenderableListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_removeListener_void_CRenderableListener(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_removeListener_void_CRenderableListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_removeListener_void_CRenderableListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_existListener_ev_bool_CRenderableListener(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_existListener_ev_bool_CRenderableListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_existListener_ev_bool_CRenderableListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListenerCount_ev_uint32(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListenerCount_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListenerCount_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListener_CRenderableListener_ev_uint32(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListener_CRenderableListener_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListener_CRenderableListener_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderSystemData_CRenderSystemData(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderSystemData_CRenderSystemData_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderSystemData_CRenderSystemData_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setRenderSystemData_void_CRenderSystemData(EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setRenderSystemData_void_CRenderSystemData_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setRenderSystemData_void_CRenderSystemData_Callback = pCallback;
+				}
+				virtual const EarthView::World::Graphic::CMaterialPtr& getMaterial() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMaterial_CMaterialPtr_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CMaterialPtr& returnValue = *(EarthView::World::Graphic::CMaterialPtr*)m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMaterial_CMaterialPtr_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSetInternalRenderable::getMaterial();
+				}
+				virtual void getRenderOperation(_inout EarthView::World::Graphic::CRenderOperation& op)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderOperation_void_CRenderOperation_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderOperation_void_CRenderOperation_Callback(&op);
+					}
+					else
+						return this->CBillboardSetInternalRenderable::getRenderOperation(op);
+				}
+				virtual void getWorldTransforms(_in EarthView::World::Spatial::Math::CMatrix4* xform) const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getWorldTransforms_void_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getWorldTransforms_void_CMatrix4_Callback(xform);
+					}
+					else
+						return this->CBillboardSetInternalRenderable::getWorldTransforms(xform);
+				}
+				virtual EarthView::World::Graphic::CMovableObject* getMovableObject() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMovableObject_CMovableObject_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CMovableObject* returnValue = m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMovableObject_CMovableObject_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSetInternalRenderable::getMovableObject();
+				}
+				virtual Real getSquaredViewDepth(_in const EarthView::World::Graphic::CCamera* cam) const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getSquaredViewDepth_Real_CCamera_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getSquaredViewDepth_Real_CCamera_Callback(cam);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSetInternalRenderable::getSquaredViewDepth(cam);
+				}
+				virtual const EarthView::World::Graphic::LightList& getLights() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getLights_LightList_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::LightList& returnValue = *(EarthView::World::Graphic::LightList*)m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getLights_LightList_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSetInternalRenderable::getLights();
+				}
+				virtual EarthView::World::Graphic::CTechnique* getTechnique() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getTechnique_CTechnique_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CTechnique* returnValue = m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getTechnique_CTechnique_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSetInternalRenderable::getTechnique();
+				}
+				virtual ev_bool preRender(_in EarthView::World::Graphic::CSceneManager* sm, _in EarthView::World::Graphic::CRenderSystem* rsys)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_preRender_ev_bool_CSceneManager_CRenderSystem_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_preRender_ev_bool_CSceneManager_CRenderSystem_Callback(sm, rsys);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSetInternalRenderable::preRender(sm, rsys);
+				}
+				virtual void postRender(_in EarthView::World::Graphic::CSceneManager* sm, _in EarthView::World::Graphic::CRenderSystem* rsys)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_postRender_void_CSceneManager_CRenderSystem_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_postRender_void_CSceneManager_CRenderSystem_Callback(sm, rsys);
+					}
+					else
+						return this->CBillboardSetInternalRenderable::postRender(sm, rsys);
+				}
+				virtual ev_uint16 getNumWorldTransforms() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getNumWorldTransforms_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint16 returnValue = m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getNumWorldTransforms_ev_uint16_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSetInternalRenderable::getNumWorldTransforms();
+				}
+				virtual ev_bool getCastsShadows() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCastsShadows_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCastsShadows_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSetInternalRenderable::getCastsShadows();
+				}
+				virtual void _updateCustomGpuParameter(_in const EarthView::World::Graphic::CGpuProgramParameters::CAutoConstantEntry& constantEntry, _in EarthView::World::Graphic::CGpuProgramParameters* params) const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback(&constantEntry, params);
+					}
+					else
+						return this->CBillboardSetInternalRenderable::_updateCustomGpuParameter(constantEntry, params);
+				}
+				virtual void setPolygonModeOverrideable(_in ev_bool override)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setPolygonModeOverrideable_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setPolygonModeOverrideable_void_ev_bool_Callback(override);
+					}
+					else
+						return this->CBillboardSetInternalRenderable::setPolygonModeOverrideable(override);
+				}
+				virtual ev_bool getPolygonModeOverrideable() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getPolygonModeOverrideable_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getPolygonModeOverrideable_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSetInternalRenderable::getPolygonModeOverrideable();
+				}
+				virtual void setCustomAmbient(_in const EarthView::World::Graphic::CColourValue& ambient)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbient_void_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbient_void_CColourValue_Callback(&ambient);
+					}
+					else
+						return this->CBillboardSetInternalRenderable::setCustomAmbient(ambient);
+				}
+				virtual const EarthView::World::Graphic::CColourValue& getCustomAmbient() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbient_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CColourValue& returnValue = *(EarthView::World::Graphic::CColourValue*)m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbient_CColourValue_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSetInternalRenderable::getCustomAmbient();
+				}
+				virtual bool getCustomAmbientEnabled() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbientEnabled_bool_Callback != NULL && this->isCustomExtend())
+					{
+						bool returnValue = m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbientEnabled_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSetInternalRenderable::getCustomAmbientEnabled();
+				}
+				virtual void setCustomAmbientEnabled(_in ev_bool enabled)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbientEnabled_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbientEnabled_void_ev_bool_Callback(enabled);
+					}
+					else
+						return this->CBillboardSetInternalRenderable::setCustomAmbientEnabled(enabled);
+				}
+				virtual void addListener(_in EarthView::World::Graphic::CRenderable::CRenderableListener* ref_listener)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_addListener_void_CRenderableListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_addListener_void_CRenderableListener_Callback(ref_listener);
+					}
+					else
+						return this->CBillboardSetInternalRenderable::addListener(ref_listener);
+				}
+				virtual void removeListener(_in EarthView::World::Graphic::CRenderable::CRenderableListener* listener)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_removeListener_void_CRenderableListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_removeListener_void_CRenderableListener_Callback(listener);
+					}
+					else
+						return this->CBillboardSetInternalRenderable::removeListener(listener);
+				}
+				virtual ev_bool existListener(_in EarthView::World::Graphic::CRenderable::CRenderableListener* listener) const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_existListener_ev_bool_CRenderableListener_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_existListener_ev_bool_CRenderableListener_Callback(listener);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSetInternalRenderable::existListener(listener);
+				}
+				virtual ev_uint32 getListenerCount() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListenerCount_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListenerCount_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSetInternalRenderable::getListenerCount();
+				}
+				virtual EarthView::World::Graphic::CRenderable::CRenderableListener* getListener(_in ev_uint32 index) const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListener_CRenderableListener_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CRenderable::CRenderableListener* returnValue = m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListener_CRenderableListener_ev_uint32_Callback(index);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSetInternalRenderable::getListener(index);
+				}
+				virtual EarthView::World::Graphic::CRenderable::CRenderSystemData* getRenderSystemData() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderSystemData_CRenderSystemData_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CRenderable::CRenderSystemData* returnValue = m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderSystemData_CRenderSystemData_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSetInternalRenderable::getRenderSystemData();
+				}
+				virtual void setRenderSystemData(_in EarthView::World::Graphic::CRenderable::CRenderSystemData* ref_val) const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setRenderSystemData_void_CRenderSystemData_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setRenderSystemData_void_CRenderSystemData_Callback(ref_val);
+					}
+					else
+						return this->CBillboardSetInternalRenderable::setRenderSystemData(ref_val);
+				}
+			};
+			REGISTER_FACTORY_CLASS(CBillboardSetInternalRenderableProxy);
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMaterial_CMaterialPtr(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Graphic::CMaterialPtr& objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable::getMaterial();
+					const EarthView::World::Graphic::CMaterialPtr *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Graphic::CMaterialPtr& objXXXX = ptrNativeObject->getMaterial();
+					const EarthView::World::Graphic::CMaterialPtr *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMaterial_CMaterialPtr( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMaterial_CMaterialPtr_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMaterial_CMaterialPtr(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMaterial_CMaterialPtr_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX;
+				const EarthView::World::Graphic::CMaterialPtr& objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable::getMaterial();
+				const EarthView::World::Graphic::CMaterialPtr *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderOperation_void_CRenderOperation(void *pObjectXXXX, _inout void* op )
+			{
+				EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable::getRenderOperation(*(EarthView::World::Graphic::CRenderOperation*)op);
+				else
+					ptrNativeObject->getRenderOperation(*(EarthView::World::Graphic::CRenderOperation*)op);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderOperation_void_CRenderOperation( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderOperation_void_CRenderOperation_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderOperation_void_CRenderOperation(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderOperation_void_CRenderOperation_NoVirtual(void *pObjectXXXX, _inout void* op )
+			{
+				EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable::getRenderOperation(*(EarthView::World::Graphic::CRenderOperation*)op);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getWorldTransforms_void_CMatrix4(void *pObjectXXXX, _in EarthView::World::Spatial::Math::CMatrix4* xform )
+			{
+				const EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable::getWorldTransforms(xform);
+				else
+					ptrNativeObject->getWorldTransforms(xform);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getWorldTransforms_void_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getWorldTransforms_void_CMatrix4_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getWorldTransforms_void_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getWorldTransforms_void_CMatrix4_NoVirtual(void *pObjectXXXX, _in EarthView::World::Spatial::Math::CMatrix4* xform )
+			{
+				const EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable::getWorldTransforms(xform);
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CMovableObject*  _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMovableObject_CMovableObject(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::CMovableObject* objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable::getMovableObject();
+					return objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::CMovableObject* objXXXX = ptrNativeObject->getMovableObject();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMovableObject_CMovableObject( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMovableObject_CMovableObject_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMovableObject_CMovableObject(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CMovableObject*  _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getMovableObject_CMovableObject_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX;
+				EarthView::World::Graphic::CMovableObject* objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable::getMovableObject();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getSquaredViewDepth_Real_CCamera(void *pObjectXXXX, _in const EarthView::World::Graphic::CCamera* cam )
+			{
+				const EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable::getSquaredViewDepth(cam);
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getSquaredViewDepth(cam);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getSquaredViewDepth_Real_CCamera( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getSquaredViewDepth_Real_CCamera_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getSquaredViewDepth_Real_CCamera(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getSquaredViewDepth_Real_CCamera_NoVirtual(void *pObjectXXXX, _in const EarthView::World::Graphic::CCamera* cam )
+			{
+				const EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable::getSquaredViewDepth(cam);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getLights_LightList(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Graphic::LightList& objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable::getLights();
+					const EarthView::World::Graphic::LightList *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Graphic::LightList& objXXXX = ptrNativeObject->getLights();
+					const EarthView::World::Graphic::LightList *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getLights_LightList( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getLights_LightList_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getLights_LightList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getLights_LightList_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX;
+				const EarthView::World::Graphic::LightList& objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable::getLights();
+				const EarthView::World::Graphic::LightList *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getTechnique_CTechnique( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getTechnique_CTechnique_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getTechnique_CTechnique(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_preRender_ev_bool_CSceneManager_CRenderSystem( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_preRender_ev_bool_CSceneManager_CRenderSystem_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_preRender_ev_bool_CSceneManager_CRenderSystem(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_postRender_void_CSceneManager_CRenderSystem( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_postRender_void_CSceneManager_CRenderSystem_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_postRender_void_CSceneManager_CRenderSystem(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getNumWorldTransforms_ev_uint16( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getNumWorldTransforms_ev_uint16_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getNumWorldTransforms_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCastsShadows_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCastsShadows_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCastsShadows_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setPolygonModeOverrideable_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setPolygonModeOverrideable_void_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setPolygonModeOverrideable_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getPolygonModeOverrideable_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getPolygonModeOverrideable_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getPolygonModeOverrideable_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbient_void_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbient_void_CColourValue_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbient_void_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbient_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbient_CColourValue_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbient_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbientEnabled_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbientEnabled_bool_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getCustomAmbientEnabled_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbientEnabled_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbientEnabled_void_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setCustomAmbientEnabled_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_addListener_void_CRenderableListener( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_addListener_void_CRenderableListener_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_addListener_void_CRenderableListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_removeListener_void_CRenderableListener( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_removeListener_void_CRenderableListener_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_removeListener_void_CRenderableListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_existListener_ev_bool_CRenderableListener( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_existListener_ev_bool_CRenderableListener_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_existListener_ev_bool_CRenderableListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListenerCount_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListenerCount_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListenerCount_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListener_CRenderableListener_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListener_CRenderableListener_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getListener_CRenderableListener_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderSystemData_CRenderSystemData( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderSystemData_CRenderSystemData_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_getRenderSystemData_CRenderSystemData(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setRenderSystemData_void_CRenderSystemData( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setRenderSystemData_void_CRenderSystemData_Callback* pCallback )
+			{
+				CBillboardSetInternalRenderableProxy* ptr = dynamic_cast<CBillboardSetInternalRenderableProxy*>((EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_CBillboardSetInternalRenderable_setRenderSystemData_void_CRenderSystemData(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CBillboardSet_getMaterial_CMaterialPtr(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Graphic::CMaterialPtr& objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getMaterial();
+					const EarthView::World::Graphic::CMaterialPtr *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Graphic::CMaterialPtr& objXXXX = ptrNativeObject->getMaterial();
+					const EarthView::World::Graphic::CMaterialPtr *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getMaterial_CMaterialPtr( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getMaterial_CMaterialPtr_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getMaterial_CMaterialPtr(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CBillboardSet_getMaterial_CMaterialPtr_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				const EarthView::World::Graphic::CMaterialPtr& objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getMaterial();
+				const EarthView::World::Graphic::CMaterialPtr *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_getRenderOperation_void_CRenderOperation(void *pObjectXXXX, _inout void* op )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getRenderOperation(*(EarthView::World::Graphic::CRenderOperation*)op);
+				else
+					ptrNativeObject->getRenderOperation(*(EarthView::World::Graphic::CRenderOperation*)op);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getRenderOperation_void_CRenderOperation( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getRenderOperation_void_CRenderOperation_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getRenderOperation_void_CRenderOperation(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_getRenderOperation_void_CRenderOperation_NoVirtual(void *pObjectXXXX, _inout void* op )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getRenderOperation(*(EarthView::World::Graphic::CRenderOperation*)op);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_getWorldTransforms_void_CMatrix4(void *pObjectXXXX, _in EarthView::World::Spatial::Math::CMatrix4* xform )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getWorldTransforms(xform);
+				else
+					ptrNativeObject->getWorldTransforms(xform);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getWorldTransforms_void_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getWorldTransforms_void_CMatrix4_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getWorldTransforms_void_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_getWorldTransforms_void_CMatrix4_NoVirtual(void *pObjectXXXX, _in EarthView::World::Spatial::Math::CMatrix4* xform )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getWorldTransforms(xform);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CBillboardSet_getSquaredViewDepth_Real_CCamera(void *pObjectXXXX, _in const EarthView::World::Graphic::CCamera* cam )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getSquaredViewDepth(cam);
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getSquaredViewDepth(cam);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getSquaredViewDepth_Real_CCamera( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getSquaredViewDepth_Real_CCamera_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getSquaredViewDepth_Real_CCamera(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CBillboardSet_getSquaredViewDepth_Real_CCamera_NoVirtual(void *pObjectXXXX, _in const EarthView::World::Graphic::CCamera* cam )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getSquaredViewDepth(cam);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CBillboardSet_getLights_LightList(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Graphic::LightList& objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getLights();
+					const EarthView::World::Graphic::LightList *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Graphic::LightList& objXXXX = ptrNativeObject->getLights();
+					const EarthView::World::Graphic::LightList *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getLights_LightList( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getLights_LightList_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getLights_LightList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CBillboardSet_getLights_LightList_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				const EarthView::World::Graphic::LightList& objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getLights();
+				const EarthView::World::Graphic::LightList *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*  _stdcall EarthView_World_Graphic_CBillboardSet_getRenderablePtr_CBillboardSetInternalRenderable(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable* objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getRenderablePtr();
+					return objXXXX;
+				}
+				else
+				{
+					const EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable* objXXXX = ptrNativeObject->getRenderablePtr();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getRenderablePtr_CBillboardSetInternalRenderable( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getRenderablePtr_CBillboardSetInternalRenderable_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getRenderablePtr_CBillboardSetInternalRenderable(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable*  _stdcall EarthView_World_Graphic_CBillboardSet_getRenderablePtr_CBillboardSetInternalRenderable_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				const EarthView::World::Graphic::CBillboardSet::CBillboardSetInternalRenderable* objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getRenderablePtr();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_increasePool_void_ev_size_t(void *pObjectXXXX, _in ev_uint64  size )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::increasePool(size);
+				else
+					ptrNativeObject->increasePool(size);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_increasePool_void_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_increasePool_void_ev_size_t_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_increasePool_void_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_increasePool_void_ev_size_t_NoVirtual(void *pObjectXXXX, _in ev_uint64  size )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::increasePool(size);
+			}
+			extern "C" EV_DLL_EXPORT  void*  _stdcall Get_EarthView_World_Graphic_CBillboardSet_CSortByDirectionFunctor_sortDir( void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CBillboardSet::CSortByDirectionFunctor* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet::CSortByDirectionFunctor*) pObjectXXXX;
+				EarthView::World::Spatial::Math::CVector3 &objXXXX = ptrNativeObject->sortDir;
+				EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Graphic_CBillboardSet_CSortByDirectionFunctor_sortDir( void *pObjectXXXX, void*  value )
+			{
+				((EarthView::World::Graphic::CBillboardSet::CSortByDirectionFunctor*)pObjectXXXX)->sortDir = *(EarthView::World::Spatial::Math::CVector3*)value;
+			}
+			extern "C" EV_DLL_EXPORT  void*  _stdcall Get_EarthView_World_Graphic_CBillboardSet_CSortByDistanceFunctor_sortPos( void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CBillboardSet::CSortByDistanceFunctor* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet::CSortByDistanceFunctor*) pObjectXXXX;
+				EarthView::World::Spatial::Math::CVector3 &objXXXX = ptrNativeObject->sortPos;
+				EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Graphic_CBillboardSet_CSortByDistanceFunctor_sortPos( void *pObjectXXXX, void*  value )
+			{
+				((EarthView::World::Graphic::CBillboardSet::CSortByDistanceFunctor*)pObjectXXXX)->sortPos = *(EarthView::World::Spatial::Math::CVector3*)value;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CBillboard*  _stdcall EarthView_World_Graphic_CBillboardSet_createBillboard_CBillboard_CVector3_CColourValue(void *pObjectXXXX, _in const void* position, _in const void* colour )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				EarthView::World::Graphic::CBillboard* objXXXX = ptrNativeObject->createBillboard(*(EarthView::World::Spatial::Math::CVector3*)position, *(EarthView::World::Graphic::CColourValue*)colour);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CBillboard*  _stdcall EarthView_World_Graphic_CBillboardSet_createBillboard_CBillboard_CVector3(void *pObjectXXXX, _in const void* position )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				EarthView::World::Graphic::CBillboard* objXXXX = ptrNativeObject->createBillboard(*(EarthView::World::Spatial::Math::CVector3*)position);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CBillboard*  _stdcall EarthView_World_Graphic_CBillboardSet_createBillboard_CBillboard_Real_Real_Real_CColourValue(void *pObjectXXXX, _in Real x, _in Real y, _in Real z, _in const void* colour )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				EarthView::World::Graphic::CBillboard* objXXXX = ptrNativeObject->createBillboard(x, y, z, *(EarthView::World::Graphic::CColourValue*)colour);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CBillboard*  _stdcall EarthView_World_Graphic_CBillboardSet_createBillboard_CBillboard_Real_Real_Real(void *pObjectXXXX, _in Real x, _in Real y, _in Real z )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				EarthView::World::Graphic::CBillboard* objXXXX = ptrNativeObject->createBillboard(x, y, z);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_int32  _stdcall EarthView_World_Graphic_CBillboardSet_getNumBillboards_ev_int32(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					ev_int32 objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getNumBillboards();
+					return objXXXX;
+				}
+				else
+				{
+					ev_int32 objXXXX = ptrNativeObject->getNumBillboards();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getNumBillboards_ev_int32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getNumBillboards_ev_int32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getNumBillboards_ev_int32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_int32  _stdcall EarthView_World_Graphic_CBillboardSet_getNumBillboards_ev_int32_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ev_int32 objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getNumBillboards();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setAutoextend_void_ev_bool(void *pObjectXXXX, _in ev_bool autoextend )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setAutoextend(autoextend);
+				else
+					ptrNativeObject->setAutoextend(autoextend);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setAutoextend_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setAutoextend_void_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setAutoextend_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setAutoextend_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool autoextend )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setAutoextend(autoextend);
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_getAutoextend_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getAutoextend();
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->getAutoextend();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getAutoextend_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getAutoextend_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getAutoextend_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_getAutoextend_ev_bool_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getAutoextend();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setSortingEnabled_void_ev_bool(void *pObjectXXXX, _in ev_bool sortenable )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setSortingEnabled(sortenable);
+				else
+					ptrNativeObject->setSortingEnabled(sortenable);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setSortingEnabled_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setSortingEnabled_void_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setSortingEnabled_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setSortingEnabled_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool sortenable )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setSortingEnabled(sortenable);
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_getSortingEnabled_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getSortingEnabled();
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->getSortingEnabled();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getSortingEnabled_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getSortingEnabled_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getSortingEnabled_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_getSortingEnabled_ev_bool_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getSortingEnabled();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setPoolSize_void_ev_size_t(void *pObjectXXXX, _in ev_uint64  size )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setPoolSize(size);
+				else
+					ptrNativeObject->setPoolSize(size);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setPoolSize_void_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setPoolSize_void_ev_size_t_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setPoolSize_void_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setPoolSize_void_ev_size_t_NoVirtual(void *pObjectXXXX, _in ev_uint64  size )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setPoolSize(size);
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint32  _stdcall EarthView_World_Graphic_CBillboardSet_getPoolSize_ev_uint32(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					ev_uint32 objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getPoolSize();
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint32 objXXXX = ptrNativeObject->getPoolSize();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getPoolSize_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getPoolSize_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getPoolSize_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint32  _stdcall EarthView_World_Graphic_CBillboardSet_getPoolSize_ev_uint32_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ev_uint32 objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getPoolSize();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_clear_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::clear();
+				else
+					ptrNativeObject->clear();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_clear_void( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_clear_void_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_clear_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_clear_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::clear();
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CBillboard*  _stdcall EarthView_World_Graphic_CBillboardSet_getBillboard_CBillboard_ev_uint32(void *pObjectXXXX, _in ev_uint32 index )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::CBillboard* objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getBillboard(index);
+					return objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::CBillboard* objXXXX = ptrNativeObject->getBillboard(index);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getBillboard_CBillboard_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getBillboard_CBillboard_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getBillboard_CBillboard_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CBillboard*  _stdcall EarthView_World_Graphic_CBillboardSet_getBillboard_CBillboard_ev_uint32_NoVirtual(void *pObjectXXXX, _in ev_uint32 index )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				EarthView::World::Graphic::CBillboard* objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getBillboard(index);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_removeBillboard_void_ev_uint32(void *pObjectXXXX, _in ev_uint32 index )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::removeBillboard(index);
+				else
+					ptrNativeObject->removeBillboard(index);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_removeBillboard_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_removeBillboard_void_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_removeBillboard_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_removeBillboard_void_ev_uint32_NoVirtual(void *pObjectXXXX, _in ev_uint32 index )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::removeBillboard(index);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_removeBillboard_void_CBillboard(void *pObjectXXXX, _in EarthView::World::Graphic::CBillboard* pBill )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::removeBillboard(pBill);
+				else
+					ptrNativeObject->removeBillboard(pBill);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_removeBillboard_void_CBillboard( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_removeBillboard_void_CBillboard_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_removeBillboard_void_CBillboard(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_removeBillboard_void_CBillboard_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CBillboard* pBill )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::removeBillboard(pBill);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setBillboardOrigin_void_BillboardOrigin(void *pObjectXXXX, _in int origin )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setBillboardOrigin((EarthView::World::Graphic::BillboardOrigin)origin);
+				else
+					ptrNativeObject->setBillboardOrigin((EarthView::World::Graphic::BillboardOrigin)origin);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setBillboardOrigin_void_BillboardOrigin( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setBillboardOrigin_void_BillboardOrigin_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setBillboardOrigin_void_BillboardOrigin(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setBillboardOrigin_void_BillboardOrigin_NoVirtual(void *pObjectXXXX, _in int origin )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setBillboardOrigin((EarthView::World::Graphic::BillboardOrigin)origin);
+			}
+			extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Graphic_CBillboardSet_getBillboardOrigin_BillboardOrigin(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::BillboardOrigin objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getBillboardOrigin();
+					return (int)objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::BillboardOrigin objXXXX = ptrNativeObject->getBillboardOrigin();
+					return (int)objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getBillboardOrigin_BillboardOrigin( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getBillboardOrigin_BillboardOrigin_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getBillboardOrigin_BillboardOrigin(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Graphic_CBillboardSet_getBillboardOrigin_BillboardOrigin_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				EarthView::World::Graphic::BillboardOrigin objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getBillboardOrigin();
+				return (int)objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setBillboardRotationType_void_BillboardRotationType(void *pObjectXXXX, _in int rotationType )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setBillboardRotationType((EarthView::World::Graphic::BillboardRotationType)rotationType);
+				else
+					ptrNativeObject->setBillboardRotationType((EarthView::World::Graphic::BillboardRotationType)rotationType);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setBillboardRotationType_void_BillboardRotationType( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setBillboardRotationType_void_BillboardRotationType_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setBillboardRotationType_void_BillboardRotationType(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setBillboardRotationType_void_BillboardRotationType_NoVirtual(void *pObjectXXXX, _in int rotationType )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setBillboardRotationType((EarthView::World::Graphic::BillboardRotationType)rotationType);
+			}
+			extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Graphic_CBillboardSet_getBillboardRotationType_BillboardRotationType(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::BillboardRotationType objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getBillboardRotationType();
+					return (int)objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::BillboardRotationType objXXXX = ptrNativeObject->getBillboardRotationType();
+					return (int)objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getBillboardRotationType_BillboardRotationType( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getBillboardRotationType_BillboardRotationType_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getBillboardRotationType_BillboardRotationType(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Graphic_CBillboardSet_getBillboardRotationType_BillboardRotationType_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				EarthView::World::Graphic::BillboardRotationType objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getBillboardRotationType();
+				return (int)objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setDefaultDimensions_void_Real_Real(void *pObjectXXXX, _in Real width, _in Real height )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setDefaultDimensions(width, height);
+				else
+					ptrNativeObject->setDefaultDimensions(width, height);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setDefaultDimensions_void_Real_Real( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setDefaultDimensions_void_Real_Real_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setDefaultDimensions_void_Real_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setDefaultDimensions_void_Real_Real_NoVirtual(void *pObjectXXXX, _in Real width, _in Real height )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setDefaultDimensions(width, height);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setDefaultWidth_void_Real(void *pObjectXXXX, _in Real width )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setDefaultWidth(width);
+				else
+					ptrNativeObject->setDefaultWidth(width);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setDefaultWidth_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setDefaultWidth_void_Real_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setDefaultWidth_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setDefaultWidth_void_Real_NoVirtual(void *pObjectXXXX, _in Real width )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setDefaultWidth(width);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CBillboardSet_getDefaultWidth_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getDefaultWidth();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getDefaultWidth();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getDefaultWidth_Real( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getDefaultWidth_Real_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getDefaultWidth_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CBillboardSet_getDefaultWidth_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getDefaultWidth();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setDefaultHeight_void_Real(void *pObjectXXXX, _in Real height )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setDefaultHeight(height);
+				else
+					ptrNativeObject->setDefaultHeight(height);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setDefaultHeight_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setDefaultHeight_void_Real_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setDefaultHeight_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setDefaultHeight_void_Real_NoVirtual(void *pObjectXXXX, _in Real height )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setDefaultHeight(height);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CBillboardSet_getDefaultHeight_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getDefaultHeight();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getDefaultHeight();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getDefaultHeight_Real( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getDefaultHeight_Real_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getDefaultHeight_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CBillboardSet_getDefaultHeight_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getDefaultHeight();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_EVString(void *pObjectXXXX, _in const char* name, _in const char* groupName )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string groupName1 = groupName;
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setMaterialName(name1, groupName1);
+				else
+					ptrNativeObject->setMaterialName(name1, groupName1);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_EVString( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_EVString_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_EVString_NoVirtual(void *pObjectXXXX, _in const char* name, _in const char* groupName )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Core::ev_string groupName1 = groupName;
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setMaterialName(name1, groupName1);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setMaterialName(name1);
+				else
+					ptrNativeObject->setMaterialName(name1);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setMaterialName_void_EVString_NoVirtual(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setMaterialName(name1);
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CBillboardSet_getMaterialName_EVString(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getMaterialName();
+					return objXXXX.makeBuffer();
+				}
+				else
+				{
+					EVString objXXXX = ptrNativeObject->getMaterialName();
+					return objXXXX.makeBuffer();
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getMaterialName_EVString( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getMaterialName_EVString_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getMaterialName_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CBillboardSet_getMaterialName_EVString_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getMaterialName();
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet__notifyCurrentCamera_void_CCamera(void *pObjectXXXX, _in EarthView::World::Graphic::CCamera* cam )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::_notifyCurrentCamera(cam);
+				else
+					ptrNativeObject->_notifyCurrentCamera(cam);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet__notifyCurrentCamera_void_CCamera( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet__notifyCurrentCamera_void_CCamera_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet__notifyCurrentCamera_void_CCamera(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet__notifyCurrentCamera_void_CCamera_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CCamera* cam )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::_notifyCurrentCamera(cam);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_beginBillboards_void_ev_size_t(void *pObjectXXXX, _in ev_uint64  numBillboards )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->beginBillboards(numBillboards);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_beginBillboards_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->beginBillboards();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_injectBillboard_void_CBillboard(void *pObjectXXXX, _in const void* bb )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->injectBillboard(*(EarthView::World::Graphic::CBillboard*)bb);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_endBillboards_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->endBillboards();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setBounds_void_CAxisAlignedBox_Real(void *pObjectXXXX, _in const void* box, _in Real radius )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->setBounds(*(EarthView::World::Spatial::Math::CAxisAlignedBox*)box, radius);
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CBillboardSet_getBoundingBox_CAxisAlignedBox(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Spatial::Math::CAxisAlignedBox& objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getBoundingBox();
+					const EarthView::World::Spatial::Math::CAxisAlignedBox *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Spatial::Math::CAxisAlignedBox& objXXXX = ptrNativeObject->getBoundingBox();
+					const EarthView::World::Spatial::Math::CAxisAlignedBox *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getBoundingBox_CAxisAlignedBox( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getBoundingBox_CAxisAlignedBox_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getBoundingBox_CAxisAlignedBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CBillboardSet_getBoundingBox_CAxisAlignedBox_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CAxisAlignedBox& objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getBoundingBox();
+				const EarthView::World::Spatial::Math::CAxisAlignedBox *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CBillboardSet_getBoundingRadius_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getBoundingRadius();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getBoundingRadius();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getBoundingRadius_Real( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getBoundingRadius_Real_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getBoundingRadius_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CBillboardSet_getBoundingRadius_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getBoundingRadius();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet__updateRenderQueue_void_CRenderQueue(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderQueue* queue )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::_updateRenderQueue(queue);
+				else
+					ptrNativeObject->_updateRenderQueue(queue);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet__updateRenderQueue_void_CRenderQueue( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet__updateRenderQueue_void_CRenderQueue_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet__updateRenderQueue_void_CRenderQueue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet__updateRenderQueue_void_CRenderQueue_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderQueue* queue )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::_updateRenderQueue(queue);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setMaterial_void_CMaterialPtr(void *pObjectXXXX, _in const void* material )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setMaterial(*(EarthView::World::Graphic::CMaterialPtr*)material);
+				else
+					ptrNativeObject->setMaterial(*(EarthView::World::Graphic::CMaterialPtr*)material);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setMaterial_void_CMaterialPtr( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setMaterial_void_CMaterialPtr_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setMaterial_void_CMaterialPtr(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setMaterial_void_CMaterialPtr_NoVirtual(void *pObjectXXXX, _in const void* material )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setMaterial(*(EarthView::World::Graphic::CMaterialPtr*)material);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet__notifyBillboardResized_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::_notifyBillboardResized();
+				else
+					ptrNativeObject->_notifyBillboardResized();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet__notifyBillboardResized_void( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet__notifyBillboardResized_void_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet__notifyBillboardResized_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet__notifyBillboardResized_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::_notifyBillboardResized();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet__notifyBillboardRotated_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::_notifyBillboardRotated();
+				else
+					ptrNativeObject->_notifyBillboardRotated();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet__notifyBillboardRotated_void( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet__notifyBillboardRotated_void_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet__notifyBillboardRotated_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet__notifyBillboardRotated_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::_notifyBillboardRotated();
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_getCullIndividually_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getCullIndividually();
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->getCullIndividually();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getCullIndividually_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getCullIndividually_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getCullIndividually_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_getCullIndividually_ev_bool_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getCullIndividually();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setCullIndividually_void_ev_bool(void *pObjectXXXX, _in ev_bool cullIndividual )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setCullIndividually(cullIndividual);
+				else
+					ptrNativeObject->setCullIndividually(cullIndividual);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setCullIndividually_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setCullIndividually_void_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setCullIndividually_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setCullIndividually_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool cullIndividual )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setCullIndividually(cullIndividual);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setBillboardType_void_BillboardType(void *pObjectXXXX, _in int bbt )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setBillboardType((EarthView::World::Graphic::BillboardType)bbt);
+				else
+					ptrNativeObject->setBillboardType((EarthView::World::Graphic::BillboardType)bbt);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setBillboardType_void_BillboardType( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setBillboardType_void_BillboardType_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setBillboardType_void_BillboardType(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setBillboardType_void_BillboardType_NoVirtual(void *pObjectXXXX, _in int bbt )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setBillboardType((EarthView::World::Graphic::BillboardType)bbt);
+			}
+			extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Graphic_CBillboardSet_getBillboardType_BillboardType(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::BillboardType objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getBillboardType();
+					return (int)objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::BillboardType objXXXX = ptrNativeObject->getBillboardType();
+					return (int)objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getBillboardType_BillboardType( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getBillboardType_BillboardType_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getBillboardType_BillboardType(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Graphic_CBillboardSet_getBillboardType_BillboardType_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				EarthView::World::Graphic::BillboardType objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getBillboardType();
+				return (int)objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setCommonDirection_void_CVector3(void *pObjectXXXX, _in const void* vec )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setCommonDirection(*(EarthView::World::Spatial::Math::CVector3*)vec);
+				else
+					ptrNativeObject->setCommonDirection(*(EarthView::World::Spatial::Math::CVector3*)vec);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setCommonDirection_void_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setCommonDirection_void_CVector3_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setCommonDirection_void_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setCommonDirection_void_CVector3_NoVirtual(void *pObjectXXXX, _in const void* vec )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setCommonDirection(*(EarthView::World::Spatial::Math::CVector3*)vec);
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CBillboardSet_getCommonDirection_CVector3(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Spatial::Math::CVector3& objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getCommonDirection();
+					const EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Spatial::Math::CVector3& objXXXX = ptrNativeObject->getCommonDirection();
+					const EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getCommonDirection_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getCommonDirection_CVector3_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getCommonDirection_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CBillboardSet_getCommonDirection_CVector3_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CVector3& objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getCommonDirection();
+				const EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setCommonUpVector_void_CVector3(void *pObjectXXXX, _in const void* vec )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setCommonUpVector(*(EarthView::World::Spatial::Math::CVector3*)vec);
+				else
+					ptrNativeObject->setCommonUpVector(*(EarthView::World::Spatial::Math::CVector3*)vec);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setCommonUpVector_void_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setCommonUpVector_void_CVector3_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setCommonUpVector_void_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setCommonUpVector_void_CVector3_NoVirtual(void *pObjectXXXX, _in const void* vec )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setCommonUpVector(*(EarthView::World::Spatial::Math::CVector3*)vec);
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CBillboardSet_getCommonUpVector_CVector3(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Spatial::Math::CVector3& objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getCommonUpVector();
+					const EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Spatial::Math::CVector3& objXXXX = ptrNativeObject->getCommonUpVector();
+					const EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getCommonUpVector_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getCommonUpVector_CVector3_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getCommonUpVector_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CBillboardSet_getCommonUpVector_CVector3_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CVector3& objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getCommonUpVector();
+				const EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setUseAccurateFacing_void_ev_bool(void *pObjectXXXX, _in ev_bool acc )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setUseAccurateFacing(acc);
+				else
+					ptrNativeObject->setUseAccurateFacing(acc);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setUseAccurateFacing_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setUseAccurateFacing_void_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setUseAccurateFacing_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setUseAccurateFacing_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool acc )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setUseAccurateFacing(acc);
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_getUseAccurateFacing_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getUseAccurateFacing();
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->getUseAccurateFacing();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getUseAccurateFacing_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getUseAccurateFacing_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getUseAccurateFacing_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_getUseAccurateFacing_ev_bool_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getUseAccurateFacing();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CBillboardSet_getMovableType_EVString(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getMovableType();
+					return objXXXX.makeBuffer();
+				}
+				else
+				{
+					EVString objXXXX = ptrNativeObject->getMovableType();
+					return objXXXX.makeBuffer();
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getMovableType_EVString( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getMovableType_EVString_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getMovableType_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CBillboardSet_getMovableType_EVString_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getMovableType();
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet__updateBounds_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::_updateBounds();
+				else
+					ptrNativeObject->_updateBounds();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet__updateBounds_void( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet__updateBounds_void_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet__updateBounds_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet__updateBounds_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::_updateBounds();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_ev_bool(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::visitRenderables(visitor, debugRenderables);
+				else
+					ptrNativeObject->visitRenderables(visitor, debugRenderables);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_ev_bool_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::visitRenderables(visitor, debugRenderables);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::visitRenderables(visitor);
+				else
+					ptrNativeObject->visitRenderables(visitor);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_visitRenderables_void_CVisitor_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::visitRenderables(visitor);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet__sortBillboards_void_CCamera(void *pObjectXXXX, _in EarthView::World::Graphic::CCamera* cam )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::_sortBillboards(cam);
+				else
+					ptrNativeObject->_sortBillboards(cam);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet__sortBillboards_void_CCamera( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet__sortBillboards_void_CCamera_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet__sortBillboards_void_CCamera(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet__sortBillboards_void_CCamera_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CCamera* cam )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::_sortBillboards(cam);
+			}
+			extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Graphic_CBillboardSet__getSortMode_SortMode(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::SortMode objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::_getSortMode();
+					return (int)objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::SortMode objXXXX = ptrNativeObject->_getSortMode();
+					return (int)objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet__getSortMode_SortMode( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet__getSortMode_SortMode_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet__getSortMode_SortMode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Graphic_CBillboardSet__getSortMode_SortMode_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				EarthView::World::Graphic::SortMode objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::_getSortMode();
+				return (int)objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setBillboardsInWorldSpace_void_ev_bool(void *pObjectXXXX, _in ev_bool ws )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setBillboardsInWorldSpace(ws);
+				else
+					ptrNativeObject->setBillboardsInWorldSpace(ws);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setBillboardsInWorldSpace_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setBillboardsInWorldSpace_void_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setBillboardsInWorldSpace_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setBillboardsInWorldSpace_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool ws )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setBillboardsInWorldSpace(ws);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setTextureCoords_void_FloatRect_ev_uint16(void *pObjectXXXX, _in EarthView::World::Graphic::FloatRect* coords, _in ev_uint16 numCoords )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setTextureCoords(coords, numCoords);
+				else
+					ptrNativeObject->setTextureCoords(coords, numCoords);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setTextureCoords_void_FloatRect_ev_uint16( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setTextureCoords_void_FloatRect_ev_uint16_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setTextureCoords_void_FloatRect_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setTextureCoords_void_FloatRect_ev_uint16_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::FloatRect* coords, _in ev_uint16 numCoords )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setTextureCoords(coords, numCoords);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setTextureStacksAndSlices_void_ev_uchar_ev_uchar(void *pObjectXXXX, _in ev_uchar stacks, _in ev_uchar slices )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setTextureStacksAndSlices(stacks, slices);
+				else
+					ptrNativeObject->setTextureStacksAndSlices(stacks, slices);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setTextureStacksAndSlices_void_ev_uchar_ev_uchar( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setTextureStacksAndSlices_void_ev_uchar_ev_uchar_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setTextureStacksAndSlices_void_ev_uchar_ev_uchar(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setTextureStacksAndSlices_void_ev_uchar_ev_uchar_NoVirtual(void *pObjectXXXX, _in ev_uchar stacks, _in ev_uchar slices )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setTextureStacksAndSlices(stacks, slices);
+			}
+			extern "C" EV_DLL_EXPORT  const EarthView::World::Graphic::FloatRect*  _stdcall EarthView_World_Graphic_CBillboardSet_getTextureCoords_FloatRect_ev_uint16(void *pObjectXXXX, _out ev_uint16* oNumCoords )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Graphic::FloatRect* objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getTextureCoords(oNumCoords);
+					return objXXXX;
+				}
+				else
+				{
+					const EarthView::World::Graphic::FloatRect* objXXXX = ptrNativeObject->getTextureCoords(oNumCoords);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getTextureCoords_FloatRect_ev_uint16( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getTextureCoords_FloatRect_ev_uint16_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getTextureCoords_FloatRect_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const EarthView::World::Graphic::FloatRect*  _stdcall EarthView_World_Graphic_CBillboardSet_getTextureCoords_FloatRect_ev_uint16_NoVirtual(void *pObjectXXXX, _out ev_uint16* oNumCoords )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				const EarthView::World::Graphic::FloatRect* objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getTextureCoords(oNumCoords);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setPointRenderingEnabled_void_ev_bool(void *pObjectXXXX, _in ev_bool enabled )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setPointRenderingEnabled(enabled);
+				else
+					ptrNativeObject->setPointRenderingEnabled(enabled);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setPointRenderingEnabled_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setPointRenderingEnabled_void_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setPointRenderingEnabled_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setPointRenderingEnabled_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool enabled )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setPointRenderingEnabled(enabled);
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_isPointRenderingEnabled_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::isPointRenderingEnabled();
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->isPointRenderingEnabled();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_isPointRenderingEnabled_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_isPointRenderingEnabled_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_isPointRenderingEnabled_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_isPointRenderingEnabled_ev_bool_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::isPointRenderingEnabled();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint32  _stdcall EarthView_World_Graphic_CBillboardSet_getTypeFlags_ev_uint32(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					ev_uint32 objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getTypeFlags();
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint32 objXXXX = ptrNativeObject->getTypeFlags();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getTypeFlags_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getTypeFlags_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getTypeFlags_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint32  _stdcall EarthView_World_Graphic_CBillboardSet_getTypeFlags_ev_uint32_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ev_uint32 objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getTypeFlags();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setAutoUpdate_void_ev_bool(void *pObjectXXXX, _in ev_bool autoUpdate )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->setAutoUpdate(autoUpdate);
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_getAutoUpdate_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->getAutoUpdate();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_notifyBillboardDataChanged_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->notifyBillboardDataChanged();
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_setSelected_ev_bool_IntVector(void *pObjectXXXX, _in const void* objIndics )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setSelected(*(EarthView::World::Core::IntVector*)objIndics);
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->setSelected(*(EarthView::World::Core::IntVector*)objIndics);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setSelected_ev_bool_IntVector( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setSelected_ev_bool_IntVector_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setSelected_ev_bool_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_setSelected_ev_bool_IntVector_NoVirtual(void *pObjectXXXX, _in const void* objIndics )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setSelected(*(EarthView::World::Core::IntVector*)objIndics);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Graphic_CBillboardSet_getSelected_IntVector(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Core::IntVector objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getSelected();
+					EarthView::World::Core::IntVector *pXXXX = new EarthView::World::Core::IntVector(objXXXX);
+					((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+					return (void*)pXXXX;
+				}
+				else
+				{
+					EarthView::World::Core::IntVector objXXXX = ptrNativeObject->getSelected();
+					EarthView::World::Core::IntVector *pXXXX = new EarthView::World::Core::IntVector(objXXXX);
+					((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getSelected_IntVector( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getSelected_IntVector_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getSelected_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Graphic_CBillboardSet_getSelected_IntVector_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				EarthView::World::Core::IntVector objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getSelected();
+				EarthView::World::Core::IntVector *pXXXX = new EarthView::World::Core::IntVector(objXXXX);
+				((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3(void *pObjectXXXX, _in const void* ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out void* point )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::selectBy(*(EarthView::World::Spatial::Math::CRay*)ray, viewport, prepareToRenderSelection, objIndex, *(EarthView::World::Spatial::Math::CVector3*)point);
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->selectBy(*(EarthView::World::Spatial::Math::CRay*)ray, viewport, prepareToRenderSelection, objIndex, *(EarthView::World::Spatial::Math::CVector3*)point);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_NoVirtual(void *pObjectXXXX, _in const void* ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out void* point )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::selectBy(*(EarthView::World::Spatial::Math::CRay*)ray, viewport, prepareToRenderSelection, objIndex, *(EarthView::World::Spatial::Math::CVector3*)point);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector(void *pObjectXXXX, _in const void* aabb, _in ev_bool prepareToRenderSelection, _out void* indexVec )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::selectBy(*(EarthView::World::Spatial::Math::CAxisAlignedBox*)aabb, prepareToRenderSelection, *(EarthView::World::Core::IntVector*)indexVec);
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->selectBy(*(EarthView::World::Spatial::Math::CAxisAlignedBox*)aabb, prepareToRenderSelection, *(EarthView::World::Core::IntVector*)indexVec);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_NoVirtual(void *pObjectXXXX, _in const void* aabb, _in ev_bool prepareToRenderSelection, _out void* indexVec )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::selectBy(*(EarthView::World::Spatial::Math::CAxisAlignedBox*)aabb, prepareToRenderSelection, *(EarthView::World::Core::IntVector*)indexVec);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CSphere_ev_bool_IntVector(void *pObjectXXXX, _in const void* sphere, _in ev_bool prepareToRenderSelection, _out void* indexVec )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::selectBy(*(EarthView::World::Spatial::Math::CSphere*)sphere, prepareToRenderSelection, *(EarthView::World::Core::IntVector*)indexVec);
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->selectBy(*(EarthView::World::Spatial::Math::CSphere*)sphere, prepareToRenderSelection, *(EarthView::World::Core::IntVector*)indexVec);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CSphere_ev_bool_IntVector( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CSphere_ev_bool_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_selectBy_ev_bool_CSphere_ev_bool_IntVector_NoVirtual(void *pObjectXXXX, _in const void* sphere, _in ev_bool prepareToRenderSelection, _out void* indexVec )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::selectBy(*(EarthView::World::Spatial::Math::CSphere*)sphere, prepareToRenderSelection, *(EarthView::World::Core::IntVector*)indexVec);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3(void *pObjectXXXX, _in const void* ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out ev_int32& submeshIndex, _out ev_int32& instanceIndex, _out ev_int32& segmentIndex, _out void* point )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::selectComponentBy(*(EarthView::World::Spatial::Math::CRay*)ray, viewport, prepareToRenderSelection, objIndex, submeshIndex, instanceIndex, segmentIndex, *(EarthView::World::Spatial::Math::CVector3*)point);
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->selectComponentBy(*(EarthView::World::Spatial::Math::CRay*)ray, viewport, prepareToRenderSelection, objIndex, submeshIndex, instanceIndex, segmentIndex, *(EarthView::World::Spatial::Math::CVector3*)point);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_NoVirtual(void *pObjectXXXX, _in const void* ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out ev_int32& submeshIndex, _out ev_int32& instanceIndex, _out ev_int32& segmentIndex, _out void* point )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::selectComponentBy(*(EarthView::World::Spatial::Math::CRay*)ray, viewport, prepareToRenderSelection, objIndex, submeshIndex, instanceIndex, segmentIndex, *(EarthView::World::Spatial::Math::CVector3*)point);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_renderSelection_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::renderSelection();
+				else
+					ptrNativeObject->renderSelection();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_renderSelection_void( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_renderSelection_void_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_renderSelection_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_renderSelection_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::renderSelection();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_clearSelection_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::clearSelection();
+				else
+					ptrNativeObject->clearSelection();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_clearSelection_void( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_clearSelection_void_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_clearSelection_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_clearSelection_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::clearSelection();
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_getAutoFitCamera_ev_bool(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getAutoFitCamera();
+					return objXXXX;
+				}
+				else
+				{
+					ev_bool objXXXX = ptrNativeObject->getAutoFitCamera();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getAutoFitCamera_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getAutoFitCamera_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getAutoFitCamera_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Graphic_CBillboardSet_getAutoFitCamera_ev_bool_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ev_bool objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getAutoFitCamera();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setAutoFitCamera_void_ev_bool(void *pObjectXXXX, _in ev_bool autofit )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setAutoFitCamera(autofit);
+				else
+					ptrNativeObject->setAutoFitCamera(autofit);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setAutoFitCamera_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setAutoFitCamera_void_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setAutoFitCamera_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setAutoFitCamera_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool autofit )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setAutoFitCamera(autofit);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CBillboardSet_getReduceDistance_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getReduceDistance();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getReduceDistance();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getReduceDistance_Real( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getReduceDistance_Real_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getReduceDistance_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CBillboardSet_getReduceDistance_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSet::getReduceDistance();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setReduceDistance_void_Real(void *pObjectXXXX, _in Real reduceDis )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setReduceDistance(reduceDis);
+				else
+					ptrNativeObject->setReduceDistance(reduceDis);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setReduceDistance_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setReduceDistance_void_Real_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setReduceDistance_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSet_setReduceDistance_void_Real_NoVirtual(void *pObjectXXXX, _in Real reduceDis )
+			{
+				EarthView::World::Graphic::CBillboardSet* ptrNativeObject = (EarthView::World::Graphic::CBillboardSet*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSet::setReduceDistance(reduceDis);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getAnimableObjectPtr_CMovableObjectInternalAnimableObject( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getAnimableObjectPtr_CMovableObjectInternalAnimableObject(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getRenderQueueId_ev_uint8( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getRenderQueueId_ev_uint8_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getRenderQueueId_ev_uint8(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet__notifyCreator_void_CMovableObjectFactory( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet__notifyCreator_void_CMovableObjectFactory_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet__notifyCreator_void_CMovableObjectFactory(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet__getCreator_CMovableObjectFactory( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet__getCreator_CMovableObjectFactory_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet__getCreator_CMovableObjectFactory(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet__notifyManager_void_CSceneManager( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet__notifyManager_void_CSceneManager_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet__notifyManager_void_CSceneManager(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet__getManager_CSceneManager( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet__getManager_CSceneManager_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet__getManager_CSceneManager(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getName_EVString( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getName_EVString_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getName_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getParentNode_CNode( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getParentNode_CNode_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getParentNode_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getParentSceneNode_CSceneNode( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getParentSceneNode_CSceneNode_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getParentSceneNode_CSceneNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_isParentTagPoint_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_isParentTagPoint_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_isParentTagPoint_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet__notifyAttached_void_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_isAttached_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_isAttached_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_isAttached_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_detachFromParent_void( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_detachFromParent_void_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_detachFromParent_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_isInScene_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_isInScene_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_isInScene_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet__notifyMoved_void( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet__notifyMoved_void_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet__notifyMoved_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet__notifyLightsQueried_void_LightList( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet__notifyLightsQueried_void_LightList_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet__notifyLightsQueried_void_LightList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setLightQueriedListener_void_CLightQueriedListener( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setLightQueriedListener_void_CLightQueriedListener_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setLightQueriedListener_void_CLightQueriedListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getLightQueriedListener_CLightQueriedListener( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getLightQueriedListener_CLightQueriedListener_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getLightQueriedListener_CLightQueriedListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getLightListUpdated_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getLightListUpdated_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getLightListUpdated_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setLightListUpdated_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setLightListUpdated_void_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setLightListUpdated_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getWorldBoundingSphere_CSphere(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setVisible_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setVisible_void_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setVisible_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getVisible_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getVisible_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getVisible_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_isVisible_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_isVisible_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_isVisible_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setRenderingMaxDistance_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setRenderingMaxDistance_void_Real_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setRenderingMaxDistance_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getRenderingMaxDistance_Real( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getRenderingMaxDistance_Real_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getRenderingMaxDistance_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setRenderingMinDistance_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setRenderingMinDistance_void_Real_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setRenderingMinDistance_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getRenderingMinDistance_Real( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getRenderingMinDistance_Real_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getRenderingMinDistance_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setRenderingMinPixelSize_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setRenderingMinPixelSize_void_Real_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setRenderingMinPixelSize_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getRenderingMinPixelSize_Real( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getRenderingMinPixelSize_Real_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getRenderingMinPixelSize_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setSelectionColour_void_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setSelectionColour_void_CColourValue_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setSelectionColour_void_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_startEditing_ev_bool_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_startEditing_ev_bool_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_startEditing_ev_bool_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_endEditing_void( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_endEditing_void_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_endEditing_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getEditBoundingBox_CEditBoundingBox( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getEditBoundingBox_CEditBoundingBox_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getEditBoundingBox_CEditBoundingBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setRenderQueueGroup_void_ev_uint8( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setRenderQueueGroup_void_ev_uint8_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setRenderQueueGroup_void_ev_uint8(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getRenderQueueGroup_ev_uint8( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getRenderQueueGroup_ev_uint8_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getRenderQueueGroup_ev_uint8(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet__getParentNodeFullTransform_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet__getParentNodeFullTransform_CMatrix4_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet__getParentNodeFullTransform_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setQueryFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setQueryFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setQueryFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_addQueryFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_addQueryFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_addQueryFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_removeQueryFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_removeQueryFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_removeQueryFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getQueryFlags_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getQueryFlags_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getQueryFlags_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setVisibilityFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setVisibilityFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setVisibilityFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_addVisibilityFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_addVisibilityFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_addVisibilityFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_removeVisibilityFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_removeVisibilityFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_removeVisibilityFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getVisibilityFlags_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getVisibilityFlags_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getVisibilityFlags_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_addListener_void_CMovableObjectListener( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_addListener_void_CMovableObjectListener_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_addListener_void_CMovableObjectListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_removeListener_void_CMovableObjectListener( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_removeListener_void_CMovableObjectListener_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_removeListener_void_CMovableObjectListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_existListener_ev_bool_CMovableObjectListener( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_existListener_ev_bool_CMovableObjectListener_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_existListener_ev_bool_CMovableObjectListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getListenerCount_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getListenerCount_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getListenerCount_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getListener_CMovableObjectListener_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getListener_CMovableObjectListener_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getListener_CMovableObjectListener_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_queryLights_LightList( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_queryLights_LightList_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_queryLights_LightList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getLightMask_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getLightMask_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getLightMask_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setLightMask_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setLightMask_void_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setLightMask_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet__getLightList_LightList( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet__getLightList_LightList_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet__getLightList_LightList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setCastShadows_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setCastShadows_void_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setCastShadows_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getReceivesShadows_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getReceivesShadows_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getReceivesShadows_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_setDebugDisplayEnabled_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_setDebugDisplayEnabled_void_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_setDebugDisplayEnabled_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_isDebugDisplayEnabled_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_isDebugDisplayEnabled_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_isDebugDisplayEnabled_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getCastShadows_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getCastShadows_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getCastShadows_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getEdgeList_CEdgeData( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getEdgeList_CEdgeData_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getEdgeList_CEdgeData(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_hasEdgeList_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_hasEdgeList_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_hasEdgeList_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getWorldBoundingBox_CAxisAlignedBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getLightCapBounds_CAxisAlignedBox( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getLightCapBounds_CAxisAlignedBox_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getLightCapBounds_CAxisAlignedBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getDarkCapBounds_CAxisAlignedBox_CLight_Real( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getDarkCapBounds_CAxisAlignedBox_CLight_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_getPointExtrusionDistance_Real_CLight( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_getPointExtrusionDistance_Real_CLight_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_getPointExtrusionDistance_Real_CLight(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_updateEdgeListLightFacing_void_CEdgeData_CVector4( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_updateEdgeListLightFacing_void_CEdgeData_CVector4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSet_extrudeBounds_void_CAxisAlignedBox_CVector4_Real( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSet_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback* pCallback )
+			{
+				CBillboardSetProxy* ptr = dynamic_cast<CBillboardSetProxy*>((EarthView::World::Graphic::CBillboardSet*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSet_extrudeBounds_void_CAxisAlignedBox_CVector4_Real(pCallback);
+				}
+			}
+			typedef EarthView::World::Graphic::CMovableObject*  ( _stdcall EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback)(_in char*& name, _in const EarthView::World::Core::CommonStringPairList* params);
+			typedef EarthView::World::Graphic::CMovableObject*  ( _stdcall EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_Callback)(_in char*& name);
+			typedef char*  ( _stdcall EarthView_World_Graphic_CBillboardSetFactory_getType_EVString_Callback)();
+			typedef EarthView::World::Graphic::CMovableObject*  ( _stdcall EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback)(_in char*& name, _in EarthView::World::Graphic::CSceneManager* ref_manager, _in const EarthView::World::Core::CommonStringPairList* params);
+			typedef EarthView::World::Graphic::CMovableObject*  ( _stdcall EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback)(_in char*& name, _in EarthView::World::Graphic::CSceneManager* ref_manager);
+			typedef void  ( _stdcall EarthView_World_Graphic_CBillboardSetFactory_destroyInstance_void_CMovableObject_Callback)(_in EarthView::World::Graphic::CMovableObject* obj);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CBillboardSetFactory_requestTypeFlags_ev_bool_Callback)();
+			class CBillboardSetFactoryProxy : public EarthView::World::Graphic::CBillboardSetFactory
+			{
+			private:
+				EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback* m_EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback;
+				EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_Callback* m_EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_Callback;
+				EarthView_World_Graphic_CBillboardSetFactory_getType_EVString_Callback* m_EarthView_World_Graphic_CBillboardSetFactory_getType_EVString_Callback;
+				EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback* m_EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback;
+				EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback* m_EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback;
+				EarthView_World_Graphic_CBillboardSetFactory_destroyInstance_void_CMovableObject_Callback* m_EarthView_World_Graphic_CBillboardSetFactory_destroyInstance_void_CMovableObject_Callback;
+				EarthView_World_Graphic_CBillboardSetFactory_requestTypeFlags_ev_bool_Callback* m_EarthView_World_Graphic_CBillboardSetFactory_requestTypeFlags_ev_bool_Callback;
+			public:
+				CBillboardSetFactoryProxy(EarthView::World::Core::CNameValuePairList *pList) : CBillboardSetFactory(pList)
+				{
+					m_EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSetFactory_getType_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSetFactory_destroyInstance_void_CMovableObject_Callback = NULL;
+					m_EarthView_World_Graphic_CBillboardSetFactory_requestTypeFlags_ev_bool_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList(EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString(EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSetFactory_getType_EVString(EarthView_World_Graphic_CBillboardSetFactory_getType_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSetFactory_getType_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList(EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager(EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSetFactory_destroyInstance_void_CMovableObject(EarthView_World_Graphic_CBillboardSetFactory_destroyInstance_void_CMovableObject_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSetFactory_destroyInstance_void_CMovableObject_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CBillboardSetFactory_requestTypeFlags_ev_bool(EarthView_World_Graphic_CBillboardSetFactory_requestTypeFlags_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CBillboardSetFactory_requestTypeFlags_ev_bool_Callback = pCallback;
+				}
+				virtual EarthView::World::Graphic::CMovableObject* createInstanceImpl(_in const EVString& name, _in const EarthView::World::Core::CommonStringPairList* params)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::CMovableObject* returnValue = m_EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback(name_Char, params);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSetFactory::createInstanceImpl(name, params);
+				}
+				virtual EVString getType() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSetFactory_getType_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CBillboardSetFactory_getType_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSetFactory::getType();
+				}
+				virtual void destroyInstance(_in EarthView::World::Graphic::CMovableObject* obj)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSetFactory_destroyInstance_void_CMovableObject_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CBillboardSetFactory_destroyInstance_void_CMovableObject_Callback(obj);
+					}
+					else
+						return this->CBillboardSetFactory::destroyInstance(obj);
+				}
+				virtual EarthView::World::Graphic::CMovableObject* createInstance(_in const EVString& name, _in EarthView::World::Graphic::CSceneManager* ref_manager, _in const EarthView::World::Core::CommonStringPairList* params)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::CMovableObject* returnValue = m_EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback(name_Char, ref_manager, params);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSetFactory::createInstance(name, ref_manager, params);
+				}
+				virtual EarthView::World::Graphic::CMovableObject* createInstance(_in const EVString& name, _in EarthView::World::Graphic::CSceneManager* ref_manager)
+				{
+					if(m_EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::CMovableObject* returnValue = m_EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback(name_Char, ref_manager);
+						return returnValue;
+					}
+					else
+						return this->CBillboardSetFactory::createInstance(name, ref_manager);
+				}
+				virtual ev_bool requestTypeFlags() const
+				{
+					if(m_EarthView_World_Graphic_CBillboardSetFactory_requestTypeFlags_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CBillboardSetFactory_requestTypeFlags_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CBillboardSetFactory::requestTypeFlags();
+				}
+			};
+			REGISTER_FACTORY_CLASS(CBillboardSetFactoryProxy);
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CMovableObject*  _stdcall EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList(void *pObjectXXXX, _in const char* name, _in const EarthView::World::Core::CommonStringPairList* params )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CBillboardSetFactory* ptrNativeObject = (EarthView::World::Graphic::CBillboardSetFactory*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetFactoryProxy*>((EarthView::World::Graphic::CBillboardSetFactory*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::CMovableObject* objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSetFactory::createInstanceImpl(name1, params);
+					return objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::CMovableObject* objXXXX = ptrNativeObject->createInstanceImpl(name1, params);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback* pCallback )
+			{
+				CBillboardSetFactoryProxy* ptr = dynamic_cast<CBillboardSetFactoryProxy*>((EarthView::World::Graphic::CBillboardSetFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CMovableObject*  _stdcall EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_NoVirtual(void *pObjectXXXX, _in const char* name, _in const EarthView::World::Core::CommonStringPairList* params )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CBillboardSetFactory* ptrNativeObject = (EarthView::World::Graphic::CBillboardSetFactory*) pObjectXXXX;
+				EarthView::World::Graphic::CMovableObject* objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSetFactory::createInstanceImpl(name1, params);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall Get_EarthView_World_Graphic_CBillboardSetFactory_FACTORY_TYPE_NAME()
+			{
+				EVString objXXXX = EarthView::World::Graphic::CBillboardSetFactory::FACTORY_TYPE_NAME;
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Graphic_CBillboardSetFactory_FACTORY_TYPE_NAME( char*  value )
+			{
+				EarthView::World::Core::ev_string value1 = value;
+				EarthView::World::Graphic::CBillboardSetFactory::FACTORY_TYPE_NAME = value1;
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CBillboardSetFactory_getType_EVString(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSetFactory* ptrNativeObject = (EarthView::World::Graphic::CBillboardSetFactory*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetFactoryProxy*>((EarthView::World::Graphic::CBillboardSetFactory*)ptrNativeObject) != NULL)
+				{
+					EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSetFactory::getType();
+					return objXXXX.makeBuffer();
+				}
+				else
+				{
+					EVString objXXXX = ptrNativeObject->getType();
+					return objXXXX.makeBuffer();
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSetFactory_getType_EVString( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSetFactory_getType_EVString_Callback* pCallback )
+			{
+				CBillboardSetFactoryProxy* ptr = dynamic_cast<CBillboardSetFactoryProxy*>((EarthView::World::Graphic::CBillboardSetFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSetFactory_getType_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CBillboardSetFactory_getType_EVString_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CBillboardSetFactory* ptrNativeObject = (EarthView::World::Graphic::CBillboardSetFactory*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CBillboardSetFactory::getType();
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSetFactory_destroyInstance_void_CMovableObject(void *pObjectXXXX, _in EarthView::World::Graphic::CMovableObject* obj )
+			{
+				EarthView::World::Graphic::CBillboardSetFactory* ptrNativeObject = (EarthView::World::Graphic::CBillboardSetFactory*) pObjectXXXX;
+				if (dynamic_cast<CBillboardSetFactoryProxy*>((EarthView::World::Graphic::CBillboardSetFactory*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CBillboardSetFactory::destroyInstance(obj);
+				else
+					ptrNativeObject->destroyInstance(obj);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSetFactory_destroyInstance_void_CMovableObject( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSetFactory_destroyInstance_void_CMovableObject_Callback* pCallback )
+			{
+				CBillboardSetFactoryProxy* ptr = dynamic_cast<CBillboardSetFactoryProxy*>((EarthView::World::Graphic::CBillboardSetFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSetFactory_destroyInstance_void_CMovableObject(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CBillboardSetFactory_destroyInstance_void_CMovableObject_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CMovableObject* obj )
+			{
+				EarthView::World::Graphic::CBillboardSetFactory* ptrNativeObject = (EarthView::World::Graphic::CBillboardSetFactory*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CBillboardSetFactory::destroyInstance(obj);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString_Callback* pCallback )
+			{
+				CBillboardSetFactoryProxy* ptr = dynamic_cast<CBillboardSetFactoryProxy*>((EarthView::World::Graphic::CBillboardSetFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSetFactory_createInstanceImpl_CMovableObject_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback* pCallback )
+			{
+				CBillboardSetFactoryProxy* ptr = dynamic_cast<CBillboardSetFactoryProxy*>((EarthView::World::Graphic::CBillboardSetFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback* pCallback )
+			{
+				CBillboardSetFactoryProxy* ptr = dynamic_cast<CBillboardSetFactoryProxy*>((EarthView::World::Graphic::CBillboardSetFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSetFactory_createInstance_CMovableObject_EVString_CSceneManager(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CBillboardSetFactory_requestTypeFlags_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CBillboardSetFactory_requestTypeFlags_ev_bool_Callback* pCallback )
+			{
+				CBillboardSetFactoryProxy* ptr = dynamic_cast<CBillboardSetFactoryProxy*>((EarthView::World::Graphic::CBillboardSetFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CBillboardSetFactory_requestTypeFlags_ev_bool(pCallback);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+#ifndef EARTHVIEW_WORLD_SPATIAL_FLT_COFING_H
+#define EARTHVIEW_WORLD_SPATIAL_FLT_COFING_H
+#include "core/global.h"
+
+#ifdef EV_BUILD_FLT
+#define EV_FLTSERIALIZER_DLL EV_DLL_EXPORT
+#else
+#define EV_FLTSERIALIZER_DLL EV_DLL_IMPORT
+#endif
+
+#endif

@@ -1,0 +1,4262 @@
+/* This file is produced by the P/Invoke AutoWrapper Utility 
+ Copyright (c) 2012 by EarthView Image Inc */
+#include "globecontrol/regionareatool.h"
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Core
+		{
+		}
+		namespace Graphic
+		{
+		}
+		namespace Spatial3D
+		{
+			namespace Controls
+			{
+			}
+			namespace SystemUI
+			{
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateStart_void_CRegionAreaTool_Callback)(_in EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* tool);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateEnd_void_CRegionAreaTool_Callback)(_in EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* tool);
+				class CRegionAreaListenerProxy : public EarthView::World::Spatial3D::SystemUI::CRegionAreaListener
+				{
+				private:
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateStart_void_CRegionAreaTool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateStart_void_CRegionAreaTool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateEnd_void_CRegionAreaTool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateEnd_void_CRegionAreaTool_Callback;
+				public:
+					CRegionAreaListenerProxy(EarthView::World::Core::CNameValuePairList *pList) : CRegionAreaListener(pList)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateStart_void_CRegionAreaTool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateEnd_void_CRegionAreaTool_Callback = NULL;
+					}
+				public:
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateStart_void_CRegionAreaTool(EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateStart_void_CRegionAreaTool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateStart_void_CRegionAreaTool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateEnd_void_CRegionAreaTool(EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateEnd_void_CRegionAreaTool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateEnd_void_CRegionAreaTool_Callback = pCallback;
+					}
+					virtual void onOperateStart(_in EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* tool)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateStart_void_CRegionAreaTool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateStart_void_CRegionAreaTool_Callback(tool);
+						}
+						else
+							return this->CRegionAreaListener::onOperateStart(tool);
+					}
+					virtual void onOperateEnd(_in EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* tool)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateEnd_void_CRegionAreaTool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateEnd_void_CRegionAreaTool_Callback(tool);
+						}
+						else
+							return this->CRegionAreaListener::onOperateEnd(tool);
+					}
+				};
+				REGISTER_FACTORY_CLASS(CRegionAreaListenerProxy);
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateStart_void_CRegionAreaTool(void *pObjectXXXX, _in EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* tool )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaListener* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaListener*) pObjectXXXX;
+					if (dynamic_cast<CRegionAreaListenerProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaListener*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaListener::onOperateStart(tool);
+					else
+						ptrNativeObject->onOperateStart(tool);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateStart_void_CRegionAreaTool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateStart_void_CRegionAreaTool_Callback* pCallback )
+				{
+					CRegionAreaListenerProxy* ptr = dynamic_cast<CRegionAreaListenerProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaListener*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateStart_void_CRegionAreaTool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateStart_void_CRegionAreaTool_NoVirtual(void *pObjectXXXX, _in EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* tool )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaListener* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaListener*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaListener::onOperateStart(tool);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateEnd_void_CRegionAreaTool(void *pObjectXXXX, _in EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* tool )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaListener* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaListener*) pObjectXXXX;
+					if (dynamic_cast<CRegionAreaListenerProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaListener*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaListener::onOperateEnd(tool);
+					else
+						ptrNativeObject->onOperateEnd(tool);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateEnd_void_CRegionAreaTool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateEnd_void_CRegionAreaTool_Callback* pCallback )
+				{
+					CRegionAreaListenerProxy* ptr = dynamic_cast<CRegionAreaListenerProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaListener*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateEnd_void_CRegionAreaTool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaListener_onOperateEnd_void_CRegionAreaTool_NoVirtual(void *pObjectXXXX, _in EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* tool )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaListener* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaListener*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaListener::onOperateEnd(tool);
+				}
+				typedef const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback)();
+				typedef ev_uint8  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueId_ev_uint8_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCreator_void_CMovableObjectFactory_Callback)(_in EarthView::World::Graphic::CMovableObjectFactory* ref_fact);
+				typedef EarthView::World::Graphic::CMovableObjectFactory*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getCreator_CMovableObjectFactory_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyManager_void_CSceneManager_Callback)(_in EarthView::World::Graphic::CSceneManager* ref_mgr);
+				typedef EarthView::World::Graphic::CSceneManager*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getManager_CSceneManager_Callback)();
+				typedef char*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getName_EVString_Callback)();
+				typedef char*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getMovableType_EVString_Callback)();
+				typedef EarthView::World::Graphic::CNode*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentNode_CNode_Callback)();
+				typedef EarthView::World::Graphic::CSceneNode*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentSceneNode_CSceneNode_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isParentTagPoint_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_ev_bool_Callback)(_in EarthView::World::Graphic::CNode* ref_parent, _in ev_bool isTagPoint);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_Callback)(_in EarthView::World::Graphic::CNode* ref_parent);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isAttached_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_detachFromParent_void_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isInScene_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyMoved_void_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyLightsQueried_void_LightList_Callback)(_in const EarthView::World::Graphic::LightList* lightList);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightQueriedListener_void_CLightQueriedListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CLightQueriedListener* listener);
+				typedef EarthView::World::Graphic::CMovableObject::CLightQueriedListener*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightQueriedListener_CLightQueriedListener_Callback)();
+				typedef ev_uint32  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightListUpdated_ev_uint32_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightListUpdated_void_ev_uint32_Callback)(_in ev_uint32 frame);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCurrentCamera_void_CCamera_Callback)(_in EarthView::World::Graphic::CCamera* ref_cam);
+				typedef const void*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingBox_CAxisAlignedBox_Callback)();
+				typedef Real  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingRadius_Real_Callback)();
+				typedef const void*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_ev_bool_Callback)(_in ev_bool derive);
+				typedef const void*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__updateRenderQueue_void_CRenderQueue_Callback)(_in EarthView::World::Graphic::CRenderQueue* queue);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisible_void_ev_bool_Callback)(_in ev_bool visible);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisible_ev_bool_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isVisible_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMaxDistance_void_Real_Callback)(_in Real dist);
+				typedef Real  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMaxDistance_Real_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinDistance_void_Real_Callback)(_in Real dist);
+				typedef Real  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinDistance_Real_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinPixelSize_void_Real_Callback)(_in Real pixelSize);
+				typedef Real  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinPixelSize_Real_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectionColour_void_CColourValue_Callback)(_in const void* colour);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelected_ev_bool_IntVector_Callback)(_in const void* objIndics);
+				typedef void*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelected_IntVector_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback)(_in const void* ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out void* point);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback)(_in const void* aabb, _in ev_bool prepareToRenderSelection, _out void* indexVec);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback)(_in const void* sphere, _in ev_bool prepareToRenderSelection, _out void* indexVec);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback)(_in const void* ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out ev_int32& submeshIndex, _out ev_int32& instanceIndex, _out ev_int32& segmentIndex, _out void* point);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_renderSelection_void_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_clearSelection_void_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_startEditing_ev_bool_ev_uint32_Callback)(_in ev_uint32 objectIndex);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_endEditing_void_Callback)();
+				typedef EarthView::World::Graphic::CEditBoundingBox*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEditBoundingBox_CEditBoundingBox_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback)(_in ev_uint32 objectIndex, _inout void* matrix);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback)(_in ev_uint32 objectIndex, _in const void* matrix);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroup_void_ev_uint8_Callback)(_in ev_uint8 queueID);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback)(_in ev_uint8 queueID, _in ev_uint16 priority);
+				typedef ev_uint8  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueGroup_ev_uint8_Callback)();
+				typedef const void*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getParentNodeFullTransform_CMatrix4_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setQueryFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addQueryFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeQueryFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+				typedef ev_uint32  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getQueryFlags_ev_uint32_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisibilityFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addVisibilityFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeVisibilityFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+				typedef ev_uint32  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisibilityFlags_ev_uint32_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addListener_void_CMovableObjectListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* ref_listener);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeListener_void_CMovableObjectListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_existListener_ev_bool_CMovableObjectListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener);
+				typedef ev_uint32  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListenerCount_ev_uint32_Callback)();
+				typedef EarthView::World::Graphic::CMovableObject::CMovableObjectListener*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListener_CMovableObjectListener_ev_uint32_Callback)(_in ev_uint32 index);
+				typedef const void*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_queryLights_LightList_Callback)();
+				typedef ev_uint32  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightMask_ev_uint32_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightMask_void_ev_uint32_Callback)(_in ev_uint32 lightMask);
+				typedef EarthView::World::Graphic::LightList*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getLightList_LightList_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setCastShadows_void_ev_bool_Callback)(_in ev_bool enabled);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getReceivesShadows_ev_bool_Callback)();
+				typedef ev_uint32  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getTypeFlags_ev_uint32_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_ev_bool_Callback)(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_Callback)(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setDebugDisplayEnabled_void_ev_bool_Callback)(_in ev_bool enabled);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isDebugDisplayEnabled_ev_bool_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getCastShadows_ev_bool_Callback)();
+				typedef EarthView::World::Graphic::CEdgeData*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEdgeList_CEdgeData_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_hasEdgeList_ev_bool_Callback)();
+				typedef const void*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback)(_in ev_bool derive);
+				typedef const void*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_Callback)();
+				typedef const void*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightCapBounds_CAxisAlignedBox_Callback)();
+				typedef void*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback)(_in const void* light, _in Real dirLightExtrusionDist);
+				typedef void*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback)(_in int shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDistance, _in ev_uint32 flags);
+				typedef void*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback)(_in int shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDistance);
+				typedef Real  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getPointExtrusionDistance_Real_CLight_Callback)(_in const EarthView::World::Graphic::CLight* l);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback)(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const void* lightPos);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback)(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const void* indexBuffer, _in const EarthView::World::Graphic::CLight* light, _inout void* shadowRenderables, _in ev_uint32 flags);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback)(_inout void* box, _in const void* lightPos, _in Real extrudeDist);
+				class CRegionAreaManualObjectProxy : public EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject
+				{
+				private:
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueId_ev_uint8_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueId_ev_uint8_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCreator_void_CMovableObjectFactory_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCreator_void_CMovableObjectFactory_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getCreator_CMovableObjectFactory_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getCreator_CMovableObjectFactory_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyManager_void_CSceneManager_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyManager_void_CSceneManager_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getManager_CSceneManager_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getManager_CSceneManager_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getName_EVString_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getName_EVString_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getMovableType_EVString_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getMovableType_EVString_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentNode_CNode_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentNode_CNode_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentSceneNode_CSceneNode_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentSceneNode_CSceneNode_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isParentTagPoint_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isParentTagPoint_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isAttached_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isAttached_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_detachFromParent_void_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_detachFromParent_void_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isInScene_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isInScene_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyMoved_void_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyMoved_void_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyLightsQueried_void_LightList_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyLightsQueried_void_LightList_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightQueriedListener_void_CLightQueriedListener_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightQueriedListener_void_CLightQueriedListener_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightQueriedListener_CLightQueriedListener_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightQueriedListener_CLightQueriedListener_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightListUpdated_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightListUpdated_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightListUpdated_void_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightListUpdated_void_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCurrentCamera_void_CCamera_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCurrentCamera_void_CCamera_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingBox_CAxisAlignedBox_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingBox_CAxisAlignedBox_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingRadius_Real_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingRadius_Real_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__updateRenderQueue_void_CRenderQueue_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__updateRenderQueue_void_CRenderQueue_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisible_void_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisible_void_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisible_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisible_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isVisible_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isVisible_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMaxDistance_void_Real_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMaxDistance_void_Real_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMaxDistance_Real_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMaxDistance_Real_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinDistance_void_Real_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinDistance_void_Real_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinDistance_Real_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinDistance_Real_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinPixelSize_void_Real_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinPixelSize_void_Real_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinPixelSize_Real_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinPixelSize_Real_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectionColour_void_CColourValue_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectionColour_void_CColourValue_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelected_ev_bool_IntVector_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelected_ev_bool_IntVector_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelected_IntVector_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelected_IntVector_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_renderSelection_void_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_renderSelection_void_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_clearSelection_void_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_clearSelection_void_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_startEditing_ev_bool_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_startEditing_ev_bool_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_endEditing_void_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_endEditing_void_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEditBoundingBox_CEditBoundingBox_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEditBoundingBox_CEditBoundingBox_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroup_void_ev_uint8_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroup_void_ev_uint8_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueGroup_ev_uint8_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueGroup_ev_uint8_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getParentNodeFullTransform_CMatrix4_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getParentNodeFullTransform_CMatrix4_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setQueryFlags_void_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setQueryFlags_void_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addQueryFlags_void_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addQueryFlags_void_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeQueryFlags_void_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeQueryFlags_void_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getQueryFlags_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getQueryFlags_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisibilityFlags_void_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisibilityFlags_void_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addVisibilityFlags_void_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addVisibilityFlags_void_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeVisibilityFlags_void_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeVisibilityFlags_void_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisibilityFlags_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisibilityFlags_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addListener_void_CMovableObjectListener_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addListener_void_CMovableObjectListener_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeListener_void_CMovableObjectListener_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeListener_void_CMovableObjectListener_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_existListener_ev_bool_CMovableObjectListener_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_existListener_ev_bool_CMovableObjectListener_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListenerCount_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListenerCount_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListener_CMovableObjectListener_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListener_CMovableObjectListener_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_queryLights_LightList_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_queryLights_LightList_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightMask_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightMask_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightMask_void_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightMask_void_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getLightList_LightList_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getLightList_LightList_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setCastShadows_void_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setCastShadows_void_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getReceivesShadows_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getReceivesShadows_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getTypeFlags_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getTypeFlags_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setDebugDisplayEnabled_void_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setDebugDisplayEnabled_void_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isDebugDisplayEnabled_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isDebugDisplayEnabled_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getCastShadows_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getCastShadows_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEdgeList_CEdgeData_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEdgeList_CEdgeData_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_hasEdgeList_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_hasEdgeList_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightCapBounds_CAxisAlignedBox_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightCapBounds_CAxisAlignedBox_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getPointExtrusionDistance_Real_CLight_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getPointExtrusionDistance_Real_CLight_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback;
+				public:
+					CRegionAreaManualObjectProxy(EarthView::World::Core::CNameValuePairList *pList) : CRegionAreaManualObject(pList)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueId_ev_uint8_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCreator_void_CMovableObjectFactory_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getCreator_CMovableObjectFactory_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyManager_void_CSceneManager_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getManager_CSceneManager_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getName_EVString_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getMovableType_EVString_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentNode_CNode_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentSceneNode_CSceneNode_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isParentTagPoint_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isAttached_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_detachFromParent_void_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isInScene_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyMoved_void_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyLightsQueried_void_LightList_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightQueriedListener_void_CLightQueriedListener_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightQueriedListener_CLightQueriedListener_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightListUpdated_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightListUpdated_void_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCurrentCamera_void_CCamera_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingBox_CAxisAlignedBox_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingRadius_Real_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__updateRenderQueue_void_CRenderQueue_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisible_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisible_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isVisible_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMaxDistance_void_Real_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMaxDistance_Real_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinDistance_void_Real_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinDistance_Real_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinPixelSize_void_Real_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinPixelSize_Real_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectionColour_void_CColourValue_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelected_ev_bool_IntVector_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelected_IntVector_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_renderSelection_void_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_clearSelection_void_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_startEditing_ev_bool_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_endEditing_void_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEditBoundingBox_CEditBoundingBox_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroup_void_ev_uint8_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueGroup_ev_uint8_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getParentNodeFullTransform_CMatrix4_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setQueryFlags_void_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addQueryFlags_void_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeQueryFlags_void_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getQueryFlags_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisibilityFlags_void_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addVisibilityFlags_void_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeVisibilityFlags_void_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisibilityFlags_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addListener_void_CMovableObjectListener_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeListener_void_CMovableObjectListener_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_existListener_ev_bool_CMovableObjectListener_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListenerCount_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListener_CMovableObjectListener_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_queryLights_LightList_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightMask_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightMask_void_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getLightList_LightList_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setCastShadows_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getReceivesShadows_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getTypeFlags_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setDebugDisplayEnabled_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isDebugDisplayEnabled_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getCastShadows_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEdgeList_CEdgeData_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_hasEdgeList_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightCapBounds_CAxisAlignedBox_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getPointExtrusionDistance_Real_CLight_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback = NULL;
+					}
+				public:
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getAnimableObjectPtr_CMovableObjectInternalAnimableObject(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueId_ev_uint8(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueId_ev_uint8_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueId_ev_uint8_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCreator_void_CMovableObjectFactory(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCreator_void_CMovableObjectFactory_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCreator_void_CMovableObjectFactory_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getCreator_CMovableObjectFactory(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getCreator_CMovableObjectFactory_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getCreator_CMovableObjectFactory_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyManager_void_CSceneManager(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyManager_void_CSceneManager_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyManager_void_CSceneManager_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getManager_CSceneManager(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getManager_CSceneManager_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getManager_CSceneManager_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getName_EVString(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getName_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getName_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getMovableType_EVString(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getMovableType_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getMovableType_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentNode_CNode(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentNode_CNode_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentNode_CNode_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentSceneNode_CSceneNode(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentSceneNode_CSceneNode_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentSceneNode_CSceneNode_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isParentTagPoint_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isParentTagPoint_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isParentTagPoint_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isAttached_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isAttached_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isAttached_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_detachFromParent_void(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_detachFromParent_void_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_detachFromParent_void_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isInScene_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isInScene_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isInScene_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyMoved_void(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyMoved_void_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyMoved_void_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyLightsQueried_void_LightList(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyLightsQueried_void_LightList_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyLightsQueried_void_LightList_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightQueriedListener_void_CLightQueriedListener(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightQueriedListener_void_CLightQueriedListener_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightQueriedListener_void_CLightQueriedListener_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightQueriedListener_CLightQueriedListener(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightQueriedListener_CLightQueriedListener_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightQueriedListener_CLightQueriedListener_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightListUpdated_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightListUpdated_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightListUpdated_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightListUpdated_void_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightListUpdated_void_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightListUpdated_void_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCurrentCamera_void_CCamera(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCurrentCamera_void_CCamera_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCurrentCamera_void_CCamera_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingBox_CAxisAlignedBox(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingBox_CAxisAlignedBox_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingBox_CAxisAlignedBox_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingRadius_Real(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingRadius_Real_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingRadius_Real_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__updateRenderQueue_void_CRenderQueue(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__updateRenderQueue_void_CRenderQueue_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__updateRenderQueue_void_CRenderQueue_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisible_void_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisible_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisible_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisible_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisible_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisible_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isVisible_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isVisible_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isVisible_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMaxDistance_void_Real(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMaxDistance_void_Real_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMaxDistance_void_Real_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMaxDistance_Real(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMaxDistance_Real_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMaxDistance_Real_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinDistance_void_Real(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinDistance_void_Real_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinDistance_void_Real_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinDistance_Real(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinDistance_Real_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinDistance_Real_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinPixelSize_void_Real(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinPixelSize_void_Real_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinPixelSize_void_Real_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinPixelSize_Real(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinPixelSize_Real_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinPixelSize_Real_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectionColour_void_CColourValue(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectionColour_void_CColourValue_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectionColour_void_CColourValue_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelected_ev_bool_IntVector(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelected_ev_bool_IntVector_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelected_ev_bool_IntVector_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelected_IntVector(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelected_IntVector_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelected_IntVector_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CSphere_ev_bool_IntVector(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_renderSelection_void(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_renderSelection_void_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_renderSelection_void_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_clearSelection_void(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_clearSelection_void_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_clearSelection_void_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_startEditing_ev_bool_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_startEditing_ev_bool_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_startEditing_ev_bool_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_endEditing_void(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_endEditing_void_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_endEditing_void_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEditBoundingBox_CEditBoundingBox(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEditBoundingBox_CEditBoundingBox_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEditBoundingBox_CEditBoundingBox_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroup_void_ev_uint8(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroup_void_ev_uint8_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroup_void_ev_uint8_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueGroup_ev_uint8(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueGroup_ev_uint8_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueGroup_ev_uint8_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getParentNodeFullTransform_CMatrix4(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getParentNodeFullTransform_CMatrix4_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getParentNodeFullTransform_CMatrix4_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setQueryFlags_void_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setQueryFlags_void_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setQueryFlags_void_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addQueryFlags_void_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addQueryFlags_void_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addQueryFlags_void_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeQueryFlags_void_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeQueryFlags_void_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeQueryFlags_void_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getQueryFlags_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getQueryFlags_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getQueryFlags_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisibilityFlags_void_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisibilityFlags_void_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisibilityFlags_void_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addVisibilityFlags_void_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addVisibilityFlags_void_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addVisibilityFlags_void_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeVisibilityFlags_void_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeVisibilityFlags_void_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeVisibilityFlags_void_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisibilityFlags_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisibilityFlags_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisibilityFlags_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addListener_void_CMovableObjectListener(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addListener_void_CMovableObjectListener_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addListener_void_CMovableObjectListener_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeListener_void_CMovableObjectListener(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeListener_void_CMovableObjectListener_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeListener_void_CMovableObjectListener_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_existListener_ev_bool_CMovableObjectListener(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_existListener_ev_bool_CMovableObjectListener_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_existListener_ev_bool_CMovableObjectListener_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListenerCount_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListenerCount_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListenerCount_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListener_CMovableObjectListener_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListener_CMovableObjectListener_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListener_CMovableObjectListener_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_queryLights_LightList(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_queryLights_LightList_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_queryLights_LightList_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightMask_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightMask_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightMask_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightMask_void_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightMask_void_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightMask_void_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getLightList_LightList(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getLightList_LightList_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getLightList_LightList_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setCastShadows_void_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setCastShadows_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setCastShadows_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getReceivesShadows_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getReceivesShadows_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getReceivesShadows_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getTypeFlags_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getTypeFlags_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getTypeFlags_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setDebugDisplayEnabled_void_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setDebugDisplayEnabled_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setDebugDisplayEnabled_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isDebugDisplayEnabled_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isDebugDisplayEnabled_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isDebugDisplayEnabled_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getCastShadows_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getCastShadows_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getCastShadows_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEdgeList_CEdgeData(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEdgeList_CEdgeData_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEdgeList_CEdgeData_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_hasEdgeList_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_hasEdgeList_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_hasEdgeList_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightCapBounds_CAxisAlignedBox(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightCapBounds_CAxisAlignedBox_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightCapBounds_CAxisAlignedBox_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getDarkCapBounds_CAxisAlignedBox_CLight_Real(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getPointExtrusionDistance_Real_CLight(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getPointExtrusionDistance_Real_CLight_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getPointExtrusionDistance_Real_CLight_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_updateEdgeListLightFacing_void_CEdgeData_CVector4(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_extrudeBounds_void_CAxisAlignedBox_CVector4_Real(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback = pCallback;
+					}
+					virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getBoundingBox() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingBox_CAxisAlignedBox_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingBox_CAxisAlignedBox_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getBoundingBox();
+					}
+					virtual Real getBoundingRadius() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingRadius_Real_Callback != NULL && this->isCustomExtend())
+						{
+							Real returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingRadius_Real_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getBoundingRadius();
+					}
+					virtual void _updateRenderQueue(_in EarthView::World::Graphic::CRenderQueue* queue)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__updateRenderQueue_void_CRenderQueue_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__updateRenderQueue_void_CRenderQueue_Callback(queue);
+						}
+						else
+							return this->CRegionAreaManualObject::_updateRenderQueue(queue);
+					}
+					virtual void visitRenderables(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_Callback(visitor);
+						}
+						else
+							return this->CRegionAreaManualObject::visitRenderables(visitor);
+					}
+					virtual void visitRenderables(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_ev_bool_Callback(visitor, debugRenderables);
+						}
+						else
+							return this->CRegionAreaManualObject::visitRenderables(visitor, debugRenderables);
+					}
+					virtual EVString getMovableType() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getMovableType_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							EVString returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getMovableType_EVString_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getMovableType();
+					}
+					virtual const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject* getAnimableObjectPtr()
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject* returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getAnimableObjectPtr();
+					}
+					virtual ev_uint8 getRenderQueueId() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueId_ev_uint8_Callback != NULL && this->isCustomExtend())
+						{
+							ev_uint8 returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueId_ev_uint8_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getRenderQueueId();
+					}
+					virtual void _notifyCreator(_in EarthView::World::Graphic::CMovableObjectFactory* ref_fact)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCreator_void_CMovableObjectFactory_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCreator_void_CMovableObjectFactory_Callback(ref_fact);
+						}
+						else
+							return this->CRegionAreaManualObject::_notifyCreator(ref_fact);
+					}
+					virtual EarthView::World::Graphic::CMovableObjectFactory* _getCreator() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getCreator_CMovableObjectFactory_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Graphic::CMovableObjectFactory* returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getCreator_CMovableObjectFactory_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::_getCreator();
+					}
+					virtual void _notifyManager(_in EarthView::World::Graphic::CSceneManager* ref_mgr)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyManager_void_CSceneManager_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyManager_void_CSceneManager_Callback(ref_mgr);
+						}
+						else
+							return this->CRegionAreaManualObject::_notifyManager(ref_mgr);
+					}
+					virtual EarthView::World::Graphic::CSceneManager* _getManager() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getManager_CSceneManager_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Graphic::CSceneManager* returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getManager_CSceneManager_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::_getManager();
+					}
+					virtual EVString getName() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getName_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							EVString returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getName_EVString_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getName();
+					}
+					virtual EarthView::World::Graphic::CNode* getParentNode() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentNode_CNode_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Graphic::CNode* returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentNode_CNode_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getParentNode();
+					}
+					virtual EarthView::World::Graphic::CSceneNode* getParentSceneNode() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentSceneNode_CSceneNode_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Graphic::CSceneNode* returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentSceneNode_CSceneNode_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getParentSceneNode();
+					}
+					virtual ev_bool isParentTagPoint() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isParentTagPoint_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isParentTagPoint_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::isParentTagPoint();
+					}
+					virtual void _notifyAttached(_in EarthView::World::Graphic::CNode* ref_parent, _in ev_bool isTagPoint)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_ev_bool_Callback(ref_parent, isTagPoint);
+						}
+						else
+							return this->CRegionAreaManualObject::_notifyAttached(ref_parent, isTagPoint);
+					}
+					virtual void _notifyAttached(_in EarthView::World::Graphic::CNode* ref_parent)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_Callback(ref_parent);
+						}
+						else
+							return this->CRegionAreaManualObject::_notifyAttached(ref_parent);
+					}
+					virtual ev_bool isAttached() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isAttached_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isAttached_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::isAttached();
+					}
+					virtual void detachFromParent()
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_detachFromParent_void_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_detachFromParent_void_Callback();
+						}
+						else
+							return this->CRegionAreaManualObject::detachFromParent();
+					}
+					virtual ev_bool isInScene() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isInScene_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isInScene_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::isInScene();
+					}
+					virtual void _notifyMoved()
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyMoved_void_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyMoved_void_Callback();
+						}
+						else
+							return this->CRegionAreaManualObject::_notifyMoved();
+					}
+					virtual void _notifyLightsQueried(_in const EarthView::World::Graphic::LightList* lightList)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyLightsQueried_void_LightList_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyLightsQueried_void_LightList_Callback(lightList);
+						}
+						else
+							return this->CRegionAreaManualObject::_notifyLightsQueried(lightList);
+					}
+					virtual void setLightQueriedListener(_in EarthView::World::Graphic::CMovableObject::CLightQueriedListener* listener)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightQueriedListener_void_CLightQueriedListener_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightQueriedListener_void_CLightQueriedListener_Callback(listener);
+						}
+						else
+							return this->CRegionAreaManualObject::setLightQueriedListener(listener);
+					}
+					virtual EarthView::World::Graphic::CMovableObject::CLightQueriedListener* getLightQueriedListener()
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightQueriedListener_CLightQueriedListener_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Graphic::CMovableObject::CLightQueriedListener* returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightQueriedListener_CLightQueriedListener_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getLightQueriedListener();
+					}
+					virtual ev_uint32 getLightListUpdated() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightListUpdated_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_uint32 returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightListUpdated_ev_uint32_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getLightListUpdated();
+					}
+					virtual void setLightListUpdated(_in ev_uint32 frame)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightListUpdated_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightListUpdated_void_ev_uint32_Callback(frame);
+						}
+						else
+							return this->CRegionAreaManualObject::setLightListUpdated(frame);
+					}
+					virtual void _notifyCurrentCamera(_in EarthView::World::Graphic::CCamera* ref_cam)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCurrentCamera_void_CCamera_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCurrentCamera_void_CCamera_Callback(ref_cam);
+						}
+						else
+							return this->CRegionAreaManualObject::_notifyCurrentCamera(ref_cam);
+					}
+					virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getWorldBoundingBox(_in ev_bool derive) const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback(derive);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getWorldBoundingBox(derive);
+					}
+					virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getWorldBoundingBox() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getWorldBoundingBox();
+					}
+					virtual const EarthView::World::Spatial::Math::CSphere& getWorldBoundingSphere(_in ev_bool derive) const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Spatial::Math::CSphere& returnValue = *(EarthView::World::Spatial::Math::CSphere*)m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_ev_bool_Callback(derive);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getWorldBoundingSphere(derive);
+					}
+					virtual const EarthView::World::Spatial::Math::CSphere& getWorldBoundingSphere() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Spatial::Math::CSphere& returnValue = *(EarthView::World::Spatial::Math::CSphere*)m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getWorldBoundingSphere();
+					}
+					virtual void setVisible(_in ev_bool visible)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisible_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisible_void_ev_bool_Callback(visible);
+						}
+						else
+							return this->CRegionAreaManualObject::setVisible(visible);
+					}
+					virtual ev_bool getVisible() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisible_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisible_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getVisible();
+					}
+					virtual ev_bool isVisible() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isVisible_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isVisible_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::isVisible();
+					}
+					virtual void setRenderingMaxDistance(_in Real dist)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMaxDistance_void_Real_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMaxDistance_void_Real_Callback(dist);
+						}
+						else
+							return this->CRegionAreaManualObject::setRenderingMaxDistance(dist);
+					}
+					virtual Real getRenderingMaxDistance() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMaxDistance_Real_Callback != NULL && this->isCustomExtend())
+						{
+							Real returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMaxDistance_Real_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getRenderingMaxDistance();
+					}
+					virtual void setRenderingMinDistance(_in Real dist)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinDistance_void_Real_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinDistance_void_Real_Callback(dist);
+						}
+						else
+							return this->CRegionAreaManualObject::setRenderingMinDistance(dist);
+					}
+					virtual Real getRenderingMinDistance() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinDistance_Real_Callback != NULL && this->isCustomExtend())
+						{
+							Real returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinDistance_Real_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getRenderingMinDistance();
+					}
+					virtual void setRenderingMinPixelSize(_in Real pixelSize)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinPixelSize_void_Real_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinPixelSize_void_Real_Callback(pixelSize);
+						}
+						else
+							return this->CRegionAreaManualObject::setRenderingMinPixelSize(pixelSize);
+					}
+					virtual Real getRenderingMinPixelSize() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinPixelSize_Real_Callback != NULL && this->isCustomExtend())
+						{
+							Real returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinPixelSize_Real_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getRenderingMinPixelSize();
+					}
+					virtual void setSelectionColour(_in const EarthView::World::Graphic::CColourValue& colour)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectionColour_void_CColourValue_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectionColour_void_CColourValue_Callback(&colour);
+						}
+						else
+							return this->CRegionAreaManualObject::setSelectionColour(colour);
+					}
+					virtual ev_bool setSelected(_in const EarthView::World::Core::IntVector& objIndics)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelected_ev_bool_IntVector_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelected_ev_bool_IntVector_Callback(&objIndics);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::setSelected(objIndics);
+					}
+					virtual EarthView::World::Core::IntVector getSelected() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelected_IntVector_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Core::IntVector returnValue = *(EarthView::World::Core::IntVector*)m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelected_IntVector_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getSelected();
+					}
+					virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CRay& ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out EarthView::World::Spatial::Math::CVector3& point)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback(&ray, viewport, prepareToRenderSelection, objIndex, &point);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::selectBy(ray, viewport, prepareToRenderSelection, objIndex, point);
+					}
+					virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CAxisAlignedBox& aabb, _in ev_bool prepareToRenderSelection, _out EarthView::World::Core::IntVector& indexVec)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback(&aabb, prepareToRenderSelection, &indexVec);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::selectBy(aabb, prepareToRenderSelection, indexVec);
+					}
+					virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CSphere& sphere, _in ev_bool prepareToRenderSelection, _out EarthView::World::Core::IntVector& indexVec)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback(&sphere, prepareToRenderSelection, &indexVec);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::selectBy(sphere, prepareToRenderSelection, indexVec);
+					}
+					virtual ev_bool selectComponentBy(_in const EarthView::World::Spatial::Math::CRay& ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out ev_int32& submeshIndex, _out ev_int32& instanceIndex, _out ev_int32& segmentIndex, _out EarthView::World::Spatial::Math::CVector3& point)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback(&ray, viewport, prepareToRenderSelection, objIndex, submeshIndex, instanceIndex, segmentIndex, &point);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::selectComponentBy(ray, viewport, prepareToRenderSelection, objIndex, submeshIndex, instanceIndex, segmentIndex, point);
+					}
+					virtual void renderSelection()
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_renderSelection_void_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_renderSelection_void_Callback();
+						}
+						else
+							return this->CRegionAreaManualObject::renderSelection();
+					}
+					virtual void clearSelection()
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_clearSelection_void_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_clearSelection_void_Callback();
+						}
+						else
+							return this->CRegionAreaManualObject::clearSelection();
+					}
+					virtual ev_bool startEditing(_in ev_uint32 objectIndex)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_startEditing_ev_bool_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_startEditing_ev_bool_ev_uint32_Callback(objectIndex);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::startEditing(objectIndex);
+					}
+					virtual void endEditing()
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_endEditing_void_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_endEditing_void_Callback();
+						}
+						else
+							return this->CRegionAreaManualObject::endEditing();
+					}
+					virtual EarthView::World::Graphic::CEditBoundingBox* getEditBoundingBox()
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEditBoundingBox_CEditBoundingBox_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Graphic::CEditBoundingBox* returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEditBoundingBox_CEditBoundingBox_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getEditBoundingBox();
+					}
+					virtual ev_bool getSelectedObjectWorldMatrix(_in ev_uint32 objectIndex, _inout EarthView::World::Spatial::Math::CMatrix4& matrix)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback(objectIndex, &matrix);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getSelectedObjectWorldMatrix(objectIndex, matrix);
+					}
+					virtual ev_bool setSelectedObjectWorldMatrix(_in ev_uint32 objectIndex, _in const EarthView::World::Spatial::Math::CMatrix4& matrix)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback(objectIndex, &matrix);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::setSelectedObjectWorldMatrix(objectIndex, matrix);
+					}
+					virtual void setRenderQueueGroup(_in ev_uint8 queueID)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroup_void_ev_uint8_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroup_void_ev_uint8_Callback(queueID);
+						}
+						else
+							return this->CRegionAreaManualObject::setRenderQueueGroup(queueID);
+					}
+					virtual void setRenderQueueGroupAndPriority(_in ev_uint8 queueID, _in ev_uint16 priority)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback(queueID, priority);
+						}
+						else
+							return this->CRegionAreaManualObject::setRenderQueueGroupAndPriority(queueID, priority);
+					}
+					virtual ev_uint8 getRenderQueueGroup() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueGroup_ev_uint8_Callback != NULL && this->isCustomExtend())
+						{
+							ev_uint8 returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueGroup_ev_uint8_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getRenderQueueGroup();
+					}
+					virtual const EarthView::World::Spatial::Math::CMatrix4& _getParentNodeFullTransform() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getParentNodeFullTransform_CMatrix4_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Spatial::Math::CMatrix4& returnValue = *(EarthView::World::Spatial::Math::CMatrix4*)m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getParentNodeFullTransform_CMatrix4_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::_getParentNodeFullTransform();
+					}
+					virtual void setQueryFlags(_in ev_uint32 flags)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setQueryFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setQueryFlags_void_ev_uint32_Callback(flags);
+						}
+						else
+							return this->CRegionAreaManualObject::setQueryFlags(flags);
+					}
+					virtual void addQueryFlags(_in ev_uint32 flags)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addQueryFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addQueryFlags_void_ev_uint32_Callback(flags);
+						}
+						else
+							return this->CRegionAreaManualObject::addQueryFlags(flags);
+					}
+					virtual void removeQueryFlags(_in ev_uint32 flags)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeQueryFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeQueryFlags_void_ev_uint32_Callback(flags);
+						}
+						else
+							return this->CRegionAreaManualObject::removeQueryFlags(flags);
+					}
+					virtual ev_uint32 getQueryFlags() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getQueryFlags_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_uint32 returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getQueryFlags_ev_uint32_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getQueryFlags();
+					}
+					virtual void setVisibilityFlags(_in ev_uint32 flags)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisibilityFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisibilityFlags_void_ev_uint32_Callback(flags);
+						}
+						else
+							return this->CRegionAreaManualObject::setVisibilityFlags(flags);
+					}
+					virtual void addVisibilityFlags(_in ev_uint32 flags)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addVisibilityFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addVisibilityFlags_void_ev_uint32_Callback(flags);
+						}
+						else
+							return this->CRegionAreaManualObject::addVisibilityFlags(flags);
+					}
+					virtual void removeVisibilityFlags(_in ev_uint32 flags)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeVisibilityFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeVisibilityFlags_void_ev_uint32_Callback(flags);
+						}
+						else
+							return this->CRegionAreaManualObject::removeVisibilityFlags(flags);
+					}
+					virtual ev_uint32 getVisibilityFlags() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisibilityFlags_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_uint32 returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisibilityFlags_ev_uint32_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getVisibilityFlags();
+					}
+					virtual void addListener(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* ref_listener)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addListener_void_CMovableObjectListener_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addListener_void_CMovableObjectListener_Callback(ref_listener);
+						}
+						else
+							return this->CRegionAreaManualObject::addListener(ref_listener);
+					}
+					virtual void removeListener(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeListener_void_CMovableObjectListener_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeListener_void_CMovableObjectListener_Callback(listener);
+						}
+						else
+							return this->CRegionAreaManualObject::removeListener(listener);
+					}
+					virtual ev_bool existListener(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener) const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_existListener_ev_bool_CMovableObjectListener_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_existListener_ev_bool_CMovableObjectListener_Callback(listener);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::existListener(listener);
+					}
+					virtual ev_uint32 getListenerCount() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListenerCount_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_uint32 returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListenerCount_ev_uint32_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getListenerCount();
+					}
+					virtual EarthView::World::Graphic::CMovableObject::CMovableObjectListener* getListener(_in ev_uint32 index) const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListener_CMovableObjectListener_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Graphic::CMovableObject::CMovableObjectListener* returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListener_CMovableObjectListener_ev_uint32_Callback(index);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getListener(index);
+					}
+					virtual const EarthView::World::Graphic::LightList& queryLights() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_queryLights_LightList_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Graphic::LightList& returnValue = *(EarthView::World::Graphic::LightList*)m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_queryLights_LightList_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::queryLights();
+					}
+					virtual ev_uint32 getLightMask() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightMask_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_uint32 returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightMask_ev_uint32_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getLightMask();
+					}
+					virtual void setLightMask(_in ev_uint32 lightMask)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightMask_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightMask_void_ev_uint32_Callback(lightMask);
+						}
+						else
+							return this->CRegionAreaManualObject::setLightMask(lightMask);
+					}
+					virtual EarthView::World::Graphic::LightList* _getLightList()
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getLightList_LightList_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Graphic::LightList* returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getLightList_LightList_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::_getLightList();
+					}
+					virtual EarthView::World::Graphic::CEdgeData* getEdgeList()
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEdgeList_CEdgeData_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Graphic::CEdgeData* returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEdgeList_CEdgeData_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getEdgeList();
+					}
+					virtual ev_bool hasEdgeList()
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_hasEdgeList_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_hasEdgeList_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::hasEdgeList();
+					}
+					virtual EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator getShadowVolumeRenderableIterator(_in EarthView::World::Graphic::ShadowTechnique shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDist, _in ev_uint32 flags)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator returnValue = *(EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator*)m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback((int)shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist, flags);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getShadowVolumeRenderableIterator(shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist, flags);
+					}
+					virtual EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator getShadowVolumeRenderableIterator(_in EarthView::World::Graphic::ShadowTechnique shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDist)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator returnValue = *(EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator*)m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback((int)shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getShadowVolumeRenderableIterator(shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist);
+					}
+					virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getLightCapBounds() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightCapBounds_CAxisAlignedBox_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightCapBounds_CAxisAlignedBox_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getLightCapBounds();
+					}
+					virtual EarthView::World::Spatial::Math::CAxisAlignedBox getDarkCapBounds(_in const EarthView::World::Graphic::CLight& light, _in Real dirLightExtrusionDist) const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Math::CAxisAlignedBox returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback(&light, dirLightExtrusionDist);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getDarkCapBounds(light, dirLightExtrusionDist);
+					}
+					virtual void setCastShadows(_in ev_bool enabled)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setCastShadows_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setCastShadows_void_ev_bool_Callback(enabled);
+						}
+						else
+							return this->CRegionAreaManualObject::setCastShadows(enabled);
+					}
+					virtual ev_bool getCastShadows() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getCastShadows_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getCastShadows_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getCastShadows();
+					}
+					virtual ev_bool getReceivesShadows()
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getReceivesShadows_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getReceivesShadows_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getReceivesShadows();
+					}
+					virtual Real getPointExtrusionDistance(_in const EarthView::World::Graphic::CLight* l) const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getPointExtrusionDistance_Real_CLight_Callback != NULL && this->isCustomExtend())
+						{
+							Real returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getPointExtrusionDistance_Real_CLight_Callback(l);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getPointExtrusionDistance(l);
+					}
+					virtual ev_uint32 getTypeFlags() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getTypeFlags_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_uint32 returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getTypeFlags_ev_uint32_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::getTypeFlags();
+					}
+					virtual void setDebugDisplayEnabled(_in ev_bool enabled)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setDebugDisplayEnabled_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setDebugDisplayEnabled_void_ev_bool_Callback(enabled);
+						}
+						else
+							return this->CRegionAreaManualObject::setDebugDisplayEnabled(enabled);
+					}
+					virtual ev_bool isDebugDisplayEnabled() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isDebugDisplayEnabled_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isDebugDisplayEnabled_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaManualObject::isDebugDisplayEnabled();
+					}
+					virtual void updateEdgeListLightFacing(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const EarthView::World::Spatial::Math::CVector4& lightPos)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback(edgeData, &lightPos);
+						}
+						else
+							return this->CRegionAreaManualObject::updateEdgeListLightFacing(edgeData, lightPos);
+					}
+					virtual void generateShadowVolume(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const EarthView::World::Graphic::CHardwareIndexBufferSharedPtr& indexBuffer, _in const EarthView::World::Graphic::CLight* light, _inout EarthView::World::Graphic::CShadowCaster::ShadowRenderableList& shadowRenderables, _in ev_uint32 flags)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback(edgeData, &indexBuffer, light, &shadowRenderables, flags);
+						}
+						else
+							return this->CRegionAreaManualObject::generateShadowVolume(edgeData, indexBuffer, light, shadowRenderables, flags);
+					}
+					virtual void extrudeBounds(_inout EarthView::World::Spatial::Math::CAxisAlignedBox& box, _in const EarthView::World::Spatial::Math::CVector4& lightPos, _in Real extrudeDist) const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback(&box, &lightPos, extrudeDist);
+						}
+						else
+							return this->CRegionAreaManualObject::extrudeBounds(box, lightPos, extrudeDist);
+					}
+				};
+				REGISTER_FACTORY_CLASS(CRegionAreaManualObjectProxy);
+				typedef EarthView::World::Graphic::CRenderOperation*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_CRenderOperation_Callback)();
+				typedef const void*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMaterial_CMaterialPtr_Callback)();
+				typedef EarthView::World::Graphic::CTechnique*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getTechnique_CTechnique_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_void_CRenderOperation_Callback)(_inout void* op);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_preRender_ev_bool_CSceneManager_CRenderSystem_Callback)(_in EarthView::World::Graphic::CSceneManager* sm, _in EarthView::World::Graphic::CRenderSystem* rsys);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_postRender_void_CSceneManager_CRenderSystem_Callback)(_in EarthView::World::Graphic::CSceneManager* sm, _in EarthView::World::Graphic::CRenderSystem* rsys);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getWorldTransforms_void_CMatrix4_Callback)(_in EarthView::World::Spatial::Math::CMatrix4* xform);
+				typedef ev_uint16  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getNumWorldTransforms_ev_uint16_Callback)();
+				typedef Real  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getSquaredViewDepth_Real_CCamera_Callback)(_in const EarthView::World::Graphic::CCamera* cam);
+				typedef const void*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getLights_LightList_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCastsShadows_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback)(_in const void* constantEntry, _in EarthView::World::Graphic::CGpuProgramParameters* params);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setPolygonModeOverrideable_void_ev_bool_Callback)(_in ev_bool override);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getPolygonModeOverrideable_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbient_void_CColourValue_Callback)(_in const void* ambient);
+				typedef const void*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbient_CColourValue_Callback)();
+				typedef bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbientEnabled_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbientEnabled_void_ev_bool_Callback)(_in ev_bool enabled);
+				typedef EarthView::World::Graphic::CMovableObject*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMovableObject_CMovableObject_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_addListener_void_CRenderableListener_Callback)(_in EarthView::World::Graphic::CRenderable::CRenderableListener* ref_listener);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_removeListener_void_CRenderableListener_Callback)(_in EarthView::World::Graphic::CRenderable::CRenderableListener* listener);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_existListener_ev_bool_CRenderableListener_Callback)(_in EarthView::World::Graphic::CRenderable::CRenderableListener* listener);
+				typedef ev_uint32  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListenerCount_ev_uint32_Callback)();
+				typedef EarthView::World::Graphic::CRenderable::CRenderableListener*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListener_CRenderableListener_ev_uint32_Callback)(_in ev_uint32 index);
+				typedef EarthView::World::Graphic::CRenderable::CRenderSystemData*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderSystemData_CRenderSystemData_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setRenderSystemData_void_CRenderSystemData_Callback)(_in EarthView::World::Graphic::CRenderable::CRenderSystemData* ref_val);
+				class CSubRenderableProxy : public EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable
+				{
+				private:
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_CRenderOperation_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_CRenderOperation_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMaterial_CMaterialPtr_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMaterial_CMaterialPtr_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getTechnique_CTechnique_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getTechnique_CTechnique_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_void_CRenderOperation_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_void_CRenderOperation_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_preRender_ev_bool_CSceneManager_CRenderSystem_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_preRender_ev_bool_CSceneManager_CRenderSystem_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_postRender_void_CSceneManager_CRenderSystem_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_postRender_void_CSceneManager_CRenderSystem_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getWorldTransforms_void_CMatrix4_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getWorldTransforms_void_CMatrix4_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getNumWorldTransforms_ev_uint16_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getNumWorldTransforms_ev_uint16_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getSquaredViewDepth_Real_CCamera_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getSquaredViewDepth_Real_CCamera_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getLights_LightList_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getLights_LightList_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCastsShadows_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCastsShadows_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setPolygonModeOverrideable_void_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setPolygonModeOverrideable_void_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getPolygonModeOverrideable_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getPolygonModeOverrideable_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbient_void_CColourValue_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbient_void_CColourValue_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbient_CColourValue_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbient_CColourValue_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbientEnabled_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbientEnabled_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbientEnabled_void_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbientEnabled_void_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMovableObject_CMovableObject_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMovableObject_CMovableObject_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_addListener_void_CRenderableListener_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_addListener_void_CRenderableListener_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_removeListener_void_CRenderableListener_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_removeListener_void_CRenderableListener_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_existListener_ev_bool_CRenderableListener_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_existListener_ev_bool_CRenderableListener_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListenerCount_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListenerCount_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListener_CRenderableListener_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListener_CRenderableListener_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderSystemData_CRenderSystemData_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderSystemData_CRenderSystemData_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setRenderSystemData_void_CRenderSystemData_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setRenderSystemData_void_CRenderSystemData_Callback;
+				public:
+					CSubRenderableProxy(EarthView::World::Core::CNameValuePairList *pList) : CSubRenderable(pList)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_CRenderOperation_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMaterial_CMaterialPtr_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getTechnique_CTechnique_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_void_CRenderOperation_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_preRender_ev_bool_CSceneManager_CRenderSystem_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_postRender_void_CSceneManager_CRenderSystem_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getWorldTransforms_void_CMatrix4_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getNumWorldTransforms_ev_uint16_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getSquaredViewDepth_Real_CCamera_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getLights_LightList_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCastsShadows_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setPolygonModeOverrideable_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getPolygonModeOverrideable_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbient_void_CColourValue_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbient_CColourValue_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbientEnabled_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbientEnabled_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMovableObject_CMovableObject_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_addListener_void_CRenderableListener_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_removeListener_void_CRenderableListener_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_existListener_ev_bool_CRenderableListener_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListenerCount_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListener_CRenderableListener_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderSystemData_CRenderSystemData_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setRenderSystemData_void_CRenderSystemData_Callback = NULL;
+					}
+				public:
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_CRenderOperation(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_CRenderOperation_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_CRenderOperation_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMaterial_CMaterialPtr(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMaterial_CMaterialPtr_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMaterial_CMaterialPtr_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getTechnique_CTechnique(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getTechnique_CTechnique_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getTechnique_CTechnique_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_void_CRenderOperation(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_void_CRenderOperation_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_void_CRenderOperation_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_preRender_ev_bool_CSceneManager_CRenderSystem(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_preRender_ev_bool_CSceneManager_CRenderSystem_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_preRender_ev_bool_CSceneManager_CRenderSystem_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_postRender_void_CSceneManager_CRenderSystem(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_postRender_void_CSceneManager_CRenderSystem_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_postRender_void_CSceneManager_CRenderSystem_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getWorldTransforms_void_CMatrix4(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getWorldTransforms_void_CMatrix4_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getWorldTransforms_void_CMatrix4_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getNumWorldTransforms_ev_uint16(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getNumWorldTransforms_ev_uint16_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getNumWorldTransforms_ev_uint16_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getSquaredViewDepth_Real_CCamera(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getSquaredViewDepth_Real_CCamera_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getSquaredViewDepth_Real_CCamera_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getLights_LightList(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getLights_LightList_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getLights_LightList_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCastsShadows_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCastsShadows_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCastsShadows_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setPolygonModeOverrideable_void_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setPolygonModeOverrideable_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setPolygonModeOverrideable_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getPolygonModeOverrideable_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getPolygonModeOverrideable_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getPolygonModeOverrideable_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbient_void_CColourValue(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbient_void_CColourValue_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbient_void_CColourValue_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbient_CColourValue(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbient_CColourValue_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbient_CColourValue_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbientEnabled_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbientEnabled_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbientEnabled_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbientEnabled_void_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbientEnabled_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbientEnabled_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMovableObject_CMovableObject(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMovableObject_CMovableObject_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMovableObject_CMovableObject_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_addListener_void_CRenderableListener(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_addListener_void_CRenderableListener_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_addListener_void_CRenderableListener_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_removeListener_void_CRenderableListener(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_removeListener_void_CRenderableListener_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_removeListener_void_CRenderableListener_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_existListener_ev_bool_CRenderableListener(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_existListener_ev_bool_CRenderableListener_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_existListener_ev_bool_CRenderableListener_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListenerCount_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListenerCount_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListenerCount_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListener_CRenderableListener_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListener_CRenderableListener_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListener_CRenderableListener_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderSystemData_CRenderSystemData(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderSystemData_CRenderSystemData_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderSystemData_CRenderSystemData_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setRenderSystemData_void_CRenderSystemData(EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setRenderSystemData_void_CRenderSystemData_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setRenderSystemData_void_CRenderSystemData_Callback = pCallback;
+					}
+					virtual ev_bool preRender(_in EarthView::World::Graphic::CSceneManager* sm, _in EarthView::World::Graphic::CRenderSystem* rsys)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_preRender_ev_bool_CSceneManager_CRenderSystem_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_preRender_ev_bool_CSceneManager_CRenderSystem_Callback(sm, rsys);
+							return returnValue;
+						}
+						else
+							return this->CSubRenderable::preRender(sm, rsys);
+					}
+					virtual void postRender(_in EarthView::World::Graphic::CSceneManager* sm, _in EarthView::World::Graphic::CRenderSystem* rsys)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_postRender_void_CSceneManager_CRenderSystem_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_postRender_void_CSceneManager_CRenderSystem_Callback(sm, rsys);
+						}
+						else
+							return this->CSubRenderable::postRender(sm, rsys);
+					}
+					virtual EarthView::World::Graphic::CMovableObject* getMovableObject() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMovableObject_CMovableObject_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Graphic::CMovableObject* returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMovableObject_CMovableObject_Callback();
+							return returnValue;
+						}
+						else
+							return this->CSubRenderable::getMovableObject();
+					}
+					virtual const EarthView::World::Graphic::CMaterialPtr& getMaterial() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMaterial_CMaterialPtr_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Graphic::CMaterialPtr& returnValue = *(EarthView::World::Graphic::CMaterialPtr*)m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMaterial_CMaterialPtr_Callback();
+							return returnValue;
+						}
+						else
+							return this->CSubRenderable::getMaterial();
+					}
+					virtual EarthView::World::Graphic::CRenderOperation* getRenderOperation()
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_CRenderOperation_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Graphic::CRenderOperation* returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_CRenderOperation_Callback();
+							return returnValue;
+						}
+						else
+							return this->CSubRenderable::getRenderOperation();
+					}
+					virtual void getRenderOperation(_inout EarthView::World::Graphic::CRenderOperation& op)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_void_CRenderOperation_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_void_CRenderOperation_Callback(&op);
+						}
+						else
+							return this->CSubRenderable::getRenderOperation(op);
+					}
+					virtual void getWorldTransforms(_in EarthView::World::Spatial::Math::CMatrix4* xform) const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getWorldTransforms_void_CMatrix4_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getWorldTransforms_void_CMatrix4_Callback(xform);
+						}
+						else
+							return this->CSubRenderable::getWorldTransforms(xform);
+					}
+					virtual const EarthView::World::Graphic::LightList& getLights() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getLights_LightList_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Graphic::LightList& returnValue = *(EarthView::World::Graphic::LightList*)m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getLights_LightList_Callback();
+							return returnValue;
+						}
+						else
+							return this->CSubRenderable::getLights();
+					}
+					virtual EarthView::World::Graphic::CTechnique* getTechnique() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getTechnique_CTechnique_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Graphic::CTechnique* returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getTechnique_CTechnique_Callback();
+							return returnValue;
+						}
+						else
+							return this->CSubRenderable::getTechnique();
+					}
+					virtual ev_uint16 getNumWorldTransforms() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getNumWorldTransforms_ev_uint16_Callback != NULL && this->isCustomExtend())
+						{
+							ev_uint16 returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getNumWorldTransforms_ev_uint16_Callback();
+							return returnValue;
+						}
+						else
+							return this->CSubRenderable::getNumWorldTransforms();
+					}
+					virtual Real getSquaredViewDepth(_in const EarthView::World::Graphic::CCamera* cam) const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getSquaredViewDepth_Real_CCamera_Callback != NULL && this->isCustomExtend())
+						{
+							Real returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getSquaredViewDepth_Real_CCamera_Callback(cam);
+							return returnValue;
+						}
+						else
+							return this->CSubRenderable::getSquaredViewDepth(cam);
+					}
+					virtual ev_bool getCastsShadows() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCastsShadows_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCastsShadows_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CSubRenderable::getCastsShadows();
+					}
+					virtual void _updateCustomGpuParameter(_in const EarthView::World::Graphic::CGpuProgramParameters::CAutoConstantEntry& constantEntry, _in EarthView::World::Graphic::CGpuProgramParameters* params) const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback(&constantEntry, params);
+						}
+						else
+							return this->CSubRenderable::_updateCustomGpuParameter(constantEntry, params);
+					}
+					virtual void setPolygonModeOverrideable(_in ev_bool override)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setPolygonModeOverrideable_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setPolygonModeOverrideable_void_ev_bool_Callback(override);
+						}
+						else
+							return this->CSubRenderable::setPolygonModeOverrideable(override);
+					}
+					virtual ev_bool getPolygonModeOverrideable() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getPolygonModeOverrideable_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getPolygonModeOverrideable_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CSubRenderable::getPolygonModeOverrideable();
+					}
+					virtual void setCustomAmbient(_in const EarthView::World::Graphic::CColourValue& ambient)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbient_void_CColourValue_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbient_void_CColourValue_Callback(&ambient);
+						}
+						else
+							return this->CSubRenderable::setCustomAmbient(ambient);
+					}
+					virtual const EarthView::World::Graphic::CColourValue& getCustomAmbient() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbient_CColourValue_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Graphic::CColourValue& returnValue = *(EarthView::World::Graphic::CColourValue*)m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbient_CColourValue_Callback();
+							return returnValue;
+						}
+						else
+							return this->CSubRenderable::getCustomAmbient();
+					}
+					virtual bool getCustomAmbientEnabled() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbientEnabled_bool_Callback != NULL && this->isCustomExtend())
+						{
+							bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbientEnabled_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CSubRenderable::getCustomAmbientEnabled();
+					}
+					virtual void setCustomAmbientEnabled(_in ev_bool enabled)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbientEnabled_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbientEnabled_void_ev_bool_Callback(enabled);
+						}
+						else
+							return this->CSubRenderable::setCustomAmbientEnabled(enabled);
+					}
+					virtual void addListener(_in EarthView::World::Graphic::CRenderable::CRenderableListener* ref_listener)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_addListener_void_CRenderableListener_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_addListener_void_CRenderableListener_Callback(ref_listener);
+						}
+						else
+							return this->CSubRenderable::addListener(ref_listener);
+					}
+					virtual void removeListener(_in EarthView::World::Graphic::CRenderable::CRenderableListener* listener)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_removeListener_void_CRenderableListener_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_removeListener_void_CRenderableListener_Callback(listener);
+						}
+						else
+							return this->CSubRenderable::removeListener(listener);
+					}
+					virtual ev_bool existListener(_in EarthView::World::Graphic::CRenderable::CRenderableListener* listener) const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_existListener_ev_bool_CRenderableListener_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_existListener_ev_bool_CRenderableListener_Callback(listener);
+							return returnValue;
+						}
+						else
+							return this->CSubRenderable::existListener(listener);
+					}
+					virtual ev_uint32 getListenerCount() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListenerCount_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_uint32 returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListenerCount_ev_uint32_Callback();
+							return returnValue;
+						}
+						else
+							return this->CSubRenderable::getListenerCount();
+					}
+					virtual EarthView::World::Graphic::CRenderable::CRenderableListener* getListener(_in ev_uint32 index) const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListener_CRenderableListener_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Graphic::CRenderable::CRenderableListener* returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListener_CRenderableListener_ev_uint32_Callback(index);
+							return returnValue;
+						}
+						else
+							return this->CSubRenderable::getListener(index);
+					}
+					virtual EarthView::World::Graphic::CRenderable::CRenderSystemData* getRenderSystemData() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderSystemData_CRenderSystemData_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Graphic::CRenderable::CRenderSystemData* returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderSystemData_CRenderSystemData_Callback();
+							return returnValue;
+						}
+						else
+							return this->CSubRenderable::getRenderSystemData();
+					}
+					virtual void setRenderSystemData(_in EarthView::World::Graphic::CRenderable::CRenderSystemData* ref_val) const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setRenderSystemData_void_CRenderSystemData_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setRenderSystemData_void_CRenderSystemData_Callback(ref_val);
+						}
+						else
+							return this->CSubRenderable::setRenderSystemData(ref_val);
+					}
+				};
+				REGISTER_FACTORY_CLASS(CSubRenderableProxy);
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_preRender_ev_bool_CSceneManager_CRenderSystem(void *pObjectXXXX, _in EarthView::World::Graphic::CSceneManager* sm, _in EarthView::World::Graphic::CRenderSystem* rsys )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX;
+					if (dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable::preRender(sm, rsys);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->preRender(sm, rsys);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_preRender_ev_bool_CSceneManager_CRenderSystem( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_preRender_ev_bool_CSceneManager_CRenderSystem_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_preRender_ev_bool_CSceneManager_CRenderSystem(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_preRender_ev_bool_CSceneManager_CRenderSystem_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CSceneManager* sm, _in EarthView::World::Graphic::CRenderSystem* rsys )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable::preRender(sm, rsys);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_postRender_void_CSceneManager_CRenderSystem(void *pObjectXXXX, _in EarthView::World::Graphic::CSceneManager* sm, _in EarthView::World::Graphic::CRenderSystem* rsys )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX;
+					if (dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable::postRender(sm, rsys);
+					else
+						ptrNativeObject->postRender(sm, rsys);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_postRender_void_CSceneManager_CRenderSystem( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_postRender_void_CSceneManager_CRenderSystem_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_postRender_void_CSceneManager_CRenderSystem(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_postRender_void_CSceneManager_CRenderSystem_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CSceneManager* sm, _in EarthView::World::Graphic::CRenderSystem* rsys )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable::postRender(sm, rsys);
+				}
+				extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CMovableObject*  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMovableObject_CMovableObject(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX;
+					if (dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*)ptrNativeObject) != NULL)
+					{
+						EarthView::World::Graphic::CMovableObject* objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable::getMovableObject();
+						return objXXXX;
+					}
+					else
+					{
+						EarthView::World::Graphic::CMovableObject* objXXXX = ptrNativeObject->getMovableObject();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMovableObject_CMovableObject( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMovableObject_CMovableObject_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMovableObject_CMovableObject(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CMovableObject*  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMovableObject_CMovableObject_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX;
+					EarthView::World::Graphic::CMovableObject* objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable::getMovableObject();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setMaterial_void_EVString(void *pObjectXXXX, _in const char* matName )
+				{
+					EarthView::World::Core::ev_string matName1 = matName;
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX;
+					ptrNativeObject->setMaterial(matName1);
+				}
+				extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMaterial_CMaterialPtr(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX;
+					if (dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*)ptrNativeObject) != NULL)
+					{
+						const EarthView::World::Graphic::CMaterialPtr& objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable::getMaterial();
+						const EarthView::World::Graphic::CMaterialPtr *pXXXX = &objXXXX;
+						return (void*)pXXXX;
+					}
+					else
+					{
+						const EarthView::World::Graphic::CMaterialPtr& objXXXX = ptrNativeObject->getMaterial();
+						const EarthView::World::Graphic::CMaterialPtr *pXXXX = &objXXXX;
+						return (void*)pXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMaterial_CMaterialPtr( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMaterial_CMaterialPtr_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMaterial_CMaterialPtr(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getMaterial_CMaterialPtr_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX;
+					const EarthView::World::Graphic::CMaterialPtr& objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable::getMaterial();
+					const EarthView::World::Graphic::CMaterialPtr *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CRenderOperation*  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_CRenderOperation(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX;
+					if (dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*)ptrNativeObject) != NULL)
+					{
+						EarthView::World::Graphic::CRenderOperation* objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable::getRenderOperation();
+						return objXXXX;
+					}
+					else
+					{
+						EarthView::World::Graphic::CRenderOperation* objXXXX = ptrNativeObject->getRenderOperation();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_CRenderOperation( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_CRenderOperation_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_CRenderOperation(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CRenderOperation*  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_CRenderOperation_NoVirtual(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX;
+					EarthView::World::Graphic::CRenderOperation* objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable::getRenderOperation();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_void_CRenderOperation(void *pObjectXXXX, _inout void* op )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX;
+					if (dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable::getRenderOperation(*(EarthView::World::Graphic::CRenderOperation*)op);
+					else
+						ptrNativeObject->getRenderOperation(*(EarthView::World::Graphic::CRenderOperation*)op);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_void_CRenderOperation( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_void_CRenderOperation_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_void_CRenderOperation(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderOperation_void_CRenderOperation_NoVirtual(void *pObjectXXXX, _inout void* op )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable::getRenderOperation(*(EarthView::World::Graphic::CRenderOperation*)op);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getWorldTransforms_void_CMatrix4(void *pObjectXXXX, _in EarthView::World::Spatial::Math::CMatrix4* xform )
+				{
+					const EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX;
+					if (dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable::getWorldTransforms(xform);
+					else
+						ptrNativeObject->getWorldTransforms(xform);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getWorldTransforms_void_CMatrix4( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getWorldTransforms_void_CMatrix4_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getWorldTransforms_void_CMatrix4(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getWorldTransforms_void_CMatrix4_NoVirtual(void *pObjectXXXX, _in EarthView::World::Spatial::Math::CMatrix4* xform )
+				{
+					const EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable::getWorldTransforms(xform);
+				}
+				extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getLights_LightList(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX;
+					if (dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*)ptrNativeObject) != NULL)
+					{
+						const EarthView::World::Graphic::LightList& objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable::getLights();
+						const EarthView::World::Graphic::LightList *pXXXX = &objXXXX;
+						return (void*)pXXXX;
+					}
+					else
+					{
+						const EarthView::World::Graphic::LightList& objXXXX = ptrNativeObject->getLights();
+						const EarthView::World::Graphic::LightList *pXXXX = &objXXXX;
+						return (void*)pXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getLights_LightList( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getLights_LightList_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getLights_LightList(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getLights_LightList_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX;
+					const EarthView::World::Graphic::LightList& objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable::getLights();
+					const EarthView::World::Graphic::LightList *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getTechnique_CTechnique( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getTechnique_CTechnique_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getTechnique_CTechnique(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getNumWorldTransforms_ev_uint16( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getNumWorldTransforms_ev_uint16_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getNumWorldTransforms_ev_uint16(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getSquaredViewDepth_Real_CCamera( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getSquaredViewDepth_Real_CCamera_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getSquaredViewDepth_Real_CCamera(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCastsShadows_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCastsShadows_ev_bool_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCastsShadows_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable__updateCustomGpuParameter_void_CAutoConstantEntry_CGpuProgramParameters(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setPolygonModeOverrideable_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setPolygonModeOverrideable_void_ev_bool_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setPolygonModeOverrideable_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getPolygonModeOverrideable_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getPolygonModeOverrideable_ev_bool_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getPolygonModeOverrideable_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbient_void_CColourValue( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbient_void_CColourValue_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbient_void_CColourValue(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbient_CColourValue( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbient_CColourValue_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbient_CColourValue(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbientEnabled_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbientEnabled_bool_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getCustomAmbientEnabled_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbientEnabled_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbientEnabled_void_ev_bool_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setCustomAmbientEnabled_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_addListener_void_CRenderableListener( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_addListener_void_CRenderableListener_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_addListener_void_CRenderableListener(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_removeListener_void_CRenderableListener( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_removeListener_void_CRenderableListener_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_removeListener_void_CRenderableListener(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_existListener_ev_bool_CRenderableListener( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_existListener_ev_bool_CRenderableListener_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_existListener_ev_bool_CRenderableListener(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListenerCount_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListenerCount_ev_uint32_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListenerCount_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListener_CRenderableListener_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListener_CRenderableListener_ev_uint32_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getListener_CRenderableListener_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderSystemData_CRenderSystemData( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderSystemData_CRenderSystemData_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_getRenderSystemData_CRenderSystemData(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setRenderSystemData_void_CRenderSystemData( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setRenderSystemData_void_CRenderSystemData_Callback* pCallback )
+				{
+					CSubRenderableProxy* ptr = dynamic_cast<CSubRenderableProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::CSubRenderable*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_CSubRenderable_setRenderSystemData_void_CRenderSystemData(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_begin_void_EVString_OperationType(void *pObjectXXXX, _in const char* materialName, _in const int& ro )
+				{
+					EarthView::World::Core::ev_string materialName1 = materialName;
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX;
+					ptrNativeObject->begin(materialName1, (EarthView::World::Graphic::CRenderOperation::OperationType&)ro);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_end_void(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX;
+					ptrNativeObject->end();
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addPoint_void_CVector3_CColourValue(void *pObjectXXXX, _in const void* pos, _in const void* color )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX;
+					ptrNativeObject->addPoint(*(EarthView::World::Spatial::Math::CVector3*)pos, *(EarthView::World::Graphic::CColourValue*)color);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addIndex_void_ev_uint32(void *pObjectXXXX, _in ev_uint32 idx )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX;
+					ptrNativeObject->addIndex(idx);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setMaterial_void_EVString(void *pObjectXXXX, _in const char* matName )
+				{
+					EarthView::World::Core::ev_string matName1 = matName;
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX;
+					ptrNativeObject->setMaterial(matName1);
+				}
+				extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingBox_CAxisAlignedBox(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX;
+					if (dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*)ptrNativeObject) != NULL)
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::getBoundingBox();
+						const EarthView::World::Spatial::Math::CAxisAlignedBox *pXXXX = &objXXXX;
+						return (void*)pXXXX;
+					}
+					else
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& objXXXX = ptrNativeObject->getBoundingBox();
+						const EarthView::World::Spatial::Math::CAxisAlignedBox *pXXXX = &objXXXX;
+						return (void*)pXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingBox_CAxisAlignedBox( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingBox_CAxisAlignedBox_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingBox_CAxisAlignedBox(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingBox_CAxisAlignedBox_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX;
+					const EarthView::World::Spatial::Math::CAxisAlignedBox& objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::getBoundingBox();
+					const EarthView::World::Spatial::Math::CAxisAlignedBox *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingRadius_Real(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX;
+					if (dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*)ptrNativeObject) != NULL)
+					{
+						Real objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::getBoundingRadius();
+						return objXXXX;
+					}
+					else
+					{
+						Real objXXXX = ptrNativeObject->getBoundingRadius();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingRadius_Real( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingRadius_Real_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingRadius_Real(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getBoundingRadius_Real_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX;
+					Real objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::getBoundingRadius();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__updateRenderQueue_void_CRenderQueue(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderQueue* queue )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX;
+					if (dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::_updateRenderQueue(queue);
+					else
+						ptrNativeObject->_updateRenderQueue(queue);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__updateRenderQueue_void_CRenderQueue( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__updateRenderQueue_void_CRenderQueue_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__updateRenderQueue_void_CRenderQueue(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__updateRenderQueue_void_CRenderQueue_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderQueue* queue )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::_updateRenderQueue(queue);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX;
+					if (dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::visitRenderables(visitor);
+					else
+						ptrNativeObject->visitRenderables(visitor);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::visitRenderables(visitor);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_ev_bool(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX;
+					if (dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::visitRenderables(visitor, debugRenderables);
+					else
+						ptrNativeObject->visitRenderables(visitor, debugRenderables);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_visitRenderables_void_CVisitor_ev_bool_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::visitRenderables(visitor, debugRenderables);
+				}
+				extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getMovableType_EVString(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX;
+					if (dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*)ptrNativeObject) != NULL)
+					{
+						EVString objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::getMovableType();
+						return objXXXX.makeBuffer();
+					}
+					else
+					{
+						EVString objXXXX = ptrNativeObject->getMovableType();
+						return objXXXX.makeBuffer();
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getMovableType_EVString( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getMovableType_EVString_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getMovableType_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getMovableType_EVString_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX;
+					EVString objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject::getMovableType();
+					return objXXXX.makeBuffer();
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getAnimableObjectPtr_CMovableObjectInternalAnimableObject( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getAnimableObjectPtr_CMovableObjectInternalAnimableObject(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueId_ev_uint8( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueId_ev_uint8_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueId_ev_uint8(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCreator_void_CMovableObjectFactory( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCreator_void_CMovableObjectFactory_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCreator_void_CMovableObjectFactory(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getCreator_CMovableObjectFactory( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getCreator_CMovableObjectFactory_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getCreator_CMovableObjectFactory(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyManager_void_CSceneManager( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyManager_void_CSceneManager_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyManager_void_CSceneManager(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getManager_CSceneManager( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getManager_CSceneManager_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getManager_CSceneManager(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getName_EVString( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getName_EVString_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getName_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentNode_CNode( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentNode_CNode_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentNode_CNode(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentSceneNode_CSceneNode( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentSceneNode_CSceneNode_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getParentSceneNode_CSceneNode(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isParentTagPoint_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isParentTagPoint_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isParentTagPoint_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyAttached_void_CNode(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isAttached_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isAttached_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isAttached_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_detachFromParent_void( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_detachFromParent_void_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_detachFromParent_void(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isInScene_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isInScene_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isInScene_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyMoved_void( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyMoved_void_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyMoved_void(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyLightsQueried_void_LightList( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyLightsQueried_void_LightList_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyLightsQueried_void_LightList(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightQueriedListener_void_CLightQueriedListener( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightQueriedListener_void_CLightQueriedListener_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightQueriedListener_void_CLightQueriedListener(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightQueriedListener_CLightQueriedListener( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightQueriedListener_CLightQueriedListener_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightQueriedListener_CLightQueriedListener(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightListUpdated_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightListUpdated_ev_uint32_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightListUpdated_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightListUpdated_void_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightListUpdated_void_ev_uint32_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightListUpdated_void_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCurrentCamera_void_CCamera( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCurrentCamera_void_CCamera_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__notifyCurrentCamera_void_CCamera(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingSphere_CSphere(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisible_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisible_void_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisible_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisible_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisible_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisible_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isVisible_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isVisible_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isVisible_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMaxDistance_void_Real( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMaxDistance_void_Real_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMaxDistance_void_Real(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMaxDistance_Real( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMaxDistance_Real_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMaxDistance_Real(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinDistance_void_Real( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinDistance_void_Real_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinDistance_void_Real(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinDistance_Real( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinDistance_Real_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinDistance_Real(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinPixelSize_void_Real( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinPixelSize_void_Real_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderingMinPixelSize_void_Real(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinPixelSize_Real( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinPixelSize_Real_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderingMinPixelSize_Real(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectionColour_void_CColourValue( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectionColour_void_CColourValue_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectionColour_void_CColourValue(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelected_ev_bool_IntVector( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelected_ev_bool_IntVector_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelected_ev_bool_IntVector(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelected_IntVector( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelected_IntVector_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelected_IntVector(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CSphere_ev_bool_IntVector( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectBy_ev_bool_CSphere_ev_bool_IntVector(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_renderSelection_void( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_renderSelection_void_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_renderSelection_void(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_clearSelection_void( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_clearSelection_void_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_clearSelection_void(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_startEditing_ev_bool_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_startEditing_ev_bool_ev_uint32_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_startEditing_ev_bool_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_endEditing_void( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_endEditing_void_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_endEditing_void(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEditBoundingBox_CEditBoundingBox( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEditBoundingBox_CEditBoundingBox_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEditBoundingBox_CEditBoundingBox(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroup_void_ev_uint8( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroup_void_ev_uint8_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroup_void_ev_uint8(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueGroup_ev_uint8( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueGroup_ev_uint8_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getRenderQueueGroup_ev_uint8(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getParentNodeFullTransform_CMatrix4( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getParentNodeFullTransform_CMatrix4_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getParentNodeFullTransform_CMatrix4(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setQueryFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setQueryFlags_void_ev_uint32_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setQueryFlags_void_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addQueryFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addQueryFlags_void_ev_uint32_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addQueryFlags_void_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeQueryFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeQueryFlags_void_ev_uint32_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeQueryFlags_void_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getQueryFlags_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getQueryFlags_ev_uint32_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getQueryFlags_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisibilityFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisibilityFlags_void_ev_uint32_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setVisibilityFlags_void_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addVisibilityFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addVisibilityFlags_void_ev_uint32_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addVisibilityFlags_void_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeVisibilityFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeVisibilityFlags_void_ev_uint32_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeVisibilityFlags_void_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisibilityFlags_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisibilityFlags_ev_uint32_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getVisibilityFlags_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addListener_void_CMovableObjectListener( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addListener_void_CMovableObjectListener_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_addListener_void_CMovableObjectListener(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeListener_void_CMovableObjectListener( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeListener_void_CMovableObjectListener_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_removeListener_void_CMovableObjectListener(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_existListener_ev_bool_CMovableObjectListener( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_existListener_ev_bool_CMovableObjectListener_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_existListener_ev_bool_CMovableObjectListener(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListenerCount_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListenerCount_ev_uint32_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListenerCount_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListener_CMovableObjectListener_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListener_CMovableObjectListener_ev_uint32_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getListener_CMovableObjectListener_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_queryLights_LightList( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_queryLights_LightList_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_queryLights_LightList(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightMask_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightMask_ev_uint32_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightMask_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightMask_void_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightMask_void_ev_uint32_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setLightMask_void_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getLightList_LightList( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getLightList_LightList_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject__getLightList_LightList(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setCastShadows_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setCastShadows_void_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setCastShadows_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getReceivesShadows_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getReceivesShadows_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getReceivesShadows_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getTypeFlags_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getTypeFlags_ev_uint32_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getTypeFlags_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setDebugDisplayEnabled_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setDebugDisplayEnabled_void_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_setDebugDisplayEnabled_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isDebugDisplayEnabled_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isDebugDisplayEnabled_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_isDebugDisplayEnabled_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getCastShadows_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getCastShadows_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getCastShadows_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEdgeList_CEdgeData( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEdgeList_CEdgeData_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getEdgeList_CEdgeData(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_hasEdgeList_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_hasEdgeList_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_hasEdgeList_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getWorldBoundingBox_CAxisAlignedBox(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightCapBounds_CAxisAlignedBox( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightCapBounds_CAxisAlignedBox_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getLightCapBounds_CAxisAlignedBox(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getDarkCapBounds_CAxisAlignedBox_CLight_Real( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getDarkCapBounds_CAxisAlignedBox_CLight_Real(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getPointExtrusionDistance_Real_CLight( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getPointExtrusionDistance_Real_CLight_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_getPointExtrusionDistance_Real_CLight(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_updateEdgeListLightFacing_void_CEdgeData_CVector4( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_updateEdgeListLightFacing_void_CEdgeData_CVector4(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_extrudeBounds_void_CAxisAlignedBox_CVector4_Real( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback* pCallback )
+				{
+					CRegionAreaManualObjectProxy* ptr = dynamic_cast<CRegionAreaManualObjectProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaManualObject*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaManualObject_extrudeBounds_void_CAxisAlignedBox_CVector4_Real(pCallback);
+					}
+				}
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_run_void_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_reset_void_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_activate_void_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_deactivate_void_Callback)();
+				typedef ev_int32  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCursor_ev_int32_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onContextMenu_ev_bool_ev_int32_ev_int32_Callback)(_in ev_int32 x, _in ev_int32 y);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback)(_in ev_int32 button, _in ev_int32 shift, _in ev_int32 x, _in ev_int32 y);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyDown_ev_bool_ev_int32_ev_int32_Callback)(_in ev_int32 keyCode, _in ev_int32 shift);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyUp_ev_bool_ev_int32_ev_int32_Callback)(_in ev_int32 keyCode, _in ev_int32 shift);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseDown_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback)(_in ev_int32 button, _in ev_int32 shift, _in ev_int32 x, _in ev_int32 y);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseMove_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback)(_in ev_int32 button, _in ev_int32 shift, _in ev_int32 x, _in ev_int32 y);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseUp_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback)(_in ev_int32 button, _in ev_int32 shift, _in ev_int32 x, _in ev_int32 y);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseWheel_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback)(_in ev_int32 delta, _in ev_int32 x, _in ev_int32 y, _in ev_int32 flag);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchDown_ev_bool_MotionEvent_Callback)(_in const void* touchEvent);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchUp_ev_bool_MotionEvent_Callback)(_in const void* touchEvent);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchMove_ev_bool_MotionEvent_Callback)(_in const void* touchEvent);
+				typedef ev_uint32  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolBarType_ev_uint32_Callback)();
+				typedef ev_uint32  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getType_ev_uint32_Callback)();
+				typedef char*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getName_EVString_Callback)();
+				typedef char*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCategory_EVString_Callback)();
+				typedef char*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolTip_EVString_Callback)();
+				typedef EarthView::World::Display::IBitmap*  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getIcon_IBitmap_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_isCheckable_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onClicked_void_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getChecked_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setChecked_void_ev_bool_Callback)(_in ev_bool checked);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getEnabled_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setEnabled_void_ev_bool_Callback)(_in ev_bool enabled);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_create_void_ISpatialControl_Callback)(_in EarthView::World::Spatial::Atlas::ISpatialControl* ref_ctrl);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_update_ev_bool_CEvent_Callback)(_in EarthView::World::Core::CEvent* e);
+				class CRegionAreaToolProxy : public EarthView::World::Spatial3D::SystemUI::CRegionAreaTool
+				{
+				private:
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_run_void_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_run_void_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_reset_void_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_reset_void_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_activate_void_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_activate_void_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_deactivate_void_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_deactivate_void_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCursor_ev_int32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCursor_ev_int32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onContextMenu_ev_bool_ev_int32_ev_int32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onContextMenu_ev_bool_ev_int32_ev_int32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyDown_ev_bool_ev_int32_ev_int32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyDown_ev_bool_ev_int32_ev_int32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyUp_ev_bool_ev_int32_ev_int32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyUp_ev_bool_ev_int32_ev_int32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseDown_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseDown_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseMove_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseMove_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseUp_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseUp_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseWheel_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseWheel_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchDown_ev_bool_MotionEvent_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchDown_ev_bool_MotionEvent_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchUp_ev_bool_MotionEvent_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchUp_ev_bool_MotionEvent_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchMove_ev_bool_MotionEvent_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchMove_ev_bool_MotionEvent_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolBarType_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolBarType_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getType_ev_uint32_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getType_ev_uint32_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getName_EVString_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getName_EVString_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCategory_EVString_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCategory_EVString_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolTip_EVString_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolTip_EVString_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getIcon_IBitmap_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getIcon_IBitmap_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_isCheckable_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_isCheckable_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onClicked_void_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onClicked_void_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getChecked_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getChecked_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setChecked_void_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setChecked_void_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getEnabled_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getEnabled_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setEnabled_void_ev_bool_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setEnabled_void_ev_bool_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_create_void_ISpatialControl_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_create_void_ISpatialControl_Callback;
+					EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_update_ev_bool_CEvent_Callback* m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_update_ev_bool_CEvent_Callback;
+				public:
+					CRegionAreaToolProxy(EarthView::World::Core::CNameValuePairList *pList) : CRegionAreaTool(pList)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_run_void_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_reset_void_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_activate_void_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_deactivate_void_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCursor_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onContextMenu_ev_bool_ev_int32_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyDown_ev_bool_ev_int32_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyUp_ev_bool_ev_int32_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseDown_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseMove_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseUp_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseWheel_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchDown_ev_bool_MotionEvent_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchUp_ev_bool_MotionEvent_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchMove_ev_bool_MotionEvent_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolBarType_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getType_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getName_EVString_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCategory_EVString_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolTip_EVString_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getIcon_IBitmap_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_isCheckable_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onClicked_void_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getChecked_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setChecked_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getEnabled_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setEnabled_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_create_void_ISpatialControl_Callback = NULL;
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_update_ev_bool_CEvent_Callback = NULL;
+					}
+				public:
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_run_void(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_run_void_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_run_void_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_reset_void(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_reset_void_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_reset_void_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_activate_void(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_activate_void_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_activate_void_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_deactivate_void(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_deactivate_void_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_deactivate_void_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCursor_ev_int32(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCursor_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCursor_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onContextMenu_ev_bool_ev_int32_ev_int32(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onContextMenu_ev_bool_ev_int32_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onContextMenu_ev_bool_ev_int32_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyDown_ev_bool_ev_int32_ev_int32(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyDown_ev_bool_ev_int32_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyDown_ev_bool_ev_int32_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyUp_ev_bool_ev_int32_ev_int32(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyUp_ev_bool_ev_int32_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyUp_ev_bool_ev_int32_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseDown_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseDown_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseDown_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseMove_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseMove_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseMove_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseUp_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseUp_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseUp_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseWheel_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseWheel_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseWheel_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchDown_ev_bool_MotionEvent(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchDown_ev_bool_MotionEvent_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchDown_ev_bool_MotionEvent_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchUp_ev_bool_MotionEvent(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchUp_ev_bool_MotionEvent_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchUp_ev_bool_MotionEvent_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchMove_ev_bool_MotionEvent(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchMove_ev_bool_MotionEvent_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchMove_ev_bool_MotionEvent_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolBarType_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolBarType_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolBarType_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getType_ev_uint32(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getType_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getType_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getName_EVString(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getName_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getName_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCategory_EVString(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCategory_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCategory_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolTip_EVString(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolTip_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolTip_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getIcon_IBitmap(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getIcon_IBitmap_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getIcon_IBitmap_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_isCheckable_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_isCheckable_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_isCheckable_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onClicked_void(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onClicked_void_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onClicked_void_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getChecked_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getChecked_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getChecked_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setChecked_void_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setChecked_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setChecked_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getEnabled_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getEnabled_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getEnabled_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setEnabled_void_ev_bool(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setEnabled_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setEnabled_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_create_void_ISpatialControl(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_create_void_ISpatialControl_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_create_void_ISpatialControl_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_update_ev_bool_CEvent(EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_update_ev_bool_CEvent_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_update_ev_bool_CEvent_Callback = pCallback;
+					}
+					virtual ev_uint32 getType() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getType_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_uint32 returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getType_ev_uint32_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::getType();
+					}
+					virtual ev_bool onMouseDown(_in ev_int32 button, _in ev_int32 shift, _in ev_int32 x, _in ev_int32 y)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseDown_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseDown_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback(button, shift, x, y);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::onMouseDown(button, shift, x, y);
+					}
+					virtual ev_bool onMouseUp(_in ev_int32 button, _in ev_int32 shift, _in ev_int32 x, _in ev_int32 y)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseUp_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseUp_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback(button, shift, x, y);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::onMouseUp(button, shift, x, y);
+					}
+					virtual ev_bool onMouseMove(_in ev_int32 button, _in ev_int32 shift, _in ev_int32 x, _in ev_int32 y)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseMove_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseMove_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback(button, shift, x, y);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::onMouseMove(button, shift, x, y);
+					}
+					virtual void run()
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_run_void_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_run_void_Callback();
+						}
+						else
+							return this->CRegionAreaTool::run();
+					}
+					virtual void reset()
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_reset_void_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_reset_void_Callback();
+						}
+						else
+							return this->CRegionAreaTool::reset();
+					}
+					virtual ev_uint32 getToolBarType() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolBarType_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_uint32 returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolBarType_ev_uint32_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::getToolBarType();
+					}
+					virtual EVString getName() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getName_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							EVString returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getName_EVString_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::getName();
+					}
+					virtual EVString getCategory() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCategory_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							EVString returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCategory_EVString_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::getCategory();
+					}
+					virtual EVString getToolTip() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolTip_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							EVString returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolTip_EVString_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::getToolTip();
+					}
+					virtual EarthView::World::Display::IBitmap* getIcon() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getIcon_IBitmap_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Display::IBitmap* returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getIcon_IBitmap_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::getIcon();
+					}
+					virtual ev_bool isCheckable() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_isCheckable_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_isCheckable_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::isCheckable();
+					}
+					virtual void onClicked()
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onClicked_void_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onClicked_void_Callback();
+						}
+						else
+							return this->CRegionAreaTool::onClicked();
+					}
+					virtual ev_bool getChecked() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getChecked_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getChecked_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::getChecked();
+					}
+					virtual void setChecked(_in ev_bool checked)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setChecked_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setChecked_void_ev_bool_Callback(checked);
+						}
+						else
+							return this->CRegionAreaTool::setChecked(checked);
+					}
+					virtual ev_bool getEnabled() const
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getEnabled_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getEnabled_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::getEnabled();
+					}
+					virtual void setEnabled(_in ev_bool enabled)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setEnabled_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setEnabled_void_ev_bool_Callback(enabled);
+						}
+						else
+							return this->CRegionAreaTool::setEnabled(enabled);
+					}
+					virtual void create(_in EarthView::World::Spatial::Atlas::ISpatialControl* ref_ctrl)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_create_void_ISpatialControl_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_create_void_ISpatialControl_Callback(ref_ctrl);
+						}
+						else
+							return this->CRegionAreaTool::create(ref_ctrl);
+					}
+					virtual ev_bool update(_in EarthView::World::Core::CEvent* e)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_update_ev_bool_CEvent_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_update_ev_bool_CEvent_Callback(e);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::update(e);
+					}
+					virtual void activate()
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_activate_void_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_activate_void_Callback();
+						}
+						else
+							return this->CRegionAreaTool::activate();
+					}
+					virtual void deactivate()
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_deactivate_void_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_deactivate_void_Callback();
+						}
+						else
+							return this->CRegionAreaTool::deactivate();
+					}
+					virtual ev_int32 getCursor()
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCursor_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_int32 returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCursor_ev_int32_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::getCursor();
+					}
+					virtual ev_bool onContextMenu(_in ev_int32 x, _in ev_int32 y)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onContextMenu_ev_bool_ev_int32_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onContextMenu_ev_bool_ev_int32_ev_int32_Callback(x, y);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::onContextMenu(x, y);
+					}
+					virtual ev_bool onDoubleClick()
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::onDoubleClick();
+					}
+					virtual ev_bool onDoubleClick(_in ev_int32 button, _in ev_int32 shift, _in ev_int32 x, _in ev_int32 y)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback(button, shift, x, y);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::onDoubleClick(button, shift, x, y);
+					}
+					virtual ev_bool onKeyDown(_in ev_int32 keyCode, _in ev_int32 shift)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyDown_ev_bool_ev_int32_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyDown_ev_bool_ev_int32_ev_int32_Callback(keyCode, shift);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::onKeyDown(keyCode, shift);
+					}
+					virtual ev_bool onKeyUp(_in ev_int32 keyCode, _in ev_int32 shift)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyUp_ev_bool_ev_int32_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyUp_ev_bool_ev_int32_ev_int32_Callback(keyCode, shift);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::onKeyUp(keyCode, shift);
+					}
+					virtual ev_bool onMouseWheel(_in ev_int32 delta, _in ev_int32 x, _in ev_int32 y, _in ev_int32 flag)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseWheel_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseWheel_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback(delta, x, y, flag);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::onMouseWheel(delta, x, y, flag);
+					}
+					virtual ev_bool onTouchDown(_in const EarthView::World::Spatial::SystemUI::MotionEvent& touchEvent)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchDown_ev_bool_MotionEvent_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchDown_ev_bool_MotionEvent_Callback(&touchEvent);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::onTouchDown(touchEvent);
+					}
+					virtual ev_bool onTouchUp(_in const EarthView::World::Spatial::SystemUI::MotionEvent& touchEvent)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchUp_ev_bool_MotionEvent_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchUp_ev_bool_MotionEvent_Callback(&touchEvent);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::onTouchUp(touchEvent);
+					}
+					virtual ev_bool onTouchMove(_in const EarthView::World::Spatial::SystemUI::MotionEvent& touchEvent)
+					{
+						if(m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchMove_ev_bool_MotionEvent_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchMove_ev_bool_MotionEvent_Callback(&touchEvent);
+							return returnValue;
+						}
+						else
+							return this->CRegionAreaTool::onTouchMove(touchEvent);
+					}
+				};
+				REGISTER_FACTORY_CLASS(CRegionAreaToolProxy);
+				extern "C" EV_DLL_EXPORT  ev_uint32  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getType_ev_uint32(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					if (dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*)ptrNativeObject) != NULL)
+					{
+						ev_uint32 objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaTool::getType();
+						return objXXXX;
+					}
+					else
+					{
+						ev_uint32 objXXXX = ptrNativeObject->getType();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getType_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getType_ev_uint32_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getType_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_uint32  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getType_ev_uint32_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					ev_uint32 objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaTool::getType();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseDown_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32(void *pObjectXXXX, _in ev_int32 button, _in ev_int32 shift, _in ev_int32 x, _in ev_int32 y )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					if (dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaTool::onMouseDown(button, shift, x, y);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->onMouseDown(button, shift, x, y);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseDown_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseDown_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseDown_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseDown_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_NoVirtual(void *pObjectXXXX, _in ev_int32 button, _in ev_int32 shift, _in ev_int32 x, _in ev_int32 y )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaTool::onMouseDown(button, shift, x, y);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseUp_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32(void *pObjectXXXX, _in ev_int32 button, _in ev_int32 shift, _in ev_int32 x, _in ev_int32 y )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					if (dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaTool::onMouseUp(button, shift, x, y);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->onMouseUp(button, shift, x, y);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseUp_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseUp_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseUp_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseUp_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_NoVirtual(void *pObjectXXXX, _in ev_int32 button, _in ev_int32 shift, _in ev_int32 x, _in ev_int32 y )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaTool::onMouseUp(button, shift, x, y);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseMove_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32(void *pObjectXXXX, _in ev_int32 button, _in ev_int32 shift, _in ev_int32 x, _in ev_int32 y )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					if (dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaTool::onMouseMove(button, shift, x, y);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->onMouseMove(button, shift, x, y);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseMove_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseMove_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseMove_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseMove_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_NoVirtual(void *pObjectXXXX, _in ev_int32 button, _in ev_int32 shift, _in ev_int32 x, _in ev_int32 y )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaTool::onMouseMove(button, shift, x, y);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_run_void(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					if (dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaTool::run();
+					else
+						ptrNativeObject->run();
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_run_void( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_run_void_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_run_void(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_run_void_NoVirtual(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaTool::run();
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_reset_void(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					if (dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaTool::reset();
+					else
+						ptrNativeObject->reset();
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_reset_void( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_reset_void_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_reset_void(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_reset_void_NoVirtual(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial3D::SystemUI::CRegionAreaTool::reset();
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_createMoveCircle_void_CVector3_CVector3(void *pObjectXXXX, _in const void* beginPt, _in const void* endPt )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					ptrNativeObject->createMoveCircle(*(EarthView::World::Spatial::Math::CVector3*)beginPt, *(EarthView::World::Spatial::Math::CVector3*)endPt);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_createCircle_void_ev_real32(void *pObjectXXXX, _in ev_real32 radius )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					ptrNativeObject->createCircle(radius);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setCircleAreaListener_void_CRegionAreaListener(void *pObjectXXXX, _in EarthView::World::Spatial3D::SystemUI::CRegionAreaListener* listener )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					ptrNativeObject->setCircleAreaListener(listener);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_splitCircle2WorldPosition_void_ev_real64_ev_real64_ev_real64_ev_int32_VertexList(void *pObjectXXXX, _in ev_real64 lati, _in ev_real64 longi, _in ev_real64 radius, _in ev_int32 insertNum, _out void* outPoints )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					ptrNativeObject->splitCircle2WorldPosition(lati, longi, radius, insertNum, *(EarthView::World::Spatial::Math::VertexList*)outPoints);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setRadius_void_Real(void *pObjectXXXX, _in Real radius )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					ptrNativeObject->setRadius(radius);
+				}
+				extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getRadius_Real(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					Real objXXXX = ptrNativeObject->getRadius();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setCenterPosition_void_ev_real64_ev_real64(void *pObjectXXXX, _in ev_real64 lon, _in ev_real64 lat )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					ptrNativeObject->setCenterPosition(lon, lat);
+				}
+				extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCenterPosition_CVector2(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					EarthView::World::Spatial::Math::CVector2 objXXXX = ptrNativeObject->getCenterPosition();
+					EarthView::World::Spatial::Math::CVector2 *pXXXX = new EarthView::World::Spatial::Math::CVector2(objXXXX);
+					((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+					return (void*)pXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getArea_CEnvelope(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					EarthView::World::Spatial::Geometry::CEnvelope objXXXX = ptrNativeObject->getArea();
+					EarthView::World::Spatial::Geometry::CEnvelope *pXXXX = new EarthView::World::Spatial::Geometry::CEnvelope(objXXXX);
+					((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+					return (void*)pXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCenterAltitude_ev_real64(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					ev_real64 objXXXX = ptrNativeObject->getCenterAltitude();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_clear_void(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					ptrNativeObject->clear();
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_drawCenter_void(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial3D::SystemUI::CRegionAreaTool* ptrNativeObject = (EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX;
+					ptrNativeObject->drawCenter();
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_activate_void( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_activate_void_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_activate_void(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_deactivate_void( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_deactivate_void_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_deactivate_void(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCursor_ev_int32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCursor_ev_int32_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCursor_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onContextMenu_ev_bool_ev_int32_ev_int32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onContextMenu_ev_bool_ev_int32_ev_int32_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onContextMenu_ev_bool_ev_int32_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onDoubleClick_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyDown_ev_bool_ev_int32_ev_int32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyDown_ev_bool_ev_int32_ev_int32_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyDown_ev_bool_ev_int32_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyUp_ev_bool_ev_int32_ev_int32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyUp_ev_bool_ev_int32_ev_int32_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onKeyUp_ev_bool_ev_int32_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseWheel_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseWheel_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onMouseWheel_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchDown_ev_bool_MotionEvent( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchDown_ev_bool_MotionEvent_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchDown_ev_bool_MotionEvent(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchUp_ev_bool_MotionEvent( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchUp_ev_bool_MotionEvent_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchUp_ev_bool_MotionEvent(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchMove_ev_bool_MotionEvent( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchMove_ev_bool_MotionEvent_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onTouchMove_ev_bool_MotionEvent(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolBarType_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolBarType_ev_uint32_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolBarType_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getName_EVString( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getName_EVString_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getName_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCategory_EVString( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCategory_EVString_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getCategory_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolTip_EVString( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolTip_EVString_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getToolTip_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getIcon_IBitmap( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getIcon_IBitmap_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getIcon_IBitmap(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_isCheckable_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_isCheckable_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_isCheckable_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onClicked_void( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onClicked_void_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_onClicked_void(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getChecked_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getChecked_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getChecked_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setChecked_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setChecked_void_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setChecked_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getEnabled_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getEnabled_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_getEnabled_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setEnabled_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setEnabled_void_ev_bool_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_setEnabled_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_create_void_ISpatialControl( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_create_void_ISpatialControl_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_create_void_ISpatialControl(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_update_ev_bool_CEvent( void *pObjectXXXX, EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_update_ev_bool_CEvent_Callback* pCallback )
+				{
+					CRegionAreaToolProxy* ptr = dynamic_cast<CRegionAreaToolProxy*>((EarthView::World::Spatial3D::SystemUI::CRegionAreaTool*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_SystemUI_CRegionAreaTool_update_ev_bool_CEvent(pCallback);
+					}
+				}
+			}
+		}
+	}
+}

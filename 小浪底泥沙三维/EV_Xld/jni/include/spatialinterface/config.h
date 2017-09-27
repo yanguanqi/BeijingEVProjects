@@ -1,0 +1,20 @@
+﻿#ifndef EARTHVIEW_WORLD_SPATIAL_INTERFACE_COFING_H
+#define EARTHVIEW_WORLD_SPATIAL_INTERFACE_COFING_H
+
+//#ifdef EV_BULID_IDLL
+//#define EV_BUILD_SPATIAL_INTERFACE
+//#endif
+
+#ifdef EV_BUILD_SPATIAL_INTERFACE 
+#define EV_INTERFACE_DLL EV_DLL_EXPORT
+#else
+#define EV_INTERFACE_DLL EV_DLL_IMPORT
+#endif
+
+#define EV_USE_CORE
+
+#ifdef EV_USE_CORE
+#include "core/core_api.h"
+#endif
+
+#endif

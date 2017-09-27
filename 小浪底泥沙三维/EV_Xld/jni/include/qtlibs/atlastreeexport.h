@@ -1,0 +1,11 @@
+﻿#ifndef _ATLASTREEEXPORT_INCLUDE__
+#define _ATLASTREEEXPORT_INCLUDE__
+#include "core/global.h"
+
+#ifdef  EV_BUILD_ATLASTREE
+#define ATLASTREE_DLL EV_DLL_EXPORT
+#else
+#define ATLASTREE_DLL EV_DLL_IMPORT
+#endif
+
+#endif // _ATLASTREEEXPORT_INCLUDE__

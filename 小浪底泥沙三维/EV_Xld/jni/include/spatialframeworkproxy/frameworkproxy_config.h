@@ -1,0 +1,11 @@
+﻿#ifndef _FRAMEWORLPROXY_COFING_H
+#define _FRAMEWORLPROXY_COFING_H
+#include "core/global.h"
+
+#ifdef  EV_BUILD_FRAMEWORLPROXY_MANAGER 
+#define EV_FRAMEWORKPROXY_DLL EV_DLL_EXPORT
+#else
+#define EV_FRAMEWORKPROXY_DLL EV_DLL_IMPORT
+#endif
+
+#endif

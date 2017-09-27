@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3E0O9586-UQ1G-1X2J-XKUE-EENSX90L1MEX}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EV_Spatial3DLayer_CSharpWrapper</RootNamespace>
+    <AssemblyName>EV_Spatial3DLayer_CSharpWrapper</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\bin\Debug\EV_Spatial3DLayer_CSharpWrapper.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Debug_x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\bin\Debug_x64\EV_Spatial3DLayer_CSharpWrapper.XML</DocumentationFile>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\bin\Release\EV_Spatial3DLayer_CSharpWrapper.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\Release_x64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\bin\Release_x64\EV_Spatial3DLayer_CSharpWrapper.XML</DocumentationFile>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ev_registclassfactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EV_Core_CSharpWrapper\EV_Core_CSharpWrapper.csproj">
+      <Project>{0J6SKGCV-SQ6U-OHA0-3C55-YF400DIJLL5N}</Project>
+      <Name>EV_Core_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_Graphic_CSharpWrapper\EV_Graphic_CSharpWrapper.csproj">
+      <Project>{QDU4PMV6-IVRX-6VRX-TVM6-L98PR5OG2ST4}</Project>
+      <Name>EV_Graphic_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_CacheManager_CSharpWrapper\EV_CacheManager_CSharpWrapper.csproj">
+      <Project>{1YGXPINO-DD1S-52AR-7BG0-FHLQECTWLY1J}</Project>
+      <Name>EV_CacheManager_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_SpatialIndex_CSharpWrapper\EV_SpatialIndex_CSharpWrapper.csproj">
+      <Project>{UDA90LD0-1FUW-EPLS-UKK2-RGKKJSNC09B8}</Project>
+      <Name>EV_SpatialIndex_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_Display_CSharpWrapper\EV_Display_CSharpWrapper.csproj">
+      <Project>{QOJ2F7OA-F8KI-M5HX-OW6B-6YGY3L3FW1VA}</Project>
+      <Name>EV_Display_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_DatabaseUtility_CSharpWrapper\EV_DatabaseUtility_CSharpWrapper.csproj">
+      <Project>{H2OH5X4V-OAE2-XN5U-SK66-SG5HPE9JNQPG}</Project>
+      <Name>EV_DatabaseUtility_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_Download_CSharpWrapper\EV_Download_CSharpWrapper.csproj">
+      <Project>{S5KUVLP1-NYBJ-A63U-TQ5B-22MSJFEAGH5B}</Project>
+      <Name>EV_Download_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_MathEngine_CSharpWrapper\EV_MathEngine_CSharpWrapper.csproj">
+      <Project>{0W99KOTP-G7QG-GXQ3-KDPL-KC57ESIYQC5N}</Project>
+      <Name>EV_MathEngine_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_Plugin_OctreeSceneManager_CSharpWrapper\EV_Plugin_OctreeSceneManager_CSharpWrapper.csproj">
+      <Project>{AKGQ6PY0-MO62-9NTJ-CR8M-87X90Q510CMC}</Project>
+      <Name>EV_Plugin_OctreeSceneManager_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_ProjectManager_CSharpWrapper\EV_ProjectManager_CSharpWrapper.csproj">
+      <Project>{BWDFXTIT-OD90-IXD8-K8NX-FV0WLRK47D0E}</Project>
+      <Name>EV_ProjectManager_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_Spatial3DCalculator_CSharpWrapper\EV_Spatial3DCalculator_CSharpWrapper.csproj">
+      <Project>{YHL2CXUB-8A1Y-627A-RM29-47J6M3FQB29O}</Project>
+      <Name>EV_Spatial3DCalculator_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_SpatialDatabase_CSharpWrapper\EV_SpatialDatabase_CSharpWrapper.csproj">
+      <Project>{A3S49RVR-QLCT-7U88-IY12-IE39V854W212}</Project>
+      <Name>EV_SpatialDatabase_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_SpatialInterface_CSharpWrapper\EV_SpatialInterface_CSharpWrapper.csproj">
+      <Project>{4CT1INE3-XWJC-GDTB-F9YA-PJ6QTDHV0YK1}</Project>
+      <Name>EV_SpatialInterface_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_SpatialObject_CSharpWrapper\EV_SpatialObject_CSharpWrapper.csproj">
+      <Project>{OILD0O3L-UHQH-DRJC-XM6D-4QXL0B1M4TUK}</Project>
+      <Name>EV_SpatialObject_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_SpatialTheme_CSharpWrapper\EV_SpatialTheme_CSharpWrapper.csproj">
+      <Project>{K6XUDY6V-KFLO-199E-VOPV-DDVADJCPQPP4}</Project>
+      <Name>EV_SpatialTheme_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_TileUtility_CSharpWrapper\EV_TileUtility_CSharpWrapper.csproj">
+      <Project>{VFWN5MJE-XIKI-8DC1-R62D-K265MFLOFNDT}</Project>
+      <Name>EV_TileUtility_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_SpatialServerClient_CSharpWrapper\EV_SpatialServerClient_CSharpWrapper.csproj">
+      <Project>{79NVCI3V-7IMF-O322-0CAO-4D2NP6OLMJ3J}</Project>
+      <Name>EV_SpatialServerClient_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_Symbol_CSharpWrapper\EV_Symbol_CSharpWrapper.csproj">
+      <Project>{PT04OL72-5LBB-CNSS-ILRV-5ME84T2EKAJ7}</Project>
+      <Name>EV_Symbol_CSharpWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EV_Geometry3D_CSharpWrapper\EV_Geometry3D_CSharpWrapper.csproj">
+      <Project>{XN79CIA7-33OT-NS0H-LWAL-QUVTLAR5IODY}</Project>
+      <Name>EV_Geometry3D_CSharpWrapper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

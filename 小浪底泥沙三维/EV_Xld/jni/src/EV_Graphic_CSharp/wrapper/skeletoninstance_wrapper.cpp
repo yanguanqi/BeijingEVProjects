@@ -1,0 +1,2654 @@
+/* This file is produced by the P/Invoke AutoWrapper Utility 
+ Copyright (c) 2012 by EarthView Image Inc */
+#include "stableheaders.h"
+#include "graphic/skeletoninstance.h"
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Spatial
+		{
+			namespace Math
+			{
+			}
+		}
+	}
+}
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Graphic
+		{
+			typedef EarthView::World::Graphic::CSkeleton::CSkeletonInternalAnimationContainer*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getAnimationContainerPtr_CSkeletonInternalAnimationContainer_Callback)();
+			typedef EarthView::World::Graphic::CBone*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_Callback)();
+			typedef EarthView::World::Graphic::CBone*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_ev_uint16_Callback)(_in ev_uint16 handle);
+			typedef EarthView::World::Graphic::CBone*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_Callback)(_in char*& name);
+			typedef EarthView::World::Graphic::CBone*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_ev_uint16_Callback)(_in char*& name, _in ev_uint16 handle);
+			typedef ev_uint16  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getNumBones_ev_uint16_Callback)();
+			typedef EarthView::World::Graphic::CBone*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getRootBone_CBone_Callback)();
+			typedef void*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getRootBoneIterator_BoneIterator_Callback)();
+			typedef void*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getBoneIterator_BoneIterator_Callback)();
+			typedef EarthView::World::Graphic::CBone*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_ev_uint16_Callback)(_in ev_uint16 handle);
+			typedef EarthView::World::Graphic::CBone*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_EVString_Callback)(_in char*& name);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_hasBone_ev_bool_EVString_Callback)(_in char*& name);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_setBindingPose_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_reset_void_ev_bool_Callback)(_in ev_bool resetManualBones);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_reset_void_Callback)();
+			typedef EarthView::World::Graphic::CAnimation*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_createAnimation_CAnimation_EVString_Real_Callback)(_in char*& name, _in Real length);
+			typedef EarthView::World::Graphic::CAnimation*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_LinkedSkeletonAnimationSource_Callback)(_in char*& name, _in const EarthView::World::Graphic::LinkedSkeletonAnimationSource** linker);
+			typedef EarthView::World::Graphic::CAnimation*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_Callback)(_in char*& name);
+			typedef EarthView::World::Graphic::CAnimation*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_LinkedSkeletonAnimationSource_Callback)(_in char*& name, _in const EarthView::World::Graphic::LinkedSkeletonAnimationSource** linker);
+			typedef EarthView::World::Graphic::CAnimation*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_Callback)(_in char*& name);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_hasAnimation_ev_bool_EVString_Callback)(_in char*& name);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_removeAnimation_void_EVString_Callback)(_in char*& name);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_setAnimationState_void_CAnimationStateSet_Callback)(_in const void* animSet);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance__initAnimationState_void_CAnimationStateSet_Callback)(_in EarthView::World::Graphic::CAnimationStateSet* animSet);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance__refreshAnimationState_void_CAnimationStateSet_Callback)(_in EarthView::World::Graphic::CAnimationStateSet* animSet);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_Callback)(_in EarthView::World::Spatial::Math::CMatrix4* pMatrices);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_ev_uint32_Callback)(_in EarthView::World::Spatial::Math::CMatrix4* pMatrices, _in ev_uint32 index);
+			typedef ev_uint16  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getNumAnimations_ev_uint16_Callback)();
+			typedef EarthView::World::Graphic::CAnimation*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_ev_uint16_Callback)(_in ev_uint16 index);
+			typedef int  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getBlendMode_SkeletonAnimationBlendMode_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_setBlendMode_void_SkeletonAnimationBlendMode_Callback)(_in int state);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance__updateTransforms_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_ev_bool_Callback)(_in ev_bool preservingIdentityNodeTracks);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Real_Callback)(_in char*& skelName, _in Real scale);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Callback)(_in char*& skelName);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_removeAllLinkedSkeletonAnimationSources_void_Callback)();
+			typedef void*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getLinkedSkeletonAnimationSourceIterator_LinkedSkeletonAnimSourceIterator_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance__notifyManualBonesDirty_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance__notifyManualBoneStateChange_void_CBone_Callback)(_in EarthView::World::Graphic::CBone* ref_bone);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getManualBonesDirty_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_hasManualBones_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_StringVector_Callback)(_in const EarthView::World::Graphic::CSkeleton* source, _in const void* boneHandleMap, _out const void* animations);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_Callback)(_in const EarthView::World::Graphic::CSkeleton* source, _in const void* boneHandleMap);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByHandle_void_CSkeleton_BoneHandleMap_Callback)(_in const EarthView::World::Graphic::CSkeleton* source, _in void* boneHandleMap);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByName_void_CSkeleton_BoneHandleMap_Callback)(_in const EarthView::World::Graphic::CSkeleton* source, _out void* boneHandleMap);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_preLoadImpl_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_postLoadImpl_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_preUnloadImpl_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_postUnloadImpl_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_prepareImpl_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_unprepareImpl_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_loadImpl_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_unloadImpl_void_Callback)();
+			typedef ev_uint64   ( _stdcall EarthView_World_Graphic_CSkeletonInstance_calculateSize_ev_size_t_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_prepare_void_ev_bool_Callback)(_in ev_bool backgroundThread);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_prepare_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_load_void_ev_bool_Callback)(_in ev_bool backgroundThread);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_load_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_reload_void_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_isReloadable_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_isManuallyLoaded_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_unload_void_Callback)();
+			typedef ev_uint64   ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getSize_ev_size_t_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_touch_void_Callback)();
+			typedef char*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getName_EVString_Callback)();
+			typedef ev_uint64  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getHandle_ev_uint64_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_isPrepared_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_isLoaded_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_isLoading_ev_bool_Callback)();
+			typedef int  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getLoadingState_LoadingState_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_isBackgroundLoaded_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_setBackgroundLoaded_void_ev_bool_Callback)(_in ev_bool bl);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_escalateLoading_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_addListener_void_CResourceListener_Callback)(_in EarthView::World::Graphic::CResource::CResourceListener* ref_lis);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_removeListener_void_CResourceListener_Callback)(_in EarthView::World::Graphic::CResource::CResourceListener* lis);
+			typedef char*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getGroup_EVString_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_changeGroupOwnership_void_EVString_Callback)(_in char*& newGroup);
+			typedef EarthView::World::Graphic::CResourceManager*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getCreator_CResourceManager_Callback)();
+			typedef char*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getOrigin_EVString_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance__notifyOrigin_void_EVString_Callback)(_in char*& origin);
+			typedef ev_uint64   ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getStateCount_ev_size_t_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance__dirtyState_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance__fireLoadingComplete_void_ev_bool_Callback)(_in ev_bool wasBackgroundLoaded);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance__firePreparingComplete_void_ev_bool_Callback)(_in ev_bool wasBackgroundLoaded);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance__fireUnloadingComplete_void_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_EVString_Callback)(_in char*& name, _in char*& value);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_ev_bool_ev_bool_Callback)(_in char*& name, _in ev_bool readOnly, _in ev_bool enable);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_setParameterList_void_CommonStringPairList_Callback)(_in const void* paramList);
+			typedef char*  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_getParameter_EVString_EVString_Callback)(_in char*& name);
+			typedef void  ( _stdcall EarthView_World_Graphic_CSkeletonInstance_copyParametersTo_void_CStringInterface_Callback)(_in EarthView::World::Core::CStringInterface* dest);
+			class CSkeletonInstanceProxy : public EarthView::World::Graphic::CSkeletonInstance
+			{
+			private:
+				EarthView_World_Graphic_CSkeletonInstance_getAnimationContainerPtr_CSkeletonInternalAnimationContainer_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getAnimationContainerPtr_CSkeletonInternalAnimationContainer_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_Callback* m_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_ev_uint16_Callback* m_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_ev_uint16_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_Callback* m_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_ev_uint16_Callback* m_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_ev_uint16_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getNumBones_ev_uint16_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getNumBones_ev_uint16_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getRootBone_CBone_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getRootBone_CBone_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getRootBoneIterator_BoneIterator_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getRootBoneIterator_BoneIterator_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getBoneIterator_BoneIterator_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getBoneIterator_BoneIterator_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_ev_uint16_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_ev_uint16_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_EVString_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_EVString_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_hasBone_ev_bool_EVString_Callback* m_EarthView_World_Graphic_CSkeletonInstance_hasBone_ev_bool_EVString_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_setBindingPose_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance_setBindingPose_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_reset_void_ev_bool_Callback* m_EarthView_World_Graphic_CSkeletonInstance_reset_void_ev_bool_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_reset_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance_reset_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_createAnimation_CAnimation_EVString_Real_Callback* m_EarthView_World_Graphic_CSkeletonInstance_createAnimation_CAnimation_EVString_Real_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_LinkedSkeletonAnimationSource_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_LinkedSkeletonAnimationSource_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_Callback;
+				EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_LinkedSkeletonAnimationSource_Callback* m_EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_LinkedSkeletonAnimationSource_Callback;
+				EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_Callback* m_EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_hasAnimation_ev_bool_EVString_Callback* m_EarthView_World_Graphic_CSkeletonInstance_hasAnimation_ev_bool_EVString_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_removeAnimation_void_EVString_Callback* m_EarthView_World_Graphic_CSkeletonInstance_removeAnimation_void_EVString_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_setAnimationState_void_CAnimationStateSet_Callback* m_EarthView_World_Graphic_CSkeletonInstance_setAnimationState_void_CAnimationStateSet_Callback;
+				EarthView_World_Graphic_CSkeletonInstance__initAnimationState_void_CAnimationStateSet_Callback* m_EarthView_World_Graphic_CSkeletonInstance__initAnimationState_void_CAnimationStateSet_Callback;
+				EarthView_World_Graphic_CSkeletonInstance__refreshAnimationState_void_CAnimationStateSet_Callback* m_EarthView_World_Graphic_CSkeletonInstance__refreshAnimationState_void_CAnimationStateSet_Callback;
+				EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_Callback* m_EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_Callback;
+				EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_ev_uint32_Callback* m_EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_ev_uint32_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getNumAnimations_ev_uint16_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getNumAnimations_ev_uint16_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_ev_uint16_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_ev_uint16_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getBlendMode_SkeletonAnimationBlendMode_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getBlendMode_SkeletonAnimationBlendMode_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_setBlendMode_void_SkeletonAnimationBlendMode_Callback* m_EarthView_World_Graphic_CSkeletonInstance_setBlendMode_void_SkeletonAnimationBlendMode_Callback;
+				EarthView_World_Graphic_CSkeletonInstance__updateTransforms_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance__updateTransforms_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_ev_bool_Callback* m_EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_ev_bool_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Real_Callback* m_EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Real_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Callback* m_EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_removeAllLinkedSkeletonAnimationSources_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance_removeAllLinkedSkeletonAnimationSources_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getLinkedSkeletonAnimationSourceIterator_LinkedSkeletonAnimSourceIterator_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getLinkedSkeletonAnimationSourceIterator_LinkedSkeletonAnimSourceIterator_Callback;
+				EarthView_World_Graphic_CSkeletonInstance__notifyManualBonesDirty_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance__notifyManualBonesDirty_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance__notifyManualBoneStateChange_void_CBone_Callback* m_EarthView_World_Graphic_CSkeletonInstance__notifyManualBoneStateChange_void_CBone_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getManualBonesDirty_ev_bool_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getManualBonesDirty_ev_bool_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_hasManualBones_ev_bool_Callback* m_EarthView_World_Graphic_CSkeletonInstance_hasManualBones_ev_bool_Callback;
+				EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_StringVector_Callback* m_EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_StringVector_Callback;
+				EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_Callback* m_EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_Callback;
+				EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByHandle_void_CSkeleton_BoneHandleMap_Callback* m_EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByHandle_void_CSkeleton_BoneHandleMap_Callback;
+				EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByName_void_CSkeleton_BoneHandleMap_Callback* m_EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByName_void_CSkeleton_BoneHandleMap_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_preLoadImpl_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance_preLoadImpl_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_postLoadImpl_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance_postLoadImpl_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_preUnloadImpl_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance_preUnloadImpl_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_postUnloadImpl_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance_postUnloadImpl_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_prepareImpl_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance_prepareImpl_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_unprepareImpl_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance_unprepareImpl_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_loadImpl_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance_loadImpl_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_unloadImpl_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance_unloadImpl_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_calculateSize_ev_size_t_Callback* m_EarthView_World_Graphic_CSkeletonInstance_calculateSize_ev_size_t_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_prepare_void_ev_bool_Callback* m_EarthView_World_Graphic_CSkeletonInstance_prepare_void_ev_bool_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_prepare_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance_prepare_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_load_void_ev_bool_Callback* m_EarthView_World_Graphic_CSkeletonInstance_load_void_ev_bool_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_load_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance_load_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_reload_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance_reload_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_isReloadable_ev_bool_Callback* m_EarthView_World_Graphic_CSkeletonInstance_isReloadable_ev_bool_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_isManuallyLoaded_ev_bool_Callback* m_EarthView_World_Graphic_CSkeletonInstance_isManuallyLoaded_ev_bool_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_unload_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance_unload_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getSize_ev_size_t_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getSize_ev_size_t_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_touch_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance_touch_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getName_EVString_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getName_EVString_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getHandle_ev_uint64_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getHandle_ev_uint64_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_isPrepared_ev_bool_Callback* m_EarthView_World_Graphic_CSkeletonInstance_isPrepared_ev_bool_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_isLoaded_ev_bool_Callback* m_EarthView_World_Graphic_CSkeletonInstance_isLoaded_ev_bool_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_isLoading_ev_bool_Callback* m_EarthView_World_Graphic_CSkeletonInstance_isLoading_ev_bool_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getLoadingState_LoadingState_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getLoadingState_LoadingState_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_isBackgroundLoaded_ev_bool_Callback* m_EarthView_World_Graphic_CSkeletonInstance_isBackgroundLoaded_ev_bool_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_setBackgroundLoaded_void_ev_bool_Callback* m_EarthView_World_Graphic_CSkeletonInstance_setBackgroundLoaded_void_ev_bool_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_escalateLoading_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance_escalateLoading_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_addListener_void_CResourceListener_Callback* m_EarthView_World_Graphic_CSkeletonInstance_addListener_void_CResourceListener_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_removeListener_void_CResourceListener_Callback* m_EarthView_World_Graphic_CSkeletonInstance_removeListener_void_CResourceListener_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getGroup_EVString_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getGroup_EVString_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_changeGroupOwnership_void_EVString_Callback* m_EarthView_World_Graphic_CSkeletonInstance_changeGroupOwnership_void_EVString_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getCreator_CResourceManager_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getCreator_CResourceManager_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getOrigin_EVString_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getOrigin_EVString_Callback;
+				EarthView_World_Graphic_CSkeletonInstance__notifyOrigin_void_EVString_Callback* m_EarthView_World_Graphic_CSkeletonInstance__notifyOrigin_void_EVString_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getStateCount_ev_size_t_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getStateCount_ev_size_t_Callback;
+				EarthView_World_Graphic_CSkeletonInstance__dirtyState_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance__dirtyState_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance__fireLoadingComplete_void_ev_bool_Callback* m_EarthView_World_Graphic_CSkeletonInstance__fireLoadingComplete_void_ev_bool_Callback;
+				EarthView_World_Graphic_CSkeletonInstance__firePreparingComplete_void_ev_bool_Callback* m_EarthView_World_Graphic_CSkeletonInstance__firePreparingComplete_void_ev_bool_Callback;
+				EarthView_World_Graphic_CSkeletonInstance__fireUnloadingComplete_void_Callback* m_EarthView_World_Graphic_CSkeletonInstance__fireUnloadingComplete_void_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_EVString_Callback* m_EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_EVString_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_ev_bool_ev_bool_Callback* m_EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_ev_bool_ev_bool_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_setParameterList_void_CommonStringPairList_Callback* m_EarthView_World_Graphic_CSkeletonInstance_setParameterList_void_CommonStringPairList_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_getParameter_EVString_EVString_Callback* m_EarthView_World_Graphic_CSkeletonInstance_getParameter_EVString_EVString_Callback;
+				EarthView_World_Graphic_CSkeletonInstance_copyParametersTo_void_CStringInterface_Callback* m_EarthView_World_Graphic_CSkeletonInstance_copyParametersTo_void_CStringInterface_Callback;
+			public:
+				CSkeletonInstanceProxy(EarthView::World::Core::CNameValuePairList *pList) : CSkeletonInstance(pList)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getAnimationContainerPtr_CSkeletonInternalAnimationContainer_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_ev_uint16_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_ev_uint16_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getNumBones_ev_uint16_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getRootBone_CBone_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getRootBoneIterator_BoneIterator_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getBoneIterator_BoneIterator_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_ev_uint16_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_hasBone_ev_bool_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_setBindingPose_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_reset_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_reset_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_createAnimation_CAnimation_EVString_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_LinkedSkeletonAnimationSource_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_LinkedSkeletonAnimationSource_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_hasAnimation_ev_bool_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_removeAnimation_void_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_setAnimationState_void_CAnimationStateSet_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance__initAnimationState_void_CAnimationStateSet_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance__refreshAnimationState_void_CAnimationStateSet_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getNumAnimations_ev_uint16_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_ev_uint16_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getBlendMode_SkeletonAnimationBlendMode_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_setBlendMode_void_SkeletonAnimationBlendMode_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance__updateTransforms_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_removeAllLinkedSkeletonAnimationSources_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getLinkedSkeletonAnimationSourceIterator_LinkedSkeletonAnimSourceIterator_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance__notifyManualBonesDirty_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance__notifyManualBoneStateChange_void_CBone_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getManualBonesDirty_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_hasManualBones_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_StringVector_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByHandle_void_CSkeleton_BoneHandleMap_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByName_void_CSkeleton_BoneHandleMap_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_preLoadImpl_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_postLoadImpl_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_preUnloadImpl_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_postUnloadImpl_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_prepareImpl_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_unprepareImpl_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_loadImpl_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_unloadImpl_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_calculateSize_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_prepare_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_prepare_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_load_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_load_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_reload_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_isReloadable_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_isManuallyLoaded_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_unload_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getSize_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_touch_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getName_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getHandle_ev_uint64_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_isPrepared_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_isLoaded_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_isLoading_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getLoadingState_LoadingState_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_isBackgroundLoaded_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_setBackgroundLoaded_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_escalateLoading_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_addListener_void_CResourceListener_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_removeListener_void_CResourceListener_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getGroup_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_changeGroupOwnership_void_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getCreator_CResourceManager_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getOrigin_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance__notifyOrigin_void_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getStateCount_ev_size_t_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance__dirtyState_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance__fireLoadingComplete_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance__firePreparingComplete_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance__fireUnloadingComplete_void_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_ev_bool_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_setParameterList_void_CommonStringPairList_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_getParameter_EVString_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CSkeletonInstance_copyParametersTo_void_CStringInterface_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getAnimationContainerPtr_CSkeletonInternalAnimationContainer(EarthView_World_Graphic_CSkeletonInstance_getAnimationContainerPtr_CSkeletonInternalAnimationContainer_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getAnimationContainerPtr_CSkeletonInternalAnimationContainer_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone(EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_ev_uint16(EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString(EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_ev_uint16(EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getNumBones_ev_uint16(EarthView_World_Graphic_CSkeletonInstance_getNumBones_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getNumBones_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getRootBone_CBone(EarthView_World_Graphic_CSkeletonInstance_getRootBone_CBone_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getRootBone_CBone_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getRootBoneIterator_BoneIterator(EarthView_World_Graphic_CSkeletonInstance_getRootBoneIterator_BoneIterator_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getRootBoneIterator_BoneIterator_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getBoneIterator_BoneIterator(EarthView_World_Graphic_CSkeletonInstance_getBoneIterator_BoneIterator_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getBoneIterator_BoneIterator_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_ev_uint16(EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_EVString(EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_hasBone_ev_bool_EVString(EarthView_World_Graphic_CSkeletonInstance_hasBone_ev_bool_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_hasBone_ev_bool_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_setBindingPose_void(EarthView_World_Graphic_CSkeletonInstance_setBindingPose_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_setBindingPose_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_reset_void_ev_bool(EarthView_World_Graphic_CSkeletonInstance_reset_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_reset_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_reset_void(EarthView_World_Graphic_CSkeletonInstance_reset_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_reset_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_createAnimation_CAnimation_EVString_Real(EarthView_World_Graphic_CSkeletonInstance_createAnimation_CAnimation_EVString_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_createAnimation_CAnimation_EVString_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_LinkedSkeletonAnimationSource(EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_LinkedSkeletonAnimationSource_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_LinkedSkeletonAnimationSource_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString(EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_LinkedSkeletonAnimationSource(EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_LinkedSkeletonAnimationSource_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_LinkedSkeletonAnimationSource_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString(EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_hasAnimation_ev_bool_EVString(EarthView_World_Graphic_CSkeletonInstance_hasAnimation_ev_bool_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_hasAnimation_ev_bool_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_removeAnimation_void_EVString(EarthView_World_Graphic_CSkeletonInstance_removeAnimation_void_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_removeAnimation_void_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_setAnimationState_void_CAnimationStateSet(EarthView_World_Graphic_CSkeletonInstance_setAnimationState_void_CAnimationStateSet_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_setAnimationState_void_CAnimationStateSet_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance__initAnimationState_void_CAnimationStateSet(EarthView_World_Graphic_CSkeletonInstance__initAnimationState_void_CAnimationStateSet_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance__initAnimationState_void_CAnimationStateSet_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance__refreshAnimationState_void_CAnimationStateSet(EarthView_World_Graphic_CSkeletonInstance__refreshAnimationState_void_CAnimationStateSet_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance__refreshAnimationState_void_CAnimationStateSet_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4(EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_ev_uint32(EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getNumAnimations_ev_uint16(EarthView_World_Graphic_CSkeletonInstance_getNumAnimations_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getNumAnimations_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_ev_uint16(EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getBlendMode_SkeletonAnimationBlendMode(EarthView_World_Graphic_CSkeletonInstance_getBlendMode_SkeletonAnimationBlendMode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getBlendMode_SkeletonAnimationBlendMode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_setBlendMode_void_SkeletonAnimationBlendMode(EarthView_World_Graphic_CSkeletonInstance_setBlendMode_void_SkeletonAnimationBlendMode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_setBlendMode_void_SkeletonAnimationBlendMode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance__updateTransforms_void(EarthView_World_Graphic_CSkeletonInstance__updateTransforms_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance__updateTransforms_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_ev_bool(EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void(EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Real(EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString(EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_removeAllLinkedSkeletonAnimationSources_void(EarthView_World_Graphic_CSkeletonInstance_removeAllLinkedSkeletonAnimationSources_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_removeAllLinkedSkeletonAnimationSources_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getLinkedSkeletonAnimationSourceIterator_LinkedSkeletonAnimSourceIterator(EarthView_World_Graphic_CSkeletonInstance_getLinkedSkeletonAnimationSourceIterator_LinkedSkeletonAnimSourceIterator_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getLinkedSkeletonAnimationSourceIterator_LinkedSkeletonAnimSourceIterator_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance__notifyManualBonesDirty_void(EarthView_World_Graphic_CSkeletonInstance__notifyManualBonesDirty_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance__notifyManualBonesDirty_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance__notifyManualBoneStateChange_void_CBone(EarthView_World_Graphic_CSkeletonInstance__notifyManualBoneStateChange_void_CBone_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance__notifyManualBoneStateChange_void_CBone_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getManualBonesDirty_ev_bool(EarthView_World_Graphic_CSkeletonInstance_getManualBonesDirty_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getManualBonesDirty_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_hasManualBones_ev_bool(EarthView_World_Graphic_CSkeletonInstance_hasManualBones_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_hasManualBones_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_StringVector(EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_StringVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_StringVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap(EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByHandle_void_CSkeleton_BoneHandleMap(EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByHandle_void_CSkeleton_BoneHandleMap_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByHandle_void_CSkeleton_BoneHandleMap_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByName_void_CSkeleton_BoneHandleMap(EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByName_void_CSkeleton_BoneHandleMap_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByName_void_CSkeleton_BoneHandleMap_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_preLoadImpl_void(EarthView_World_Graphic_CSkeletonInstance_preLoadImpl_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_preLoadImpl_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_postLoadImpl_void(EarthView_World_Graphic_CSkeletonInstance_postLoadImpl_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_postLoadImpl_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_preUnloadImpl_void(EarthView_World_Graphic_CSkeletonInstance_preUnloadImpl_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_preUnloadImpl_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_postUnloadImpl_void(EarthView_World_Graphic_CSkeletonInstance_postUnloadImpl_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_postUnloadImpl_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_prepareImpl_void(EarthView_World_Graphic_CSkeletonInstance_prepareImpl_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_prepareImpl_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_unprepareImpl_void(EarthView_World_Graphic_CSkeletonInstance_unprepareImpl_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_unprepareImpl_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_loadImpl_void(EarthView_World_Graphic_CSkeletonInstance_loadImpl_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_loadImpl_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_unloadImpl_void(EarthView_World_Graphic_CSkeletonInstance_unloadImpl_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_unloadImpl_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_calculateSize_ev_size_t(EarthView_World_Graphic_CSkeletonInstance_calculateSize_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_calculateSize_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_prepare_void_ev_bool(EarthView_World_Graphic_CSkeletonInstance_prepare_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_prepare_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_prepare_void(EarthView_World_Graphic_CSkeletonInstance_prepare_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_prepare_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_load_void_ev_bool(EarthView_World_Graphic_CSkeletonInstance_load_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_load_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_load_void(EarthView_World_Graphic_CSkeletonInstance_load_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_load_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_reload_void(EarthView_World_Graphic_CSkeletonInstance_reload_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_reload_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_isReloadable_ev_bool(EarthView_World_Graphic_CSkeletonInstance_isReloadable_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_isReloadable_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_isManuallyLoaded_ev_bool(EarthView_World_Graphic_CSkeletonInstance_isManuallyLoaded_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_isManuallyLoaded_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_unload_void(EarthView_World_Graphic_CSkeletonInstance_unload_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_unload_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getSize_ev_size_t(EarthView_World_Graphic_CSkeletonInstance_getSize_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getSize_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_touch_void(EarthView_World_Graphic_CSkeletonInstance_touch_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_touch_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getName_EVString(EarthView_World_Graphic_CSkeletonInstance_getName_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getName_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getHandle_ev_uint64(EarthView_World_Graphic_CSkeletonInstance_getHandle_ev_uint64_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getHandle_ev_uint64_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_isPrepared_ev_bool(EarthView_World_Graphic_CSkeletonInstance_isPrepared_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_isPrepared_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_isLoaded_ev_bool(EarthView_World_Graphic_CSkeletonInstance_isLoaded_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_isLoaded_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_isLoading_ev_bool(EarthView_World_Graphic_CSkeletonInstance_isLoading_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_isLoading_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getLoadingState_LoadingState(EarthView_World_Graphic_CSkeletonInstance_getLoadingState_LoadingState_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getLoadingState_LoadingState_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_isBackgroundLoaded_ev_bool(EarthView_World_Graphic_CSkeletonInstance_isBackgroundLoaded_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_isBackgroundLoaded_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_setBackgroundLoaded_void_ev_bool(EarthView_World_Graphic_CSkeletonInstance_setBackgroundLoaded_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_setBackgroundLoaded_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_escalateLoading_void(EarthView_World_Graphic_CSkeletonInstance_escalateLoading_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_escalateLoading_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_addListener_void_CResourceListener(EarthView_World_Graphic_CSkeletonInstance_addListener_void_CResourceListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_addListener_void_CResourceListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_removeListener_void_CResourceListener(EarthView_World_Graphic_CSkeletonInstance_removeListener_void_CResourceListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_removeListener_void_CResourceListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getGroup_EVString(EarthView_World_Graphic_CSkeletonInstance_getGroup_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getGroup_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_changeGroupOwnership_void_EVString(EarthView_World_Graphic_CSkeletonInstance_changeGroupOwnership_void_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_changeGroupOwnership_void_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getCreator_CResourceManager(EarthView_World_Graphic_CSkeletonInstance_getCreator_CResourceManager_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getCreator_CResourceManager_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getOrigin_EVString(EarthView_World_Graphic_CSkeletonInstance_getOrigin_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getOrigin_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance__notifyOrigin_void_EVString(EarthView_World_Graphic_CSkeletonInstance__notifyOrigin_void_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance__notifyOrigin_void_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getStateCount_ev_size_t(EarthView_World_Graphic_CSkeletonInstance_getStateCount_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getStateCount_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance__dirtyState_void(EarthView_World_Graphic_CSkeletonInstance__dirtyState_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance__dirtyState_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance__fireLoadingComplete_void_ev_bool(EarthView_World_Graphic_CSkeletonInstance__fireLoadingComplete_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance__fireLoadingComplete_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance__firePreparingComplete_void_ev_bool(EarthView_World_Graphic_CSkeletonInstance__firePreparingComplete_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance__firePreparingComplete_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance__fireUnloadingComplete_void(EarthView_World_Graphic_CSkeletonInstance__fireUnloadingComplete_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance__fireUnloadingComplete_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_EVString(EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_ev_bool_ev_bool(EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_ev_bool_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_ev_bool_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_setParameterList_void_CommonStringPairList(EarthView_World_Graphic_CSkeletonInstance_setParameterList_void_CommonStringPairList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_setParameterList_void_CommonStringPairList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_getParameter_EVString_EVString(EarthView_World_Graphic_CSkeletonInstance_getParameter_EVString_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_getParameter_EVString_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CSkeletonInstance_copyParametersTo_void_CStringInterface(EarthView_World_Graphic_CSkeletonInstance_copyParametersTo_void_CStringInterface_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CSkeletonInstance_copyParametersTo_void_CStringInterface_Callback = pCallback;
+				}
+				virtual ev_uint16 getNumAnimations() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getNumAnimations_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint16 returnValue = m_EarthView_World_Graphic_CSkeletonInstance_getNumAnimations_ev_uint16_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getNumAnimations();
+				}
+				virtual EarthView::World::Graphic::CAnimation* getAnimation(_in ev_uint16 index) const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CAnimation* returnValue = m_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_ev_uint16_Callback(index);
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getAnimation(index);
+				}
+				virtual EarthView::World::Graphic::CAnimation* getAnimation(_in const EVString& name, _in const EarthView::World::Graphic::LinkedSkeletonAnimationSource** linker) const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_LinkedSkeletonAnimationSource_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::CAnimation* returnValue = m_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_LinkedSkeletonAnimationSource_Callback(name_Char, linker);
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getAnimation(name, linker);
+				}
+				virtual EarthView::World::Graphic::CAnimation* getAnimation(_in const EVString& name) const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::CAnimation* returnValue = m_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_Callback(name_Char);
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getAnimation(name);
+				}
+				virtual EarthView::World::Graphic::CAnimation* _getAnimationImpl(_in const EVString& name, _in const EarthView::World::Graphic::LinkedSkeletonAnimationSource** linker) const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_LinkedSkeletonAnimationSource_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::CAnimation* returnValue = m_EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_LinkedSkeletonAnimationSource_Callback(name_Char, linker);
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::_getAnimationImpl(name, linker);
+				}
+				virtual EarthView::World::Graphic::CAnimation* _getAnimationImpl(_in const EVString& name) const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::CAnimation* returnValue = m_EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_Callback(name_Char);
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::_getAnimationImpl(name);
+				}
+				virtual EarthView::World::Graphic::CAnimation* createAnimation(_in const EVString& name, _in Real length)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_createAnimation_CAnimation_EVString_Real_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::CAnimation* returnValue = m_EarthView_World_Graphic_CSkeletonInstance_createAnimation_CAnimation_EVString_Real_Callback(name_Char, length);
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::createAnimation(name, length);
+				}
+				virtual void removeAnimation(_in const EVString& name)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_removeAnimation_void_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						m_EarthView_World_Graphic_CSkeletonInstance_removeAnimation_void_EVString_Callback(name_Char);
+					}
+					else
+						return this->CSkeletonInstance::removeAnimation(name);
+				}
+				virtual void addLinkedSkeletonAnimationSource(_in const EVString& skelName, _in Real scale)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Real_Callback != NULL && this->isCustomExtend())
+					{
+						char* skelName_Char = skelName.makeBuffer();
+						m_EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Real_Callback(skelName_Char, scale);
+					}
+					else
+						return this->CSkeletonInstance::addLinkedSkeletonAnimationSource(skelName, scale);
+				}
+				virtual void addLinkedSkeletonAnimationSource(_in const EVString& skelName)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* skelName_Char = skelName.makeBuffer();
+						m_EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Callback(skelName_Char);
+					}
+					else
+						return this->CSkeletonInstance::addLinkedSkeletonAnimationSource(skelName);
+				}
+				virtual void removeAllLinkedSkeletonAnimationSources()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_removeAllLinkedSkeletonAnimationSources_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_removeAllLinkedSkeletonAnimationSources_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::removeAllLinkedSkeletonAnimationSources();
+				}
+				virtual EarthView::World::Graphic::CSkeleton::LinkedSkeletonAnimSourceIterator getLinkedSkeletonAnimationSourceIterator() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getLinkedSkeletonAnimationSourceIterator_LinkedSkeletonAnimSourceIterator_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CSkeleton::LinkedSkeletonAnimSourceIterator returnValue = *(EarthView::World::Graphic::CSkeleton::LinkedSkeletonAnimSourceIterator*)m_EarthView_World_Graphic_CSkeletonInstance_getLinkedSkeletonAnimationSourceIterator_LinkedSkeletonAnimSourceIterator_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getLinkedSkeletonAnimationSourceIterator();
+				}
+				virtual void _initAnimationState(_in EarthView::World::Graphic::CAnimationStateSet* animSet)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance__initAnimationState_void_CAnimationStateSet_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance__initAnimationState_void_CAnimationStateSet_Callback(animSet);
+					}
+					else
+						return this->CSkeletonInstance::_initAnimationState(animSet);
+				}
+				virtual void _refreshAnimationState(_in EarthView::World::Graphic::CAnimationStateSet* animSet)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance__refreshAnimationState_void_CAnimationStateSet_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance__refreshAnimationState_void_CAnimationStateSet_Callback(animSet);
+					}
+					else
+						return this->CSkeletonInstance::_refreshAnimationState(animSet);
+				}
+				virtual EVString getName() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getName_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CSkeletonInstance_getName_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getName();
+				}
+				virtual ev_uint64 getHandle() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getHandle_ev_uint64_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint64 returnValue = m_EarthView_World_Graphic_CSkeletonInstance_getHandle_ev_uint64_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getHandle();
+				}
+				virtual EVString getGroup()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getGroup_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CSkeletonInstance_getGroup_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getGroup();
+				}
+				virtual void loadImpl()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_loadImpl_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_loadImpl_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::loadImpl();
+				}
+				virtual void unloadImpl()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_unloadImpl_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_unloadImpl_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::unloadImpl();
+				}
+				virtual EarthView::World::Graphic::CSkeleton::CSkeletonInternalAnimationContainer* getAnimationContainerPtr() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getAnimationContainerPtr_CSkeletonInternalAnimationContainer_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CSkeleton::CSkeletonInternalAnimationContainer* returnValue = m_EarthView_World_Graphic_CSkeletonInstance_getAnimationContainerPtr_CSkeletonInternalAnimationContainer_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getAnimationContainerPtr();
+				}
+				virtual EarthView::World::Graphic::CBone* createBone()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CBone* returnValue = m_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::createBone();
+				}
+				virtual EarthView::World::Graphic::CBone* createBone(_in ev_uint16 handle)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CBone* returnValue = m_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_ev_uint16_Callback(handle);
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::createBone(handle);
+				}
+				virtual EarthView::World::Graphic::CBone* createBone(_in const EVString& name)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::CBone* returnValue = m_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_Callback(name_Char);
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::createBone(name);
+				}
+				virtual EarthView::World::Graphic::CBone* createBone(_in const EVString& name, _in ev_uint16 handle)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::CBone* returnValue = m_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_ev_uint16_Callback(name_Char, handle);
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::createBone(name, handle);
+				}
+				virtual ev_uint16 getNumBones() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getNumBones_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint16 returnValue = m_EarthView_World_Graphic_CSkeletonInstance_getNumBones_ev_uint16_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getNumBones();
+				}
+				virtual EarthView::World::Graphic::CBone* getRootBone() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getRootBone_CBone_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CBone* returnValue = m_EarthView_World_Graphic_CSkeletonInstance_getRootBone_CBone_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getRootBone();
+				}
+				virtual EarthView::World::Graphic::CSkeleton::BoneIterator getRootBoneIterator()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getRootBoneIterator_BoneIterator_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CSkeleton::BoneIterator returnValue = *(EarthView::World::Graphic::CSkeleton::BoneIterator*)m_EarthView_World_Graphic_CSkeletonInstance_getRootBoneIterator_BoneIterator_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getRootBoneIterator();
+				}
+				virtual EarthView::World::Graphic::CSkeleton::BoneIterator getBoneIterator()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getBoneIterator_BoneIterator_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CSkeleton::BoneIterator returnValue = *(EarthView::World::Graphic::CSkeleton::BoneIterator*)m_EarthView_World_Graphic_CSkeletonInstance_getBoneIterator_BoneIterator_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getBoneIterator();
+				}
+				virtual EarthView::World::Graphic::CBone* getBone(_in ev_uint16 handle) const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CBone* returnValue = m_EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_ev_uint16_Callback(handle);
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getBone(handle);
+				}
+				virtual EarthView::World::Graphic::CBone* getBone(_in const EVString& name) const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::CBone* returnValue = m_EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_EVString_Callback(name_Char);
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getBone(name);
+				}
+				virtual ev_bool hasBone(_in const EVString& name) const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_hasBone_ev_bool_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						ev_bool returnValue = m_EarthView_World_Graphic_CSkeletonInstance_hasBone_ev_bool_EVString_Callback(name_Char);
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::hasBone(name);
+				}
+				virtual void setBindingPose()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_setBindingPose_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_setBindingPose_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::setBindingPose();
+				}
+				virtual void reset(_in ev_bool resetManualBones)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_reset_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_reset_void_ev_bool_Callback(resetManualBones);
+					}
+					else
+						return this->CSkeletonInstance::reset(resetManualBones);
+				}
+				virtual void reset()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_reset_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_reset_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::reset();
+				}
+				virtual ev_bool hasAnimation(_in const EVString& name) const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_hasAnimation_ev_bool_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						ev_bool returnValue = m_EarthView_World_Graphic_CSkeletonInstance_hasAnimation_ev_bool_EVString_Callback(name_Char);
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::hasAnimation(name);
+				}
+				virtual void setAnimationState(_in const EarthView::World::Graphic::CAnimationStateSet& animSet)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_setAnimationState_void_CAnimationStateSet_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_setAnimationState_void_CAnimationStateSet_Callback(&animSet);
+					}
+					else
+						return this->CSkeletonInstance::setAnimationState(animSet);
+				}
+				virtual void _getBoneMatrices(_in EarthView::World::Spatial::Math::CMatrix4* pMatrices)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_Callback(pMatrices);
+					}
+					else
+						return this->CSkeletonInstance::_getBoneMatrices(pMatrices);
+				}
+				virtual void _getBoneMatrices(_in EarthView::World::Spatial::Math::CMatrix4* pMatrices, _in ev_uint32 index)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_ev_uint32_Callback(pMatrices, index);
+					}
+					else
+						return this->CSkeletonInstance::_getBoneMatrices(pMatrices, index);
+				}
+				virtual EarthView::World::Graphic::SkeletonAnimationBlendMode getBlendMode() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getBlendMode_SkeletonAnimationBlendMode_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::SkeletonAnimationBlendMode returnValue = (EarthView::World::Graphic::SkeletonAnimationBlendMode)m_EarthView_World_Graphic_CSkeletonInstance_getBlendMode_SkeletonAnimationBlendMode_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getBlendMode();
+				}
+				virtual void setBlendMode(_in EarthView::World::Graphic::SkeletonAnimationBlendMode state)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_setBlendMode_void_SkeletonAnimationBlendMode_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_setBlendMode_void_SkeletonAnimationBlendMode_Callback((int)state);
+					}
+					else
+						return this->CSkeletonInstance::setBlendMode(state);
+				}
+				virtual void _updateTransforms()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance__updateTransforms_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance__updateTransforms_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::_updateTransforms();
+				}
+				virtual void optimiseAllAnimations(_in ev_bool preservingIdentityNodeTracks)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_ev_bool_Callback(preservingIdentityNodeTracks);
+					}
+					else
+						return this->CSkeletonInstance::optimiseAllAnimations(preservingIdentityNodeTracks);
+				}
+				virtual void optimiseAllAnimations()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::optimiseAllAnimations();
+				}
+				virtual void _notifyManualBonesDirty()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance__notifyManualBonesDirty_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance__notifyManualBonesDirty_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::_notifyManualBonesDirty();
+				}
+				virtual void _notifyManualBoneStateChange(_in EarthView::World::Graphic::CBone* ref_bone)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance__notifyManualBoneStateChange_void_CBone_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance__notifyManualBoneStateChange_void_CBone_Callback(ref_bone);
+					}
+					else
+						return this->CSkeletonInstance::_notifyManualBoneStateChange(ref_bone);
+				}
+				virtual ev_bool getManualBonesDirty() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getManualBonesDirty_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CSkeletonInstance_getManualBonesDirty_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getManualBonesDirty();
+				}
+				virtual ev_bool hasManualBones() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_hasManualBones_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CSkeletonInstance_hasManualBones_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::hasManualBones();
+				}
+				virtual void _mergeSkeletonAnimations(_in const EarthView::World::Graphic::CSkeleton* source, _in const EarthView::World::Graphic::CSkeleton::BoneHandleMap& boneHandleMap, _out const EarthView::World::Core::StringVector& animations)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_StringVector_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_StringVector_Callback(source, &boneHandleMap, &animations);
+					}
+					else
+						return this->CSkeletonInstance::_mergeSkeletonAnimations(source, boneHandleMap, animations);
+				}
+				virtual void _mergeSkeletonAnimations(_in const EarthView::World::Graphic::CSkeleton* source, _in const EarthView::World::Graphic::CSkeleton::BoneHandleMap& boneHandleMap)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_Callback(source, &boneHandleMap);
+					}
+					else
+						return this->CSkeletonInstance::_mergeSkeletonAnimations(source, boneHandleMap);
+				}
+				virtual void _buildMapBoneByHandle(_in const EarthView::World::Graphic::CSkeleton* source, _in EarthView::World::Graphic::CSkeleton::BoneHandleMap& boneHandleMap) const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByHandle_void_CSkeleton_BoneHandleMap_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByHandle_void_CSkeleton_BoneHandleMap_Callback(source, &boneHandleMap);
+					}
+					else
+						return this->CSkeletonInstance::_buildMapBoneByHandle(source, boneHandleMap);
+				}
+				virtual void _buildMapBoneByName(_in const EarthView::World::Graphic::CSkeleton* source, _out EarthView::World::Graphic::CSkeleton::BoneHandleMap& boneHandleMap) const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByName_void_CSkeleton_BoneHandleMap_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByName_void_CSkeleton_BoneHandleMap_Callback(source, &boneHandleMap);
+					}
+					else
+						return this->CSkeletonInstance::_buildMapBoneByName(source, boneHandleMap);
+				}
+				virtual ev_size_t calculateSize() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_calculateSize_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						ev_size_t returnValue = m_EarthView_World_Graphic_CSkeletonInstance_calculateSize_ev_size_t_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::calculateSize();
+				}
+				virtual void preLoadImpl()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_preLoadImpl_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_preLoadImpl_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::preLoadImpl();
+				}
+				virtual void postLoadImpl()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_postLoadImpl_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_postLoadImpl_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::postLoadImpl();
+				}
+				virtual void preUnloadImpl()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_preUnloadImpl_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_preUnloadImpl_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::preUnloadImpl();
+				}
+				virtual void postUnloadImpl()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_postUnloadImpl_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_postUnloadImpl_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::postUnloadImpl();
+				}
+				virtual void prepareImpl()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_prepareImpl_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_prepareImpl_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::prepareImpl();
+				}
+				virtual void unprepareImpl()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_unprepareImpl_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_unprepareImpl_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::unprepareImpl();
+				}
+				virtual void prepare(_in ev_bool backgroundThread)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_prepare_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_prepare_void_ev_bool_Callback(backgroundThread);
+					}
+					else
+						return this->CSkeletonInstance::prepare(backgroundThread);
+				}
+				virtual void prepare()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_prepare_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_prepare_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::prepare();
+				}
+				virtual void load(_in ev_bool backgroundThread)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_load_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_load_void_ev_bool_Callback(backgroundThread);
+					}
+					else
+						return this->CSkeletonInstance::load(backgroundThread);
+				}
+				virtual void load()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_load_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_load_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::load();
+				}
+				virtual void reload()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_reload_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_reload_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::reload();
+				}
+				virtual ev_bool isReloadable() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_isReloadable_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CSkeletonInstance_isReloadable_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::isReloadable();
+				}
+				virtual ev_bool isManuallyLoaded() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_isManuallyLoaded_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CSkeletonInstance_isManuallyLoaded_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::isManuallyLoaded();
+				}
+				virtual void unload()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_unload_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_unload_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::unload();
+				}
+				virtual ev_size_t getSize() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getSize_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						ev_size_t returnValue = m_EarthView_World_Graphic_CSkeletonInstance_getSize_ev_size_t_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getSize();
+				}
+				virtual void touch()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_touch_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_touch_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::touch();
+				}
+				virtual ev_bool isPrepared() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_isPrepared_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CSkeletonInstance_isPrepared_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::isPrepared();
+				}
+				virtual ev_bool isLoaded() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_isLoaded_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CSkeletonInstance_isLoaded_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::isLoaded();
+				}
+				virtual ev_bool isLoading() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_isLoading_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CSkeletonInstance_isLoading_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::isLoading();
+				}
+				virtual EarthView::World::Graphic::CResource::LoadingState getLoadingState() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getLoadingState_LoadingState_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CResource::LoadingState returnValue = (EarthView::World::Graphic::CResource::LoadingState)m_EarthView_World_Graphic_CSkeletonInstance_getLoadingState_LoadingState_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getLoadingState();
+				}
+				virtual ev_bool isBackgroundLoaded() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_isBackgroundLoaded_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CSkeletonInstance_isBackgroundLoaded_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::isBackgroundLoaded();
+				}
+				virtual void setBackgroundLoaded(_in ev_bool bl)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_setBackgroundLoaded_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_setBackgroundLoaded_void_ev_bool_Callback(bl);
+					}
+					else
+						return this->CSkeletonInstance::setBackgroundLoaded(bl);
+				}
+				virtual void escalateLoading()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_escalateLoading_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_escalateLoading_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::escalateLoading();
+				}
+				virtual void addListener(_in EarthView::World::Graphic::CResource::CResourceListener* ref_lis)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_addListener_void_CResourceListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_addListener_void_CResourceListener_Callback(ref_lis);
+					}
+					else
+						return this->CSkeletonInstance::addListener(ref_lis);
+				}
+				virtual void removeListener(_in EarthView::World::Graphic::CResource::CResourceListener* lis)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_removeListener_void_CResourceListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_removeListener_void_CResourceListener_Callback(lis);
+					}
+					else
+						return this->CSkeletonInstance::removeListener(lis);
+				}
+				virtual void changeGroupOwnership(_in const EVString& newGroup)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_changeGroupOwnership_void_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* newGroup_Char = newGroup.makeBuffer();
+						m_EarthView_World_Graphic_CSkeletonInstance_changeGroupOwnership_void_EVString_Callback(newGroup_Char);
+					}
+					else
+						return this->CSkeletonInstance::changeGroupOwnership(newGroup);
+				}
+				virtual EarthView::World::Graphic::CResourceManager* getCreator()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getCreator_CResourceManager_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CResourceManager* returnValue = m_EarthView_World_Graphic_CSkeletonInstance_getCreator_CResourceManager_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getCreator();
+				}
+				virtual EVString getOrigin() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getOrigin_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CSkeletonInstance_getOrigin_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getOrigin();
+				}
+				virtual void _notifyOrigin(_in const EVString& origin)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance__notifyOrigin_void_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* origin_Char = origin.makeBuffer();
+						m_EarthView_World_Graphic_CSkeletonInstance__notifyOrigin_void_EVString_Callback(origin_Char);
+					}
+					else
+						return this->CSkeletonInstance::_notifyOrigin(origin);
+				}
+				virtual ev_size_t getStateCount() const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getStateCount_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						ev_size_t returnValue = m_EarthView_World_Graphic_CSkeletonInstance_getStateCount_ev_size_t_Callback();
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getStateCount();
+				}
+				virtual void _dirtyState()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance__dirtyState_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance__dirtyState_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::_dirtyState();
+				}
+				virtual void _fireLoadingComplete(_in ev_bool wasBackgroundLoaded)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance__fireLoadingComplete_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance__fireLoadingComplete_void_ev_bool_Callback(wasBackgroundLoaded);
+					}
+					else
+						return this->CSkeletonInstance::_fireLoadingComplete(wasBackgroundLoaded);
+				}
+				virtual void _firePreparingComplete(_in ev_bool wasBackgroundLoaded)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance__firePreparingComplete_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance__firePreparingComplete_void_ev_bool_Callback(wasBackgroundLoaded);
+					}
+					else
+						return this->CSkeletonInstance::_firePreparingComplete(wasBackgroundLoaded);
+				}
+				virtual void _fireUnloadingComplete()
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance__fireUnloadingComplete_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance__fireUnloadingComplete_void_Callback();
+					}
+					else
+						return this->CSkeletonInstance::_fireUnloadingComplete();
+				}
+				virtual ev_bool setParameter(_in const EVString& name, _in const EVString& value)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* value_Char = value.makeBuffer();
+						ev_bool returnValue = m_EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_EVString_Callback(name_Char, value_Char);
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::setParameter(name, value);
+				}
+				virtual ev_bool setParameter(_in const EVString& name, _in ev_bool readOnly, _in ev_bool enable)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_ev_bool_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						ev_bool returnValue = m_EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_ev_bool_ev_bool_Callback(name_Char, readOnly, enable);
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::setParameter(name, readOnly, enable);
+				}
+				virtual void setParameterList(_in const EarthView::World::Core::CommonStringPairList& paramList)
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_setParameterList_void_CommonStringPairList_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_setParameterList_void_CommonStringPairList_Callback(&paramList);
+					}
+					else
+						return this->CSkeletonInstance::setParameterList(paramList);
+				}
+				virtual EVString getParameter(_in const EVString& name) const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_getParameter_EVString_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EVString returnValue = m_EarthView_World_Graphic_CSkeletonInstance_getParameter_EVString_EVString_Callback(name_Char);
+						return returnValue;
+					}
+					else
+						return this->CSkeletonInstance::getParameter(name);
+				}
+				virtual void copyParametersTo(_in EarthView::World::Core::CStringInterface* dest) const
+				{
+					if(m_EarthView_World_Graphic_CSkeletonInstance_copyParametersTo_void_CStringInterface_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CSkeletonInstance_copyParametersTo_void_CStringInterface_Callback(dest);
+					}
+					else
+						return this->CSkeletonInstance::copyParametersTo(dest);
+				}
+			};
+			REGISTER_FACTORY_CLASS(CSkeletonInstanceProxy);
+			extern "C" EV_DLL_EXPORT  ev_uint16  _stdcall EarthView_World_Graphic_CSkeletonInstance_getNumAnimations_ev_uint16(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				if (dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*)ptrNativeObject) != NULL)
+				{
+					ev_uint16 objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::getNumAnimations();
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint16 objXXXX = ptrNativeObject->getNumAnimations();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getNumAnimations_ev_uint16( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getNumAnimations_ev_uint16_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getNumAnimations_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint16  _stdcall EarthView_World_Graphic_CSkeletonInstance_getNumAnimations_ev_uint16_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				ev_uint16 objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::getNumAnimations();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CAnimation*  _stdcall EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_ev_uint16(void *pObjectXXXX, _in ev_uint16 index )
+			{
+				const EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				if (dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::CAnimation* objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::getAnimation(index);
+					return objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::CAnimation* objXXXX = ptrNativeObject->getAnimation(index);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_ev_uint16( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_ev_uint16_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CAnimation*  _stdcall EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_ev_uint16_NoVirtual(void *pObjectXXXX, _in ev_uint16 index )
+			{
+				const EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				EarthView::World::Graphic::CAnimation* objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::getAnimation(index);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CAnimation*  _stdcall EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_LinkedSkeletonAnimationSource(void *pObjectXXXX, _in const char* name, _in const EarthView::World::Graphic::LinkedSkeletonAnimationSource** linker )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				const EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				if (dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::CAnimation* objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::getAnimation(name1, linker);
+					return objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::CAnimation* objXXXX = ptrNativeObject->getAnimation(name1, linker);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_LinkedSkeletonAnimationSource( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_LinkedSkeletonAnimationSource_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_LinkedSkeletonAnimationSource(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CAnimation*  _stdcall EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_LinkedSkeletonAnimationSource_NoVirtual(void *pObjectXXXX, _in const char* name, _in const EarthView::World::Graphic::LinkedSkeletonAnimationSource** linker )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				const EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				EarthView::World::Graphic::CAnimation* objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::getAnimation(name1, linker);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CAnimation*  _stdcall EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				const EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				if (dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::CAnimation* objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::getAnimation(name1);
+					return objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::CAnimation* objXXXX = ptrNativeObject->getAnimation(name1);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CAnimation*  _stdcall EarthView_World_Graphic_CSkeletonInstance_getAnimation_CAnimation_EVString_NoVirtual(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				const EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				EarthView::World::Graphic::CAnimation* objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::getAnimation(name1);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CAnimation*  _stdcall EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_LinkedSkeletonAnimationSource(void *pObjectXXXX, _in const char* name, _in const EarthView::World::Graphic::LinkedSkeletonAnimationSource** linker )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				const EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				if (dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::CAnimation* objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::_getAnimationImpl(name1, linker);
+					return objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::CAnimation* objXXXX = ptrNativeObject->_getAnimationImpl(name1, linker);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_LinkedSkeletonAnimationSource( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_LinkedSkeletonAnimationSource_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_LinkedSkeletonAnimationSource(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CAnimation*  _stdcall EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_LinkedSkeletonAnimationSource_NoVirtual(void *pObjectXXXX, _in const char* name, _in const EarthView::World::Graphic::LinkedSkeletonAnimationSource** linker )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				const EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				EarthView::World::Graphic::CAnimation* objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::_getAnimationImpl(name1, linker);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CAnimation*  _stdcall EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				const EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				if (dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::CAnimation* objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::_getAnimationImpl(name1);
+					return objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::CAnimation* objXXXX = ptrNativeObject->_getAnimationImpl(name1);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CAnimation*  _stdcall EarthView_World_Graphic_CSkeletonInstance__getAnimationImpl_CAnimation_EVString_NoVirtual(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				const EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				EarthView::World::Graphic::CAnimation* objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::_getAnimationImpl(name1);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CAnimation*  _stdcall EarthView_World_Graphic_CSkeletonInstance_createAnimation_CAnimation_EVString_Real(void *pObjectXXXX, _in const char* name, _in Real length )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				if (dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::CAnimation* objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::createAnimation(name1, length);
+					return objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::CAnimation* objXXXX = ptrNativeObject->createAnimation(name1, length);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_createAnimation_CAnimation_EVString_Real( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_createAnimation_CAnimation_EVString_Real_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_createAnimation_CAnimation_EVString_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CAnimation*  _stdcall EarthView_World_Graphic_CSkeletonInstance_createAnimation_CAnimation_EVString_Real_NoVirtual(void *pObjectXXXX, _in const char* name, _in Real length )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				EarthView::World::Graphic::CAnimation* objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::createAnimation(name1, length);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CSkeletonInstance_removeAnimation_void_EVString(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				if (dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::removeAnimation(name1);
+				else
+					ptrNativeObject->removeAnimation(name1);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_removeAnimation_void_EVString( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_removeAnimation_void_EVString_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_removeAnimation_void_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CSkeletonInstance_removeAnimation_void_EVString_NoVirtual(void *pObjectXXXX, _in const char* name )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::removeAnimation(name1);
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CTagPoint*  _stdcall EarthView_World_Graphic_CSkeletonInstance_createTagPointOnBone_CTagPoint_CBone_CQuaternion_CVector3(void *pObjectXXXX, _in EarthView::World::Graphic::CBone* bone, _in const void* offsetOrientation, _in const void* offsetPosition )
+			{
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				EarthView::World::Graphic::CTagPoint* objXXXX = ptrNativeObject->createTagPointOnBone(bone, *(EarthView::World::Spatial::Math::CQuaternion*)offsetOrientation, *(EarthView::World::Spatial::Math::CVector3*)offsetPosition);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CTagPoint*  _stdcall EarthView_World_Graphic_CSkeletonInstance_createTagPointOnBone_CTagPoint_CBone_CQuaternion(void *pObjectXXXX, _in EarthView::World::Graphic::CBone* bone, _in const void* offsetOrientation )
+			{
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				EarthView::World::Graphic::CTagPoint* objXXXX = ptrNativeObject->createTagPointOnBone(bone, *(EarthView::World::Spatial::Math::CQuaternion*)offsetOrientation);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CTagPoint*  _stdcall EarthView_World_Graphic_CSkeletonInstance_createTagPointOnBone_CTagPoint_CBone(void *pObjectXXXX, _in EarthView::World::Graphic::CBone* bone )
+			{
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				EarthView::World::Graphic::CTagPoint* objXXXX = ptrNativeObject->createTagPointOnBone(bone);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CSkeletonInstance_freeTagPoint_void_CTagPoint(void *pObjectXXXX, _in EarthView::World::Graphic::CTagPoint* tagPoint )
+			{
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				ptrNativeObject->freeTagPoint(tagPoint);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Real(void *pObjectXXXX, _in const char* skelName, _in Real scale )
+			{
+				EarthView::World::Core::ev_string skelName1 = skelName;
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				if (dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::addLinkedSkeletonAnimationSource(skelName1, scale);
+				else
+					ptrNativeObject->addLinkedSkeletonAnimationSource(skelName1, scale);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Real( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Real_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Real_NoVirtual(void *pObjectXXXX, _in const char* skelName, _in Real scale )
+			{
+				EarthView::World::Core::ev_string skelName1 = skelName;
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::addLinkedSkeletonAnimationSource(skelName1, scale);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString(void *pObjectXXXX, _in const char* skelName )
+			{
+				EarthView::World::Core::ev_string skelName1 = skelName;
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				if (dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::addLinkedSkeletonAnimationSource(skelName1);
+				else
+					ptrNativeObject->addLinkedSkeletonAnimationSource(skelName1);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CSkeletonInstance_addLinkedSkeletonAnimationSource_void_EVString_NoVirtual(void *pObjectXXXX, _in const char* skelName )
+			{
+				EarthView::World::Core::ev_string skelName1 = skelName;
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::addLinkedSkeletonAnimationSource(skelName1);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CSkeletonInstance_removeAllLinkedSkeletonAnimationSources_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				if (dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::removeAllLinkedSkeletonAnimationSources();
+				else
+					ptrNativeObject->removeAllLinkedSkeletonAnimationSources();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_removeAllLinkedSkeletonAnimationSources_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_removeAllLinkedSkeletonAnimationSources_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_removeAllLinkedSkeletonAnimationSources_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CSkeletonInstance_removeAllLinkedSkeletonAnimationSources_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::removeAllLinkedSkeletonAnimationSources();
+			}
+			extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Graphic_CSkeletonInstance_getLinkedSkeletonAnimationSourceIterator_LinkedSkeletonAnimSourceIterator(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				if (dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::CSkeleton::LinkedSkeletonAnimSourceIterator objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::getLinkedSkeletonAnimationSourceIterator();
+					EarthView::World::Graphic::CSkeleton::LinkedSkeletonAnimSourceIterator *pXXXX = new EarthView::World::Graphic::CSkeleton::LinkedSkeletonAnimSourceIterator(objXXXX);
+					((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+					return (void*)pXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::CSkeleton::LinkedSkeletonAnimSourceIterator objXXXX = ptrNativeObject->getLinkedSkeletonAnimationSourceIterator();
+					EarthView::World::Graphic::CSkeleton::LinkedSkeletonAnimSourceIterator *pXXXX = new EarthView::World::Graphic::CSkeleton::LinkedSkeletonAnimSourceIterator(objXXXX);
+					((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getLinkedSkeletonAnimationSourceIterator_LinkedSkeletonAnimSourceIterator( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getLinkedSkeletonAnimationSourceIterator_LinkedSkeletonAnimSourceIterator_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getLinkedSkeletonAnimationSourceIterator_LinkedSkeletonAnimSourceIterator(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Graphic_CSkeletonInstance_getLinkedSkeletonAnimationSourceIterator_LinkedSkeletonAnimSourceIterator_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				EarthView::World::Graphic::CSkeleton::LinkedSkeletonAnimSourceIterator objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::getLinkedSkeletonAnimationSourceIterator();
+				EarthView::World::Graphic::CSkeleton::LinkedSkeletonAnimSourceIterator *pXXXX = new EarthView::World::Graphic::CSkeleton::LinkedSkeletonAnimSourceIterator(objXXXX);
+				((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CSkeletonInstance__initAnimationState_void_CAnimationStateSet(void *pObjectXXXX, _in EarthView::World::Graphic::CAnimationStateSet* animSet )
+			{
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				if (dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::_initAnimationState(animSet);
+				else
+					ptrNativeObject->_initAnimationState(animSet);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance__initAnimationState_void_CAnimationStateSet( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance__initAnimationState_void_CAnimationStateSet_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance__initAnimationState_void_CAnimationStateSet(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CSkeletonInstance__initAnimationState_void_CAnimationStateSet_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CAnimationStateSet* animSet )
+			{
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::_initAnimationState(animSet);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CSkeletonInstance__refreshAnimationState_void_CAnimationStateSet(void *pObjectXXXX, _in EarthView::World::Graphic::CAnimationStateSet* animSet )
+			{
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				if (dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::_refreshAnimationState(animSet);
+				else
+					ptrNativeObject->_refreshAnimationState(animSet);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance__refreshAnimationState_void_CAnimationStateSet( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance__refreshAnimationState_void_CAnimationStateSet_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance__refreshAnimationState_void_CAnimationStateSet(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CSkeletonInstance__refreshAnimationState_void_CAnimationStateSet_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CAnimationStateSet* animSet )
+			{
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::_refreshAnimationState(animSet);
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CSkeletonInstance_getName_EVString(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				if (dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*)ptrNativeObject) != NULL)
+				{
+					EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::getName();
+					return objXXXX.makeBuffer();
+				}
+				else
+				{
+					EVString objXXXX = ptrNativeObject->getName();
+					return objXXXX.makeBuffer();
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getName_EVString( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getName_EVString_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getName_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CSkeletonInstance_getName_EVString_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::getName();
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CSkeletonInstance_getHandle_ev_uint64(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				if (dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*)ptrNativeObject) != NULL)
+				{
+					ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::getHandle();
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint64 objXXXX = ptrNativeObject->getHandle();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getHandle_ev_uint64( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getHandle_ev_uint64_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getHandle_ev_uint64(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64  _stdcall EarthView_World_Graphic_CSkeletonInstance_getHandle_ev_uint64_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				ev_uint64 objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::getHandle();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CSkeletonInstance_getGroup_EVString(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				if (dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*)ptrNativeObject) != NULL)
+				{
+					EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::getGroup();
+					return objXXXX.makeBuffer();
+				}
+				else
+				{
+					EVString objXXXX = ptrNativeObject->getGroup();
+					return objXXXX.makeBuffer();
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getGroup_EVString( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getGroup_EVString_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getGroup_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CSkeletonInstance_getGroup_EVString_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::getGroup();
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CSkeletonInstance_updateTagPoints_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				ptrNativeObject->updateTagPoints();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CSkeletonInstance_loadImpl_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				if (dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::loadImpl();
+				else
+					ptrNativeObject->loadImpl();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_loadImpl_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_loadImpl_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_loadImpl_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CSkeletonInstance_loadImpl_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::loadImpl();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CSkeletonInstance_unloadImpl_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				if (dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::unloadImpl();
+				else
+					ptrNativeObject->unloadImpl();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_unloadImpl_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_unloadImpl_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_unloadImpl_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CSkeletonInstance_unloadImpl_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CSkeletonInstance* ptrNativeObject = (EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CSkeletonInstance::unloadImpl();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getAnimationContainerPtr_CSkeletonInternalAnimationContainer( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getAnimationContainerPtr_CSkeletonInternalAnimationContainer_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getAnimationContainerPtr_CSkeletonInternalAnimationContainer(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_ev_uint16( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_ev_uint16_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_ev_uint16( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_ev_uint16_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_createBone_CBone_EVString_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getNumBones_ev_uint16( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getNumBones_ev_uint16_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getNumBones_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getRootBone_CBone( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getRootBone_CBone_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getRootBone_CBone(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getRootBoneIterator_BoneIterator( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getRootBoneIterator_BoneIterator_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getRootBoneIterator_BoneIterator(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getBoneIterator_BoneIterator( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getBoneIterator_BoneIterator_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getBoneIterator_BoneIterator(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_ev_uint16( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_ev_uint16_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_EVString( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_EVString_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getBone_CBone_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_hasBone_ev_bool_EVString( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_hasBone_ev_bool_EVString_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_hasBone_ev_bool_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_setBindingPose_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_setBindingPose_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_setBindingPose_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_reset_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_reset_void_ev_bool_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_reset_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_reset_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_reset_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_reset_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_hasAnimation_ev_bool_EVString( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_hasAnimation_ev_bool_EVString_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_hasAnimation_ev_bool_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_setAnimationState_void_CAnimationStateSet( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_setAnimationState_void_CAnimationStateSet_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_setAnimationState_void_CAnimationStateSet(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_ev_uint32_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance__getBoneMatrices_void_CMatrix4_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getBlendMode_SkeletonAnimationBlendMode( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getBlendMode_SkeletonAnimationBlendMode_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getBlendMode_SkeletonAnimationBlendMode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_setBlendMode_void_SkeletonAnimationBlendMode( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_setBlendMode_void_SkeletonAnimationBlendMode_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_setBlendMode_void_SkeletonAnimationBlendMode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance__updateTransforms_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance__updateTransforms_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance__updateTransforms_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_ev_bool_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_optimiseAllAnimations_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance__notifyManualBonesDirty_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance__notifyManualBonesDirty_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance__notifyManualBonesDirty_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance__notifyManualBoneStateChange_void_CBone( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance__notifyManualBoneStateChange_void_CBone_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance__notifyManualBoneStateChange_void_CBone(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getManualBonesDirty_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getManualBonesDirty_ev_bool_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getManualBonesDirty_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_hasManualBones_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_hasManualBones_ev_bool_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_hasManualBones_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_StringVector( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_StringVector_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_StringVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance__mergeSkeletonAnimations_void_CSkeleton_BoneHandleMap(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByHandle_void_CSkeleton_BoneHandleMap( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByHandle_void_CSkeleton_BoneHandleMap_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByHandle_void_CSkeleton_BoneHandleMap(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByName_void_CSkeleton_BoneHandleMap( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByName_void_CSkeleton_BoneHandleMap_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance__buildMapBoneByName_void_CSkeleton_BoneHandleMap(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_preLoadImpl_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_preLoadImpl_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_preLoadImpl_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_postLoadImpl_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_postLoadImpl_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_postLoadImpl_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_preUnloadImpl_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_preUnloadImpl_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_preUnloadImpl_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_postUnloadImpl_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_postUnloadImpl_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_postUnloadImpl_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_prepareImpl_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_prepareImpl_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_prepareImpl_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_unprepareImpl_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_unprepareImpl_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_unprepareImpl_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_calculateSize_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_calculateSize_ev_size_t_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_calculateSize_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_prepare_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_prepare_void_ev_bool_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_prepare_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_prepare_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_prepare_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_prepare_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_load_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_load_void_ev_bool_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_load_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_load_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_load_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_load_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_reload_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_reload_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_reload_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_isReloadable_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_isReloadable_ev_bool_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_isReloadable_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_isManuallyLoaded_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_isManuallyLoaded_ev_bool_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_isManuallyLoaded_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_unload_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_unload_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_unload_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getSize_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getSize_ev_size_t_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getSize_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_touch_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_touch_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_touch_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_isPrepared_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_isPrepared_ev_bool_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_isPrepared_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_isLoaded_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_isLoaded_ev_bool_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_isLoaded_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_isLoading_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_isLoading_ev_bool_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_isLoading_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getLoadingState_LoadingState( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getLoadingState_LoadingState_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getLoadingState_LoadingState(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_isBackgroundLoaded_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_isBackgroundLoaded_ev_bool_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_isBackgroundLoaded_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_setBackgroundLoaded_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_setBackgroundLoaded_void_ev_bool_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_setBackgroundLoaded_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_escalateLoading_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_escalateLoading_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_escalateLoading_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_addListener_void_CResourceListener( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_addListener_void_CResourceListener_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_addListener_void_CResourceListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_removeListener_void_CResourceListener( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_removeListener_void_CResourceListener_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_removeListener_void_CResourceListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_changeGroupOwnership_void_EVString( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_changeGroupOwnership_void_EVString_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_changeGroupOwnership_void_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getCreator_CResourceManager( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getCreator_CResourceManager_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getCreator_CResourceManager(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getOrigin_EVString( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getOrigin_EVString_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getOrigin_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance__notifyOrigin_void_EVString( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance__notifyOrigin_void_EVString_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance__notifyOrigin_void_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getStateCount_ev_size_t( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getStateCount_ev_size_t_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getStateCount_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance__dirtyState_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance__dirtyState_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance__dirtyState_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance__fireLoadingComplete_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance__fireLoadingComplete_void_ev_bool_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance__fireLoadingComplete_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance__firePreparingComplete_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance__firePreparingComplete_void_ev_bool_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance__firePreparingComplete_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance__fireUnloadingComplete_void( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance__fireUnloadingComplete_void_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance__fireUnloadingComplete_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_EVString( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_EVString_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_ev_bool_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_ev_bool_ev_bool_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_setParameter_ev_bool_EVString_ev_bool_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_setParameterList_void_CommonStringPairList( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_setParameterList_void_CommonStringPairList_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_setParameterList_void_CommonStringPairList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_getParameter_EVString_EVString( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_getParameter_EVString_EVString_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_getParameter_EVString_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CSkeletonInstance_copyParametersTo_void_CStringInterface( void *pObjectXXXX, EarthView_World_Graphic_CSkeletonInstance_copyParametersTo_void_CStringInterface_Callback* pCallback )
+			{
+				CSkeletonInstanceProxy* ptr = dynamic_cast<CSkeletonInstanceProxy*>((EarthView::World::Graphic::CSkeletonInstance*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CSkeletonInstance_copyParametersTo_void_CStringInterface(pCallback);
+				}
+			}
+		}
+	}
+}

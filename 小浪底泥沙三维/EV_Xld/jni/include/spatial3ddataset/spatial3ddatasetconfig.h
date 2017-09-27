@@ -1,0 +1,55 @@
+﻿#ifndef EARTHVIEW_WORLD_SPATIAL3D_DATASET_COFING_H
+#define EARTHVIEW_WORLD_SPATIAL3D_DATASET_COFING_H
+
+#include "core/global.h"
+
+#ifdef EV_BUILD_SPATIAL3DDATASET 
+#define EV_Spatial3DDataset_DLL EV_DLL_EXPORT
+#else
+#define EV_Spatial3DDataset_DLL EV_DLL_IMPORT
+#endif
+
+#ifndef USETRANSFORM
+#define USETRANSFORM 1
+#endif
+
+#ifndef UNWARP_EXPORT
+#define UNWARP_EXPORT EV_Spatial3DDataset_DLL
+#endif
+
+#include <core/platform.h>
+//表前缀
+#define TABLEPREFIX_ENT "EV_ENT_"
+#define TABLEPREFIX_MESH "EV_MESH_"
+#define TABLEPREFIX_MESHREF "EV_MESH_REF_"
+#define TABLEPREFIX_ATTR "EV_"
+#define TABLEPREFIX_OCTREE "EV_ENT_OCT_"
+#define TABLEPREFIX_MATERIAL "EV_MAT_RES_"
+
+//表
+#define  TABLE_ENTDSOCTREE "EV_ENT_DS_OCT"
+#define TABLE_MESHTEMPL "EV_MESH_TEMP"
+#define TABLE_MESHINST "EV_MESH_INS"
+#define TABLE_MESHINSTREF "EV_MESH_INS_REF"
+#define TABLE_MATERIAL "EV_MAT_RES"
+#define TABLE_USERTYPE "EV_MESH_USERTYPE"
+#define TABLE_ATTRTYPE "EV_MESH_ATTRTYPE"
+#define TABLE_DATASETINFO "EV_DATASET_INFO"
+#define TALBE_DEFAULTATTR "MESH_DEFAULTATTR"
+
+//字段前缀
+#define FLDPREFIX_ENT "ENT_"
+#define FLDPREFIX_MESH "MESH_"
+#define FLDPREFIX_MESHTMPL "MESHTMPL_"
+#define FLDPREFIX_MESHINST "MESHINST_"
+#define FLDPREFIX_RES "RES_"
+#define FLDPREFIX_UT "UT_"
+#define FLDPREFIX_INSTREF "INSTREF_"
+#define FLDPREFIX_MESHREF "MESHREF_"
+#define FLDPREFIX_ATTR "ATTR_"
+
+//常用SQL
+#define SQL_INSERT "insert into %s (%s) values (%s)"
+#define  SQL_UPDATE "update %s set %s where %s"
+
+#endif

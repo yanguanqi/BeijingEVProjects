@@ -1,0 +1,16 @@
+﻿#ifndef EARTHVIEW_WORLD_LICENSE_CONFIG_H
+#define EARTHVIEW_WORLD_LICENSE_CONFIG_H
+
+#ifdef _WIN32
+#ifndef EV_CC_MSVC
+#define EV_CC_MSVC
+#endif
+#endif
+
+#ifdef EV_LOCKER_BUILD
+#define EV_LOCKER_DLL EV_DLL_EXPORT
+#else
+#define EV_LOCKER_DLL EV_DLL_IMPORT
+#endif
+
+#endif

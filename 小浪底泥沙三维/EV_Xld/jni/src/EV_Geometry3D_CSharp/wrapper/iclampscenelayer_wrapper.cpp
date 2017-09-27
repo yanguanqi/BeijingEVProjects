@@ -1,0 +1,2643 @@
+/* This file is produced by the P/Invoke AutoWrapper Utility 
+ Copyright (c) 2012 by EarthView Image Inc */
+#include "geometry3d/iclampscenelayer.h"
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Spatial
+		{
+			namespace Utility
+			{
+			}
+		}
+	}
+}
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Spatial3D
+		{
+			namespace Atlas
+			{
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData_Callback)(_in ev_int32 level, _in ev_int32 row, _in ev_int32 col, _inout void* tile);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_CTileInfo_CTileData_Callback)(_in const void* tileInfo, _inout void* tile);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_Real_Real_Real_Real_CTileData_Callback)(_in Real minX, _in Real minY, _in Real maxX, _in Real maxY, _inout void* tile);
+				typedef ev_int32  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxLevel_ev_int32_Callback)();
+				typedef ev_int32  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinLevel_ev_int32_Callback)();
+				typedef ev_int32  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxVisibleLevel_ev_int32_Callback)();
+				typedef ev_int32  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinVisibleLevel_ev_int32_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMaxVisibleLevel_ev_bool_ev_int32_Callback)(_in ev_int32 maxlevel);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMinVisibleLevel_ev_bool_ev_int32_Callback)(_in ev_int32 minlevel);
+				typedef void*  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getThemeStream_MemoryDataStreamPtr_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_equalThemeStream_ev_bool_MemoryDataStreamPtr_Callback)(_in void* stream);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32_Callback)(_in ev_uint32 level, _in ev_uint32 row, _in ev_uint32 col);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32_Callback)(_in ev_uint32 level, _in ev_uint32 row, _in ev_uint32 col);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_levelValid_ev_bool_ev_int32_Callback)(_in ev_int32 level);
+				typedef const void*  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getGeoExtent_CEnvelope_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback)(_in ev_real32 minPX, _in ev_real32 minPY, _in ev_real32 maxPX, _in ev_real32 maxPY);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainAlpha_ev_bool_ev_real32_Callback)(_in ev_real32 alpha);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback)(_out ev_real32& minPX, _out ev_real32& minPY, _out ev_real32& maxPX, _out ev_real32& maxPY);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainEnabled_ev_bool_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainEnabled_ev_bool_ev_bool_Callback)(_in ev_bool enabled);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainAlpha_ev_bool_ev_real32_Callback)(_inout ev_real32& alpha);
+				typedef int  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getClampMode_ClampMode_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setClampMode_void_ClampMode_Callback)(_in int mode);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_attachLayer_void_ILayer_Callback)(_in EarthView::World::Spatial::Atlas::ILayer* layer);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_detachLayer_void_Callback)();
+				typedef EarthView::World::Spatial::Atlas::ILayer*  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayer_ILayer_Callback)();
+				typedef EarthView::World::Spatial::Theme::ITheme*  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTheme_ITheme_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTheme_void_ITheme_Callback)(_in const EarthView::World::Spatial::Theme::ITheme* theme);
+				typedef char*  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneName_EVString_Callback)();
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinX_ev_real64_Callback)();
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxX_ev_real64_Callback)();
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinY_ev_real64_Callback)();
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxY_ev_real64_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback)(_in ev_real32 lat, _in ev_real32 lon, _in ev_real32 targetSamplesPerDegrees, _inout ev_real32& height);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerAdd_void_CSceneManager_Callback)(_in EarthView::World::Graphic::CSceneManager* pSceneMgr);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerRemoved_void_CSceneManager_Callback)(_in EarthView::World::Graphic::CSceneManager* pSceneMgr);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_LayerRefreshFactor_Callback)(_in const EarthView::World::Graphic::CCamera* camera, _in int updateType);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_Callback)(_in const EarthView::World::Graphic::CCamera* camera);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyDataChanged_void_EVString_EVString_CEvent_Callback)(_in char*& strDataSourceName, _in char*& strDatasetName, _in EarthView::World::Core::CEvent* pEvent);
+				typedef EarthView::World::Graphic::CSceneManager*  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneManager_CSceneManager_Callback)();
+				typedef int  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getType_EVLayerType_Callback)();
+				typedef EarthView::World::Spatial::GeoDataset::IDataset*  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataset_IDataset_Callback)();
+				typedef char*  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDatasetName_EVString_Callback)();
+				typedef EarthView::World::Spatial::GeoDataset::IDataSource*  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataSource_IDataSource_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_select_void_IQueryFilter_EVSelectionResultType_Callback)(_in EarthView::World::Spatial::GeoDataset::IQueryFilter* filter, _in int type);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clearSelection_void_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setLayerSelection_void_ILayerSelection_Callback)(_in EarthView::World::Spatial::Atlas::ILayerSelection* selection);
+				typedef EarthView::World::Spatial::Atlas::ILayerSelection*  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayerSelection_ILayerSelection_Callback)();
+				typedef char*  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getName_EVString_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setName_void_EVString_Callback)(_in char*& name);
+				typedef char*  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDescription_EVString_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDescription_void_EVString_Callback)(_in char*& value);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_canEdit_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCanEdit_void_ev_bool_Callback)(_in ev_bool can);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isEditing_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setEditing_void_ev_bool_Callback)(_in ev_bool editing);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isVisible_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setVisible_void_ev_bool_Callback)(_in ev_bool visible);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isValid_ev_bool_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isSelectable_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSelectable_void_ev_bool_Callback)(_in ev_bool selectable);
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_ignoreScale_ev_bool_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setIgnoreScale_void_ev_bool_Callback)(_in ev_bool bIgnore);
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMaxScale_ev_real64_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMaxScale_void_ev_real64_Callback)(_in ev_real64 scale);
+				typedef ev_real64  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMinScale_ev_real64_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMinScale_void_ev_real64_Callback)(_in ev_real64 scale);
+				typedef EarthView::World::Spatial::Geometry::ISpatialReference*  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSpatialReference_ISpatialReference_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSpatialReference_void_ISpatialReference_Callback)(_in EarthView::World::Spatial::Geometry::ISpatialReference* ref_sr);
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTransparentValue_void_ev_uint8_Callback)(_in ev_uint8 transparent);
+				typedef ev_uint8  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTransparentValue_ev_uint8_Callback)();
+				typedef const EarthView::World::Spatial::Geometry::IEnvelope*  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getExtent_IEnvelope_Callback)();
+				typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback)(_in EarthView::World::Spatial::Display::ISpatialDisplay* display, _in int type);
+				typedef EarthView::World::Spatial::Atlas::ILayer*  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clone_ILayer_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toStream_void_CDataStream_Callback)(_out void* stream);
+				typedef char*  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXML_EVString_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromXmlElement_void_CXmlElement_Callback)(_in void* element);
+				typedef void*  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXmlElement_CXmlElement_Callback)();
+				typedef void  ( _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromStream_void_CDataStream_Callback)(_inout void* stream);
+				class IClampSceneLayerProxy : public EarthView::World::Spatial3D::Atlas::IClampSceneLayer
+				{
+				private:
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_CTileInfo_CTileData_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_CTileInfo_CTileData_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_Real_Real_Real_Real_CTileData_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_Real_Real_Real_Real_CTileData_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxLevel_ev_int32_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxLevel_ev_int32_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinLevel_ev_int32_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinLevel_ev_int32_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxVisibleLevel_ev_int32_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxVisibleLevel_ev_int32_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinVisibleLevel_ev_int32_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinVisibleLevel_ev_int32_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMaxVisibleLevel_ev_bool_ev_int32_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMaxVisibleLevel_ev_bool_ev_int32_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMinVisibleLevel_ev_bool_ev_int32_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMinVisibleLevel_ev_bool_ev_int32_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getThemeStream_MemoryDataStreamPtr_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getThemeStream_MemoryDataStreamPtr_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_equalThemeStream_ev_bool_MemoryDataStreamPtr_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_equalThemeStream_ev_bool_MemoryDataStreamPtr_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_levelValid_ev_bool_ev_int32_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_levelValid_ev_bool_ev_int32_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getGeoExtent_CEnvelope_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getGeoExtent_CEnvelope_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainAlpha_ev_bool_ev_real32_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainAlpha_ev_bool_ev_real32_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainEnabled_ev_bool_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainEnabled_ev_bool_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainEnabled_ev_bool_ev_bool_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainEnabled_ev_bool_ev_bool_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainAlpha_ev_bool_ev_real32_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainAlpha_ev_bool_ev_real32_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getClampMode_ClampMode_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getClampMode_ClampMode_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setClampMode_void_ClampMode_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setClampMode_void_ClampMode_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_attachLayer_void_ILayer_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_attachLayer_void_ILayer_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_detachLayer_void_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_detachLayer_void_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayer_ILayer_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayer_ILayer_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTheme_ITheme_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTheme_ITheme_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTheme_void_ITheme_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTheme_void_ITheme_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneName_EVString_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneName_EVString_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinX_ev_real64_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinX_ev_real64_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxX_ev_real64_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxX_ev_real64_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinY_ev_real64_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinY_ev_real64_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxY_ev_real64_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxY_ev_real64_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerAdd_void_CSceneManager_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerAdd_void_CSceneManager_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerRemoved_void_CSceneManager_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerRemoved_void_CSceneManager_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_LayerRefreshFactor_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_LayerRefreshFactor_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyDataChanged_void_EVString_EVString_CEvent_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyDataChanged_void_EVString_EVString_CEvent_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneManager_CSceneManager_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneManager_CSceneManager_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getType_EVLayerType_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getType_EVLayerType_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataset_IDataset_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataset_IDataset_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDatasetName_EVString_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDatasetName_EVString_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataSource_IDataSource_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataSource_IDataSource_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_select_void_IQueryFilter_EVSelectionResultType_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_select_void_IQueryFilter_EVSelectionResultType_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clearSelection_void_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clearSelection_void_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setLayerSelection_void_ILayerSelection_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setLayerSelection_void_ILayerSelection_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayerSelection_ILayerSelection_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayerSelection_ILayerSelection_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getName_EVString_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getName_EVString_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setName_void_EVString_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setName_void_EVString_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDescription_EVString_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDescription_EVString_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDescription_void_EVString_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDescription_void_EVString_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_canEdit_ev_bool_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_canEdit_ev_bool_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCanEdit_void_ev_bool_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCanEdit_void_ev_bool_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isEditing_ev_bool_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isEditing_ev_bool_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setEditing_void_ev_bool_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setEditing_void_ev_bool_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isVisible_ev_bool_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isVisible_ev_bool_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setVisible_void_ev_bool_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setVisible_void_ev_bool_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isValid_ev_bool_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isValid_ev_bool_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isSelectable_ev_bool_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isSelectable_ev_bool_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSelectable_void_ev_bool_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSelectable_void_ev_bool_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_ignoreScale_ev_bool_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_ignoreScale_ev_bool_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setIgnoreScale_void_ev_bool_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setIgnoreScale_void_ev_bool_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMaxScale_ev_real64_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMaxScale_ev_real64_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMaxScale_void_ev_real64_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMaxScale_void_ev_real64_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMinScale_ev_real64_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMinScale_ev_real64_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMinScale_void_ev_real64_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMinScale_void_ev_real64_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSpatialReference_ISpatialReference_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSpatialReference_ISpatialReference_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSpatialReference_void_ISpatialReference_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSpatialReference_void_ISpatialReference_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTransparentValue_void_ev_uint8_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTransparentValue_void_ev_uint8_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTransparentValue_ev_uint8_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTransparentValue_ev_uint8_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getExtent_IEnvelope_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getExtent_IEnvelope_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clone_ILayer_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clone_ILayer_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toStream_void_CDataStream_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toStream_void_CDataStream_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXML_EVString_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXML_EVString_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromXmlElement_void_CXmlElement_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromXmlElement_void_CXmlElement_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXmlElement_CXmlElement_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXmlElement_CXmlElement_Callback;
+					EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromStream_void_CDataStream_Callback* m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromStream_void_CDataStream_Callback;
+				public:
+					IClampSceneLayerProxy(EarthView::World::Core::CNameValuePairList *pList) : IClampSceneLayer(pList)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_CTileInfo_CTileData_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_Real_Real_Real_Real_CTileData_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxLevel_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinLevel_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxVisibleLevel_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinVisibleLevel_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMaxVisibleLevel_ev_bool_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMinVisibleLevel_ev_bool_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getThemeStream_MemoryDataStreamPtr_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_equalThemeStream_ev_bool_MemoryDataStreamPtr_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_levelValid_ev_bool_ev_int32_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getGeoExtent_CEnvelope_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainAlpha_ev_bool_ev_real32_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainEnabled_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainEnabled_ev_bool_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainAlpha_ev_bool_ev_real32_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getClampMode_ClampMode_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setClampMode_void_ClampMode_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_attachLayer_void_ILayer_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_detachLayer_void_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayer_ILayer_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTheme_ITheme_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTheme_void_ITheme_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneName_EVString_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinX_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxX_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinY_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxY_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerAdd_void_CSceneManager_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerRemoved_void_CSceneManager_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_LayerRefreshFactor_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyDataChanged_void_EVString_EVString_CEvent_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneManager_CSceneManager_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getType_EVLayerType_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataset_IDataset_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDatasetName_EVString_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataSource_IDataSource_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_select_void_IQueryFilter_EVSelectionResultType_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clearSelection_void_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setLayerSelection_void_ILayerSelection_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayerSelection_ILayerSelection_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getName_EVString_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setName_void_EVString_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDescription_EVString_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDescription_void_EVString_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_canEdit_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCanEdit_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isEditing_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setEditing_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isVisible_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setVisible_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isValid_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isSelectable_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSelectable_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_ignoreScale_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setIgnoreScale_void_ev_bool_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMaxScale_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMaxScale_void_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMinScale_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMinScale_void_ev_real64_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSpatialReference_ISpatialReference_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSpatialReference_void_ISpatialReference_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTransparentValue_void_ev_uint8_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTransparentValue_ev_uint8_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getExtent_IEnvelope_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clone_ILayer_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toStream_void_CDataStream_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXML_EVString_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromXmlElement_void_CXmlElement_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXmlElement_CXmlElement_Callback = NULL;
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromStream_void_CDataStream_Callback = NULL;
+					}
+				public:
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_CTileInfo_CTileData(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_CTileInfo_CTileData_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_CTileInfo_CTileData_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_Real_Real_Real_Real_CTileData(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_Real_Real_Real_Real_CTileData_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_Real_Real_Real_Real_CTileData_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxLevel_ev_int32(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxLevel_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxLevel_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinLevel_ev_int32(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinLevel_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinLevel_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxVisibleLevel_ev_int32(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxVisibleLevel_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxVisibleLevel_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinVisibleLevel_ev_int32(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinVisibleLevel_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinVisibleLevel_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMaxVisibleLevel_ev_bool_ev_int32(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMaxVisibleLevel_ev_bool_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMaxVisibleLevel_ev_bool_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMinVisibleLevel_ev_bool_ev_int32(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMinVisibleLevel_ev_bool_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMinVisibleLevel_ev_bool_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getThemeStream_MemoryDataStreamPtr(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getThemeStream_MemoryDataStreamPtr_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getThemeStream_MemoryDataStreamPtr_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_equalThemeStream_ev_bool_MemoryDataStreamPtr(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_equalThemeStream_ev_bool_MemoryDataStreamPtr_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_equalThemeStream_ev_bool_MemoryDataStreamPtr_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32(EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32(EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_levelValid_ev_bool_ev_int32(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_levelValid_ev_bool_ev_int32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_levelValid_ev_bool_ev_int32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getGeoExtent_CEnvelope(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getGeoExtent_CEnvelope_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getGeoExtent_CEnvelope_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainAlpha_ev_bool_ev_real32(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainAlpha_ev_bool_ev_real32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainAlpha_ev_bool_ev_real32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainEnabled_ev_bool(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainEnabled_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainEnabled_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainEnabled_ev_bool_ev_bool(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainEnabled_ev_bool_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainEnabled_ev_bool_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainAlpha_ev_bool_ev_real32(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainAlpha_ev_bool_ev_real32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainAlpha_ev_bool_ev_real32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getClampMode_ClampMode(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getClampMode_ClampMode_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getClampMode_ClampMode_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setClampMode_void_ClampMode(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setClampMode_void_ClampMode_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setClampMode_void_ClampMode_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_attachLayer_void_ILayer(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_attachLayer_void_ILayer_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_attachLayer_void_ILayer_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_detachLayer_void(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_detachLayer_void_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_detachLayer_void_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayer_ILayer(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayer_ILayer_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayer_ILayer_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTheme_ITheme(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTheme_ITheme_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTheme_ITheme_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTheme_void_ITheme(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTheme_void_ITheme_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTheme_void_ITheme_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneName_EVString(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneName_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneName_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinX_ev_real64(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinX_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinX_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxX_ev_real64(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxX_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxX_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinY_ev_real64(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinY_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinY_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxY_ev_real64(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxY_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxY_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerAdd_void_CSceneManager(EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerAdd_void_CSceneManager_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerAdd_void_CSceneManager_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerRemoved_void_CSceneManager(EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerRemoved_void_CSceneManager_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerRemoved_void_CSceneManager_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_LayerRefreshFactor(EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_LayerRefreshFactor_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_LayerRefreshFactor_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera(EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyDataChanged_void_EVString_EVString_CEvent(EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyDataChanged_void_EVString_EVString_CEvent_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyDataChanged_void_EVString_EVString_CEvent_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneManager_CSceneManager(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneManager_CSceneManager_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneManager_CSceneManager_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getType_EVLayerType(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getType_EVLayerType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getType_EVLayerType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataset_IDataset(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataset_IDataset_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataset_IDataset_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDatasetName_EVString(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDatasetName_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDatasetName_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataSource_IDataSource(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataSource_IDataSource_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataSource_IDataSource_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_select_void_IQueryFilter_EVSelectionResultType(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_select_void_IQueryFilter_EVSelectionResultType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_select_void_IQueryFilter_EVSelectionResultType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clearSelection_void(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clearSelection_void_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clearSelection_void_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setLayerSelection_void_ILayerSelection(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setLayerSelection_void_ILayerSelection_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setLayerSelection_void_ILayerSelection_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayerSelection_ILayerSelection(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayerSelection_ILayerSelection_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayerSelection_ILayerSelection_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getName_EVString(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getName_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getName_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setName_void_EVString(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setName_void_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setName_void_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDescription_EVString(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDescription_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDescription_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDescription_void_EVString(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDescription_void_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDescription_void_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_canEdit_ev_bool(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_canEdit_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_canEdit_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCanEdit_void_ev_bool(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCanEdit_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCanEdit_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isEditing_ev_bool(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isEditing_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isEditing_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setEditing_void_ev_bool(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setEditing_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setEditing_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isVisible_ev_bool(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isVisible_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isVisible_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setVisible_void_ev_bool(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setVisible_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setVisible_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isValid_ev_bool(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isValid_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isValid_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isSelectable_ev_bool(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isSelectable_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isSelectable_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSelectable_void_ev_bool(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSelectable_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSelectable_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_ignoreScale_ev_bool(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_ignoreScale_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_ignoreScale_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setIgnoreScale_void_ev_bool(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setIgnoreScale_void_ev_bool_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setIgnoreScale_void_ev_bool_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMaxScale_ev_real64(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMaxScale_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMaxScale_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMaxScale_void_ev_real64(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMaxScale_void_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMaxScale_void_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMinScale_ev_real64(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMinScale_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMinScale_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMinScale_void_ev_real64(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMinScale_void_ev_real64_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMinScale_void_ev_real64_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSpatialReference_ISpatialReference(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSpatialReference_ISpatialReference_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSpatialReference_ISpatialReference_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSpatialReference_void_ISpatialReference(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSpatialReference_void_ISpatialReference_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSpatialReference_void_ISpatialReference_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTransparentValue_void_ev_uint8(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTransparentValue_void_ev_uint8_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTransparentValue_void_ev_uint8_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTransparentValue_ev_uint8(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTransparentValue_ev_uint8_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTransparentValue_ev_uint8_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getExtent_IEnvelope(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getExtent_IEnvelope_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getExtent_IEnvelope_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clone_ILayer(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clone_ILayer_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clone_ILayer_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toStream_void_CDataStream(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toStream_void_CDataStream_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toStream_void_CDataStream_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXML_EVString(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXML_EVString_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXML_EVString_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromXmlElement_void_CXmlElement(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromXmlElement_void_CXmlElement_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromXmlElement_void_CXmlElement_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXmlElement_CXmlElement(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXmlElement_CXmlElement_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXmlElement_CXmlElement_Callback = pCallback;
+					}
+					ev_void registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromStream_void_CDataStream(EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromStream_void_CDataStream_Callback* pCallback)
+					{
+						m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromStream_void_CDataStream_Callback = pCallback;
+					}
+					virtual ev_bool getTile(_in ev_int32 level, _in ev_int32 row, _in ev_int32 col, _inout EarthView::World::Spatial::CTileData& tile)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData_Callback(level, row, col, &tile);
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getTile(level, row, col, tile);
+					}
+					virtual ev_bool getTile(_in const EarthView::World::Spatial::CTileInfo& tileInfo, _inout EarthView::World::Spatial::CTileData& tile)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_CTileInfo_CTileData_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_CTileInfo_CTileData_Callback(&tileInfo, &tile);
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getTile(tileInfo, tile);
+					}
+					virtual ev_bool getTile(_in Real minX, _in Real minY, _in Real maxX, _in Real maxY, _inout EarthView::World::Spatial::CTileData& tile)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_Real_Real_Real_Real_CTileData_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_Real_Real_Real_Real_CTileData_Callback(minX, minY, maxX, maxY, &tile);
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getTile(minX, minY, maxX, maxY, tile);
+					}
+					virtual ev_int32 getMaxLevel() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxLevel_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_int32 returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxLevel_ev_int32_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getMaxLevel();
+					}
+					virtual ev_int32 getMinLevel() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinLevel_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_int32 returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinLevel_ev_int32_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getMinLevel();
+					}
+					virtual ev_int32 getMaxVisibleLevel() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxVisibleLevel_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_int32 returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxVisibleLevel_ev_int32_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getMaxVisibleLevel();
+					}
+					virtual ev_int32 getMinVisibleLevel() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinVisibleLevel_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_int32 returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinVisibleLevel_ev_int32_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getMinVisibleLevel();
+					}
+					virtual ev_bool setMaxVisibleLevel(_in ev_int32 maxlevel)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMaxVisibleLevel_ev_bool_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMaxVisibleLevel_ev_bool_ev_int32_Callback(maxlevel);
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::setMaxVisibleLevel(maxlevel);
+					}
+					virtual ev_bool setMinVisibleLevel(_in ev_int32 minlevel)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMinVisibleLevel_ev_bool_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMinVisibleLevel_ev_bool_ev_int32_Callback(minlevel);
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::setMinVisibleLevel(minlevel);
+					}
+					virtual ev_real64 getMinX() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinX_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinX_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getMinX();
+					}
+					virtual ev_real64 getMaxX() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxX_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxX_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getMaxX();
+					}
+					virtual ev_real64 getMinY() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinY_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinY_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getMinY();
+					}
+					virtual ev_real64 getMaxY() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxY_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxY_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getMaxY();
+					}
+					virtual EarthView::World::Spatial::Theme::ITheme* getTheme() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTheme_ITheme_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Theme::ITheme* returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTheme_ITheme_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getTheme();
+					}
+					virtual void setTheme(_in const EarthView::World::Spatial::Theme::ITheme* theme)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTheme_void_ITheme_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTheme_void_ITheme_Callback(theme);
+						}
+						else
+							return this->IClampSceneLayer::setTheme(theme);
+					}
+					virtual EarthView::World::Core::MemoryDataStreamPtr getThemeStream()
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getThemeStream_MemoryDataStreamPtr_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Core::MemoryDataStreamPtr returnValue = *(EarthView::World::Core::MemoryDataStreamPtr*)m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getThemeStream_MemoryDataStreamPtr_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getThemeStream();
+					}
+					virtual ev_bool equalThemeStream(_in EarthView::World::Core::MemoryDataStreamPtr stream)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_equalThemeStream_ev_bool_MemoryDataStreamPtr_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_equalThemeStream_ev_bool_MemoryDataStreamPtr_Callback(&stream);
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::equalThemeStream(stream);
+					}
+					virtual void _notifyTileCreated(_in ev_uint32 level, _in ev_uint32 row, _in ev_uint32 col)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32_Callback(level, row, col);
+						}
+						else
+							return this->IClampSceneLayer::_notifyTileCreated(level, row, col);
+					}
+					virtual void _notifyTileDestroyed(_in ev_uint32 level, _in ev_uint32 row, _in ev_uint32 col)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32_Callback(level, row, col);
+						}
+						else
+							return this->IClampSceneLayer::_notifyTileDestroyed(level, row, col);
+					}
+					virtual ev_bool levelValid(_in ev_int32 level) const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_levelValid_ev_bool_ev_int32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_levelValid_ev_bool_ev_int32_Callback(level);
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::levelValid(level);
+					}
+					virtual const EarthView::World::Spatial::Geometry::CEnvelope& getGeoExtent() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getGeoExtent_CEnvelope_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Spatial::Geometry::CEnvelope& returnValue = *(EarthView::World::Spatial::Geometry::CEnvelope*)m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getGeoExtent_CEnvelope_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getGeoExtent();
+					}
+					virtual ev_bool setCurtainExtent(_in ev_real32 minPX, _in ev_real32 minPY, _in ev_real32 maxPX, _in ev_real32 maxPY)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback(minPX, minPY, maxPX, maxPY);
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::setCurtainExtent(minPX, minPY, maxPX, maxPY);
+					}
+					virtual ev_bool setCurtainAlpha(_in ev_real32 alpha)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainAlpha_ev_bool_ev_real32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainAlpha_ev_bool_ev_real32_Callback(alpha);
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::setCurtainAlpha(alpha);
+					}
+					virtual ev_bool getCurtainExtent(_out ev_real32& minPX, _out ev_real32& minPY, _out ev_real32& maxPX, _out ev_real32& maxPY)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback(minPX, minPY, maxPX, maxPY);
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getCurtainExtent(minPX, minPY, maxPX, maxPY);
+					}
+					virtual ev_bool getCurtainEnabled() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainEnabled_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainEnabled_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getCurtainEnabled();
+					}
+					virtual ev_bool setCurtainEnabled(_in ev_bool enabled)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainEnabled_ev_bool_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainEnabled_ev_bool_ev_bool_Callback(enabled);
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::setCurtainEnabled(enabled);
+					}
+					virtual ev_bool getCurtainAlpha(_inout ev_real32& alpha)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainAlpha_ev_bool_ev_real32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainAlpha_ev_bool_ev_real32_Callback(alpha);
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getCurtainAlpha(alpha);
+					}
+					virtual EarthView::World::Spatial3D::Atlas::ClampMode getClampMode() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getClampMode_ClampMode_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial3D::Atlas::ClampMode returnValue = (EarthView::World::Spatial3D::Atlas::ClampMode)m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getClampMode_ClampMode_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getClampMode();
+					}
+					virtual void setClampMode(_in EarthView::World::Spatial3D::Atlas::ClampMode mode)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setClampMode_void_ClampMode_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setClampMode_void_ClampMode_Callback((int)mode);
+						}
+						else
+							return this->IClampSceneLayer::setClampMode(mode);
+					}
+					virtual EarthView::World::Spatial::Atlas::EVLayerType getType() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getType_EVLayerType_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Atlas::EVLayerType returnValue = (EarthView::World::Spatial::Atlas::EVLayerType)m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getType_EVLayerType_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getType();
+					}
+					virtual void attachLayer(_in EarthView::World::Spatial::Atlas::ILayer* layer)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_attachLayer_void_ILayer_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_attachLayer_void_ILayer_Callback(layer);
+						}
+						else
+							return this->IClampSceneLayer::attachLayer(layer);
+					}
+					virtual void detachLayer()
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_detachLayer_void_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_detachLayer_void_Callback();
+						}
+						else
+							return this->IClampSceneLayer::detachLayer();
+					}
+					virtual EarthView::World::Spatial::Atlas::ILayer* getLayer() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayer_ILayer_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Atlas::ILayer* returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayer_ILayer_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getLayer();
+					}
+					virtual EarthView::World::Spatial::GeoDataset::IDataset* getDataset()
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataset_IDataset_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::GeoDataset::IDataset* returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataset_IDataset_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getDataset();
+					}
+					virtual const EarthView::World::Spatial::Geometry::IEnvelope* getExtent() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getExtent_IEnvelope_Callback != NULL && this->isCustomExtend())
+						{
+							const EarthView::World::Spatial::Geometry::IEnvelope* returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getExtent_IEnvelope_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getExtent();
+					}
+					virtual EarthView::World::Spatial::Geometry::ISpatialReference* getSpatialReference() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSpatialReference_ISpatialReference_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Geometry::ISpatialReference* returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSpatialReference_ISpatialReference_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getSpatialReference();
+					}
+					virtual EarthView::World::Core::CXmlElement toXmlElement() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXmlElement_CXmlElement_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Core::CXmlElement returnValue = *(EarthView::World::Core::CXmlElement*)m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXmlElement_CXmlElement_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::toXmlElement();
+					}
+					virtual EVString toXML() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXML_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							EVString returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXML_EVString_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::toXML();
+					}
+					virtual void fromXmlElement(_in EarthView::World::Core::CXmlElement& element)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromXmlElement_void_CXmlElement_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromXmlElement_void_CXmlElement_Callback(&element);
+						}
+						else
+							return this->IClampSceneLayer::fromXmlElement(element);
+					}
+					virtual EVString getSceneName() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneName_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							EVString returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneName_EVString_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getSceneName();
+					}
+					virtual EVString getName() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getName_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							EVString returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getName_EVString_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getName();
+					}
+					virtual void setName(_in const EVString& name)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setName_void_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							char* name_Char = name.makeBuffer();
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setName_void_EVString_Callback(name_Char);
+						}
+						else
+							return this->IClampSceneLayer::setName(name);
+					}
+					virtual EVString getDescription() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDescription_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							EVString returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDescription_EVString_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getDescription();
+					}
+					virtual void setDescription(_in const EVString& value)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDescription_void_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							char* value_Char = value.makeBuffer();
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDescription_void_EVString_Callback(value_Char);
+						}
+						else
+							return this->IClampSceneLayer::setDescription(value);
+					}
+					virtual ev_bool canEdit() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_canEdit_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_canEdit_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::canEdit();
+					}
+					virtual void setCanEdit(_in ev_bool can)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCanEdit_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCanEdit_void_ev_bool_Callback(can);
+						}
+						else
+							return this->IClampSceneLayer::setCanEdit(can);
+					}
+					virtual ev_bool isEditing() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isEditing_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isEditing_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::isEditing();
+					}
+					virtual void setEditing(_in ev_bool editing)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setEditing_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setEditing_void_ev_bool_Callback(editing);
+						}
+						else
+							return this->IClampSceneLayer::setEditing(editing);
+					}
+					virtual ev_bool isVisible() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isVisible_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isVisible_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::isVisible();
+					}
+					virtual void setVisible(_in ev_bool visible)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setVisible_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setVisible_void_ev_bool_Callback(visible);
+						}
+						else
+							return this->IClampSceneLayer::setVisible(visible);
+					}
+					virtual ev_bool isValid() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isValid_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isValid_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::isValid();
+					}
+					virtual ev_bool isSelectable() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isSelectable_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isSelectable_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::isSelectable();
+					}
+					virtual void setSelectable(_in ev_bool selectable)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSelectable_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSelectable_void_ev_bool_Callback(selectable);
+						}
+						else
+							return this->IClampSceneLayer::setSelectable(selectable);
+					}
+					virtual ev_bool getHeightAt(_in ev_real32 lat, _in ev_real32 lon, _in ev_real32 targetSamplesPerDegrees, _inout ev_real32& height)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback(lat, lon, targetSamplesPerDegrees, height);
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getHeightAt(lat, lon, targetSamplesPerDegrees, height);
+					}
+					virtual void _notifyLayerAdd(_in EarthView::World::Graphic::CSceneManager* pSceneMgr)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerAdd_void_CSceneManager_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerAdd_void_CSceneManager_Callback(pSceneMgr);
+						}
+						else
+							return this->IClampSceneLayer::_notifyLayerAdd(pSceneMgr);
+					}
+					virtual void _notifyLayerRemoved(_in EarthView::World::Graphic::CSceneManager* pSceneMgr)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerRemoved_void_CSceneManager_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerRemoved_void_CSceneManager_Callback(pSceneMgr);
+						}
+						else
+							return this->IClampSceneLayer::_notifyLayerRemoved(pSceneMgr);
+					}
+					virtual void _notifyRefreshed(_in const EarthView::World::Graphic::CCamera* camera, _in EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_LayerRefreshFactor_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_LayerRefreshFactor_Callback(camera, (int)updateType);
+						}
+						else
+							return this->IClampSceneLayer::_notifyRefreshed(camera, updateType);
+					}
+					virtual void _notifyRefreshed(_in const EarthView::World::Graphic::CCamera* camera)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_Callback(camera);
+						}
+						else
+							return this->IClampSceneLayer::_notifyRefreshed(camera);
+					}
+					virtual void _notifyDataChanged(_in const EVString& strDataSourceName, _in const EVString& strDatasetName, _in EarthView::World::Core::CEvent* pEvent)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyDataChanged_void_EVString_EVString_CEvent_Callback != NULL && this->isCustomExtend())
+						{
+							char* strDataSourceName_Char = strDataSourceName.makeBuffer();
+							char* strDatasetName_Char = strDatasetName.makeBuffer();
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyDataChanged_void_EVString_EVString_CEvent_Callback(strDataSourceName_Char, strDatasetName_Char, pEvent);
+						}
+						else
+							return this->IClampSceneLayer::_notifyDataChanged(strDataSourceName, strDatasetName, pEvent);
+					}
+					virtual EarthView::World::Graphic::CSceneManager* getSceneManager() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneManager_CSceneManager_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Graphic::CSceneManager* returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneManager_CSceneManager_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getSceneManager();
+					}
+					virtual void toStream(_out EarthView::World::Core::CDataStream& stream) const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toStream_void_CDataStream_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toStream_void_CDataStream_Callback(&stream);
+						}
+						else
+							return this->IClampSceneLayer::toStream(stream);
+					}
+					virtual void fromStream(_inout EarthView::World::Core::CDataStream& stream)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromStream_void_CDataStream_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromStream_void_CDataStream_Callback(&stream);
+						}
+						else
+							return this->IClampSceneLayer::fromStream(stream);
+					}
+					virtual EVString getDatasetName()
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDatasetName_EVString_Callback != NULL && this->isCustomExtend())
+						{
+							EVString returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDatasetName_EVString_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getDatasetName();
+					}
+					virtual EarthView::World::Spatial::GeoDataset::IDataSource* getDataSource()
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataSource_IDataSource_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::GeoDataset::IDataSource* returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataSource_IDataSource_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getDataSource();
+					}
+					virtual void select(_in EarthView::World::Spatial::GeoDataset::IQueryFilter* filter, _in EarthView::World::Spatial::Atlas::EVSelectionResultType type)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_select_void_IQueryFilter_EVSelectionResultType_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_select_void_IQueryFilter_EVSelectionResultType_Callback(filter, (int)type);
+						}
+						else
+							return this->IClampSceneLayer::select(filter, type);
+					}
+					virtual void clearSelection()
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clearSelection_void_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clearSelection_void_Callback();
+						}
+						else
+							return this->IClampSceneLayer::clearSelection();
+					}
+					virtual void setLayerSelection(_in EarthView::World::Spatial::Atlas::ILayerSelection* selection)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setLayerSelection_void_ILayerSelection_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setLayerSelection_void_ILayerSelection_Callback(selection);
+						}
+						else
+							return this->IClampSceneLayer::setLayerSelection(selection);
+					}
+					virtual EarthView::World::Spatial::Atlas::ILayerSelection* getLayerSelection()
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayerSelection_ILayerSelection_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Atlas::ILayerSelection* returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayerSelection_ILayerSelection_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getLayerSelection();
+					}
+					virtual ev_bool ignoreScale() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_ignoreScale_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_ignoreScale_ev_bool_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::ignoreScale();
+					}
+					virtual void setIgnoreScale(_in ev_bool bIgnore)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setIgnoreScale_void_ev_bool_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setIgnoreScale_void_ev_bool_Callback(bIgnore);
+						}
+						else
+							return this->IClampSceneLayer::setIgnoreScale(bIgnore);
+					}
+					virtual ev_real64 getDisplayMaxScale() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMaxScale_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMaxScale_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getDisplayMaxScale();
+					}
+					virtual void setDisplayMaxScale(_in ev_real64 scale)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMaxScale_void_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMaxScale_void_ev_real64_Callback(scale);
+						}
+						else
+							return this->IClampSceneLayer::setDisplayMaxScale(scale);
+					}
+					virtual ev_real64 getDisplayMinScale() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMinScale_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							ev_real64 returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMinScale_ev_real64_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getDisplayMinScale();
+					}
+					virtual void setDisplayMinScale(_in ev_real64 scale)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMinScale_void_ev_real64_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMinScale_void_ev_real64_Callback(scale);
+						}
+						else
+							return this->IClampSceneLayer::setDisplayMinScale(scale);
+					}
+					virtual void setSpatialReference(_in EarthView::World::Spatial::Geometry::ISpatialReference* ref_sr)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSpatialReference_void_ISpatialReference_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSpatialReference_void_ISpatialReference_Callback(ref_sr);
+						}
+						else
+							return this->IClampSceneLayer::setSpatialReference(ref_sr);
+					}
+					virtual void setTransparentValue(_in ev_uint8 transparent)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTransparentValue_void_ev_uint8_Callback != NULL && this->isCustomExtend())
+						{
+							m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTransparentValue_void_ev_uint8_Callback(transparent);
+						}
+						else
+							return this->IClampSceneLayer::setTransparentValue(transparent);
+					}
+					virtual ev_uint8 getTransparentValue() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTransparentValue_ev_uint8_Callback != NULL && this->isCustomExtend())
+						{
+							ev_uint8 returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTransparentValue_ev_uint8_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::getTransparentValue();
+					}
+					virtual ev_bool draw(_in EarthView::World::Spatial::Display::ISpatialDisplay* display, _in EarthView::World::Spatial::Atlas::EVVectorLayerRendererType type)
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback != NULL && this->isCustomExtend())
+						{
+							ev_bool returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback(display, (int)type);
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::draw(display, type);
+					}
+					virtual EarthView::World::Spatial::Atlas::ILayer* clone() const
+					{
+						if(m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clone_ILayer_Callback != NULL && this->isCustomExtend())
+						{
+							EarthView::World::Spatial::Atlas::ILayer* returnValue = m_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clone_ILayer_Callback();
+							return returnValue;
+						}
+						else
+							return this->IClampSceneLayer::clone();
+					}
+				};
+				REGISTER_FACTORY_CLASS(IClampSceneLayerProxy);
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData(void *pObjectXXXX, _in ev_int32 level, _in ev_int32 row, _in ev_int32 col, _inout void* tile )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getTile(level, row, col, *(EarthView::World::Spatial::CTileData*)tile);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->getTile(level, row, col, *(EarthView::World::Spatial::CTileData*)tile);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_ev_int32_ev_int32_ev_int32_CTileData_NoVirtual(void *pObjectXXXX, _in ev_int32 level, _in ev_int32 row, _in ev_int32 col, _inout void* tile )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getTile(level, row, col, *(EarthView::World::Spatial::CTileData*)tile);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_CTileInfo_CTileData(void *pObjectXXXX, _in const void* tileInfo, _inout void* tile )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getTile(*(EarthView::World::Spatial::CTileInfo*)tileInfo, *(EarthView::World::Spatial::CTileData*)tile);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->getTile(*(EarthView::World::Spatial::CTileInfo*)tileInfo, *(EarthView::World::Spatial::CTileData*)tile);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_CTileInfo_CTileData( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_CTileInfo_CTileData_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_CTileInfo_CTileData(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_CTileInfo_CTileData_NoVirtual(void *pObjectXXXX, _in const void* tileInfo, _inout void* tile )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getTile(*(EarthView::World::Spatial::CTileInfo*)tileInfo, *(EarthView::World::Spatial::CTileData*)tile);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_Real_Real_Real_Real_CTileData(void *pObjectXXXX, _in Real minX, _in Real minY, _in Real maxX, _in Real maxY, _inout void* tile )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getTile(minX, minY, maxX, maxY, *(EarthView::World::Spatial::CTileData*)tile);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->getTile(minX, minY, maxX, maxY, *(EarthView::World::Spatial::CTileData*)tile);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_Real_Real_Real_Real_CTileData( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_Real_Real_Real_Real_CTileData_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_Real_Real_Real_Real_CTileData(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTile_ev_bool_Real_Real_Real_Real_CTileData_NoVirtual(void *pObjectXXXX, _in Real minX, _in Real minY, _in Real maxX, _in Real maxY, _inout void* tile )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getTile(minX, minY, maxX, maxY, *(EarthView::World::Spatial::CTileData*)tile);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_int32  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxLevel_ev_int32(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_int32 objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getMaxLevel();
+						return objXXXX;
+					}
+					else
+					{
+						ev_int32 objXXXX = ptrNativeObject->getMaxLevel();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxLevel_ev_int32( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxLevel_ev_int32_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxLevel_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_int32  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxLevel_ev_int32_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_int32 objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getMaxLevel();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_int32  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinLevel_ev_int32(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_int32 objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getMinLevel();
+						return objXXXX;
+					}
+					else
+					{
+						ev_int32 objXXXX = ptrNativeObject->getMinLevel();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinLevel_ev_int32( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinLevel_ev_int32_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinLevel_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_int32  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinLevel_ev_int32_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_int32 objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getMinLevel();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_int32  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxVisibleLevel_ev_int32(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_int32 objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getMaxVisibleLevel();
+						return objXXXX;
+					}
+					else
+					{
+						ev_int32 objXXXX = ptrNativeObject->getMaxVisibleLevel();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxVisibleLevel_ev_int32( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxVisibleLevel_ev_int32_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxVisibleLevel_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_int32  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxVisibleLevel_ev_int32_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_int32 objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getMaxVisibleLevel();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_int32  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinVisibleLevel_ev_int32(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_int32 objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getMinVisibleLevel();
+						return objXXXX;
+					}
+					else
+					{
+						ev_int32 objXXXX = ptrNativeObject->getMinVisibleLevel();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinVisibleLevel_ev_int32( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinVisibleLevel_ev_int32_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinVisibleLevel_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_int32  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinVisibleLevel_ev_int32_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_int32 objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getMinVisibleLevel();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMaxVisibleLevel_ev_bool_ev_int32(void *pObjectXXXX, _in ev_int32 maxlevel )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::setMaxVisibleLevel(maxlevel);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->setMaxVisibleLevel(maxlevel);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMaxVisibleLevel_ev_bool_ev_int32( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMaxVisibleLevel_ev_bool_ev_int32_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMaxVisibleLevel_ev_bool_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMaxVisibleLevel_ev_bool_ev_int32_NoVirtual(void *pObjectXXXX, _in ev_int32 maxlevel )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::setMaxVisibleLevel(maxlevel);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMinVisibleLevel_ev_bool_ev_int32(void *pObjectXXXX, _in ev_int32 minlevel )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::setMinVisibleLevel(minlevel);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->setMinVisibleLevel(minlevel);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMinVisibleLevel_ev_bool_ev_int32( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMinVisibleLevel_ev_bool_ev_int32_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMinVisibleLevel_ev_bool_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setMinVisibleLevel_ev_bool_ev_int32_NoVirtual(void *pObjectXXXX, _in ev_int32 minlevel )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::setMinVisibleLevel(minlevel);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinX_ev_real64(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getMinX();
+						return objXXXX;
+					}
+					else
+					{
+						ev_real64 objXXXX = ptrNativeObject->getMinX();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinX_ev_real64( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinX_ev_real64_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinX_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinX_ev_real64_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getMinX();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxX_ev_real64(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getMaxX();
+						return objXXXX;
+					}
+					else
+					{
+						ev_real64 objXXXX = ptrNativeObject->getMaxX();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxX_ev_real64( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxX_ev_real64_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxX_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxX_ev_real64_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getMaxX();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinY_ev_real64(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getMinY();
+						return objXXXX;
+					}
+					else
+					{
+						ev_real64 objXXXX = ptrNativeObject->getMinY();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinY_ev_real64( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinY_ev_real64_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinY_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMinY_ev_real64_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getMinY();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxY_ev_real64(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getMaxY();
+						return objXXXX;
+					}
+					else
+					{
+						ev_real64 objXXXX = ptrNativeObject->getMaxY();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxY_ev_real64( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxY_ev_real64_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxY_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_real64  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getMaxY_ev_real64_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_real64 objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getMaxY();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  EarthView::World::Spatial::Theme::ITheme*  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTheme_ITheme(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						EarthView::World::Spatial::Theme::ITheme* objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getTheme();
+						return objXXXX;
+					}
+					else
+					{
+						EarthView::World::Spatial::Theme::ITheme* objXXXX = ptrNativeObject->getTheme();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTheme_ITheme( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTheme_ITheme_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTheme_ITheme(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  EarthView::World::Spatial::Theme::ITheme*  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTheme_ITheme_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					EarthView::World::Spatial::Theme::ITheme* objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getTheme();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTheme_void_ITheme(void *pObjectXXXX, _in const EarthView::World::Spatial::Theme::ITheme* theme )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::setTheme(theme);
+					else
+						ptrNativeObject->setTheme(theme);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTheme_void_ITheme( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTheme_void_ITheme_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTheme_void_ITheme(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTheme_void_ITheme_NoVirtual(void *pObjectXXXX, _in const EarthView::World::Spatial::Theme::ITheme* theme )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::setTheme(theme);
+				}
+				extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getThemeStream_MemoryDataStreamPtr(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						EarthView::World::Core::MemoryDataStreamPtr objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getThemeStream();
+						EarthView::World::Core::MemoryDataStreamPtr *pXXXX = new EarthView::World::Core::MemoryDataStreamPtr(objXXXX);
+						((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+						return (void*)pXXXX;
+					}
+					else
+					{
+						EarthView::World::Core::MemoryDataStreamPtr objXXXX = ptrNativeObject->getThemeStream();
+						EarthView::World::Core::MemoryDataStreamPtr *pXXXX = new EarthView::World::Core::MemoryDataStreamPtr(objXXXX);
+						((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+						return (void*)pXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getThemeStream_MemoryDataStreamPtr( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getThemeStream_MemoryDataStreamPtr_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getThemeStream_MemoryDataStreamPtr(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getThemeStream_MemoryDataStreamPtr_NoVirtual(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					EarthView::World::Core::MemoryDataStreamPtr objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getThemeStream();
+					EarthView::World::Core::MemoryDataStreamPtr *pXXXX = new EarthView::World::Core::MemoryDataStreamPtr(objXXXX);
+					((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+					return (void*)pXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_equalThemeStream_ev_bool_MemoryDataStreamPtr(void *pObjectXXXX, _in void* stream )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::equalThemeStream(*(EarthView::World::Core::MemoryDataStreamPtr*)stream);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->equalThemeStream(*(EarthView::World::Core::MemoryDataStreamPtr*)stream);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_equalThemeStream_ev_bool_MemoryDataStreamPtr( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_equalThemeStream_ev_bool_MemoryDataStreamPtr_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_equalThemeStream_ev_bool_MemoryDataStreamPtr(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_equalThemeStream_ev_bool_MemoryDataStreamPtr_NoVirtual(void *pObjectXXXX, _in void* stream )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::equalThemeStream(*(EarthView::World::Core::MemoryDataStreamPtr*)stream);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32(void *pObjectXXXX, _in ev_uint32 level, _in ev_uint32 row, _in ev_uint32 col )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::_notifyTileCreated(level, row, col);
+					else
+						ptrNativeObject->_notifyTileCreated(level, row, col);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileCreated_void_ev_uint32_ev_uint32_ev_uint32_NoVirtual(void *pObjectXXXX, _in ev_uint32 level, _in ev_uint32 row, _in ev_uint32 col )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::_notifyTileCreated(level, row, col);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32(void *pObjectXXXX, _in ev_uint32 level, _in ev_uint32 row, _in ev_uint32 col )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::_notifyTileDestroyed(level, row, col);
+					else
+						ptrNativeObject->_notifyTileDestroyed(level, row, col);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyTileDestroyed_void_ev_uint32_ev_uint32_ev_uint32_NoVirtual(void *pObjectXXXX, _in ev_uint32 level, _in ev_uint32 row, _in ev_uint32 col )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::_notifyTileDestroyed(level, row, col);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_levelValid_ev_bool_ev_int32(void *pObjectXXXX, _in ev_int32 level )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::levelValid(level);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->levelValid(level);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_levelValid_ev_bool_ev_int32( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_levelValid_ev_bool_ev_int32_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_levelValid_ev_bool_ev_int32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_levelValid_ev_bool_ev_int32_NoVirtual(void *pObjectXXXX, _in ev_int32 level )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::levelValid(level);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getGeoExtent_CEnvelope(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						const EarthView::World::Spatial::Geometry::CEnvelope& objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getGeoExtent();
+						const EarthView::World::Spatial::Geometry::CEnvelope *pXXXX = &objXXXX;
+						return (void*)pXXXX;
+					}
+					else
+					{
+						const EarthView::World::Spatial::Geometry::CEnvelope& objXXXX = ptrNativeObject->getGeoExtent();
+						const EarthView::World::Spatial::Geometry::CEnvelope *pXXXX = &objXXXX;
+						return (void*)pXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getGeoExtent_CEnvelope( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getGeoExtent_CEnvelope_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getGeoExtent_CEnvelope(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getGeoExtent_CEnvelope_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					const EarthView::World::Spatial::Geometry::CEnvelope& objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getGeoExtent();
+					const EarthView::World::Spatial::Geometry::CEnvelope *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32(void *pObjectXXXX, _in ev_real32 minPX, _in ev_real32 minPY, _in ev_real32 maxPX, _in ev_real32 maxPY )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::setCurtainExtent(minPX, minPY, maxPX, maxPY);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->setCurtainExtent(minPX, minPY, maxPX, maxPY);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_NoVirtual(void *pObjectXXXX, _in ev_real32 minPX, _in ev_real32 minPY, _in ev_real32 maxPX, _in ev_real32 maxPY )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::setCurtainExtent(minPX, minPY, maxPX, maxPY);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainAlpha_ev_bool_ev_real32(void *pObjectXXXX, _in ev_real32 alpha )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::setCurtainAlpha(alpha);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->setCurtainAlpha(alpha);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainAlpha_ev_bool_ev_real32( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainAlpha_ev_bool_ev_real32_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainAlpha_ev_bool_ev_real32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainAlpha_ev_bool_ev_real32_NoVirtual(void *pObjectXXXX, _in ev_real32 alpha )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::setCurtainAlpha(alpha);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32(void *pObjectXXXX, _out ev_real32& minPX, _out ev_real32& minPY, _out ev_real32& maxPX, _out ev_real32& maxPY )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getCurtainExtent(minPX, minPY, maxPX, maxPY);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->getCurtainExtent(minPX, minPY, maxPX, maxPY);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainExtent_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_NoVirtual(void *pObjectXXXX, _out ev_real32& minPX, _out ev_real32& minPY, _out ev_real32& maxPX, _out ev_real32& maxPY )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getCurtainExtent(minPX, minPY, maxPX, maxPY);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainEnabled_ev_bool(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getCurtainEnabled();
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->getCurtainEnabled();
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainEnabled_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainEnabled_ev_bool_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainEnabled_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainEnabled_ev_bool_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getCurtainEnabled();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainEnabled_ev_bool_ev_bool(void *pObjectXXXX, _in ev_bool enabled )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::setCurtainEnabled(enabled);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->setCurtainEnabled(enabled);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainEnabled_ev_bool_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainEnabled_ev_bool_ev_bool_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainEnabled_ev_bool_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCurtainEnabled_ev_bool_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool enabled )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::setCurtainEnabled(enabled);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainAlpha_ev_bool_ev_real32(void *pObjectXXXX, _inout ev_real32& alpha )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getCurtainAlpha(alpha);
+						return objXXXX;
+					}
+					else
+					{
+						ev_bool objXXXX = ptrNativeObject->getCurtainAlpha(alpha);
+						return objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainAlpha_ev_bool_ev_real32( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainAlpha_ev_bool_ev_real32_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainAlpha_ev_bool_ev_real32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getCurtainAlpha_ev_bool_ev_real32_NoVirtual(void *pObjectXXXX, _inout ev_real32& alpha )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getCurtainAlpha(alpha);
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getClampMode_ClampMode(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+					{
+						EarthView::World::Spatial3D::Atlas::ClampMode objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getClampMode();
+						return (int)objXXXX;
+					}
+					else
+					{
+						EarthView::World::Spatial3D::Atlas::ClampMode objXXXX = ptrNativeObject->getClampMode();
+						return (int)objXXXX;
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getClampMode_ClampMode( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getClampMode_ClampMode_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getClampMode_ClampMode(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getClampMode_ClampMode_NoVirtual(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					EarthView::World::Spatial3D::Atlas::ClampMode objXXXX = ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::getClampMode();
+					return (int)objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setClampMode_void_ClampMode(void *pObjectXXXX, _in int mode )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					if (dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*)ptrNativeObject) != NULL)
+						ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::setClampMode((EarthView::World::Spatial3D::Atlas::ClampMode)mode);
+					else
+						ptrNativeObject->setClampMode((EarthView::World::Spatial3D::Atlas::ClampMode)mode);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setClampMode_void_ClampMode( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setClampMode_void_ClampMode_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setClampMode_void_ClampMode(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setClampMode_void_ClampMode_NoVirtual(void *pObjectXXXX, _in int mode )
+				{
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX;
+					ptrNativeObject->EarthView::World::Spatial3D::Atlas::IClampSceneLayer::setClampMode((EarthView::World::Spatial3D::Atlas::ClampMode)mode);
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_attachLayer_void_ILayer( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_attachLayer_void_ILayer_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_attachLayer_void_ILayer(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_detachLayer_void( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_detachLayer_void_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_detachLayer_void(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayer_ILayer( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayer_ILayer_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayer_ILayer(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneName_EVString( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneName_EVString_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneName_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getHeightAt_ev_bool_ev_real32_ev_real32_ev_real32_ev_real32(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerAdd_void_CSceneManager( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerAdd_void_CSceneManager_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerAdd_void_CSceneManager(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerRemoved_void_CSceneManager( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerRemoved_void_CSceneManager_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyLayerRemoved_void_CSceneManager(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_LayerRefreshFactor( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_LayerRefreshFactor_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_LayerRefreshFactor(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyRefreshed_void_CCamera(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyDataChanged_void_EVString_EVString_CEvent( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyDataChanged_void_EVString_EVString_CEvent_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer__notifyDataChanged_void_EVString_EVString_CEvent(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneManager_CSceneManager( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneManager_CSceneManager_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSceneManager_CSceneManager(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getType_EVLayerType( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getType_EVLayerType_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getType_EVLayerType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataset_IDataset( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataset_IDataset_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataset_IDataset(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDatasetName_EVString( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDatasetName_EVString_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDatasetName_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataSource_IDataSource( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataSource_IDataSource_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDataSource_IDataSource(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_select_void_IQueryFilter_EVSelectionResultType( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_select_void_IQueryFilter_EVSelectionResultType_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_select_void_IQueryFilter_EVSelectionResultType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clearSelection_void( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clearSelection_void_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clearSelection_void(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setLayerSelection_void_ILayerSelection( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setLayerSelection_void_ILayerSelection_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setLayerSelection_void_ILayerSelection(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayerSelection_ILayerSelection( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayerSelection_ILayerSelection_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getLayerSelection_ILayerSelection(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getName_EVString( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getName_EVString_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getName_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setName_void_EVString( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setName_void_EVString_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setName_void_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDescription_EVString( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDescription_EVString_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDescription_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDescription_void_EVString( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDescription_void_EVString_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDescription_void_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_canEdit_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_canEdit_ev_bool_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_canEdit_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCanEdit_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCanEdit_void_ev_bool_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setCanEdit_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isEditing_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isEditing_ev_bool_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isEditing_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setEditing_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setEditing_void_ev_bool_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setEditing_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isVisible_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isVisible_ev_bool_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isVisible_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setVisible_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setVisible_void_ev_bool_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setVisible_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isValid_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isValid_ev_bool_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isValid_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isSelectable_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isSelectable_ev_bool_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_isSelectable_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSelectable_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSelectable_void_ev_bool_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSelectable_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_ignoreScale_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_ignoreScale_ev_bool_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_ignoreScale_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setIgnoreScale_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setIgnoreScale_void_ev_bool_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setIgnoreScale_void_ev_bool(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMaxScale_ev_real64( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMaxScale_ev_real64_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMaxScale_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMaxScale_void_ev_real64( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMaxScale_void_ev_real64_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMaxScale_void_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMinScale_ev_real64( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMinScale_ev_real64_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getDisplayMinScale_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMinScale_void_ev_real64( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMinScale_void_ev_real64_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setDisplayMinScale_void_ev_real64(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSpatialReference_ISpatialReference( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSpatialReference_ISpatialReference_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getSpatialReference_ISpatialReference(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSpatialReference_void_ISpatialReference( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSpatialReference_void_ISpatialReference_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setSpatialReference_void_ISpatialReference(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTransparentValue_void_ev_uint8( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTransparentValue_void_ev_uint8_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_setTransparentValue_void_ev_uint8(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTransparentValue_ev_uint8( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTransparentValue_ev_uint8_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getTransparentValue_ev_uint8(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getExtent_IEnvelope( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getExtent_IEnvelope_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_getExtent_IEnvelope(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_draw_ev_bool_ISpatialDisplay_EVVectorLayerRendererType(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clone_ILayer( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clone_ILayer_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_clone_ILayer(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toStream_void_CDataStream( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toStream_void_CDataStream_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toStream_void_CDataStream(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXML_EVString( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXML_EVString_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXML_EVString(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromXmlElement_void_CXmlElement( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromXmlElement_void_CXmlElement_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromXmlElement_void_CXmlElement(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXmlElement_CXmlElement( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXmlElement_CXmlElement_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_toXmlElement_CXmlElement(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromStream_void_CDataStream( void *pObjectXXXX, EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromStream_void_CDataStream_Callback* pCallback )
+				{
+					IClampSceneLayerProxy* ptr = dynamic_cast<IClampSceneLayerProxy*>((EarthView::World::Spatial3D::Atlas::IClampSceneLayer*) pObjectXXXX);
+					if(ptr != NULL)
+					{
+						ptr->registerCallback_EarthView_World_Spatial3D_Atlas_IClampSceneLayer_fromStream_void_CDataStream(pCallback);
+					}
+				}
+				extern "C" EV_DLL_EXPORT  EarthView::World::Spatial3D::Atlas::IClampSceneLayer*  _stdcall Get_EarthView_World_Spatial3D_Atlas_CLayerTilePair_mpLayer( void *pObjectXXXX )
+				{
+					EarthView::World::Spatial3D::Atlas::CLayerTilePair* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::CLayerTilePair*) pObjectXXXX;
+					EarthView::World::Spatial3D::Atlas::IClampSceneLayer* objXXXX = ptrNativeObject->mpLayer;
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Spatial3D_Atlas_CLayerTilePair_mpLayer( void *pObjectXXXX, EarthView::World::Spatial3D::Atlas::IClampSceneLayer*  value )
+				{
+					((EarthView::World::Spatial3D::Atlas::CLayerTilePair*)pObjectXXXX)->mpLayer = value;
+				}
+				extern "C" EV_DLL_EXPORT  void*  _stdcall Get_EarthView_World_Spatial3D_Atlas_CLayerTilePair_mTileData( void *pObjectXXXX )
+				{
+					EarthView::World::Spatial3D::Atlas::CLayerTilePair* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::CLayerTilePair*) pObjectXXXX;
+					EarthView::World::Spatial::CTileData &objXXXX = ptrNativeObject->mTileData;
+					EarthView::World::Spatial::CTileData *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Spatial3D_Atlas_CLayerTilePair_mTileData( void *pObjectXXXX, void*  value )
+				{
+					((EarthView::World::Spatial3D::Atlas::CLayerTilePair*)pObjectXXXX)->mTileData = *(EarthView::World::Spatial::CTileData*)value;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_Atlas_CLayerTileList_push_back_void_CLayerTilePair(void *pObjectXXXX, _in void* t )
+				{
+					EarthView::World::Spatial3D::Atlas::CLayerTileList* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::CLayerTileList*) pObjectXXXX;
+					ptrNativeObject->push_back(*(EarthView::World::Spatial3D::Atlas::CLayerTilePair*)t);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_Atlas_CLayerTileList_push_front_void_CLayerTilePair(void *pObjectXXXX, _in void* t )
+				{
+					EarthView::World::Spatial3D::Atlas::CLayerTileList* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::CLayerTileList*) pObjectXXXX;
+					ptrNativeObject->push_front(*(EarthView::World::Spatial3D::Atlas::CLayerTilePair*)t);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_Atlas_CLayerTileList_pop_back_void(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial3D::Atlas::CLayerTileList* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::CLayerTileList*) pObjectXXXX;
+					ptrNativeObject->pop_back();
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_Atlas_CLayerTileList_pop_front_void(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial3D::Atlas::CLayerTileList* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::CLayerTileList*) pObjectXXXX;
+					ptrNativeObject->pop_front();
+				}
+				extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Spatial3D_Atlas_CLayerTileList_front_CLayerTilePair(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial3D::Atlas::CLayerTileList* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::CLayerTileList*) pObjectXXXX;
+					EarthView::World::Spatial3D::Atlas::CLayerTilePair& objXXXX = ptrNativeObject->front();
+					EarthView::World::Spatial3D::Atlas::CLayerTilePair *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Spatial3D_Atlas_CLayerTileList_back_CLayerTilePair(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial3D::Atlas::CLayerTileList* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::CLayerTileList*) pObjectXXXX;
+					EarthView::World::Spatial3D::Atlas::CLayerTilePair& objXXXX = ptrNativeObject->back();
+					EarthView::World::Spatial3D::Atlas::CLayerTilePair *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Spatial3D_Atlas_CLayerTileList_at_CLayerTilePair_ev_uint32(void *pObjectXXXX, _in ev_uint32 pos )
+				{
+					EarthView::World::Spatial3D::Atlas::CLayerTileList* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::CLayerTileList*) pObjectXXXX;
+					EarthView::World::Spatial3D::Atlas::CLayerTilePair& objXXXX = ptrNativeObject->at(pos);
+					EarthView::World::Spatial3D::Atlas::CLayerTilePair *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_Atlas_CLayerTileList_insert_void_ev_uint32_CLayerTilePair(void *pObjectXXXX, _in ev_uint32 pos, _in void* t )
+				{
+					EarthView::World::Spatial3D::Atlas::CLayerTileList* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::CLayerTileList*) pObjectXXXX;
+					ptrNativeObject->insert(pos, *(EarthView::World::Spatial3D::Atlas::CLayerTilePair*)t);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_Atlas_CLayerTileList_remove_void_ev_size_t(void *pObjectXXXX, _in ev_uint64  pos )
+				{
+					EarthView::World::Spatial3D::Atlas::CLayerTileList* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::CLayerTileList*) pObjectXXXX;
+					ptrNativeObject->remove(pos);
+				}
+				extern "C" EV_DLL_EXPORT  ev_bool  _stdcall EarthView_World_Spatial3D_Atlas_CLayerTileList_empty_ev_bool(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::CLayerTileList* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::CLayerTileList*) pObjectXXXX;
+					ev_bool objXXXX = ptrNativeObject->empty();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  ev_uint64   _stdcall EarthView_World_Spatial3D_Atlas_CLayerTileList_size_ev_size_t(void *pObjectXXXX )
+				{
+					const EarthView::World::Spatial3D::Atlas::CLayerTileList* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::CLayerTileList*) pObjectXXXX;
+					ev_size_t objXXXX = ptrNativeObject->size();
+					return objXXXX;
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_Atlas_CLayerTileList_resize_void_ev_size_t(void *pObjectXXXX, _in ev_uint64  newSize )
+				{
+					EarthView::World::Spatial3D::Atlas::CLayerTileList* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::CLayerTileList*) pObjectXXXX;
+					ptrNativeObject->resize(newSize);
+				}
+				extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_Atlas_CLayerTileList_clear_void(void *pObjectXXXX )
+				{
+					EarthView::World::Spatial3D::Atlas::CLayerTileList* ptrNativeObject = (EarthView::World::Spatial3D::Atlas::CLayerTileList*) pObjectXXXX;
+					ptrNativeObject->clear();
+				}
+			}
+		}
+	}
+}

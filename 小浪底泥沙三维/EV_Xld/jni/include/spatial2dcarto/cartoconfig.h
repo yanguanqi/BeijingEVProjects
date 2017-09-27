@@ -1,0 +1,12 @@
+﻿#ifndef EARTHVIEW_WORLD_CARTO_CARTOCONFIG_H
+#define EARTHVIEW_WORLD_CARTO_CARTOCONFIG_H
+#include "core/core_api.h"
+
+
+#ifdef EV_BUILD_CARTO
+#define EV_SPATIAL2DCARTO_DLL EV_DLL_EXPORT
+#else
+#define EV_SPATIAL2DCARTO_DLL EV_DLL_IMPORT
+#endif
+
+#endif

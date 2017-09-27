@@ -1,0 +1,3360 @@
+/* This file is produced by the P/Invoke AutoWrapper Utility 
+ Copyright (c) 2012 by EarthView Image Inc */
+#include "globecontrol/globegrid.h"
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Graphic
+		{
+		}
+	}
+}
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Spatial3D
+		{
+			namespace Controls
+			{
+			}
+		}
+	}
+}
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Spatial3D
+		{
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_clear_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_estimateVertexCount_void_ev_size_t_Callback)(_in ev_uint64  vcount);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_estimateIndexCount_void_ev_size_t_Callback)(_in ev_uint64  icount);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_EVString_Callback)(_in char*& materialName, _in int opType, _in char*& groupName);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_Callback)(_in char*& materialName, _in int opType);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_Callback)(_in char*& materialName);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_setDynamic_void_ev_bool_Callback)(_in ev_bool dyn);
+			typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getDynamic_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_beginUpdate_void_ev_size_t_Callback)(_in ev_uint64  sectionIndex);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_position_void_CVector3_Callback)(_in const void* pos);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_position_void_Real_Real_Real_Callback)(_in Real x, _in Real y, _in Real z);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_normal_void_CVector3_Callback)(_in const void* norm);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_normal_void_Real_Real_Real_Callback)(_in Real x, _in Real y, _in Real z);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_tangent_void_CVector3_Callback)(_in const void* tan);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_tangent_void_Real_Real_Real_Callback)(_in Real x, _in Real y, _in Real z);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Callback)(_in Real u);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Callback)(_in Real u, _in Real v);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Callback)(_in Real u, _in Real v, _in Real w);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Real_Callback)(_in Real x, _in Real y, _in Real z, _in Real w);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector2_Callback)(_in const void* uv);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector3_Callback)(_in const void* uvw);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector4_Callback)(_in const void* xyzw);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_colour_void_CColourValue_Callback)(_in const void* col);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Real_Callback)(_in Real r, _in Real g, _in Real b, _in Real a);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Callback)(_in Real r, _in Real g, _in Real b);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_index_void_ev_uint32_Callback)(_in ev_uint32 idx);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_triangle_void_ev_uint32_ev_uint32_ev_uint32_Callback)(_in ev_uint32 i1, _in ev_uint32 i2, _in ev_uint32 i3);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_quad_void_ev_uint32_ev_uint32_ev_uint32_ev_uint32_Callback)(_in ev_uint32 i1, _in ev_uint32 i2, _in ev_uint32 i3, _in ev_uint32 i4);
+			typedef ev_uint64   ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getCurrentVertexCount_size_t_Callback)();
+			typedef ev_uint64   ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getCurrentIndexCount_size_t_Callback)();
+			typedef EarthView::World::Graphic::CManualObject::CManualObjectSection*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_end_CManualObjectSection_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_EVString_Callback)(_in ev_uint64  subindex, _in char*& name, _in char*& group);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_Callback)(_in ev_uint64  subindex, _in char*& name);
+			typedef void*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_EVString_Callback)(_in char*& meshName, _in char*& groupName);
+			typedef void*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_Callback)(_in char*& meshName);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_resetTempAreas_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_resizeTempVertexBufferIfNeeded_void_ev_size_t_Callback)(_in ev_uint64  numVerts);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_resizeTempIndexBufferIfNeeded_void_ev_size_t_Callback)(_in ev_uint64  numInds);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_copyTempVertexToBuffer_void_Callback)();
+			typedef const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback)();
+			typedef ev_uint8  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueId_ev_uint8_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid__notifyCreator_void_CMovableObjectFactory_Callback)(_in EarthView::World::Graphic::CMovableObjectFactory* ref_fact);
+			typedef EarthView::World::Graphic::CMovableObjectFactory*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid__getCreator_CMovableObjectFactory_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid__notifyManager_void_CSceneManager_Callback)(_in EarthView::World::Graphic::CSceneManager* ref_mgr);
+			typedef EarthView::World::Graphic::CSceneManager*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid__getManager_CSceneManager_Callback)();
+			typedef char*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getName_EVString_Callback)();
+			typedef char*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getMovableType_EVString_Callback)();
+			typedef EarthView::World::Graphic::CNode*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getParentNode_CNode_Callback)();
+			typedef EarthView::World::Graphic::CSceneNode*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getParentSceneNode_CSceneNode_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_isParentTagPoint_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_ev_bool_Callback)(_in EarthView::World::Graphic::CNode* ref_parent, _in ev_bool isTagPoint);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_Callback)(_in EarthView::World::Graphic::CNode* ref_parent);
+			typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_isAttached_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_detachFromParent_void_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_isInScene_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid__notifyMoved_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid__notifyLightsQueried_void_LightList_Callback)(_in const EarthView::World::Graphic::LightList* lightList);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_setLightQueriedListener_void_CLightQueriedListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CLightQueriedListener* listener);
+			typedef EarthView::World::Graphic::CMovableObject::CLightQueriedListener*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getLightQueriedListener_CLightQueriedListener_Callback)();
+			typedef ev_uint32  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getLightListUpdated_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_setLightListUpdated_void_ev_uint32_Callback)(_in ev_uint32 frame);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid__notifyCurrentCamera_void_CCamera_Callback)(_in EarthView::World::Graphic::CCamera* ref_cam);
+			typedef const void*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getBoundingBox_CAxisAlignedBox_Callback)();
+			typedef Real  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getBoundingRadius_Real_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_ev_bool_Callback)(_in ev_bool derive);
+			typedef const void*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid__updateRenderQueue_void_CRenderQueue_Callback)(_in EarthView::World::Graphic::CRenderQueue* queue);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_setVisible_void_ev_bool_Callback)(_in ev_bool visible);
+			typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getVisible_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_isVisible_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_setRenderingMaxDistance_void_Real_Callback)(_in Real dist);
+			typedef Real  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getRenderingMaxDistance_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinDistance_void_Real_Callback)(_in Real dist);
+			typedef Real  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinDistance_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinPixelSize_void_Real_Callback)(_in Real pixelSize);
+			typedef Real  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinPixelSize_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_setSelectionColour_void_CColourValue_Callback)(_in const void* colour);
+			typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_setSelected_ev_bool_IntVector_Callback)(_in const void* objIndics);
+			typedef void*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getSelected_IntVector_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback)(_in const void* ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out void* point);
+			typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback)(_in const void* aabb, _in ev_bool prepareToRenderSelection, _out void* indexVec);
+			typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback)(_in const void* sphere, _in ev_bool prepareToRenderSelection, _out void* indexVec);
+			typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback)(_in const void* ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out ev_int32& submeshIndex, _out ev_int32& instanceIndex, _out ev_int32& segmentIndex, _out void* point);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_renderSelection_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_clearSelection_void_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_startEditing_ev_bool_ev_uint32_Callback)(_in ev_uint32 objectIndex);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_endEditing_void_Callback)();
+			typedef EarthView::World::Graphic::CEditBoundingBox*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getEditBoundingBox_CEditBoundingBox_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback)(_in ev_uint32 objectIndex, _inout void* matrix);
+			typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback)(_in ev_uint32 objectIndex, _in const void* matrix);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroup_void_ev_uint8_Callback)(_in ev_uint8 queueID);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback)(_in ev_uint8 queueID, _in ev_uint16 priority);
+			typedef ev_uint8  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueGroup_ev_uint8_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid__getParentNodeFullTransform_CMatrix4_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_setQueryFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_addQueryFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_removeQueryFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef ev_uint32  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getQueryFlags_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_setVisibilityFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_addVisibilityFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_removeVisibilityFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef ev_uint32  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getVisibilityFlags_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_addListener_void_CMovableObjectListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* ref_listener);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_removeListener_void_CMovableObjectListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener);
+			typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_existListener_ev_bool_CMovableObjectListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener);
+			typedef ev_uint32  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getListenerCount_ev_uint32_Callback)();
+			typedef EarthView::World::Graphic::CMovableObject::CMovableObjectListener*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getListener_CMovableObjectListener_ev_uint32_Callback)(_in ev_uint32 index);
+			typedef const void*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_queryLights_LightList_Callback)();
+			typedef ev_uint32  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getLightMask_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_setLightMask_void_ev_uint32_Callback)(_in ev_uint32 lightMask);
+			typedef EarthView::World::Graphic::LightList*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid__getLightList_LightList_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_setCastShadows_void_ev_bool_Callback)(_in ev_bool enabled);
+			typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getReceivesShadows_ev_bool_Callback)();
+			typedef ev_uint32  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getTypeFlags_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_ev_bool_Callback)(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_Callback)(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_setDebugDisplayEnabled_void_ev_bool_Callback)(_in ev_bool enabled);
+			typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_isDebugDisplayEnabled_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getCastShadows_ev_bool_Callback)();
+			typedef EarthView::World::Graphic::CEdgeData*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getEdgeList_CEdgeData_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_hasEdgeList_ev_bool_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback)(_in ev_bool derive);
+			typedef const void*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getLightCapBounds_CAxisAlignedBox_Callback)();
+			typedef void*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback)(_in const void* light, _in Real dirLightExtrusionDist);
+			typedef void*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback)(_in int shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDistance, _in ev_uint32 flags);
+			typedef void*  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback)(_in int shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDistance);
+			typedef Real  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_getPointExtrusionDistance_Real_CLight_Callback)(_in const EarthView::World::Graphic::CLight* l);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback)(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const void* lightPos);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback)(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const void* indexBuffer, _in const EarthView::World::Graphic::CLight* light, _inout void* shadowRenderables, _in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Spatial3D_CGlobeGrid_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback)(_inout void* box, _in const void* lightPos, _in Real extrudeDist);
+			class CGlobeGridProxy : public EarthView::World::Spatial3D::CGlobeGrid
+			{
+			private:
+				EarthView_World_Spatial3D_CGlobeGrid_clear_void_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_clear_void_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_estimateVertexCount_void_ev_size_t_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_estimateVertexCount_void_ev_size_t_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_estimateIndexCount_void_ev_size_t_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_estimateIndexCount_void_ev_size_t_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_EVString_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_EVString_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_setDynamic_void_ev_bool_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_setDynamic_void_ev_bool_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getDynamic_ev_bool_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getDynamic_ev_bool_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_beginUpdate_void_ev_size_t_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_beginUpdate_void_ev_size_t_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_position_void_CVector3_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_position_void_CVector3_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_position_void_Real_Real_Real_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_position_void_Real_Real_Real_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_normal_void_CVector3_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_normal_void_CVector3_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_normal_void_Real_Real_Real_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_normal_void_Real_Real_Real_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_tangent_void_CVector3_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_tangent_void_CVector3_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_tangent_void_Real_Real_Real_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_tangent_void_Real_Real_Real_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Real_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Real_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector2_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector2_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector3_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector3_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector4_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector4_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_colour_void_CColourValue_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_colour_void_CColourValue_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Real_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Real_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_index_void_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_index_void_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_triangle_void_ev_uint32_ev_uint32_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_triangle_void_ev_uint32_ev_uint32_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_quad_void_ev_uint32_ev_uint32_ev_uint32_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_quad_void_ev_uint32_ev_uint32_ev_uint32_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getCurrentVertexCount_size_t_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getCurrentVertexCount_size_t_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getCurrentIndexCount_size_t_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getCurrentIndexCount_size_t_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_end_CManualObjectSection_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_end_CManualObjectSection_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_EVString_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_EVString_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_EVString_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_EVString_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_resetTempAreas_void_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_resetTempAreas_void_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_resizeTempVertexBufferIfNeeded_void_ev_size_t_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_resizeTempVertexBufferIfNeeded_void_ev_size_t_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_resizeTempIndexBufferIfNeeded_void_ev_size_t_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_resizeTempIndexBufferIfNeeded_void_ev_size_t_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_copyTempVertexToBuffer_void_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_copyTempVertexToBuffer_void_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueId_ev_uint8_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueId_ev_uint8_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid__notifyCreator_void_CMovableObjectFactory_Callback* m_EarthView_World_Spatial3D_CGlobeGrid__notifyCreator_void_CMovableObjectFactory_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid__getCreator_CMovableObjectFactory_Callback* m_EarthView_World_Spatial3D_CGlobeGrid__getCreator_CMovableObjectFactory_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid__notifyManager_void_CSceneManager_Callback* m_EarthView_World_Spatial3D_CGlobeGrid__notifyManager_void_CSceneManager_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid__getManager_CSceneManager_Callback* m_EarthView_World_Spatial3D_CGlobeGrid__getManager_CSceneManager_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getName_EVString_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getName_EVString_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getMovableType_EVString_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getMovableType_EVString_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getParentNode_CNode_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getParentNode_CNode_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getParentSceneNode_CSceneNode_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getParentSceneNode_CSceneNode_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_isParentTagPoint_ev_bool_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_isParentTagPoint_ev_bool_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_ev_bool_Callback* m_EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_ev_bool_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_Callback* m_EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_isAttached_ev_bool_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_isAttached_ev_bool_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_detachFromParent_void_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_detachFromParent_void_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_isInScene_ev_bool_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_isInScene_ev_bool_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid__notifyMoved_void_Callback* m_EarthView_World_Spatial3D_CGlobeGrid__notifyMoved_void_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid__notifyLightsQueried_void_LightList_Callback* m_EarthView_World_Spatial3D_CGlobeGrid__notifyLightsQueried_void_LightList_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_setLightQueriedListener_void_CLightQueriedListener_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_setLightQueriedListener_void_CLightQueriedListener_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getLightQueriedListener_CLightQueriedListener_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getLightQueriedListener_CLightQueriedListener_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getLightListUpdated_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getLightListUpdated_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_setLightListUpdated_void_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_setLightListUpdated_void_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid__notifyCurrentCamera_void_CCamera_Callback* m_EarthView_World_Spatial3D_CGlobeGrid__notifyCurrentCamera_void_CCamera_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getBoundingBox_CAxisAlignedBox_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getBoundingBox_CAxisAlignedBox_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getBoundingRadius_Real_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getBoundingRadius_Real_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_ev_bool_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_ev_bool_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid__updateRenderQueue_void_CRenderQueue_Callback* m_EarthView_World_Spatial3D_CGlobeGrid__updateRenderQueue_void_CRenderQueue_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_setVisible_void_ev_bool_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_setVisible_void_ev_bool_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getVisible_ev_bool_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getVisible_ev_bool_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_isVisible_ev_bool_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_isVisible_ev_bool_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_setRenderingMaxDistance_void_Real_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMaxDistance_void_Real_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getRenderingMaxDistance_Real_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMaxDistance_Real_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinDistance_void_Real_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinDistance_void_Real_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinDistance_Real_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinDistance_Real_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinPixelSize_void_Real_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinPixelSize_void_Real_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinPixelSize_Real_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinPixelSize_Real_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_setSelectionColour_void_CColourValue_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_setSelectionColour_void_CColourValue_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_setSelected_ev_bool_IntVector_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_setSelected_ev_bool_IntVector_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getSelected_IntVector_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getSelected_IntVector_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_renderSelection_void_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_renderSelection_void_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_clearSelection_void_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_clearSelection_void_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_startEditing_ev_bool_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_startEditing_ev_bool_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_endEditing_void_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_endEditing_void_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getEditBoundingBox_CEditBoundingBox_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getEditBoundingBox_CEditBoundingBox_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroup_void_ev_uint8_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroup_void_ev_uint8_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueGroup_ev_uint8_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueGroup_ev_uint8_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid__getParentNodeFullTransform_CMatrix4_Callback* m_EarthView_World_Spatial3D_CGlobeGrid__getParentNodeFullTransform_CMatrix4_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_setQueryFlags_void_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_setQueryFlags_void_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_addQueryFlags_void_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_addQueryFlags_void_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_removeQueryFlags_void_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_removeQueryFlags_void_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getQueryFlags_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getQueryFlags_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_setVisibilityFlags_void_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_setVisibilityFlags_void_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_addVisibilityFlags_void_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_addVisibilityFlags_void_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_removeVisibilityFlags_void_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_removeVisibilityFlags_void_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getVisibilityFlags_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getVisibilityFlags_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_addListener_void_CMovableObjectListener_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_addListener_void_CMovableObjectListener_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_removeListener_void_CMovableObjectListener_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_removeListener_void_CMovableObjectListener_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_existListener_ev_bool_CMovableObjectListener_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_existListener_ev_bool_CMovableObjectListener_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getListenerCount_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getListenerCount_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getListener_CMovableObjectListener_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getListener_CMovableObjectListener_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_queryLights_LightList_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_queryLights_LightList_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getLightMask_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getLightMask_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_setLightMask_void_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_setLightMask_void_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid__getLightList_LightList_Callback* m_EarthView_World_Spatial3D_CGlobeGrid__getLightList_LightList_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_setCastShadows_void_ev_bool_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_setCastShadows_void_ev_bool_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getReceivesShadows_ev_bool_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getReceivesShadows_ev_bool_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getTypeFlags_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getTypeFlags_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_ev_bool_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_ev_bool_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_setDebugDisplayEnabled_void_ev_bool_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_setDebugDisplayEnabled_void_ev_bool_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_isDebugDisplayEnabled_ev_bool_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_isDebugDisplayEnabled_ev_bool_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getCastShadows_ev_bool_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getCastShadows_ev_bool_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getEdgeList_CEdgeData_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getEdgeList_CEdgeData_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_hasEdgeList_ev_bool_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_hasEdgeList_ev_bool_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getLightCapBounds_CAxisAlignedBox_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getLightCapBounds_CAxisAlignedBox_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_getPointExtrusionDistance_Real_CLight_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_getPointExtrusionDistance_Real_CLight_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback;
+				EarthView_World_Spatial3D_CGlobeGrid_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback* m_EarthView_World_Spatial3D_CGlobeGrid_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback;
+			public:
+				CGlobeGridProxy(EarthView::World::Core::CNameValuePairList *pList) : CGlobeGrid(pList)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_clear_void_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_estimateVertexCount_void_ev_size_t_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_estimateIndexCount_void_ev_size_t_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_EVString_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_setDynamic_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getDynamic_ev_bool_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_beginUpdate_void_ev_size_t_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_position_void_CVector3_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_position_void_Real_Real_Real_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_normal_void_CVector3_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_normal_void_Real_Real_Real_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_tangent_void_CVector3_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_tangent_void_Real_Real_Real_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Real_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector2_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector3_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector4_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_colour_void_CColourValue_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Real_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_index_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_triangle_void_ev_uint32_ev_uint32_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_quad_void_ev_uint32_ev_uint32_ev_uint32_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getCurrentVertexCount_size_t_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getCurrentIndexCount_size_t_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_end_CManualObjectSection_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_EVString_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_EVString_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_resetTempAreas_void_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_resizeTempVertexBufferIfNeeded_void_ev_size_t_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_resizeTempIndexBufferIfNeeded_void_ev_size_t_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_copyTempVertexToBuffer_void_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueId_ev_uint8_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid__notifyCreator_void_CMovableObjectFactory_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid__getCreator_CMovableObjectFactory_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid__notifyManager_void_CSceneManager_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid__getManager_CSceneManager_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getName_EVString_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getMovableType_EVString_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getParentNode_CNode_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getParentSceneNode_CSceneNode_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_isParentTagPoint_ev_bool_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_ev_bool_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_isAttached_ev_bool_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_detachFromParent_void_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_isInScene_ev_bool_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid__notifyMoved_void_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid__notifyLightsQueried_void_LightList_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_setLightQueriedListener_void_CLightQueriedListener_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getLightQueriedListener_CLightQueriedListener_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getLightListUpdated_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_setLightListUpdated_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid__notifyCurrentCamera_void_CCamera_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getBoundingBox_CAxisAlignedBox_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getBoundingRadius_Real_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_ev_bool_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid__updateRenderQueue_void_CRenderQueue_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_setVisible_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getVisible_ev_bool_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_isVisible_ev_bool_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMaxDistance_void_Real_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMaxDistance_Real_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinDistance_void_Real_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinDistance_Real_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinPixelSize_void_Real_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinPixelSize_Real_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_setSelectionColour_void_CColourValue_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_setSelected_ev_bool_IntVector_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getSelected_IntVector_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_renderSelection_void_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_clearSelection_void_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_startEditing_ev_bool_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_endEditing_void_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getEditBoundingBox_CEditBoundingBox_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroup_void_ev_uint8_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueGroup_ev_uint8_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid__getParentNodeFullTransform_CMatrix4_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_setQueryFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_addQueryFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_removeQueryFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getQueryFlags_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_setVisibilityFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_addVisibilityFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_removeVisibilityFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getVisibilityFlags_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_addListener_void_CMovableObjectListener_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_removeListener_void_CMovableObjectListener_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_existListener_ev_bool_CMovableObjectListener_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getListenerCount_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getListener_CMovableObjectListener_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_queryLights_LightList_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getLightMask_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_setLightMask_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid__getLightList_LightList_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_setCastShadows_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getReceivesShadows_ev_bool_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getTypeFlags_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_ev_bool_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_setDebugDisplayEnabled_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_isDebugDisplayEnabled_ev_bool_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getCastShadows_ev_bool_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getEdgeList_CEdgeData_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_hasEdgeList_ev_bool_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getLightCapBounds_CAxisAlignedBox_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_getPointExtrusionDistance_Real_CLight_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback = NULL;
+					m_EarthView_World_Spatial3D_CGlobeGrid_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_clear_void(EarthView_World_Spatial3D_CGlobeGrid_clear_void_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_clear_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_estimateVertexCount_void_ev_size_t(EarthView_World_Spatial3D_CGlobeGrid_estimateVertexCount_void_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_estimateVertexCount_void_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_estimateIndexCount_void_ev_size_t(EarthView_World_Spatial3D_CGlobeGrid_estimateIndexCount_void_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_estimateIndexCount_void_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_EVString(EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType(EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString(EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setDynamic_void_ev_bool(EarthView_World_Spatial3D_CGlobeGrid_setDynamic_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_setDynamic_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getDynamic_ev_bool(EarthView_World_Spatial3D_CGlobeGrid_getDynamic_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getDynamic_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_beginUpdate_void_ev_size_t(EarthView_World_Spatial3D_CGlobeGrid_beginUpdate_void_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_beginUpdate_void_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_position_void_CVector3(EarthView_World_Spatial3D_CGlobeGrid_position_void_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_position_void_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_position_void_Real_Real_Real(EarthView_World_Spatial3D_CGlobeGrid_position_void_Real_Real_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_position_void_Real_Real_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_normal_void_CVector3(EarthView_World_Spatial3D_CGlobeGrid_normal_void_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_normal_void_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_normal_void_Real_Real_Real(EarthView_World_Spatial3D_CGlobeGrid_normal_void_Real_Real_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_normal_void_Real_Real_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_tangent_void_CVector3(EarthView_World_Spatial3D_CGlobeGrid_tangent_void_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_tangent_void_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_tangent_void_Real_Real_Real(EarthView_World_Spatial3D_CGlobeGrid_tangent_void_Real_Real_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_tangent_void_Real_Real_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real(EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real(EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real(EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Real(EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector2(EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector2_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector2_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector3(EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector4(EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector4_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_colour_void_CColourValue(EarthView_World_Spatial3D_CGlobeGrid_colour_void_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_colour_void_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Real(EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real(EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_index_void_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_index_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_index_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_triangle_void_ev_uint32_ev_uint32_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_triangle_void_ev_uint32_ev_uint32_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_triangle_void_ev_uint32_ev_uint32_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_quad_void_ev_uint32_ev_uint32_ev_uint32_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_quad_void_ev_uint32_ev_uint32_ev_uint32_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_quad_void_ev_uint32_ev_uint32_ev_uint32_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getCurrentVertexCount_size_t(EarthView_World_Spatial3D_CGlobeGrid_getCurrentVertexCount_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getCurrentVertexCount_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getCurrentIndexCount_size_t(EarthView_World_Spatial3D_CGlobeGrid_getCurrentIndexCount_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getCurrentIndexCount_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_end_CManualObjectSection(EarthView_World_Spatial3D_CGlobeGrid_end_CManualObjectSection_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_end_CManualObjectSection_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_EVString(EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString(EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_EVString(EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString(EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_resetTempAreas_void(EarthView_World_Spatial3D_CGlobeGrid_resetTempAreas_void_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_resetTempAreas_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_resizeTempVertexBufferIfNeeded_void_ev_size_t(EarthView_World_Spatial3D_CGlobeGrid_resizeTempVertexBufferIfNeeded_void_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_resizeTempVertexBufferIfNeeded_void_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_resizeTempIndexBufferIfNeeded_void_ev_size_t(EarthView_World_Spatial3D_CGlobeGrid_resizeTempIndexBufferIfNeeded_void_ev_size_t_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_resizeTempIndexBufferIfNeeded_void_ev_size_t_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_copyTempVertexToBuffer_void(EarthView_World_Spatial3D_CGlobeGrid_copyTempVertexToBuffer_void_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_copyTempVertexToBuffer_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getAnimableObjectPtr_CMovableObjectInternalAnimableObject(EarthView_World_Spatial3D_CGlobeGrid_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueId_ev_uint8(EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueId_ev_uint8_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueId_ev_uint8_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyCreator_void_CMovableObjectFactory(EarthView_World_Spatial3D_CGlobeGrid__notifyCreator_void_CMovableObjectFactory_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid__notifyCreator_void_CMovableObjectFactory_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid__getCreator_CMovableObjectFactory(EarthView_World_Spatial3D_CGlobeGrid__getCreator_CMovableObjectFactory_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid__getCreator_CMovableObjectFactory_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyManager_void_CSceneManager(EarthView_World_Spatial3D_CGlobeGrid__notifyManager_void_CSceneManager_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid__notifyManager_void_CSceneManager_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid__getManager_CSceneManager(EarthView_World_Spatial3D_CGlobeGrid__getManager_CSceneManager_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid__getManager_CSceneManager_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getName_EVString(EarthView_World_Spatial3D_CGlobeGrid_getName_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getName_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getMovableType_EVString(EarthView_World_Spatial3D_CGlobeGrid_getMovableType_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getMovableType_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getParentNode_CNode(EarthView_World_Spatial3D_CGlobeGrid_getParentNode_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getParentNode_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getParentSceneNode_CSceneNode(EarthView_World_Spatial3D_CGlobeGrid_getParentSceneNode_CSceneNode_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getParentSceneNode_CSceneNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_isParentTagPoint_ev_bool(EarthView_World_Spatial3D_CGlobeGrid_isParentTagPoint_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_isParentTagPoint_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_ev_bool(EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode(EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_isAttached_ev_bool(EarthView_World_Spatial3D_CGlobeGrid_isAttached_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_isAttached_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_detachFromParent_void(EarthView_World_Spatial3D_CGlobeGrid_detachFromParent_void_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_detachFromParent_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_isInScene_ev_bool(EarthView_World_Spatial3D_CGlobeGrid_isInScene_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_isInScene_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyMoved_void(EarthView_World_Spatial3D_CGlobeGrid__notifyMoved_void_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid__notifyMoved_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyLightsQueried_void_LightList(EarthView_World_Spatial3D_CGlobeGrid__notifyLightsQueried_void_LightList_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid__notifyLightsQueried_void_LightList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setLightQueriedListener_void_CLightQueriedListener(EarthView_World_Spatial3D_CGlobeGrid_setLightQueriedListener_void_CLightQueriedListener_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_setLightQueriedListener_void_CLightQueriedListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getLightQueriedListener_CLightQueriedListener(EarthView_World_Spatial3D_CGlobeGrid_getLightQueriedListener_CLightQueriedListener_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getLightQueriedListener_CLightQueriedListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getLightListUpdated_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_getLightListUpdated_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getLightListUpdated_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setLightListUpdated_void_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_setLightListUpdated_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_setLightListUpdated_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyCurrentCamera_void_CCamera(EarthView_World_Spatial3D_CGlobeGrid__notifyCurrentCamera_void_CCamera_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid__notifyCurrentCamera_void_CCamera_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getBoundingBox_CAxisAlignedBox(EarthView_World_Spatial3D_CGlobeGrid_getBoundingBox_CAxisAlignedBox_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getBoundingBox_CAxisAlignedBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getBoundingRadius_Real(EarthView_World_Spatial3D_CGlobeGrid_getBoundingRadius_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getBoundingRadius_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_ev_bool(EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere(EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid__updateRenderQueue_void_CRenderQueue(EarthView_World_Spatial3D_CGlobeGrid__updateRenderQueue_void_CRenderQueue_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid__updateRenderQueue_void_CRenderQueue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setVisible_void_ev_bool(EarthView_World_Spatial3D_CGlobeGrid_setVisible_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_setVisible_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getVisible_ev_bool(EarthView_World_Spatial3D_CGlobeGrid_getVisible_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getVisible_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_isVisible_ev_bool(EarthView_World_Spatial3D_CGlobeGrid_isVisible_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_isVisible_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMaxDistance_void_Real(EarthView_World_Spatial3D_CGlobeGrid_setRenderingMaxDistance_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMaxDistance_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMaxDistance_Real(EarthView_World_Spatial3D_CGlobeGrid_getRenderingMaxDistance_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMaxDistance_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinDistance_void_Real(EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinDistance_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinDistance_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinDistance_Real(EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinDistance_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinDistance_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinPixelSize_void_Real(EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinPixelSize_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinPixelSize_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinPixelSize_Real(EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinPixelSize_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinPixelSize_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setSelectionColour_void_CColourValue(EarthView_World_Spatial3D_CGlobeGrid_setSelectionColour_void_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_setSelectionColour_void_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setSelected_ev_bool_IntVector(EarthView_World_Spatial3D_CGlobeGrid_setSelected_ev_bool_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_setSelected_ev_bool_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getSelected_IntVector(EarthView_World_Spatial3D_CGlobeGrid_getSelected_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getSelected_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3(EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector(EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CSphere_ev_bool_IntVector(EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3(EarthView_World_Spatial3D_CGlobeGrid_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_renderSelection_void(EarthView_World_Spatial3D_CGlobeGrid_renderSelection_void_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_renderSelection_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_clearSelection_void(EarthView_World_Spatial3D_CGlobeGrid_clearSelection_void_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_clearSelection_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_startEditing_ev_bool_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_startEditing_ev_bool_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_startEditing_ev_bool_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_endEditing_void(EarthView_World_Spatial3D_CGlobeGrid_endEditing_void_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_endEditing_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getEditBoundingBox_CEditBoundingBox(EarthView_World_Spatial3D_CGlobeGrid_getEditBoundingBox_CEditBoundingBox_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getEditBoundingBox_CEditBoundingBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(EarthView_World_Spatial3D_CGlobeGrid_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(EarthView_World_Spatial3D_CGlobeGrid_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroup_void_ev_uint8(EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroup_void_ev_uint8_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroup_void_ev_uint8_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16(EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueGroup_ev_uint8(EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueGroup_ev_uint8_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueGroup_ev_uint8_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid__getParentNodeFullTransform_CMatrix4(EarthView_World_Spatial3D_CGlobeGrid__getParentNodeFullTransform_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid__getParentNodeFullTransform_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setQueryFlags_void_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_setQueryFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_setQueryFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_addQueryFlags_void_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_addQueryFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_addQueryFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_removeQueryFlags_void_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_removeQueryFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_removeQueryFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getQueryFlags_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_getQueryFlags_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getQueryFlags_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setVisibilityFlags_void_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_setVisibilityFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_setVisibilityFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_addVisibilityFlags_void_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_addVisibilityFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_addVisibilityFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_removeVisibilityFlags_void_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_removeVisibilityFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_removeVisibilityFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getVisibilityFlags_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_getVisibilityFlags_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getVisibilityFlags_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_addListener_void_CMovableObjectListener(EarthView_World_Spatial3D_CGlobeGrid_addListener_void_CMovableObjectListener_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_addListener_void_CMovableObjectListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_removeListener_void_CMovableObjectListener(EarthView_World_Spatial3D_CGlobeGrid_removeListener_void_CMovableObjectListener_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_removeListener_void_CMovableObjectListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_existListener_ev_bool_CMovableObjectListener(EarthView_World_Spatial3D_CGlobeGrid_existListener_ev_bool_CMovableObjectListener_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_existListener_ev_bool_CMovableObjectListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getListenerCount_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_getListenerCount_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getListenerCount_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getListener_CMovableObjectListener_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_getListener_CMovableObjectListener_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getListener_CMovableObjectListener_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_queryLights_LightList(EarthView_World_Spatial3D_CGlobeGrid_queryLights_LightList_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_queryLights_LightList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getLightMask_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_getLightMask_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getLightMask_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setLightMask_void_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_setLightMask_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_setLightMask_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid__getLightList_LightList(EarthView_World_Spatial3D_CGlobeGrid__getLightList_LightList_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid__getLightList_LightList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setCastShadows_void_ev_bool(EarthView_World_Spatial3D_CGlobeGrid_setCastShadows_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_setCastShadows_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getReceivesShadows_ev_bool(EarthView_World_Spatial3D_CGlobeGrid_getReceivesShadows_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getReceivesShadows_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getTypeFlags_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_getTypeFlags_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getTypeFlags_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_ev_bool(EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor(EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setDebugDisplayEnabled_void_ev_bool(EarthView_World_Spatial3D_CGlobeGrid_setDebugDisplayEnabled_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_setDebugDisplayEnabled_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_isDebugDisplayEnabled_ev_bool(EarthView_World_Spatial3D_CGlobeGrid_isDebugDisplayEnabled_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_isDebugDisplayEnabled_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getCastShadows_ev_bool(EarthView_World_Spatial3D_CGlobeGrid_getCastShadows_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getCastShadows_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getEdgeList_CEdgeData(EarthView_World_Spatial3D_CGlobeGrid_getEdgeList_CEdgeData_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getEdgeList_CEdgeData_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_hasEdgeList_ev_bool(EarthView_World_Spatial3D_CGlobeGrid_hasEdgeList_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_hasEdgeList_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_ev_bool(EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox(EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getLightCapBounds_CAxisAlignedBox(EarthView_World_Spatial3D_CGlobeGrid_getLightCapBounds_CAxisAlignedBox_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getLightCapBounds_CAxisAlignedBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getDarkCapBounds_CAxisAlignedBox_CLight_Real(EarthView_World_Spatial3D_CGlobeGrid_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real(EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getPointExtrusionDistance_Real_CLight(EarthView_World_Spatial3D_CGlobeGrid_getPointExtrusionDistance_Real_CLight_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_getPointExtrusionDistance_Real_CLight_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_updateEdgeListLightFacing_void_CEdgeData_CVector4(EarthView_World_Spatial3D_CGlobeGrid_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32(EarthView_World_Spatial3D_CGlobeGrid_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Spatial3D_CGlobeGrid_extrudeBounds_void_CAxisAlignedBox_CVector4_Real(EarthView_World_Spatial3D_CGlobeGrid_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Spatial3D_CGlobeGrid_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback = pCallback;
+				}
+				virtual EVString getMovableType() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getMovableType_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getMovableType_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getMovableType();
+				}
+				virtual void clear()
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_clear_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_clear_void_Callback();
+					}
+					else
+						return this->CGlobeGrid::clear();
+				}
+				virtual void _updateRenderQueue(_in EarthView::World::Graphic::CRenderQueue* queue)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid__updateRenderQueue_void_CRenderQueue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid__updateRenderQueue_void_CRenderQueue_Callback(queue);
+					}
+					else
+						return this->CGlobeGrid::_updateRenderQueue(queue);
+				}
+				virtual void visitRenderables(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_ev_bool_Callback(visitor, debugRenderables);
+					}
+					else
+						return this->CGlobeGrid::visitRenderables(visitor, debugRenderables);
+				}
+				virtual void visitRenderables(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_Callback(visitor);
+					}
+					else
+						return this->CGlobeGrid::visitRenderables(visitor);
+				}
+				virtual void estimateVertexCount(_in ev_size_t vcount)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_estimateVertexCount_void_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_estimateVertexCount_void_ev_size_t_Callback(vcount);
+					}
+					else
+						return this->CGlobeGrid::estimateVertexCount(vcount);
+				}
+				virtual void estimateIndexCount(_in ev_size_t icount)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_estimateIndexCount_void_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_estimateIndexCount_void_ev_size_t_Callback(icount);
+					}
+					else
+						return this->CGlobeGrid::estimateIndexCount(icount);
+				}
+				virtual void begin(_in const EVString& materialName, _in EarthView::World::Graphic::CRenderOperation::OperationType opType, _in const EVString& groupName)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* materialName_Char = materialName.makeBuffer();
+						char* groupName_Char = groupName.makeBuffer();
+						m_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_EVString_Callback(materialName_Char, (int)opType, groupName_Char);
+					}
+					else
+						return this->CGlobeGrid::begin(materialName, opType, groupName);
+				}
+				virtual void begin(_in const EVString& materialName, _in EarthView::World::Graphic::CRenderOperation::OperationType opType)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_Callback != NULL && this->isCustomExtend())
+					{
+						char* materialName_Char = materialName.makeBuffer();
+						m_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_Callback(materialName_Char, (int)opType);
+					}
+					else
+						return this->CGlobeGrid::begin(materialName, opType);
+				}
+				virtual void begin(_in const EVString& materialName)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* materialName_Char = materialName.makeBuffer();
+						m_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_Callback(materialName_Char);
+					}
+					else
+						return this->CGlobeGrid::begin(materialName);
+				}
+				virtual void setDynamic(_in ev_bool dyn)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_setDynamic_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_setDynamic_void_ev_bool_Callback(dyn);
+					}
+					else
+						return this->CGlobeGrid::setDynamic(dyn);
+				}
+				virtual ev_bool getDynamic() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getDynamic_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getDynamic_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getDynamic();
+				}
+				virtual void beginUpdate(_in ev_size_t sectionIndex)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_beginUpdate_void_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_beginUpdate_void_ev_size_t_Callback(sectionIndex);
+					}
+					else
+						return this->CGlobeGrid::beginUpdate(sectionIndex);
+				}
+				virtual void position(_in const EarthView::World::Spatial::Math::CVector3& pos)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_position_void_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_position_void_CVector3_Callback(&pos);
+					}
+					else
+						return this->CGlobeGrid::position(pos);
+				}
+				virtual void position(_in Real x, _in Real y, _in Real z)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_position_void_Real_Real_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_position_void_Real_Real_Real_Callback(x, y, z);
+					}
+					else
+						return this->CGlobeGrid::position(x, y, z);
+				}
+				virtual void normal(_in const EarthView::World::Spatial::Math::CVector3& norm)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_normal_void_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_normal_void_CVector3_Callback(&norm);
+					}
+					else
+						return this->CGlobeGrid::normal(norm);
+				}
+				virtual void normal(_in Real x, _in Real y, _in Real z)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_normal_void_Real_Real_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_normal_void_Real_Real_Real_Callback(x, y, z);
+					}
+					else
+						return this->CGlobeGrid::normal(x, y, z);
+				}
+				virtual void tangent(_in const EarthView::World::Spatial::Math::CVector3& tan)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_tangent_void_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_tangent_void_CVector3_Callback(&tan);
+					}
+					else
+						return this->CGlobeGrid::tangent(tan);
+				}
+				virtual void tangent(_in Real x, _in Real y, _in Real z)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_tangent_void_Real_Real_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_tangent_void_Real_Real_Real_Callback(x, y, z);
+					}
+					else
+						return this->CGlobeGrid::tangent(x, y, z);
+				}
+				virtual void textureCoord(_in Real u)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Callback(u);
+					}
+					else
+						return this->CGlobeGrid::textureCoord(u);
+				}
+				virtual void textureCoord(_in Real u, _in Real v)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Callback(u, v);
+					}
+					else
+						return this->CGlobeGrid::textureCoord(u, v);
+				}
+				virtual void textureCoord(_in Real u, _in Real v, _in Real w)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Callback(u, v, w);
+					}
+					else
+						return this->CGlobeGrid::textureCoord(u, v, w);
+				}
+				virtual void textureCoord(_in Real x, _in Real y, _in Real z, _in Real w)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Real_Callback(x, y, z, w);
+					}
+					else
+						return this->CGlobeGrid::textureCoord(x, y, z, w);
+				}
+				virtual void textureCoord(_in const EarthView::World::Spatial::Math::CVector2& uv)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector2_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector2_Callback(&uv);
+					}
+					else
+						return this->CGlobeGrid::textureCoord(uv);
+				}
+				virtual void textureCoord(_in const EarthView::World::Spatial::Math::CVector3& uvw)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector3_Callback(&uvw);
+					}
+					else
+						return this->CGlobeGrid::textureCoord(uvw);
+				}
+				virtual void textureCoord(_in const EarthView::World::Spatial::Math::CVector4& xyzw)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector4_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector4_Callback(&xyzw);
+					}
+					else
+						return this->CGlobeGrid::textureCoord(xyzw);
+				}
+				virtual void colour(_in const EarthView::World::Graphic::CColourValue& col)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_colour_void_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_colour_void_CColourValue_Callback(&col);
+					}
+					else
+						return this->CGlobeGrid::colour(col);
+				}
+				virtual void colour(_in Real r, _in Real g, _in Real b, _in Real a)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Real_Callback(r, g, b, a);
+					}
+					else
+						return this->CGlobeGrid::colour(r, g, b, a);
+				}
+				virtual void colour(_in Real r, _in Real g, _in Real b)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Callback(r, g, b);
+					}
+					else
+						return this->CGlobeGrid::colour(r, g, b);
+				}
+				virtual void index(_in ev_uint32 idx)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_index_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_index_void_ev_uint32_Callback(idx);
+					}
+					else
+						return this->CGlobeGrid::index(idx);
+				}
+				virtual void triangle(_in ev_uint32 i1, _in ev_uint32 i2, _in ev_uint32 i3)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_triangle_void_ev_uint32_ev_uint32_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_triangle_void_ev_uint32_ev_uint32_ev_uint32_Callback(i1, i2, i3);
+					}
+					else
+						return this->CGlobeGrid::triangle(i1, i2, i3);
+				}
+				virtual void quad(_in ev_uint32 i1, _in ev_uint32 i2, _in ev_uint32 i3, _in ev_uint32 i4)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_quad_void_ev_uint32_ev_uint32_ev_uint32_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_quad_void_ev_uint32_ev_uint32_ev_uint32_ev_uint32_Callback(i1, i2, i3, i4);
+					}
+					else
+						return this->CGlobeGrid::quad(i1, i2, i3, i4);
+				}
+				virtual size_t getCurrentVertexCount() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getCurrentVertexCount_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						size_t returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getCurrentVertexCount_size_t_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getCurrentVertexCount();
+				}
+				virtual size_t getCurrentIndexCount() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getCurrentIndexCount_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						size_t returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getCurrentIndexCount_size_t_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getCurrentIndexCount();
+				}
+				virtual EarthView::World::Graphic::CManualObject::CManualObjectSection* end()
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_end_CManualObjectSection_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CManualObject::CManualObjectSection* returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_end_CManualObjectSection_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::end();
+				}
+				virtual void setMaterialName(_in ev_size_t subindex, _in const EVString& name, _in const EVString& group)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						char* group_Char = group.makeBuffer();
+						m_EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_EVString_Callback(subindex, name_Char, group_Char);
+					}
+					else
+						return this->CGlobeGrid::setMaterialName(subindex, name, group);
+				}
+				virtual void setMaterialName(_in ev_size_t subindex, _in const EVString& name)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						m_EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_Callback(subindex, name_Char);
+					}
+					else
+						return this->CGlobeGrid::setMaterialName(subindex, name);
+				}
+				virtual EarthView::World::Graphic::CMeshPtr convertToMesh(_in const EVString& meshName, _in const EVString& groupName)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* meshName_Char = meshName.makeBuffer();
+						char* groupName_Char = groupName.makeBuffer();
+						EarthView::World::Graphic::CMeshPtr returnValue = *(EarthView::World::Graphic::CMeshPtr*)m_EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_EVString_Callback(meshName_Char, groupName_Char);
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::convertToMesh(meshName, groupName);
+				}
+				virtual EarthView::World::Graphic::CMeshPtr convertToMesh(_in const EVString& meshName)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* meshName_Char = meshName.makeBuffer();
+						EarthView::World::Graphic::CMeshPtr returnValue = *(EarthView::World::Graphic::CMeshPtr*)m_EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_Callback(meshName_Char);
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::convertToMesh(meshName);
+				}
+				virtual void setSelectionColour(_in const EarthView::World::Graphic::CColourValue& colour)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_setSelectionColour_void_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_setSelectionColour_void_CColourValue_Callback(&colour);
+					}
+					else
+						return this->CGlobeGrid::setSelectionColour(colour);
+				}
+				virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CRay& ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out EarthView::World::Spatial::Math::CVector3& point)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback(&ray, viewport, prepareToRenderSelection, objIndex, &point);
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::selectBy(ray, viewport, prepareToRenderSelection, objIndex, point);
+				}
+				virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CAxisAlignedBox& aabb, _in ev_bool prepareToRenderSelection, _out EarthView::World::Core::IntVector& indexVec)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback(&aabb, prepareToRenderSelection, &indexVec);
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::selectBy(aabb, prepareToRenderSelection, indexVec);
+				}
+				virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CSphere& sphere, _in ev_bool prepareToRenderSelection, _out EarthView::World::Core::IntVector& indexVec)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback(&sphere, prepareToRenderSelection, &indexVec);
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::selectBy(sphere, prepareToRenderSelection, indexVec);
+				}
+				virtual ev_bool selectComponentBy(_in const EarthView::World::Spatial::Math::CRay& ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out ev_int32& submeshIndex, _out ev_int32& instanceIndex, _out ev_int32& segmentIndex, _out EarthView::World::Spatial::Math::CVector3& point)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback(&ray, viewport, prepareToRenderSelection, objIndex, submeshIndex, instanceIndex, segmentIndex, &point);
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::selectComponentBy(ray, viewport, prepareToRenderSelection, objIndex, submeshIndex, instanceIndex, segmentIndex, point);
+				}
+				virtual void renderSelection()
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_renderSelection_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_renderSelection_void_Callback();
+					}
+					else
+						return this->CGlobeGrid::renderSelection();
+				}
+				virtual void clearSelection()
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_clearSelection_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_clearSelection_void_Callback();
+					}
+					else
+						return this->CGlobeGrid::clearSelection();
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getBoundingBox() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getBoundingBox_CAxisAlignedBox_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Spatial3D_CGlobeGrid_getBoundingBox_CAxisAlignedBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getBoundingBox();
+				}
+				virtual Real getBoundingRadius() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getBoundingRadius_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getBoundingRadius_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getBoundingRadius();
+				}
+				virtual EarthView::World::Graphic::CEdgeData* getEdgeList()
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getEdgeList_CEdgeData_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CEdgeData* returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getEdgeList_CEdgeData_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getEdgeList();
+				}
+				virtual ev_bool hasEdgeList()
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_hasEdgeList_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_hasEdgeList_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::hasEdgeList();
+				}
+				virtual EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator getShadowVolumeRenderableIterator(_in EarthView::World::Graphic::ShadowTechnique shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDist, _in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator returnValue = *(EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator*)m_EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback((int)shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist, flags);
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getShadowVolumeRenderableIterator(shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist, flags);
+				}
+				virtual EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator getShadowVolumeRenderableIterator(_in EarthView::World::Graphic::ShadowTechnique shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDist)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator returnValue = *(EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator*)m_EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback((int)shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist);
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getShadowVolumeRenderableIterator(shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist);
+				}
+				virtual void resetTempAreas()
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_resetTempAreas_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_resetTempAreas_void_Callback();
+					}
+					else
+						return this->CGlobeGrid::resetTempAreas();
+				}
+				virtual void resizeTempVertexBufferIfNeeded(_in ev_size_t numVerts)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_resizeTempVertexBufferIfNeeded_void_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_resizeTempVertexBufferIfNeeded_void_ev_size_t_Callback(numVerts);
+					}
+					else
+						return this->CGlobeGrid::resizeTempVertexBufferIfNeeded(numVerts);
+				}
+				virtual void resizeTempIndexBufferIfNeeded(_in ev_size_t numInds)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_resizeTempIndexBufferIfNeeded_void_ev_size_t_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_resizeTempIndexBufferIfNeeded_void_ev_size_t_Callback(numInds);
+					}
+					else
+						return this->CGlobeGrid::resizeTempIndexBufferIfNeeded(numInds);
+				}
+				virtual void copyTempVertexToBuffer()
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_copyTempVertexToBuffer_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_copyTempVertexToBuffer_void_Callback();
+					}
+					else
+						return this->CGlobeGrid::copyTempVertexToBuffer();
+				}
+				virtual const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject* getAnimableObjectPtr()
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject* returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getAnimableObjectPtr();
+				}
+				virtual ev_uint8 getRenderQueueId() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueId_ev_uint8_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint8 returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueId_ev_uint8_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getRenderQueueId();
+				}
+				virtual void _notifyCreator(_in EarthView::World::Graphic::CMovableObjectFactory* ref_fact)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid__notifyCreator_void_CMovableObjectFactory_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid__notifyCreator_void_CMovableObjectFactory_Callback(ref_fact);
+					}
+					else
+						return this->CGlobeGrid::_notifyCreator(ref_fact);
+				}
+				virtual EarthView::World::Graphic::CMovableObjectFactory* _getCreator() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid__getCreator_CMovableObjectFactory_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CMovableObjectFactory* returnValue = m_EarthView_World_Spatial3D_CGlobeGrid__getCreator_CMovableObjectFactory_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::_getCreator();
+				}
+				virtual void _notifyManager(_in EarthView::World::Graphic::CSceneManager* ref_mgr)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid__notifyManager_void_CSceneManager_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid__notifyManager_void_CSceneManager_Callback(ref_mgr);
+					}
+					else
+						return this->CGlobeGrid::_notifyManager(ref_mgr);
+				}
+				virtual EarthView::World::Graphic::CSceneManager* _getManager() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid__getManager_CSceneManager_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CSceneManager* returnValue = m_EarthView_World_Spatial3D_CGlobeGrid__getManager_CSceneManager_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::_getManager();
+				}
+				virtual EVString getName() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getName_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getName_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getName();
+				}
+				virtual EarthView::World::Graphic::CNode* getParentNode() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getParentNode_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CNode* returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getParentNode_CNode_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getParentNode();
+				}
+				virtual EarthView::World::Graphic::CSceneNode* getParentSceneNode() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getParentSceneNode_CSceneNode_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CSceneNode* returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getParentSceneNode_CSceneNode_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getParentSceneNode();
+				}
+				virtual ev_bool isParentTagPoint() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_isParentTagPoint_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_isParentTagPoint_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::isParentTagPoint();
+				}
+				virtual void _notifyAttached(_in EarthView::World::Graphic::CNode* ref_parent, _in ev_bool isTagPoint)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_ev_bool_Callback(ref_parent, isTagPoint);
+					}
+					else
+						return this->CGlobeGrid::_notifyAttached(ref_parent, isTagPoint);
+				}
+				virtual void _notifyAttached(_in EarthView::World::Graphic::CNode* ref_parent)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_Callback(ref_parent);
+					}
+					else
+						return this->CGlobeGrid::_notifyAttached(ref_parent);
+				}
+				virtual ev_bool isAttached() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_isAttached_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_isAttached_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::isAttached();
+				}
+				virtual void detachFromParent()
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_detachFromParent_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_detachFromParent_void_Callback();
+					}
+					else
+						return this->CGlobeGrid::detachFromParent();
+				}
+				virtual ev_bool isInScene() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_isInScene_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_isInScene_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::isInScene();
+				}
+				virtual void _notifyMoved()
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid__notifyMoved_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid__notifyMoved_void_Callback();
+					}
+					else
+						return this->CGlobeGrid::_notifyMoved();
+				}
+				virtual void _notifyLightsQueried(_in const EarthView::World::Graphic::LightList* lightList)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid__notifyLightsQueried_void_LightList_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid__notifyLightsQueried_void_LightList_Callback(lightList);
+					}
+					else
+						return this->CGlobeGrid::_notifyLightsQueried(lightList);
+				}
+				virtual void setLightQueriedListener(_in EarthView::World::Graphic::CMovableObject::CLightQueriedListener* listener)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_setLightQueriedListener_void_CLightQueriedListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_setLightQueriedListener_void_CLightQueriedListener_Callback(listener);
+					}
+					else
+						return this->CGlobeGrid::setLightQueriedListener(listener);
+				}
+				virtual EarthView::World::Graphic::CMovableObject::CLightQueriedListener* getLightQueriedListener()
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getLightQueriedListener_CLightQueriedListener_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CMovableObject::CLightQueriedListener* returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getLightQueriedListener_CLightQueriedListener_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getLightQueriedListener();
+				}
+				virtual ev_uint32 getLightListUpdated() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getLightListUpdated_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getLightListUpdated_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getLightListUpdated();
+				}
+				virtual void setLightListUpdated(_in ev_uint32 frame)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_setLightListUpdated_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_setLightListUpdated_void_ev_uint32_Callback(frame);
+					}
+					else
+						return this->CGlobeGrid::setLightListUpdated(frame);
+				}
+				virtual void _notifyCurrentCamera(_in EarthView::World::Graphic::CCamera* ref_cam)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid__notifyCurrentCamera_void_CCamera_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid__notifyCurrentCamera_void_CCamera_Callback(ref_cam);
+					}
+					else
+						return this->CGlobeGrid::_notifyCurrentCamera(ref_cam);
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getWorldBoundingBox(_in ev_bool derive) const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback(derive);
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getWorldBoundingBox(derive);
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getWorldBoundingBox() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getWorldBoundingBox();
+				}
+				virtual const EarthView::World::Spatial::Math::CSphere& getWorldBoundingSphere(_in ev_bool derive) const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CSphere& returnValue = *(EarthView::World::Spatial::Math::CSphere*)m_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_ev_bool_Callback(derive);
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getWorldBoundingSphere(derive);
+				}
+				virtual const EarthView::World::Spatial::Math::CSphere& getWorldBoundingSphere() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CSphere& returnValue = *(EarthView::World::Spatial::Math::CSphere*)m_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getWorldBoundingSphere();
+				}
+				virtual void setVisible(_in ev_bool visible)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_setVisible_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_setVisible_void_ev_bool_Callback(visible);
+					}
+					else
+						return this->CGlobeGrid::setVisible(visible);
+				}
+				virtual ev_bool getVisible() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getVisible_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getVisible_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getVisible();
+				}
+				virtual ev_bool isVisible() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_isVisible_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_isVisible_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::isVisible();
+				}
+				virtual void setRenderingMaxDistance(_in Real dist)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMaxDistance_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMaxDistance_void_Real_Callback(dist);
+					}
+					else
+						return this->CGlobeGrid::setRenderingMaxDistance(dist);
+				}
+				virtual Real getRenderingMaxDistance() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMaxDistance_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMaxDistance_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getRenderingMaxDistance();
+				}
+				virtual void setRenderingMinDistance(_in Real dist)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinDistance_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinDistance_void_Real_Callback(dist);
+					}
+					else
+						return this->CGlobeGrid::setRenderingMinDistance(dist);
+				}
+				virtual Real getRenderingMinDistance() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinDistance_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinDistance_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getRenderingMinDistance();
+				}
+				virtual void setRenderingMinPixelSize(_in Real pixelSize)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinPixelSize_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinPixelSize_void_Real_Callback(pixelSize);
+					}
+					else
+						return this->CGlobeGrid::setRenderingMinPixelSize(pixelSize);
+				}
+				virtual Real getRenderingMinPixelSize() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinPixelSize_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinPixelSize_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getRenderingMinPixelSize();
+				}
+				virtual ev_bool setSelected(_in const EarthView::World::Core::IntVector& objIndics)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_setSelected_ev_bool_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_setSelected_ev_bool_IntVector_Callback(&objIndics);
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::setSelected(objIndics);
+				}
+				virtual EarthView::World::Core::IntVector getSelected() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getSelected_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Core::IntVector returnValue = *(EarthView::World::Core::IntVector*)m_EarthView_World_Spatial3D_CGlobeGrid_getSelected_IntVector_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getSelected();
+				}
+				virtual ev_bool startEditing(_in ev_uint32 objectIndex)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_startEditing_ev_bool_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_startEditing_ev_bool_ev_uint32_Callback(objectIndex);
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::startEditing(objectIndex);
+				}
+				virtual void endEditing()
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_endEditing_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_endEditing_void_Callback();
+					}
+					else
+						return this->CGlobeGrid::endEditing();
+				}
+				virtual EarthView::World::Graphic::CEditBoundingBox* getEditBoundingBox()
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getEditBoundingBox_CEditBoundingBox_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CEditBoundingBox* returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getEditBoundingBox_CEditBoundingBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getEditBoundingBox();
+				}
+				virtual ev_bool getSelectedObjectWorldMatrix(_in ev_uint32 objectIndex, _inout EarthView::World::Spatial::Math::CMatrix4& matrix)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback(objectIndex, &matrix);
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getSelectedObjectWorldMatrix(objectIndex, matrix);
+				}
+				virtual ev_bool setSelectedObjectWorldMatrix(_in ev_uint32 objectIndex, _in const EarthView::World::Spatial::Math::CMatrix4& matrix)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback(objectIndex, &matrix);
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::setSelectedObjectWorldMatrix(objectIndex, matrix);
+				}
+				virtual void setRenderQueueGroup(_in ev_uint8 queueID)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroup_void_ev_uint8_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroup_void_ev_uint8_Callback(queueID);
+					}
+					else
+						return this->CGlobeGrid::setRenderQueueGroup(queueID);
+				}
+				virtual void setRenderQueueGroupAndPriority(_in ev_uint8 queueID, _in ev_uint16 priority)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback(queueID, priority);
+					}
+					else
+						return this->CGlobeGrid::setRenderQueueGroupAndPriority(queueID, priority);
+				}
+				virtual ev_uint8 getRenderQueueGroup() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueGroup_ev_uint8_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint8 returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueGroup_ev_uint8_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getRenderQueueGroup();
+				}
+				virtual const EarthView::World::Spatial::Math::CMatrix4& _getParentNodeFullTransform() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid__getParentNodeFullTransform_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CMatrix4& returnValue = *(EarthView::World::Spatial::Math::CMatrix4*)m_EarthView_World_Spatial3D_CGlobeGrid__getParentNodeFullTransform_CMatrix4_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::_getParentNodeFullTransform();
+				}
+				virtual void setQueryFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_setQueryFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_setQueryFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CGlobeGrid::setQueryFlags(flags);
+				}
+				virtual void addQueryFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_addQueryFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_addQueryFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CGlobeGrid::addQueryFlags(flags);
+				}
+				virtual void removeQueryFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_removeQueryFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_removeQueryFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CGlobeGrid::removeQueryFlags(flags);
+				}
+				virtual ev_uint32 getQueryFlags() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getQueryFlags_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getQueryFlags_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getQueryFlags();
+				}
+				virtual void setVisibilityFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_setVisibilityFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_setVisibilityFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CGlobeGrid::setVisibilityFlags(flags);
+				}
+				virtual void addVisibilityFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_addVisibilityFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_addVisibilityFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CGlobeGrid::addVisibilityFlags(flags);
+				}
+				virtual void removeVisibilityFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_removeVisibilityFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_removeVisibilityFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CGlobeGrid::removeVisibilityFlags(flags);
+				}
+				virtual ev_uint32 getVisibilityFlags() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getVisibilityFlags_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getVisibilityFlags_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getVisibilityFlags();
+				}
+				virtual void addListener(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* ref_listener)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_addListener_void_CMovableObjectListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_addListener_void_CMovableObjectListener_Callback(ref_listener);
+					}
+					else
+						return this->CGlobeGrid::addListener(ref_listener);
+				}
+				virtual void removeListener(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_removeListener_void_CMovableObjectListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_removeListener_void_CMovableObjectListener_Callback(listener);
+					}
+					else
+						return this->CGlobeGrid::removeListener(listener);
+				}
+				virtual ev_bool existListener(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener) const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_existListener_ev_bool_CMovableObjectListener_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_existListener_ev_bool_CMovableObjectListener_Callback(listener);
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::existListener(listener);
+				}
+				virtual ev_uint32 getListenerCount() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getListenerCount_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getListenerCount_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getListenerCount();
+				}
+				virtual EarthView::World::Graphic::CMovableObject::CMovableObjectListener* getListener(_in ev_uint32 index) const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getListener_CMovableObjectListener_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CMovableObject::CMovableObjectListener* returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getListener_CMovableObjectListener_ev_uint32_Callback(index);
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getListener(index);
+				}
+				virtual const EarthView::World::Graphic::LightList& queryLights() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_queryLights_LightList_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::LightList& returnValue = *(EarthView::World::Graphic::LightList*)m_EarthView_World_Spatial3D_CGlobeGrid_queryLights_LightList_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::queryLights();
+				}
+				virtual ev_uint32 getLightMask() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getLightMask_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getLightMask_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getLightMask();
+				}
+				virtual void setLightMask(_in ev_uint32 lightMask)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_setLightMask_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_setLightMask_void_ev_uint32_Callback(lightMask);
+					}
+					else
+						return this->CGlobeGrid::setLightMask(lightMask);
+				}
+				virtual EarthView::World::Graphic::LightList* _getLightList()
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid__getLightList_LightList_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::LightList* returnValue = m_EarthView_World_Spatial3D_CGlobeGrid__getLightList_LightList_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::_getLightList();
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getLightCapBounds() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getLightCapBounds_CAxisAlignedBox_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Spatial3D_CGlobeGrid_getLightCapBounds_CAxisAlignedBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getLightCapBounds();
+				}
+				virtual EarthView::World::Spatial::Math::CAxisAlignedBox getDarkCapBounds(_in const EarthView::World::Graphic::CLight& light, _in Real dirLightExtrusionDist) const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Spatial::Math::CAxisAlignedBox returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Spatial3D_CGlobeGrid_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback(&light, dirLightExtrusionDist);
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getDarkCapBounds(light, dirLightExtrusionDist);
+				}
+				virtual void setCastShadows(_in ev_bool enabled)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_setCastShadows_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_setCastShadows_void_ev_bool_Callback(enabled);
+					}
+					else
+						return this->CGlobeGrid::setCastShadows(enabled);
+				}
+				virtual ev_bool getCastShadows() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getCastShadows_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getCastShadows_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getCastShadows();
+				}
+				virtual ev_bool getReceivesShadows()
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getReceivesShadows_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getReceivesShadows_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getReceivesShadows();
+				}
+				virtual Real getPointExtrusionDistance(_in const EarthView::World::Graphic::CLight* l) const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getPointExtrusionDistance_Real_CLight_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getPointExtrusionDistance_Real_CLight_Callback(l);
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getPointExtrusionDistance(l);
+				}
+				virtual ev_uint32 getTypeFlags() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_getTypeFlags_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_getTypeFlags_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::getTypeFlags();
+				}
+				virtual void setDebugDisplayEnabled(_in ev_bool enabled)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_setDebugDisplayEnabled_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_setDebugDisplayEnabled_void_ev_bool_Callback(enabled);
+					}
+					else
+						return this->CGlobeGrid::setDebugDisplayEnabled(enabled);
+				}
+				virtual ev_bool isDebugDisplayEnabled() const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_isDebugDisplayEnabled_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Spatial3D_CGlobeGrid_isDebugDisplayEnabled_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CGlobeGrid::isDebugDisplayEnabled();
+				}
+				virtual void updateEdgeListLightFacing(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const EarthView::World::Spatial::Math::CVector4& lightPos)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback(edgeData, &lightPos);
+					}
+					else
+						return this->CGlobeGrid::updateEdgeListLightFacing(edgeData, lightPos);
+				}
+				virtual void generateShadowVolume(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const EarthView::World::Graphic::CHardwareIndexBufferSharedPtr& indexBuffer, _in const EarthView::World::Graphic::CLight* light, _inout EarthView::World::Graphic::CShadowCaster::ShadowRenderableList& shadowRenderables, _in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback(edgeData, &indexBuffer, light, &shadowRenderables, flags);
+					}
+					else
+						return this->CGlobeGrid::generateShadowVolume(edgeData, indexBuffer, light, shadowRenderables, flags);
+				}
+				virtual void extrudeBounds(_inout EarthView::World::Spatial::Math::CAxisAlignedBox& box, _in const EarthView::World::Spatial::Math::CVector4& lightPos, _in Real extrudeDist) const
+				{
+					if(m_EarthView_World_Spatial3D_CGlobeGrid_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Spatial3D_CGlobeGrid_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback(&box, &lightPos, extrudeDist);
+					}
+					else
+						return this->CGlobeGrid::extrudeBounds(box, lightPos, extrudeDist);
+				}
+			};
+			REGISTER_FACTORY_CLASS(CGlobeGridProxy);
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Spatial3D_CGlobeGrid_getMovableType_EVString(void *pObjectXXXX )
+			{
+				const EarthView::World::Spatial3D::CGlobeGrid* ptrNativeObject = (EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX;
+				if (dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*)ptrNativeObject) != NULL)
+				{
+					EVString objXXXX = ptrNativeObject->EarthView::World::Spatial3D::CGlobeGrid::getMovableType();
+					return objXXXX.makeBuffer();
+				}
+				else
+				{
+					EVString objXXXX = ptrNativeObject->getMovableType();
+					return objXXXX.makeBuffer();
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getMovableType_EVString( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getMovableType_EVString_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getMovableType_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Spatial3D_CGlobeGrid_getMovableType_EVString_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Spatial3D::CGlobeGrid* ptrNativeObject = (EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->EarthView::World::Spatial3D::CGlobeGrid::getMovableType();
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_CGlobeGrid_clear_void(void *pObjectXXXX )
+			{
+				EarthView::World::Spatial3D::CGlobeGrid* ptrNativeObject = (EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX;
+				if (dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Spatial3D::CGlobeGrid::clear();
+				else
+					ptrNativeObject->clear();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_clear_void( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_clear_void_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_clear_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_CGlobeGrid_clear_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Spatial3D::CGlobeGrid* ptrNativeObject = (EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Spatial3D::CGlobeGrid::clear();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_CGlobeGrid__updateRenderQueue_void_CRenderQueue(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderQueue* queue )
+			{
+				EarthView::World::Spatial3D::CGlobeGrid* ptrNativeObject = (EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX;
+				if (dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Spatial3D::CGlobeGrid::_updateRenderQueue(queue);
+				else
+					ptrNativeObject->_updateRenderQueue(queue);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid__updateRenderQueue_void_CRenderQueue( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid__updateRenderQueue_void_CRenderQueue_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid__updateRenderQueue_void_CRenderQueue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_CGlobeGrid__updateRenderQueue_void_CRenderQueue_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderQueue* queue )
+			{
+				EarthView::World::Spatial3D::CGlobeGrid* ptrNativeObject = (EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Spatial3D::CGlobeGrid::_updateRenderQueue(queue);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_ev_bool(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables )
+			{
+				EarthView::World::Spatial3D::CGlobeGrid* ptrNativeObject = (EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX;
+				if (dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Spatial3D::CGlobeGrid::visitRenderables(visitor, debugRenderables);
+				else
+					ptrNativeObject->visitRenderables(visitor, debugRenderables);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_ev_bool_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_ev_bool_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables )
+			{
+				EarthView::World::Spatial3D::CGlobeGrid* ptrNativeObject = (EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Spatial3D::CGlobeGrid::visitRenderables(visitor, debugRenderables);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor )
+			{
+				EarthView::World::Spatial3D::CGlobeGrid* ptrNativeObject = (EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX;
+				if (dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Spatial3D::CGlobeGrid::visitRenderables(visitor);
+				else
+					ptrNativeObject->visitRenderables(visitor);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_CGlobeGrid_visitRenderables_void_CVisitor_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor )
+			{
+				EarthView::World::Spatial3D::CGlobeGrid* ptrNativeObject = (EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Spatial3D::CGlobeGrid::visitRenderables(visitor);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_CGlobeGrid_show_void_CCamera_ev_bool(void *pObjectXXXX, _in EarthView::World::Graphic::CCamera* cam, _in ev_bool visible )
+			{
+				EarthView::World::Spatial3D::CGlobeGrid* ptrNativeObject = (EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX;
+				ptrNativeObject->show(cam, visible);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_CGlobeGrid_setTextStyle_void_CTextureTextStyle_CTextureTextStyle(void *pObjectXXXX, _in const void* genericStyle, _in const void* tropicStyle )
+			{
+				EarthView::World::Spatial3D::CGlobeGrid* ptrNativeObject = (EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX;
+				ptrNativeObject->setTextStyle(*(EarthView::World::Graphic::CTextureTextStyle*)genericStyle, *(EarthView::World::Graphic::CTextureTextStyle*)tropicStyle);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_CGlobeGrid_getTextStyle_void_CTextureTextStyle_CTextureTextStyle(void *pObjectXXXX, _inout void* genericStyle, _inout void* tropicStyle )
+			{
+				EarthView::World::Spatial3D::CGlobeGrid* ptrNativeObject = (EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX;
+				ptrNativeObject->getTextStyle(*(EarthView::World::Graphic::CTextureTextStyle*)genericStyle, *(EarthView::World::Graphic::CTextureTextStyle*)tropicStyle);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_CGlobeGrid_setGridColor_void_CColourValue_CColourValue(void *pObjectXXXX, _in const void* genericColor, _in const void* tropicColor )
+			{
+				EarthView::World::Spatial3D::CGlobeGrid* ptrNativeObject = (EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX;
+				ptrNativeObject->setGridColor(*(EarthView::World::Graphic::CColourValue*)genericColor, *(EarthView::World::Graphic::CColourValue*)tropicColor);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_CGlobeGrid_getGridColor_void_CColourValue_CColourValue(void *pObjectXXXX, _inout void* genericColor, _inout void* tropicColor )
+			{
+				EarthView::World::Spatial3D::CGlobeGrid* ptrNativeObject = (EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX;
+				ptrNativeObject->getGridColor(*(EarthView::World::Graphic::CColourValue*)genericColor, *(EarthView::World::Graphic::CColourValue*)tropicColor);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Spatial3D_CGlobeGrid_refresh_void(void *pObjectXXXX )
+			{
+				EarthView::World::Spatial3D::CGlobeGrid* ptrNativeObject = (EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX;
+				ptrNativeObject->refresh();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_estimateVertexCount_void_ev_size_t( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_estimateVertexCount_void_ev_size_t_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_estimateVertexCount_void_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_estimateIndexCount_void_ev_size_t( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_estimateIndexCount_void_ev_size_t_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_estimateIndexCount_void_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_EVString( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_EVString_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_OperationType(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_begin_void_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_setDynamic_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_setDynamic_void_ev_bool_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setDynamic_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getDynamic_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getDynamic_ev_bool_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getDynamic_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_beginUpdate_void_ev_size_t( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_beginUpdate_void_ev_size_t_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_beginUpdate_void_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_position_void_CVector3( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_position_void_CVector3_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_position_void_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_position_void_Real_Real_Real( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_position_void_Real_Real_Real_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_position_void_Real_Real_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_normal_void_CVector3( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_normal_void_CVector3_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_normal_void_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_normal_void_Real_Real_Real( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_normal_void_Real_Real_Real_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_normal_void_Real_Real_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_tangent_void_CVector3( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_tangent_void_CVector3_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_tangent_void_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_tangent_void_Real_Real_Real( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_tangent_void_Real_Real_Real_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_tangent_void_Real_Real_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Real( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Real_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_Real_Real_Real_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector2( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector2_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector2(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector3( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector3_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector4( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector4_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_textureCoord_void_CVector4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_colour_void_CColourValue( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_colour_void_CColourValue_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_colour_void_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Real( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Real_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_colour_void_Real_Real_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_index_void_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_index_void_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_index_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_triangle_void_ev_uint32_ev_uint32_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_triangle_void_ev_uint32_ev_uint32_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_triangle_void_ev_uint32_ev_uint32_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_quad_void_ev_uint32_ev_uint32_ev_uint32_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_quad_void_ev_uint32_ev_uint32_ev_uint32_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_quad_void_ev_uint32_ev_uint32_ev_uint32_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getCurrentVertexCount_size_t( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getCurrentVertexCount_size_t_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getCurrentVertexCount_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getCurrentIndexCount_size_t( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getCurrentIndexCount_size_t_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getCurrentIndexCount_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_end_CManualObjectSection( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_end_CManualObjectSection_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_end_CManualObjectSection(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_EVString( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_EVString_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setMaterialName_void_ev_size_t_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_EVString( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_EVString_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_convertToMesh_CMeshPtr_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_resetTempAreas_void( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_resetTempAreas_void_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_resetTempAreas_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_resizeTempVertexBufferIfNeeded_void_ev_size_t( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_resizeTempVertexBufferIfNeeded_void_ev_size_t_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_resizeTempVertexBufferIfNeeded_void_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_resizeTempIndexBufferIfNeeded_void_ev_size_t( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_resizeTempIndexBufferIfNeeded_void_ev_size_t_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_resizeTempIndexBufferIfNeeded_void_ev_size_t(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_copyTempVertexToBuffer_void( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_copyTempVertexToBuffer_void_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_copyTempVertexToBuffer_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getAnimableObjectPtr_CMovableObjectInternalAnimableObject( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getAnimableObjectPtr_CMovableObjectInternalAnimableObject(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueId_ev_uint8( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueId_ev_uint8_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueId_ev_uint8(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyCreator_void_CMovableObjectFactory( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid__notifyCreator_void_CMovableObjectFactory_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyCreator_void_CMovableObjectFactory(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid__getCreator_CMovableObjectFactory( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid__getCreator_CMovableObjectFactory_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid__getCreator_CMovableObjectFactory(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyManager_void_CSceneManager( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid__notifyManager_void_CSceneManager_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyManager_void_CSceneManager(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid__getManager_CSceneManager( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid__getManager_CSceneManager_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid__getManager_CSceneManager(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getName_EVString( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getName_EVString_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getName_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getParentNode_CNode( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getParentNode_CNode_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getParentNode_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getParentSceneNode_CSceneNode( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getParentSceneNode_CSceneNode_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getParentSceneNode_CSceneNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_isParentTagPoint_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_isParentTagPoint_ev_bool_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_isParentTagPoint_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_ev_bool_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyAttached_void_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_isAttached_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_isAttached_ev_bool_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_isAttached_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_detachFromParent_void( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_detachFromParent_void_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_detachFromParent_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_isInScene_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_isInScene_ev_bool_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_isInScene_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyMoved_void( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid__notifyMoved_void_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyMoved_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyLightsQueried_void_LightList( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid__notifyLightsQueried_void_LightList_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyLightsQueried_void_LightList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_setLightQueriedListener_void_CLightQueriedListener( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_setLightQueriedListener_void_CLightQueriedListener_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setLightQueriedListener_void_CLightQueriedListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getLightQueriedListener_CLightQueriedListener( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getLightQueriedListener_CLightQueriedListener_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getLightQueriedListener_CLightQueriedListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getLightListUpdated_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getLightListUpdated_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getLightListUpdated_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_setLightListUpdated_void_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_setLightListUpdated_void_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setLightListUpdated_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyCurrentCamera_void_CCamera( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid__notifyCurrentCamera_void_CCamera_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid__notifyCurrentCamera_void_CCamera(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getBoundingBox_CAxisAlignedBox( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getBoundingBox_CAxisAlignedBox_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getBoundingBox_CAxisAlignedBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getBoundingRadius_Real( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getBoundingRadius_Real_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getBoundingRadius_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_ev_bool_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingSphere_CSphere(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_setVisible_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_setVisible_void_ev_bool_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setVisible_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getVisible_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getVisible_ev_bool_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getVisible_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_isVisible_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_isVisible_ev_bool_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_isVisible_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMaxDistance_void_Real( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_setRenderingMaxDistance_void_Real_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMaxDistance_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMaxDistance_Real( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getRenderingMaxDistance_Real_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMaxDistance_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinDistance_void_Real( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinDistance_void_Real_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinDistance_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinDistance_Real( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinDistance_Real_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinDistance_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinPixelSize_void_Real( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinPixelSize_void_Real_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setRenderingMinPixelSize_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinPixelSize_Real( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinPixelSize_Real_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getRenderingMinPixelSize_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_setSelectionColour_void_CColourValue( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_setSelectionColour_void_CColourValue_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setSelectionColour_void_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_setSelected_ev_bool_IntVector( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_setSelected_ev_bool_IntVector_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setSelected_ev_bool_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getSelected_IntVector( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getSelected_IntVector_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getSelected_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CSphere_ev_bool_IntVector( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_selectBy_ev_bool_CSphere_ev_bool_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_renderSelection_void( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_renderSelection_void_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_renderSelection_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_clearSelection_void( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_clearSelection_void_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_clearSelection_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_startEditing_ev_bool_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_startEditing_ev_bool_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_startEditing_ev_bool_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_endEditing_void( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_endEditing_void_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_endEditing_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getEditBoundingBox_CEditBoundingBox( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getEditBoundingBox_CEditBoundingBox_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getEditBoundingBox_CEditBoundingBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroup_void_ev_uint8( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroup_void_ev_uint8_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroup_void_ev_uint8(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueGroup_ev_uint8( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueGroup_ev_uint8_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getRenderQueueGroup_ev_uint8(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid__getParentNodeFullTransform_CMatrix4( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid__getParentNodeFullTransform_CMatrix4_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid__getParentNodeFullTransform_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_setQueryFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_setQueryFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setQueryFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_addQueryFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_addQueryFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_addQueryFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_removeQueryFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_removeQueryFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_removeQueryFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getQueryFlags_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getQueryFlags_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getQueryFlags_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_setVisibilityFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_setVisibilityFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setVisibilityFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_addVisibilityFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_addVisibilityFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_addVisibilityFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_removeVisibilityFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_removeVisibilityFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_removeVisibilityFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getVisibilityFlags_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getVisibilityFlags_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getVisibilityFlags_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_addListener_void_CMovableObjectListener( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_addListener_void_CMovableObjectListener_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_addListener_void_CMovableObjectListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_removeListener_void_CMovableObjectListener( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_removeListener_void_CMovableObjectListener_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_removeListener_void_CMovableObjectListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_existListener_ev_bool_CMovableObjectListener( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_existListener_ev_bool_CMovableObjectListener_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_existListener_ev_bool_CMovableObjectListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getListenerCount_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getListenerCount_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getListenerCount_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getListener_CMovableObjectListener_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getListener_CMovableObjectListener_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getListener_CMovableObjectListener_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_queryLights_LightList( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_queryLights_LightList_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_queryLights_LightList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getLightMask_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getLightMask_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getLightMask_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_setLightMask_void_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_setLightMask_void_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setLightMask_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid__getLightList_LightList( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid__getLightList_LightList_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid__getLightList_LightList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_setCastShadows_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_setCastShadows_void_ev_bool_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setCastShadows_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getReceivesShadows_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getReceivesShadows_ev_bool_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getReceivesShadows_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getTypeFlags_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getTypeFlags_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getTypeFlags_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_setDebugDisplayEnabled_void_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_setDebugDisplayEnabled_void_ev_bool_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_setDebugDisplayEnabled_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_isDebugDisplayEnabled_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_isDebugDisplayEnabled_ev_bool_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_isDebugDisplayEnabled_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getCastShadows_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getCastShadows_ev_bool_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getCastShadows_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getEdgeList_CEdgeData( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getEdgeList_CEdgeData_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getEdgeList_CEdgeData(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_hasEdgeList_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_hasEdgeList_ev_bool_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_hasEdgeList_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_ev_bool( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getWorldBoundingBox_CAxisAlignedBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getLightCapBounds_CAxisAlignedBox( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getLightCapBounds_CAxisAlignedBox_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getLightCapBounds_CAxisAlignedBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getDarkCapBounds_CAxisAlignedBox_CLight_Real( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getDarkCapBounds_CAxisAlignedBox_CLight_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_getPointExtrusionDistance_Real_CLight( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_getPointExtrusionDistance_Real_CLight_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_getPointExtrusionDistance_Real_CLight(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_updateEdgeListLightFacing_void_CEdgeData_CVector4( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_updateEdgeListLightFacing_void_CEdgeData_CVector4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Spatial3D_CGlobeGrid_extrudeBounds_void_CAxisAlignedBox_CVector4_Real( void *pObjectXXXX, EarthView_World_Spatial3D_CGlobeGrid_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback* pCallback )
+			{
+				CGlobeGridProxy* ptr = dynamic_cast<CGlobeGridProxy*>((EarthView::World::Spatial3D::CGlobeGrid*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Spatial3D_CGlobeGrid_extrudeBounds_void_CAxisAlignedBox_CVector4_Real(pCallback);
+				}
+			}
+		}
+	}
+}

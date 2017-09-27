@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EV_XldMainClass</class>
+ <widget class="QMainWindow" name="EV_XldMainClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1372</width>
+    <height>895</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>EV_XldMain</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="EVWorkspace" name="evWorkspace" native="true">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>260</y>
+      <width>48</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <property name="projectName" stdset="0">
+     <string>xld.evproj</string>
+    </property>
+    <property name="localProjectName" stdset="0">
+     <string>D:/Projects/XiaolangdiSystem/System/EV_Xld/bin64/MyData/xld.evproj</string>
+    </property>
+    <property name="useAbsolutePath" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="showSplash" stdset="0">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="GlobeWidget" name="globeWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>9</y>
+      <width>831</width>
+      <height>831</height>
+     </rect>
+    </property>
+    <property name="globeName" stdset="0">
+     <string>新场景1</string>
+    </property>
+   </widget>
+   <widget class="QTreeWidget" name="treeWidget">
+    <property name="geometry">
+     <rect>
+      <x>1110</x>
+      <y>10</y>
+      <width>256</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string notr="true">1</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QTreeView" name="treeView">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>10</y>
+      <width>256</width>
+      <height>471</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>540</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CheckBox</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>500</y>
+      <width>511</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1372</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuGrd">
+    <property name="title">
+     <string>Grd文件</string>
+    </property>
+    <addaction name="actionReadGrd"/>
+    <addaction name="actionGrd2GTiff"/>
+    <addaction name="actionGrdLOD"/>
+    <addaction name="actionGrdRender"/>
+   </widget>
+   <addaction name="menuGrd"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionReadGrd">
+   <property name="text">
+    <string>Grd文件读取</string>
+   </property>
+  </action>
+  <action name="actionGrd2GTiff">
+   <property name="text">
+    <string>Grd文件转换</string>
+   </property>
+  </action>
+  <action name="actionGrdLOD">
+   <property name="text">
+    <string>Grd地形数据处理</string>
+   </property>
+  </action>
+  <action name="actionGrdRender">
+   <property name="text">
+    <string>Grd地形渲染</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>EVWorkspace</class>
+   <extends>QWidget</extends>
+   <header>qtplugins/evworkspace.h</header>
+  </customwidget>
+  <customwidget>
+   <class>GlobeWidget</class>
+   <extends>QWidget</extends>
+   <header>qtplugins/globewidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="ev_xldmain.qrc"/>
+ </resources>
+ <connections/>
+</ui>

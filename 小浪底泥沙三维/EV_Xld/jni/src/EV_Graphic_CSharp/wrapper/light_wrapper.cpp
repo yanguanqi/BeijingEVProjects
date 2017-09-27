@@ -1,0 +1,3387 @@
+/* This file is produced by the P/Invoke AutoWrapper Utility 
+ Copyright (c) 2012 by EarthView Image Inc */
+#include "stableheaders.h"
+#include "graphic/light.h"
+namespace EarthView
+{
+	namespace World
+	{
+		namespace Graphic
+		{
+			typedef void*  ( _stdcall EarthView_World_Graphic_CLight_createAnimableValue_AnimableValuePtr_EVString_Callback)(_in char*& valueName);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CLight__getNearClipVolume_CPlaneBoundedVolume_CCamera_Callback)(_in const EarthView::World::Graphic::CCamera* cam);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CLight__getFrustumClipVolumes_PlaneBoundedVolumeList_CCamera_Callback)(_in const EarthView::World::Graphic::CCamera* cam);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight__updateCustomGpuParameter_void_ev_uint16_CAutoConstantEntry_CGpuProgramParameters_Callback)(_in ev_uint16 paramIndex, _in const void* constantEntry, _in EarthView::World::Graphic::CGpuProgramParameters* params);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_update_void_Callback)();
+			typedef const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject*  ( _stdcall EarthView_World_Graphic_CLight_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback)();
+			typedef ev_uint8  ( _stdcall EarthView_World_Graphic_CLight_getRenderQueueId_ev_uint8_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight__notifyCreator_void_CMovableObjectFactory_Callback)(_in EarthView::World::Graphic::CMovableObjectFactory* ref_fact);
+			typedef EarthView::World::Graphic::CMovableObjectFactory*  ( _stdcall EarthView_World_Graphic_CLight__getCreator_CMovableObjectFactory_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight__notifyManager_void_CSceneManager_Callback)(_in EarthView::World::Graphic::CSceneManager* ref_mgr);
+			typedef EarthView::World::Graphic::CSceneManager*  ( _stdcall EarthView_World_Graphic_CLight__getManager_CSceneManager_Callback)();
+			typedef char*  ( _stdcall EarthView_World_Graphic_CLight_getName_EVString_Callback)();
+			typedef char*  ( _stdcall EarthView_World_Graphic_CLight_getMovableType_EVString_Callback)();
+			typedef EarthView::World::Graphic::CNode*  ( _stdcall EarthView_World_Graphic_CLight_getParentNode_CNode_Callback)();
+			typedef EarthView::World::Graphic::CSceneNode*  ( _stdcall EarthView_World_Graphic_CLight_getParentSceneNode_CSceneNode_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CLight_isParentTagPoint_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight__notifyAttached_void_CNode_ev_bool_Callback)(_in EarthView::World::Graphic::CNode* ref_parent, _in ev_bool isTagPoint);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight__notifyAttached_void_CNode_Callback)(_in EarthView::World::Graphic::CNode* ref_parent);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CLight_isAttached_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_detachFromParent_void_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CLight_isInScene_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight__notifyMoved_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight__notifyLightsQueried_void_LightList_Callback)(_in const EarthView::World::Graphic::LightList* lightList);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_setLightQueriedListener_void_CLightQueriedListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CLightQueriedListener* listener);
+			typedef EarthView::World::Graphic::CMovableObject::CLightQueriedListener*  ( _stdcall EarthView_World_Graphic_CLight_getLightQueriedListener_CLightQueriedListener_Callback)();
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CLight_getLightListUpdated_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_setLightListUpdated_void_ev_uint32_Callback)(_in ev_uint32 frame);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight__notifyCurrentCamera_void_CCamera_Callback)(_in EarthView::World::Graphic::CCamera* ref_cam);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CLight_getBoundingBox_CAxisAlignedBox_Callback)();
+			typedef Real  ( _stdcall EarthView_World_Graphic_CLight_getBoundingRadius_Real_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_ev_bool_Callback)(_in ev_bool derive);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight__updateRenderQueue_void_CRenderQueue_Callback)(_in EarthView::World::Graphic::CRenderQueue* queue);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_setVisible_void_ev_bool_Callback)(_in ev_bool visible);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CLight_getVisible_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CLight_isVisible_ev_bool_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_setRenderingMaxDistance_void_Real_Callback)(_in Real dist);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CLight_getRenderingMaxDistance_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_setRenderingMinDistance_void_Real_Callback)(_in Real dist);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CLight_getRenderingMinDistance_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_setRenderingMinPixelSize_void_Real_Callback)(_in Real pixelSize);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CLight_getRenderingMinPixelSize_Real_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_setSelectionColour_void_CColourValue_Callback)(_in const void* colour);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CLight_setSelected_ev_bool_IntVector_Callback)(_in const void* objIndics);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CLight_getSelected_IntVector_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CLight_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback)(_in const void* ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out void* point);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CLight_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback)(_in const void* aabb, _in ev_bool prepareToRenderSelection, _out void* indexVec);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CLight_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback)(_in const void* sphere, _in ev_bool prepareToRenderSelection, _out void* indexVec);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CLight_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback)(_in const void* ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out ev_int32& submeshIndex, _out ev_int32& instanceIndex, _out ev_int32& segmentIndex, _out void* point);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_renderSelection_void_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_clearSelection_void_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CLight_startEditing_ev_bool_ev_uint32_Callback)(_in ev_uint32 objectIndex);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_endEditing_void_Callback)();
+			typedef EarthView::World::Graphic::CEditBoundingBox*  ( _stdcall EarthView_World_Graphic_CLight_getEditBoundingBox_CEditBoundingBox_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CLight_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback)(_in ev_uint32 objectIndex, _inout void* matrix);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CLight_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback)(_in ev_uint32 objectIndex, _in const void* matrix);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_setRenderQueueGroup_void_ev_uint8_Callback)(_in ev_uint8 queueID);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback)(_in ev_uint8 queueID, _in ev_uint16 priority);
+			typedef ev_uint8  ( _stdcall EarthView_World_Graphic_CLight_getRenderQueueGroup_ev_uint8_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CLight__getParentNodeFullTransform_CMatrix4_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_setQueryFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_addQueryFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_removeQueryFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CLight_getQueryFlags_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_setVisibilityFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_addVisibilityFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_removeVisibilityFlags_void_ev_uint32_Callback)(_in ev_uint32 flags);
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CLight_getVisibilityFlags_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_addListener_void_CMovableObjectListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* ref_listener);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_removeListener_void_CMovableObjectListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CLight_existListener_ev_bool_CMovableObjectListener_Callback)(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener);
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CLight_getListenerCount_ev_uint32_Callback)();
+			typedef EarthView::World::Graphic::CMovableObject::CMovableObjectListener*  ( _stdcall EarthView_World_Graphic_CLight_getListener_CMovableObjectListener_ev_uint32_Callback)(_in ev_uint32 index);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CLight_queryLights_LightList_Callback)();
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CLight_getLightMask_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_setLightMask_void_ev_uint32_Callback)(_in ev_uint32 lightMask);
+			typedef EarthView::World::Graphic::LightList*  ( _stdcall EarthView_World_Graphic_CLight__getLightList_LightList_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_setCastShadows_void_ev_bool_Callback)(_in ev_bool enabled);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CLight_getReceivesShadows_ev_bool_Callback)();
+			typedef ev_uint32  ( _stdcall EarthView_World_Graphic_CLight_getTypeFlags_ev_uint32_Callback)();
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_ev_bool_Callback)(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_Callback)(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_setDebugDisplayEnabled_void_ev_bool_Callback)(_in ev_bool enabled);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CLight_isDebugDisplayEnabled_ev_bool_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CLight_getCastShadows_ev_bool_Callback)();
+			typedef EarthView::World::Graphic::CEdgeData*  ( _stdcall EarthView_World_Graphic_CLight_getEdgeList_CEdgeData_Callback)();
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CLight_hasEdgeList_ev_bool_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback)(_in ev_bool derive);
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_Callback)();
+			typedef const void*  ( _stdcall EarthView_World_Graphic_CLight_getLightCapBounds_CAxisAlignedBox_Callback)();
+			typedef void*  ( _stdcall EarthView_World_Graphic_CLight_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback)(_in const void* light, _in Real dirLightExtrusionDist);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback)(_in int shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDistance, _in ev_uint32 flags);
+			typedef void*  ( _stdcall EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback)(_in int shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDistance);
+			typedef Real  ( _stdcall EarthView_World_Graphic_CLight_getPointExtrusionDistance_Real_CLight_Callback)(_in const EarthView::World::Graphic::CLight* l);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback)(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const void* lightPos);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback)(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const void* indexBuffer, _in const EarthView::World::Graphic::CLight* light, _inout void* shadowRenderables, _in ev_uint32 flags);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback)(_inout void* box, _in const void* lightPos, _in Real extrudeDist);
+			class CLightProxy : public EarthView::World::Graphic::CLight
+			{
+			private:
+				EarthView_World_Graphic_CLight_createAnimableValue_AnimableValuePtr_EVString_Callback* m_EarthView_World_Graphic_CLight_createAnimableValue_AnimableValuePtr_EVString_Callback;
+				EarthView_World_Graphic_CLight__getNearClipVolume_CPlaneBoundedVolume_CCamera_Callback* m_EarthView_World_Graphic_CLight__getNearClipVolume_CPlaneBoundedVolume_CCamera_Callback;
+				EarthView_World_Graphic_CLight__getFrustumClipVolumes_PlaneBoundedVolumeList_CCamera_Callback* m_EarthView_World_Graphic_CLight__getFrustumClipVolumes_PlaneBoundedVolumeList_CCamera_Callback;
+				EarthView_World_Graphic_CLight__updateCustomGpuParameter_void_ev_uint16_CAutoConstantEntry_CGpuProgramParameters_Callback* m_EarthView_World_Graphic_CLight__updateCustomGpuParameter_void_ev_uint16_CAutoConstantEntry_CGpuProgramParameters_Callback;
+				EarthView_World_Graphic_CLight_update_void_Callback* m_EarthView_World_Graphic_CLight_update_void_Callback;
+				EarthView_World_Graphic_CLight_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback* m_EarthView_World_Graphic_CLight_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback;
+				EarthView_World_Graphic_CLight_getRenderQueueId_ev_uint8_Callback* m_EarthView_World_Graphic_CLight_getRenderQueueId_ev_uint8_Callback;
+				EarthView_World_Graphic_CLight__notifyCreator_void_CMovableObjectFactory_Callback* m_EarthView_World_Graphic_CLight__notifyCreator_void_CMovableObjectFactory_Callback;
+				EarthView_World_Graphic_CLight__getCreator_CMovableObjectFactory_Callback* m_EarthView_World_Graphic_CLight__getCreator_CMovableObjectFactory_Callback;
+				EarthView_World_Graphic_CLight__notifyManager_void_CSceneManager_Callback* m_EarthView_World_Graphic_CLight__notifyManager_void_CSceneManager_Callback;
+				EarthView_World_Graphic_CLight__getManager_CSceneManager_Callback* m_EarthView_World_Graphic_CLight__getManager_CSceneManager_Callback;
+				EarthView_World_Graphic_CLight_getName_EVString_Callback* m_EarthView_World_Graphic_CLight_getName_EVString_Callback;
+				EarthView_World_Graphic_CLight_getMovableType_EVString_Callback* m_EarthView_World_Graphic_CLight_getMovableType_EVString_Callback;
+				EarthView_World_Graphic_CLight_getParentNode_CNode_Callback* m_EarthView_World_Graphic_CLight_getParentNode_CNode_Callback;
+				EarthView_World_Graphic_CLight_getParentSceneNode_CSceneNode_Callback* m_EarthView_World_Graphic_CLight_getParentSceneNode_CSceneNode_Callback;
+				EarthView_World_Graphic_CLight_isParentTagPoint_ev_bool_Callback* m_EarthView_World_Graphic_CLight_isParentTagPoint_ev_bool_Callback;
+				EarthView_World_Graphic_CLight__notifyAttached_void_CNode_ev_bool_Callback* m_EarthView_World_Graphic_CLight__notifyAttached_void_CNode_ev_bool_Callback;
+				EarthView_World_Graphic_CLight__notifyAttached_void_CNode_Callback* m_EarthView_World_Graphic_CLight__notifyAttached_void_CNode_Callback;
+				EarthView_World_Graphic_CLight_isAttached_ev_bool_Callback* m_EarthView_World_Graphic_CLight_isAttached_ev_bool_Callback;
+				EarthView_World_Graphic_CLight_detachFromParent_void_Callback* m_EarthView_World_Graphic_CLight_detachFromParent_void_Callback;
+				EarthView_World_Graphic_CLight_isInScene_ev_bool_Callback* m_EarthView_World_Graphic_CLight_isInScene_ev_bool_Callback;
+				EarthView_World_Graphic_CLight__notifyMoved_void_Callback* m_EarthView_World_Graphic_CLight__notifyMoved_void_Callback;
+				EarthView_World_Graphic_CLight__notifyLightsQueried_void_LightList_Callback* m_EarthView_World_Graphic_CLight__notifyLightsQueried_void_LightList_Callback;
+				EarthView_World_Graphic_CLight_setLightQueriedListener_void_CLightQueriedListener_Callback* m_EarthView_World_Graphic_CLight_setLightQueriedListener_void_CLightQueriedListener_Callback;
+				EarthView_World_Graphic_CLight_getLightQueriedListener_CLightQueriedListener_Callback* m_EarthView_World_Graphic_CLight_getLightQueriedListener_CLightQueriedListener_Callback;
+				EarthView_World_Graphic_CLight_getLightListUpdated_ev_uint32_Callback* m_EarthView_World_Graphic_CLight_getLightListUpdated_ev_uint32_Callback;
+				EarthView_World_Graphic_CLight_setLightListUpdated_void_ev_uint32_Callback* m_EarthView_World_Graphic_CLight_setLightListUpdated_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CLight__notifyCurrentCamera_void_CCamera_Callback* m_EarthView_World_Graphic_CLight__notifyCurrentCamera_void_CCamera_Callback;
+				EarthView_World_Graphic_CLight_getBoundingBox_CAxisAlignedBox_Callback* m_EarthView_World_Graphic_CLight_getBoundingBox_CAxisAlignedBox_Callback;
+				EarthView_World_Graphic_CLight_getBoundingRadius_Real_Callback* m_EarthView_World_Graphic_CLight_getBoundingRadius_Real_Callback;
+				EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_ev_bool_Callback* m_EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_ev_bool_Callback;
+				EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_Callback* m_EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_Callback;
+				EarthView_World_Graphic_CLight__updateRenderQueue_void_CRenderQueue_Callback* m_EarthView_World_Graphic_CLight__updateRenderQueue_void_CRenderQueue_Callback;
+				EarthView_World_Graphic_CLight_setVisible_void_ev_bool_Callback* m_EarthView_World_Graphic_CLight_setVisible_void_ev_bool_Callback;
+				EarthView_World_Graphic_CLight_getVisible_ev_bool_Callback* m_EarthView_World_Graphic_CLight_getVisible_ev_bool_Callback;
+				EarthView_World_Graphic_CLight_isVisible_ev_bool_Callback* m_EarthView_World_Graphic_CLight_isVisible_ev_bool_Callback;
+				EarthView_World_Graphic_CLight_setRenderingMaxDistance_void_Real_Callback* m_EarthView_World_Graphic_CLight_setRenderingMaxDistance_void_Real_Callback;
+				EarthView_World_Graphic_CLight_getRenderingMaxDistance_Real_Callback* m_EarthView_World_Graphic_CLight_getRenderingMaxDistance_Real_Callback;
+				EarthView_World_Graphic_CLight_setRenderingMinDistance_void_Real_Callback* m_EarthView_World_Graphic_CLight_setRenderingMinDistance_void_Real_Callback;
+				EarthView_World_Graphic_CLight_getRenderingMinDistance_Real_Callback* m_EarthView_World_Graphic_CLight_getRenderingMinDistance_Real_Callback;
+				EarthView_World_Graphic_CLight_setRenderingMinPixelSize_void_Real_Callback* m_EarthView_World_Graphic_CLight_setRenderingMinPixelSize_void_Real_Callback;
+				EarthView_World_Graphic_CLight_getRenderingMinPixelSize_Real_Callback* m_EarthView_World_Graphic_CLight_getRenderingMinPixelSize_Real_Callback;
+				EarthView_World_Graphic_CLight_setSelectionColour_void_CColourValue_Callback* m_EarthView_World_Graphic_CLight_setSelectionColour_void_CColourValue_Callback;
+				EarthView_World_Graphic_CLight_setSelected_ev_bool_IntVector_Callback* m_EarthView_World_Graphic_CLight_setSelected_ev_bool_IntVector_Callback;
+				EarthView_World_Graphic_CLight_getSelected_IntVector_Callback* m_EarthView_World_Graphic_CLight_getSelected_IntVector_Callback;
+				EarthView_World_Graphic_CLight_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* m_EarthView_World_Graphic_CLight_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback;
+				EarthView_World_Graphic_CLight_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* m_EarthView_World_Graphic_CLight_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback;
+				EarthView_World_Graphic_CLight_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* m_EarthView_World_Graphic_CLight_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback;
+				EarthView_World_Graphic_CLight_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* m_EarthView_World_Graphic_CLight_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback;
+				EarthView_World_Graphic_CLight_renderSelection_void_Callback* m_EarthView_World_Graphic_CLight_renderSelection_void_Callback;
+				EarthView_World_Graphic_CLight_clearSelection_void_Callback* m_EarthView_World_Graphic_CLight_clearSelection_void_Callback;
+				EarthView_World_Graphic_CLight_startEditing_ev_bool_ev_uint32_Callback* m_EarthView_World_Graphic_CLight_startEditing_ev_bool_ev_uint32_Callback;
+				EarthView_World_Graphic_CLight_endEditing_void_Callback* m_EarthView_World_Graphic_CLight_endEditing_void_Callback;
+				EarthView_World_Graphic_CLight_getEditBoundingBox_CEditBoundingBox_Callback* m_EarthView_World_Graphic_CLight_getEditBoundingBox_CEditBoundingBox_Callback;
+				EarthView_World_Graphic_CLight_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* m_EarthView_World_Graphic_CLight_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback;
+				EarthView_World_Graphic_CLight_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* m_EarthView_World_Graphic_CLight_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback;
+				EarthView_World_Graphic_CLight_setRenderQueueGroup_void_ev_uint8_Callback* m_EarthView_World_Graphic_CLight_setRenderQueueGroup_void_ev_uint8_Callback;
+				EarthView_World_Graphic_CLight_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback* m_EarthView_World_Graphic_CLight_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback;
+				EarthView_World_Graphic_CLight_getRenderQueueGroup_ev_uint8_Callback* m_EarthView_World_Graphic_CLight_getRenderQueueGroup_ev_uint8_Callback;
+				EarthView_World_Graphic_CLight__getParentNodeFullTransform_CMatrix4_Callback* m_EarthView_World_Graphic_CLight__getParentNodeFullTransform_CMatrix4_Callback;
+				EarthView_World_Graphic_CLight_setQueryFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CLight_setQueryFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CLight_addQueryFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CLight_addQueryFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CLight_removeQueryFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CLight_removeQueryFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CLight_getQueryFlags_ev_uint32_Callback* m_EarthView_World_Graphic_CLight_getQueryFlags_ev_uint32_Callback;
+				EarthView_World_Graphic_CLight_setVisibilityFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CLight_setVisibilityFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CLight_addVisibilityFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CLight_addVisibilityFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CLight_removeVisibilityFlags_void_ev_uint32_Callback* m_EarthView_World_Graphic_CLight_removeVisibilityFlags_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CLight_getVisibilityFlags_ev_uint32_Callback* m_EarthView_World_Graphic_CLight_getVisibilityFlags_ev_uint32_Callback;
+				EarthView_World_Graphic_CLight_addListener_void_CMovableObjectListener_Callback* m_EarthView_World_Graphic_CLight_addListener_void_CMovableObjectListener_Callback;
+				EarthView_World_Graphic_CLight_removeListener_void_CMovableObjectListener_Callback* m_EarthView_World_Graphic_CLight_removeListener_void_CMovableObjectListener_Callback;
+				EarthView_World_Graphic_CLight_existListener_ev_bool_CMovableObjectListener_Callback* m_EarthView_World_Graphic_CLight_existListener_ev_bool_CMovableObjectListener_Callback;
+				EarthView_World_Graphic_CLight_getListenerCount_ev_uint32_Callback* m_EarthView_World_Graphic_CLight_getListenerCount_ev_uint32_Callback;
+				EarthView_World_Graphic_CLight_getListener_CMovableObjectListener_ev_uint32_Callback* m_EarthView_World_Graphic_CLight_getListener_CMovableObjectListener_ev_uint32_Callback;
+				EarthView_World_Graphic_CLight_queryLights_LightList_Callback* m_EarthView_World_Graphic_CLight_queryLights_LightList_Callback;
+				EarthView_World_Graphic_CLight_getLightMask_ev_uint32_Callback* m_EarthView_World_Graphic_CLight_getLightMask_ev_uint32_Callback;
+				EarthView_World_Graphic_CLight_setLightMask_void_ev_uint32_Callback* m_EarthView_World_Graphic_CLight_setLightMask_void_ev_uint32_Callback;
+				EarthView_World_Graphic_CLight__getLightList_LightList_Callback* m_EarthView_World_Graphic_CLight__getLightList_LightList_Callback;
+				EarthView_World_Graphic_CLight_setCastShadows_void_ev_bool_Callback* m_EarthView_World_Graphic_CLight_setCastShadows_void_ev_bool_Callback;
+				EarthView_World_Graphic_CLight_getReceivesShadows_ev_bool_Callback* m_EarthView_World_Graphic_CLight_getReceivesShadows_ev_bool_Callback;
+				EarthView_World_Graphic_CLight_getTypeFlags_ev_uint32_Callback* m_EarthView_World_Graphic_CLight_getTypeFlags_ev_uint32_Callback;
+				EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_ev_bool_Callback* m_EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_ev_bool_Callback;
+				EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_Callback* m_EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_Callback;
+				EarthView_World_Graphic_CLight_setDebugDisplayEnabled_void_ev_bool_Callback* m_EarthView_World_Graphic_CLight_setDebugDisplayEnabled_void_ev_bool_Callback;
+				EarthView_World_Graphic_CLight_isDebugDisplayEnabled_ev_bool_Callback* m_EarthView_World_Graphic_CLight_isDebugDisplayEnabled_ev_bool_Callback;
+				EarthView_World_Graphic_CLight_getCastShadows_ev_bool_Callback* m_EarthView_World_Graphic_CLight_getCastShadows_ev_bool_Callback;
+				EarthView_World_Graphic_CLight_getEdgeList_CEdgeData_Callback* m_EarthView_World_Graphic_CLight_getEdgeList_CEdgeData_Callback;
+				EarthView_World_Graphic_CLight_hasEdgeList_ev_bool_Callback* m_EarthView_World_Graphic_CLight_hasEdgeList_ev_bool_Callback;
+				EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback* m_EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback;
+				EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_Callback* m_EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_Callback;
+				EarthView_World_Graphic_CLight_getLightCapBounds_CAxisAlignedBox_Callback* m_EarthView_World_Graphic_CLight_getLightCapBounds_CAxisAlignedBox_Callback;
+				EarthView_World_Graphic_CLight_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback* m_EarthView_World_Graphic_CLight_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback;
+				EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback* m_EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback;
+				EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback* m_EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback;
+				EarthView_World_Graphic_CLight_getPointExtrusionDistance_Real_CLight_Callback* m_EarthView_World_Graphic_CLight_getPointExtrusionDistance_Real_CLight_Callback;
+				EarthView_World_Graphic_CLight_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback* m_EarthView_World_Graphic_CLight_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback;
+				EarthView_World_Graphic_CLight_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback* m_EarthView_World_Graphic_CLight_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback;
+				EarthView_World_Graphic_CLight_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback* m_EarthView_World_Graphic_CLight_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback;
+			public:
+				CLightProxy(EarthView::World::Core::CNameValuePairList *pList) : CLight(pList)
+				{
+					m_EarthView_World_Graphic_CLight_createAnimableValue_AnimableValuePtr_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CLight__getNearClipVolume_CPlaneBoundedVolume_CCamera_Callback = NULL;
+					m_EarthView_World_Graphic_CLight__getFrustumClipVolumes_PlaneBoundedVolumeList_CCamera_Callback = NULL;
+					m_EarthView_World_Graphic_CLight__updateCustomGpuParameter_void_ev_uint16_CAutoConstantEntry_CGpuProgramParameters_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_update_void_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getRenderQueueId_ev_uint8_Callback = NULL;
+					m_EarthView_World_Graphic_CLight__notifyCreator_void_CMovableObjectFactory_Callback = NULL;
+					m_EarthView_World_Graphic_CLight__getCreator_CMovableObjectFactory_Callback = NULL;
+					m_EarthView_World_Graphic_CLight__notifyManager_void_CSceneManager_Callback = NULL;
+					m_EarthView_World_Graphic_CLight__getManager_CSceneManager_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getName_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getMovableType_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getParentNode_CNode_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getParentSceneNode_CSceneNode_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_isParentTagPoint_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CLight__notifyAttached_void_CNode_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CLight__notifyAttached_void_CNode_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_isAttached_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_detachFromParent_void_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_isInScene_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CLight__notifyMoved_void_Callback = NULL;
+					m_EarthView_World_Graphic_CLight__notifyLightsQueried_void_LightList_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_setLightQueriedListener_void_CLightQueriedListener_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getLightQueriedListener_CLightQueriedListener_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getLightListUpdated_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_setLightListUpdated_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CLight__notifyCurrentCamera_void_CCamera_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getBoundingBox_CAxisAlignedBox_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getBoundingRadius_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_Callback = NULL;
+					m_EarthView_World_Graphic_CLight__updateRenderQueue_void_CRenderQueue_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_setVisible_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getVisible_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_isVisible_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_setRenderingMaxDistance_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getRenderingMaxDistance_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_setRenderingMinDistance_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getRenderingMinDistance_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_setRenderingMinPixelSize_void_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getRenderingMinPixelSize_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_setSelectionColour_void_CColourValue_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_setSelected_ev_bool_IntVector_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getSelected_IntVector_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_renderSelection_void_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_clearSelection_void_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_startEditing_ev_bool_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_endEditing_void_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getEditBoundingBox_CEditBoundingBox_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_setRenderQueueGroup_void_ev_uint8_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getRenderQueueGroup_ev_uint8_Callback = NULL;
+					m_EarthView_World_Graphic_CLight__getParentNodeFullTransform_CMatrix4_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_setQueryFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_addQueryFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_removeQueryFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getQueryFlags_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_setVisibilityFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_addVisibilityFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_removeVisibilityFlags_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getVisibilityFlags_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_addListener_void_CMovableObjectListener_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_removeListener_void_CMovableObjectListener_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_existListener_ev_bool_CMovableObjectListener_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getListenerCount_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getListener_CMovableObjectListener_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_queryLights_LightList_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getLightMask_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_setLightMask_void_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CLight__getLightList_LightList_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_setCastShadows_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getReceivesShadows_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getTypeFlags_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_setDebugDisplayEnabled_void_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_isDebugDisplayEnabled_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getCastShadows_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getEdgeList_CEdgeData_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_hasEdgeList_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getLightCapBounds_CAxisAlignedBox_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_getPointExtrusionDistance_Real_CLight_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CLight_createAnimableValue_AnimableValuePtr_EVString(EarthView_World_Graphic_CLight_createAnimableValue_AnimableValuePtr_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_createAnimableValue_AnimableValuePtr_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight__getNearClipVolume_CPlaneBoundedVolume_CCamera(EarthView_World_Graphic_CLight__getNearClipVolume_CPlaneBoundedVolume_CCamera_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight__getNearClipVolume_CPlaneBoundedVolume_CCamera_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight__getFrustumClipVolumes_PlaneBoundedVolumeList_CCamera(EarthView_World_Graphic_CLight__getFrustumClipVolumes_PlaneBoundedVolumeList_CCamera_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight__getFrustumClipVolumes_PlaneBoundedVolumeList_CCamera_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight__updateCustomGpuParameter_void_ev_uint16_CAutoConstantEntry_CGpuProgramParameters(EarthView_World_Graphic_CLight__updateCustomGpuParameter_void_ev_uint16_CAutoConstantEntry_CGpuProgramParameters_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight__updateCustomGpuParameter_void_ev_uint16_CAutoConstantEntry_CGpuProgramParameters_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_update_void(EarthView_World_Graphic_CLight_update_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_update_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getAnimableObjectPtr_CMovableObjectInternalAnimableObject(EarthView_World_Graphic_CLight_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getRenderQueueId_ev_uint8(EarthView_World_Graphic_CLight_getRenderQueueId_ev_uint8_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getRenderQueueId_ev_uint8_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight__notifyCreator_void_CMovableObjectFactory(EarthView_World_Graphic_CLight__notifyCreator_void_CMovableObjectFactory_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight__notifyCreator_void_CMovableObjectFactory_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight__getCreator_CMovableObjectFactory(EarthView_World_Graphic_CLight__getCreator_CMovableObjectFactory_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight__getCreator_CMovableObjectFactory_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight__notifyManager_void_CSceneManager(EarthView_World_Graphic_CLight__notifyManager_void_CSceneManager_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight__notifyManager_void_CSceneManager_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight__getManager_CSceneManager(EarthView_World_Graphic_CLight__getManager_CSceneManager_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight__getManager_CSceneManager_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getName_EVString(EarthView_World_Graphic_CLight_getName_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getName_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getMovableType_EVString(EarthView_World_Graphic_CLight_getMovableType_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getMovableType_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getParentNode_CNode(EarthView_World_Graphic_CLight_getParentNode_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getParentNode_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getParentSceneNode_CSceneNode(EarthView_World_Graphic_CLight_getParentSceneNode_CSceneNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getParentSceneNode_CSceneNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_isParentTagPoint_ev_bool(EarthView_World_Graphic_CLight_isParentTagPoint_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_isParentTagPoint_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight__notifyAttached_void_CNode_ev_bool(EarthView_World_Graphic_CLight__notifyAttached_void_CNode_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight__notifyAttached_void_CNode_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight__notifyAttached_void_CNode(EarthView_World_Graphic_CLight__notifyAttached_void_CNode_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight__notifyAttached_void_CNode_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_isAttached_ev_bool(EarthView_World_Graphic_CLight_isAttached_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_isAttached_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_detachFromParent_void(EarthView_World_Graphic_CLight_detachFromParent_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_detachFromParent_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_isInScene_ev_bool(EarthView_World_Graphic_CLight_isInScene_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_isInScene_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight__notifyMoved_void(EarthView_World_Graphic_CLight__notifyMoved_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight__notifyMoved_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight__notifyLightsQueried_void_LightList(EarthView_World_Graphic_CLight__notifyLightsQueried_void_LightList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight__notifyLightsQueried_void_LightList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_setLightQueriedListener_void_CLightQueriedListener(EarthView_World_Graphic_CLight_setLightQueriedListener_void_CLightQueriedListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_setLightQueriedListener_void_CLightQueriedListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getLightQueriedListener_CLightQueriedListener(EarthView_World_Graphic_CLight_getLightQueriedListener_CLightQueriedListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getLightQueriedListener_CLightQueriedListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getLightListUpdated_ev_uint32(EarthView_World_Graphic_CLight_getLightListUpdated_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getLightListUpdated_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_setLightListUpdated_void_ev_uint32(EarthView_World_Graphic_CLight_setLightListUpdated_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_setLightListUpdated_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight__notifyCurrentCamera_void_CCamera(EarthView_World_Graphic_CLight__notifyCurrentCamera_void_CCamera_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight__notifyCurrentCamera_void_CCamera_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getBoundingBox_CAxisAlignedBox(EarthView_World_Graphic_CLight_getBoundingBox_CAxisAlignedBox_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getBoundingBox_CAxisAlignedBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getBoundingRadius_Real(EarthView_World_Graphic_CLight_getBoundingRadius_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getBoundingRadius_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_ev_bool(EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere(EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight__updateRenderQueue_void_CRenderQueue(EarthView_World_Graphic_CLight__updateRenderQueue_void_CRenderQueue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight__updateRenderQueue_void_CRenderQueue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_setVisible_void_ev_bool(EarthView_World_Graphic_CLight_setVisible_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_setVisible_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getVisible_ev_bool(EarthView_World_Graphic_CLight_getVisible_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getVisible_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_isVisible_ev_bool(EarthView_World_Graphic_CLight_isVisible_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_isVisible_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_setRenderingMaxDistance_void_Real(EarthView_World_Graphic_CLight_setRenderingMaxDistance_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_setRenderingMaxDistance_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getRenderingMaxDistance_Real(EarthView_World_Graphic_CLight_getRenderingMaxDistance_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getRenderingMaxDistance_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_setRenderingMinDistance_void_Real(EarthView_World_Graphic_CLight_setRenderingMinDistance_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_setRenderingMinDistance_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getRenderingMinDistance_Real(EarthView_World_Graphic_CLight_getRenderingMinDistance_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getRenderingMinDistance_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_setRenderingMinPixelSize_void_Real(EarthView_World_Graphic_CLight_setRenderingMinPixelSize_void_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_setRenderingMinPixelSize_void_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getRenderingMinPixelSize_Real(EarthView_World_Graphic_CLight_getRenderingMinPixelSize_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getRenderingMinPixelSize_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_setSelectionColour_void_CColourValue(EarthView_World_Graphic_CLight_setSelectionColour_void_CColourValue_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_setSelectionColour_void_CColourValue_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_setSelected_ev_bool_IntVector(EarthView_World_Graphic_CLight_setSelected_ev_bool_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_setSelected_ev_bool_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getSelected_IntVector(EarthView_World_Graphic_CLight_getSelected_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getSelected_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3(EarthView_World_Graphic_CLight_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector(EarthView_World_Graphic_CLight_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_selectBy_ev_bool_CSphere_ev_bool_IntVector(EarthView_World_Graphic_CLight_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3(EarthView_World_Graphic_CLight_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_renderSelection_void(EarthView_World_Graphic_CLight_renderSelection_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_renderSelection_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_clearSelection_void(EarthView_World_Graphic_CLight_clearSelection_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_clearSelection_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_startEditing_ev_bool_ev_uint32(EarthView_World_Graphic_CLight_startEditing_ev_bool_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_startEditing_ev_bool_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_endEditing_void(EarthView_World_Graphic_CLight_endEditing_void_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_endEditing_void_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getEditBoundingBox_CEditBoundingBox(EarthView_World_Graphic_CLight_getEditBoundingBox_CEditBoundingBox_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getEditBoundingBox_CEditBoundingBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(EarthView_World_Graphic_CLight_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(EarthView_World_Graphic_CLight_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_setRenderQueueGroup_void_ev_uint8(EarthView_World_Graphic_CLight_setRenderQueueGroup_void_ev_uint8_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_setRenderQueueGroup_void_ev_uint8_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16(EarthView_World_Graphic_CLight_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getRenderQueueGroup_ev_uint8(EarthView_World_Graphic_CLight_getRenderQueueGroup_ev_uint8_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getRenderQueueGroup_ev_uint8_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight__getParentNodeFullTransform_CMatrix4(EarthView_World_Graphic_CLight__getParentNodeFullTransform_CMatrix4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight__getParentNodeFullTransform_CMatrix4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_setQueryFlags_void_ev_uint32(EarthView_World_Graphic_CLight_setQueryFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_setQueryFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_addQueryFlags_void_ev_uint32(EarthView_World_Graphic_CLight_addQueryFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_addQueryFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_removeQueryFlags_void_ev_uint32(EarthView_World_Graphic_CLight_removeQueryFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_removeQueryFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getQueryFlags_ev_uint32(EarthView_World_Graphic_CLight_getQueryFlags_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getQueryFlags_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_setVisibilityFlags_void_ev_uint32(EarthView_World_Graphic_CLight_setVisibilityFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_setVisibilityFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_addVisibilityFlags_void_ev_uint32(EarthView_World_Graphic_CLight_addVisibilityFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_addVisibilityFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_removeVisibilityFlags_void_ev_uint32(EarthView_World_Graphic_CLight_removeVisibilityFlags_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_removeVisibilityFlags_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getVisibilityFlags_ev_uint32(EarthView_World_Graphic_CLight_getVisibilityFlags_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getVisibilityFlags_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_addListener_void_CMovableObjectListener(EarthView_World_Graphic_CLight_addListener_void_CMovableObjectListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_addListener_void_CMovableObjectListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_removeListener_void_CMovableObjectListener(EarthView_World_Graphic_CLight_removeListener_void_CMovableObjectListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_removeListener_void_CMovableObjectListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_existListener_ev_bool_CMovableObjectListener(EarthView_World_Graphic_CLight_existListener_ev_bool_CMovableObjectListener_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_existListener_ev_bool_CMovableObjectListener_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getListenerCount_ev_uint32(EarthView_World_Graphic_CLight_getListenerCount_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getListenerCount_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getListener_CMovableObjectListener_ev_uint32(EarthView_World_Graphic_CLight_getListener_CMovableObjectListener_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getListener_CMovableObjectListener_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_queryLights_LightList(EarthView_World_Graphic_CLight_queryLights_LightList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_queryLights_LightList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getLightMask_ev_uint32(EarthView_World_Graphic_CLight_getLightMask_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getLightMask_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_setLightMask_void_ev_uint32(EarthView_World_Graphic_CLight_setLightMask_void_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_setLightMask_void_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight__getLightList_LightList(EarthView_World_Graphic_CLight__getLightList_LightList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight__getLightList_LightList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_setCastShadows_void_ev_bool(EarthView_World_Graphic_CLight_setCastShadows_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_setCastShadows_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getReceivesShadows_ev_bool(EarthView_World_Graphic_CLight_getReceivesShadows_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getReceivesShadows_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getTypeFlags_ev_uint32(EarthView_World_Graphic_CLight_getTypeFlags_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getTypeFlags_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_ev_bool(EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor(EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_setDebugDisplayEnabled_void_ev_bool(EarthView_World_Graphic_CLight_setDebugDisplayEnabled_void_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_setDebugDisplayEnabled_void_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_isDebugDisplayEnabled_ev_bool(EarthView_World_Graphic_CLight_isDebugDisplayEnabled_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_isDebugDisplayEnabled_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getCastShadows_ev_bool(EarthView_World_Graphic_CLight_getCastShadows_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getCastShadows_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getEdgeList_CEdgeData(EarthView_World_Graphic_CLight_getEdgeList_CEdgeData_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getEdgeList_CEdgeData_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_hasEdgeList_ev_bool(EarthView_World_Graphic_CLight_hasEdgeList_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_hasEdgeList_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_ev_bool(EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox(EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getLightCapBounds_CAxisAlignedBox(EarthView_World_Graphic_CLight_getLightCapBounds_CAxisAlignedBox_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getLightCapBounds_CAxisAlignedBox_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getDarkCapBounds_CAxisAlignedBox_CLight_Real(EarthView_World_Graphic_CLight_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32(EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real(EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_getPointExtrusionDistance_Real_CLight(EarthView_World_Graphic_CLight_getPointExtrusionDistance_Real_CLight_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_getPointExtrusionDistance_Real_CLight_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_updateEdgeListLightFacing_void_CEdgeData_CVector4(EarthView_World_Graphic_CLight_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32(EarthView_World_Graphic_CLight_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_extrudeBounds_void_CAxisAlignedBox_CVector4_Real(EarthView_World_Graphic_CLight_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback = pCallback;
+				}
+				virtual EarthView::World::Graphic::AnimableValuePtr createAnimableValue(_in const EVString& valueName)
+				{
+					if(m_EarthView_World_Graphic_CLight_createAnimableValue_AnimableValuePtr_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* valueName_Char = valueName.makeBuffer();
+						EarthView::World::Graphic::AnimableValuePtr returnValue = *(EarthView::World::Graphic::AnimableValuePtr*)m_EarthView_World_Graphic_CLight_createAnimableValue_AnimableValuePtr_EVString_Callback(valueName_Char);
+						return returnValue;
+					}
+					else
+						return this->CLight::createAnimableValue(valueName);
+				}
+				virtual const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject* getAnimableObjectPtr()
+				{
+					if(m_EarthView_World_Graphic_CLight_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject* returnValue = m_EarthView_World_Graphic_CLight_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getAnimableObjectPtr();
+				}
+				virtual void _notifyAttached(_in EarthView::World::Graphic::CNode* ref_parent, _in ev_bool isTagPoint)
+				{
+					if(m_EarthView_World_Graphic_CLight__notifyAttached_void_CNode_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight__notifyAttached_void_CNode_ev_bool_Callback(ref_parent, isTagPoint);
+					}
+					else
+						return this->CLight::_notifyAttached(ref_parent, isTagPoint);
+				}
+				virtual void _notifyAttached(_in EarthView::World::Graphic::CNode* ref_parent)
+				{
+					if(m_EarthView_World_Graphic_CLight__notifyAttached_void_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight__notifyAttached_void_CNode_Callback(ref_parent);
+					}
+					else
+						return this->CLight::_notifyAttached(ref_parent);
+				}
+				virtual void _notifyMoved()
+				{
+					if(m_EarthView_World_Graphic_CLight__notifyMoved_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight__notifyMoved_void_Callback();
+					}
+					else
+						return this->CLight::_notifyMoved();
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getBoundingBox() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getBoundingBox_CAxisAlignedBox_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CLight_getBoundingBox_CAxisAlignedBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getBoundingBox();
+				}
+				virtual void _updateRenderQueue(_in EarthView::World::Graphic::CRenderQueue* queue)
+				{
+					if(m_EarthView_World_Graphic_CLight__updateRenderQueue_void_CRenderQueue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight__updateRenderQueue_void_CRenderQueue_Callback(queue);
+					}
+					else
+						return this->CLight::_updateRenderQueue(queue);
+				}
+				virtual EVString getMovableType() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getMovableType_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CLight_getMovableType_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getMovableType();
+				}
+				virtual void setVisible(_in ev_bool visible)
+				{
+					if(m_EarthView_World_Graphic_CLight_setVisible_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_setVisible_void_ev_bool_Callback(visible);
+					}
+					else
+						return this->CLight::setVisible(visible);
+				}
+				virtual Real getBoundingRadius() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getBoundingRadius_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CLight_getBoundingRadius_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getBoundingRadius();
+				}
+				virtual const EarthView::World::Spatial::Math::CPlaneBoundedVolume& _getNearClipVolume(_in const EarthView::World::Graphic::CCamera* cam) const
+				{
+					if(m_EarthView_World_Graphic_CLight__getNearClipVolume_CPlaneBoundedVolume_CCamera_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CPlaneBoundedVolume& returnValue = *(EarthView::World::Spatial::Math::CPlaneBoundedVolume*)m_EarthView_World_Graphic_CLight__getNearClipVolume_CPlaneBoundedVolume_CCamera_Callback(cam);
+						return returnValue;
+					}
+					else
+						return this->CLight::_getNearClipVolume(cam);
+				}
+				virtual const EarthView::World::Spatial::Math::PlaneBoundedVolumeList& _getFrustumClipVolumes(_in const EarthView::World::Graphic::CCamera* cam) const
+				{
+					if(m_EarthView_World_Graphic_CLight__getFrustumClipVolumes_PlaneBoundedVolumeList_CCamera_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::PlaneBoundedVolumeList& returnValue = *(EarthView::World::Spatial::Math::PlaneBoundedVolumeList*)m_EarthView_World_Graphic_CLight__getFrustumClipVolumes_PlaneBoundedVolumeList_CCamera_Callback(cam);
+						return returnValue;
+					}
+					else
+						return this->CLight::_getFrustumClipVolumes(cam);
+				}
+				virtual ev_uint32 getTypeFlags() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getTypeFlags_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CLight_getTypeFlags_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getTypeFlags();
+				}
+				virtual void visitRenderables(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables)
+				{
+					if(m_EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_ev_bool_Callback(visitor, debugRenderables);
+					}
+					else
+						return this->CLight::visitRenderables(visitor, debugRenderables);
+				}
+				virtual void visitRenderables(_in EarthView::World::Graphic::CRenderable::CVisitor* visitor)
+				{
+					if(m_EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_Callback(visitor);
+					}
+					else
+						return this->CLight::visitRenderables(visitor);
+				}
+				virtual void _updateCustomGpuParameter(_in ev_uint16 paramIndex, _in const EarthView::World::Graphic::CGpuProgramParameters::CAutoConstantEntry& constantEntry, _in EarthView::World::Graphic::CGpuProgramParameters* params) const
+				{
+					if(m_EarthView_World_Graphic_CLight__updateCustomGpuParameter_void_ev_uint16_CAutoConstantEntry_CGpuProgramParameters_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight__updateCustomGpuParameter_void_ev_uint16_CAutoConstantEntry_CGpuProgramParameters_Callback(paramIndex, &constantEntry, params);
+					}
+					else
+						return this->CLight::_updateCustomGpuParameter(paramIndex, constantEntry, params);
+				}
+				virtual void update() const
+				{
+					if(m_EarthView_World_Graphic_CLight_update_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_update_void_Callback();
+					}
+					else
+						return this->CLight::update();
+				}
+				virtual ev_uint8 getRenderQueueId() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getRenderQueueId_ev_uint8_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint8 returnValue = m_EarthView_World_Graphic_CLight_getRenderQueueId_ev_uint8_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getRenderQueueId();
+				}
+				virtual void _notifyCreator(_in EarthView::World::Graphic::CMovableObjectFactory* ref_fact)
+				{
+					if(m_EarthView_World_Graphic_CLight__notifyCreator_void_CMovableObjectFactory_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight__notifyCreator_void_CMovableObjectFactory_Callback(ref_fact);
+					}
+					else
+						return this->CLight::_notifyCreator(ref_fact);
+				}
+				virtual EarthView::World::Graphic::CMovableObjectFactory* _getCreator() const
+				{
+					if(m_EarthView_World_Graphic_CLight__getCreator_CMovableObjectFactory_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CMovableObjectFactory* returnValue = m_EarthView_World_Graphic_CLight__getCreator_CMovableObjectFactory_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::_getCreator();
+				}
+				virtual void _notifyManager(_in EarthView::World::Graphic::CSceneManager* ref_mgr)
+				{
+					if(m_EarthView_World_Graphic_CLight__notifyManager_void_CSceneManager_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight__notifyManager_void_CSceneManager_Callback(ref_mgr);
+					}
+					else
+						return this->CLight::_notifyManager(ref_mgr);
+				}
+				virtual EarthView::World::Graphic::CSceneManager* _getManager() const
+				{
+					if(m_EarthView_World_Graphic_CLight__getManager_CSceneManager_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CSceneManager* returnValue = m_EarthView_World_Graphic_CLight__getManager_CSceneManager_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::_getManager();
+				}
+				virtual EVString getName() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getName_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CLight_getName_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getName();
+				}
+				virtual EarthView::World::Graphic::CNode* getParentNode() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getParentNode_CNode_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CNode* returnValue = m_EarthView_World_Graphic_CLight_getParentNode_CNode_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getParentNode();
+				}
+				virtual EarthView::World::Graphic::CSceneNode* getParentSceneNode() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getParentSceneNode_CSceneNode_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CSceneNode* returnValue = m_EarthView_World_Graphic_CLight_getParentSceneNode_CSceneNode_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getParentSceneNode();
+				}
+				virtual ev_bool isParentTagPoint() const
+				{
+					if(m_EarthView_World_Graphic_CLight_isParentTagPoint_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CLight_isParentTagPoint_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::isParentTagPoint();
+				}
+				virtual ev_bool isAttached() const
+				{
+					if(m_EarthView_World_Graphic_CLight_isAttached_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CLight_isAttached_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::isAttached();
+				}
+				virtual void detachFromParent()
+				{
+					if(m_EarthView_World_Graphic_CLight_detachFromParent_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_detachFromParent_void_Callback();
+					}
+					else
+						return this->CLight::detachFromParent();
+				}
+				virtual ev_bool isInScene() const
+				{
+					if(m_EarthView_World_Graphic_CLight_isInScene_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CLight_isInScene_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::isInScene();
+				}
+				virtual void _notifyLightsQueried(_in const EarthView::World::Graphic::LightList* lightList)
+				{
+					if(m_EarthView_World_Graphic_CLight__notifyLightsQueried_void_LightList_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight__notifyLightsQueried_void_LightList_Callback(lightList);
+					}
+					else
+						return this->CLight::_notifyLightsQueried(lightList);
+				}
+				virtual void setLightQueriedListener(_in EarthView::World::Graphic::CMovableObject::CLightQueriedListener* listener)
+				{
+					if(m_EarthView_World_Graphic_CLight_setLightQueriedListener_void_CLightQueriedListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_setLightQueriedListener_void_CLightQueriedListener_Callback(listener);
+					}
+					else
+						return this->CLight::setLightQueriedListener(listener);
+				}
+				virtual EarthView::World::Graphic::CMovableObject::CLightQueriedListener* getLightQueriedListener()
+				{
+					if(m_EarthView_World_Graphic_CLight_getLightQueriedListener_CLightQueriedListener_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CMovableObject::CLightQueriedListener* returnValue = m_EarthView_World_Graphic_CLight_getLightQueriedListener_CLightQueriedListener_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getLightQueriedListener();
+				}
+				virtual ev_uint32 getLightListUpdated() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getLightListUpdated_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CLight_getLightListUpdated_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getLightListUpdated();
+				}
+				virtual void setLightListUpdated(_in ev_uint32 frame)
+				{
+					if(m_EarthView_World_Graphic_CLight_setLightListUpdated_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_setLightListUpdated_void_ev_uint32_Callback(frame);
+					}
+					else
+						return this->CLight::setLightListUpdated(frame);
+				}
+				virtual void _notifyCurrentCamera(_in EarthView::World::Graphic::CCamera* ref_cam)
+				{
+					if(m_EarthView_World_Graphic_CLight__notifyCurrentCamera_void_CCamera_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight__notifyCurrentCamera_void_CCamera_Callback(ref_cam);
+					}
+					else
+						return this->CLight::_notifyCurrentCamera(ref_cam);
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getWorldBoundingBox(_in ev_bool derive) const
+				{
+					if(m_EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback(derive);
+						return returnValue;
+					}
+					else
+						return this->CLight::getWorldBoundingBox(derive);
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getWorldBoundingBox() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getWorldBoundingBox();
+				}
+				virtual const EarthView::World::Spatial::Math::CSphere& getWorldBoundingSphere(_in ev_bool derive) const
+				{
+					if(m_EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CSphere& returnValue = *(EarthView::World::Spatial::Math::CSphere*)m_EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_ev_bool_Callback(derive);
+						return returnValue;
+					}
+					else
+						return this->CLight::getWorldBoundingSphere(derive);
+				}
+				virtual const EarthView::World::Spatial::Math::CSphere& getWorldBoundingSphere() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CSphere& returnValue = *(EarthView::World::Spatial::Math::CSphere*)m_EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getWorldBoundingSphere();
+				}
+				virtual ev_bool getVisible() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getVisible_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CLight_getVisible_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getVisible();
+				}
+				virtual ev_bool isVisible() const
+				{
+					if(m_EarthView_World_Graphic_CLight_isVisible_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CLight_isVisible_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::isVisible();
+				}
+				virtual void setRenderingMaxDistance(_in Real dist)
+				{
+					if(m_EarthView_World_Graphic_CLight_setRenderingMaxDistance_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_setRenderingMaxDistance_void_Real_Callback(dist);
+					}
+					else
+						return this->CLight::setRenderingMaxDistance(dist);
+				}
+				virtual Real getRenderingMaxDistance() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getRenderingMaxDistance_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CLight_getRenderingMaxDistance_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getRenderingMaxDistance();
+				}
+				virtual void setRenderingMinDistance(_in Real dist)
+				{
+					if(m_EarthView_World_Graphic_CLight_setRenderingMinDistance_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_setRenderingMinDistance_void_Real_Callback(dist);
+					}
+					else
+						return this->CLight::setRenderingMinDistance(dist);
+				}
+				virtual Real getRenderingMinDistance() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getRenderingMinDistance_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CLight_getRenderingMinDistance_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getRenderingMinDistance();
+				}
+				virtual void setRenderingMinPixelSize(_in Real pixelSize)
+				{
+					if(m_EarthView_World_Graphic_CLight_setRenderingMinPixelSize_void_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_setRenderingMinPixelSize_void_Real_Callback(pixelSize);
+					}
+					else
+						return this->CLight::setRenderingMinPixelSize(pixelSize);
+				}
+				virtual Real getRenderingMinPixelSize() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getRenderingMinPixelSize_Real_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CLight_getRenderingMinPixelSize_Real_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getRenderingMinPixelSize();
+				}
+				virtual void setSelectionColour(_in const EarthView::World::Graphic::CColourValue& colour)
+				{
+					if(m_EarthView_World_Graphic_CLight_setSelectionColour_void_CColourValue_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_setSelectionColour_void_CColourValue_Callback(&colour);
+					}
+					else
+						return this->CLight::setSelectionColour(colour);
+				}
+				virtual ev_bool setSelected(_in const EarthView::World::Core::IntVector& objIndics)
+				{
+					if(m_EarthView_World_Graphic_CLight_setSelected_ev_bool_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CLight_setSelected_ev_bool_IntVector_Callback(&objIndics);
+						return returnValue;
+					}
+					else
+						return this->CLight::setSelected(objIndics);
+				}
+				virtual EarthView::World::Core::IntVector getSelected() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getSelected_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Core::IntVector returnValue = *(EarthView::World::Core::IntVector*)m_EarthView_World_Graphic_CLight_getSelected_IntVector_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getSelected();
+				}
+				virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CRay& ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out EarthView::World::Spatial::Math::CVector3& point)
+				{
+					if(m_EarthView_World_Graphic_CLight_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CLight_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback(&ray, viewport, prepareToRenderSelection, objIndex, &point);
+						return returnValue;
+					}
+					else
+						return this->CLight::selectBy(ray, viewport, prepareToRenderSelection, objIndex, point);
+				}
+				virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CAxisAlignedBox& aabb, _in ev_bool prepareToRenderSelection, _out EarthView::World::Core::IntVector& indexVec)
+				{
+					if(m_EarthView_World_Graphic_CLight_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CLight_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback(&aabb, prepareToRenderSelection, &indexVec);
+						return returnValue;
+					}
+					else
+						return this->CLight::selectBy(aabb, prepareToRenderSelection, indexVec);
+				}
+				virtual ev_bool selectBy(_in const EarthView::World::Spatial::Math::CSphere& sphere, _in ev_bool prepareToRenderSelection, _out EarthView::World::Core::IntVector& indexVec)
+				{
+					if(m_EarthView_World_Graphic_CLight_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CLight_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback(&sphere, prepareToRenderSelection, &indexVec);
+						return returnValue;
+					}
+					else
+						return this->CLight::selectBy(sphere, prepareToRenderSelection, indexVec);
+				}
+				virtual ev_bool selectComponentBy(_in const EarthView::World::Spatial::Math::CRay& ray, _in const EarthView::World::Graphic::CViewport* viewport, _in ev_bool prepareToRenderSelection, _out ev_int32& objIndex, _out ev_int32& submeshIndex, _out ev_int32& instanceIndex, _out ev_int32& segmentIndex, _out EarthView::World::Spatial::Math::CVector3& point)
+				{
+					if(m_EarthView_World_Graphic_CLight_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CLight_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback(&ray, viewport, prepareToRenderSelection, objIndex, submeshIndex, instanceIndex, segmentIndex, &point);
+						return returnValue;
+					}
+					else
+						return this->CLight::selectComponentBy(ray, viewport, prepareToRenderSelection, objIndex, submeshIndex, instanceIndex, segmentIndex, point);
+				}
+				virtual void renderSelection()
+				{
+					if(m_EarthView_World_Graphic_CLight_renderSelection_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_renderSelection_void_Callback();
+					}
+					else
+						return this->CLight::renderSelection();
+				}
+				virtual void clearSelection()
+				{
+					if(m_EarthView_World_Graphic_CLight_clearSelection_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_clearSelection_void_Callback();
+					}
+					else
+						return this->CLight::clearSelection();
+				}
+				virtual ev_bool startEditing(_in ev_uint32 objectIndex)
+				{
+					if(m_EarthView_World_Graphic_CLight_startEditing_ev_bool_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CLight_startEditing_ev_bool_ev_uint32_Callback(objectIndex);
+						return returnValue;
+					}
+					else
+						return this->CLight::startEditing(objectIndex);
+				}
+				virtual void endEditing()
+				{
+					if(m_EarthView_World_Graphic_CLight_endEditing_void_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_endEditing_void_Callback();
+					}
+					else
+						return this->CLight::endEditing();
+				}
+				virtual EarthView::World::Graphic::CEditBoundingBox* getEditBoundingBox()
+				{
+					if(m_EarthView_World_Graphic_CLight_getEditBoundingBox_CEditBoundingBox_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CEditBoundingBox* returnValue = m_EarthView_World_Graphic_CLight_getEditBoundingBox_CEditBoundingBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getEditBoundingBox();
+				}
+				virtual ev_bool getSelectedObjectWorldMatrix(_in ev_uint32 objectIndex, _inout EarthView::World::Spatial::Math::CMatrix4& matrix)
+				{
+					if(m_EarthView_World_Graphic_CLight_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CLight_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback(objectIndex, &matrix);
+						return returnValue;
+					}
+					else
+						return this->CLight::getSelectedObjectWorldMatrix(objectIndex, matrix);
+				}
+				virtual ev_bool setSelectedObjectWorldMatrix(_in ev_uint32 objectIndex, _in const EarthView::World::Spatial::Math::CMatrix4& matrix)
+				{
+					if(m_EarthView_World_Graphic_CLight_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CLight_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback(objectIndex, &matrix);
+						return returnValue;
+					}
+					else
+						return this->CLight::setSelectedObjectWorldMatrix(objectIndex, matrix);
+				}
+				virtual void setRenderQueueGroup(_in ev_uint8 queueID)
+				{
+					if(m_EarthView_World_Graphic_CLight_setRenderQueueGroup_void_ev_uint8_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_setRenderQueueGroup_void_ev_uint8_Callback(queueID);
+					}
+					else
+						return this->CLight::setRenderQueueGroup(queueID);
+				}
+				virtual void setRenderQueueGroupAndPriority(_in ev_uint8 queueID, _in ev_uint16 priority)
+				{
+					if(m_EarthView_World_Graphic_CLight_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback(queueID, priority);
+					}
+					else
+						return this->CLight::setRenderQueueGroupAndPriority(queueID, priority);
+				}
+				virtual ev_uint8 getRenderQueueGroup() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getRenderQueueGroup_ev_uint8_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint8 returnValue = m_EarthView_World_Graphic_CLight_getRenderQueueGroup_ev_uint8_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getRenderQueueGroup();
+				}
+				virtual const EarthView::World::Spatial::Math::CMatrix4& _getParentNodeFullTransform() const
+				{
+					if(m_EarthView_World_Graphic_CLight__getParentNodeFullTransform_CMatrix4_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CMatrix4& returnValue = *(EarthView::World::Spatial::Math::CMatrix4*)m_EarthView_World_Graphic_CLight__getParentNodeFullTransform_CMatrix4_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::_getParentNodeFullTransform();
+				}
+				virtual void setQueryFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CLight_setQueryFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_setQueryFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CLight::setQueryFlags(flags);
+				}
+				virtual void addQueryFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CLight_addQueryFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_addQueryFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CLight::addQueryFlags(flags);
+				}
+				virtual void removeQueryFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CLight_removeQueryFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_removeQueryFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CLight::removeQueryFlags(flags);
+				}
+				virtual ev_uint32 getQueryFlags() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getQueryFlags_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CLight_getQueryFlags_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getQueryFlags();
+				}
+				virtual void setVisibilityFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CLight_setVisibilityFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_setVisibilityFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CLight::setVisibilityFlags(flags);
+				}
+				virtual void addVisibilityFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CLight_addVisibilityFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_addVisibilityFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CLight::addVisibilityFlags(flags);
+				}
+				virtual void removeVisibilityFlags(_in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CLight_removeVisibilityFlags_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_removeVisibilityFlags_void_ev_uint32_Callback(flags);
+					}
+					else
+						return this->CLight::removeVisibilityFlags(flags);
+				}
+				virtual ev_uint32 getVisibilityFlags() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getVisibilityFlags_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CLight_getVisibilityFlags_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getVisibilityFlags();
+				}
+				virtual void addListener(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* ref_listener)
+				{
+					if(m_EarthView_World_Graphic_CLight_addListener_void_CMovableObjectListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_addListener_void_CMovableObjectListener_Callback(ref_listener);
+					}
+					else
+						return this->CLight::addListener(ref_listener);
+				}
+				virtual void removeListener(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener)
+				{
+					if(m_EarthView_World_Graphic_CLight_removeListener_void_CMovableObjectListener_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_removeListener_void_CMovableObjectListener_Callback(listener);
+					}
+					else
+						return this->CLight::removeListener(listener);
+				}
+				virtual ev_bool existListener(_in EarthView::World::Graphic::CMovableObject::CMovableObjectListener* listener) const
+				{
+					if(m_EarthView_World_Graphic_CLight_existListener_ev_bool_CMovableObjectListener_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CLight_existListener_ev_bool_CMovableObjectListener_Callback(listener);
+						return returnValue;
+					}
+					else
+						return this->CLight::existListener(listener);
+				}
+				virtual ev_uint32 getListenerCount() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getListenerCount_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CLight_getListenerCount_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getListenerCount();
+				}
+				virtual EarthView::World::Graphic::CMovableObject::CMovableObjectListener* getListener(_in ev_uint32 index) const
+				{
+					if(m_EarthView_World_Graphic_CLight_getListener_CMovableObjectListener_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CMovableObject::CMovableObjectListener* returnValue = m_EarthView_World_Graphic_CLight_getListener_CMovableObjectListener_ev_uint32_Callback(index);
+						return returnValue;
+					}
+					else
+						return this->CLight::getListener(index);
+				}
+				virtual const EarthView::World::Graphic::LightList& queryLights() const
+				{
+					if(m_EarthView_World_Graphic_CLight_queryLights_LightList_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Graphic::LightList& returnValue = *(EarthView::World::Graphic::LightList*)m_EarthView_World_Graphic_CLight_queryLights_LightList_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::queryLights();
+				}
+				virtual ev_uint32 getLightMask() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getLightMask_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						ev_uint32 returnValue = m_EarthView_World_Graphic_CLight_getLightMask_ev_uint32_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getLightMask();
+				}
+				virtual void setLightMask(_in ev_uint32 lightMask)
+				{
+					if(m_EarthView_World_Graphic_CLight_setLightMask_void_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_setLightMask_void_ev_uint32_Callback(lightMask);
+					}
+					else
+						return this->CLight::setLightMask(lightMask);
+				}
+				virtual EarthView::World::Graphic::LightList* _getLightList()
+				{
+					if(m_EarthView_World_Graphic_CLight__getLightList_LightList_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::LightList* returnValue = m_EarthView_World_Graphic_CLight__getLightList_LightList_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::_getLightList();
+				}
+				virtual EarthView::World::Graphic::CEdgeData* getEdgeList()
+				{
+					if(m_EarthView_World_Graphic_CLight_getEdgeList_CEdgeData_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CEdgeData* returnValue = m_EarthView_World_Graphic_CLight_getEdgeList_CEdgeData_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getEdgeList();
+				}
+				virtual ev_bool hasEdgeList()
+				{
+					if(m_EarthView_World_Graphic_CLight_hasEdgeList_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CLight_hasEdgeList_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::hasEdgeList();
+				}
+				virtual EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator getShadowVolumeRenderableIterator(_in EarthView::World::Graphic::ShadowTechnique shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDist, _in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator returnValue = *(EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator*)m_EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback((int)shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist, flags);
+						return returnValue;
+					}
+					else
+						return this->CLight::getShadowVolumeRenderableIterator(shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist, flags);
+				}
+				virtual EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator getShadowVolumeRenderableIterator(_in EarthView::World::Graphic::ShadowTechnique shadowTechnique, _in const EarthView::World::Graphic::CLight* light, _in EarthView::World::Graphic::CHardwareIndexBufferSharedPtr* indexBuffer, _in ev_bool extrudeVertices, _in Real extrusionDist)
+				{
+					if(m_EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator returnValue = *(EarthView::World::Graphic::CShadowCaster::ShadowRenderableListIterator*)m_EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback((int)shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist);
+						return returnValue;
+					}
+					else
+						return this->CLight::getShadowVolumeRenderableIterator(shadowTechnique, light, indexBuffer, extrudeVertices, extrusionDist);
+				}
+				virtual const EarthView::World::Spatial::Math::CAxisAlignedBox& getLightCapBounds() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getLightCapBounds_CAxisAlignedBox_Callback != NULL && this->isCustomExtend())
+					{
+						const EarthView::World::Spatial::Math::CAxisAlignedBox& returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CLight_getLightCapBounds_CAxisAlignedBox_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getLightCapBounds();
+				}
+				virtual EarthView::World::Spatial::Math::CAxisAlignedBox getDarkCapBounds(_in const EarthView::World::Graphic::CLight& light, _in Real dirLightExtrusionDist) const
+				{
+					if(m_EarthView_World_Graphic_CLight_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback != NULL && this->isCustomExtend())
+					{
+						EarthView::World::Spatial::Math::CAxisAlignedBox returnValue = *(EarthView::World::Spatial::Math::CAxisAlignedBox*)m_EarthView_World_Graphic_CLight_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback(&light, dirLightExtrusionDist);
+						return returnValue;
+					}
+					else
+						return this->CLight::getDarkCapBounds(light, dirLightExtrusionDist);
+				}
+				virtual void setCastShadows(_in ev_bool enabled)
+				{
+					if(m_EarthView_World_Graphic_CLight_setCastShadows_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_setCastShadows_void_ev_bool_Callback(enabled);
+					}
+					else
+						return this->CLight::setCastShadows(enabled);
+				}
+				virtual ev_bool getCastShadows() const
+				{
+					if(m_EarthView_World_Graphic_CLight_getCastShadows_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CLight_getCastShadows_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getCastShadows();
+				}
+				virtual ev_bool getReceivesShadows()
+				{
+					if(m_EarthView_World_Graphic_CLight_getReceivesShadows_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CLight_getReceivesShadows_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::getReceivesShadows();
+				}
+				virtual Real getPointExtrusionDistance(_in const EarthView::World::Graphic::CLight* l) const
+				{
+					if(m_EarthView_World_Graphic_CLight_getPointExtrusionDistance_Real_CLight_Callback != NULL && this->isCustomExtend())
+					{
+						Real returnValue = m_EarthView_World_Graphic_CLight_getPointExtrusionDistance_Real_CLight_Callback(l);
+						return returnValue;
+					}
+					else
+						return this->CLight::getPointExtrusionDistance(l);
+				}
+				virtual void setDebugDisplayEnabled(_in ev_bool enabled)
+				{
+					if(m_EarthView_World_Graphic_CLight_setDebugDisplayEnabled_void_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_setDebugDisplayEnabled_void_ev_bool_Callback(enabled);
+					}
+					else
+						return this->CLight::setDebugDisplayEnabled(enabled);
+				}
+				virtual ev_bool isDebugDisplayEnabled() const
+				{
+					if(m_EarthView_World_Graphic_CLight_isDebugDisplayEnabled_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CLight_isDebugDisplayEnabled_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLight::isDebugDisplayEnabled();
+				}
+				virtual void updateEdgeListLightFacing(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const EarthView::World::Spatial::Math::CVector4& lightPos)
+				{
+					if(m_EarthView_World_Graphic_CLight_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback(edgeData, &lightPos);
+					}
+					else
+						return this->CLight::updateEdgeListLightFacing(edgeData, lightPos);
+				}
+				virtual void generateShadowVolume(_in EarthView::World::Graphic::CEdgeData* edgeData, _in const EarthView::World::Graphic::CHardwareIndexBufferSharedPtr& indexBuffer, _in const EarthView::World::Graphic::CLight* light, _inout EarthView::World::Graphic::CShadowCaster::ShadowRenderableList& shadowRenderables, _in ev_uint32 flags)
+				{
+					if(m_EarthView_World_Graphic_CLight_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback(edgeData, &indexBuffer, light, &shadowRenderables, flags);
+					}
+					else
+						return this->CLight::generateShadowVolume(edgeData, indexBuffer, light, shadowRenderables, flags);
+				}
+				virtual void extrudeBounds(_inout EarthView::World::Spatial::Math::CAxisAlignedBox& box, _in const EarthView::World::Spatial::Math::CVector4& lightPos, _in Real extrudeDist) const
+				{
+					if(m_EarthView_World_Graphic_CLight_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback(&box, &lightPos, extrudeDist);
+					}
+					else
+						return this->CLight::extrudeBounds(box, lightPos, extrudeDist);
+				}
+			};
+			REGISTER_FACTORY_CLASS(CLightProxy);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLight_CLightInternalAnimableObject_initialiseAnimableDictionary_void_StringVector_Callback)(_inout void* val);
+			typedef char*  ( _stdcall EarthView_World_Graphic_CLight_CLightInternalAnimableObject_getAnimableDictionaryName_EVString_Callback)();
+			typedef void*  ( _stdcall EarthView_World_Graphic_CLight_CLightInternalAnimableObject_createAnimableValue_AnimableValuePtr_EVString_Callback)(_in char*& valueName);
+			class CLightInternalAnimableObjectProxy : public EarthView::World::Graphic::CLight::CLightInternalAnimableObject
+			{
+			private:
+				EarthView_World_Graphic_CLight_CLightInternalAnimableObject_initialiseAnimableDictionary_void_StringVector_Callback* m_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_initialiseAnimableDictionary_void_StringVector_Callback;
+				EarthView_World_Graphic_CLight_CLightInternalAnimableObject_getAnimableDictionaryName_EVString_Callback* m_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_getAnimableDictionaryName_EVString_Callback;
+				EarthView_World_Graphic_CLight_CLightInternalAnimableObject_createAnimableValue_AnimableValuePtr_EVString_Callback* m_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_createAnimableValue_AnimableValuePtr_EVString_Callback;
+			public:
+				CLightInternalAnimableObjectProxy(EarthView::World::Core::CNameValuePairList *pList) : CLightInternalAnimableObject(pList)
+				{
+					m_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_initialiseAnimableDictionary_void_StringVector_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_getAnimableDictionaryName_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_createAnimableValue_AnimableValuePtr_EVString_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_initialiseAnimableDictionary_void_StringVector(EarthView_World_Graphic_CLight_CLightInternalAnimableObject_initialiseAnimableDictionary_void_StringVector_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_initialiseAnimableDictionary_void_StringVector_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_getAnimableDictionaryName_EVString(EarthView_World_Graphic_CLight_CLightInternalAnimableObject_getAnimableDictionaryName_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_getAnimableDictionaryName_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_createAnimableValue_AnimableValuePtr_EVString(EarthView_World_Graphic_CLight_CLightInternalAnimableObject_createAnimableValue_AnimableValuePtr_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_createAnimableValue_AnimableValuePtr_EVString_Callback = pCallback;
+				}
+				virtual EarthView::World::Graphic::AnimableValuePtr createAnimableValue(_in const EVString& valueName)
+				{
+					if(m_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_createAnimableValue_AnimableValuePtr_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						char* valueName_Char = valueName.makeBuffer();
+						EarthView::World::Graphic::AnimableValuePtr returnValue = *(EarthView::World::Graphic::AnimableValuePtr*)m_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_createAnimableValue_AnimableValuePtr_EVString_Callback(valueName_Char);
+						return returnValue;
+					}
+					else
+						return this->CLightInternalAnimableObject::createAnimableValue(valueName);
+				}
+				virtual void initialiseAnimableDictionary(_inout EarthView::World::Core::StringVector& val) const
+				{
+					if(m_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_initialiseAnimableDictionary_void_StringVector_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_initialiseAnimableDictionary_void_StringVector_Callback(&val);
+					}
+					else
+						return this->CLightInternalAnimableObject::initialiseAnimableDictionary(val);
+				}
+				virtual EVString getAnimableDictionaryName() const
+				{
+					if(m_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_getAnimableDictionaryName_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_getAnimableDictionaryName_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLightInternalAnimableObject::getAnimableDictionaryName();
+				}
+			};
+			REGISTER_FACTORY_CLASS(CLightInternalAnimableObjectProxy);
+			extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Graphic_CLight_CLightInternalAnimableObject_createAnimableValue_AnimableValuePtr_EVString(void *pObjectXXXX, _in const char* valueName )
+			{
+				EarthView::World::Core::ev_string valueName1 = valueName;
+				EarthView::World::Graphic::CLight::CLightInternalAnimableObject* ptrNativeObject = (EarthView::World::Graphic::CLight::CLightInternalAnimableObject*) pObjectXXXX;
+				if (dynamic_cast<CLightInternalAnimableObjectProxy*>((EarthView::World::Graphic::CLight::CLightInternalAnimableObject*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::AnimableValuePtr objXXXX = ptrNativeObject->EarthView::World::Graphic::CLight::CLightInternalAnimableObject::createAnimableValue(valueName1);
+					EarthView::World::Graphic::AnimableValuePtr *pXXXX = new EarthView::World::Graphic::AnimableValuePtr(objXXXX);
+					((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+					return (void*)pXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::AnimableValuePtr objXXXX = ptrNativeObject->createAnimableValue(valueName1);
+					EarthView::World::Graphic::AnimableValuePtr *pXXXX = new EarthView::World::Graphic::AnimableValuePtr(objXXXX);
+					((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_createAnimableValue_AnimableValuePtr_EVString( void *pObjectXXXX, EarthView_World_Graphic_CLight_CLightInternalAnimableObject_createAnimableValue_AnimableValuePtr_EVString_Callback* pCallback )
+			{
+				CLightInternalAnimableObjectProxy* ptr = dynamic_cast<CLightInternalAnimableObjectProxy*>((EarthView::World::Graphic::CLight::CLightInternalAnimableObject*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_createAnimableValue_AnimableValuePtr_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Graphic_CLight_CLightInternalAnimableObject_createAnimableValue_AnimableValuePtr_EVString_NoVirtual(void *pObjectXXXX, _in const char* valueName )
+			{
+				EarthView::World::Core::ev_string valueName1 = valueName;
+				EarthView::World::Graphic::CLight::CLightInternalAnimableObject* ptrNativeObject = (EarthView::World::Graphic::CLight::CLightInternalAnimableObject*) pObjectXXXX;
+				EarthView::World::Graphic::AnimableValuePtr objXXXX = ptrNativeObject->EarthView::World::Graphic::CLight::CLightInternalAnimableObject::createAnimableValue(valueName1);
+				EarthView::World::Graphic::AnimableValuePtr *pXXXX = new EarthView::World::Graphic::AnimableValuePtr(objXXXX);
+				((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_initialiseAnimableDictionary_void_StringVector( void *pObjectXXXX, EarthView_World_Graphic_CLight_CLightInternalAnimableObject_initialiseAnimableDictionary_void_StringVector_Callback* pCallback )
+			{
+				CLightInternalAnimableObjectProxy* ptr = dynamic_cast<CLightInternalAnimableObjectProxy*>((EarthView::World::Graphic::CLight::CLightInternalAnimableObject*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_initialiseAnimableDictionary_void_StringVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_getAnimableDictionaryName_EVString( void *pObjectXXXX, EarthView_World_Graphic_CLight_CLightInternalAnimableObject_getAnimableDictionaryName_EVString_Callback* pCallback )
+			{
+				CLightInternalAnimableObjectProxy* ptr = dynamic_cast<CLightInternalAnimableObjectProxy*>((EarthView::World::Graphic::CLight::CLightInternalAnimableObject*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_CLightInternalAnimableObject_getAnimableDictionaryName_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Graphic_CLight_createAnimableValue_AnimableValuePtr_EVString(void *pObjectXXXX, _in const char* valueName )
+			{
+				EarthView::World::Core::ev_string valueName1 = valueName;
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				if (dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::AnimableValuePtr objXXXX = ptrNativeObject->EarthView::World::Graphic::CLight::createAnimableValue(valueName1);
+					EarthView::World::Graphic::AnimableValuePtr *pXXXX = new EarthView::World::Graphic::AnimableValuePtr(objXXXX);
+					((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+					return (void*)pXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::AnimableValuePtr objXXXX = ptrNativeObject->createAnimableValue(valueName1);
+					EarthView::World::Graphic::AnimableValuePtr *pXXXX = new EarthView::World::Graphic::AnimableValuePtr(objXXXX);
+					((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_createAnimableValue_AnimableValuePtr_EVString( void *pObjectXXXX, EarthView_World_Graphic_CLight_createAnimableValue_AnimableValuePtr_EVString_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_createAnimableValue_AnimableValuePtr_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Graphic_CLight_createAnimableValue_AnimableValuePtr_EVString_NoVirtual(void *pObjectXXXX, _in const char* valueName )
+			{
+				EarthView::World::Core::ev_string valueName1 = valueName;
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				EarthView::World::Graphic::AnimableValuePtr objXXXX = ptrNativeObject->EarthView::World::Graphic::CLight::createAnimableValue(valueName1);
+				EarthView::World::Graphic::AnimableValuePtr *pXXXX = new EarthView::World::Graphic::AnimableValuePtr(objXXXX);
+				((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject*  _stdcall EarthView_World_Graphic_CLight_getAnimableObjectPtr_CMovableObjectInternalAnimableObject(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				if (dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject* objXXXX = ptrNativeObject->EarthView::World::Graphic::CLight::getAnimableObjectPtr();
+					return objXXXX;
+				}
+				else
+				{
+					const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject* objXXXX = ptrNativeObject->getAnimableObjectPtr();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getAnimableObjectPtr_CMovableObjectInternalAnimableObject( void *pObjectXXXX, EarthView_World_Graphic_CLight_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getAnimableObjectPtr_CMovableObjectInternalAnimableObject(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject*  _stdcall EarthView_World_Graphic_CLight_getAnimableObjectPtr_CMovableObjectInternalAnimableObject_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				const EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject* objXXXX = ptrNativeObject->EarthView::World::Graphic::CLight::getAnimableObjectPtr();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall Get_EarthView_World_Graphic_CLight_tempSquareDist( void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->tempSquareDist;
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Graphic_CLight_tempSquareDist( void *pObjectXXXX, Real  value )
+			{
+				((EarthView::World::Graphic::CLight*)pObjectXXXX)->tempSquareDist = value;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight__calcTempSquareDist_void_CVector3(void *pObjectXXXX, _in const void* worldPos )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->_calcTempSquareDist(*(EarthView::World::Spatial::Math::CVector3*)worldPos);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setType_void_LightTypes(void *pObjectXXXX, _in int type )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setType((EarthView::World::Graphic::CLight::LightTypes)type);
+			}
+			extern "C" EV_DLL_EXPORT  int  _stdcall EarthView_World_Graphic_CLight_getType_LightTypes(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				EarthView::World::Graphic::CLight::LightTypes objXXXX = ptrNativeObject->getType();
+				return (int)objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setDiffuseColour_void_Real_Real_Real(void *pObjectXXXX, _in Real red, _in Real green, _in Real blue )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setDiffuseColour(red, green, blue);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setDiffuseColour_void_CColourValue(void *pObjectXXXX, _in const void* colour )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setDiffuseColour(*(EarthView::World::Graphic::CColourValue*)colour);
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CLight_getDiffuseColour_CColourValue(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				const EarthView::World::Graphic::CColourValue& objXXXX = ptrNativeObject->getDiffuseColour();
+				const EarthView::World::Graphic::CColourValue *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setSpecularColour_void_Real_Real_Real(void *pObjectXXXX, _in Real red, _in Real green, _in Real blue )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setSpecularColour(red, green, blue);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setSpecularColour_void_CColourValue(void *pObjectXXXX, _in const void* colour )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setSpecularColour(*(EarthView::World::Graphic::CColourValue*)colour);
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CLight_getSpecularColour_CColourValue(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				const EarthView::World::Graphic::CColourValue& objXXXX = ptrNativeObject->getSpecularColour();
+				const EarthView::World::Graphic::CColourValue *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setAttenuation_void_Real_Real_Real_Real(void *pObjectXXXX, _in Real range, _in Real constant, _in Real linear, _in Real quadratic )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setAttenuation(range, constant, linear, quadratic);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CLight_getAttenuationRange_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->getAttenuationRange();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CLight_getAttenuationConstant_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->getAttenuationConstant();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CLight_getAttenuationLinear_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->getAttenuationLinear();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CLight_getAttenuationQuadric_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->getAttenuationQuadric();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setPosition_void_Real_Real_Real(void *pObjectXXXX, _in Real x, _in Real y, _in Real z )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setPosition(x, y, z);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setPosition_void_CVector3(void *pObjectXXXX, _in const void* vec )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setPosition(*(EarthView::World::Spatial::Math::CVector3*)vec);
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CLight_getPosition_CVector3(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CVector3& objXXXX = ptrNativeObject->getPosition();
+				const EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setDirection_void_Real_Real_Real(void *pObjectXXXX, _in Real x, _in Real y, _in Real z )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setDirection(x, y, z);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setDirection_void_CVector3(void *pObjectXXXX, _in const void* vec )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setDirection(*(EarthView::World::Spatial::Math::CVector3*)vec);
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CLight_getDirection_CVector3(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CVector3& objXXXX = ptrNativeObject->getDirection();
+				const EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setSpotlightRange_void_CRadian_CRadian_Real(void *pObjectXXXX, _in const void* innerAngle, _in const void* outerAngle, _in Real falloff )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setSpotlightRange(*(EarthView::World::Spatial::Math::CRadian*)innerAngle, *(EarthView::World::Spatial::Math::CRadian*)outerAngle, falloff);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setSpotlightRange_void_CRadian_CRadian(void *pObjectXXXX, _in const void* innerAngle, _in const void* outerAngle )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setSpotlightRange(*(EarthView::World::Spatial::Math::CRadian*)innerAngle, *(EarthView::World::Spatial::Math::CRadian*)outerAngle);
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CLight_getSpotlightInnerAngle_CRadian(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CRadian& objXXXX = ptrNativeObject->getSpotlightInnerAngle();
+				const EarthView::World::Spatial::Math::CRadian *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CLight_getSpotlightOuterAngle_CRadian(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CRadian& objXXXX = ptrNativeObject->getSpotlightOuterAngle();
+				const EarthView::World::Spatial::Math::CRadian *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CLight_getSpotlightFalloff_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->getSpotlightFalloff();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setSpotlightInnerAngle_void_CRadian(void *pObjectXXXX, _in const void* val )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setSpotlightInnerAngle(*(EarthView::World::Spatial::Math::CRadian*)val);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setSpotlightOuterAngle_void_CRadian(void *pObjectXXXX, _in const void* val )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setSpotlightOuterAngle(*(EarthView::World::Spatial::Math::CRadian*)val);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setSpotlightFalloff_void_Real(void *pObjectXXXX, _in Real val )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setSpotlightFalloff(val);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setSpotlightNearClipDistance_void_Real(void *pObjectXXXX, _in Real nearClip )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setSpotlightNearClipDistance(nearClip);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CLight_getSpotlightNearClipDistance_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->getSpotlightNearClipDistance();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setPowerScale_void_Real(void *pObjectXXXX, _in Real power )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setPowerScale(power);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CLight_getPowerScale_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->getPowerScale();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight__notifyAttached_void_CNode_ev_bool(void *pObjectXXXX, _in EarthView::World::Graphic::CNode* ref_parent, _in ev_bool isTagPoint )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				if (dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CLight::_notifyAttached(ref_parent, isTagPoint);
+				else
+					ptrNativeObject->_notifyAttached(ref_parent, isTagPoint);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight__notifyAttached_void_CNode_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CLight__notifyAttached_void_CNode_ev_bool_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight__notifyAttached_void_CNode_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight__notifyAttached_void_CNode_ev_bool_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CNode* ref_parent, _in ev_bool isTagPoint )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CLight::_notifyAttached(ref_parent, isTagPoint);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight__notifyAttached_void_CNode(void *pObjectXXXX, _in EarthView::World::Graphic::CNode* ref_parent )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				if (dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CLight::_notifyAttached(ref_parent);
+				else
+					ptrNativeObject->_notifyAttached(ref_parent);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight__notifyAttached_void_CNode( void *pObjectXXXX, EarthView_World_Graphic_CLight__notifyAttached_void_CNode_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight__notifyAttached_void_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight__notifyAttached_void_CNode_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CNode* ref_parent )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CLight::_notifyAttached(ref_parent);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight__notifyMoved_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				if (dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CLight::_notifyMoved();
+				else
+					ptrNativeObject->_notifyMoved();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight__notifyMoved_void( void *pObjectXXXX, EarthView_World_Graphic_CLight__notifyMoved_void_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight__notifyMoved_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight__notifyMoved_void_NoVirtual(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CLight::_notifyMoved();
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CLight_getBoundingBox_CAxisAlignedBox(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				if (dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Spatial::Math::CAxisAlignedBox& objXXXX = ptrNativeObject->EarthView::World::Graphic::CLight::getBoundingBox();
+					const EarthView::World::Spatial::Math::CAxisAlignedBox *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Spatial::Math::CAxisAlignedBox& objXXXX = ptrNativeObject->getBoundingBox();
+					const EarthView::World::Spatial::Math::CAxisAlignedBox *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getBoundingBox_CAxisAlignedBox( void *pObjectXXXX, EarthView_World_Graphic_CLight_getBoundingBox_CAxisAlignedBox_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getBoundingBox_CAxisAlignedBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CLight_getBoundingBox_CAxisAlignedBox_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CAxisAlignedBox& objXXXX = ptrNativeObject->EarthView::World::Graphic::CLight::getBoundingBox();
+				const EarthView::World::Spatial::Math::CAxisAlignedBox *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight__updateRenderQueue_void_CRenderQueue(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderQueue* queue )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				if (dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CLight::_updateRenderQueue(queue);
+				else
+					ptrNativeObject->_updateRenderQueue(queue);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight__updateRenderQueue_void_CRenderQueue( void *pObjectXXXX, EarthView_World_Graphic_CLight__updateRenderQueue_void_CRenderQueue_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight__updateRenderQueue_void_CRenderQueue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight__updateRenderQueue_void_CRenderQueue_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderQueue* queue )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CLight::_updateRenderQueue(queue);
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CLight_getMovableType_EVString(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				if (dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*)ptrNativeObject) != NULL)
+				{
+					EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CLight::getMovableType();
+					return objXXXX.makeBuffer();
+				}
+				else
+				{
+					EVString objXXXX = ptrNativeObject->getMovableType();
+					return objXXXX.makeBuffer();
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getMovableType_EVString( void *pObjectXXXX, EarthView_World_Graphic_CLight_getMovableType_EVString_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getMovableType_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CLight_getMovableType_EVString_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CLight::getMovableType();
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CLight_getDerivedPosition_CVector3_ev_bool(void *pObjectXXXX, _in ev_bool cameraRelativeIfSet )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CVector3& objXXXX = ptrNativeObject->getDerivedPosition(cameraRelativeIfSet);
+				const EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CLight_getDerivedPosition_CVector3(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CVector3& objXXXX = ptrNativeObject->getDerivedPosition();
+				const EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CLight_getDerivedDirection_CVector3(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CVector3& objXXXX = ptrNativeObject->getDerivedDirection();
+				const EarthView::World::Spatial::Math::CVector3 *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setVisible_void_ev_bool(void *pObjectXXXX, _in ev_bool visible )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				if (dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CLight::setVisible(visible);
+				else
+					ptrNativeObject->setVisible(visible);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_setVisible_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CLight_setVisible_void_ev_bool_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_setVisible_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setVisible_void_ev_bool_NoVirtual(void *pObjectXXXX, _in ev_bool visible )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CLight::setVisible(visible);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CLight_getBoundingRadius_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				if (dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*)ptrNativeObject) != NULL)
+				{
+					Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CLight::getBoundingRadius();
+					return objXXXX;
+				}
+				else
+				{
+					Real objXXXX = ptrNativeObject->getBoundingRadius();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getBoundingRadius_Real( void *pObjectXXXX, EarthView_World_Graphic_CLight_getBoundingRadius_Real_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getBoundingRadius_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CLight_getBoundingRadius_Real_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->EarthView::World::Graphic::CLight::getBoundingRadius();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Graphic_CLight_getAs4DVector_CVector4_ev_bool(void *pObjectXXXX, _in ev_bool cameraRelativeIfSet )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				EarthView::World::Spatial::Math::CVector4 objXXXX = ptrNativeObject->getAs4DVector(cameraRelativeIfSet);
+				EarthView::World::Spatial::Math::CVector4 *pXXXX = new EarthView::World::Spatial::Math::CVector4(objXXXX);
+				((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void*  _stdcall EarthView_World_Graphic_CLight_getAs4DVector_CVector4(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				EarthView::World::Spatial::Math::CVector4 objXXXX = ptrNativeObject->getAs4DVector();
+				EarthView::World::Spatial::Math::CVector4 *pXXXX = new EarthView::World::Spatial::Math::CVector4(objXXXX);
+				((EarthView::World::Core::CBaseObject*)pXXXX)->setExternFree(true);
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CLight__getNearClipVolume_CPlaneBoundedVolume_CCamera(void *pObjectXXXX, _in const EarthView::World::Graphic::CCamera* cam )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				if (dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Spatial::Math::CPlaneBoundedVolume& objXXXX = ptrNativeObject->EarthView::World::Graphic::CLight::_getNearClipVolume(cam);
+					const EarthView::World::Spatial::Math::CPlaneBoundedVolume *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Spatial::Math::CPlaneBoundedVolume& objXXXX = ptrNativeObject->_getNearClipVolume(cam);
+					const EarthView::World::Spatial::Math::CPlaneBoundedVolume *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight__getNearClipVolume_CPlaneBoundedVolume_CCamera( void *pObjectXXXX, EarthView_World_Graphic_CLight__getNearClipVolume_CPlaneBoundedVolume_CCamera_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight__getNearClipVolume_CPlaneBoundedVolume_CCamera(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CLight__getNearClipVolume_CPlaneBoundedVolume_CCamera_NoVirtual(void *pObjectXXXX, _in const EarthView::World::Graphic::CCamera* cam )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CPlaneBoundedVolume& objXXXX = ptrNativeObject->EarthView::World::Graphic::CLight::_getNearClipVolume(cam);
+				const EarthView::World::Spatial::Math::CPlaneBoundedVolume *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CLight__getFrustumClipVolumes_PlaneBoundedVolumeList_CCamera(void *pObjectXXXX, _in const EarthView::World::Graphic::CCamera* cam )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				if (dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*)ptrNativeObject) != NULL)
+				{
+					const EarthView::World::Spatial::Math::PlaneBoundedVolumeList& objXXXX = ptrNativeObject->EarthView::World::Graphic::CLight::_getFrustumClipVolumes(cam);
+					const EarthView::World::Spatial::Math::PlaneBoundedVolumeList *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+				else
+				{
+					const EarthView::World::Spatial::Math::PlaneBoundedVolumeList& objXXXX = ptrNativeObject->_getFrustumClipVolumes(cam);
+					const EarthView::World::Spatial::Math::PlaneBoundedVolumeList *pXXXX = &objXXXX;
+					return (void*)pXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight__getFrustumClipVolumes_PlaneBoundedVolumeList_CCamera( void *pObjectXXXX, EarthView_World_Graphic_CLight__getFrustumClipVolumes_PlaneBoundedVolumeList_CCamera_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight__getFrustumClipVolumes_PlaneBoundedVolumeList_CCamera(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CLight__getFrustumClipVolumes_PlaneBoundedVolumeList_CCamera_NoVirtual(void *pObjectXXXX, _in const EarthView::World::Graphic::CCamera* cam )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::PlaneBoundedVolumeList& objXXXX = ptrNativeObject->EarthView::World::Graphic::CLight::_getFrustumClipVolumes(cam);
+				const EarthView::World::Spatial::Math::PlaneBoundedVolumeList *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint32  _stdcall EarthView_World_Graphic_CLight_getTypeFlags_ev_uint32(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				if (dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*)ptrNativeObject) != NULL)
+				{
+					ev_uint32 objXXXX = ptrNativeObject->EarthView::World::Graphic::CLight::getTypeFlags();
+					return objXXXX;
+				}
+				else
+				{
+					ev_uint32 objXXXX = ptrNativeObject->getTypeFlags();
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getTypeFlags_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CLight_getTypeFlags_ev_uint32_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getTypeFlags_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint32  _stdcall EarthView_World_Graphic_CLight_getTypeFlags_ev_uint32_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ev_uint32 objXXXX = ptrNativeObject->EarthView::World::Graphic::CLight::getTypeFlags();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setCustomShadowCameraSetup_void_ShadowCameraSetupPtr(void *pObjectXXXX, _in const void* customShadowSetup )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setCustomShadowCameraSetup(*(EarthView::World::Graphic::ShadowCameraSetupPtr*)customShadowSetup);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_resetCustomShadowCameraSetup_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->resetCustomShadowCameraSetup();
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CLight_getCustomShadowCameraSetup_ShadowCameraSetupPtr(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				const EarthView::World::Graphic::ShadowCameraSetupPtr& objXXXX = ptrNativeObject->getCustomShadowCameraSetup();
+				const EarthView::World::Graphic::ShadowCameraSetupPtr *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_ev_bool(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				if (dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CLight::visitRenderables(visitor, debugRenderables);
+				else
+					ptrNativeObject->visitRenderables(visitor, debugRenderables);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_ev_bool_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_ev_bool_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor, _in ev_bool debugRenderables )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CLight::visitRenderables(visitor, debugRenderables);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				if (dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CLight::visitRenderables(visitor);
+				else
+					ptrNativeObject->visitRenderables(visitor);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor( void *pObjectXXXX, EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_visitRenderables_void_CVisitor_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CRenderable::CVisitor* visitor )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CLight::visitRenderables(visitor);
+			}
+			extern "C" EV_DLL_EXPORT  ev_uint64   _stdcall EarthView_World_Graphic_CLight__getIndexInFrame_ev_size_t(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ev_size_t objXXXX = ptrNativeObject->_getIndexInFrame();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight__notifyIndexInFrame_void_ev_size_t(void *pObjectXXXX, _in ev_uint64  i )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->_notifyIndexInFrame(i);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setShadowFarDistance_void_Real(void *pObjectXXXX, _in Real distance )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setShadowFarDistance(distance);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_resetShadowFarDistance_void(void *pObjectXXXX )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->resetShadowFarDistance();
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CLight_getShadowFarDistance_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->getShadowFarDistance();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CLight_getShadowFarDistanceSquared_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->getShadowFarDistanceSquared();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setShadowNearClipDistance_void_Real(void *pObjectXXXX, _in Real nearClip )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setShadowNearClipDistance(nearClip);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CLight_getShadowNearClipDistance_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->getShadowNearClipDistance();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CLight__deriveShadowNearClipDistance_Real_CCamera(void *pObjectXXXX, _in const EarthView::World::Graphic::CCamera* maincam )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->_deriveShadowNearClipDistance(maincam);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setShadowFarClipDistance_void_Real(void *pObjectXXXX, _in Real farClip )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setShadowFarClipDistance(farClip);
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CLight_getShadowFarClipDistance_Real(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->getShadowFarClipDistance();
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  Real  _stdcall EarthView_World_Graphic_CLight__deriveShadowFarClipDistance_Real_CCamera(void *pObjectXXXX, _in const EarthView::World::Graphic::CCamera* maincam )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				Real objXXXX = ptrNativeObject->_deriveShadowFarClipDistance(maincam);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight__setCameraRelative_void_CCamera(void *pObjectXXXX, _in EarthView::World::Graphic::CCamera* cam )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->_setCameraRelative(cam);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_setCustomParameter_void_ev_uint16_CVector4(void *pObjectXXXX, _in ev_uint16 index, _in const void* value )
+			{
+				EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->setCustomParameter(index, *(EarthView::World::Spatial::Math::CVector4*)value);
+			}
+			extern "C" EV_DLL_EXPORT  const void*  _stdcall EarthView_World_Graphic_CLight_getCustomParameter_CVector4_ev_uint16(void *pObjectXXXX, _in ev_uint16 index )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				const EarthView::World::Spatial::Math::CVector4& objXXXX = ptrNativeObject->getCustomParameter(index);
+				const EarthView::World::Spatial::Math::CVector4 *pXXXX = &objXXXX;
+				return (void*)pXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight__updateCustomGpuParameter_void_ev_uint16_CAutoConstantEntry_CGpuProgramParameters(void *pObjectXXXX, _in ev_uint16 paramIndex, _in const void* constantEntry, _in EarthView::World::Graphic::CGpuProgramParameters* params )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				if (dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CLight::_updateCustomGpuParameter(paramIndex, *(EarthView::World::Graphic::CGpuProgramParameters::CAutoConstantEntry*)constantEntry, params);
+				else
+					ptrNativeObject->_updateCustomGpuParameter(paramIndex, *(EarthView::World::Graphic::CGpuProgramParameters::CAutoConstantEntry*)constantEntry, params);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight__updateCustomGpuParameter_void_ev_uint16_CAutoConstantEntry_CGpuProgramParameters( void *pObjectXXXX, EarthView_World_Graphic_CLight__updateCustomGpuParameter_void_ev_uint16_CAutoConstantEntry_CGpuProgramParameters_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight__updateCustomGpuParameter_void_ev_uint16_CAutoConstantEntry_CGpuProgramParameters(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight__updateCustomGpuParameter_void_ev_uint16_CAutoConstantEntry_CGpuProgramParameters_NoVirtual(void *pObjectXXXX, _in ev_uint16 paramIndex, _in const void* constantEntry, _in EarthView::World::Graphic::CGpuProgramParameters* params )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CLight::_updateCustomGpuParameter(paramIndex, *(EarthView::World::Graphic::CGpuProgramParameters::CAutoConstantEntry*)constantEntry, params);
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_update_void(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				if (dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CLight::update();
+				else
+					ptrNativeObject->update();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_update_void( void *pObjectXXXX, EarthView_World_Graphic_CLight_update_void_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_update_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLight_update_void_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLight* ptrNativeObject = (EarthView::World::Graphic::CLight*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CLight::update();
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getRenderQueueId_ev_uint8( void *pObjectXXXX, EarthView_World_Graphic_CLight_getRenderQueueId_ev_uint8_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getRenderQueueId_ev_uint8(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight__notifyCreator_void_CMovableObjectFactory( void *pObjectXXXX, EarthView_World_Graphic_CLight__notifyCreator_void_CMovableObjectFactory_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight__notifyCreator_void_CMovableObjectFactory(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight__getCreator_CMovableObjectFactory( void *pObjectXXXX, EarthView_World_Graphic_CLight__getCreator_CMovableObjectFactory_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight__getCreator_CMovableObjectFactory(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight__notifyManager_void_CSceneManager( void *pObjectXXXX, EarthView_World_Graphic_CLight__notifyManager_void_CSceneManager_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight__notifyManager_void_CSceneManager(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight__getManager_CSceneManager( void *pObjectXXXX, EarthView_World_Graphic_CLight__getManager_CSceneManager_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight__getManager_CSceneManager(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getName_EVString( void *pObjectXXXX, EarthView_World_Graphic_CLight_getName_EVString_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getName_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getParentNode_CNode( void *pObjectXXXX, EarthView_World_Graphic_CLight_getParentNode_CNode_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getParentNode_CNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getParentSceneNode_CSceneNode( void *pObjectXXXX, EarthView_World_Graphic_CLight_getParentSceneNode_CSceneNode_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getParentSceneNode_CSceneNode(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_isParentTagPoint_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CLight_isParentTagPoint_ev_bool_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_isParentTagPoint_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_isAttached_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CLight_isAttached_ev_bool_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_isAttached_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_detachFromParent_void( void *pObjectXXXX, EarthView_World_Graphic_CLight_detachFromParent_void_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_detachFromParent_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_isInScene_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CLight_isInScene_ev_bool_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_isInScene_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight__notifyLightsQueried_void_LightList( void *pObjectXXXX, EarthView_World_Graphic_CLight__notifyLightsQueried_void_LightList_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight__notifyLightsQueried_void_LightList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_setLightQueriedListener_void_CLightQueriedListener( void *pObjectXXXX, EarthView_World_Graphic_CLight_setLightQueriedListener_void_CLightQueriedListener_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_setLightQueriedListener_void_CLightQueriedListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getLightQueriedListener_CLightQueriedListener( void *pObjectXXXX, EarthView_World_Graphic_CLight_getLightQueriedListener_CLightQueriedListener_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getLightQueriedListener_CLightQueriedListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getLightListUpdated_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CLight_getLightListUpdated_ev_uint32_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getLightListUpdated_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_setLightListUpdated_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CLight_setLightListUpdated_void_ev_uint32_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_setLightListUpdated_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight__notifyCurrentCamera_void_CCamera( void *pObjectXXXX, EarthView_World_Graphic_CLight__notifyCurrentCamera_void_CCamera_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight__notifyCurrentCamera_void_CCamera(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_ev_bool_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere( void *pObjectXXXX, EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getWorldBoundingSphere_CSphere(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getVisible_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CLight_getVisible_ev_bool_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getVisible_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_isVisible_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CLight_isVisible_ev_bool_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_isVisible_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_setRenderingMaxDistance_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CLight_setRenderingMaxDistance_void_Real_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_setRenderingMaxDistance_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getRenderingMaxDistance_Real( void *pObjectXXXX, EarthView_World_Graphic_CLight_getRenderingMaxDistance_Real_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getRenderingMaxDistance_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_setRenderingMinDistance_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CLight_setRenderingMinDistance_void_Real_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_setRenderingMinDistance_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getRenderingMinDistance_Real( void *pObjectXXXX, EarthView_World_Graphic_CLight_getRenderingMinDistance_Real_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getRenderingMinDistance_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_setRenderingMinPixelSize_void_Real( void *pObjectXXXX, EarthView_World_Graphic_CLight_setRenderingMinPixelSize_void_Real_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_setRenderingMinPixelSize_void_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getRenderingMinPixelSize_Real( void *pObjectXXXX, EarthView_World_Graphic_CLight_getRenderingMinPixelSize_Real_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getRenderingMinPixelSize_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_setSelectionColour_void_CColourValue( void *pObjectXXXX, EarthView_World_Graphic_CLight_setSelectionColour_void_CColourValue_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_setSelectionColour_void_CColourValue(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_setSelected_ev_bool_IntVector( void *pObjectXXXX, EarthView_World_Graphic_CLight_setSelected_ev_bool_IntVector_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_setSelected_ev_bool_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getSelected_IntVector( void *pObjectXXXX, EarthView_World_Graphic_CLight_getSelected_IntVector_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getSelected_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CLight_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_selectBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector( void *pObjectXXXX, EarthView_World_Graphic_CLight_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_selectBy_ev_bool_CAxisAlignedBox_ev_bool_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_selectBy_ev_bool_CSphere_ev_bool_IntVector( void *pObjectXXXX, EarthView_World_Graphic_CLight_selectBy_ev_bool_CSphere_ev_bool_IntVector_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_selectBy_ev_bool_CSphere_ev_bool_IntVector(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3( void *pObjectXXXX, EarthView_World_Graphic_CLight_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_selectComponentBy_ev_bool_CRay_CViewport_ev_bool_ev_int32_ev_int32_ev_int32_ev_int32_CVector3(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_renderSelection_void( void *pObjectXXXX, EarthView_World_Graphic_CLight_renderSelection_void_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_renderSelection_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_clearSelection_void( void *pObjectXXXX, EarthView_World_Graphic_CLight_clearSelection_void_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_clearSelection_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_startEditing_ev_bool_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CLight_startEditing_ev_bool_ev_uint32_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_startEditing_ev_bool_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_endEditing_void( void *pObjectXXXX, EarthView_World_Graphic_CLight_endEditing_void_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_endEditing_void(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getEditBoundingBox_CEditBoundingBox( void *pObjectXXXX, EarthView_World_Graphic_CLight_getEditBoundingBox_CEditBoundingBox_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getEditBoundingBox_CEditBoundingBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_CLight_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_CLight_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_setSelectedObjectWorldMatrix_ev_bool_ev_uint32_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_setRenderQueueGroup_void_ev_uint8( void *pObjectXXXX, EarthView_World_Graphic_CLight_setRenderQueueGroup_void_ev_uint8_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_setRenderQueueGroup_void_ev_uint8(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16( void *pObjectXXXX, EarthView_World_Graphic_CLight_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_setRenderQueueGroupAndPriority_void_ev_uint8_ev_uint16(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getRenderQueueGroup_ev_uint8( void *pObjectXXXX, EarthView_World_Graphic_CLight_getRenderQueueGroup_ev_uint8_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getRenderQueueGroup_ev_uint8(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight__getParentNodeFullTransform_CMatrix4( void *pObjectXXXX, EarthView_World_Graphic_CLight__getParentNodeFullTransform_CMatrix4_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight__getParentNodeFullTransform_CMatrix4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_setQueryFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CLight_setQueryFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_setQueryFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_addQueryFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CLight_addQueryFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_addQueryFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_removeQueryFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CLight_removeQueryFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_removeQueryFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getQueryFlags_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CLight_getQueryFlags_ev_uint32_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getQueryFlags_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_setVisibilityFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CLight_setVisibilityFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_setVisibilityFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_addVisibilityFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CLight_addVisibilityFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_addVisibilityFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_removeVisibilityFlags_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CLight_removeVisibilityFlags_void_ev_uint32_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_removeVisibilityFlags_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getVisibilityFlags_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CLight_getVisibilityFlags_ev_uint32_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getVisibilityFlags_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_addListener_void_CMovableObjectListener( void *pObjectXXXX, EarthView_World_Graphic_CLight_addListener_void_CMovableObjectListener_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_addListener_void_CMovableObjectListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_removeListener_void_CMovableObjectListener( void *pObjectXXXX, EarthView_World_Graphic_CLight_removeListener_void_CMovableObjectListener_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_removeListener_void_CMovableObjectListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_existListener_ev_bool_CMovableObjectListener( void *pObjectXXXX, EarthView_World_Graphic_CLight_existListener_ev_bool_CMovableObjectListener_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_existListener_ev_bool_CMovableObjectListener(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getListenerCount_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CLight_getListenerCount_ev_uint32_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getListenerCount_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getListener_CMovableObjectListener_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CLight_getListener_CMovableObjectListener_ev_uint32_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getListener_CMovableObjectListener_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_queryLights_LightList( void *pObjectXXXX, EarthView_World_Graphic_CLight_queryLights_LightList_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_queryLights_LightList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getLightMask_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CLight_getLightMask_ev_uint32_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getLightMask_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_setLightMask_void_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CLight_setLightMask_void_ev_uint32_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_setLightMask_void_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight__getLightList_LightList( void *pObjectXXXX, EarthView_World_Graphic_CLight__getLightList_LightList_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight__getLightList_LightList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_setCastShadows_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CLight_setCastShadows_void_ev_bool_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_setCastShadows_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getReceivesShadows_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CLight_getReceivesShadows_ev_bool_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getReceivesShadows_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_setDebugDisplayEnabled_void_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CLight_setDebugDisplayEnabled_void_ev_bool_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_setDebugDisplayEnabled_void_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_isDebugDisplayEnabled_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CLight_isDebugDisplayEnabled_ev_bool_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_isDebugDisplayEnabled_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getCastShadows_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CLight_getCastShadows_ev_bool_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getCastShadows_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getEdgeList_CEdgeData( void *pObjectXXXX, EarthView_World_Graphic_CLight_getEdgeList_CEdgeData_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getEdgeList_CEdgeData(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_hasEdgeList_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CLight_hasEdgeList_ev_bool_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_hasEdgeList_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_ev_bool_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_ev_bool(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox( void *pObjectXXXX, EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getWorldBoundingBox_CAxisAlignedBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getLightCapBounds_CAxisAlignedBox( void *pObjectXXXX, EarthView_World_Graphic_CLight_getLightCapBounds_CAxisAlignedBox_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getLightCapBounds_CAxisAlignedBox(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getDarkCapBounds_CAxisAlignedBox_CLight_Real( void *pObjectXXXX, EarthView_World_Graphic_CLight_getDarkCapBounds_CAxisAlignedBox_CLight_Real_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getDarkCapBounds_CAxisAlignedBox_CLight_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real( void *pObjectXXXX, EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getShadowVolumeRenderableIterator_ShadowRenderableListIterator_ShadowTechnique_CLight_CHardwareIndexBufferSharedPtr_ev_bool_Real(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_getPointExtrusionDistance_Real_CLight( void *pObjectXXXX, EarthView_World_Graphic_CLight_getPointExtrusionDistance_Real_CLight_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_getPointExtrusionDistance_Real_CLight(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_updateEdgeListLightFacing_void_CEdgeData_CVector4( void *pObjectXXXX, EarthView_World_Graphic_CLight_updateEdgeListLightFacing_void_CEdgeData_CVector4_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_updateEdgeListLightFacing_void_CEdgeData_CVector4(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32( void *pObjectXXXX, EarthView_World_Graphic_CLight_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_generateShadowVolume_void_CEdgeData_CHardwareIndexBufferSharedPtr_CLight_ShadowRenderableList_ev_uint32(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLight_extrudeBounds_void_CAxisAlignedBox_CVector4_Real( void *pObjectXXXX, EarthView_World_Graphic_CLight_extrudeBounds_void_CAxisAlignedBox_CVector4_Real_Callback* pCallback )
+			{
+				CLightProxy* ptr = dynamic_cast<CLightProxy*>((EarthView::World::Graphic::CLight*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLight_extrudeBounds_void_CAxisAlignedBox_CVector4_Real(pCallback);
+				}
+			}
+			typedef EarthView::World::Graphic::CMovableObject*  ( _stdcall EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback)(_in char*& name, _in const EarthView::World::Core::CommonStringPairList* params);
+			typedef EarthView::World::Graphic::CMovableObject*  ( _stdcall EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_Callback)(_in char*& name);
+			typedef char*  ( _stdcall EarthView_World_Graphic_CLightFactory_getType_EVString_Callback)();
+			typedef EarthView::World::Graphic::CMovableObject*  ( _stdcall EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback)(_in char*& name, _in EarthView::World::Graphic::CSceneManager* ref_manager, _in const EarthView::World::Core::CommonStringPairList* params);
+			typedef EarthView::World::Graphic::CMovableObject*  ( _stdcall EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback)(_in char*& name, _in EarthView::World::Graphic::CSceneManager* ref_manager);
+			typedef void  ( _stdcall EarthView_World_Graphic_CLightFactory_destroyInstance_void_CMovableObject_Callback)(_in EarthView::World::Graphic::CMovableObject* obj);
+			typedef ev_bool  ( _stdcall EarthView_World_Graphic_CLightFactory_requestTypeFlags_ev_bool_Callback)();
+			class CLightFactoryProxy : public EarthView::World::Graphic::CLightFactory
+			{
+			private:
+				EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback* m_EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback;
+				EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_Callback* m_EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_Callback;
+				EarthView_World_Graphic_CLightFactory_getType_EVString_Callback* m_EarthView_World_Graphic_CLightFactory_getType_EVString_Callback;
+				EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback* m_EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback;
+				EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback* m_EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback;
+				EarthView_World_Graphic_CLightFactory_destroyInstance_void_CMovableObject_Callback* m_EarthView_World_Graphic_CLightFactory_destroyInstance_void_CMovableObject_Callback;
+				EarthView_World_Graphic_CLightFactory_requestTypeFlags_ev_bool_Callback* m_EarthView_World_Graphic_CLightFactory_requestTypeFlags_ev_bool_Callback;
+			public:
+				CLightFactoryProxy(EarthView::World::Core::CNameValuePairList *pList) : CLightFactory(pList)
+				{
+					m_EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback = NULL;
+					m_EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CLightFactory_getType_EVString_Callback = NULL;
+					m_EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback = NULL;
+					m_EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback = NULL;
+					m_EarthView_World_Graphic_CLightFactory_destroyInstance_void_CMovableObject_Callback = NULL;
+					m_EarthView_World_Graphic_CLightFactory_requestTypeFlags_ev_bool_Callback = NULL;
+				}
+			public:
+				ev_void registerCallback_EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList(EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString(EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLightFactory_getType_EVString(EarthView_World_Graphic_CLightFactory_getType_EVString_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLightFactory_getType_EVString_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList(EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager(EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLightFactory_destroyInstance_void_CMovableObject(EarthView_World_Graphic_CLightFactory_destroyInstance_void_CMovableObject_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLightFactory_destroyInstance_void_CMovableObject_Callback = pCallback;
+				}
+				ev_void registerCallback_EarthView_World_Graphic_CLightFactory_requestTypeFlags_ev_bool(EarthView_World_Graphic_CLightFactory_requestTypeFlags_ev_bool_Callback* pCallback)
+				{
+					m_EarthView_World_Graphic_CLightFactory_requestTypeFlags_ev_bool_Callback = pCallback;
+				}
+				virtual EarthView::World::Graphic::CMovableObject* createInstanceImpl(_in const EVString& name, _in const EarthView::World::Core::CommonStringPairList* params)
+				{
+					if(m_EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::CMovableObject* returnValue = m_EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback(name_Char, params);
+						return returnValue;
+					}
+					else
+						return this->CLightFactory::createInstanceImpl(name, params);
+				}
+				virtual EVString getType() const
+				{
+					if(m_EarthView_World_Graphic_CLightFactory_getType_EVString_Callback != NULL && this->isCustomExtend())
+					{
+						EVString returnValue = m_EarthView_World_Graphic_CLightFactory_getType_EVString_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLightFactory::getType();
+				}
+				virtual void destroyInstance(_in EarthView::World::Graphic::CMovableObject* obj)
+				{
+					if(m_EarthView_World_Graphic_CLightFactory_destroyInstance_void_CMovableObject_Callback != NULL && this->isCustomExtend())
+					{
+						m_EarthView_World_Graphic_CLightFactory_destroyInstance_void_CMovableObject_Callback(obj);
+					}
+					else
+						return this->CLightFactory::destroyInstance(obj);
+				}
+				virtual EarthView::World::Graphic::CMovableObject* createInstance(_in const EVString& name, _in EarthView::World::Graphic::CSceneManager* ref_manager, _in const EarthView::World::Core::CommonStringPairList* params)
+				{
+					if(m_EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::CMovableObject* returnValue = m_EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback(name_Char, ref_manager, params);
+						return returnValue;
+					}
+					else
+						return this->CLightFactory::createInstance(name, ref_manager, params);
+				}
+				virtual EarthView::World::Graphic::CMovableObject* createInstance(_in const EVString& name, _in EarthView::World::Graphic::CSceneManager* ref_manager)
+				{
+					if(m_EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback != NULL && this->isCustomExtend())
+					{
+						char* name_Char = name.makeBuffer();
+						EarthView::World::Graphic::CMovableObject* returnValue = m_EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback(name_Char, ref_manager);
+						return returnValue;
+					}
+					else
+						return this->CLightFactory::createInstance(name, ref_manager);
+				}
+				virtual ev_bool requestTypeFlags() const
+				{
+					if(m_EarthView_World_Graphic_CLightFactory_requestTypeFlags_ev_bool_Callback != NULL && this->isCustomExtend())
+					{
+						ev_bool returnValue = m_EarthView_World_Graphic_CLightFactory_requestTypeFlags_ev_bool_Callback();
+						return returnValue;
+					}
+					else
+						return this->CLightFactory::requestTypeFlags();
+				}
+			};
+			REGISTER_FACTORY_CLASS(CLightFactoryProxy);
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CMovableObject*  _stdcall EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList(void *pObjectXXXX, _in const char* name, _in const EarthView::World::Core::CommonStringPairList* params )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CLightFactory* ptrNativeObject = (EarthView::World::Graphic::CLightFactory*) pObjectXXXX;
+				if (dynamic_cast<CLightFactoryProxy*>((EarthView::World::Graphic::CLightFactory*)ptrNativeObject) != NULL)
+				{
+					EarthView::World::Graphic::CMovableObject* objXXXX = ptrNativeObject->EarthView::World::Graphic::CLightFactory::createInstanceImpl(name1, params);
+					return objXXXX;
+				}
+				else
+				{
+					EarthView::World::Graphic::CMovableObject* objXXXX = ptrNativeObject->createInstanceImpl(name1, params);
+					return objXXXX;
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList( void *pObjectXXXX, EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_Callback* pCallback )
+			{
+				CLightFactoryProxy* ptr = dynamic_cast<CLightFactoryProxy*>((EarthView::World::Graphic::CLightFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  EarthView::World::Graphic::CMovableObject*  _stdcall EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_CommonStringPairList_NoVirtual(void *pObjectXXXX, _in const char* name, _in const EarthView::World::Core::CommonStringPairList* params )
+			{
+				EarthView::World::Core::ev_string name1 = name;
+				EarthView::World::Graphic::CLightFactory* ptrNativeObject = (EarthView::World::Graphic::CLightFactory*) pObjectXXXX;
+				EarthView::World::Graphic::CMovableObject* objXXXX = ptrNativeObject->EarthView::World::Graphic::CLightFactory::createInstanceImpl(name1, params);
+				return objXXXX;
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall Get_EarthView_World_Graphic_CLightFactory_FACTORY_TYPE_NAME()
+			{
+				EVString objXXXX = EarthView::World::Graphic::CLightFactory::FACTORY_TYPE_NAME;
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void _stdcall Set_EarthView_World_Graphic_CLightFactory_FACTORY_TYPE_NAME( char*  value )
+			{
+				EarthView::World::Core::ev_string value1 = value;
+				EarthView::World::Graphic::CLightFactory::FACTORY_TYPE_NAME = value1;
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CLightFactory_getType_EVString(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLightFactory* ptrNativeObject = (EarthView::World::Graphic::CLightFactory*) pObjectXXXX;
+				if (dynamic_cast<CLightFactoryProxy*>((EarthView::World::Graphic::CLightFactory*)ptrNativeObject) != NULL)
+				{
+					EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CLightFactory::getType();
+					return objXXXX.makeBuffer();
+				}
+				else
+				{
+					EVString objXXXX = ptrNativeObject->getType();
+					return objXXXX.makeBuffer();
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLightFactory_getType_EVString( void *pObjectXXXX, EarthView_World_Graphic_CLightFactory_getType_EVString_Callback* pCallback )
+			{
+				CLightFactoryProxy* ptr = dynamic_cast<CLightFactoryProxy*>((EarthView::World::Graphic::CLightFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLightFactory_getType_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  char*  _stdcall EarthView_World_Graphic_CLightFactory_getType_EVString_NoVirtual(void *pObjectXXXX )
+			{
+				const EarthView::World::Graphic::CLightFactory* ptrNativeObject = (EarthView::World::Graphic::CLightFactory*) pObjectXXXX;
+				EVString objXXXX = ptrNativeObject->EarthView::World::Graphic::CLightFactory::getType();
+				return objXXXX.makeBuffer();
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLightFactory_destroyInstance_void_CMovableObject(void *pObjectXXXX, _in EarthView::World::Graphic::CMovableObject* obj )
+			{
+				EarthView::World::Graphic::CLightFactory* ptrNativeObject = (EarthView::World::Graphic::CLightFactory*) pObjectXXXX;
+				if (dynamic_cast<CLightFactoryProxy*>((EarthView::World::Graphic::CLightFactory*)ptrNativeObject) != NULL)
+					ptrNativeObject->EarthView::World::Graphic::CLightFactory::destroyInstance(obj);
+				else
+					ptrNativeObject->destroyInstance(obj);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLightFactory_destroyInstance_void_CMovableObject( void *pObjectXXXX, EarthView_World_Graphic_CLightFactory_destroyInstance_void_CMovableObject_Callback* pCallback )
+			{
+				CLightFactoryProxy* ptr = dynamic_cast<CLightFactoryProxy*>((EarthView::World::Graphic::CLightFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLightFactory_destroyInstance_void_CMovableObject(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  void  _stdcall EarthView_World_Graphic_CLightFactory_destroyInstance_void_CMovableObject_NoVirtual(void *pObjectXXXX, _in EarthView::World::Graphic::CMovableObject* obj )
+			{
+				EarthView::World::Graphic::CLightFactory* ptrNativeObject = (EarthView::World::Graphic::CLightFactory*) pObjectXXXX;
+				ptrNativeObject->EarthView::World::Graphic::CLightFactory::destroyInstance(obj);
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString( void *pObjectXXXX, EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString_Callback* pCallback )
+			{
+				CLightFactoryProxy* ptr = dynamic_cast<CLightFactoryProxy*>((EarthView::World::Graphic::CLightFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLightFactory_createInstanceImpl_CMovableObject_EVString(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList( void *pObjectXXXX, EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList_Callback* pCallback )
+			{
+				CLightFactoryProxy* ptr = dynamic_cast<CLightFactoryProxy*>((EarthView::World::Graphic::CLightFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_CommonStringPairList(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager( void *pObjectXXXX, EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager_Callback* pCallback )
+			{
+				CLightFactoryProxy* ptr = dynamic_cast<CLightFactoryProxy*>((EarthView::World::Graphic::CLightFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLightFactory_createInstance_CMovableObject_EVString_CSceneManager(pCallback);
+				}
+			}
+			extern "C" EV_DLL_EXPORT  ev_void _stdcall  EV_RegisterCallback_EarthView_World_Graphic_CLightFactory_requestTypeFlags_ev_bool( void *pObjectXXXX, EarthView_World_Graphic_CLightFactory_requestTypeFlags_ev_bool_Callback* pCallback )
+			{
+				CLightFactoryProxy* ptr = dynamic_cast<CLightFactoryProxy*>((EarthView::World::Graphic::CLightFactory*) pObjectXXXX);
+				if(ptr != NULL)
+				{
+					ptr->registerCallback_EarthView_World_Graphic_CLightFactory_requestTypeFlags_ev_bool(pCallback);
+				}
+			}
+		}
+	}
+}
