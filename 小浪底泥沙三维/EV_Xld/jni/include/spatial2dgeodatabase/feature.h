@@ -115,13 +115,12 @@ protected:
 
 	ev_void toStream(EarthView::World::Core::CDataStream &stream);
 	ev_void initial();
-	ev_void solveAttributes();
 	ev_void attach( CVectorFeatureClass *fc, const EarthView::World::Spatial::GeoDataset::IFields *fs );
 
 protected:
 	ev_int32			m_pOID;
 
-	const EarthView::World::Spatial::Geometry::IGeometry		*m_pGeometry;
+	EarthView::World::Spatial::Geometry::IGeometry		*m_pGeometry;
 	ev_real64			m_dfGeomLength;
 	ev_real64			m_dfGeomArea;
 
@@ -129,17 +128,16 @@ protected:
 
 	/* 字段值映射 */
 	ev_vector<EarthView::World::Core::CVariant> m_pValueVector;
-	/* 统计那些字段需要更改 */ 
-	ev_vector<ev_bool>	m_pDirtyVector;
 	/* 是否破坏原有Geom数据 */
 	ev_bool				m_bDirty;
 
 	ev_bool					m_isBufferFeature;
-	EarthView::World::Core::CBufferDataStream		m_memBuffer;
-	ev_vector<ev_size_t>	m_indicator;
-	ev_bool					m_isAttributesSolved;
+
+	ev_vector<ev_bool>	m_indicator;
 
 	EarthView::World::Spatial2D::GeoDataset::CVectorFeatureClass*	m_pSrcDataset;
+
+	ev_int32 mnBufferType;   // 0 evbuffer,1wkb
 };
 
 

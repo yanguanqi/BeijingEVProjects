@@ -4,14 +4,18 @@
 #include "spatialobject/config.h"
 #include "geometry.h"
 
-EV_DECLARE_GEOMETRY_CLASS_PRIVATE(CGeometryCollection);
-
-EV_DECLARE_GEOMETRY_CLASS_UTILITY(CGeometryHelper);
 
 namespace EarthView{
 	namespace World{
 		namespace Spatial{
 			namespace Geometry{
+				namespace Private{
+					class CGeometryCollectionPrivate;
+				}
+				namespace Utility{
+					class CGeometryHelper;
+
+				}
 				/// <summary>
 				/// 几何体集合类，可以包含多种类型的几何体。
 				/// </summary>

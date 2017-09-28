@@ -88,6 +88,20 @@ ev_private:
 					/// <returns></returns>
 					const EVString& getOctreeTablename() const;
 
+					virtual void findOctreeNode(EarthView::World::Spatial::Octree::CBaseOctree* tree,
+						ev_uint32 id,
+						EarthView::World::Spatial::Octree::CBaseOctreeNodeList& ns,
+						EarthView::World::Spatial::Octree::CBaseOctree*& parent);
+
+					virtual void findOctreeNodeAndInit(EarthView::World::Spatial::Octree::CBaseOctree* tree,
+						ev_uint32 id,
+						EarthView::World::Spatial::Octree::CBaseOctreeNodeList& ns,
+						EarthView::World::Spatial::Octree::CBaseOctree*& parent);
+
+					bool getAllObjectIDs(set<ev_uint32>& intVec);
+
+					ev_bool storeChagedOctreeNode(set<EVString>& changedOctreeCode);
+
 				protected:
 					/// <summary>
 					/// 
@@ -109,6 +123,8 @@ ev_private:
 					/// <param name=""></param>
 					/// <returns></returns>
 					ev_bool insertOctreeToDataBase( CBaseOctree* tree );
+
+					ev_bool deleteOctreeToDataBase( const ev_char* nodeCode );
 				protected:
 					EVString mOctreeTable;
 					EarthView::World::Core::Database::CSqlDatabase mDB;

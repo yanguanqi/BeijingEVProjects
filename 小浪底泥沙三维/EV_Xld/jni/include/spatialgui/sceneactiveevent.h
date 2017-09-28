@@ -42,6 +42,8 @@ namespace EarthView{
 					ev_bool getResponseState()const;	
 					ev_void setResponseState(ev_bool state);
 
+					virtual _extfree EarthView::World::Core::CEvent* clone() const;
+
 				protected:
 					ev_uint32 mID;
 					EarthView::World::Spatial::Atlas::IScene* mScene;

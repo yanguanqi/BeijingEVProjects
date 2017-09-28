@@ -94,6 +94,7 @@ namespace EarthView{
 				/// <param name="ratio">MaxSize的比率</param>
 				/// <returns></returns>
 				ev_void setSizeRatio( const ev_real64 ratio);
+				ev_real64 getSizeRatio();
 				/// <summary>
 				/// 判断两个Symbol是否属性相同
 				/// </summary>

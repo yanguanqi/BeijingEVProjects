@@ -36,6 +36,9 @@ namespace EarthView
 
 					ev_bool getResponseState()const;	
 					ev_void setResponseState(ev_bool state);
+
+					virtual _extfree EarthView::World::Core::CEvent* clone() const;
+
 				ev_private:
 					CLayoutActiveEvent(EarthView::World::Core::CNameValuePairList *pList);
 

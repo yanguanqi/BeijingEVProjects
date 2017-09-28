@@ -16,6 +16,7 @@ namespace EarthView{
 /// 二维矢量要素迭代器
 /// </summary>
 class CFeatureSelection;
+class CVectorFeature;
 class EV_2DGEODATABSE_DLL CFeatureIterator : public EarthView::World::Spatial::GeoDataset::IFeatureIterator
 {
 	friend class CFeatureSelection;
@@ -53,17 +54,17 @@ public:
 ev_private:
 	CFeatureIterator(EarthView::World::Core::CNameValuePairList *pList);
 protected:
-	CFeatureIterator(EVString key,CVectorFeatureClass* fc);
+	CFeatureIterator(void* queryData,CVectorFeatureClass* fc);
 private:
 	CFeatureIterator(CFeatureIterator & iterator);
 
-	EVString						m_QueryKey;
+	void*						m_pQueryData;
 	EarthView::World::Spatial2D::GeoDataset::CVectorFeatureClass			*m_pFC;
 	EarthView::World::Spatial::GeoDataset::CFields						*m_pFieldSet;
 	EarthView::World::Spatial::Geometry::IGeometry					*m_pGeometry;
 
 	EarthView::World::Spatial::GeoDataset::EVSpatialQueryRelationType	m_nSpatialRelation;
-	EarthView::World::Spatial::GeoDataset::IFeature					*m_pFeature;
+	EarthView::World::Spatial2D::GeoDataset::CVectorFeature				*m_pFeature;
 
 	EarthView::World::Spatial2D::GeoDataset::CFeatureSelection			*m_pFSet;
 	ev_bool m_bQueryByFeatureSelection;

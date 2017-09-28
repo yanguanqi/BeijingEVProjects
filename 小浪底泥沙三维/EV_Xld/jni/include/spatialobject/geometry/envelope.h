@@ -5,14 +5,19 @@
 #include "spatialinterface/ienvelope.h"
 #include "geom_define.h"
 
-EV_DECLARE_GEOMETRY_CLASS_PRIVATE(CEnvelope);
 
-EV_DECLARE_GEOMETRY_CLASS_UTILITY(CGeometryHelper);
 
 namespace EarthView{
 	namespace World{
 		namespace Spatial{
 			namespace Geometry{
+				namespace Private{
+					class CEnvelopePrivate;
+				}
+				namespace Utility{
+					class CGeometryHelper;
+
+				}
 				/// <summary>
 				/// EarthView::World::Spatial::Geometry::CEnvelope类，描述一个平行与坐标轴的矩形
 				/// </summary>

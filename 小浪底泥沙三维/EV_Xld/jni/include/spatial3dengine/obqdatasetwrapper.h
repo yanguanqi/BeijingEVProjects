@@ -6,6 +6,7 @@
 #include "spatial3dengine/obliquedbutility.h"
 #include "tileutility/meshstream.h"
 #include "spatial3dengine/obqbildef.h"
+#include "core/mutex.h"
 namespace EarthView{
 	namespace World{
 		namespace Spatial
@@ -91,7 +92,23 @@ ev_private:
 											, _out EarthView::World::Spatial::MeshStream& meshStream
 											, _out LodIndexVector& childIndexVec
 											);
+				ev_private:
+					ev_int32 readSharedTileData(const EVString& folderName
+						, const EVString& tileName
+						, ev_int32 originalLevel
+						, ev_int32 meshIndex
+						, ev_uint32 lodID
+						, _out ev_vector<EarthView::World::Spatial::MeshStream>& meshStreamVec
+						);
 
+					ev_int32 readSharedTextureData(const EVString& folderName
+						, const EVString& tileName
+						, ev_int32 originalLevel
+						, ev_uint16 textureQuadIndex
+						, ev_uint32 lodID
+						, _out EarthView::World::Spatial::MeshStream& meshStream
+						);
+				public:
 					ev_int32 readTileMeshData(const EVString& filename
 											, const EVString& tileName
 											, _out EarthView::World::Core::MemoryDataStreamPtr& meshStream
@@ -146,7 +163,9 @@ ev_private:
 					ev_bool mCacheDemMetaInfoDirty;
 					ev_bool mbHasSharedTexture;
 					EarthView::World::Spatial::GeoDataset::IDataset* mpDataset;
-					CBILCache* mpBilMemoryCache;
+					static CBILCache* mpBilMemoryCache;
+					static ev_int32 mBilCacheRef;
+					static EarthView::World::Core::CMutex mBilCacheMtx;
 
 					EVString mShareCacheName;
 

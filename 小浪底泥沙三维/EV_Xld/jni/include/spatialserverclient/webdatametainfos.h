@@ -6,6 +6,7 @@
 #include "spatialinterface/idatasource.h"
 #include "spatialinterface/idatametainfo.h"
 #include "spatialinterface/idatametainfos.h"
+#include "core/xml.h"
 // using namespace EarthView::World::Spatial::GeoDataset;
 
 namespace EarthView
@@ -88,7 +89,28 @@ namespace EarthView
 				/// <param name=""></param>
 				/// <returns></returns>
 				CEVWebDataMetaInfos* clone() const;
-			protected:
+ev_private:
+				/// <summary>
+				/// 
+				/// </summary>
+				/// <param name=""></param>
+				/// <returns></returns>
+				ev_void toXML(EarthView::World::Core::CXmlElement& xmlElement);
+
+				/// <summary>
+				/// 
+				/// </summary>
+				/// <param name=""></param>
+				/// <returns></returns>
+				ev_void fromXML(const EVString& str);
+
+				/// <summary>
+				/// 
+				/// </summary>
+				/// <param name=""></param>
+				/// <returns></returns>
+				vector<EVString>& getListLayerName(){return mlistLayerName;}
+			public:
 				CEVWebDataMetaInfos(_in EarthView::World::Spatial::GeoDataset::EVDatasetType type,_in EarthView::World::Spatial::GeoDataset::IDataSource* source);
 			ev_private:
 				CEVWebDataMetaInfos(_in EarthView::World::Core::CNameValuePairList* pList);	

@@ -54,6 +54,12 @@ namespace EarthView
 				virtual const EVString getServerUrl() const;
 
 				/// <summary>
+				/// 获取服务数据下载插件路径
+				/// </summary>
+				/// <returns>服务器地址</returns>
+				virtual const EVString getServicePluginFile() const;
+
+				/// <summary>
                 /// 生成当前数据源xml描述
                 /// </summary>
                 /// <returns>xml</returns>
@@ -77,6 +83,17 @@ namespace EarthView
                 /// <returns></returns>
 				virtual ev_void disConnect();
 
+				/// <summary>
+				/// 设置是否有有效
+				/// </summary>
+				/// <returns></returns>
+				virtual ev_void setValid(ev_bool valid);
+
+				/// <summary>
+				/// 判断数据源是否有效
+				/// </summary>
+				/// <returns>是，返回true;否则，返回false</returns>
+				virtual ev_bool isValid() const;
 				//virtual const CServerInfo* getServerInfo() const; 
 			protected:
 				////构造函数
@@ -84,6 +101,10 @@ namespace EarthView
 			protected:
 				///服务信息
 				CServerInfo* mpServerInfo;
+				///服务插件信息
+				EVString mpPluginFile;
+				ev_bool mpValid;   //标识服务是否有效
+				friend class CDataSourceServerFactory;
 			ev_private:
 				COGCSpatialServer(_in EarthView::World::Core::CNameValuePairList* pList);
 			};

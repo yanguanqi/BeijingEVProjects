@@ -122,7 +122,7 @@ ev_private:
 					/// 设置图层可见性
 					/// </summary>
 					/// <param name="visible">可见性</param>				
-					virtual ev_void setVisible(ev_bool visible);
+					virtual ev_void setVisible_impl(ev_bool visible);
 					/// <summary>
 					/// 返回图层图元类型
 					/// </summary>
@@ -197,14 +197,8 @@ ev_private:
 					/// </summary>
 					/// <param name=""></param>
 					/// <returns></returns>
-					virtual ev_void _notifyLayerRemoved(EarthView::World::Graphic::CSceneManager* pSceneMgr);
-					/// <summary>
-					/// Globe刷新时调用的函数
-					/// </summary>
-					/// <param name="camera">当前的相机</param>
-					/// <param name="updateType">刷新类型</param>
-					/// <returns></returns>
-					virtual ev_void _notifyRefreshed(const EarthView::World::Graphic::CCamera* camera,LayerRefreshFactor updateType);
+					virtual ev_void _notifyLayerRemoved_impl(EarthView::World::Graphic::CSceneManager* pSceneMgr);
+
 
 					/// <summary>
 					/// 序列化成xml文本
@@ -215,6 +209,14 @@ ev_private:
 
 					ev_bool getUseWideLine() const;
 					void setUseWideLine(ev_bool useWideLine);
+ev_internal:
+					/// <summary>
+					/// Globe刷新时调用的函数
+					/// </summary>
+					/// <param name="camera">当前的相机</param>
+					/// <param name="updateType">刷新类型</param>
+					/// <returns></returns>
+					virtual ev_void _notifyRefreshed_impl(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
 
 				protected:
 

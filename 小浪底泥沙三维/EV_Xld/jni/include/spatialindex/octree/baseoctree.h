@@ -82,6 +82,9 @@ namespace EarthView{
 
 					ev_void _ref();					
 					ev_void _unref();
+
+
+					ev_bool mInitChildren;
 				//ev_private:
 				//	/// <summary>
 				//	/// 构造函数
@@ -98,7 +101,7 @@ namespace EarthView{
 					/// </summary>
 					/// <param name=""></param>
 					/// <returns></returns>
-					_extfree EarthView::World::Spatial::Octree::CBaseOctree* clone();
+					_extfree EarthView::World::Spatial::Octree::CBaseOctree* clone(CBaseOctreeManager* treeManager);
 					
 
 					/// <summary>
@@ -231,6 +234,10 @@ namespace EarthView{
 				
 					
 					ev_void copyOctree(EarthView::World::Spatial::Octree::CBaseOctree* srcOctree, EarthView::World::Spatial::Octree::CBaseOctree* dstTree);
+
+					ev_void setInitChildren(ev_bool initChildren);
+
+					ev_bool isInitChildren();
 				private:
 					ev_void _addNode(CBaseOctreeNode* pNode);
 				};

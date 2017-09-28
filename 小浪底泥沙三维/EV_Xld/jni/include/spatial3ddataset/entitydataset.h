@@ -90,6 +90,11 @@ namespace EarthView{
 					typedef vector<EarthView::World::Spatial3D::Dataset::ModelEditOperation> TransactionHistory;
 					TransactionHistory mTransactionHistory;
 
+					ev_bool mIsAutoCreateIndex;
+					CModelOctreeManager* mSharedOctreeManager;
+					ev_bool mForcedRebuildOctree;
+					ev_bool mRebuildedOctree;
+
 ev_private:
 					/// <summary>
 					/// 键值对构造函数
@@ -434,6 +439,11 @@ ev_private:
 					/// <returns>EarthView::World::Spatial::GeoDataset::IFeatureClass*，数据集句柄</returns>
 					virtual EarthView::World::Spatial::GeoDataset::IFeatureClass* getResourceDatasetRef();
 
+					/// <summary>
+					/// 设置是否自动创建八叉树索引
+					/// </summary>
+					virtual void SetAutoRecreateIndex(ev_bool autoInit);
+
 				ev_private:
 					/// <summary>
 					/// 获取八叉树管理器句柄
@@ -442,6 +452,16 @@ ev_private:
 					/// <param name="objectIDs">可见的对象ID集</param>
 					/// <returns>ev_bool，TURE成功，FALSE失败</returns>
 					EarthView::World::Spatial3D::Dataset::CModelOctreeManager* getCloneSpatialIndex(ev_bool autoInit);
+
+					/// <summary>
+					/// 获取共享八叉树管理器句柄
+					/// </summary>
+					/// <param name="camera">相机</param>
+					/// <param name="objectIDs">可见的对象ID集</param>
+					/// <returns>ev_bool，TURE成功，FALSE失败</returns>
+					EarthView::World::Spatial3D::Dataset::CModelOctreeManager* getSharedOctreeManager(ev_bool autoInit);
+
+					ev_bool isRebuildedOctree();
 
 				public:
 					/// <summary>
@@ -500,6 +520,12 @@ ev_private:
 					/// <param name=""></param>
 					/// <returns>0:不需要刷新 1：刷新成功 2:刷新失败</returns>	
 					ev_int32 refreshDataset();
+
+					/// <summary>
+					/// 强制重建八叉树
+					/// </summary>
+					/// <param name=""></param>
+					void setForcedRebuildOctree();
 
 				protected:
 					/// <summary>
@@ -632,6 +658,13 @@ ev_private:
 					/// <returns></returns>
 					void deleteCache();
 
+					/// <summary>
+					/// 获取模型数量
+					/// </summary>
+					/// <returns></returns>
+					ev_uint32 getEntityCount();
+
+					ev_bool checkOctreeValid();
 				};
 
 				class EV_Spatial3DDataset_DLL ModelEditOperation : public EarthView::World::Core::CAllocatedObject

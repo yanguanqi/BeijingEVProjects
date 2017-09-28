@@ -199,12 +199,14 @@ ev_private:
 					ev_int32 getEditorPointIndex(EarthView::World::Spatial::Math::CVector3& point);
 					ev_bool reLoad();
 					ev_void updataEditKeyPoints();
-				protected:
 					/// <summary>
 					/// 渲染编辑的控制点
 					/// </summary>
 					/// <returns></returns>
 					ev_void renderEditKeyPoints();
+					ev_void deRender();
+				protected:
+					
 					/// <summary>
 					/// 鼠标点转换为射线
 					/// </summary>

@@ -79,6 +79,8 @@ public:
 	AtlasTreeEventData();
 	~AtlasTreeEventData();
 
+	AtlasTreeEventData& operator=(const AtlasTreeEventData& rhs);
+
 protected:
 
 	EarthView::World::FrameWorkProxy::AtlasManager::AtlasTreeEvent::ActionType typ;

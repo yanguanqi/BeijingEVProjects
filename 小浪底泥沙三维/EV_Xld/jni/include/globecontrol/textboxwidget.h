@@ -19,6 +19,7 @@ namespace EarthView
 		namespace Graphic
 		{
 			class CTextAreaOverlayElement;
+			class CTextAreaOverlayElementInstanced;
 			class CPanelOverlayElement;
 		}
 		namespace Spatial3D
@@ -342,6 +343,117 @@ ev_private:
 					}
 
 				};
+
+				class EV_GLOBECONTROL_DLL CTextBoxSetFontHeightEvent:public EarthView::World::Spatial3D::Controls::CTextBoxEvent
+				{
+
+				public:
+					/// <summary>
+					/// 构造函数
+					/// </summary>
+					/// <returns></returns>
+					CTextBoxSetFontHeightEvent();
+					/// <summary>
+					/// 析构函数
+					/// </summary>
+					/// <returns></returns>
+					virtual ~CTextBoxSetFontHeightEvent();
+					/// <summary>
+					/// 设置可见性
+					/// </summary>
+					/// <param name="enabled">可见性</param>
+					/// <returns></returns>
+					void setTextBoxFontHeight(_in ev_real32 fontHeight);
+					/// <summary>
+					/// 获取可见性
+					/// </summary>
+					/// <returns></returns>
+					ev_real32 getTextBoxFontHeight() const;
+ev_private:
+					CTextBoxSetFontHeightEvent(_in EarthView::World::Core::CNameValuePairList* pList);
+
+				protected:
+					ev_real32 mFontHeight;
+				};
+				class EV_GLOBECONTROL_DLL CTextBoxSetFontHeightEventPtr : public EarthView::World::Core::CBaseObject, public EarthView::World::Core::CSharedPtr<EarthView::World::Spatial3D::Controls::CTextBoxSetFontHeightEvent>
+				{
+ev_private:
+					CTextBoxSetFontHeightEventPtr(_in EarthView::World::Core::CNameValuePairList *pList);
+					explicit CTextBoxSetFontHeightEventPtr(_in CTextBoxSetFontHeightEvent *rep, _in EarthView::World::Core::SharedPtrFreeMethod inFreeMethod) : EarthView::World::Core::CSharedPtr<CTextBoxSetFontHeightEvent>(rep, inFreeMethod) {}
+				public:
+					/// <summary>
+					/// 构造函数
+					/// </summary>
+					/// <returns></returns>
+					CTextBoxSetFontHeightEventPtr();
+					explicit CTextBoxSetFontHeightEventPtr(_in CTextBoxSetFontHeightEvent *rep);					
+					CTextBoxSetFontHeightEventPtr(_in const CTextBoxSetFontHeightEventPtr &tp);
+
+					EarthView::World::Spatial3D::Controls::CTextBoxSetFontHeightEvent *get() const
+					{
+						return EarthView::World::Core::CSharedPtr<EarthView::World::Spatial3D::Controls::CTextBoxSetFontHeightEvent>::get();
+					}
+
+					EarthView::World::Spatial3D::Controls::CTextBoxSetFontHeightEventPtr &operator = (_in const EarthView::World::Spatial3D::Controls::CTextBoxSetFontHeightEventPtr &r);
+
+					EarthView::World::Spatial3D::Controls::CTextBoxSetFontHeightEventPtr &operator = (_in CTextBoxSetFontHeightEvent* rep);
+					/// <summary>
+					/// 转换成EarthView::World::Spatial::SystemUI::CGUIEventPtr
+					/// </summary>
+					/// <returns></returns>
+					EarthView::World::Spatial::SystemUI::CGUIEventPtr toCGUIEventPtr()
+					{
+						EV_MUTEX_CONDITIONAL(EV_AUTO_MUTEX_NAME)
+						{
+							EV_LOCK_MUTEX(*EV_AUTO_MUTEX_NAME)
+
+								EarthView::World::Spatial::SystemUI::CGUIEventPtr ptr;
+							ptr.pRep = static_cast<EarthView::World::Spatial::SystemUI::CGUIEvent *>(getPointer());
+#if EV_THREAD_SUPPORT
+							ptr.EV_AUTO_MUTEX_NAME = EV_AUTO_MUTEX_NAME;
+#endif
+							ptr.pUseCount = useCountPointer();
+							ptr.useFreeMethod = useFreeMethod;
+							if (pUseCount)
+							{
+								++(*pUseCount);
+							}
+							return ptr;
+						}
+						else
+						{
+							return EarthView::World::Spatial::SystemUI::CGUIEventPtr();
+						}
+					}
+
+					operator EarthView::World::Spatial::SystemUI::CGUIEventPtr()
+					{
+						EV_MUTEX_CONDITIONAL(EV_AUTO_MUTEX_NAME)
+						{
+							EV_LOCK_MUTEX(*EV_AUTO_MUTEX_NAME)
+
+								EarthView::World::Spatial::SystemUI::CGUIEventPtr ptr;
+							ptr.pRep = static_cast<EarthView::World::Spatial::SystemUI::CGUIEvent *>(getPointer());
+#if EV_THREAD_SUPPORT
+							ptr.EV_AUTO_MUTEX_NAME = EV_AUTO_MUTEX_NAME;
+#endif
+							ptr.pUseCount = useCountPointer();
+							ptr.useFreeMethod = useFreeMethod;
+							if (pUseCount)
+							{
+								++(*pUseCount);
+							}
+							return ptr;
+						}
+						else
+						{
+							return EarthView::World::Spatial::SystemUI::CGUIEventPtr();
+						}
+					}
+
+				};
+
+
 
 				class EV_GLOBECONTROL_DLL CTextBoxSetPositionEvent:public EarthView::World::Spatial3D::Controls::CTextBoxEvent
 				{
@@ -709,7 +821,7 @@ ev_private:
 					virtual ev_bool handleUserEvent(_in EarthView::World::Spatial::SystemUI::CGUIEvent* event);
 ev_private:
 					CTextBoxWidget(_in EarthView::World::Core::CNameValuePairList* pList);
-				ev_internal:
+ev_internal:
 					friend class EarthView::World::Spatial3D::Controls::CWidgetManager;
 					/// <summary>
 					///析构函数
@@ -738,6 +850,7 @@ ev_private:
 
 
 					EarthView::World::Graphic::CTextAreaOverlayElement* mTextArea;
+					//EarthView::World::Graphic::CTextAreaOverlayElementInstanced* mTextArea;
 					EarthView::World::Graphic::CPanelOverlayElement* mPanel;
 					int mcharHeight;
 
@@ -761,8 +874,12 @@ ev_private:
 						_in ev_real32 textOffsetY,
 						_in int charHeight/*=19*/,
 						_in int spaceWidth/*=8*/,
-						_in EarthView::World::Graphic::CColourValue color/*=EarthView::World::Graphic::CColourValue(1.0,1.0,1.0,1.0)*/
+						_in EarthView::World::Graphic::CColourValue color/*=EarthView::World::Graphic::CColourValue(1.0,1.0,1.0,1.0)*/,
+						_in EarthView::World::Graphic::CColourValue blackgroundcolor
 						);
+					ev_void setTextBoxColor(_in const EarthView::World::Graphic::CColourValue& color);
+					ev_void setBlackGroundColor(_in const EarthView::World::Graphic::CColourValue& color);
+					ev_void setTextSpacerWidth(_in const Real width);
 					/// <summary>
 					///添加globeControlListener监听
 					/// </summary>
@@ -790,7 +907,7 @@ ev_private:
 ev_private:
 					CLatitudeLonitudeTextBox(_in EarthView::World::Core::CNameValuePairList* pList);
 					CBackGroundElement* mbackGroundElement;
-				ev_internal:
+ev_internal:
 					friend class EarthView::World::Spatial3D::Controls::CWidgetManager;
 					virtual ~CLatitudeLonitudeTextBox();
 
@@ -808,8 +925,8 @@ ev_private:
 						,mAltitude(0.0)						
 						,mpGlobelControl(NULL)
 					{
-						
-						
+
+
 
 					}
 
@@ -823,7 +940,7 @@ ev_private:
 					ev_void setMousetPickInterval(ev_uint32 intervalTime);
 
 					EarthView::World::Spatial3D::CGlobeCamera* mGlobeCamera;
-					
+
 					int mlastWidth;
 					char* mtextInformation;
 					ev_int32 mCurrentEventX;
@@ -843,7 +960,7 @@ ev_private:
 					ev_real64 mLat;
 					ev_real64 mLon;
 					ev_real64 mAltitude;
-					
+
 
 				private:
 					typedef vector<EarthView::World::Spatial3D::Controls::CGlobeControlListener*> CGlobeControlListenerVector;
@@ -873,17 +990,27 @@ ev_private:
 					/// <param name="tilt">俯仰角</param>
 					/// <param name="camAlt">相机高度</param>
 					/// <returns></returns>
-					ev_void setStatusBarText(ev_bool globeIntersected,Real lat,Real lon,Real alt,Real heading,Real tilt,Real camAlt);
+					ev_void setStatusBarText(ev_bool globeIntersected,Real lat,Real lon,Real alt,Real heading,Real tilt,Real camAlt, EarthView::World::Graphic::CColourValue textboxcolor, EarthView::World::Graphic::CColourValue blackgroundcolor);
 
-					private:
-						EarthView::World::Graphic::CTextAreaOverlayElement* mTextLon;
-						EarthView::World::Graphic::CTextAreaOverlayElement* mTextLat;
-						EarthView::World::Graphic::CTextAreaOverlayElement* mTextHeading;
-						EarthView::World::Graphic::CTextAreaOverlayElement* mTextTilt;
-						EarthView::World::Graphic::CTextAreaOverlayElement* mLayerName;
-						EarthView::World::Graphic::CTextAreaOverlayElement* mLayerLevel;
-						EarthView::World::Graphic::CTextAreaOverlayElement* mTextHeight;	
-						ev_bool mShowLayerInfo;
+				private:
+					EarthView::World::Graphic::CColourValue mTextBoxColor;
+					EarthView::World::Graphic::CColourValue mBlackgroundColor;
+					Real mTextSpacerWidth;
+					EarthView::World::Graphic::CTextAreaOverlayElement* mTextLon;
+					EarthView::World::Graphic::CTextAreaOverlayElement* mTextLat;
+					EarthView::World::Graphic::CTextAreaOverlayElement* mTextHeading;
+					EarthView::World::Graphic::CTextAreaOverlayElement* mTextTilt;
+					EarthView::World::Graphic::CTextAreaOverlayElement* mLayerName;
+					EarthView::World::Graphic::CTextAreaOverlayElement* mLayerLevel;
+					EarthView::World::Graphic::CTextAreaOverlayElement* mTextHeight;	
+					//EarthView::World::Graphic::CTextAreaOverlayElementInstanced* mTextLon;
+					//EarthView::World::Graphic::CTextAreaOverlayElementInstanced* mTextLat;
+					//EarthView::World::Graphic::CTextAreaOverlayElementInstanced* mTextHeading;
+					//EarthView::World::Graphic::CTextAreaOverlayElementInstanced* mTextTilt;
+					//EarthView::World::Graphic::CTextAreaOverlayElementInstanced* mLayerName;
+					//EarthView::World::Graphic::CTextAreaOverlayElementInstanced* mLayerLevel;
+					//EarthView::World::Graphic::CTextAreaOverlayElementInstanced* mTextHeight;
+					ev_bool mShowLayerInfo;
 				};
 			}
 		}

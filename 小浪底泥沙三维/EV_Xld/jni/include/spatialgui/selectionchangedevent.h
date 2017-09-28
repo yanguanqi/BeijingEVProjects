@@ -28,6 +28,7 @@ namespace EarthView{
 				public:
 					CSelectionChangedEvent(ev_uint16 type);
 					~CSelectionChangedEvent();
+					virtual _extfree EarthView::World::Core::CEvent* clone() const;
 				ev_private:
 					CSelectionChangedEvent(EarthView::World::Core::CNameValuePairList *pList);
 				public:

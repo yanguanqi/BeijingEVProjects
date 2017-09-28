@@ -57,12 +57,12 @@ ev_private:
 					/// 销毁所有渲染对象及结果
 					/// </summary>
 					/// <param name=""></param>
-					virtual ev_void reset();
+					virtual ev_void reset_impl();
 					/// <summary>
 					/// 初始化
 					/// </summary>
 					/// <param name=""></param>
-					virtual ev_void initialize();
+					virtual ev_void initialize_impl();
 					/// <summary>
 					/// 分析与测量的调用接口
 					/// </summary>
@@ -112,6 +112,8 @@ ev_private:
 					/// <param name="x">横坐标</param>
 					/// <param name="y">纵坐标</param>
 					/// <returns>是否继续向父控件发送该事件</returns>
+					void setDmsAccuracy(ev_int32 accuracy);
+
 					virtual ev_bool onMouseUp(ev_int32 button,ev_int32 shift,ev_int32 x,ev_int32 y);
 					/// <summary>
 					/// 鼠标双击事件触发
@@ -185,6 +187,8 @@ ev_private:
 					/// 广告板图片几何中心模式
 					/// </summary>
 					EarthView::World::Spatial::Display::EVBillboardOriginType mBillboardOriginType;
+
+					ev_int32 mAccuracy;
 
 				private:
 					C_DISABLE_COPY(CAnalysis3DMeasurePoint);

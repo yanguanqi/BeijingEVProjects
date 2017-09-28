@@ -143,7 +143,7 @@ ev_private:
 					/// </summary>
 					/// <param name="pSceneMgr">场景管理器</param>
 					/// <returns></returns>
-					ev_void _notifyLayerRemoved(EarthView::World::Graphic::CSceneManager* pSceneMgr);
+					ev_void _notifyLayerRemoved_impl(EarthView::World::Graphic::CSceneManager* pSceneMgr);
 					/// <summary>
 					/// 刷新图层消息处理
 					/// </summary>
@@ -175,7 +175,7 @@ ev_private:
 					/// </summary>
 					/// <param name="visible">可见性</param>
 					/// <returns></returns>					
-					virtual ev_void setVisible(ev_bool visible);
+					virtual ev_void setVisible_impl(ev_bool visible);
 					//ev_uint32 getLayerCount();
 					/// <summary>
 					/// 从xml序列化

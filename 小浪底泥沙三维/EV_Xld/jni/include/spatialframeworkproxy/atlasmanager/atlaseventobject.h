@@ -123,7 +123,18 @@ ev_private:
 					/// <param name="e">事件</param>
 					/// <returns></returns>
 					virtual ev_void onChangeLayerTheme(_in EarthView::World::Spatial::SystemUI::CMapLayerActiveEvent *e);
-
+					/// <summary>
+					/// 响应修改图层数据集，用于更新图层树节点图标及图例
+					/// </summary>
+					/// <param name="e">事件</param>
+					/// <returns></returns>
+					virtual ev_void onChangeLayerDataset(_in EarthView::World::Spatial::SystemUI::CMapLayerActiveEvent *e);
+					/// <summary>
+					/// 响应修改三维图层数据集,用于更新图层树节点图标及图例
+					/// </summary>
+					/// <param name="e">事件</param>
+					/// <returns></returns>
+					virtual ev_void onChangeLayerDataset3D(_in EarthView::World::Spatial::SystemUI::CSceneLayerActiveEvent *e);
 					/// <summary>
 					/// 响应创建创建图层
 					/// </summary>

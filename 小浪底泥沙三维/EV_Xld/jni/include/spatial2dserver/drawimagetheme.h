@@ -11,6 +11,7 @@ namespace EarthView
 	{
 		namespace Spatial
 		{
+			class ImageTileCacheAccessor;
 			namespace Display
 			{
 				/// <summary>
@@ -48,6 +49,23 @@ namespace EarthView
 						EarthView::World::Spatial::Geometry::ISpatialReference* pSRS);
 
 					virtual ev_void drawTile( EarthView::World::Core::CWorkQueue::RequestPara* req );
+
+					virtual ev_bool makeMapping(EarthView::World::Spatial::GeoDataset::IDataset* pDataset,
+						EarthView::World::Spatial::Display::ISpatialDisplay* display,
+						EarthView::World::Spatial::Atlas::EVVectorLayerRendererType type,
+						EarthView::World::Spatial::Theme::ITheme* ref_pTheme);
+					virtual ev_bool makeMapping(EVString datasetName, EVString datasourceName,
+						EarthView::World::Spatial::Geometry::IEnvelope* pEnv,
+						EarthView::World::Spatial::Geometry::ISpatialReference* pSRS,
+						EarthView::World::Spatial::Display::ISpatialDisplay* display,
+						EarthView::World::Spatial::Atlas::EVVectorLayerRendererType type,
+						EarthView::World::Spatial::Theme::ITheme* ref_pTheme);
+				private:
+					virtual ev_void drawTile( ImageTileCacheAccessor* itaccessor, ev_int32 level,ev_int32 row, ev_int32 col,
+						ev_real64 x,ev_real64 y, ev_real64 space,
+						EarthView::World::Spatial::Display::ISpatialDisplay* display,
+						EarthView::World::Spatial::EVTileModeType tileModeType,
+						EVString & cacheName);
 				private:
 					EVString makeCacheName( const EVString& srcName );
 					EVString m_CacheName;

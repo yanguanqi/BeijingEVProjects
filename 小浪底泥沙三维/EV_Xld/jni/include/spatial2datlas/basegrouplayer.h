@@ -143,6 +143,10 @@ namespace EarthView{
 
 					ev_void clearTileCache();
 
+					virtual ev_int32 baseMapFalg();// 0 不支持，1 支持但不可设置 2 支持可设置开关
+					virtual ev_bool getBaseMapActive();
+					virtual ev_bool makeBaseMapping(EarthView::World::Spatial::Display::ISpatialDisplay* display,
+						EarthView::World::Spatial::Atlas::EVVectorLayerRendererType type);
 				ev_private:
 					CBaseGroupLayer( EarthView::World::Core::CNameValuePairList *pList );
 				protected:

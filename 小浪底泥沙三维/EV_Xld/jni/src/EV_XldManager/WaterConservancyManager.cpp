@@ -2,6 +2,7 @@
 #include "TerrainManager.h"
 #include "BillboardManager.h"
 #include "QtCore\QTextCodec"
+#include "AnalysisToolManager.h"
 using namespace EarthView::XldManager;
 
 EarthView::XldManager::CWaterConservancyManager* CWaterConservancyManager::mpSingleton = NULL;
@@ -73,6 +74,7 @@ void EarthView::XldManager::CWaterConservancyManager::SetTerrainHeightQueryEnabl
 
 void EarthView::XldManager::CWaterConservancyManager::DrawRectBounds()
 {
+	EarthView::Xld::CAnalysisToolManager::GetSingletonPtr()->DrawRectBounds();
 }
 
 ev_uint64 EarthView::XldManager::CWaterConservancyManager::GetTerrainCount()

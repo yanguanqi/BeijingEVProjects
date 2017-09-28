@@ -159,7 +159,10 @@ ev_private:
 					/// <param name="dimension">指定几何对象的维度</param>
 					/// <returns></returns>
 					ev_bool isIntersects(_in const EarthView::World::Spatial::Geometry::IGeometry* geom,_in EarthView::World::Spatial::Geometry::EVDimensionType dimension) const;
-
+					/// <summary> 
+					/// 判断几何体是否为矩形面
+					/// </summary>
+					virtual ev_bool isRectangle() const ;
 					virtual ev_bool addExteriorRing(const EarthView::World::Spatial::Geometry::CCurveRing & path);
 					virtual ev_bool addInteriorRing(const EarthView::World::Spatial::Geometry::CCurveRing & path,ev_uint32 exteriorIndex);
 					virtual ev_bool removeExteriorRing(ev_uint32 exteriorIndex);

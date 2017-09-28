@@ -448,6 +448,14 @@ ev_private:
 					/// <param name="pLayout">布局对象</param>
 					/// <param name="newName">新名称</param>
 					ev_void renameLayout(EarthView::World::Spatial::Carto::IPageLayout* pLayout, const EVString& newName);
+				
+					/// <summary>
+					/// 布局	发生变化	
+					/// </summary>
+					/// <param name="pLayout">布局对象</param>
+					/// <return></return>
+					ev_void layoutChange(EarthView::World::Spatial::Carto::IPageLayout* pLayout);
+
 					/// <summary>
 					/// 询问布局是否存在		
 					/// </summary>
@@ -565,6 +573,8 @@ ev_private:
 					EarthView::World::Spatial::Display::ISymbolFactory* mpSymbolFactory;
 
 				protected:
+					typedef map<EVString, EVString> FileDataSourcePathMap;  //工程文件路径变化时，保存文件型数据源的新旧路径的映射
+					FileDataSourcePathMap mFileDsPathMap;
 					typedef map<EVString,EarthView::World::Spatial::GeoDataset::IDataSource*> DataSourceMap;
 					DataSourceMap mDsMap;
 					ev_bool mDsChanged;//是否修改数据源集合,保存工程文件数据库时使用

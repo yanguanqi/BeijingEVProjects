@@ -415,6 +415,7 @@ ev_private:
 				/// <param name="visible">是否可见</param>
 				/// <returns></returns>
 				virtual void setVisible(ev_bool visible);
+				ev_bool getVisible();
 
 				/// <summary>
 				/// 设置是否精确插值，主要用于线扩展
@@ -517,17 +518,17 @@ ev_private:
 				/// <returns>renderablelistener</returns>
 				CRenderableGeometryExtensionListener* getRenderableListener() const;
 
+				public:
+					enum GetHeightMode
+					{
+						GH_Advanced = 0,//最高精度
+						GH_SelfAdapt,//自适应
+						GH_BestHeight//所有都获取bestheight
+					};
+
+					void setGetHeightMode(EarthView::World::Geometry3D::CMultiGeometry3DExtension::GetHeightMode ghMode);
+					EarthView::World::Geometry3D::CMultiGeometry3DExtension::GetHeightMode getGetHeightMode() const;
 ev_private:
-				enum GetHeightMode
-				{
-					GH_Advanced = 0,//最高精度
-					GH_SelfAdapt,//自适应
-					GH_BestHeight//所有都获取bestheight
-				};
-
-				void setGetHeightMode(CMultiGeometry3DExtension::GetHeightMode ghMode);
-				CMultiGeometry3DExtension::GetHeightMode getGetHeightMode() const;
-
 				//自适应高程和线的插值地理范围
 				//void setSelfAdaptGeoRange(Real minLon,Real maxLon,Real minLat,Real maxLat,Real targetSamplesPerDegrees);
 				void setSelfAdaptGeoRange(EarthView::World::Spatial::Math::CVector3 center,Real r,Real targetSamplesPerDegrees);
@@ -658,7 +659,13 @@ ev_private:
 
 ev_private:
 				virtual ev_bool setObjectVisibility(ev_bool visible, EarthView::World::Spatial::CGeoObject* ref_geoObject,ev_bool bProcessAttach);
-			public:
+	            ev_void setRunningThreadCount(ev_bool val);	
+				ev_int32 getRunningThreadCount();
+
+private:
+	           ev_uint32 mRunningThreadCount;
+			   EarthView::World::Core::CReadWriteLock mThreadCountLocker;
+public:
 
 				/// <summary>
 				///  获取节点，需要重写
@@ -855,10 +862,10 @@ ev_internal:
 				ev_bool appendMovableObject(EarthView::World::Graphic::CMovableObject* mo);
 
 ev_private:
-				virtual void releaseText(list<CMultiGeometry3DExtension::pos_movable>& needRelease);
-				virtual void unloadText(list<CMultiGeometry3DExtension::pos_movable>& needUnload);
-				virtual void updateByCameraInWorkqueue(list<pos_movable>& needRelease,list<pos_movable>& needAttach);
-				virtual void loadText(list<pos_movable>& needAttach);
+				virtual void releaseText(list<CMultiGeometry3DExtension::pos_movable *>& needRelease);
+				virtual void unloadText(list<CMultiGeometry3DExtension::pos_movable *>& needUnload);
+				virtual void updateByCameraInWorkqueue(list<pos_movable *>& needRelease,list<pos_movable *>& needAttach);
+				virtual void loadText(list<pos_movable *>& needAttach);
 			private:
 				/// <summary>
 				/// 复制构造函数
@@ -867,6 +874,7 @@ ev_private:
 				/// <returns></returns>
 				CMultiGeometry3DExtension(const CMultiGeometry3DExtension& obj);				
 				
+
 			protected:
 				EarthView::World::Geometry3D::CMultiGeometry3DExtensionListener*mpListener;		
 
@@ -878,6 +886,7 @@ ev_private:
 				EarthView::World::Graphic::CSceneManager* mpSceneManager;
 
 				ev_bool mbDrawWireBox;
+				ev_bool mbExtensionRemoved;
 
 				EVString msResourceGroupName;//用所属layer的name
 
@@ -927,6 +936,7 @@ ev_private:
 				Real mSelfAdptRadius;
 
 				Real mSamplesPerDegrees;
+				ev_bool mb_isvisible;
 			};	
 
 			//扩展对象中的线程
@@ -941,7 +951,7 @@ ev_private:
 				public:
 					ev_uint32 requestType;
 					EarthView::World::Geometry3D::CMultiGeometry3DExtension* pExtension;
-					list<EarthView::World::Geometry3D::CMultiGeometry3DExtension::pos_movable> needRelease;
+					list<EarthView::World::Geometry3D::CMultiGeometry3DExtension::pos_movable *> needRelease;
 				public:
 					GeometryExtensionBackgroundRequest()
 					{
@@ -983,8 +993,8 @@ ev_private:
 						return o;
 					}
 				public:
-					list<EarthView::World::Geometry3D::CMultiGeometry3DExtension::pos_movable> needUnload;
-					list<EarthView::World::Geometry3D::CMultiGeometry3DExtension::pos_movable> needAttach;
+					list<EarthView::World::Geometry3D::CMultiGeometry3DExtension::pos_movable *> needUnload;
+					list<EarthView::World::Geometry3D::CMultiGeometry3DExtension::pos_movable *> needAttach;
 				public:
 					virtual _extfree EarthView::World::Core::CWorkQueue::ResponsePara* clone() const
 					{
@@ -1166,7 +1176,7 @@ ev_private:
 				/// <returns></returns>
 				//ev_bool isProcessCompleted(ev_uint64 filter);
 
-				ev_uint64 requestReleaseTexts(EarthView::World::Geometry3D::CMultiGeometry3DExtension* pExtension,list<CMultiGeometry3DExtension::pos_movable>& needRelease);
+				ev_uint64 requestReleaseTexts(EarthView::World::Geometry3D::CMultiGeometry3DExtension* pExtension,list<CMultiGeometry3DExtension::pos_movable *>& needRelease);
 
 				ev_uint64 updateExtensionByCamera(EarthView::World::Geometry3D::CMultiGeometry3DExtension* pExtension);
 

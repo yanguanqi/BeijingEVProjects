@@ -48,6 +48,7 @@ namespace EarthView{
 				class CModelObjectGroup;
 				class CModelUnloadWorkQueue;
 				class CModelLoadWorkQueue;
+				class CModelOctreeWorkQueue;
 				class CModelBaseObject;
 				class CMaterialResourceCache;
 				class CInstanceDBLayerObject;
@@ -68,6 +69,7 @@ namespace EarthView{
 				class ModelCommand;
 				class ModelCommandKey;
 				class CEntityLayerFactory;
+				class CEntityLayerUpdator;
 				class EV_Spatial3DEngine_DLL CModelStateListener : public EarthView::World::Core::CAllocatedObject
 				{
 ev_private:
@@ -128,13 +130,36 @@ ev_private:
 					/// <param name=""></param>
 					/// <returns></returns>
 					EarthView::World::Spatial::Atlas::EVLayerType getType()const;
+					/// <summary>
+					/// 获取图层的范围
+					/// </summary>
+					/// <param name=""></param>
+					/// <returns>图层范围</returns>
+					virtual const EarthView::World::Spatial::Geometry::IEnvelope * getExtent() const; 
+					/// <summary>
+					/// 获取图层的坐标系统
+					/// </summary>
+					/// <param name=""></param>
+					/// <returns>坐标系统</returns>
+					virtual EarthView::World::Spatial::Geometry::ISpatialReference *getSpatialReference() const;
 
 					/// <summary>
 					/// 获取数据集
 					/// </summary>
 					/// <returns></returns>
 					virtual EarthView::World::Spatial::GeoDataset::IDataset* getDataset();
-
+					/// <summary>
+					/// 设置数据集
+					/// </summary>
+					/// <param name="dataset">数据集指针</param>
+					/// <returns></returns>
+					virtual ev_void setDataset(EarthView::World::Spatial::GeoDataset::IDataset* dataset);
+					/// <summary>
+					/// 更换数据集
+					/// </summary>
+					/// <param name="dataset">数据集指针</param>
+					/// <returns></returns>
+					virtual ev_void switchDataset(EarthView::World::Spatial::GeoDataset::IDataset* dataset);
 					/// <summary>
 					/// 图层克隆
 					/// </summary>
@@ -180,11 +205,10 @@ ev_private:
 					virtual ev_bool isVisible() const;
 
 					/// <summary>
-					/// 设置图层可见状态
+					/// 设置图层可见性，子类重写该方法
 					/// </summary>
-					/// <param name="visible">true 可见，false 不可见</param>
-					/// <returns></returns>
-					virtual ev_void setVisible(ev_bool visible);
+					/// <param name="visible">可见性</param>
+					virtual ev_void setVisible_impl(ev_bool visible);
 
 					/// <summary>
 					/// 图层合法状态
@@ -575,24 +599,7 @@ ev_private:
 					/// </summary>
 					/// <param name="pSceneMgr">场景管理器对象</param>
 					/// <returns></returns>
-					virtual ev_void _notifyLayerRemoved(EarthView::World::Graphic::CSceneManager* pSceneMgr);
-
-					/// <summary>
-					/// Globe刷新时调用的函数
-					/// </summary>
-					/// <param name="camera">当前的相机</param>
-					/// <param name="level">当前的级别</param>
-					/// <param name="force">是否为强制刷新</param>
-					/// <returns></returns>
-					virtual ev_void _notifyRefreshed(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
-
-					/// <summary>
-					/// Globe刷新时调用的函数
-					/// </summary>
-					/// <param name="camera">当前的相机</param>
-					/// <returns></returns>
-					
-					virtual ev_void _notifyRefreshed(const EarthView::World::Graphic::CCamera* camera);
+					virtual ev_void _notifyLayerRemoved_impl(EarthView::World::Graphic::CSceneManager* pSceneMgr);
 
 					/// <summary>
 					/// 通知模型工作完成
@@ -724,7 +731,34 @@ ev_private:
 					/// </summary>
 					/// <param name="object">模型对象</param>
 					virtual ev_void _notifyModelDetached(_in EarthView::World::Spatial3D::ModelManager::CModelBaseObject* object);
+
+					/// <summary>
+					/// 应用环境纹理映射到图层
+					/// <returns></returns>
+					virtual void applySelfIlluminationMapTexture();
+
+					/// <summary>
+					/// 取消应用环境纹理映射从图层
+					/// <returns></returns>
+					virtual void cancelSelfIlluminationMapTexture();
+
+					/// <summary>
+					/// 取消应用环境纹理映射从图层
+					/// <returns></returns>
+					virtual ev_bool isApplySelfIlluminationMap();					
+
+					/// <summary>
+					/// 是否允许外部创建command
+					/// <returns></returns>
+					ev_bool canDoCommand();
 ev_internal:
+					/// <summary>
+					/// Globe刷新时调用的函数
+					/// </summary>
+					/// <param name="camera">当前的相机</param>
+					/// <param name="updateType">刷新类型</param>
+					/// <returns></returns>
+					virtual ev_void _notifyRefreshed_impl(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
 					/// <summary>
 					/// 从流加载图层
 					/// </summary>
@@ -872,7 +906,7 @@ ev_private:
 					/// </summary>
 					/// <param name=""></param>
 					/// <returns></returns>
-					ev_void _findVisibleObjects ( EarthView::World::Graphic::CCamera *cam, _out EarthView::World::Spatial3D::OctNodeVector& octNodeVec);	
+					ev_void _findVisibleObjects ( EarthView::World::Graphic::CCamera *cam, _out EarthView::World::Spatial3D::OctNodeVector& octNodeVec);
 
 					/// <summary>
 					/// 
@@ -934,8 +968,12 @@ ev_private:
 					/// <param name=""></param>
 					/// <returns></returns>
 					void _findSafeDistanceObjCount(EarthView::World::Spatial::Octree::CBaseOctree *octant, const EarthView::World::Spatial::Math::CVector3& camPos, ev_real64 distance, _out ev_uint32& count);
-
+					/// 更换图层数据集时要做相应改变
+					ev_void onSwitchDataset();
 				protected:
+					//
+					EVString mDataSourceName;
+					EVString mDataSetName;
 					//
 					typedef ev_map<ev_uint32,CSubEntityState> ModelSubEntityVisibleMap;
 					ev_map<ev_uint32,ModelSubEntityVisibleMap> mSubEntityStateMap;
@@ -1011,6 +1049,12 @@ ev_private:
 					ev_uint8 mTransparent;
 					ev_bool mHasSetTransparent;
 
+					//定时器
+					CEntityLayerUpdator* mUpdator;
+
+					//自发光纹理
+					ev_bool mApplySelfIlluminationMap;
+
 					friend class EarthView::World::Spatial3D::Atlas::CEntityLayerFactory;
 
 					friend class EarthView::World::Spatial3D::CModelLayerEditor;
@@ -1019,6 +1063,8 @@ ev_private:
 					friend class EarthView::World::Spatial3D::ModelManager::CInstanceDBLayerObject;
 					friend class EarthView::World::Spatial3D::ModelManager::CModelLoadWorkQueue;
 					friend class EarthView::World::Spatial3D::ModelManager::CModelUnloadWorkQueue;
+					friend class EarthView::World::Spatial3D::ModelManager::CModelOctreeWorkQueue;
+					friend class CEntityLayerUpdator;
 				
 					typedef vector<EarthView::World::Graphic::CMesh::SubMeshInfo> SubmeshInfoVec;
 					typedef vector<EarthView::World::Graphic::CMesh::CMeshNode*> NodeVec;

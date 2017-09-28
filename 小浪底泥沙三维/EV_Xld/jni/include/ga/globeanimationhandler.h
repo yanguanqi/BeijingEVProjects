@@ -276,6 +276,8 @@ ev_private:
 					/// <param name="kf">关键帧</param>
 					/// <returns></returns>
 					virtual ev_real64 getRadius(_in EarthView::World::Graphic::CSphereTransformKeyFrame* kf);
+
+					ev_real64 getRadiusByAltitudemode(ev_real64 latitude,ev_real64 longitude);
 					/// <summary>
 					/// 返回两个位置之前的方位角
 					/// </summary>
@@ -285,6 +287,11 @@ ev_private:
 					/// <param name="lonB">第二个点的经度</param>
 					/// <returns></returns>
 					virtual ev_real64 getHeading(_in ev_real64 latA ,_in ev_real64 lonA,_in ev_real64 latB,_in ev_real64 lonB);
+
+				    //virtual ev_real64 getWorldPitch(_in ev_real64 latA ,_in ev_real64 lonA,_in ev_real64 latB,_in ev_real64 lonB);
+
+					virtual void adjustWorldMatrix(_in EarthView::World::Spatial::Math::CMatrix4& worldMatrix);
+
 					/// <summary>
 					/// 设置高度模式
 					/// </summary>
@@ -296,6 +303,8 @@ ev_private:
 					EarthView::World::Spatial3D::CGeoSceneManager* mmanamer;
 					EarthView::World::Spatial3D::Controls::CGlobeAnimationHandler* mhandler;
 					EarthView::World::Spatial3D::CFLyParam::AltitudeMode maltitudeMode;
+				public:
+					EarthView::World::Spatial3D::ModelManager::CModelBaseObject* mpManualModelObject;
 				};
 
 				class EV_GA_DLL CGlobeAnimationHandler:public EarthView::World::Spatial3D::Controls::CGlobeLockCameraHandler
@@ -579,13 +588,10 @@ ev_private:
 					/// <returns></returns>
 					ev_void createPointEdit();
 				protected:
-					ev_bool mStartRecord;
-					ev_bool mPlayAnimation;
 					ev_bool mIsRun;
 					ev_bool mGetControlPoint;
-					ev_bool mfirstGetPoint;
+
 					EarthView::World::Spatial3D::CGlobeFlyPathPtr mFlyPath;
-					EarthView::World::Spatial3D::Controls::CGlobeAnimationPath mAnimationPath;
 
 					CFlyPathRenderable* mline;
 					ev_real32* mLineVertexBuffer;

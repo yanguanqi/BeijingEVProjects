@@ -72,6 +72,14 @@ namespace EarthView
                                        ev_uint16 width, ev_char fill, std::ios::fmtflags flags);
 
 #else
+#ifdef EV_ARCH_AARCH64
+                 static EVString toString(ev_size_t val);
+                 static EVString toString(ev_size_t val, ev_uint16 width);
+                 static EVString toString(ev_size_t val, ev_uint16 width, ev_char fill);
+
+                 static EVString toString(ev_size_t val,
+                                       ev_uint16 width, ev_char fill, std::ios::fmtflags flags);
+#endif
                 /***** Converts a ev_size_t to a EVString. ****/
                 static EVString toString(ev_uint64 val);
                 static EVString toString(ev_uint64 val, ev_uint16 width);
@@ -140,6 +148,7 @@ namespace EarthView
                     Strings must not contain spaces since space is used as a delimiter in
                     the output.
                 *****/
+
                 static StringVector parseStringVector(const EVString &val);
                 /****** Checks the EVString is a valid number value. *****/
                 static ev_bool isNumber(const EVString &val);

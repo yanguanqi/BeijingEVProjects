@@ -74,6 +74,7 @@ namespace EarthView{
 
 					DST_DATABASE_3DVECTOROCTREE		=		18,
 					DST_FILESYSTEM_LAS = 19,
+					DST_FILESYSTEM_LASXG = 20,
 
 
 					/// <summary>
@@ -100,6 +101,20 @@ namespace EarthView{
 					/// 空间服务器_EarthView_Server
 					/// </summary>
 					DST_WEBSERVER_EARTHVIEW_SERVER     = 51,
+					/// <summary>
+					///文件型数据源etm影像数据
+					/// </summary>
+					DST_FILESYSTEM_LOCALIMAGE    =     52,
+					/// <summary>
+					///文件型数据源ede dem数据
+					/// </summary>					
+					DST_FILESYSTEM_LOCALDEM = 53,
+					/// <summary>
+					///文件型街景数据
+					/// </summary>					
+					DST_FILESYSTEM_LOCALSTREETVIEW     = 54,
+
+					DST_FILESYSTEM_LOCALOSGB     = 55,
                     /// <summary>
                     /// 自定义类型
                     /// </summary>

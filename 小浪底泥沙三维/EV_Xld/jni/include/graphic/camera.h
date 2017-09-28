@@ -6,6 +6,7 @@
 #include <mathengine/ray.h>
 #include <mathengine/planeboundedvolume.h>
 #include "frustum.h"
+#include "core/mutex.h"
 
 namespace EarthView
 {
@@ -82,6 +83,12 @@ namespace EarthView
                     /// <param name="cam">摄像机</param>
                     /// <returns></returns>
                     virtual void cameraDestroyed( _in EarthView::World::Graphic::CCamera *cam);
+                    /// <summary>
+                    /// 场景的视域发生变化（较大的观察视角的变化）时通知。返回true，表示已经被处理，不再重复通知直到下一次视域发生变化，返回false，表示没有被处理，会延时然后重复通知一次
+                    /// </summary>
+                    /// <param name="cam">摄像机</param>
+                    /// <returns>是否被处理</returns>
+                    virtual ev_bool sceneViewChanged( _in EarthView::World::Graphic::CCamera *cam);
 				};
                 class EV_GRAPHIC_DLL CCameraInternalRenderable : public EarthView::World::Graphic::CFrustum::CFrustumInternalRenderable
                 {
@@ -193,6 +200,7 @@ namespace EarthView
                 Real mPixelDisplayRatio;
                 typedef vector<EarthView::World::Graphic::CCamera::CCameraListener *> ListenerList;
                 ListenerList mListeners;
+				EarthView::World::Core::CRecursiveMutex mListenerMutex;
 
             ev_internal:
                 /// Internal functions for calcs

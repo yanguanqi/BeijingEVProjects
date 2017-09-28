@@ -233,15 +233,43 @@ namespace EarthView
                 /// <param name=""></param>
                 /// <returns>线程个数</returns>
                 static ev_uint32 getThreadCount();
-
+				/// <summary>
+				/// 判断当前线程是否是界面线程
+				/// </summary>
+				/// <param name=""></param>
+				/// <returns>是否是界面线程</returns>
+				static ev_bool isUIThread();
+				/// <summary>
+				/// 判断当前线程是否是渲染线程
+				/// </summary>
+				/// <param name=""></param>
+				/// <returns>是否是渲染线程</returns>
 				static ev_bool isMainThread();
+				/// <summary>
+				/// 保存渲染线程的线程ID
+				/// </summary>
+				/// <param name="threadid">渲染线程的线程ID</param>
+				/// <returns></returns>
+				static void setMainThread(ev_uint32 threadid);
+
+				/// <summary>
+				/// 获得界面线程的线程ID
+				/// </summary>
+				/// <param name="threadid"></param>
+				/// <returns>界面线程的线程ID</returns>
+				static ev_uint32 getUIThreadID();
+				/// <summary>
+				/// 获得渲染线程的线程ID
+				/// </summary>
+				/// <param name=""></param>
+				/// <returns>渲染线程的线程ID</returns>
+				static ev_uint32 getMainThreadID();
             ev_private:
                 CThread(EarthView::World::Core::CNameValuePairList *pList);
             ev_internal:
                 virtual ev_int32 run() ;
             private:
                 EV_THREAD_DATA *m_pData;
-				static ev_uint32 mMainThreadID;
                 friend struct EV_THREAD_DATA;
             };
         }

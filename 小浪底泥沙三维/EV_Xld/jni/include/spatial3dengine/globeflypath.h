@@ -352,7 +352,8 @@ ev_private:
 					ClampedToGround,
 					RelativeToSeaFloor,
 					RelativeToOBQ,
-					Absolute
+					Absolute,
+					PreciselyClampedToGround
 				};
 				/// <summary>
 				/// 目标高度
@@ -530,9 +531,8 @@ ev_private:
 				/// <summary>
 				/// 开始飞行
 				/// </summary>
-				/// <param name="time">开始的时刻</param>
 				/// <returns></returns>
-				ev_bool start(_in ev_real64 time);
+				ev_bool start();
 				/// <summary>
 				/// 结束飞行
 				/// </summary>
@@ -748,13 +748,6 @@ ev_private:
 				ev_void computeRealAngleDistance();
 
 				/// <summary>
-				/// 根据时刻生成控制点
-				/// </summary>
-				/// <param name="time">时刻</param>
-				/// <returns></returns>
-				EarthView::World::Spatial3D::CGlobeControlPoint getInterpolaterdControlPoint(_in ev_real64 time);
-
-				/// <summary>
 				/// 计算航向角
 				/// </summary>
 				/// <param name="point1">控制点</param>
@@ -785,19 +778,14 @@ ev_private:
 
 				EarthView::World::Spatial3D::CGlobeControlPointMap mcontrolPoint;
 				EarthView::World::Spatial3D::CGlobeControlPointMap mflyControlPoint;
-				EarthView::World::Spatial3D::CGlobeControlPoint mLastControlPoint;
 				EarthView::World::Spatial3D::CAngleDistanceMap mangleDistance;
 				EarthView::World::Spatial3D::CAngleDistanceMap mrealAngleDistance;
 				EarthView::World::Spatial3D::CGlobeFlyPath::LOOPMODE mloopMode;
-				ev_real64 mbezierStartPostion;
-				ev_real64 mbezierSmoothScale;
 				ev_real64   mangularVelocity;
 				ev_real64   mradious;
 				ev_bool     misRun;
-				ev_real64   mstartTime;
 				EarthView::World::Spatial3D::CFLyParam mflyParam;
 
-				//EarthView::World::Spatial3D::CControlPointPathPtr mcontrolPointPath;
 				EarthView::World::Spatial3D::CControlPointMap mcontrolPointMap;
 				ev_real64 mtotalAngleDistance;
 				ev_real64 mrrealTotalAngleDistance;

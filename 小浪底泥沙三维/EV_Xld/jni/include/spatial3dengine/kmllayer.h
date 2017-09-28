@@ -14,6 +14,7 @@
 #include "geometry3d/geometry3dextension/multipolygon3dextension.h"
 #include "spatial3dengine/panoramatile.h"
 #include "spatial3dengine/kmlrenderablemanager.h"
+#include "graphic/colourvalue.h"
 
 namespace EarthView
 {
@@ -48,6 +49,7 @@ namespace EarthView{
 			namespace Atlas{
 
 				class CGeoEntity;
+				class CKmlLayerUpdator;
 
 				/// <summary>
 				/// Kml图层
@@ -56,6 +58,7 @@ namespace EarthView{
 				class EV_Spatial3DEngine_DLL CKmlLayer
 					: public EarthView::World::Spatial3D::Atlas::IGlobeLayer
 				{ 
+					
 ev_private:
 					/// <summary>
 					/// 构造函数
@@ -100,6 +103,8 @@ ev_private:
 					void setLabelVisibleDistance(Real val);
 
 					Real getLabelVisibleDistance();
+					ev_void setSelectionColour( const EarthView::World::Graphic::CColourValue& colour );
+					EarthView::World::Graphic::CColourValue getSelectionColour();
 
 					/// <summary>
 					/// 设置地标开始变小的距离
@@ -244,24 +249,7 @@ ev_private:
 					/// </summary>
 					/// <param name="pSceneMgr">场景管理器</param>
 					/// <returns></returns>
-					virtual ev_void _notifyLayerRemoved(EarthView::World::Graphic::CSceneManager* pSceneMgr);
-					/// <summary>
-					/// Globe刷新时调用的函数
-					/// </summary>
-					/// <param name="camera">当前的相机</param>
-					/// <param name="level">当前的级别</param>
-					/// <param name="force">是否为强制刷新</param>
-					/// <returns></returns>
-					virtual ev_void _notifyRefreshed(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
-					/// <summary>
-					/// Globe刷新时调用的函数
-					/// </summary>
-					/// <param name="camera">当前的相机</param>
-					/// <returns></returns>
-					virtual ev_void _notifyRefreshed(const EarthView::World::Graphic::CCamera* camera)
-					{
-						_notifyRefreshed(camera,LRF_General);
-					}
+					virtual ev_void _notifyLayerRemoved_impl(EarthView::World::Graphic::CSceneManager* pSceneMgr);
 					/// <summary>
 					/// 数据集变更通知
 					/// </summary>
@@ -279,7 +267,7 @@ ev_private:
 					/// </summary>
 					/// <param name="visible">可见性</param>
 					/// <returns></returns>
-					virtual ev_void setVisible(ev_bool visible);
+					virtual ev_void setVisible_impl(ev_bool visible);
 					/// <summary>
 					/// 获知图层是否可选择
 					/// </summary>
@@ -293,6 +281,13 @@ ev_private:
 					EarthView::World::Spatial3D::Atlas::CKmlRenderableManager* getRenderableManger();
 					const EarthView::World::Graphic::CCamera* mpCamera;
 ev_internal:
+					/// <summary>
+					/// Globe刷新时调用的函数
+					/// </summary>
+					/// <param name="camera">当前的相机</param>
+					/// <param name="updateType">刷新类型</param>
+					/// <returns></returns>
+					virtual ev_void _notifyRefreshed_impl(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
 					virtual ev_void fromStream( EarthView::World::Core::CDataStream& stream );
 
 					//CKmlFeatureList mKmlFeatureList;
@@ -343,6 +338,8 @@ ev_private:
 					EarthView::World::Spatial3D::Atlas::CKmlRenderableManager* m_pRenderableMgr;
 					Real mLabelVisibleDistance;
 					Real mReduceDistance;
+					CKmlLayerUpdator* mpKmlLayerUpdator;
+
 				};
 				/// <summary>
 				/// KmlLayer的类工厂

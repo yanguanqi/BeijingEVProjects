@@ -25,7 +25,7 @@ class  CRectification;
 	  ///<param name ="nHeight">inout 输入源图像的高度，返回目标图像的高度</param>
 	  ///<param name = "dfGeoTransform">inout,输入源图像的geotrans，输出目标图像的geotrans</param>
 	  
-	   RECTIFY_DLL ev_void getSuggestOutPut(_in TransformH* pTrans,_inout ev_int32 &nWidth,_inout ev_int32 &nHeight,_inout ev_real64*dfGeoTransform);
+	   EV_DataAnalyst_DLL ev_void getSuggestOutPut(_in TransformH* pTrans,_inout ev_int32 &nWidth,_inout ev_int32 &nHeight,_inout ev_real64*dfGeoTransform);
 	   /*///<summary>
        ///创建一个常变换句柄，外部不能释放
 	   ///</summary>
@@ -41,7 +41,7 @@ class  CRectification;
 	   ///<param name ="iCount">参数个数</param>
 	   ///<returns>变换类句柄</returns>
 
-	   RECTIFY_DLL _extfree TransformH* genCreateTransformerArg(_in const SpatialRefH* pRectifyRef,
+	   EV_DataAnalyst_DLL _extfree TransformH* genCreateTransformerArg(_in const SpatialRefH* pRectifyRef,
 		                                              _in const SpatialRefH* pStdImageRef,
 		                                              _in const ev_real64*pParameter,_in ev_int32 iCount);
 
@@ -49,7 +49,7 @@ class  CRectification;
        ///销毁一个变换句柄
 	   ///</summary>
 	   ///<param name ="hTrans">in 变换类句柄</param>
-	   RECTIFY_DLL ev_void destroyTransformH(_in TransformH* hTrans);
+	   EV_DataAnalyst_DLL ev_void destroyTransformH(_in TransformH* hTrans);
 //}///extern "C"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -59,7 +59,7 @@ class  CRectification;
 ///重采样结构体
 ///采样间WorkingDataType与 源数据集相同
 ///</summary>
-class RECTIFY_DLL RectifyResampleWarper:public EarthView::World::Core::CAllocatedObject 
+class EV_DataAnalyst_DLL RectifyResampleWarper:public EarthView::World::Core::CAllocatedObject 
 {  
 	ev_private:
 	     RectifyResampleWarper( EarthView::World::Core::CNameValuePairList *pList );
@@ -97,7 +97,7 @@ private:
 ///<summary>
 ///重采样变换类
 ///<summary>
-class RECTIFY_DLL  ResamplerOprator:public EarthView::World::Core::CAllocatedObject
+class EV_DataAnalyst_DLL  ResamplerOprator:public EarthView::World::Core::CAllocatedObject
 {    
 	ev_private:
 	    ResamplerOprator( EarthView::World::Core::CNameValuePairList *pList );

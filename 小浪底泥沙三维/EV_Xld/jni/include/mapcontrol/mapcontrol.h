@@ -453,6 +453,20 @@ ev_private:
 					/// <returns>地图map指针(内部指针)</returns>
 					EarthView::World::Spatial::Atlas::IMap * getMap() const;
 					/// <summary>
+					/// 设置地图刷新间隔时间
+					/// </summary>
+					/// <param name="nTime">地图刷新间隔时间</param>
+					/// <returns></returns>
+					ev_void setRefreshIntervalTime(ev_int32 nTime);
+
+					/// <summary>
+					/// 获取地图刷新间隔时间
+					/// </summary>
+					/// <param name=""></param>
+					/// <returns>地图刷新间隔时间</returns>
+					ev_int32 getRefreshIntervalTime() const;
+
+					/// <summary>
 					/// 设置map与控件关联
 					/// </summary>
 					/// <param name="map">地图map</param>
@@ -709,6 +723,12 @@ ev_private:
 					/// <returns></returns>
 					ev_void zoomToLayer( _in EarthView::World::Spatial::Atlas::ILayer* layer );
 					/// <summary>
+					/// 缩放至指定的范围
+					/// </summary>
+					/// <param name="pEnvelope">指定的范围(注意坐标系与地图控件一致)</param>
+					/// <returns></returns>
+					ev_void zoomToExtent( _in EarthView::World::Spatial::Geometry::IEnvelope* pEnvelope);
+					/// <summary>
 					/// 恢复到前一个视口范围
 					/// </summary>
 					/// <param name=""></param>
@@ -918,11 +938,17 @@ ev_private:
 					ev_void onZoom(ev_int32 x1, ev_int32 y1, ev_int32 x2, ev_int32 y2);
 					ev_void onZoomEnd(ev_int32 x1, ev_int32 y1, ev_int32 x2, ev_int32 y2);
 
+					/// <summary>
+					/// 漫游接口
+					/// </summary>
+					ev_void onPanBegin(ev_int32 x, ev_int32 y);
+					ev_void onPan(ev_int32 x, ev_int32 y);
+					ev_void onPanEnd(ev_int32 x, ev_int32 y);
 				private:
 					CMapControlPri* m_pD;
-					ev_list<IMapControlListener*>mListeners;
-					CMapEagleEye* mpEagleEye;
-					ev_int32 mdCursor;
+				//	ev_list<IMapControlListener*>mListeners;
+				//	CMapEagleEye* mpEagleEye;
+				//	ev_int32 mdCursor;
 					ev_void init();
 					ev_void clearViewportStack();
 
@@ -940,7 +966,7 @@ ev_private:
 					ev_void makeBaseMapping();
 					ev_void freezeDrawBase(ev_bool bWait);
 					ev_void updateLayer2( _in EarthView::World::Spatial::Atlas::ILayer* layer );
-
+					ev_void notifyViewChanged2(EarthView::World::Spatial::CMapViewArgs* mva,ev_bool bDelay);
 					EarthView::World::Spatial::Atlas::ILayer* getFirstDrawLayer() const;
 					EarthView::World::Spatial::Atlas::ILayer* getFirstDrawLayer( _in EarthView::World::Spatial::Atlas::ILayer* layer ) const;
 ev_private:

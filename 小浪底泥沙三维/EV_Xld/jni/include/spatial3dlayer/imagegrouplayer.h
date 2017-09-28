@@ -306,7 +306,7 @@ namespace EarthView{
 					/// </summary>
 					/// <param name="visible">是否可见</param>
 					/// <returns></returns>
-					virtual ev_void setVisible(ev_bool visible);
+					virtual ev_void setVisible_impl(ev_bool visible);
 
 					/// <summary>
 					/// 检测图层是否可视
@@ -334,14 +334,7 @@ namespace EarthView{
 					/// </summary>
 					/// <param name="pSceneMgr">场景管理器</param>
 					/// <returns></returns>
-                    virtual ev_void _notifyLayerRemoved(EarthView::World::Graphic::CSceneManager* pSceneMgr);
-					/// <summary>
-					/// 通知图层刷新
-					/// </summary>
-					/// <param name="camera">镜头</param>
-					/// <param name="updateType">刷新类型</param>
-					/// <returns></returns>
-                    virtual ev_void _notifyRefreshed( const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
+                    virtual ev_void _notifyLayerRemoved_impl(EarthView::World::Graphic::CSceneManager* pSceneMgr);
 					/// <summary>
 					/// 数据集变更通知
 					/// </summary>
@@ -449,6 +442,21 @@ namespace EarthView{
 					/// <param name="element">xml</param>
 					/// <returns></returns>
 					virtual ev_void fromXmlElement( _in EarthView::World::Core::CXmlElement& element);
+
+					/// <summary>
+					/// 设置输入参数layer的可见性，重写以解决线程同步问题
+					/// </summary>
+					/// <param name="layer">图层</param>
+					/// <param name="visible">是否可见</param>
+					virtual ev_void setVisible(EarthView::World::Spatial3D::Atlas::IGlobeLayer *layer, ev_bool visible);
+ev_internal:
+					/// <summary>
+					/// Globe刷新时调用的函数
+					/// </summary>
+					/// <param name="camera">当前的相机</param>
+					/// <param name="updateType">刷新类型</param>
+					/// <returns></returns>
+					virtual ev_void _notifyRefreshed_impl(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
                 protected:
                     static EarthView::World::Core::DataStreamPtr drawImages(list<EarthView::World::Core::DataStreamPtr>& images);
 					static EarthView::World::Core::DataStreamPtr drawImages(list<EarthView::World::Core::DataStreamPtr>& images,ev_real64 lastX,ev_real64 lastY,ev_real64 lastW,ev_real64 lastH);
@@ -480,7 +488,6 @@ namespace EarthView{
                     ImageLayers mImageLayers;
                     const EarthView::World::Graphic::CCamera* mpCamera;                     
            
-                    CImageGroupLayer* mParentGroup;
                     ImageLayers mSortedImageLayers;  //将嵌套的图层组解开之后，按照影像时间排序的图层集合
                     EarthView::World::Spatial3D::Atlas::CImageGroupLayer::CDesiredTime mDesiredTime;      //希望渲染的时间                    
                     ev_bool mDesiredTimeValid;      //是否使用时间维度

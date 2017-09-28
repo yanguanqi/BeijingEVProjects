@@ -228,6 +228,7 @@ ev_private:
 					/// <param name="miscParams">参数列表</param>
 					/// <returns>抽象场景控件</returns>
 					EarthView::World::Spatial3D::Controls::CGlobeControl* createGlobeControl(_in const EVString& windowName,_in int windowWidth,_in int windowHeight,_in EarthView::World::Core::NameValuePairList* miscParams);
+					EarthView::World::Spatial3D::Controls::CGlobeControl* createGlobeControl(_in const EVString& windowName, EarthView::World::Graphic::CRenderWindow* pRenderWindow);
 					/// <summary>
 					/// 移除globeControl
 					/// </summary>
@@ -299,6 +300,11 @@ ev_private:
 					/// </summary>
 					/// <returns></returns>
 					EarthView::World::Graphic::RTShaderSystem::CShaderGenerator* getShaderGenerator(){return mShaderGenerator;}
+
+//#if EV_PLATFORM == EV_PLATFORM_ANDROID
+					public:
+//#endif
+				
 					/// <summary>
 					/// 初始化运行时着色系统，OpenGL-ES2.0及以上版本渲染系统需要初始化运行时着色系统
 					/// </summary>
@@ -325,6 +331,7 @@ ev_private:
 					/// </summary>
 					/// <returns></returns>
 					bool oneTimeConfig();
+
 					/// <summary>
 					/// 定位资源
 					/// </summary>

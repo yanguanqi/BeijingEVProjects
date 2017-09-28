@@ -1,6 +1,7 @@
 ﻿#ifndef EV_BOQ_QUERYINDEX_H_H
 #define EV_BOQ_QUERYINDEX_H_H
 
+#include "core/thread.h"
 #include "core/stdheaders.h"
 #include "core/stringdefines.h"
 #include "core/name_value_pair.h"
@@ -14,7 +15,7 @@ namespace EarthView{
 		namespace Spatial3D{
 			namespace ModelManager{
 				class OBQModelQuadRootTree;
-				
+
 				class EV_Spatial3DEngine_DLL OBQModelNode : public EarthView::World::Core::CAllocatedObject
 				{
 ev_private:
@@ -42,9 +43,6 @@ ev_private:
 						, ev_real64 centerZ
 						, const EVString& modelPath
 						, const EVString& tileFileFolder);
-
-					
-					
 
 					/// <summary>
 					/// 
@@ -153,9 +151,6 @@ ev_private:
 						, ev_real64 maxx
 						, ev_real64 maxy);
 
-					
-					
-
 					/// <summary>
 					/// 
 					/// </summary>
@@ -235,8 +230,6 @@ ev_private:
 					/// <param name="node">模型节点对象</param>
 					/// <returns></returns>
 					ev_bool getNode(const EVString& nodename, EarthView::World::Spatial3D::ModelManager::OBQModelNode& node);
-
-
 
 					/// <summary>
 					/// 
@@ -342,9 +335,6 @@ ev_private:
 					/// <returns></returns>
 					OBQModelQuadRootTree();
 
-					
-					
-
 					/// <summary>
 					/// 
 					/// </summary>
@@ -399,10 +389,138 @@ ev_private:
 					EVString mSRS;
 				};
 
+                                class  OBQModelQuadTreeCreator;
+
 				/// <summary>
-				/// 
+				/// 用于管理转换Dae到mesh的多线程的类
 				/// </summary>
-				class MultiThreadDae2Mesh ;
+				class MultiThreadDae2Mesh
+				{
+				private:
+					class WorkThread : public EarthView::World::Core::CThread
+					{
+					public:
+						MultiThreadDae2Mesh* mParent;
+						ev_bool mbStop;
+						ev_bool mbStartOK;
+						ev_bool mbIsWaiting;
+						EarthView::World::Core::CMutex mStartMtx;
+
+						/// <summary>
+						/// 用于在记录当前转换信息时互斥
+						/// </summary>
+						EarthView::World::Core::CMutex mWriteCurrentRecordMtx;
+
+						WorkThread(MultiThreadDae2Mesh* p);
+
+						~WorkThread();
+
+						ev_void stop();
+						ev_void initWork();
+						ev_void startWork();
+					private:
+						ev_int32 run();
+					};
+
+				public:
+					MultiThreadDae2Mesh(OBQModelQuadTreeCreator* p, 
+										ev_bool& stopSig, 
+
+
+										const EVString& srcFolder, 
+										const EVString& desFolder, 
+										ev_bool coverExistentMesh = false, 
+										ev_int32 threadCount = 4);
+
+					~MultiThreadDae2Mesh();
+
+					/// <summary>
+					/// 设置局部矩阵
+					/// </summary>
+					void setLocalMatrix(const EarthView::World::Spatial::Math::CMatrix4& localMatrix, ev_bool available);
+
+					/// <summary>
+					/// 初始化工作者线程
+					/// </summary>
+					ev_void initWorkThread();
+
+					/// <summary>
+					/// 开始转换
+					/// </summary>
+					ev_void convert();
+
+					EVString getDaeFolder();
+
+					ev_int32 getDaeIndexByName(EVString& daeFolderName);
+
+					ev_int32 getCurrentConvertIndex();
+
+					ev_uint32 getInitialDaeFolderCount();
+
+				private:
+					OBQModelQuadTreeCreator* mpParent;
+
+					/// <summary>
+					/// 停止标志
+					/// </summary>
+					ev_bool& mbStop;
+
+					/// <summary>
+					/// 源数据文件夹
+					/// </summary>
+					EVString mSrcFolder;
+
+					/// <summary>
+					/// 目标数据文件夹
+					/// </summary>
+					EVString mDesFolder;
+
+					/// <summary>
+					/// 是否覆盖已存在的mesh文件
+					/// </summary>
+					ev_bool mConverExistevtMesh;
+
+					/// <summary>
+					/// 当前在工作的线程的数量
+					/// </summary>
+					ev_int32 mWorkChreadCount;
+
+					/// <summary>
+					/// Dae文件夹路径组
+					/// </summary>
+					EarthView::World::Core::ev_stringArray mDaeFolderArr;
+
+					/// <summary>
+					/// Dae文件夹转换前的总的数量;
+					/// </summary>
+					ev_uint32 mInitialDaeFolderCount;
+
+					/// <summary>
+					/// 当前正在转换的索引号
+					/// </summary>
+					ev_int32 mCurrentConvertIndex;
+
+					EarthView::World::Core::CMutex mGetDaeFolderMtx;
+
+					/// <summary>
+					/// 局部矩阵
+					/// </summary>
+					EarthView::World::Spatial::Math::CMatrix4 mLocalMatrix;
+
+					/// <summary>
+					/// 局部矩阵是否可用
+					/// </summary>
+					ev_bool mLocalMatrixAvailable;
+
+					/// <summary>
+					/// 当前正在工作的线程列表
+					/// </summary>
+					vector<WorkThread*> mWorkThreadList;
+
+				};
+
+				class OBQConvertHandler;
+
 				class EV_Spatial3DEngine_DLL OBQModelQuadTreeCreator  : public EarthView::World::Core::CAllocatedObject
 				{
 					friend class MultiThreadDae2Mesh;
@@ -415,7 +533,7 @@ ev_private:
 						InfoListener(_in EarthView::World::Core::CNameValuePairList *pList){};
 					public:
 						InfoListener(){};
-						
+
 						virtual ~InfoListener(){};
 						virtual ev_void printInfo(const EVString& info){printf("%s", info.getString());};
 						virtual ev_void printProcess(ev_int32 process){printf("%d/100", process);};
@@ -436,6 +554,7 @@ ev_private:
 
 					/// <summary>
 					/// 
+					//
 					/// </summary>
 					/// <param name=""></param>
 					/// <returns></returns>
@@ -549,7 +668,7 @@ ev_private:
 					ev_void printProcess(ev_int32 process);
 
 					ev_void setRange(int min,int max);
-					
+
 					/// <summary>
 					/// 
 					/// </summary>
@@ -570,7 +689,21 @@ ev_private:
 					/// <param name=""></param>
 					/// <returns></returns>
 					void setLocalMatrix(const EarthView::World::Spatial::Math::CMatrix4& localMatrix, ev_bool available);
-				protected:
+
+					/// <summary>
+					///  是否删除临时文件;
+					/// <summary>
+					ev_void setIsDeleteTmpFile(ev_bool bDelete);
+
+					/// <summary>
+					///  设置高程精度
+					/// <summary>
+					ev_void setAltPrecision(ev_real32 altPrecision);
+
+					ev_void setLastConvertInfo(OBQConvertHandler *pConvertRecord);
+
+					OBQConvertHandler* getConvertRecord();
+
 				private:
 					list<EarthView::World::Spatial3D::ModelManager::OBQModelQuadTreeCreator::InfoListener*> mInfoListenerList;
 					ev_bool mbStop;
@@ -579,9 +712,190 @@ ev_private:
 					EarthView::World::Spatial::Math::CMatrix4 mLocalMatrix;
 					ev_bool mLocalMatrixAvailable;
 					MultiThreadDae2Mesh* mpMultiThreadDae2Mesh;
+
+					ev_bool mbDeleteTmpFile;		//是否删除临时文件
+					ev_real32 mAltPrecision;		//高程精度;
+
+					OBQConvertHandler *mpConvertRecord;
+				};
+
+				class EV_Spatial3DEngine_DLL OBQDetailedRecord : public EarthView::World::Core::CAllocatedObject
+				{
+				public:
+					//一共多少个;
+					ev_int32 mCount;
+					//已经完成了多少个;
+					ev_int32 mCompletedCount;
+					//当前需要完成的序号;
+					ev_int32 mNumber;
+
+					//处理到的行和列值，只有处理DEM的时候用到;
+					ev_int32 mRow;
+					ev_int32 mCol;
+					//文件名等信息;
+					EVString mFileInfo;
+
+					OBQDetailedRecord()
+					{
+						mCount = 0;
+						mCompletedCount = -1;
+						mNumber = -1;
+						mRow = -1;
+						mCol = -1;
+						mFileInfo = "";
+					}
+
+ev_private:
+					OBQDetailedRecord(_in EarthView::World::Core::CNameValuePairList *pList)
+					{
+						mCount = 0;
+						mCompletedCount = -1;
+						mNumber = -1;
+						mRow = -1;
+						mCol = -1;
+						mFileInfo = "";
+					}
+				};
+
+				/// <summary>
+				/// 保存上一次和本次转换时的一些信息记录，用于下次续转
+				/// </summary>
+				class EV_Spatial3DEngine_DLL OBQConvertHistoryInfo : public EarthView::World::Core::CAllocatedObject
+				{
+ev_private:
+					OBQConvertHistoryInfo(_in EarthView::World::Core::CNameValuePairList *pList)
+					{
+			
+					}
+
+				public:
+					OBQConvertHistoryInfo()
+					{
+						mSrcDataPath.clear();
+						mDestDataPath.clear();
+						mDatasetName.clear();
+						mAltPrecision = 0.2;
+
+						mbIsCompletedCreateIndex = false;
+						mbIsStartedQueryIndex = false;
+						mbIsStartedInitQuadTree = false;
+						mbIsCompletedAllTileFiles = false;
+						mbIsWriteQuadTreeToDB = false;
+						mbIsWriteAllTrees = false;
+						mbIsStartedMutiThreadConvert = false;
+						mbIsCompletedAllDae = false;
+						mbIsStartedCreateDEM = false;
+						mbIsStartedByLevel = false;
+						mbIsCompletedAllDEM = false;
+						mbIsCompletedBaleChildTilesIndex = false;
+					}
+
+					~OBQConvertHistoryInfo()
+					{
+
+					}
+
+					EVString mSrcDataPath;
+					EVString mDestDataPath;
+					EVString mDatasetName;
+
+					ev_real32 mAltPrecision;	//高程精度;
+
+					//1.是否已完全【生成调度索引】以及未生成的调度索引的信息;
+					ev_bool mbIsCompletedCreateIndex;
+					OBQDetailedRecord unCreatedIndexInfo;
+					
+					//////////////////////////////////////////////////////////////////////////
+
+					//2.是否已【开始查询索引】
+					ev_bool mbIsStartedQueryIndex;
+
+					//a.是否已开始初始化四叉树
+					ev_bool mbIsStartedInitQuadTree;
+					//是否已处理完所有瓦片文件以及未处理完的瓦片文件信息
+					ev_bool mbIsCompletedAllTileFiles;
+					OBQDetailedRecord mCompletedTileFilesInfo;
+					
+					//b.是否已开始将四叉树写入到数据库
+					ev_bool mbIsWriteQuadTreeToDB;
+					//是否已写入完了所有的树以及未写入的树的一些信息;
+					ev_bool mbIsWriteAllTrees;
+					OBQDetailedRecord mCompletedQuadTreeInfo;
+
+					//c.是否已开始多线程转换
+					ev_bool mbIsStartedMutiThreadConvert;
+					//是否已将所有dea转换完成,包括三角面信息,以及未处理的dae文件的一些信息;
+					ev_bool mbIsCompletedAllDae;
+					OBQDetailedRecord mCompletedDaeFolderInfo;
+
+					//d.是否已开始Builder的创建DEM
+					ev_bool mbIsStartedCreateDEM;
+					//是否已开始分级生成DEM数据
+					ev_bool mbIsStartedByLevel;
+					//是否已分级生成所有的DEM数据,以及未完成分级DEM的信息;
+					ev_bool mbIsCompletedAllDEM;
+					OBQDetailedRecord mCompletedDemLevelInfo;
+					//////////////////////////////////////////////////////////////////////////
+
+					//3.是否已完成【打包子瓦块索引】以及未完成打包的子瓦块索引信息;
+					ev_bool mbIsCompletedBaleChildTilesIndex;
+					OBQDetailedRecord mCompletedBaleChildTilesInfo;
+
+					//////////////////////////////////////////////////////////////////////////
+				};
+
+				/// <summary>
+				/// 倾斜摄影转换记录类，用于操作上次和本次转换的记录信息，主要用于续转。
+				/// </summary>
+				class EV_Spatial3DEngine_DLL OBQConvertHandler : public EarthView::World::Core::CAllocatedObject
+				{
+ev_private:
+					OBQConvertHandler(_in EarthView::World::Core::CNameValuePairList *pList);
+
+				public:
+					OBQConvertHandler();
+					~OBQConvertHandler();
+
+				public:
+					/// <summary>
+					/// 检测上一次未转换完成时保存的xml文件的信息;
+					/// </summary>
+					/// <return>返回-1表示数据集重名，0-表示检测到历史转换信息，1表示没有历史记录，没有重名，可以直接从头开始</return>
+					ev_int32 checkLastConvertHistory(EVString& srcPath, EVString& destPath, EVString& datasetName);
+
+					/// <summary>
+					/// 保存本次转换结果，按当前转换流程，每完成一步重要的转换就保存一次，防止出现死机、挂掉等蛋疼的情况发生。调用应给mLastConvertInfo赋值。
+					/// </summary>
+					ev_void saveCurrentConvertResult();
+
+					/// <summary>
+					/// 上一次的转换是否完成还是中途停止了
+					/// </summary>
+					ev_bool isLastCompleted();
+
+				protected:
+					/// <summary>
+					/// 解析上一次的转换记录
+					/// </summary>
+					ev_int32 parseHistoryXml(EVString& srcPath, EVString& destPath, EVString& datasetName);
+
+					/// <summary>
+					/// 创建一个新的转换记录表
+					/// </summary>
+					ev_void createConvertXml(EarthView::World::Core::CXmlFile& xmlFile);
+
+					ev_bool mbIsLastCompleted;
+
+				protected:
+					EVString mHistoryXmlDir;
+					
+				public:
+					OBQConvertHistoryInfo *mpLastConvertInfo;
+					OBQConvertHistoryInfo *mpCurrentConvertInfo;
 				};
 			}
 		}
 	}
 }
+
 #endif

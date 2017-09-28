@@ -36,7 +36,7 @@ namespace EarthView
                 //// Animations are applied by calculating a weighted cumulative total
                 ANIMBLEND_CUMULATIVE = 1
             };
-#define EV_MAX_NUM_BONES 256
+#define EV_MAX_NUM_BONES 1024
 
             class LinkedSkeletonAnimationSource;
             

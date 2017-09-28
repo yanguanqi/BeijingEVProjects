@@ -20,7 +20,7 @@ namespace EarthView{
 				class CLodObject;
 				class CMeshxObject;
 				class CLodObjectManager;
-
+				class CLodObjectFactoryListener;
 				class EV_Spatial3DEngine_DLL CLodObjectFactory : public EarthView::World::Core::CAllocatedObject
 				{
 					friend class CLodObjectManager;

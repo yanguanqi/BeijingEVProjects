@@ -191,6 +191,16 @@ ev_private:
 				/// </summary>
 				/// <returns></returns>
 				ev_void setNeedCalLabelPosition(ev_bool value);
+
+				enum LineInterpolationMode
+				{
+					LI_GenernalInterpolation = 0,//一般插值
+					LI_DenseInterpolation,//高精度插值
+					LI_SelfAdaptInterpolation
+				};
+
+				void setLineInterpolationMode(CMultiPolyline3DExtension::LineInterpolationMode liMode);
+				CMultiPolyline3DExtension::LineInterpolationMode getLineInterpolationMode() const;
 ev_internal:
 				/// <summary>
 				/// 获取内存流形式的注记位置信息，便于图层缓存
@@ -208,15 +218,7 @@ ev_internal:
 				ev_bool setRoadTransparent(Real transperent);
 
 ev_private:
-				enum LineInterpolationMode
-				{
-					LI_GenernalInterpolation = 0,//一般插值
-					LI_DenseInterpolation,//高精度插值
-					LI_SelfAdaptInterpolation
-				};
 
-				void setLineInterpolationMode(CMultiPolyline3DExtension::LineInterpolationMode liMode);
-				CMultiPolyline3DExtension::LineInterpolationMode getLineInterpolationMode() const;
 
 			protected:
 				/// <summary>

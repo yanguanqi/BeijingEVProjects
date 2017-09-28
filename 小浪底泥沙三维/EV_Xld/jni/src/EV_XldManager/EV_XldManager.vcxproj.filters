@@ -48,6 +48,15 @@
     <ClCompile Include="BaseInteractiver.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="AnalysisToolManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="InteractiveEngine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RectangleAnalysisTool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\xld\WaterConservancyManager.h">
@@ -87,6 +96,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="BaseInteractiver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AnalysisToolManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="InteractiveEngine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RectangleAnalysisTool.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

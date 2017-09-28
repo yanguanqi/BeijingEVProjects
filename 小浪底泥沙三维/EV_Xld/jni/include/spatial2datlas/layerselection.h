@@ -62,6 +62,7 @@ namespace EarthView{
 					EarthView::World::Spatial::Display::ISymbol *m_pSymbol;
 
 					friend class CDataLayer;
+					friend class CWFSDataLayer;
 				};
 			}
 		}

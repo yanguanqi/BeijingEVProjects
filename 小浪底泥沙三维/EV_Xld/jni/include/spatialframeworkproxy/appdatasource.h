@@ -38,6 +38,11 @@ namespace EarthView{namespace World{namespace Utilities{
 			FileMeshX,        //  -倾斜摄影模型
 			FileMeshXG,        //  -倾斜摄影模型
 			FileLas,
+			FileLasXG,
+			FileLocalImage,
+			FileLocalDem,
+			FileStreetView,  //街景
+			FileOSGB,
 			DBModel,		//	- 模型
 			DBVector,		//	- 矢量
 			DBEffect,		//	- 特效

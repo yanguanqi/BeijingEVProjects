@@ -31,6 +31,14 @@ namespace EarthView{
 					}
 				};
 
+ev_private:
+				/// <summary>
+				/// 构造函数
+				/// </summary>
+				/// <param name="pList">构造函数参数键值对表</param>
+				/// <returns></returns>
+				CModelDataStreamSourcePublishTool(_in EarthView::World::Core::CNameValuePairList *pList){};
+
 			public:
 				/// <summary>
 				///  构造函数
@@ -53,7 +61,9 @@ namespace EarthView{
 				/// </summary>
 				/// <param name=""></param>
 				/// <returns></returns>
-				ev_void addPublishData(PublishData& publishData);
+				ev_void addPublishData(const CModelData& publishData);
+
+				ev_uint32 getCurrentMeshID();
 
 			protected:
 				/// <summary>
@@ -111,15 +121,16 @@ namespace EarthView{
 				EarthView::World::Spatial3D::Dataset::CMeshTemplateDataset* mpDesDataset;
 
 				//<mesh>
-				list<PublishData> mPublishDatas;
+				list<CModelData> mPublishDatas;
 				vector<int> mPublishedModelIds;
+				ev_uint32 mCurrentMeshID;
 
 				/// <summary>
 				/// 
 				/// </summary>
 				/// <param name=""></param>
 				/// <returns></returns>
-				ev_void writeMesh(PublishData& publishData);
+				ev_void writeMesh(CModelData& publishData);
 			};
 		}
 	}

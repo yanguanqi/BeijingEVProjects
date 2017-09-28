@@ -430,6 +430,8 @@ ev_private:
 					/// </summary>
 					/// <returns></returns>
 					ev_real64 getGotoTimeRatio();
+					ev_void setKeySpeedScale(ev_real64 scale);
+					ev_real64 getKeySpeedScale();
 
 #if !MOVEWORLD
 					ev_bool calculateTiltAble(_in const EarthView::World::Spatial::Math::CVector3& cameraZAxis,_in const EarthView::World::Spatial::Math::CMatrix3& rotation);
@@ -457,8 +459,9 @@ ev_private:
 					/// <param name="mouseEvent">当前鼠标事件</param>
 					/// <returns></returns>
 					ev_bool leftButtonMove(_in EarthView::World::Spatial::SystemUI::CGUIEvent* lastEvent,_in EarthView::World::Spatial::SystemUI::CGUIEvent* mouseEvent);
-
-				protected:
+					
+				
+                   protected:
 					EarthView::World::Spatial3D::CGeoSceneManager* mpGeoSceneManger;
 					EarthView::World::Spatial3D::CGlobeCamera* mpGlobeCamera;
 					EarthView::World::Spatial3D::CGlobeCamera *mpLastCamera;
@@ -477,6 +480,8 @@ ev_private:
 
 					EarthView::World::Spatial::Math::CDegree mMaxTilt;
 					EarthView::World::Spatial::Math::CDegree mMinTilt;
+					//AWSD键盘控制球是速度的比例参数
+					ev_real64 mKeySpeedScale;
 
 #if MOVEWORLD
 					EarthView::World::Spatial::Math::CVector3 mRotationAxis;
@@ -527,6 +532,9 @@ ev_private:
 					ev_real64 mDownVelocity1;
 					ev_real64 mSlowDownAltitude;
 					ev_real64 mTiltAccelerationUp;
+
+					ev_real64 mTiltAccelerationUpFirst;
+
 					ev_real64 mtiltAccelerationDown;
 					ev_bool mGoto;
 					ev_real64 mStartGotoTime;
@@ -546,6 +554,11 @@ ev_private:
 					ev_real64 mSecondPartDistance;
 					ev_real64 mDistanceIncreaseAcceleration;
 					ev_real64 mDistanceMinishAcceleration;
+					ev_bool   mNearFly;    //dm+20160923
+                    ev_int16  mFlyMode;
+					ev_real64 mTimeSpan360;// 360 改变倾角的时间
+					ev_int16 mFlyMode360;
+
 
 					ev_bool mStartLocation;
 					EarthView::World::Spatial3D::Controls::CLocationEvent* mStartLocationEvent;

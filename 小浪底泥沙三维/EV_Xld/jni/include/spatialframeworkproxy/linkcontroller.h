@@ -1,11 +1,11 @@
 ﻿#ifndef _Link_Controller_H_
 #define _Link_Controller_H_
 #include "frameworkproxy_config.h"
-#include <core/memoryallocatedobject.h>
+#include <core/object.h>
 
 namespace EarthView{ namespace World{ namespace Spatial{ namespace Atlas{ class ISpatialControl;} }}}
 class CPrivateListener;
-class EV_FRAMEWORKPROXY_DLL CLinkController : public EarthView::World::Core::CAllocatedObject
+class EV_FRAMEWORKPROXY_DLL CLinkController : public EarthView::World::Core::CEventObject
 {
 public:
 	~CLinkController();
@@ -103,6 +103,13 @@ public:
 	/// <returns></returns>
 	/// <memo></memo>
 	ev_bool isRotation();
+ev_internal:
+	/// <summary>
+	/// 事件处理函数，可重载
+	/// </summary>
+	/// <param name="e">事件</param>
+	/// <returns>已处理返回true，否则返回false</returns>
+	virtual ev_bool onEvent(_in EarthView::World::Core::CEvent *e);
 private:
 	CLinkController();
 	static CLinkController* mpInstance;

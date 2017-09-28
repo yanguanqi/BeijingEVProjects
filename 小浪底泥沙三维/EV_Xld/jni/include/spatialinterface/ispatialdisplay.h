@@ -12,6 +12,7 @@ namespace EarthView{
 				/// <summary>
 				/// 空间显示基类
 				/// </summary>
+				class ILabelEngine;
 				class EV_INTERFACE_DLL ISpatialDisplay : public EarthView::World::Display::IDisplay2D
 				{
 				public:
@@ -93,6 +94,16 @@ namespace EarthView{
 					/// <param name=""></param>
 					/// <returns>返回显示分辨率</returns>
 					virtual ev_void setDisplayResolution(ev_int32 resolution);
+					/// <summary>
+					///  获取标注引擎
+					/// </summary>
+					virtual EarthView::World::Spatial::Display::ILabelEngine * getLabelEngine() const;
+					/// <summary>
+					///  获取标注引擎
+					/// </summary>
+					virtual ev_void setLabelEngine(EarthView::World::Spatial::Display::ILabelEngine * ref_engine);
+					virtual ev_void setIntersectionFlag(ev_bool b);
+					virtual ev_bool getIntersectionFlag();
 ev_private:
 ev_private:
 				ISpatialDisplay( EarthView::World::Core::CNameValuePairList *pList );

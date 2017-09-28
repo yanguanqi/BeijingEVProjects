@@ -8,6 +8,7 @@
 #include "spatialgui/ispatialcontrol.h"
 #include "spatialgui/layoutactiveevent.h"
 #include "layoutcontrol/layoutcontrol.h"
+#include "graphic/renderwindow.h"
 
 namespace EarthView{
 	namespace World{
@@ -250,12 +251,18 @@ public:
 	/// <returns></returns>
 	static CViewManager* getSingletonPtr();
 
+	public:
+		CControlSpace* openAndroidGlobe( const EVString& name);
+
 private:
 
 	EarthView::World::Spatial2D::Controls::CMapControl* createMap(const EVString& name);
 
 	EarthView::World::Spatial3D::Controls::CGlobeControl* createGlobe(const EVString& name, const EVString& windowHandle);
 	EarthView::World::Spatial3D::Controls::CGlobeControl* createGlobe(const EVString& name,_in ev_uint32 winWidth,_in ev_uint32 winHeight, const EVString& windowHandle);
+
+	EarthView::World::Spatial3D::Controls::CGlobeControl* createGlobe(const EVString& name, EarthView::World::Graphic::CRenderWindow* pRenderWindow);
+	CControlSpace* openGlobe( const EVString& name, EarthView::World::Graphic::CRenderWindow* pRenderWindow );
 
 	EarthView::World::Layout::Controls::CLayoutControl* createLayout(const EVString& name);
 

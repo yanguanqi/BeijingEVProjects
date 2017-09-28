@@ -116,6 +116,10 @@ namespace EarthView{
 				private:
 					EarthView::World::Spatial::Octree::COctreeManager* mImpl;
 					EarthView::World::Core::CMutex mDataSourceMtx;
+					set<EVString> mChangedOctreeCode;
+					ev_bool mNeedRecordUpdateNode;
+					ev_uint32 mEntityCount;
+					EarthView::World::Spatial::Math::CAxisAlignedBox mReferenceBox;
 ev_private:
 					/// <summary>
 					/// 构造函数
@@ -250,6 +254,7 @@ ev_private:
 					/// <returns></returns>
 					virtual ev_void addOctreeNode( EarthView::World::Spatial::Octree::CBaseOctreeNode *ref_n, EarthView::World::Spatial::Octree::CBaseOctree *octant, int depth);
 					virtual ev_void addOctreeNode( EarthView::World::Spatial::Octree::CBaseOctreeNode *ref_n, EarthView::World::Spatial::Octree::CBaseOctree *octant, int depth, ev_bool bUpdateMaxBox);
+					virtual ev_void addOctreeNode( EarthView::World::Spatial::Octree::CBaseOctreeNode *ref_n, EarthView::World::Spatial::Octree::CBaseOctree *octant, int depth, set<EVString>& changedOctreeCodeSet);			
 
 					/// <summary>
 					/// 
@@ -263,6 +268,15 @@ ev_private:
 					/// <param name="parentTree">八叉树指针</param>
 					/// </summary>
 					virtual void findOctreeNode(EarthView::World::Spatial::Octree::CBaseOctree* tree, ev_uint32 id, EarthView::World::Spatial::Octree::CBaseOctreeNodeList& ns, EarthView::World::Spatial::Octree::CBaseOctree*& parent);
+					
+					/// <summary>
+					/// 根据ID查找OCTREENODE并加载结点
+					/// <param name="parentTree">八叉树指针</param>
+					/// </summary>
+					virtual void findOctreeNodeAndInit(EarthView::World::Spatial::Octree::CBaseOctree* tree,
+						ev_uint32 id,
+						EarthView::World::Spatial::Octree::CBaseOctreeNodeList& ns,
+						EarthView::World::Spatial::Octree::CBaseOctree*& parent);
 
 					/// <summary>
 					/// 根据编码查询八叉树子树
@@ -413,6 +427,17 @@ ev_private:
 					/// <returns></returns>
 					ev_bool initOctreeFromCache(const ev_int32 dataversionInDatasource);
 
+
+					EarthView::World::Spatial::Octree::CBaseOctree* initOctree(const EVString& code, ev_bool recoverNodes);
+
+					ev_void removeOctree(const EVString& code);
+
+					ev_void recoverNodesWhenInit(ev_bool tag);
+
+					ev_bool isRecoverNodesWhenInit() const;
+
+					bool getAllObjectIDs(set<ev_uint32>& intVec);
+
 					/// <summary>
 					/// 
 					/// </summary>
@@ -478,6 +503,16 @@ ev_private:
 					/// <param name=""></param>
 					/// <returns></returns>
 					void updateOctreeManager(ev_uint32 datasetID, const EarthView::World::Spatial::Math::CAxisAlignedBox& box, EarthView::World::Spatial3D::Dataset::EntityDatasetOperType oprType);
+
+					ev_bool storeChagedOctreeNode(ev_int32 dataversion);
+
+					void setNeedRecordUpdateNodeEnable(ev_bool enable);
+
+					void setEntityCount(ev_uint32 entCount);
+
+					void setOctreeMaxDepth(ev_uint32 depth);
+
+					void setReferenceBoundingBox(EarthView::World::Spatial::Math::CAxisAlignedBox& box);
 				protected:
 
 					/// <summary>

@@ -162,6 +162,11 @@ namespace EarthView
 				static EVString formatPath(const EVString& path);
 				static EVString formatPath(const EVString& path, const EVString& file);
 
+				/// <summary>
+				/// 判断是否web应用程序
+				/// </summary>
+				static ev_bool isWebApp();
+
 			private:
 				static ev_string ms_currentDirectory;
 

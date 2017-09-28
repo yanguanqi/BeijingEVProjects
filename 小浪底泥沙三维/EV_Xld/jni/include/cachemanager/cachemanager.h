@@ -250,6 +250,7 @@ namespace EarthView{
 				ev_uint64 getvectortileCacheFileSizeMap(multimap<ev_uint64, EVString>& cacheFileSizeMap);
 				ev_uint64 getKmlCacheFileSizeMap(multimap<ev_uint64, EVString>& cacheFileSizeMap);
 				ev_uint64 getOBQFileSizeMap(multimap<ev_uint64, EVString>& cacheFileSizeMap);
+				ev_uint64 getStreetViewCacheFileSizeMap(multimap<ev_uint64, EVString>& cacheFileSizeMap);
 			};
 
 

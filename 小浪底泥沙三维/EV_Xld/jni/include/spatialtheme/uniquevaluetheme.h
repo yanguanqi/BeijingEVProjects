@@ -203,8 +203,6 @@ namespace EarthView{
 					/// <param name="value">字符串值</param>
 					/// <returns>bool值</returns>
 					ev_bool containsValue( _in const EVString &value ) const;
-					bool getGradeDrawEnable();
-					void setGradeDrawEnable(ev_bool bFlag);
 					/// <summary>
 					/// 判断两个Theme是否属性相同
 					/// </summary>
@@ -224,7 +222,6 @@ namespace EarthView{
 					C_DISABLE_COPY( CUniqueValueTheme )
 
 					ev_bool m_bUseDefaultSymbol;
-					ev_bool m_bFlag;
 					EarthView::World::Spatial::Display::ISymbol *m_pDefaultSymbol;
 					EVString m_szDefalutCaption;
 					EVString m_szCaption;

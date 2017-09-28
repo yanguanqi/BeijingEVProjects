@@ -240,9 +240,8 @@ namespace EarthView{
 					/// <param name="layer">待添加的图层</param>
 					/// <returns></returns>
 					ev_void addLayer( _in EarthView::World::Spatial::Atlas::ILayer *ref_layer );
-
-					//ev_void addLayer( _in EarthView::World::Spatial::Atlas::ILayer* parentlayer,
-					//							 _in EarthView::World::Spatial::Atlas::ILayer* layer);
+					virtual ev_void addLayer( _in EarthView::World::Spatial::Atlas::IGroupLayer* parentlayer,
+						_in EarthView::World::Spatial::Atlas::ILayer* layer);
 					/// <summary>
 					/// 在指定索引处插入图层
 					/// </summary>
@@ -250,12 +249,15 @@ namespace EarthView{
 					/// <param name="layer">待插入的图层</param>
 					/// <returns></returns>
 					ev_void insertLayer( _in ev_uint32 index, _in EarthView::World::Spatial::Atlas::ILayer * layer );
+					virtual ev_void insertLayer( _in EarthView::World::Spatial::Atlas::IGroupLayer* parentlayer, _in ev_uint32 index,
+						_in EarthView::World::Spatial::Atlas::ILayer* layer);
 					/// <summary>
 					/// 移除指定索引处的图层
 					/// </summary>
 					/// <param name="index">图层索引</param>
 					/// <returns></returns>
 					ev_void removeLayer( _in ev_uint32 index );
+					virtual ev_void removeLayer( _in EarthView::World::Spatial::Atlas::IGroupLayer* parentlayer, _in ev_uint32 index );
 					///<summary>
 					///移除图层组中，指定索引的图层
 					///</summary>
@@ -273,6 +275,8 @@ namespace EarthView{
 					/// <param name="newIndex">图层新的索引</param>
 					/// <returns></returns>
 					ev_void moveLayer( _in ev_uint32 oldIndex, _in ev_uint32 newIndex );
+					virtual ev_void moveLayer( _in EarthView::World::Spatial::Atlas::IGroupLayer* fromlayer, _in ev_uint32 oldIndex, 
+						_in EarthView::World::Spatial::Atlas::IGroupLayer* tolayer, _in ev_uint32 newIndex );
 					/// <summary>
 					/// 根据指定条件进行选择要素
 					/// </summary>
@@ -299,7 +303,13 @@ namespace EarthView{
 					/// <param name="info">渲染信息</param>
 					/// <returns></returns>
 					ev_void draw( _in EarthView::World::Spatial::Display::ISpatialDisplay *display, EarthView::World::Spatial::Atlas::IRenderInformation *info );
-					
+					/// 绘制图层，无缓存，且能初步判断生成的图片是否有内容,isBlank为true图片空白
+					/// </summary>
+					/// <param name="display">空间显示参数</param>
+					/// <param name="info">渲染信息</param>
+					/// <returns></returns>
+					ev_void draw( _in EarthView::World::Spatial::Display::ISpatialDisplay *display, EarthView::World::Spatial::Atlas::IRenderInformation *info,ev_bool& isBlank);
+					virtual ev_bool makeBaseMapping(EarthView::World::Spatial::Display::ISpatialDisplay* display);
 					/// <summary>
 					/// 获取地图对应的纸张布局
 					/// </summary>
@@ -316,6 +326,12 @@ namespace EarthView{
 					virtual ev_void addMapListener( _in EarthView::World::Spatial::Atlas::IMapListener* ref_listener );
 					virtual ev_void removeMapListner( _in EarthView::World::Spatial::Atlas::IMapListener* listener );
 
+					/// <summary>
+					/// 获取渲染顺序控制器
+					/// </summary>
+					/// <param name=""></param>
+					/// <returns>渲染顺序控制器</returns>
+					virtual EarthView::World::Spatial::Atlas::LayerRenderOrderController *getLayerRenderOrderController() const;
 					/// <summary>
 					/// 复制地图,内存需要外部释放
 					/// </summary>
@@ -343,10 +359,10 @@ namespace EarthView{
 
 					virtual ev_void registSpatialDisplay(EarthView::World::Spatial::Display::ISpatialDisplay* display);
 					virtual ev_void unRegistSpatialDisplay(EarthView::World::Spatial::Display::ISpatialDisplay* display);
-					
-					ev_void updateLayerChanged(EarthView::World::Spatial::Atlas::ILayer* pLayer, ev_bool isAdd = false);
 				ev_internal:
 					ev_void fromStream( EarthView::World::Core::CDataStream& stream );	
+				private:
+					ev_bool isOrIsInBaseGroupLayer(EarthView::World::Spatial::Atlas::ILayer *pScrLayer);
 				protected:
 
 					ev_void init();
@@ -354,10 +370,13 @@ namespace EarthView{
 					ev_void updateMapSelection();
 					ev_void addToMapSelection( _in EarthView::World::Spatial::Atlas::ILayer *layer );
 					ev_void select( _in EarthView::World::Spatial::GeoDataset::IQueryFilter *filter, _in EarthView::World::Spatial::Atlas::EVSelectionResultType type, _in EarthView::World::Spatial::Atlas::ILayer *layer );
-					ev_void drawFeatures( EarthView::World::Spatial::Display::ISpatialDisplay* display,EarthView::World::Display::IPaintDevice *canvas, CRenderInformation *info );
-					ev_void drawFeature( EarthView::World::Spatial::Display::ISpatialDisplay* display,EarthView::World::Display::IPaintDevice *canvas, EarthView::World::Spatial::Atlas::ILayer *layer, CRenderInformation *info );
-					ev_void drawSelections( EarthView::World::Spatial::Display::ISpatialDisplay* display, CRenderInformation *info );
-					ev_void drawLabels( EarthView::World::Spatial::Display::ISpatialDisplay* display, CRenderInformation *info );
+					ev_bool drawFeatures( EarthView::World::Spatial::Display::ISpatialDisplay* display,EarthView::World::Display::IPaintDevice *canvas, CRenderInformation *info );
+					ev_bool drawFeature( EarthView::World::Spatial::Display::ISpatialDisplay* display,EarthView::World::Display::IPaintDevice *canvas, EarthView::World::Spatial::Atlas::ILayer *layer, CRenderInformation *info );
+					ev_bool drawSelections( EarthView::World::Spatial::Display::ISpatialDisplay* display, CRenderInformation *info );
+					ev_bool drawLabels( EarthView::World::Spatial::Display::ISpatialDisplay* display, CRenderInformation *info );
+					//ev_void drawFeatures( EarthView::World::Spatial::Display::ISpatialDisplay* display,EarthView::World::Display::IPaintDevice *canvas, CRenderInformation *info ,ev_bool& isBlank);
+					//ev_void drawFeature( EarthView::World::Spatial::Display::ISpatialDisplay* display,EarthView::World::Display::IPaintDevice *canvas, EarthView::World::Spatial::Atlas::ILayer *layer, CRenderInformation *info,ev_bool& isBlank );
+					//ev_void drawLabels( EarthView::World::Spatial::Display::ISpatialDisplay* display, CRenderInformation *info,ev_bool& isBlank );
 					ev_void freezeDraw();
 					ev_void notifySelectionChanged();
 					EVString m_szName;
@@ -387,7 +406,7 @@ namespace EarthView{
 
 					ev_list<EarthView::World::Spatial::Atlas::IMapListener*>mListeners;
 					mutable EarthView::World::Core::CReadWriteLock mListenerLock;
-
+					EarthView::World::Spatial::Atlas::LayerRenderOrderController *m_pRenderingOrderController;
 					ev_bool mbIsActive; // added by wangwei in 2013-04-22
 
 					EarthView::World::Spatial::Carto::IPageLayout* m_pPageLayout;

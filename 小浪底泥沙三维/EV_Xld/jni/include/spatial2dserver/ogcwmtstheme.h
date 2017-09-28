@@ -45,6 +45,17 @@ namespace EarthView{
 					/// <returns></returns>
 					void setRequestFormat(EVString format);
 					/// <summary>
+					/// 获取DPI
+					/// </summary>
+					/// <returns>DPI值</returns>
+					ev_real64 getDPI();
+					/// <summary>
+					/// 设置DPI值
+					/// </summary>
+					/// <param name="dValue">DPI值</param>
+					/// <returns></returns>
+					ev_void setDPI(ev_real64 dValue);
+					/// <summary>
 					/// 获取请求瓦片集
 					/// </summary>
 					/// <returns></returns>
@@ -93,6 +104,7 @@ ev_internal:
 					EVString m_RequestStyle;
 					EVString m_RequestFormat;
 					EVString m_RequestTileSet;
+					ev_real64 m_dDPI;
 				};
 }}}}
 #endif

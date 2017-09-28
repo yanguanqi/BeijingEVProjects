@@ -99,7 +99,7 @@ ev_private:
 				class EV_Spatial3DEngine_DLL CEffect:public EarthView::World::Graphic::CMovableObject
 				{
 					friend class EarthView::World::Spatial3D::ModelManager::CModelBaseObject;
-
+					friend class EarthView::World::Spatial3D::ModelManager::CManualInstanceObject;
 ev_private:
 					/// <summary>
 					/// 构造函数
@@ -429,6 +429,7 @@ ev_private:
 					EarthView::World::Core::StringVector mTextures;
 					EarthView::World::Spatial3D::Dataset::EffectType mEffectType;
 					EVString mAliasName;
+					mutable EarthView::World::Core::CRecursiveMutex mLocker;
 
 					/// <summary>
 					/// 加载特效					

@@ -73,6 +73,7 @@ public:
 	///<param name=""></param>
 	///<returns><returns>
     ~CSqlQuery();
+	EVString lastQuery() ;
 
 	///<summary>
 	/// 绑定数据到指定的位置
@@ -134,6 +135,12 @@ public:
 	/// </summary>
 	///<returns>成功返回true，失败返回false</returns>
 	ev_bool exec();
+	///<summary>
+	/// 执行已准备好的SQL语句
+	/// </summary>
+	///<param name="needCursor">是否使用游标</param>
+	///<returns>成功返回true，失败返回false</returns>
+	ev_bool execQuery(ev_bool needCursor);
 	///<summary>
 	/// 执行已准备好的SQL语句,主要用于批量导入。
 	/// </summary>

@@ -1,4 +1,4 @@
-#ifndef EARTHVIEW_WORLD_SPATIAL3D_GEOMETRY_SCREENGEOMETRY_H
+ï»¿#ifndef EARTHVIEW_WORLD_SPATIAL3D_GEOMETRY_SCREENGEOMETRY_H
 #define EARTHVIEW_WORLD_SPATIAL3D_GEOMETRY_SCREENGEOMETRY_H
 
 #include <core/memoryallocatedobject.h>
@@ -18,41 +18,41 @@ namespace EarthView
 		namespace Geometry3D
 		{
 			/// <summary>
-			/// ÆÁÄ»Ê¸Á¿×ø±êÀàĞÍ
+			/// å±å¹•çŸ¢é‡åæ ‡ç±»å‹
 			/// <summary>
 			enum  ScreenGeometryCoordinateType
 			{
 				/// <summary>
-				/// ²ÉÓÃÏñËØ×ø±ê£¬Ô­µãÎªÊÓ¿Ú×óÉÏ½Ç
+				/// é‡‡ç”¨åƒç´ åæ ‡ï¼ŒåŸç‚¹ä¸ºè§†å£å·¦ä¸Šè§’
 				/// <summary>
 				SGCT_Pixel = 0,
 				/// <summary>
-				/// ²ÉÓÃµ¥Î»×ø±êÔ­µãÎªÊÓ¿ÚÖĞĞÄ£¬x£º´Ó×óÖÁÓÒ-1.0-1.0,y£º´ÓÏÂÖÁÉÏ-1.0-1.0
+				/// é‡‡ç”¨å•ä½åæ ‡åŸç‚¹ä¸ºè§†å£ä¸­å¿ƒï¼Œxï¼šä»å·¦è‡³å³-1.0-1.0,yï¼šä»ä¸‹è‡³ä¸Š-1.0-1.0
 				/// <summary>
 				SGCT_Identity
 			};
 
 			/// <summary>
-			///ÆÁÄ»Ê¸Á¿»ùÀà
+			///å±å¹•çŸ¢é‡åŸºç±»
 			/// </summary>
 			class EV_GEOMETRY3D_DLL CScreenGeometry : public EarthView::World::Core::CAllocatedObject
 			{
 ev_private:
 				/// <summary>
-				/// ¹¹Ôìº¯Êı,±ØĞëÔÚ³¡¾°´ò¿ªºóµ÷ÓÃ,Ä¬ÈÏÇé¿öÏÂÖ»ÔÚÖ÷ÊÓ¿ÚäÖÈ¾,×ø±êÖµ²Î¿¼ÎªÖ÷ÊÓ¿Ú
+				/// æ„é€ å‡½æ•°,å¿…é¡»åœ¨åœºæ™¯æ‰“å¼€åè°ƒç”¨,é»˜è®¤æƒ…å†µä¸‹åªåœ¨ä¸»è§†å£æ¸²æŸ“,åæ ‡å€¼å‚è€ƒä¸ºä¸»è§†å£
 				/// </summary>
-				/// <param name="pList">¹¹Ôìº¯Êı²ÎÊı¼üÖµ¶Ô±í</param>
+				/// <param name="pList">æ„é€ å‡½æ•°å‚æ•°é”®å€¼å¯¹è¡¨</param>
 				/// <returns></returns>
 				CScreenGeometry(EarthView::World::Core::CNameValuePairList* pList);
 			public:
 				/// <summary>
-				/// ¹¹Ôìº¯Êı,±ØĞëÔÚ³¡¾°´ò¿ªºóµ÷ÓÃ,Ä¬ÈÏÇé¿öÏÂÖ»ÔÚÖ÷ÊÓ¿ÚäÖÈ¾,×ø±êÖµ²Î¿¼ÎªÖ÷ÊÓ¿Ú
+				/// æ„é€ å‡½æ•°,å¿…é¡»åœ¨åœºæ™¯æ‰“å¼€åè°ƒç”¨,é»˜è®¤æƒ…å†µä¸‹åªåœ¨ä¸»è§†å£æ¸²æŸ“,åæ ‡å€¼å‚è€ƒä¸ºä¸»è§†å£
 				/// </summary>
-				/// <param name="scenemanager">³¡¾°¹ÜÀíÆ÷</param>
+				/// <param name="scenemanager">åœºæ™¯ç®¡ç†å™¨</param>
 				/// <returns></returns>
 				CScreenGeometry(EarthView::World::Graphic::CSceneManager* ref_scenemanager);
 				/// <summary>
-				/// Îö¹¹º¯Êı
+				/// ææ„å‡½æ•°
 				/// </summary>
 				/// <param name=""></param>
 				/// <returns></returns>
@@ -60,109 +60,109 @@ ev_private:
 
 			public:		
 				/// <summary>
-				/// ÉèÖÃ×ø±êÀàĞÍ,±ØĞëÔÚbeginÖ®Ç°ÉèÖÃ²ÅÓĞĞ§
+				/// è®¾ç½®åæ ‡ç±»å‹,å¿…é¡»åœ¨beginä¹‹å‰è®¾ç½®æ‰æœ‰æ•ˆ
 				/// </summary>
-				/// <param name="type">ÀàĞÍ</param>
+				/// <param name="type">ç±»å‹</param>
 				/// <returns></returns>
 				void setCoordinateType(ScreenGeometryCoordinateType type);
 				/// <summary>
-				/// »ñÈ¡×ø±êÀàĞÍ
+				/// è·å–åæ ‡ç±»å‹
 				/// </summary>
 				/// <returns></returns>
 				ScreenGeometryCoordinateType getCoordinateType();
 
 				/// <summary>
-				/// Ôö¼ÓäÖÈ¾ÆÁÄ»Ê¸Á¿µÄ×ÓÊÓ¿Ú
+				/// å¢åŠ æ¸²æŸ“å±å¹•çŸ¢é‡çš„å­è§†å£
 				/// </summary>
-				/// <param name="type">ÀàĞÍ</param>
+				/// <param name="type">ç±»å‹</param>
 				/// <returns></returns>
 				void addChildViewport(EarthView::World::Graphic::CViewport* ref_viewport);
 
 				/// <summary>
-				/// Ïà»úÊÇ·ñäÖÈ¾´ËÆÁÄ»Ê¸Á¿
+				/// ç›¸æœºæ˜¯å¦æ¸²æŸ“æ­¤å±å¹•çŸ¢é‡
 				/// </summary>
-				/// <param name="type">ÀàĞÍ</param>
+				/// <param name="type">ç±»å‹</param>
 				/// <returns></returns>
 				ev_bool hasChildViewport(EarthView::World::Graphic::CViewport* ref_viewport);
 
 				/// <summary>
-				/// ÒÆ³ıäÖÈ¾ÆÁÄ»Ê¸Á¿µÄ×ÓÊÓ¿ÚÏà»ú
+				/// ç§»é™¤æ¸²æŸ“å±å¹•çŸ¢é‡çš„å­è§†å£ç›¸æœº
 				/// </summary>
-				/// <param name="type">ÀàĞÍ</param>
+				/// <param name="type">ç±»å‹</param>
 				/// <returns></returns>
 				ev_bool removeChildViewport(EarthView::World::Graphic::CViewport* ref_viewport);
 
 				/// <summary>
-				/// ÉèÖÃÖ÷ÊÓ¿ÚÊÇ·ñäÖÈ¾´Ë¶ÔÏó
+				/// è®¾ç½®ä¸»è§†å£æ˜¯å¦æ¸²æŸ“æ­¤å¯¹è±¡
 				/// </summary>
-				/// <param name="type">ÀàĞÍ</param>
+				/// <param name="type">ç±»å‹</param>
 				/// <returns></returns>
 				ev_bool setVisibleInGlobeViewport(ev_bool value);
 
 				/// <summary>
-				/// ¹Ò½Ó
+				/// æŒ‚æ¥
 				/// </summary>
 				/// <param name=""></param>
 				/// <returns></returns>
 				virtual ev_void render();
 
 				/// <summary>
-				/// ·´¹Ò½Ó
+				/// åæŒ‚æ¥
 				/// </summary>
 				/// <param name=""></param>
 				/// <returns></returns>
 				virtual ev_void derender();
 				
 				/// <summary>
-				/// ÉèÖÃÊÇ·ñ¿É¼û               
+				/// è®¾ç½®æ˜¯å¦å¯è§               
 				/// </summary>
-				/// <param name="visible">ÊÇ·ñ¿É¼û</param>
+				/// <param name="visible">æ˜¯å¦å¯è§</param>
 				/// <returns></returns>
 				virtual void setVisible(ev_bool visible);
 
 				/// <summary>
-				/// ÊÇ·ñ¿É¼û               
+				/// æ˜¯å¦å¯è§               
 				/// </summary>
 				/// <param name=""></param>
 				/// <returns></returns>
 				virtual ev_bool getVisible() const;
 
 				/// <summary>
-				/// ÉèÖÃäÖÈ¾¶ÓÁĞ×éĞÅÏ¢
+				/// è®¾ç½®æ¸²æŸ“é˜Ÿåˆ—ç»„ä¿¡æ¯
 				/// </summary>
-				/// <param name="queueID">¶ÓÁĞIDºÅ</param>
+				/// <param name="queueID">é˜Ÿåˆ—IDå·</param>
 				/// <returns></returns>
 				virtual void setRenderQueueGroup(ev_uint8 queueID);
 				/// <summary>
-				/// ÉèÖÃäÖÈ¾¶ÓÁĞ×éĞÅÏ¢ºÍ¶ÓÁĞÓÅÏÈ¼¶
+				/// è®¾ç½®æ¸²æŸ“é˜Ÿåˆ—ç»„ä¿¡æ¯å’Œé˜Ÿåˆ—ä¼˜å…ˆçº§
 				/// </summary>
-				/// <param name="queueID">¶ÓÁĞIDºÅ</param>
-				/// <param name="priority">ÓÅÏÈ¼¶</param>
+				/// <param name="queueID">é˜Ÿåˆ—IDå·</param>
+				/// <param name="priority">ä¼˜å…ˆçº§</param>
 				/// <returns></returns>
 				virtual void setRenderQueueGroupAndPriority(ev_uint8 queueID, ev_uint16 priority);
 				/// <summary>
-				/// »ñÈ¡¸ÃÊµÌåµÄäÖÈ¾¶ÓÁĞ×é
+				/// è·å–è¯¥å®ä½“çš„æ¸²æŸ“é˜Ÿåˆ—ç»„
 				/// </summary>
 				/// <param name=""></param>
 				/// <returns></returns>
 				virtual ev_uint8 getRenderQueueGroup() const;
 				/// <summary>
-				/// »ñÈ¡²ÄÖÊ				
+				/// è·å–æè´¨				
 				/// </summary>
 				/// <param name=""></param>				
 				/// <returns></returns>
 				virtual EarthView::World::Graphic::CMaterialPtr& getMaterial();
 				/// <summary>
-				/// ÉÁË¸
-				/// <param name="color">¸ßÁÁÑÕÉ«</param>
-				/// <param name="hightLight_ms">¸ßÁÁÊ±³¤(µ¥Î»£ººÁÃë)</param>
-				/// <param name="normally_ms">·Ç¸ßÁÁÊ±³¤(µ¥Î»£ººÁÃë)</param>
-				/// <param name="flashCount">ÉÁË¸´ÎÊı</param>
+				/// é—ªçƒ
+				/// <param name="color">é«˜äº®é¢œè‰²</param>
+				/// <param name="hightLight_ms">é«˜äº®æ—¶é•¿(å•ä½ï¼šæ¯«ç§’)</param>
+				/// <param name="normally_ms">éé«˜äº®æ—¶é•¿(å•ä½ï¼šæ¯«ç§’)</param>
+				/// <param name="flashCount">é—ªçƒæ¬¡æ•°</param>
 				/// </summary>
 				/// <returns></returns>
 				virtual void flash(const EarthView::World::Graphic::CColourValue& color, ev_uint32 hightLight_ms, ev_uint32 normally_ms,ev_uint32 flashCount);
 				/// <summary>
-				/// ½áÊøÉÁË¸
+				/// ç»“æŸé—ªçƒ
 				/// </summary>
 				/// <returns></returns>
 				virtual void endFlash();
@@ -206,9 +206,9 @@ ev_private:
 
 			private:
 				/// <summary>
-				/// ¸´ÖÆ¹¹Ôìº¯Êı
+				/// å¤åˆ¶æ„é€ å‡½æ•°
 				/// </summary>
-				/// <param name="obj">¶ÔÏó</param>
+				/// <param name="obj">å¯¹è±¡</param>
 				/// <returns></returns>
 				CScreenGeometry(const CScreenGeometry& obj);
 			protected:

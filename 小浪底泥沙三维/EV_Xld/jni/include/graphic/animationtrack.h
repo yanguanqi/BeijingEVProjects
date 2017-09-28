@@ -794,6 +794,10 @@ ev_private:
 					/// <param name="roll">返回的roll角</param>
 					/// <returns></returns>
 					virtual void getEuler(_in const EarthView::World::Spatial::Math::CDegree& yawA,_in const EarthView::World::Spatial::Math::CDegree& pitchA,_in const EarthView::World::Spatial::Math::CDegree& rollA,_in const EarthView::World::Spatial::Math::CDegree& yawB,_in const EarthView::World::Spatial::Math::CDegree& pitchB,_in const EarthView::World::Spatial::Math::CDegree& rollB,_in ev_real64 timeRatio,_inout EarthView::World::Spatial::Math::CDegree& yaw,_inout EarthView::World::Spatial::Math::CDegree& pitch,_inout EarthView::World::Spatial::Math::CDegree& roll);
+
+					virtual void adjustWorldMatrix(_in EarthView::World::Spatial::Math::CMatrix4& worldMatrix);
+
+
 					/// <summary>
 					/// 设置是否启用获取半径功能
 					/// </summary>

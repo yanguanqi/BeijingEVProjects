@@ -38,9 +38,12 @@ namespace EarthView
 		class CCustomNodeSerializer;
 		class CCustomSubMeshSerializer;
 		class CCustomBoxSizeStat;
+		class CCustomTriDensityStat;
 		class CCustomInstancePathStat;
 		class CAniInfo;
 		class CModelDataSetAccessor;
+		class CMeshOptimizeCompositor;
+		class CSharedMeshKey;
 		class EV_MESHOPTIMIZE_DLL CMeshOptimizeData:  public EarthView::World::Core::CBaseObject
 		{
 ev_private:
@@ -178,6 +181,15 @@ ev_private:
 		public:
 			CModelLODParam();
 			~CModelLODParam();
+			/// <summary>
+			/// 纹理渲染的类型
+			/// </summary>
+			enum CompositeType 
+			{
+				CT_EffectFirst, //渲染效果优先
+				CT_EfficiencyFirst, //渲染效率优先
+			};
+
 			//公共参数
 			//设置是否分割四叉树
 			ev_void setBuildQuadtree(ev_bool buildQuadTree);
@@ -242,7 +254,31 @@ ev_private:
 			ev_void setTextureQuality(ev_bool quality);
 			//获取纹理质量设置
 			ev_bool getTextureQuality();
-		
+			//设置选择场景名称
+			ev_void	setSelectedSceneName(EVString sceneName);
+			//获取选择场景名称
+			EVString getSelectedSceneName();
+
+			//设置/获取纹理合并类型;
+			ev_void setCompositeType(CompositeType type);
+			CompositeType getCompositeType();
+			//设置/获取合并图片的最大宽度;
+			ev_void setMaxWidth(ev_uint32 uMaxWidth);
+			ev_uint32 getMaxWidth();
+			//设置/获取合并图片的最大高度;
+			ev_void setMaxHeight(ev_uint32 uMaxHeight);
+			ev_uint32 getMaxHeight();
+			//设置获取边缘像素;
+			ev_void setMargin(ev_uint32 uMargin);
+			ev_uint32 getMargin();
+			//设置纹理坐标范围阀值
+			ev_void setTextureCoordScope(ev_uint32 uScope);
+			ev_uint32 getTextureCoordScope();
+			
+			//设置共享submesh引用次数
+			ev_void setSharedSubmeshReferenceCount(ev_uint32 referenceCount);
+			ev_uint32 getSharedSubmeshReferenceCount();
+
 		protected:
 		private:
 			ev_void iniVar();
@@ -294,6 +330,19 @@ ev_private:
 			ev_bool mbUseInstance;
 			//设置纹理质量，为true时设置为一般（节省内存），false时设置为默认（精度高）
 			ev_bool mbTextureQuality;
+			//设置选择的SceneName，用于从选中的Scene中获取高程值
+			EVString mSceneName;
+
+			CompositeType  mCompositeType;             // 纹理合并的类型 
+
+			ev_uint32      mMaxWidth;            // 合并图片的最大宽度
+			ev_uint32      mMaxHeight;           // 合并图像的最大高度
+			ev_uint32      mMargin;              // 边沿像素
+			
+			//纹理坐标范围阀值。选择渲染效果优先时，当纹理寻址模式为wrap或者mirror的时候，纹理坐标值小于这个值的时候合并，否则不合并。合法值是大于或等于1的整形值。默认为1;
+			ev_uint32		m_TextureCoordScope;
+
+			ev_uint32 mSharedSubmeshReferenceCount;
 		};
 		//
 		class EV_MESHOPTIMIZE_DLL CModelLODGenerator :  public EarthView::World::Core::CBaseObject
@@ -337,6 +386,8 @@ ev_private:
 				EarthView::World::Spatial::MeshStream& meshStream);
 			//临时修改
 			ev_void collectInfo();
+			ev_void collectInfoNew();
+			ev_void calTriDensityValues(CCustomNodeSerializer* nodeSerialzier, ev_map<EVString, CCustomTriDensityStat>& triDensityMap);//根据记录信息，计算三角面密度值
 			EarthView::World::Spatial::Math::CAxisAlignedBox  collectLocalData(const EVString& file,CCustomRecordInfo* recInfo,EVString& dstFolder,EVString& oriDstFolder,EVString& fileName,EVString& outBaseName,EarthView::World::Spatial::Math::CMatrix4 localTrans);
 			EarthView::World::Spatial::Math::CAxisAlignedBox  collectTotalDataset(ev_list<CCustomRecordInfo*>& recordInfo);
 			EarthView::World::Spatial::Math::CAxisAlignedBox  collectCurrentRecord(
@@ -354,6 +405,13 @@ ev_private:
 			ev_void  boxSizeStat(CCustomBoxSizeStat* stat,EarthView::World::Spatial::Math::CAxisAlignedBox box,ev_uint32 triNum);
 			ev_void  optimizeAddDiscardModel(CCustomRecordInfo* recInfo,EarthView::MeshOptimize::CMeshOptimizeParams params,ev_uint32& triNum);
 			ev_void  optimizeAddDiscardSubMesh(CCustomNodeSerializer* nodeSerialzier,EarthView::MeshOptimize::CMeshOptimizeParams params,ev_uint32& triNum,EVString dstFolder);
+			ev_void  calculateSubmeshReferenceCountByQuad(CCustomRecordInfo* recInfo,ev_list<CMeshQuadTree*>& childTrees, ev_map<CSubMeshCustom*, ev_uint32>& SubmeshReferenceCountMap);
+			ev_void  iterateCalculateSubmeshReferenceCountByQuad(CCustomRecordInfo* recInfo,CCustomNodeSerializer* nodeSerialzier,ev_list<CMeshQuadTree*>& childTrees,ev_list<CCustomNodeSerializer*>& nodeSerialzierList, ev_map<CSubMeshCustom*, ev_uint32>& SubmeshReferenceCountMap);
+			ev_void  calculateSubmeshReference(CCustomRecordInfo* recInfo,ev_list<CMeshQuadTree*>& childTrees,CAniInfo* aniInfo,ev_list<CCustomNodeSerializer*>& nodeSerialzierList,ev_set<CCustomNodeSerializer*>& disposeList,ev_bool& isAllSubMeshDiscard, ev_map<CSubMeshCustom*, ev_uint32>& SubmeshReferenceCountMap);
+
+			ev_void  saveSharedMesh(ev_int8 level, EVString dstBaseName, ev_uint32 meshID);
+			//ev_void  partitionSharedMesh();
+
 			ev_void  partitionModel(CCustomRecordInfo* recInfo,ev_list<CMeshQuadTree*>& childTrees);
 			ev_void  iteratePartitionModel(CCustomRecordInfo* recInfo,CCustomNodeSerializer* nodeSerialzier,ev_list<CMeshQuadTree*>& childTrees,ev_list<CCustomNodeSerializer*>& nodeSerialzierList);
 			ev_void  partitionSubEntity(CCustomRecordInfo* recInfo,ev_list<CMeshQuadTree*>& childTrees,CAniInfo* aniInfo,ev_list<CCustomNodeSerializer*>& nodeSerialzierList,ev_set<CCustomNodeSerializer*>& disposeList,ev_bool& isAllSubMeshDiscard );
@@ -380,6 +438,12 @@ ev_private:
 				EarthView::World::Spatial::Math::CMatrix4 localTransform,
 				ev_uint32& numNodes,
 				EarthView::World::Core::CStringArray& tileNames);
+
+			ev_void saveSharedMeshToFile(EVString& dstFolder, ev_uint32 meshID, EarthView::MeshOptimize::CMeshOptimizeParams params);
+
+			ev_void saveSharedMeshTreeToFile(EVString& dstFolder, ev_uint32 currentLevel, EarthView::MeshOptimize::CMeshOptimizeParams params);
+
+			ev_void saveSharedTextureToFile(ev_list<CMeshQuadTree*> children, EVString& dstFolder, EarthView::MeshOptimize::CMeshOptimizeParams params, ev_uint32 currentLevel);
 			//四叉树根节点
 			CMeshQuadTree* m_pRoot;
 			//
@@ -558,12 +622,35 @@ ev_private:
 			//目标文件夹
 			EVString mDstFolder;
 			//EntID集合
-			EarthView::World::Core::IntVector vec;
-			
+			EarthView::World::Core::IntVector vec;			
 
-
-			//
+			//孤立的Mesh树集合;
 			ev_map<ev_uint32,CMeshQuadTree*> mIsolatedTreeMap;
+
+			//共享Mesh
+			CMeshQuadTree* mSharedQuadTree;
+
+			EarthView::World::Graphic::CMeshPtr mSharedMeshTree[21];
+
+			//大块中引用次数
+			ev_map<CSubMeshCustom*, ev_uint32> m_submeshReferenceCountMap;
+
+			//引用的块
+			ev_map<CSubMeshCustom*, ev_set<CMeshQuadTree*> > m_submeshToMeshQuadMap;
+
+			//引用的共享第三级块(16)
+			ev_map<CSubMeshCustom*, ev_set<ev_uint16> > m_submeshQuadIndexSet;
+
+			//对应的共享submesh数据info
+			ev_map<CSubMeshCustom*, CSharedMeshKey> m_submeshToSharedDataInfo;
+
+
+
+			//ev_map<ev_uint32,ev_set<ev_uint16> > m_submeshIDToSharedQuadIndexMap;
+
+			CMeshOptimizeCompositor* mCurrentLvSharedTextureCompositor[21];
+
+			ev_vector<EarthView::World::Graphic::CSubMesh*> mSharedSubmeshVec;
 			//
 			set<EVString> mShareTexSet;
 			EarthView::World::Core::MemoryDataStreamVector mSharedTexVec;
@@ -577,6 +664,12 @@ ev_private:
 			ev_map<EVString,EarthView::World::Graphic::CCategory> mCategoryMap;
 			//
 			EarthView::World::Spatial::Math::CVector3 mCurrentLv0Center;
+
+			//当前级别是否需要简化;
+			ev_bool mNeedOptimizedCurrentLevel;
+
+			//当前操作级别;
+			ev_uint16 mCurrentProcessLevel;
 		};
 	}
 }

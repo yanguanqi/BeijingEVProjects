@@ -28,6 +28,9 @@ namespace EarthView
 		{
 			/*namespace ModelManager
 			{*/
+				/// <summary>
+				/// 模型树结构中的节点对象标签
+				/// </summary>
 				class EV_GRAPHIC_DLL CNodeTag:public EarthView::World::Core::CBaseObject
 				{
 				public:
@@ -44,6 +47,9 @@ ev_private:
 				private:
 				};
 
+				/// <summary>
+				/// 存储节点标签的容器
+				/// </summary>
 				class EV_GRAPHIC_DLL CNodeTagList : public EarthView::World::Core::CBaseObject
 				{
 ev_private:
@@ -172,6 +178,9 @@ ev_private:
 					ev_void clear();
 				};
 
+				/// <summary>
+				/// 动画帧的信息
+				/// </summary>
 				class EV_GRAPHIC_DLL CFrameTag:public EarthView::World::Core::CBaseObject
 				{
 				public:
@@ -186,6 +195,9 @@ ev_private:
 					CFrameTag(_in EarthView::World::Core::CNameValuePairList* plist);
 				};
 
+				/// <summary>
+				/// 存储动画帧信息的容器
+				/// </summary>
 				class EV_GRAPHIC_DLL CFrameTagList : public EarthView::World::Core::CBaseObject
 				{
 ev_private:
@@ -320,6 +332,9 @@ ev_private:
 					ev_void sort();
 				};
 				
+				/// <summary>
+				/// 动画信息基类，存储二进制动画信息
+				/// </summary>
 				class EV_GRAPHIC_DLL CAnimationBaseSerializer : public EarthView::World::Core::CAllocatedObject
 				{
 				ev_private:
@@ -477,6 +492,9 @@ ev_internal:
 
 				};
 
+				/// <summary>
+				/// 动画帧序列化功能类
+				/// </summary>
 				class EV_GRAPHIC_DLL CFrameTagSerializer:public EarthView::World::Graphic::CAnimationBaseSerializer
 				{
 ev_private:
@@ -498,6 +516,9 @@ ev_private:
 					EarthView::World::Graphic::CFrameTag mFrameTag;
 				};
 
+				/// <summary>
+				/// 存储动画帧序列化对象的容器
+				/// </summary>
 				class EV_GRAPHIC_DLL CFrameTagSerializerList : public EarthView::World::Core::CBaseObject
 				{
 ev_private:
@@ -627,6 +648,9 @@ ev_private:
 					ev_void clear();
 				};
 
+				/// <summary>
+				/// 节点标签序列化功能类
+				/// </summary>
 				class EV_GRAPHIC_DLL CNodeTagSerializer:public EarthView::World::Graphic::CAnimationBaseSerializer
 				{
 ev_private:
@@ -648,6 +672,9 @@ ev_private:
 					EarthView::World::Graphic::CNodeTag mNodeTag;
 				};
 
+				/// <summary>
+				/// 存储节点标签序列化对象的容器
+				/// </summary>
 				class EV_GRAPHIC_DLL CNodeTagSerializerList : public EarthView::World::Core::CBaseObject
 				{
 ev_private:
@@ -776,6 +803,9 @@ ev_private:
 					ev_void clear();
 				};
 
+				/// <summary>
+				/// 层，用于存储模型树中的节点集合
+				/// </summary>
 				class EV_GRAPHIC_DLL CCategory:public EarthView::World::Core::CBaseObject
 				{
 				public:
@@ -793,6 +823,9 @@ ev_private:
 				private:
 				};
 
+				/// <summary>
+				/// 存储层的容器
+				/// </summary>
 				class EV_GRAPHIC_DLL CCategoryList : public EarthView::World::Core::CBaseObject
 				{
 ev_private:
@@ -927,6 +960,9 @@ ev_private:
 					ev_void sort();*/
 				};
 
+				/// <summary>
+				/// 层序列化功能类
+				/// </summary>
 				class EV_GRAPHIC_DLL CCategorySerializer:public EarthView::World::Graphic::CAnimationBaseSerializer
 				{
 ev_private:
@@ -950,6 +986,9 @@ ev_private:
 					EarthView::World::Graphic::CNodeTagList getNodeTagList(); 
 				};
 
+				/// <summary>
+				/// 存储层序列化对象的容器
+				/// </summary>
 				class EV_GRAPHIC_DLL CCategorySerializerList : public EarthView::World::Core::CBaseObject
 				{
 ev_private:
@@ -1078,6 +1117,9 @@ ev_private:
 					ev_void clear();
 				};
 
+				/// <summary>
+				/// 平移序列化功能类
+				/// </summary>
 				class EV_GRAPHIC_DLL CTranslationSerializer:public EarthView::World::Graphic::CAnimationBaseSerializer
 				{
 ev_private:
@@ -1099,6 +1141,9 @@ ev_private:
 					EarthView::World::Spatial::Math::CVector3 mpostion;
 				};
 
+				/// <summary>
+				/// 旋转序列化功能类
+				/// </summary>
 				class EV_GRAPHIC_DLL CRotationSerializer:public EarthView::World::Graphic::CAnimationBaseSerializer
 				{
 ev_private:
@@ -1123,6 +1168,9 @@ ev_private:
 					EarthView::World::Spatial::Math::CQuaternion mquaterniion;
 				};
 
+				/// <summary>
+				/// 缩放序列化功能类
+				/// </summary>
 				class EV_GRAPHIC_DLL CScaleSerializer:public EarthView::World::Graphic::CAnimationBaseSerializer
 				{
 ev_private:
@@ -1147,6 +1195,9 @@ ev_private:
 					EarthView::World::Spatial::Math::CVector3 msacle;
 				};
 
+				/// <summary>
+				/// 关键帧序列化功能类
+				/// </summary>
 				class EV_GRAPHIC_DLL CKeyframeSerializer:public EarthView::World::Graphic::CAnimationBaseSerializer
 				{
 ev_private:
@@ -1183,6 +1234,9 @@ ev_private:
 
 				};
 
+				/// <summary>
+				/// 存储关键帧序列化对象的容器
+				/// </summary>
 				class EV_GRAPHIC_DLL CKeyframeSerializerList : public EarthView::World::Core::CBaseObject
 				{
 ev_private:
@@ -1311,6 +1365,9 @@ ev_private:
 					ev_void clear();
 				};
 
+				/// <summary>
+				/// 动画序列化功能类
+				/// </summary>
 				class EV_GRAPHIC_DLL CAnimationSerializer:public EarthView::World::Graphic::CAnimationBaseSerializer
 				{
 ev_private:
@@ -1347,6 +1404,9 @@ ev_private:
 
 				};
 
+				/// <summary>
+				/// 存储动画序列化对象的容器
+				/// </summary>
 				class EV_GRAPHIC_DLL CAnimationSerializerList : public EarthView::World::Core::CBaseObject
 				{
 ev_private:
@@ -1475,6 +1535,9 @@ ev_private:
 					ev_void clear();
 				};
 
+				/// <summary>
+				/// 矩阵序列化功能类
+				/// </summary>
 				class EV_GRAPHIC_DLL CMatrixSerializer:public EarthView::World::Graphic::CAnimationBaseSerializer
 				{
 ev_private:
@@ -1497,6 +1560,9 @@ ev_private:
 
 				};
 
+				/// <summary>
+				/// 颜色序列化功能类
+				/// </summary>
 				class EV_GRAPHIC_DLL CColorSerializer:public EarthView::World::Graphic::CAnimationBaseSerializer
 				{
 ev_private:
@@ -1519,6 +1585,9 @@ ev_private:
 					EarthView::World::Graphic::CColourValue mcolor;
 				};
 
+				/// <summary>
+				/// Submesh序列化功能类
+				/// </summary>
 				class EV_GRAPHIC_DLL CSubMeshSerializer:public EarthView::World::Graphic::CAnimationBaseSerializer
 				{
 ev_private:
@@ -1547,6 +1616,9 @@ ev_private:
 
 				};
 
+				/// <summary>
+				/// 存储Submesh序列化对象的容器
+				/// </summary>
 				class EV_GRAPHIC_DLL CSubMeshSerializerList : public EarthView::World::Core::CBaseObject
 				{
 ev_private:
@@ -1675,6 +1747,9 @@ ev_private:
 					ev_void clear();
 				};
 
+				/// <summary>
+				/// 节点序列化功能类
+				/// </summary>
 				class EV_GRAPHIC_DLL CNodeSerializer:public EarthView::World::Graphic::CAnimationBaseSerializer
 				{
 ev_private:
@@ -1861,6 +1936,9 @@ ev_private:
 					EarthView::World::Spatial::Math::CAxisAlignedBox mBoundingBox;
 				};
 
+				/// <summary>
+				/// 矩阵颜色类
+				/// </summary>
 				class EV_GRAPHIC_DLL CMatrixColor:public EarthView::World::Core::CBaseObject
 				{
 				public:
@@ -1876,6 +1954,9 @@ ev_private:
 				private:
 				};
 
+				/// <summary>
+				/// 存储矩阵颜色对象的容器
+				/// </summary>
 				class EV_GRAPHIC_DLL CMatrixColorList : public EarthView::World::Core::CBaseObject
 				{
 ev_private:
@@ -2004,6 +2085,9 @@ ev_private:
 					ev_void clear();
 				};
 
+				/// <summary>
+				/// 矩阵颜色序列化功能类
+				/// </summary>
 				class EV_GRAPHIC_DLL CMatrixColorSerializer:public EarthView::World::Graphic::CAnimationBaseSerializer
 				{
 ev_private:
@@ -2028,6 +2112,9 @@ ev_private:
 					EarthView::World::Graphic::CMatrixColor mMatrixColor;
 				};
 
+				/// <summary>
+				/// 存储矩阵颜色序列化对象的容器
+				/// </summary>
 				class EV_GRAPHIC_DLL CMatrixColorSerializerList : public EarthView::World::Core::CBaseObject
 				{
 ev_private:
@@ -2156,6 +2243,9 @@ ev_private:
 					ev_void clear();
 				};
 
+				/// <summary>
+				/// Submesh复用关系类，存储submesh的复用信息
+				/// </summary>
 				class EV_GRAPHIC_DLL CSubMeshMatrixColor:public EarthView::World::Core::CBaseObject
 				{
 				public:
@@ -2174,6 +2264,9 @@ ev_private:
 				private:
 				};
 
+				/// <summary>
+				/// 存储Submesh复用关系对象的容器
+				/// </summary>
 				class EV_GRAPHIC_DLL CSubMeshMatrixColorList : public EarthView::World::Core::CBaseObject
 				{
 ev_private:
@@ -2302,6 +2395,9 @@ ev_private:
 					ev_void clear();
 				};
 
+				/// <summary>
+				/// Submesh复用关系对象序列化功能类
+				/// </summary>
 				class EV_GRAPHIC_DLL CSubMeshMatrixColorSeriailzer:public EarthView::World::Graphic::CAnimationBaseSerializer
 				{
 ev_private:
@@ -2326,6 +2422,9 @@ ev_private:
 					CSubMeshMatrixColor mSubMeshMatrixColor;
 				};
 
+				/// <summary>
+				/// 存储Submesh复用关系序列化对象的容器
+				/// </summary>
 				class EV_GRAPHIC_DLL CSubMeshMatrixColorSeriailzerList : public EarthView::World::Core::CBaseObject
 				{
 ev_private:
@@ -2454,6 +2553,9 @@ ev_private:
 					ev_void clear();
 				};
 
+				/// <summary>
+				/// 序列化为Ani文件的功能类
+				/// </summary>
 				class EV_GRAPHIC_DLL CAniFileSerializer:public EarthView::World::Graphic::CAnimationBaseSerializer
 				{
 ev_private:

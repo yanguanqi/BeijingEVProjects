@@ -9,6 +9,7 @@ public:
     CPageSize();
     CPageSize(const CPageSize &sz);
     CPageSize(ev_real64 w, ev_real64 h);
+	CPageSize(ev_real64 w, ev_real64 h, int dmPaperSize);
 ev_private:
 	CPageSize( EarthView::World::Core::CNameValuePairList* pList );
 public:
@@ -19,6 +20,7 @@ public:
     ev_real64 height() const;
     ev_void setWidth(ev_real64 w);
     ev_void setHeight(ev_real64 h);
+	int paperSize()const {return dmPaperSize;}
  //   ev_void transpose();
 
     ev_void scale(ev_real64 w, ev_real64 h/*, Qt::AspectRatioMode mode*/);
@@ -43,6 +45,7 @@ public:
 private:
     ev_real64 wd;
     ev_real64 ht;
+	int dmPaperSize;
 };
 ev_bool operator==(const CPageSize &s1, const CPageSize &s2)
 { return fuzzyCompare(s1.wd, s2.wd) && fuzzyCompare(s1.ht, s2.ht); }

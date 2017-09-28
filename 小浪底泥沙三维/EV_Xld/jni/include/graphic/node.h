@@ -8,6 +8,9 @@
 #include "mesh.h"
 #include "core/ev_string.h"
 
+
+//#define EV_NODE_NOT_SUPPORTED_MULTITHREAD
+
 namespace EarthView
 {
 	namespace World
@@ -504,6 +507,13 @@ ev_private:
                 CSceneManager or the nodes parent.
                 */
                 mutable EarthView::World::Spatial::Math::CVector3 mDerivedScale;
+
+				static  EarthView::World::Core::CRecursiveMutex msQueuedUpdatesLocker;
+				static  EarthView::World::Core::CRecursiveMutex mThreadLocker;
+
+				static  ev_bool mbSupportedMultiThread;
+				ev_bool mbLockClassForThread;				
+
             ev_internal:
                 /** Triggers the node to update it's combined transforms.
                 @par
@@ -866,6 +876,34 @@ ev_private:
                 /// <returns></returns>
                 virtual EarthView::World::Spatial::Math::CMatrix3 getLocalAxes() const;
 
+				/// <summary>
+				/// 获取更新队列状态
+				/// </summary>                
+				/// <returns></returns>
+				virtual ev_bool getQueuedForUpdate() const;
+
+				/// <summary>
+				/// 设置更新队列状态
+				/// </summary>                
+				/// <returns></returns>
+				virtual ev_void setQueuedForUpdate(ev_bool bFlag);
+
+				ev_void setThreadLockFlag(ev_bool bNeedLock);
+
+				static EarthView::World::Core::CRecursiveMutex* getThreadLock();
+
+				/// <summary>
+				/// 针对mChildren访问的异步锁-加锁
+				/// </summary>                
+				/// <returns></returns>
+				virtual ev_void syncVisitChildrenLock();
+
+				/// <summary>
+				/// 针对mChildren访问的异步锁-解锁
+				/// </summary>                
+				/// <returns></returns>
+				virtual ev_void syncVisitChildrenUnLock();
+
                 /// <summary>
                 /// 创建子节点
                 /// 创建一个新的节点作为当前节点的子节点
@@ -1047,8 +1085,6 @@ ev_private:
 				/// <param name=""></param>
 				/// <returns></returns>
 				virtual ev_uint32 getNumListener(ev_uint32 index) ;
-
-
 
                 /// <summary>
                 /// 设置初始状态

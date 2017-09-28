@@ -45,6 +45,7 @@ namespace EarthView{
 					EDTEVT_UPDATEOCTREE,
 					EDTEVT_REFRESHOCTREE,
 					EDTEVT_GETCOMMITID,
+					EDTEVT_SWITCHDATASET,
 				};
 
 				enum EntityDatasetOperType

@@ -284,8 +284,8 @@ typedef float                  ev_real32; ///四字节的浮点数，取值范�
 typedef double                 ev_real64; ///八字节的浮点数，取值范围是2.2250738585072014 E–308 ～ 1.7976931348623158 E + 308，最大精度为16位
 typedef            size_t      ev_size_t; ///sizeof的返回值类型，用于与系统兼容的函数参数类型定义
 #ifndef EV_OS_IOS
-#define true   (1)
-#define false  (0)
+//#define true   (1)
+//#define false  (0)
 ///定义BOOL类型，注意这里的BOOL类型与Windows下定义的BOOL类型不一致，Windows下的BOOL类型其实为int32类型，而我们这里定义的类型为原始bool类型
 ///#ifndef BOOL
 ///#define BOOL ev_bool

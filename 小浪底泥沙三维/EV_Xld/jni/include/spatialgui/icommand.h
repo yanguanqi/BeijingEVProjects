@@ -160,6 +160,7 @@ namespace EarthView{
 					CT_Volume3D,
 					CT_Visibility3D,
 					CT_Slope3D,
+					CT_Skyline3D,
 
 					//三维测量
 					CT_MeasureVertical3D,
@@ -178,6 +179,9 @@ namespace EarthView{
 					CT_SelectionBySql3D,
 					CT_SelectionClear3D,
 					CT_Information3D,
+
+					//街景
+					CT_SelectionStreetView,
 					
 
 					//路径

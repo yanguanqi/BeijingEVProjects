@@ -6,14 +6,19 @@
 #include "geom_define.h"
 #include "envelope.h"
 
-EV_DECLARE_GEOMETRY_CLASS_PRIVATE(CPolygon);
 
-EV_DECLARE_GEOMETRY_CLASS_UTILITY(CGeometryHelper);
 
 namespace EarthView{
 	namespace World{
 		namespace Spatial{
 			namespace Geometry{
+				namespace Private{
+					class CPolygonPrivate;
+				}
+				namespace Utility{
+					class CGeometryHelper;
+
+				}
 				enum EVPolygonType
 				{
 					PT_COMPOUND                    = 0,
@@ -315,7 +320,10 @@ ev_private:
 					/// <param name="point">待删除的点</param>
 					/// <returns></returns>
 					virtual ev_bool deletePoint(_in const EarthView::World::Spatial::Geometry::IGeometry* point);
-
+					/// <summary> 
+					/// 判断几何体是否为矩形面
+					/// </summary>
+					virtual ev_bool isRectangle() const ;
 				protected:
 					ev_void clone2(EarthView::World::Spatial::Geometry::CPolygon* polygon)const;
 					virtual ev_void recalculateEnvelope();

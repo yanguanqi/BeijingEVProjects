@@ -8,6 +8,7 @@
 #include "spatialinterface/ispatialreference.h"
 
 #include "spatialinterface/config.h"
+#include "core/variant.h"
 
 
 namespace EarthView{
@@ -48,6 +49,12 @@ namespace EarthView{
 					/// </summary>
 					/// <returns>坐标系统对象</returns>
 					virtual EarthView::World::Spatial::Geometry::ISpatialReference* getSpatialReference() const;
+
+					/// <summary>
+					/// 用户自定义数据
+					/// </summary>
+					/// <returns></returns>
+					virtual EarthView::World::Core::CVariant userData();
 					//--
 ev_private:
 					/// <summary>

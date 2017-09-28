@@ -4,8 +4,6 @@
 #include "graphic/texturemovabletext.h"
 #include "geometry3d/geometry3d_config.h"
 
-
-
 namespace EarthView
 {
 	namespace World
@@ -49,6 +47,11 @@ namespace EarthView
 					mIsHoldingDirectionForCamera = bHold;
 				}
 
+				/// <summary>
+				/// instance渲染方式构造函数
+				/// </summary>
+				/// <param name=""></param>
+				CGlobeTextMovable(const EarthView::World::Core::CUnicodeString& str, EarthView::World::Graphic::CTextureTextStyle* ref_style, EarthView::World::Graphic::CSceneManager *ref_mgr);
 				/// <summary>
 				/// 构造函数
 				/// </summary>

@@ -78,6 +78,19 @@ namespace EarthView
                 /***** See EarthView::World::Graphic::COverlayElementFactory ****/
                 virtual EVString getTypeName() const;
             };
+			/***** Factory for creating CTextAreaOverlayElementInstanced instances. ****/
+			class EV_GRAPHIC_DLL CTextAreaOverlayElementInstancedFactory: public EarthView::World::Graphic::COverlayElementFactory
+			{
+ev_private:
+				CTextAreaOverlayElementInstancedFactory(EarthView::World::Core::CNameValuePairList *pList) {}
+			public:
+				/***** See EarthView::World::Graphic::COverlayElementFactory ****/
+				CTextAreaOverlayElementInstancedFactory() {}
+
+				EarthView::World::Graphic::COverlayElement *createOverlayElement(const EVString &instanceName);
+				/***** See EarthView::World::Graphic::COverlayElementFactory ****/
+				virtual EVString getTypeName() const;
+			};
 			/***** CCharOverlayElement*****/
 			class EV_GRAPHIC_DLL CCharOverlayElementFactory: public EarthView::World::Graphic::COverlayElementFactory
 			{

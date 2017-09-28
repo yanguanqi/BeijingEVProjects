@@ -7,6 +7,7 @@
 #include "graphic/resourcebackgroundqueue.h"
 #include "graphic/framelistener.h"
 #include "geometry3d/visibleobject.h"
+#include "core/mutex.h"
 
 namespace EarthView{
 	namespace World{
@@ -315,6 +316,7 @@ ev_private:
 				typedef vector<CBackgroundWorkQueue::BackgroundRequest*> RequestList;
 				typedef map<CVisibleObject*, RequestList> ObjectRequestMap;
 				ObjectRequestMap mObjectRequestMap;
+				EarthView::World::Core::CRecursiveMutex mMtx;
 			public:
 				virtual ~CBackgroundWorkManager();
 

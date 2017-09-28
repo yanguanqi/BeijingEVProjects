@@ -126,8 +126,6 @@ namespace EarthView{
 					/// <param name="theme">Theme对象</param>
 					/// <returns></returns>
 					virtual ev_bool equals(const EarthView::World::Spatial::Theme::ITheme* theme);//20130220,xbr
-					bool getGradeDrawEnable();
-					void setGradeDrawEnable(ev_bool bFlag);
 				ev_internal:
 					/// <summary>
 					/// 从数据流恢复Color属性
@@ -145,7 +143,6 @@ namespace EarthView{
 					ev_bool m_bUseDefaultSymbol;
 					EarthView::World::Spatial::Display::ISymbol *m_pDefaultSymbol;
 					EarthView::World::Spatial::Display::ISymbol *m_pSymbol;
-					ev_bool m_bFlag;
 				};
 			}
 		}

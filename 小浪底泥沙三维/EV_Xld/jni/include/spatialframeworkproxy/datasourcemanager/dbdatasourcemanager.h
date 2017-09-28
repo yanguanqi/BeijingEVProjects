@@ -308,7 +308,20 @@ namespace EarthView{
 						EVString& port, 
 						EVString& username, 
 						EVString& passworld, 
-						EVString& sourcename);					
+						EVString& sourcename);	
+
+					/// <summary>
+					/// 解析postgis数据库连接参数
+					/// </summary>
+					/// <param name=""></param>
+					/// <returns>成功返回true失败返回false</returns>					
+					ev_bool parseConnectParameter_postgis(const EVString& connectParameter, 
+						EVString& ip, 
+						EVString& port, 
+						EVString& username, 
+						EVString& passworld, 
+						EVString& sourcename);
+					//---add end
 
 					/// <summary>
 					/// 添加数据源对象

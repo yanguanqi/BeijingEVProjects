@@ -77,6 +77,7 @@ namespace EarthView
 					}
 					EVString mName;
 					EarthView::World::Graphic::CSceneNode* mSceneNode;
+					EarthView::World::Spatial::Math::CMatrix4 mLocalMatrix;
 					EVString mSceneNodeName;
 					ev_vector<unsigned char*> mMeshVertexBufferVector;
 					ev_vector<unsigned char*> mMeshIndexBufferVector;
@@ -85,6 +86,7 @@ namespace EarthView
 					btTriangleIndexVertexArray* mMeshTriangleIndexVertexArray;
 					ev_bool mAddToCollisionWorld;
 					ev_uint32 mLastFrameNumber;
+
 				};
 
 				class EV_GA_DLL CCollisionDetectionCameraManipulator:public EarthView::World::Spatial3D::Controls::CCameraManipulator
@@ -204,7 +206,7 @@ ev_private:
 					btGhostPairCallback* mCameraGhostPairCallback;
 					btKinematicCharacterController* mCameraCharacterController;
 					EarthView::World::Spatial::Math::CVector3 mCameraVelocity;
-					ev_real32 mSpeed;
+					ev_real64 mLastFrameTime;
 					EarthView::World::Spatial::Math::CMatrix4 mLocalToWorldMatrix;
 
 					ev_vector<btCollisionShape*> mCollisionShapes;

@@ -17,11 +17,12 @@
 #include <core/platform.h>
 
 #ifdef EV_OS_ANDROID
-#define  CREATE_RESOURCE_IN_MAIN_THREAD 1
+#define  CREATE_RESOURCE_IN_MAIN_THREAD 0
 #else
 #define  CREATE_RESOURCE_IN_MAIN_THREAD 0
 #endif
-
+#if EV_PLATFORM != EV_PLATFORM_ANDROID
 #define  USE_FFT_OCEAN
+#endif
 
 #endif

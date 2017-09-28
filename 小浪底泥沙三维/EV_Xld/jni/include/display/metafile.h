@@ -21,6 +21,7 @@ namespace EarthView{
 				/// <param name="height">位图高度</param>
 				/// <returns></returns>
 				CMetaFile(_in EarthView::World::Display::IPaintDevice* device, _in ev_int32 width, _in ev_int32 height );
+				CMetaFile(_in const EVString &pszFileName, _in EarthView::World::Display::IPaintDevice* device, _in ev_int32 width, _in ev_int32 height );
 				/// <summary>
 				/// 构造函数
 				/// </summary>
@@ -32,6 +33,12 @@ namespace EarthView{
 				/// 默认析构函数      
 				/// </summary>
 				~CMetaFile();
+				/// <summary>
+				/// 获取DC
+				/// </summary>
+				/// <param name=""></param>
+				/// <returns>返回类型</returns>
+				virtual EarthView::World::Display::EVPaintDeviceType getType();
 				/// <summary>
 				/// 获取DC
 				/// </summary>

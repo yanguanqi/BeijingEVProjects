@@ -35,7 +35,6 @@ protected:
     bool reset(const ev_wstring &query);
     bool prepare(const ev_wstring &query);
     bool exec();
-    int size();
     ev_int32 numRowsAffected() const;
     CVariant lastInsertId() const;
     CSqlRecord record() const;

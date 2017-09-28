@@ -73,9 +73,15 @@ namespace EarthView{
 					ev_void setRotation(ev_real64 rotation);
 					EarthView::World::Spatial::Display::ISpatialDisplay* mpDisplay;
 					EarthView::World::Spatial::Display::ISpatialTransformer* mpTransformer;
-					EarthView::World::Spatial::Display::CSymbolRenderer* mpSymbolRenderer;
 					EarthView::World::Spatial::Display::ISymbol* mpSymbol;
 					ev_real64 m_fRotation;
+				private:					
+					/// <summary>
+					/// 绘制注记背景(主要针对线注记)
+					/// </summary>
+					/// <param name="element">注记元素</param>
+					/// <returns></returns>
+					ev_bool drawLabelBackground(_in EarthView::World::Spatial::Display::CLabelElement *element);
 				ev_private:
 					CLabelRenderer( EarthView::World::Core::CNameValuePairList *pList );
 				protected:

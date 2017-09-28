@@ -4,7 +4,7 @@
 #include "obliquemodelmanager.h"
 #include "qslimrender.h"
 #include "obqrenderfactory.h"
-#include "spatial3dengine/evlaslayer.h"
+#include "spatial3dengine/evlasutility.h"
 
 namespace EarthView
 {
@@ -27,13 +27,24 @@ namespace EarthView
 					/// 获取多线程下的材质
 					/// </summary>
 					/// <returns></returns>
-					//virtual OBQMaterialMap& getCommonMaterialPtr(ev_uint16 threadID);					
+					//virtual OBQMaterialMap& getCommonMaterialPtr(ev_uint16 threadID);
 
 				protected:
+					enum ShaderMode
+					{						
+						SM_CG   = 0,// Cg
+						SM_GLSL = 2,// GLSL
+						SM_GLSLES = 3//GLSLES
+					};
 					EVString createVP_CG_LAS(EarthView::World::Spatial3D::Atlas::LASCOLORTYPE type);
 					EVString createFP_CG_LAS(EarthView::World::Spatial3D::Atlas::LASCOLORTYPE type,EarthView::World::Spatial::Display::IColor* generalColor);
+					EVString createVP_GLSL_LAS(EarthView::World::Spatial3D::Atlas::LASCOLORTYPE type);
+					EVString createFP_GLSL_LAS(EarthView::World::Spatial3D::Atlas::LASCOLORTYPE type,EarthView::World::Spatial::Display::IColor* generalColor);
+					EVString createVP_GLSLES_LAS(EarthView::World::Spatial3D::Atlas::LASCOLORTYPE type);
+					EVString createFP_GLSLES_LAS(EarthView::World::Spatial3D::Atlas::LASCOLORTYPE type,EarthView::World::Spatial::Display::IColor* generalColor);
 					ev_bool createGpuProgram(const EVString &name,
 						const EVString& groupname,
+						const ShaderMode& sm,
 						const EarthView::World::Graphic::GpuProgramType& GpuPType, 
 						const EVString& EntryPoint, 
 						const EVString& Data);

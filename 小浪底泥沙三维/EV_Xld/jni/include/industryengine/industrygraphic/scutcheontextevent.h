@@ -27,6 +27,13 @@ namespace EarthView
 					STET_KeyUp,
 					STET_Selected
 				};
+				enum BottonType
+				{
+					BUTTON_UnKnown = 0,
+					LEFT_MOUSE_BUTTON=1,
+					MIDDLE_MOUSE_BUTTON=2,
+					RIGHT_MOUSE_BUTTON=4
+				};
 ev_private:
 				/// <summary>
 				/// 构造函数
@@ -46,11 +53,21 @@ ev_private:
 				/// </summary>
 				~CScutcheonTextEvent();
 
+				void setMouseBottonType(BottonType type)
+				{
+					mBottonType = type;
+				}
+				BottonType getMouseBottonType()
+				{
+					return mBottonType;
+				}
+
 				EarthView::IndustryEngine::IndustryGraphic::CScutcheonText* getSelectedScutcheon();
 
 				void setSelectedScutcheon(EarthView::IndustryEngine::IndustryGraphic::CScutcheonText* scutcheon);
 			protected:
 				EarthView::IndustryEngine::IndustryGraphic::CScutcheonText* mpSelectedScutcheon;
+				BottonType mBottonType;
 			};
 		}
 	}

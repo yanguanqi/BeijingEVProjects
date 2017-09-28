@@ -75,6 +75,7 @@ namespace EarthView
 				public:
 					~CS57Info();
 					static CS57Info* getStaticInstance();
+					static void destroyStaticInstance();
 					const CChartAttributeInfo* getChartAttributeInfo(ev_int32 code);
 					const CChartAttributeInfo* getChartAttributeInfo(const ev_char* name);
 					const CChartClassInfo* getChartClassInfo(ev_int32 code);
@@ -96,6 +97,12 @@ namespace EarthView
 					ev_map<ev_int32,CChartClassInfo*> mClassInfoByCode;
 					ev_map<EVString,CChartClassInfo*> mClassInfoByName;
 				};
+
+				/// <summary>
+				/// 释放海图模块所占用的全局资源，一般不需要调用，程序关闭后会自动释放
+				/// 确保在无打开海图的情况下调用此方法
+				/// </summary>
+				EVCHART_DLL ev_void Chart_ReleaseGlobalResource();
 			}
 		}
 	}

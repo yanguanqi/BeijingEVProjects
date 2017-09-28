@@ -105,7 +105,6 @@ private:
 	ev_void clearTracking();
 	ev_void updateTracking(EarthView::World::Spatial::Geometry::EVGeometryType geomType);
 	ev_void copyData(EarthView::World::Spatial::GeoDataset::IFeature *pScrFeature, EarthView::World::Spatial::GeoDataset::IFeature *pDestFeature);
-	ev_bool isCopyData();
 private:
 	CMapControl *m_pMapControl;
 	CTrackingGeomsItem *m_pGeomsItem;

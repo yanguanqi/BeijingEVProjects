@@ -52,11 +52,11 @@ namespace EarthView
 				ev_private:
 					CAnnoIterator(EarthView::World::Core::CNameValuePairList *pList);
 				protected:
-					CAnnoIterator(EVString key,CAnnoFeatureClass* fc);
+					CAnnoIterator(void* queryData,CAnnoFeatureClass* fc);
 				private:
 					CAnnoIterator(CAnnoIterator & iterator);
 
-					EVString						m_QueryKey;
+					void*						m_pQueryData;
 					EarthView::World::Spatial2D::GeoDataset::CAnnoFeatureClass			*m_pFC;
 					EarthView::World::Spatial::GeoDataset::CFields						*m_pFieldSet;
 					EarthView::World::Spatial::Geometry::IGeometry					*m_pGeometry;

@@ -1,6 +1,6 @@
 ﻿#ifndef EARTHVIEW_WORLD_SPATIAL_CACHE_ACCESSOR_MANAGER_H
 #define EARTHVIEW_WORLD_SPATIAL_CACHE_ACCESSOR_MANAGER_H
-#include "core/mutex.h"
+#include "core/readwritelock.h"
 #include "cachemanager/cachemanagerglobal.h"
 
 namespace EarthView{
@@ -99,7 +99,7 @@ namespace EarthView{
 
 			private:
 				ev_map<EVString, EarthView::World::Spatial::CacheAccessor*> mAccessors;
-				EarthView::World::Core::CRecursiveMutex mMtx;
+				EarthView::World::Core::CReadWriteLock mMtx;
 			};
 		}}}
 #endif

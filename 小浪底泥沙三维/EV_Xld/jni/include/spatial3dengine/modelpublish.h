@@ -202,7 +202,7 @@ ev_private:
 				jump_over_clashmodel,   //跳过冲突数据
 			};
 			class ModelIdAndNameMap;
-			class EV_Spatial3DEngine_DLL CModelPublishTool
+			class EV_Spatial3DEngine_DLL CModelPublishTool:public EarthView::World::Core::CAllocatedObject
 			{
 ev_private:
 				CModelPublishTool(_in EarthView::World::Core::CNameValuePairList *pList){};
@@ -318,7 +318,15 @@ ev_private:
 				/// <returns>获取成功返回true</returns>
 				ev_bool getDesAttrTableNameAndFieldsByNodeCode(const EVString& nodecode, EVString& attrtablename, EarthView::World::Spatial::GeoDataset::CFields*& fields);
 
-				
+				// <summary>
+				// 把X文件转换为mesh文件保存到本地
+				// </summary>
+				// <param name="xFile">x文件</param>
+				// <param name="exportPath">要保存到本地mesh的文件目录</param>
+				// <param name="bIsLeftHand">xFile为左手系还是右手系</param>
+				// <returns></returns>
+				ev_bool EVConvertXToMesh(const EVString& xFile, EVString& exportPath, const ev_bool bIsLeftHand, const ev_bool bIsExportNormal,  const ev_bool bIsDoubleLight);
+
 			protected:
 				ev_bool mbCanPublish;
 				ev_bool mbIsSelective;

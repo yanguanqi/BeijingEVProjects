@@ -28,66 +28,6 @@ namespace EarthView{
 	namespace World{
 		namespace Spatial{
 			namespace Display{
-				class EV_SPATIALDISPLAY_DLL CLabelEnvironment
-					:public EarthView::World::Core::CAllocatedObject
-				{
-				public:
-
-					/// <summary>
-					/// 默认构造函数
-					/// </summary>
-					/// <param name=" "></param>
-					/// <returns> </returns>
-					CLabelEnvironment();
-
-					/// <summary>
-					/// 默认析构函数
-					/// </summary>
-					/// <param name=" "></param>
-					/// <returns> </returns>
-					~CLabelEnvironment();
-
-				public:
-
-					/// <summary>
-					/// 判断是否有效
-					/// </summary>
-					/// <param name=" "></param>
-					/// <returns>若有效，返回ture,无效，返回false</returns>
-					ev_bool isActive() const;
-
-					/// <summary>
-					/// 设置是否有效
-					/// </summary>
-					/// <param name="active">设置是否有效的值</param>
-					/// <returns> </returns>
-					ev_void setActive( _in ev_bool active );
-
-					/// <summary>
-					/// 获取像素的格子
-					/// </summary>
-					/// <param name=""></param>
-					/// <returns> </returns>
-					ev_void * getPixelGrid() const;
-
-				ev_private:
-					CLabelEnvironment( EarthView::World::Core::CNameValuePairList *pList );
-				private:
-					C_DISABLE_COPY( CLabelEnvironment )
-
-					ev_void reset();
-
-					ev_uint32 m_nWidth;
-					ev_uint32 m_nHeight;
-					ev_uint32 m_nPrivateWidth;
-					ev_uint32 m_nPrivateHeight;
-					mutable ev_bool **m_ppPixelGrid;
-					ev_bool m_bActive;
-					const EarthView::World::Display::IPaintDevice *m_pDevice;
-
-					friend class CSpatialDisplay;
-				};
-
 				class EV_SPATIALDISPLAY_DLL CSpatialDisplay : public EarthView::World::Spatial::Display::ISpatialDisplay
 				{
 				public:
@@ -196,12 +136,6 @@ namespace EarthView{
 					/// <returns>选择的设备 </returns> 
 					virtual EarthView::World::Display::IDisplayOptions* getDisplayOptions() const;
 					/// <summary>
-					///  获取标注环境
-					/// </summary>
-					/// <param name="trans"></param>
-					/// <returns> </returns> 
-					virtual EarthView::World::Spatial::Display::CLabelEnvironment * getLabelEnvironment() const;
-					/// <summary>
 					///  获取标注引擎
 					/// </summary>
 					virtual EarthView::World::Spatial::Display::ILabelEngine * getLabelEngine() const;
@@ -209,16 +143,18 @@ namespace EarthView{
 					///  获取标注引擎
 					/// </summary>
 					virtual ev_void setLabelEngine(EarthView::World::Spatial::Display::ILabelEngine * ref_engine);
-
+				
+					virtual ev_void setIntersectionFlag(ev_bool b);
+					virtual ev_bool getIntersectionFlag();
 				protected:
 					EarthView::World::Display::IPaintDevice *m_pDevice;
 					const EarthView::World::Spatial::Geometry::ISpatialReference *m_pSpatialReference;
 					ev_bool mbCancelled;
 					EarthView::World::Spatial::Display::ILabelEngine *m_pLabelEngine;
-					EarthView::World::Spatial::Display::CLabelEnvironment *m_pLabelEnvironment;
 					EarthView::World::Spatial::Display::ISpatialTransformer *m_pTransformer;
 					EarthView::World::Display::IDisplayOptions* mpOptions;
 					ev_int32 mdDisplayResolution;
+					ev_bool mbMakeIntersection;
 				ev_private:
 					CSpatialDisplay( EarthView::World::Core::CNameValuePairList *pList );
 				protected:

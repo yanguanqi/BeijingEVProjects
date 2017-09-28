@@ -15,6 +15,7 @@ class CNetworkDataset;
 class CNANode
 {
 public:
+	CNANode():m_nID(-1) {}
     explicit CNANode(EVID id):m_nID(id) {}
 
 	ev_void touchEdge(EVID eid) 
@@ -52,25 +53,31 @@ public:
 	{
 		return &m_edges;
 	}
+	ev_vector<EVID>& getedges()
+	{
+		return m_edges;
+	}
 private:
-    EVID				m_nID;
-    ev_vector<EVID>		m_edges;
+    EVID				m_nID;      // 内存中标识ID(由1开始且连续)
+    ev_vector<EVID>		m_edges;    // 邻接边标识ID
     ev_vector<EVID>::const_iterator iter;
 };
 
 class CNAEdge
 {
 public:
-	explicit CNAEdge(EVID id):m_EID(id) {}
+	CNAEdge():m_EID(-1) {}
+	explicit CNAEdge(EVID id):m_EID(id),m_EVID(-1) {}
 	inline ev_bool operator==(const CNAEdge &rhs) const
 	{
 		return m_EID==rhs.m_EID;
 	}
 public:
-	EVID    m_EID;
-    EVID    m_FromNID;
-    EVID    m_ToNID;
-    EVID    m_FID;
+	EVID    m_EID;         // 内存中标识ID(由1开始且连续)
+	EVID    m_EVID;        // 数据库中表记录中EVID字段值（可能不连续）
+    EVID    m_FromNID;     // 起始网络节点
+    EVID    m_ToNID;       // 终止网络节点
+    EVID    m_FID;         // 网络源数据集中要素EVID（可能不连续）
     EVString	m_srcName;
 };
 
@@ -79,101 +86,219 @@ class CNAAdjacentTable
 public:
 	CNAAdjacentTable(CNetworkDataset* pDataset) : m_pNetworkDataset(pDataset)
 	{
-		m_nodeCount = 0;
-		m_edgeCount = 0;
-		m_newNodeID = 0;
-		m_newEdgeID = 0;
-		m_oriNodeCount = 0;
-		m_oriEdgeCount = 0;
+		
 	}
 	const CNANode* GetNodeRef(EVID id) const
 	{ 
-		return id-1<m_nodes.size() && id>0 ? &m_nodes[id-1] : 0;
+		if (id - 1 < m_nodes.size() && id > 0)
+			return &m_nodes[id-1];
+
+		ev_map<EVID,CNANode>::const_iterator it = m_TempNodes.find(id);
+		if (it != m_TempNodes.end())
+		{
+			return &it->second;
+		}
+		return NULL;
 	}
 	CNANode* GetNodeRef(EVID id) 
 	{ 
-		return id-1<m_nodes.size() && id>0 ? &m_nodes[id-1] : 0; 
+		if (id - 1 < m_nodes.size() && id > 0)
+			return &m_nodes[id-1];
+
+		ev_map<EVID,CNANode>::const_iterator it = m_TempNodes.find(id);
+		if (it != m_TempNodes.end())
+		{
+			return (CNANode*)&it->second;
+		}
+		return NULL;
 	}
 	ev_void AddNode(CNANode &node)
 	{
 		m_nodes.push_back(node);
 	}   
+	ev_void AddTempNode(CNANode &node)
+	{
+		m_TempNodes[node.id()] = node;
+	}   
 	const CNAEdge* GetEdgeRef(EVID id) const
 	{ 
-		return id-1<m_edges.size() && id>0 ? &m_edges[id-1] : 0; 
+		if (id - 1 < m_edges.size() && id > 0)
+			return &m_edges[id-1];
+
+		ev_map<EVID,CNAEdge>::const_iterator it = m_TempEdges.find(id);
+		if (it != m_TempEdges.end())
+		{
+			return &it->second;
+		}
+		return NULL;
 	}
-	EVID GetEdgeRefFromFID(EVID fid)//add in 2013/9/11
+	EVID GetEdgeRefFromFID(EVID fid)
 	{ 
-		for (EVID i = 0;i<m_edges.size();i++)
+		for (EVID i = 0;i < m_edges.size();i++)
 		{
 			if (m_edges[i].m_FID == fid)
 			{
-				return i +1; 
+				return i + 1;  // CNAEdge->m_EID
 			}
 		}
 		return 0;
 	}
-	CNAEdge* GetEdgeRef(EVID id)
+	CNAEdge* GetEdgeRef(EVID id) ///////////////////数据库改变EVID可能大于m_edges.size()
 	{ 
-		return id-1<m_edges.size() && id>0 ? &m_edges[id-1] : 0; 
+		if (id - 1 < m_edges.size() && id > 0)
+			return &m_edges[id-1];
+
+		ev_map<EVID,CNAEdge>::const_iterator it = m_TempEdges.find(id);
+		if (it != m_TempEdges.end())
+		{
+			return (CNAEdge*)&it->second;
+		}
+		return NULL;
 	}
 	ev_void AddEdge(CNAEdge &edge)
     {
         m_edges.push_back(edge);
     }
+	ev_void AddTempEdge(CNAEdge &edge)
+	{
+		m_TempEdges[edge.m_EID] = edge;
+	}
 
 	ev_void disableEdge(EVID id)
 	{
-		m_nodes[m_edges[id-1].m_FromNID-1].detachEdge(id);
-		m_nodes[m_edges[id-1].m_ToNID-1].detachEdge(id);
+		ev_map<EVID,CNAEdge>::iterator iterEdge;
+		ev_map<EVID,CNANode>::iterator iterNode;
+
+		if (id > 0 && id - 1 < m_edges.size())
+		{
+			if (m_edges[id-1].m_FromNID > 0 && m_edges[id-1].m_FromNID <= m_nodes.size())
+			{
+				m_nodes[m_edges[id-1].m_FromNID-1].detachEdge(id);
+			}
+			if (m_edges[id-1].m_ToNID > 0 && m_edges[id-1].m_ToNID <= m_nodes.size())
+			{
+				m_nodes[m_edges[id-1].m_ToNID-1].detachEdge(id);
+			}
+		}
+		else
+		{
+			iterEdge = m_TempEdges.find(id);
+			if (iterEdge != m_TempEdges.end())
+			{
+				if (iterEdge->second.m_FromNID > 0 && iterEdge->second.m_FromNID <= m_nodes.size())
+				{
+					m_nodes[iterEdge->second.m_FromNID - 1].detachEdge(id);
+				}
+				else if (( iterNode = m_TempNodes.find(iterEdge->second.m_FromNID)) != m_TempNodes.end())
+				{
+					iterNode->second.detachEdge(id);
+				}
+
+				if (iterEdge->second.m_ToNID > 0 && iterEdge->second.m_ToNID <= m_nodes.size())
+				{
+					m_nodes[iterEdge->second.m_ToNID - 1].detachEdge(id);
+				}
+				else if (( iterNode = m_TempNodes.find(iterEdge->second.m_ToNID)) != m_TempNodes.end())
+				{
+					iterNode->second.detachEdge(id);
+				}
+			}
+			
+		}
 	}
 	ev_void enableEdge(EVID id)
 	{
-		m_nodes[m_edges[id-1].m_FromNID-1].touchEdge(id);
-		m_nodes[m_edges[id-1].m_ToNID-1].touchEdge(id);
-	}
-    //count
-    ev_size_t nodeCount() const { return m_nodeCount; }
-    ev_size_t edgeCount() const { return m_edgeCount; }
-	//设置从流读取网络数据集时的节点数和边数
-	ev_void setoriNodeCount(ev_size_t count) { m_oriNodeCount = count; }
-	ev_void setoriEdgeCount(ev_size_t count) { m_oriEdgeCount = count; }
+		ev_map<EVID,CNAEdge>::iterator iterEdge;
+		ev_map<EVID,CNANode>::iterator iterNode;
 
-	ev_size_t getNewNodeID()
-	{
-		return ++m_newNodeID;
+		if (id > 0 && id - 1 < m_edges.size())
+		{
+			if (m_edges[id-1].m_FromNID > 0 && m_edges[id-1].m_FromNID <= m_nodes.size())
+			{
+				m_nodes[m_edges[id-1].m_FromNID-1].touchEdge(id);
+			}
+			if (m_edges[id-1].m_ToNID > 0 && m_edges[id-1].m_ToNID <= m_nodes.size())
+			{
+				m_nodes[m_edges[id-1].m_ToNID-1].touchEdge(id);
+			}
+		}
+		else
+		{
+			iterEdge = m_TempEdges.find(id);
+			if (iterEdge != m_TempEdges.end())
+			{
+				if (iterEdge->second.m_FromNID > 0 && iterEdge->second.m_FromNID <= m_nodes.size())
+				{
+					m_nodes[iterEdge->second.m_FromNID - 1].touchEdge(id);
+				}
+				else if (( iterNode = m_TempNodes.find(iterEdge->second.m_FromNID)) != m_TempNodes.end())
+				{
+					iterNode->second.touchEdge(id);
+				}
+
+				if (iterEdge->second.m_ToNID > 0 && iterEdge->second.m_ToNID <= m_nodes.size())
+				{
+					m_nodes[iterEdge->second.m_ToNID - 1].touchEdge(id);
+				}
+				else if (( iterNode = m_TempNodes.find(iterEdge->second.m_ToNID)) != m_TempNodes.end())
+				{
+					iterNode->second.touchEdge(id);
+				}
+			}
+		}
 	}
-	ev_size_t getNewEdgeID()
+
+	ev_size_t getNodeCount()
 	{
-		return ++m_newEdgeID;
+		return m_nodes.size();
 	}
-	ev_size_t getMaxNodeID()
+	ev_size_t getEdgeCount()
 	{
-		return m_newNodeID;
+		return m_edges.size();
 	}
-	ev_size_t getMaxEdgeID()
+	ev_size_t getTatolNodeCount()
 	{
-		return m_newEdgeID;
+		return m_nodes.size() + m_TempNodes.size();
+	}
+	ev_size_t getTatolEdgeCount()
+	{
+		return m_edges.size() + m_TempEdges.size();
+	}
+	ev_vector<CNANode>& getNANode()
+	{
+		return m_nodes;
+	}
+    ev_vector<CNAEdge> & getEdges()
+	{
+		return m_edges;
+	}
+	
+	void getAttachEdgesFromFID(ev_uint32 FID,vector<ev_uint32>& EdgesEID)
+	{
+		for (EVID i = 0;i < m_edges.size();i++)
+		{
+			if (m_edges[i].m_FID == FID)
+			{
+				EdgesEID.push_back(m_edges[i].m_EID);
+			}
+		}
 	}
 	void intial()
 	{
-		/*m_newNodeID = m_nodeCount = m_pNetworkDataset->getNodeCount();
-		m_newEdgeID = m_edgeCount = m_pNetworkDataset->getEdgeCount();*/
-		////初始化作用是删除m_nodes和m_edges在网络分析时增加的stops和edges，
-		///这里将m_newNodeID和m_nodeCount赋值为初始节点数
-		m_newNodeID = m_nodeCount = m_oriNodeCount;
-		m_newEdgeID = m_edgeCount = m_oriEdgeCount;
-		EdgeIter iter = find(m_edges.begin(), m_edges.end(), CNAEdge(m_newEdgeID+1));
-		for ( ; iter!=m_edges.end() ; iter++)
+		ev_map<EVID,CNAEdge>::iterator it = m_TempEdges.begin();
+		for(;it != m_TempEdges.end(); ++it)
 		{
-			disableEdge(iter->m_EID);
-		}		
-		ev_vector<CNAEdge>::iterator iter1 = find(m_edges.begin(), m_edges.end(), CNAEdge(m_oriEdgeCount));
-		if (iter1 != m_edges.end())
-			m_edges.erase(++iter1, m_edges.end());
-		ev_vector<CNANode>::iterator iter2 = find(m_nodes.begin(), m_nodes.end(), CNANode(m_oriNodeCount));
-		if (iter2 != m_nodes.end())
-			m_nodes.erase(++iter2, m_nodes.end());
+			if (it->second.m_FromNID > 0 && it->second.m_FromNID <= m_nodes.size())
+			{
+				m_nodes[it->second.m_FromNID-1].detachEdge(it->second.m_EID);
+			}
+			if (it->second.m_ToNID > 0 && it->second.m_ToNID <= m_nodes.size())
+			{
+				m_nodes[it->second.m_ToNID-1].detachEdge(it->second.m_EID);
+			}
+		}
+		m_TempEdges.clear();
+		m_TempNodes.clear();
 	}
 private:
 	void reserveNodes(ev_size_t size)
@@ -187,14 +312,12 @@ private:
 private:
 	typedef ev_vector<CNANode>::const_iterator NodeIter;
 	typedef ev_vector<CNAEdge>::const_iterator EdgeIter;
+	// 存储网络数据集原始的网络节点和边元素
 	ev_vector<CNANode>   m_nodes;
     ev_vector<CNAEdge>   m_edges;
-	ev_size_t m_oriNodeCount;  //存储从流读出网络数据时的节点数和边数
-	ev_size_t m_oriEdgeCount;
-	ev_size_t m_nodeCount;
-	ev_size_t m_edgeCount;
-	ev_size_t m_newNodeID;
-	ev_size_t m_newEdgeID;
+	// 存储分析时增加的临时节点和边
+	ev_map<EVID,CNANode>   m_TempNodes;
+	ev_map<EVID,CNAEdge>   m_TempEdges;
 	CNetworkDataset*     m_pNetworkDataset;
 friend class CNetworkDataset;
 };

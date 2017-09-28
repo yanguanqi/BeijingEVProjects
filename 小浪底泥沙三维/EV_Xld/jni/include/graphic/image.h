@@ -414,6 +414,14 @@ namespace EarthView
                 to encode into, e.g. "jpg" or "png"
                 ****/
                 EarthView::World::Core::DataStreamPtr encode(const EVString& formatextension);               
+				
+				/// <summary>
+				/// 转pkm和pvr压缩格式函数，仅供android平台使用，其它平台调用返回null
+				/// </summary>
+				/// <param name=""></param>
+				/// <returns></returns>
+				EarthView::World::Core::DataStreamPtr toPKM(EarthView::World::Core::DataStreamPtr& inputStream, const EVString& streamType);
+				EarthView::World::Core::DataStreamPtr toPVR(EarthView::World::Core::DataStreamPtr& inputStream, const EVString& streamType);
 
 #ifndef EV_NO_USING_DDS
 				EarthView::World::Core::DataStreamPtr toDDS(EarthView::World::Core::DataStreamPtr& inputStream);

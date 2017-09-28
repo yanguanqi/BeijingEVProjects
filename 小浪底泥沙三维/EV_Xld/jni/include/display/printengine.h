@@ -88,6 +88,11 @@ public:
 	virtual ev_void setPaperSources(CPrinter::EVPaperSource source){}
 
 	virtual ev_int32 setPrinterProperty(){return -1;}
+
+	virtual EVString getErrorMsg()
+	{
+		return EVString("未知错误");
+	}
 protected:
 	CPrintEngine(){}
 ev_private:

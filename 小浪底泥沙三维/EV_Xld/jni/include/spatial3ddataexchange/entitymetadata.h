@@ -35,7 +35,7 @@ ev_private:
 		EarthView::World::Spatial::Math::CVector3              mScale;                 //缩放信息
 		EarthView::World::Spatial::Math::CQuaternion           mQuation;                //四元数信息 
 		//CMatrix4              m_worldTransform;       // 世界矩阵
-		EarthView::World::Spatial3D::DataExchange::MeshAttrMap   mAttriMap;             // scene文件存储的属性键值对 第一个是字段名 第二个是值        
+		EarthView::World::Spatial3D::DataExchange::MeshAttrMap   mAttriMap;             // scene文件存储的属性键值对 第一个是字段名 第二个是值   
 	};
 }}}}
 

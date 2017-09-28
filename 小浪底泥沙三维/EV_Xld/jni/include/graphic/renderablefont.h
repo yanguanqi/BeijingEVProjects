@@ -35,7 +35,7 @@ namespace EarthView{
 		/// 渲染队列更新（由CTextureTextMovable）回调
 		/// </summary>
 		/// <param name="queue">当前渲染队列</param>
-		virtual void onUpdateRenderQueue(EarthView::World::Graphic::CRenderQueue* queue, ev_uint8 renderQueueId);
+		virtual void onUpdateRenderQueue(EarthView::World::Graphic::CRenderQueue* queue, ev_uint8 renderQueueId, ev_uint16 priority);
 
 		/// <summary>
 		/// 访问Renderable(由CTextureTextMovable) 回调
@@ -48,6 +48,13 @@ namespace EarthView{
 		/// 绑定节点
 		/// </summary>
 		virtual void onAttachedToNode(EarthView::World::Graphic::CNode* node);
+
+		/// <summary>
+		/// 设置文字自动换行宽度
+		/// </summary>
+		/// <param name="width">以像素为单位的宽度值</param>
+		/// <returns></returns>
+		ev_void setAutoLineFeed( _in const ev_uint32 width );
 
 		/// <summary>
 		/// 设置投影矩阵偏移
@@ -200,6 +207,8 @@ namespace EarthView{
 		ev_bool             mForceEnableProjOffset;
 
 		ev_bool             mDepthCheckEnabled;
+
+		ev_uint32 mAutoLineFeedWidth;
 
 		/// <summary>顶点缓存状态 </summary>
 		VertexDataStatus mVertexDataStatus;

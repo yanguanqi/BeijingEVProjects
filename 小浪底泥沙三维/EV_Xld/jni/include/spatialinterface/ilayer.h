@@ -47,6 +47,7 @@ namespace EarthView{
 					LT_MAPSERVERLAYER          = 25,
 					LT_VECTORFILE_DATALAYER	   = 26,
 					LT_VECTORFILE_ANNOLAYER    = 27,
+					LT_VECTOR_WFSDATALAYER	   = 28,
 
 					// 三维图层 编号从 31 开始。
 					//LT_ObqLayer                = 30,
@@ -108,7 +109,13 @@ namespace EarthView{
 					LT_SERVER_MODEL_TEMPLATE_Layer	   = 108,
 					LT_SERVER_OGC_WMTS_Layer   = 110,
 					LT_SERVER_OGC_WMS_Layer	   = 111,
-					LT_SERVER_OGC_WFS_Layer    = 112
+					LT_SERVER_OGC_WFS_Layer    = 112,
+
+					LT_LasXGLayer                =130,
+					LT_SERVER_LasXGLayer         =131,
+					LT_StreetView_Layer          = 132,
+					LT_OSGB_Layer                = 133
+					
 				};
 
 				enum EVVectorLayerRendererType
@@ -147,7 +154,19 @@ namespace EarthView{
 					/// <returns>数据集</returns>
 					virtual EarthView::World::Spatial::GeoDataset::IDataset* getDataset();
 					/// <summary>
-					/// 获取数据集的名称
+					/// 设置与图层所关联的数据集
+					/// </summary>
+					/// <param name="dataset">数据集指针</param>
+					/// <returns></returns>
+					virtual ev_void setDataset(EarthView::World::Spatial::GeoDataset::IDataset* dataset);
+					/// <summary>
+					/// 更换数据集
+					/// </summary>
+					/// <param name="dataset">数据集指针</param>
+					/// <returns></returns>
+					virtual ev_void switchDataset(EarthView::World::Spatial::GeoDataset::IDataset* dataset);
+					/// <summary>
+					/// 获取数据集名称
 					/// </summary>
 					/// <param name=""></param>
 					/// <returns></returns>
@@ -361,6 +380,12 @@ namespace EarthView{
 					/// <param name=""></param>
 					/// <returns>xml要素</returns>
 					virtual EarthView::World::Core::CXmlElement toXmlElement() const;
+
+					virtual ev_int32 baseMapFalg();// 0 不支持，1 支持但不可设置 2 支持可设置开关
+					virtual ev_bool getBaseMapActive();
+					virtual ev_void setBaseMapActive(ev_bool b);
+					virtual ev_bool makeBaseMapping(EarthView::World::Spatial::Display::ISpatialDisplay* display,
+						EarthView::World::Spatial::Atlas::EVVectorLayerRendererType type);
 ev_private:
 					ILayer( EarthView::World::Core::CNameValuePairList *pList );
 ev_internal:

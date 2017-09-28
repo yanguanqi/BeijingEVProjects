@@ -56,7 +56,11 @@ namespace EarthView
                 static EVString toString(ev_int32 val, ev_uint16 width, ev_char fill);
                 static EVString toString(ev_int32 val, ev_uint16 width,
                                        ev_char fill, std::ios::fmtflags flags);
-                ////zxt updatefor v1.8
+
+                
+
+
+         
 #if EV_PLATFORM != EV_PLATFORM_NACL &&  ( EV_ARCH_TYPE == EV_ARCHITECTURE_64 || EV_PLATFORM == EV_PLATFORM_APPLE || EV_PLATFORM == EV_PLATFORM_APPLE_IOS )
                 /***** Converts an ev_uint32 to a EVString. ****/
 //                static EVString toString(ev_uint32 val,
@@ -83,6 +87,14 @@ namespace EarthView
                                        ev_uint16 width, ev_char fill, std::ios::fmtflags flags);
 
 #else
+#ifdef EV_ARCH_AARCH64
+				static EVString toString(ev_size_t val);
+                static EVString toString(ev_size_t val, ev_uint16 width);
+                static EVString toString(ev_size_t val, ev_uint16 width, ev_char fill);
+                static EVString toString(ev_size_t val,
+                ev_uint16 width, ev_char fill, std::ios::fmtflags flags);
+#endif
+
                 /***** Converts a ev_size_t to a EVString. ****/
                 static EVString toString(ev_uint64 val);
                 static EVString toString(ev_uint64 val, ev_uint16 width);

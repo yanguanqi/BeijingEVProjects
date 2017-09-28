@@ -74,6 +74,9 @@ namespace EarthView
 						ev_real32 mDiscardBoxSize;
 						ev_uint32 mMinOptimizeTriangleNum;
 						ev_uint32 mDiscardTrangleCountUpperLimit;
+						ev_bool mUseBoundboxSizeDiscardSubmesh;
+						ev_real32 mDiscardBoundBoxSize;
+						ev_real32 mDiscardBoundBoxSizeForMesh;
 						ev_uint32 mMaxMergeMatrixNum;
 						ev_real32 mSmoothDegree;
 						ev_real32 mMinRangeCoefficient;
@@ -83,6 +86,7 @@ namespace EarthView
 						ev_bool mConvertToDDS;
 						ev_uint8 mLevel;
 						ev_real32 mLineOptimizePersent;
+
 						ev_bool operator != (const ParamStruct& rhs)
 						{
 							ev_bool equal = false;
@@ -90,6 +94,8 @@ namespace EarthView
 							if(EarthView::World::Spatial::Math::CMath::Abs(mTargetProportion - rhs.mTargetProportion) > 1e-6 ||
 								EarthView::World::Spatial::Math::CMath::Abs(mSmoothDegree - rhs.mSmoothDegree) > 1e-6||
 								EarthView::World::Spatial::Math::CMath::Abs(mMinOptimizeTriangleNum - rhs.mMinOptimizeTriangleNum) > 1e-6 ||
+								EarthView::World::Spatial::Math::CMath::Abs(mDiscardBoundBoxSize - rhs.mDiscardBoundBoxSize) > 1e-6 ||
+								EarthView::World::Spatial::Math::CMath::Abs(mDiscardBoundBoxSizeForMesh - rhs.mDiscardBoundBoxSizeForMesh) > 1e-6 ||
 								mTriangleRelationshipRebulid != rhs.mTriangleRelationshipRebulid || 
 								mMergeMesh != rhs.mMergeMesh ||
 								mUseDoubleSideLight != rhs.mUseDoubleSideLight || 
@@ -107,6 +113,7 @@ namespace EarthView
 								||mMinRangeCoefficient != rhs.mMinRangeCoefficient
 								||mDiscardTrangleCountUpperLimit != rhs.mDiscardTrangleCountUpperLimit
 								||mLineOptimizePersent != rhs.mLineOptimizePersent
+								||mUseBoundboxSizeDiscardSubmesh != rhs.mUseBoundboxSizeDiscardSubmesh
 								)
 							{
 								return true;

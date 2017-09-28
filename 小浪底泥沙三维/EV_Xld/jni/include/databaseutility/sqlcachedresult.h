@@ -28,6 +28,7 @@ protected:
     void clearValues();
 
     virtual bool gotoNext(ValueCache &values, int index) = 0;
+	virtual ev_int32 size();
 
     CVariant data(int i);
     bool isNull(int i);
@@ -39,7 +40,12 @@ protected:
 
     int colCount() const;
     ValueCache &cache();
-
+	//<summary>
+	// 执行已准备好的SQL语句
+	// </summary>
+	//<param name="needCursor">是否使用游标</param>
+	//<returns>成功返回true，失败返回false</returns>
+	//virtual ev_bool execQuery(ev_bool needCursor);
     ev_void virtual_hook(int id, void *data);
 private:
     bool cacheNext();

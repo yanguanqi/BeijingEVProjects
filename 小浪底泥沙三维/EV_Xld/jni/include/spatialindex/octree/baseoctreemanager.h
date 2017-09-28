@@ -8,6 +8,7 @@
 namespace EarthView{
 	namespace World{
 		namespace Spatial{
+			class OctreeCacheAccessor;
 			namespace Octree{
 
 				enum OctreeManagerType
@@ -250,6 +251,7 @@ ev_private:
 					/// <returns></returns>
 					virtual ev_void addOctreeNode( EarthView::World::Spatial::Octree::CBaseOctreeNode *n, EarthView::World::Spatial::Octree::CBaseOctree *octant, int depth){EV_ASSERT(false)};
 					virtual ev_void addOctreeNode( EarthView::World::Spatial::Octree::CBaseOctreeNode *n, EarthView::World::Spatial::Octree::CBaseOctree *octant, int depth, ev_bool bUpdateMaxBox){EV_ASSERT(false)};
+					virtual ev_void addOctreeNode( EarthView::World::Spatial::Octree::CBaseOctreeNode *n, EarthView::World::Spatial::Octree::CBaseOctree *octant, int depth, ev_bool bUpdateMaxBox, set<EVString>& changedOctreeCodeSet){EV_ASSERT(false)};
 
 					/// <summary>
 					/// 
@@ -492,6 +494,7 @@ ev_private:
 
 					typedef map<EVString, ev_uint32> NodeListCapacity;
 					NodeListCapacity mNodeListCapacity;
+					EarthView::World::Spatial::OctreeCacheAccessor* mpCacheAccessor;
 				private:
 					/// <summary>
 					/// 计算最小包围盒范围
@@ -655,7 +658,9 @@ ev_private:
 					/// <returns></returns>
 					ev_void addOctreeNode( EarthView::World::Spatial::Octree::CBaseOctreeNode *ref_n, EarthView::World::Spatial::Octree::CBaseOctree *octant, int depth);
 					ev_void addOctreeNode( EarthView::World::Spatial::Octree::CBaseOctreeNode *ref_n, EarthView::World::Spatial::Octree::CBaseOctree *octant, int depth, ev_bool bUpdateMaxBox);
-					
+					ev_void addOctreeNode( EarthView::World::Spatial::Octree::CBaseOctreeNode *ref_n, EarthView::World::Spatial::Octree::CBaseOctree *octant, int depth, ev_bool bUpdateMaxBox, set<EVString>& changedOctreeCodeSet);
+
+
 					/// <summary>
 					/// 
 					/// </summary>

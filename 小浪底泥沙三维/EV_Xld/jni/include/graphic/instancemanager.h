@@ -17,6 +17,41 @@ namespace EarthView
             class CInstancedEntityVec;
             class EV_GRAPHIC_DLL CInstanceManager : public EarthView::World::Core::CAllocatedObject
             {
+			public:
+				/// <summary>
+				/// 监听类
+				/// 自定义操作可以在外部实施
+				/// </summary>
+				class EV_GRAPHIC_DLL CInstanceManagerListener : public EarthView::World::Core::CAllocatedObject
+				{
+ev_private:
+					/// <summary>
+					/// 构造函数
+					/// </summary>
+					/// <param name="pList">构造函数参数键值对表</param>
+					/// <returns></returns>
+					CInstanceManagerListener(EarthView::World::Core::CNameValuePairList *pList);
+				public:
+					/// <summary>
+					/// 默认构造函数
+					/// </summary>
+					/// <param name=""></param>
+					/// <returns></returns>
+					CInstanceManagerListener();
+					/// <summary>
+					/// 析构函数
+					/// </summary>
+					/// <param name=""></param>
+					/// <returns></returns>
+					virtual ~CInstanceManagerListener();
+					/// <summary>
+					/// 场景管理器销毁时触发
+					/// </summary>
+					/// <param name="source">场景管理器</param>
+					/// <returns></returns>
+					virtual void newInstanceBatchCreated(EarthView::World::Graphic::CInstanceBatch* newBatch);
+				};
+
             ev_private:
                 CInstanceManager(_in EarthView::World::Core::CNameValuePairList *pList);
             public:
@@ -595,6 +630,10 @@ namespace EarthView
 				ev_bool					mbInternalInstance;
 				ev_bool					mAsyncUpdateBuffer;
 
+				EV_MUTEX(mListenersMutex)
+				typedef vector<EarthView::World::Graphic::CInstanceManager::CInstanceManagerListener *> ListenerList;
+				ListenerList mListeners;
+
                 /** Finds a batch with at least one free instanced entity we can use.
                 	If none found, creates one.
                 */
@@ -669,6 +708,7 @@ namespace EarthView
                 /** @copydoc CSceneManager::createInstancedEntity */
                 CInstancedEntity *createInstancedEntity( const EVString &materialName );
 				CInstancedEntity *createInstancedEntity( const EVString &materialName, ev_bool bInUse );
+				CInstancedEntity *createInstancedEntityWithProjOffset( const EVString &materialName, ev_bool bInUse, Real offset);
                 /** This function can be useful to improve CPU speed after having too many instances
                 	created, which where now removed, thus freeing many batches with zero used Instanced Entities
                 	However the batches aren't automatically removed from memory until the InstanceManager is
@@ -739,6 +779,17 @@ namespace EarthView
 				**/
 				ev_bool isAsyncUpdatingBuffer()const {return mAsyncUpdateBuffer;}
 				ev_void setAsyncUpdateBuffer(ev_bool async){mAsyncUpdateBuffer = async;}
+
+				/** Add a listener which will get called back on scene manager events.
+				*/
+				virtual void addListener(EarthView::World::Graphic::CInstanceManager::CInstanceManagerListener *ref_s);
+				/** Remove a listener
+				*/
+				virtual void removeListener(EarthView::World::Graphic::CInstanceManager::CInstanceManagerListener *s);
+
+				virtual ev_bool existListener(EarthView::World::Graphic::CInstanceManager::CInstanceManagerListener *s);
+				//// Internal method for firing destruction event
+				virtual void fireNewInstanceBatchCreated(EarthView::World::Graphic::CInstanceBatch* newBatch);
             };
         }
     }

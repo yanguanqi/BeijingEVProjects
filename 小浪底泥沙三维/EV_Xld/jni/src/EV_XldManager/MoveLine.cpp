@@ -4,12 +4,12 @@
 #include "mathengine\mathutility.h"
 #include "RenderLibDataType.h"
 #include "spatial3danalysisobject\mathutility3d.h"
-#include "..\..\include\mathengine\quaternion.h"
+#include "mathengine\quaternion.h"
 
 using namespace EarthView::World::Graphic;
 using namespace EarthView::World::Spatial::Math;
 
-EarthView::Xld::RenderLib::CMoveLine::CMoveLine(const EVString & name, EarthView::World::Spatial3D::Controls::CGlobeControl * globeControl, CMoveLineType & style)
+EarthView::Xld::RenderLib::CMoveLine::CMoveLine(const EVString & name, EarthView::World::Spatial3D::Controls::CGlobeControl * globeControl, CMoveLineType style)
 {
 	this->mpGlobeControl = globeControl;
 	this->mpManualObject = new CManualObject(name);

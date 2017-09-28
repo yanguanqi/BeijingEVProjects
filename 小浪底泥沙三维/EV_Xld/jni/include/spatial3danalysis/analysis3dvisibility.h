@@ -404,12 +404,12 @@ ev_private:
 					/// <summary>
 					/// 销毁所有渲染对象及结果
 					/// </summary>
-					virtual ev_void reset();
+					virtual ev_void reset_impl();
 					/// <summary>
 					/// 初始化
 					/// </summary>
 					/// <param name=""></param>
-					virtual ev_void initialize();
+					virtual ev_void initialize_impl();
 					/// <summary>
 					/// 分析与测量的调用接口
 					/// </summary>

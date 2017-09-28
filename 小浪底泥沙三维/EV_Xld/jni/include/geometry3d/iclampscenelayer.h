@@ -5,6 +5,7 @@
 #include <core/name_value_pair.h>
 
 #include "geometry3d/iscenelayer.h"
+#include "spatialobject/geometry/envelope.h"
 
 
 namespace EarthView{
@@ -14,6 +15,10 @@ namespace EarthView{
 			namespace Utility
 			{
 				class CSpatialReference;
+			}
+			namespace Geometry
+			{
+				class CEnvelope;
 			}
 		}
 	}

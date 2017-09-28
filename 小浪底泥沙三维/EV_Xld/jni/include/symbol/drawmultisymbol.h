@@ -46,7 +46,20 @@ namespace EarthView{
 						ev_real64 *dy,
 						ev_int32 *pSegments,
 						ev_int32 nCount );
-
+					/// <summary>
+					/// 绘制符号
+					/// </summary>
+					/// <param name="dx">x坐标数组</param>
+					/// <param name="dy">y坐标数组</param>
+					/// <param name="pSegments">分割数组</param>
+					/// <param name="nCount">分割数目</param>
+					/// <param name="rotation">旋转角度（对点符号有效）</param>
+					/// <returns></returns>
+					virtual ev_void draw( ev_real64 *dx,
+						ev_real64 *dy,
+						ev_int32 *pSegments,
+						ev_int32 nCount, 
+						ev_real64 rotation);
 					/// <summary>
 					/// 绘制符号
 					/// </summary>

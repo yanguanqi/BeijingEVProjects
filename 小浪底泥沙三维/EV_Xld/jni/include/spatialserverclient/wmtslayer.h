@@ -165,7 +165,7 @@ namespace EarthView
                 /// </summary>
 				/// <param name="dataset">数据机对象</param>
                 /// <returns></returns>
-				ev_void setDataset(_in const EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
+				virtual ev_void setDataset(_in  EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
 
 				/// <summary>
                 /// 获取包围盒信息

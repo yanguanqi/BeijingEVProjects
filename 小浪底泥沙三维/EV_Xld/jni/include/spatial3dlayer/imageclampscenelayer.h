@@ -82,7 +82,7 @@ ev_private:
 					/// </summary>
 					/// <param name=""></param>
 					/// <returns></returns>
-					virtual ev_void _notifyLayerRemoved(EarthView::World::Graphic::CSceneManager* pSceneMgr);
+					virtual ev_void _notifyLayerRemoved_impl(EarthView::World::Graphic::CSceneManager* pSceneMgr);
 					
 					/// <summary>
 					/// 获知指定级别的瓦片是否有效
@@ -133,6 +133,7 @@ ev_private:
 					ev_bool image2dds(EarthView::World::Core::MemoryDataStreamPtr& ptr,EarthView::World::Spatial::EVSSCFileFormat format,EVString& name,EVString& streamType,ev_int8& type);
 					ev_int32 getRealTileLevel(ev_int32 level) const;
 					friend class CImageClampSceneLayerFactory;
+					ev_bool getLocalCacheTile(ev_int32 level,ev_int32 row,ev_int32 col,_inout EarthView::World::Spatial::CTileData& tile);
 				};
 
 				/// <summary>

@@ -116,6 +116,12 @@ public:
 	/// 获取DC
 	/// </summary>
 	/// <param name=""></param>
+	/// <returns>返回类型</returns>
+	virtual EVPaintDeviceType getType();
+	/// <summary>
+	/// 获取DC
+	/// </summary>
+	/// <param name=""></param>
 	/// <returns>返回DC</returns>
 	virtual ev_int64 getDC();
 	/// <summary>
@@ -188,7 +194,7 @@ public:
     CPageRect getPageRect(EVPrintUnit unit) const;
 	CPageRect getPageRect() const;
 
-    bool newPage();
+   ev_bool newPage();
 
     EVPrinterState getPrinterState() const;
 
@@ -214,6 +220,8 @@ public:
 
 	ev_void fromXmlElement( _in EarthView::World::Core::CXmlElement& element);
 	EarthView::World::Core::CXmlElement toXmlElement() const;
+
+	EVString getErrorMsg();
 protected:
     int metric(EVPrintDeviceMetric) const;
     ev_void setEngines(CPrintEngine *printEngine);

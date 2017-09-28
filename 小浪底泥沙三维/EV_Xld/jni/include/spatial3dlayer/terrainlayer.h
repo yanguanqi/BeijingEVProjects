@@ -85,6 +85,8 @@ ev_private:
 					NullTileTag* mpNullTileTag;
 
 					EarthView::World::Spatial::Utility::CSpatialReference* mpSR;
+					EVString mCacheDatasetName;
+					EVString makeCacheName( const EVString& srcName );
 
                 public:
 					
@@ -155,7 +157,7 @@ ev_private:
 					virtual EarthView::World::Core::MemoryDataStreamPtr getTerrainFromMemoryCache(ev_int32 row, ev_int32 col, ev_int32 level);
 					virtual EarthView::World::Core::MemoryDataStreamPtr getTerrainFromDBCache(ev_int32 row, ev_int32 col, ev_int32 level);
 					virtual EarthView::World::Core::MemoryDataStreamPtr getTerrainFromServer(ev_int32 row, ev_int32 col, ev_int32 level);
-					
+					virtual EarthView::World::Core::MemoryDataStreamPtr getLocalCache(ev_int32 row, ev_int32 col, ev_int32 level);
 					/// <summary>
 					/// 返回数据集
 					/// </summary>
@@ -266,7 +268,7 @@ ev_private:
 					/// </summary>
 					/// <param name=""></param>
 					/// <returns></returns>
-					virtual ev_void _notifyLayerRemoved(EarthView::World::Graphic::CSceneManager* pSceneMgr);
+					virtual ev_void _notifyLayerRemoved_impl(EarthView::World::Graphic::CSceneManager* pSceneMgr);
 					/// <summary>
 					/// 获取图层的名称
 					/// </summary>

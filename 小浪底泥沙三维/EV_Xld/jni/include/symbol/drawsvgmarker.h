@@ -5,6 +5,9 @@
 using namespace EarthView::World::Core;
 namespace EarthView{
 	namespace World{
+		namespace Display{
+			class CBitmap;
+		}
 		namespace Spatial{
 			namespace Display{
 				class CDrawSVGMarker :
@@ -47,7 +50,11 @@ namespace EarthView{
 						ev_real64 *dy,
 						ev_int32 *pSegments,
 						ev_int32 nCount );
-
+					virtual ev_void draw( ev_real64 *dx,
+						ev_real64 *dy,
+						ev_int32 *pSegments,
+						ev_int32 nCount, 
+						ev_real64 rotation);
 					/// <summary>
 					/// 绘制完成
 					/// </summary>
@@ -55,14 +62,8 @@ namespace EarthView{
 					/// <returns></returns>
 					virtual ev_void endDraw();;
 				private:
-					/// <summary>
-					/// SVG图片数据
-					/// </summary>
-					MemoryDataStreamPtr m_pszPicBuffer;
-					/// <summary>
-					/// SVG图片数据大小
-					/// </summary>
-					ev_uint32 m_nPicSize;
+					void   * mpSurface;
+					EarthView::World::Display::CBitmap* mpImage;
 					C_DISABLE_COPY( CDrawSVGMarker );
 				};
 			}

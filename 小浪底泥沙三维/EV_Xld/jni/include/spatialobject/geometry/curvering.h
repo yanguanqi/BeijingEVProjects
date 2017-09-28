@@ -139,7 +139,12 @@ ev_private:
 					/// <param name=""></param>
 					/// <returns></returns>
 					virtual ev_bool isRing() const;
-
+					/// <summary>
+					/// 判断简单环的方向。判断标准是必须简单曲线，然后首尾点相等。
+					/// </summary>
+					/// <param name=""></param>
+					/// <returns>如果环方向为顺时针,返回true;否则，返回false
+					virtual ev_bool isClockWise() const;
 					virtual EarthView::World::Spatial::Geometry::CLineString  toLineString2(ev_uint32 smooth) const;
 					/*****************************************************/
 					/************EarthView::World::Spatial::Geometry::IGeometry 接口声明************************/

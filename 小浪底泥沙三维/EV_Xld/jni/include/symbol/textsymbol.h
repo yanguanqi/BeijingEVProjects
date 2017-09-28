@@ -251,6 +251,18 @@ namespace EarthView{
 				virtual ev_void getTextSize( _in ev_int64 hdc, _in const EVString& text, _out ev_real64* xSize, _out ev_real64* ySize ) const;
 				virtual ev_void getTextSize( _in EarthView::World::Display::IPaintDevice* paintDevice, 
 					_in const EVString& text, _out ev_real64* xSize, _out ev_real64* ySize ) const;
+				virtual ev_void getTextSize(_in EarthView::World::Display::IPaintDevice* paintDevice, 
+					_in const EVString& text,
+					_inout ev_real64* xPos, _inout ev_real64* yPos,
+					_out ev_real64* xSize, _out ev_real64* ySize ) const;
+
+				virtual ev_void getTextSize( _in EarthView::World::Display::EVDeviceUnits unit,_in ev_int64 hdc, _in const EVString& text, _out ev_real64* xSize, _out ev_real64* ySize ) const;
+				virtual ev_void getTextSize( _in EarthView::World::Display::EVDeviceUnits unit,_in EarthView::World::Display::IPaintDevice* paintDevice, 
+					_in const EVString& text, _out ev_real64* xSize, _out ev_real64* ySize ) const;
+				virtual ev_void getTextSize( _in EarthView::World::Display::EVDeviceUnits unit,_in EarthView::World::Display::IPaintDevice* paintDevice, 
+					_in const EVString& text,
+					_inout ev_real64* xPos, _inout ev_real64* yPos,
+					_out ev_real64* xSize, _out ev_real64* ySize ) const;
 				/// <summary>
 				/// 获取字体边框颜色
 				/// </summary>

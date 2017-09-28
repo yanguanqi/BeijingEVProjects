@@ -355,6 +355,7 @@ ev_private:
 				public:
 					EVString Name;
 					EarthView::World::Spatial::Math::CMatrix4 OffsetMatrix;
+					ev_uint32 ID;
 					//set<EarthView::World::Graphic::CMovableObject *> mSubEntitySet;
 					//vector<EarthView::World::Graphic::CSubEntity *> mSubEntitys;
 					//map<CMovableObject *,SubMeshInfo> mObjAndSubMeshInfo;

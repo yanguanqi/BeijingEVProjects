@@ -89,6 +89,10 @@ namespace EarthView
                 */
                 void _getCullBounds( EarthView::World::Spatial::Math::CAxisAlignedBox *box ) const;
 
+				ev_void syncVisitNodesLock();
+
+				ev_void syncVisitNodesUnLock();
+
                 ///typedef list< EarthView::World::Graphic::COctreeNode * > NodeList;
                 class  EV_OCTREEPLUGIN_DLL OctreeNodeList : public EarthView::World::Core::CBaseObject
                 {
@@ -146,6 +150,9 @@ namespace EarthView
                 If, later, all the nodes are removed from the child, it is still kept around.
                 */
                 EarthView::World::Graphic::COctree *mChildren[ 2 ][ 2 ][ 2 ];
+			private:
+				static ev_bool mbSupportedMultiThread;
+				mutable EarthView::World::Core::CRecursiveMutex mNodesLocker;
             };
         }
     }

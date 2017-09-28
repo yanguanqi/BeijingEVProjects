@@ -247,7 +247,7 @@ ev_private:
 					///</summary>
 					/// <param name="pDataset">数据集指针</param>
 					///<returns></returns>
-					ev_void setDataset(_in EarthView::World::Spatial::GeoDataset::IDataset*ref_pDataset);
+					virtual ev_void setDataset(_in EarthView::World::Spatial::GeoDataset::IDataset*ref_pDataset);
 
 					///<summary>
 					///为R通道指定波段索引(波段索引不能超过，波段的总数)
@@ -356,7 +356,8 @@ ev_private:
 					ev_uint8   m_iAlpha;         ///透明值
 					EVString   m_strLyrName;     ///layer名称，默认与数据集名称相同
 					EVString   m_strDescription; ///数据集的一个描述
-					
+					EVString   m_strDatasetName; ///数据集名称 
+					EVString   m_strDataSrcName; ///数据源名称
 					ev_int32   m_iRChannel;      ///R通道对应之波段索引
 					ev_int32   m_iGChannel;      ///G通道对应的波段索引
 					ev_int32   m_iBChannel;      ///B通道对应的波段索引

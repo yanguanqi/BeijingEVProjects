@@ -87,6 +87,13 @@ ev_private:
 					/// <param name=""></param>
 					/// <returns></returns>
 					ev_int32 getDataVersionFromDataSource() const ;
+
+					virtual void findOctreeNode(EarthView::World::Spatial::Octree::CBaseOctree* tree,
+						ev_uint32 id,
+						EarthView::World::Spatial::Octree::CBaseOctreeNodeList& ns,
+						EarthView::World::Spatial::Octree::CBaseOctree*& parent);
+
+					bool getAllObjectIDs(set<ev_uint32>& intVec);
 				};
 			}
 		}

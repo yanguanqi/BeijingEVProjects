@@ -14,6 +14,11 @@
 #include "core/threaddefines.h"
 
 #include <float.h>
+#if EV_PLATFORM == EV_PLATFORM_ANDROID
+#ifdef PI
+#undef  PI;
+#endif
+#endif
 
 namespace EarthView
 {
@@ -41,6 +46,7 @@ namespace EarthView
 		namespace Spatial3D
 		{
 			class CGeoSceneManager;
+			class CGlobeCameraTimer;
 			/// <summary>
 			/// 四元数类，数据精度为64位浮点，跟一般的四元数类相比增加了一些差值方法
 			/// </summary>
@@ -236,6 +242,7 @@ ev_private:
 					/// <param name="camera">相机</param>
 					/// <returns></returns>
 					virtual void cameraParamChanged(_in EarthView::World::Graphic::CCamera* camera){}
+					ev_bool mNeedReNotify;
 				};
 
 				class EV_Spatial3DEngine_DLL CProjectMatrixListener : public EarthView::World::Graphic::CCamera::CCameraListener
@@ -1313,13 +1320,18 @@ ev_internal:
 				/// <param name="farDistance">最远的距离</param>
 				/// <returns></returns>
 				void computeAbsoluteProjectMatrix(_in ev_real64 trueDistance,_in ev_real64 farDistance);
-
-			public:
+			
 				/// <summary>
 				///通知相机的参数发生了变化
 				///</summary>
 				/// <returns></returns>
 				void _notifyParamChanged();
+				/// <summary>
+				///通知场景的视域发生变化
+				///</summary>
+				/// <returns></returns>
+				void _notifySceneViewChanged();
+			public:
 
 				/// <summary>
 				///返回视口
@@ -1429,7 +1441,17 @@ ev_internal:
 
 				CProjectMatrixListener* mProjectMatrixListener;
 
+				CGlobeCameraTimer *mTimer;
+
 				ev_real64 mNearClipRate;
+
+				ev_bool mSceneViewChanged;
+				ev_int32 mOldLevel;
+				ev_real32 mOldLon;
+				ev_real32 mOldLat;
+				ev_real32 mOldHeading;
+
+				friend class CGlobeCameraTimer;
 			};
 
 

@@ -22,6 +22,7 @@
 #include "globecontrol/widget.h"
 #include "globecontrol/globegrid.h"
 
+
 #define USESETSCENE 0
 
 
@@ -34,6 +35,7 @@
 #include "graphic/rendertargetlistener.h"
 
 #include "core/stringinterface.h"
+#include "graphic/colourvalue.h"
 
 namespace EarthView
 {
@@ -161,7 +163,8 @@ ev_private:
 				private:
 					InternalList mList;
 				};
-
+				
+				class CLatitudeLonitudeTextBox;
 				/// <summary>
 				/// 抽象数字地球控件
 				/// </summary>
@@ -202,11 +205,14 @@ ev_private:
 						/// </summary>
 						/// <param name="evt"></param>
 						/// <returns></returns>
-						virtual void postRenderTargetUpdate(const EarthView::World::Graphic::RenderTargetEvent &evt);						
+						virtual void postRenderTargetUpdate(const EarthView::World::Graphic::RenderTargetEvent &evt);		
+
+						
 					
 					};
 				private:
 					GlobeControlRenderTargetListener* mpRenderTargetlistener;
+					EarthView::World::Spatial3D::Controls::CLatitudeLonitudeTextBox* mLatitudeLonitudeTextBox;
 
 					friend class GlobeControlRenderTargetListener;
 				protected:
@@ -306,7 +312,12 @@ ev_private:
 					virtual ev_void notifyViewChanged(EarthView::World::Spatial::IViewArgs* args);
 
 					virtual void mouseButtonPress(_in ev_int32 x,_in ev_int32 y,_in ev_uint32 button);
-
+					EarthView::World::Spatial3D::Controls::CLatitudeLonitudeTextBox* getLatitudeLonitudeTextBox();
+					ev_void setKeySpeedScale(ev_real64 scale);
+					ev_real64 getKeySpeedScale();
+					ev_void setTextBoxColor(_in const EarthView::World::Graphic::CColourValue& color);
+					ev_void setBackGroundColor(_in const EarthView::World::Graphic::CColourValue& color);
+					ev_void setTextSpacerWidth(_in const Real width);
 				ev_private:
 					CGlobeControl(_in EarthView::World::Core::CNameValuePairList* pList);
 					//挪动了球时，会通知其他其他联动control
@@ -316,15 +327,20 @@ ev_private:
 				protected:
 					//EarthView::World::Spatial3D::CQuadTreeBackgroundQueue* mQuadTreeBackgroundQuene;
 					CToolHandler* mpToolHandler;
+					EarthView::World::Core::CRecursiveMutex mToolMtx;
 					CKmlTourHandler* mpKmlTourHandler;
 					CGlobeCameraManipulator* mpCameraManipulator;
 					CGlobeAnimationHandler* mpGlobeAnimationHandler;
+					EarthView::World::Core::CRecursiveMutex mGlobeAnimationHandlerMtx;
 					CGlobeCamUnderGroundHandler* mpGlobeCamUnderGroundHandler;
 					CGlobeLockCameraHandler* mpGlobeLockCameraHandler;
 					CGoogleCameraManipulator* mpGoogleCameraManipulator;
+					EarthView::World::Graphic::CColourValue mTextBoxColor;
+					EarthView::World::Graphic::CColourValue mBlackGroundColor;
 #if EV_PLATFORM == EV_PLATFORM_WIN32 
 					CCollisionDetectionCameraManipulator* mpCollisionDetectionCameraManipulator;
 #endif
+					
 				public:	
 					/// <summary>
 					/// 定位相机，相机飞行到指定位置
@@ -1074,8 +1090,13 @@ ev_private:
 					/// <param name="gva">竖直对齐的方式</param>
 					/// <returns></returns>
 					void setCustomStatusbarPosition(_in Real x,_in Real y,_in Real width,_in Real height,_in Real textOffsetX,_in Real textOffsetY,_in EarthView::World::Graphic::GuiHorizontalAlignment gha,_in EarthView::World::Graphic::GuiVerticalAlignment gva);
-
+                     /// <summary>
+					/// 设置自定义文本的文字高度
+					/// </summary>
+					/// <param name="textOffsetX">文字高度</param>
+					/// <returns></returns>
 					/// <summary>
+                    void setCustomStatusbarFontHeight(_in Real fontHeight);
 					///添加查询监听器
 					/// </summary>
 					/// <param name="listener">监听器</param>
@@ -1502,6 +1523,7 @@ ev_private:
 
 					typedef vector<EarthView::World::Spatial3D::Controls::CGlobeControlListener*> CGlobeControlListenerVector;
 					CGlobeControlListenerVector mGlobeControlListenerVec;
+					EarthView::World::Core::CRecursiveMutex mGlobeControlListenerMtx;
                 public:
 					/// <summary>
 					/// 获取EarthView::World::Core::CStringInterface对象

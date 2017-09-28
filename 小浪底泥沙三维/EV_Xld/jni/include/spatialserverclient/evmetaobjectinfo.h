@@ -7,6 +7,7 @@
 #include "spatialinterface/ifield.h"
 #include "spatialinterface/altitudemode.h"
 #include "spatialinterface/ilayer.h"
+#include "core/variant.h"
 
 namespace EarthView
 {
@@ -618,6 +619,7 @@ namespace EarthView
 			class EV_SPATIALSERVERCLIENT_DLL CServerTheme
 				:public EarthView::World::Core::CAllocatedObject
 			{
+				friend class MetaObjectInfoSerialize;
 			private:
 				EVString strThemeName;
 				EarthView::World::Spatial::EVSSCThemeType nThemeType;
@@ -686,6 +688,7 @@ namespace EarthView
 			class EV_SPATIALSERVERCLIENT_DLL CServerCacheLayerInfo
 				:public EarthView::World::Core::CAllocatedObject
 			{
+				friend class MetaObjectInfoSerialize;
 			private:
 				EVString strLayerName;
 				EarthView::World::Spatial::EVSSCSRS nSrs;
@@ -1148,7 +1151,7 @@ namespace EarthView
 			class EV_SPATIALSERVERCLIENT_DLL CMemoryStreamResult
 				:public EarthView::World::Core::CAllocatedObject
 			{
-			private:
+			ev_private:
 				EarthView::World::Core::MemoryDataStreamPtr pPtr;
 				friend class CEVSpatialServer;
 			public:
@@ -1921,6 +1924,7 @@ ev_private:
 			class EV_SPATIALSERVERCLIENT_DLL CServerOctreeNode
 				:public EarthView::World::Core::CAllocatedObject
 			{
+				friend class MetaObjectInfoSerialize;
 			public:
 				
 				/// <summary>
@@ -2008,6 +2012,7 @@ ev_private:
 			class EV_SPATIALSERVERCLIENT_DLL CServerDBField
 				:public EarthView::World::Core::CAllocatedObject
 			{
+			friend class MetaObjectInfoSerialize;
 			public:
 				/// <summary>
                 /// 获取字段名称
@@ -2073,7 +2078,7 @@ ev_private:
 			class EV_SPATIALSERVERCLIENT_DLL CEVTileInfo:
 				public EarthView::World::Core::CAllocatedObject
 			{
-			private:
+			public:
 				EarthView::World::Core::MemoryDataStreamPtr pPtr;
 				ev_bool* pIsLastest;
 				EarthView::World::Spatial::EVSSCFileFormat nFileFormat;
@@ -2147,7 +2152,7 @@ ev_private:
 			class EV_SPATIALSERVERCLIENT_DLL CEVDEMLayerInfo:
 				public EarthView::World::Spatial::GeoDataset::IDataMetaInfo
 			{
-			
+				friend class MetaObjectInfoSerialize;
 			public:
 				/// <summary>
                 /// 构造函数
@@ -2295,6 +2300,14 @@ ev_private:
 				/// <returns></returns>
 				virtual EVSSCCacheMode getOriginType()  const;
 
+				virtual ev_void setDatasetType(EarthView::World::Spatial::GeoDataset::EVDatasetType type);
+
+				/// <summary>
+				/// 用户自定义数据
+				/// </summary>
+				/// <returns></returns>
+				virtual EarthView::World::Core::CVariant userData();
+
 				/// <summary>
 				/// 
 				/// </summary>
@@ -2304,7 +2317,7 @@ ev_private:
 			ev_private:
 				CEVDEMLayerInfo(_in EarthView::World::Core::CNameValuePairList* plist);
 				
-			private:
+			ev_private:
 				EarthView::World::Spatial::EVSSCCacheDataType mnFileType;
 				EVString mstrName;
 				EVString mstrLayerName;
@@ -2328,6 +2341,10 @@ ev_private:
 				ev_real64 mdfWestForZeroLevel;
 
 				EVSSCCacheMode mOriginType;
+
+				EarthView::World::Spatial::GeoDataset::EVDatasetType mDatasetType;
+				
+				EarthView::World::Core::CVariant mUserData;
 
 				friend class CEVSpatialServer;
 				friend class CEVSpatialServerMetadataCacheVisitor;
@@ -2486,6 +2503,42 @@ ev_private:
 				
 
 			};
+
+			class EV_SPATIALSERVERCLIENT_DLL CStreetViewMetaDataInfo
+				:public EarthView::World::Spatial::GeoDataset::IDataMetaInfo
+			{
+			public:
+				CStreetViewMetaDataInfo(_in const EVString& name,EarthView::World::Spatial::GeoDataset::EVDatasetType type);
+				virtual ~CStreetViewMetaDataInfo();
+
+				virtual EarthView::World::Spatial::GeoDataset::EVDatasetType getDatasetType() const;
+				virtual EVString getName() const;
+				virtual const EarthView::World::Spatial::Geometry::IEnvelope* getEnvelopeRef() const;
+				virtual EarthView::World::Spatial::Geometry::ISpatialReference* getSpatialReference() const;
+				virtual ev_int32 getSrid()const ;
+				virtual ev_int64 getPointCount();
+				virtual ev_int32 getSubDivisionLevel();
+				virtual ev_bool setName(EVString& name);
+				virtual ev_bool setEnvelopeRef(EarthView::World::Spatial::Geometry::IEnvelope* pEnvelope);
+				virtual ev_bool setSpatialReference(EarthView::World::Spatial::Geometry::ISpatialReference* pSR);
+				virtual ev_bool setSrid(ev_int32 srid);
+				virtual ev_bool setPointCount(ev_int64 count);
+				virtual ev_bool setSubDivisionLevel(ev_int32 level);
+				virtual ev_void clone(const EarthView::World::Spatial::GeoDataset::IDataMetaInfo* pOther);
+			private:				
+				EVString mName;				
+				ev_int32 mSrid;
+				EarthView::World::Spatial::Geometry::ISpatialReference* mpSpatialReference;
+				EarthView::World::Spatial::Geometry::IEnvelope* mEnvelope;
+				EarthView::World::Spatial::GeoDataset::EVDatasetType mType;
+				ev_int64 mPointcount;
+				ev_int32 mSubDivisionLevel;
+ev_private:
+				CStreetViewMetaDataInfo( EarthView::World::Core::CNameValuePairList *pList );
+
+			};
+
+
 		
 
 			class EV_SPATIALSERVERCLIENT_DLL CEVBaseModelLayerInfo
@@ -2523,6 +2576,7 @@ ev_private:
 			class EV_SPATIALSERVERCLIENT_DLL CEVModelLayerInfo
 				:public CEVBaseModelLayerInfo
 			{
+				friend class MetaObjectInfoSerialize;
 			public:
 				/// <summary>
                 /// 构造函数
@@ -2698,6 +2752,7 @@ ev_private:
 			class EV_SPATIALSERVERCLIENT_DLL CEVKMLLayerInfo
 				:public EarthView::World::Spatial::GeoDataset::IDataMetaInfo
 			{
+				friend class MetaObjectInfoSerialize;
 			public:				
 				//const CClientBaseDefine::KMLLod* getKMLLodRef() const;
 				//const CClientBaseDefine::LatLonAltBox* getKMLLatLonAltBoxRef() const;
@@ -2817,6 +2872,7 @@ ev_private:
 			class EV_SPATIALSERVERCLIENT_DLL CEVLayerInfo:
 				public EarthView::World::Spatial::GeoDataset::IDataMetaInfo
 			{
+				friend class MetaObjectInfoSerialize;
 			public:
 				/// <summary>
                 /// 析构函数
@@ -2945,7 +3001,7 @@ ev_private:
 				CEVLayerInfo();
 			ev_private:
 				CEVLayerInfo(_in EarthView::World::Core::CNameValuePairList* plist);	
-			protected:
+			ev_private:
 				///图层名称
 				EVString mstrLayerName;
 				EVString mstrDescription;
@@ -2977,6 +3033,7 @@ ev_private:
 			class EV_SPATIALSERVERCLIENT_DLL CEVWMTSLayerInfo
 				:public EarthView::World::Spatial::CEVLayerInfo
 			{
+				friend class MetaObjectInfoSerialize;
 			public:
 				/// <summary>
                 /// 构造函数
@@ -3046,6 +3103,13 @@ ev_private:
                 /// </summary>
                 /// <returns>数据集类型：DT_SERVER_WMTS_DATASET</returns>
 				virtual EarthView::World::Spatial::GeoDataset::EVDatasetType getDatasetType() const;
+
+				//inherit
+				/// <summary>
+				/// 获取数据集类型
+				/// </summary>
+				/// <returns>数据集类型：DT_SERVER_WMTS_DATASET</returns>
+				virtual ev_void setDatasetType(EarthView::World::Spatial::GeoDataset::EVDatasetType type);
 				
 				//inherit
 				/// <summary>
@@ -3055,6 +3119,12 @@ ev_private:
 				virtual EVString getName() const;//同于getGeocodeName
 
 				/// <summary>
+				/// 用户自定义数据
+				/// </summary>
+				/// <returns></returns>
+				virtual EarthView::World::Core::CVariant userData();
+
+				/// <summary>
 				/// 
 				/// </summary>
 				/// <param name=""></param>
@@ -3062,7 +3132,7 @@ ev_private:
 				virtual ev_void clone(const EarthView::World::Spatial::GeoDataset::IDataMetaInfo* pOther);
 			ev_private:
 				CEVWMTSLayerInfo(_in EarthView::World::Core::CNameValuePairList* plist);
-			private:	
+			ev_private :	
 				///数据集名称
 				EVString mstrName;
 				EarthView::World::Spatial::EVSSCCacheDataType mnFileType;
@@ -3073,6 +3143,9 @@ ev_private:
 				EVString mstrTheme;
 				ev_uint32 mnTileHeight;
 				ev_uint32 mnTileWidth;
+				EarthView::World::Spatial::GeoDataset::EVDatasetType mDatasetType;
+			
+				EarthView::World::Core::CVariant mUserData;
 
 				friend class CEVSpatialServer;
 				friend class CEVSpatialServerMetadataCacheVisitor;
@@ -3088,6 +3161,7 @@ ev_private:
 			class EV_SPATIALSERVERCLIENT_DLL CEVMapLayerInfo:
 					public EarthView::World::Spatial::CEVLayerInfo
 			{
+				friend class MetaObjectInfoSerialize;
 			public:
 				/// <summary>
                 /// 构造函数
@@ -3270,6 +3344,7 @@ ev_private:
 			class EV_SPATIALSERVERCLIENT_DLL CEVWMSMapInfo:
 						public EarthView::World::Spatial::GeoDataset::IDataMetaInfo
 			{
+				friend class MetaObjectInfoSerialize;
 			public:
 				/// <summary>
                 /// 构造函数
@@ -3379,6 +3454,7 @@ ev_private:
 			class EV_SPATIALSERVERCLIENT_DLL CEVWMSChartObjectInfo:
 				public EarthView::World::Spatial::GeoDataset::IDataMetaInfo
 			{
+				friend class MetaObjectInfoSerialize;
 		ev_private:
 				CEVWMSChartObjectInfo(_in EarthView::World::Core::CNameValuePairList *pList)
 					: EarthView::World::Spatial::GeoDataset::IDataMetaInfo(pList)
@@ -3473,6 +3549,7 @@ ev_private:
 			class EV_SPATIALSERVERCLIENT_DLL CEVWMSImageInfo:
 				public EarthView::World::Spatial::GeoDataset::IDataMetaInfo
 			{
+				friend class MetaObjectInfoSerialize;
 ev_private:
 				CEVWMSImageInfo(_in EarthView::World::Core::CNameValuePairList *pList)
 					: EarthView::World::Spatial::GeoDataset::IDataMetaInfo(pList)

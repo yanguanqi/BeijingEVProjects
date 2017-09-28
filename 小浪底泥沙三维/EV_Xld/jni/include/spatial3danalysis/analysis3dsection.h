@@ -98,12 +98,12 @@ ev_private:
 					/// <summary>
 					/// 销毁所有渲染对象及结果
 					/// </summary>
-					virtual ev_void reset();
+					virtual ev_void reset_impl();
 					/// <summary>
 					/// 初始化
 					/// </summary>
 					/// <param name=""></param>
-					virtual ev_void initialize();
+					virtual ev_void initialize_impl();
 					/// <summary>
 					/// 分析与测量的调用接口
 					/// </summary>
@@ -207,6 +207,7 @@ ev_private:
 					/// <param name="onlyCoordinate">是否只有坐标</param>
 					/// <returns>数据流指针</returns>
 					EarthView::World::Core::MemoryDataStreamPtr ToBitmapStreamPtr(ev_int32 width, ev_int32 height, ev_bool onlyCoordinate);
+					EarthView::World::Core::MemoryDataStreamPtr  ToBitmapStreamPtr(ev_int32 width, ev_int32 height, const EarthView::World::Graphic::CColourValue& backgroudColor, const EarthView::World::Graphic::CColourValue& axisColor, const EarthView::World::Graphic::CColourValue& scaleCharacterColor, const EarthView::World::Graphic::CColourValue& curveColor, const EarthView::World::Graphic::CColourValue& altColor, const EarthView::World::Graphic::CColourValue& slopeColor);
 					/// <summary>
 					/// 鼠标弹起事件触发
 					/// </summary>

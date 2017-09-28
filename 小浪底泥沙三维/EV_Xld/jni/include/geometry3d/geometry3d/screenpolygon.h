@@ -1,4 +1,4 @@
-#ifndef EARTHVIEW_WORLD_SPATIAL3D_GEOMETRY_SCREENPOLYGON_H
+ï»¿#ifndef EARTHVIEW_WORLD_SPATIAL3D_GEOMETRY_SCREENPOLYGON_H
 #define EARTHVIEW_WORLD_SPATIAL3D_GEOMETRY_SCREENPOLYGON_H
 
 #include <core/memoryallocatedobject.h>
@@ -26,37 +26,37 @@ namespace EarthView
 		{			
 			class CMultiPolygon3DExtension;
 			/// <summary>
-			///ÆÁÄ»µãÀà
+			///å±å¹•ç‚¹ç±»
 			/// </summary>
 			class EV_GEOMETRY3D_DLL CScreenPolygon : public EarthView::World::Geometry3D::CScreenGeometry
 			{
 ev_private:
 				/// <summary>
-				/// ¹¹Ôìº¯Êı
+				/// æ„é€ å‡½æ•°
 				/// </summary>
-				/// <param name="pList">¹¹Ôìº¯Êı²ÎÊı¼üÖµ¶Ô±í</param>
+				/// <param name="pList">æ„é€ å‡½æ•°å‚æ•°é”®å€¼å¯¹è¡¨</param>
 				/// <returns></returns>
 				CScreenPolygon(EarthView::World::Core::CNameValuePairList* pList);
 			public:
 				/// <summary>
-				/// ¹¹Ôìº¯Êı
+				/// æ„é€ å‡½æ•°
 				/// </summary>
-				/// <param name="scenemanager">³¡¾°¹ÜÀíÆ÷</param>
-				/// <param name="type">µãÀàĞÍ</param>
-				/// <param name="estimatedCount">Ô¤Éèµã¸öÊı</param>
+				/// <param name="scenemanager">åœºæ™¯ç®¡ç†å™¨</param>
+				/// <param name="type">ç‚¹ç±»å‹</param>
+				/// <param name="estimatedCount">é¢„è®¾ç‚¹ä¸ªæ•°</param>
 				/// <returns></returns>
 				CScreenPolygon(EarthView::World::Graphic::CSceneManager* ref_scenemanager);
 				/// <summary>
-				/// ¹¹Ôìº¯Êı
+				/// æ„é€ å‡½æ•°
 				/// </summary>
-				/// <param name="scenemanager">³¡¾°¹ÜÀíÆ÷</param>
-				/// <param name="type">µãÀàĞÍ</param>
-				/// <param name="estimatedCount">Ô¤Éèµã¸öÊı</param>
-				/// <param name="texture">ÎÆÀíÍ¼Æ¬Á÷</param>
+				/// <param name="scenemanager">åœºæ™¯ç®¡ç†å™¨</param>
+				/// <param name="type">ç‚¹ç±»å‹</param>
+				/// <param name="estimatedCount">é¢„è®¾ç‚¹ä¸ªæ•°</param>
+				/// <param name="texture">çº¹ç†å›¾ç‰‡æµ</param>
 				/// <returns></returns>
 				CScreenPolygon(EarthView::World::Graphic::CSceneManager* ref_scenemanager,EarthView::World::Core::DataStreamPtr& texture);
 				/// <summary>
-				/// Îö¹¹º¯Êı
+				/// ææ„å‡½æ•°
 				/// </summary>
 				/// <param name=""></param>
 				/// <returns></returns>
@@ -65,20 +65,20 @@ ev_private:
 			public:	
 
 				/// <summary>
-				/// ¿ªÊ¼×·¼Ó¶à±ßĞÎ,renderÖ®ºóÎŞĞ§
+				/// å¼€å§‹è¿½åŠ å¤šè¾¹å½¢,renderä¹‹åæ— æ•ˆ
 				/// </summary>
 				/// <returns></returns>
 				ev_void begin();
 				/// <summary>
-				/// ×·¼Ó¶à±ßĞÎ
+				/// è¿½åŠ å¤šè¾¹å½¢
 				/// </summary>
-				/// <param name="color">ÑÕÉ«</param>
-				/// <param name="polygon">ÎŞ²Î¿¼ÏµµÄ¶şÎ¬Ãæ,×ø±êÓÃxºÍz£¬×ø±êÀàĞÍºÍÉèÖÃµÄÆÁÄ»×ø±êÀàĞÍÒ»ÖÂ</param>
+				/// <param name="color">é¢œè‰²</param>
+				/// <param name="polygon">æ— å‚è€ƒç³»çš„äºŒç»´é¢,åæ ‡ç”¨xå’Œzï¼Œåæ ‡ç±»å‹å’Œè®¾ç½®çš„å±å¹•åæ ‡ç±»å‹ä¸€è‡´</param>
 				/// <returns></returns>
 				ev_void appendPolygon(const EarthView::World::Spatial::Geometry::CPolygon& polygon,const EarthView::World::Graphic::CColourValue& color);
 				ev_void appendPolygon(const EarthView::World::Spatial::Geometry::CPolygon& polygon);
 				/// <summary>
-				/// ½áÊø×·¼Ó¶à±ßĞÎ,¿ªÊ¼½øĞĞ¶à±ßĞÎ·Ö¸î£¬´´½¨buffer
+				/// ç»“æŸè¿½åŠ å¤šè¾¹å½¢,å¼€å§‹è¿›è¡Œå¤šè¾¹å½¢åˆ†å‰²ï¼Œåˆ›å»ºbuffer
 				/// </summary>
 				/// <returns></returns>
 				ev_void end();
@@ -89,9 +89,9 @@ ev_private:
 
 			private:
 				/// <summary>
-				/// ¸´ÖÆ¹¹Ôìº¯Êı
+				/// å¤åˆ¶æ„é€ å‡½æ•°
 				/// </summary>
-				/// <param name="obj">¶ÔÏó</param>
+				/// <param name="obj">å¯¹è±¡</param>
 				/// <returns></returns>
 				CScreenPolygon(const CScreenPolygon& obj);
 

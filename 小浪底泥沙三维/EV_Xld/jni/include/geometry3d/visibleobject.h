@@ -102,14 +102,20 @@ ev_private:
 				/// </summary>
 				/// <param name="pList">构造函数参数键值对表</param>
 				/// <returns></returns>
-				CVisibleObject(_in EarthView::World::Core::CNameValuePairList *pList){}
+				CVisibleObject(_in EarthView::World::Core::CNameValuePairList *pList);
 
 			private:
 				typedef set<CVisibleObjectListener*> ListenerVec;
 				ListenerVec mListenerVec;
+				EarthView::World::Core::CRecursiveMutex mListenerMutex;
 				EarthView::World::Core::CRecursiveMutex mAsynMutex;
 			protected:
+				EarthView::World::Core::CRecursiveMutex mLoadMutex;
 				EarthView::World::Graphic::CNode* mpWorldNode;
+				EVString mVisibleName;
+				EVString mVisibleTag;
+				ev_bool mIsAbortFilterRequest;
+				EarthView::World::Spatial::GeoDataset::CPropertySet mPropertySet;
 			protected:
 				/// <summary>
 				/// 构造函数
@@ -261,6 +267,8 @@ ev_private:
 				/// <returns>true成功，false失败</returns>
 				void removeListener(CVisibleObjectListener* listener);
 
+
+
 				/// <summary>
 				///  获取监听器个数
 				/// </summary>
@@ -283,6 +291,9 @@ ev_private:
 				virtual ev_bool getSelectable();
 
 				virtual ev_bool update();
+
+				virtual void abortFilterRequest(ev_bool val);
+				ev_bool isAbortFilterRequest();
 ev_private:
 				/// <summary>
 				///  通知监听器
@@ -318,10 +329,43 @@ ev_private:
 				virtual ev_uint32 getID();
 
 				/// <summary>
+				/// 设置可见对象名称
+				/// </summary>
+				/// <returns>名称</returns>
+				virtual void setName(const EVString& name);
+
+				/// <summary>
 				/// 获取可见对象名称
 				/// </summary>
 				/// <returns>名称</returns>
 				virtual EVString getName();
+
+				/// <summary>
+				/// 设置附加tag属性，可以存些自定义的东西
+				/// </summary>
+				/// <returns>名称</returns>
+				virtual void setTag(const EVString& tag);
+
+				/// <summary>
+				/// 获得附加tag属性
+				/// </summary>
+				/// <returns>名称</returns>
+				virtual EVString getTag();
+
+				/// <summary>
+				/// 设置附加键值对属性，可以存些自定义的东西
+				/// </summary>
+				/// <returns>名称</returns>
+				virtual void setPropertySet(const EarthView::World::Spatial::GeoDataset::CPropertySet& ps);
+
+				/// <summary>
+				/// 获得附加键值对属性
+				/// </summary>
+				/// <returns>名称</returns>
+				virtual EarthView::World::Spatial::GeoDataset::CPropertySet getPropertySet();
+
+
+
 
 
 				/// <summary>

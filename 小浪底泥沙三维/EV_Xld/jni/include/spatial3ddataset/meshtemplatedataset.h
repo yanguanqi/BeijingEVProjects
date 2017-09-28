@@ -3,6 +3,7 @@
 
 #include "spatial3ddataset/spatial3ddatasetconfig.h"
 #include "spatialinterface/ifeatureclass.h"
+#include "spatial3ddataset/modeltemplateplugin.h"
 
 
 
@@ -22,7 +23,7 @@ namespace EarthView{
 		namespace Spatial3D{
 			namespace Dataset{
 				
-
+				
 				class EV_Spatial3DDataset_DLL CMeshTemplateDataset : public EarthView::World::Spatial::GeoDataset::IFeatureClass
 				{
 					friend class CModelDataSource;
@@ -33,6 +34,9 @@ namespace EarthView{
 					EarthView::World::Spatial::GeoDataset::IDataSource* mpDataSource;
 					EarthView::World::Spatial::GeoDataset::IFeatureClass* mpResDataset;
 					EarthView::World::Spatial::GeoDataset::IFields* mpFlds;
+					static vector<IModelTemplatePlugin*> mModelTemplatePlugins;
+					static EVString mCurrentPluginName;
+
 ev_private:
 					/// <summary>
 					/// 构造函数
@@ -56,6 +60,13 @@ ev_private:
 					/// <returns></returns>
 					
 					virtual ~CMeshTemplateDataset();
+					static void loadPlugin();
+					static void installPlugin(IModelTemplatePlugin* plugin);
+					static void uninstallPlugin(IModelTemplatePlugin* plugin);					
+					static IModelTemplatePlugin* getPlugin(ev_uint32 index);
+				    static ev_bool setCurrentPlugin(const EVString& pluginName);
+				    static IModelTemplatePlugin* getCurrentPlugin();
+				    static ev_uint32 getPluginCount();
 
 					/// <summary>
 					/// 获取数据集类型

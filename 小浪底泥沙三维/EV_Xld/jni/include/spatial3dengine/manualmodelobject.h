@@ -420,6 +420,19 @@ ev_private:
 					/// </summary>
 					/// <returns></returns>
 					virtual ev_bool isApplyEnvMap();
+
+					/// <summary>
+					/// 应用自发光纹理贴图
+					/// </summary>
+					/// <param name="enabled">启用</param>
+					/// <returns></returns>
+					virtual void applySelfIlluminationMap(ev_bool enabled);
+
+					/// <summary>
+					/// 查询是否应用自发光纹理贴图
+					/// </summary>
+					/// <returns></returns>
+					virtual ev_bool isApplySelfIlluminationMap();
 				private:
 					/// <summary>
 					/// 动画时需设置subentity的可见性
@@ -545,6 +558,14 @@ ev_private:
 					EarthView::World::Spatial3D::CComponent getComponentBySubEntity(EarthView::World::Graphic::CSubEntity* pSubEntity,ev_int32 indexBegun,ev_int32 indexEnd);
 
 					/// <summary>
+					///  根据component ID 获取Component
+					/// </summary>
+					/// <param name="componentID">componentID</param>
+					/// <param name="result">component</param>
+					/// <returns>是否找到</returns>
+					ev_bool getComponentByID(ev_uint32 componentID, _out EarthView::World::Spatial3D::CComponent& result);
+
+					/// <summary>
 					/// 设置组件是否显示
 					/// </summary>
 					/// <param name="component">组件</param>
@@ -567,6 +588,7 @@ ev_private:
 					virtual void setComponentTransparency(const EarthView::World::Spatial3D::CComponent& component,ev_real32 alpha);
 
 
+
                 ev_private:
                     
 					ev_bool needCopyMeshForEnvMap();
@@ -587,6 +609,7 @@ ev_private:
 						vector<EarthView::World::Graphic::CEntity*> mEntityVector;
 						EarthView::World::Core::IntVector mhideSubEntityIndexs;
 						bool mIsApplyEnvMap;
+						bool mIsApplySelfIlluminationMap;
 
 				protected:
 						/// <summary>
@@ -605,8 +628,11 @@ ev_private:
 						void findComponent(EarthView::World::Spatial3D::CComponent& component,_out EarthView::World::Spatial3D::CComponent& resultComponent,EarthView::World::Graphic::CSubEntity* pSubEntity );
 						void findComponent(EarthView::World::Spatial3D::CComponent& component,_out EarthView::World::Spatial3D::CComponent& resultComponent,EarthView::World::Graphic::CSubEntity* pSubEntity,ev_int32 indexBegun,ev_int32 indexEnd );
 
+						ev_bool findComponent(const EarthView::World::Spatial3D::CComponent& rootComponent,_out EarthView::World::Spatial3D::CComponent& resultComponent, ev_uint32 componentID);
+
 						EarthView::World::Graphic::CNode* _createLocalAxisNode(EarthView::World::Spatial3D::CComponent& component);
 
+						void switchSelfIlluminationGPU();
 
 				};
 

@@ -62,6 +62,9 @@ namespace EarthView{
 
 					ev_bool isBatch();
 					ev_void setBatch(ev_bool batch);
+
+					virtual _extfree EarthView::World::Core::CEvent* clone() const;
+
 				protected:
 					ev_uint32 mID;
 					EarthView::World::Spatial::Atlas::IMap* mMap;

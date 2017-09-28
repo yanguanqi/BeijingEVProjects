@@ -320,7 +320,7 @@ ev_private:
 					/// </summary>
 					/// <param name="visible">TRUE/FALSE</param>
 					/// <returns></returns>
-					virtual ev_void setVisible(ev_bool visible);
+					virtual ev_void setVisible_impl(ev_bool visible);
 
 
 					/// <summary>
@@ -433,15 +433,7 @@ ev_private:
 					/// </summary>
 					/// <param name="pSceneMgr">场景管理器</param>
 					/// <returns></returns>
-					virtual ev_void _notifyLayerRemoved(EarthView::World::Graphic::CSceneManager* pSceneMgr);
-
-					/// <summary>
-					/// Globe刷新时通知图层刷新
-					/// </summary>
-					/// <param name="camera">当前的相机</param>
-					/// <param name="updateType">刷新类型</param>
-					/// <returns></returns>
-					virtual ev_void _notifyRefreshed(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
+					virtual ev_void _notifyLayerRemoved_impl(EarthView::World::Graphic::CSceneManager* pSceneMgr);
 
 					/// <summary>
 					/// 设置对象可见性条件
@@ -459,6 +451,13 @@ ev_private:
 					/// <returns>ev_bool,获取成功返回TRUE,失败返回FALSE</returns>
 					ev_bool getVisibilityFilter( ev_bool& visible,EarthView::World::Core::IntVector& ids );
 ev_internal:
+					/// <summary>
+					/// Globe刷新时调用的函数
+					/// </summary>
+					/// <param name="camera">当前的相机</param>
+					/// <param name="updateType">刷新类型</param>
+					/// <returns></returns>
+					virtual ev_void _notifyRefreshed_impl(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
 					/// <summary> 
 					/// 读入数据流
 					/// </summary>

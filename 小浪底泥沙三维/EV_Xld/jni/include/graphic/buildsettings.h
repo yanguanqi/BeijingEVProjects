@@ -23,6 +23,13 @@
 #define EV_NO_FREEIMAGE 0
 #define EV_NO_DDS_CODEC 0
 #define EV_NO_PVRTC_CODEC 0
+
+#ifdef EV_OS_ANDROID
+#define EV_NO_PKM_CODEC 0
+#else
+#define EV_NO_PKM_CODEC 1
+#endif
+
 #define EV_NO_ZIP_ARCHIVE 0
 #define EV_NO_VIEWPORT_ORIENTATIONMODE 0
 #define EV_USE_NEW_COMPILERS 1

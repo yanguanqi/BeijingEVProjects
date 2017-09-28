@@ -76,9 +76,14 @@ namespace EarthView
                     ZeroTimerEvent = 47,                    			/// 0秒定时器事件
                     SockAct = 48,
                     UpdateRequest = 49,									/// 请求重绘
-                    /// Last type used: 49
-                    User = 50,                                 			///用户事件id
-                    MaxUser = 50                         			/// 最后的用户事件id
+					SwapBuffers = 50,									/// 交换帧缓冲
+					UpdateTileTexture = 51,								/// 更新瓦片纹理
+					UpdateTileAltitude = 52,							/// 更新瓦片高程
+					SyncCommandEvent = 53,								/// 用来处理同步命令的事件
+					ViewChanged = 54,									/// 视图发生改变
+                    /// Last type used: 54
+                    User = 1000,                                 			///用户事件id
+                    MaxUser = 60000                         			/// 最后的用户事件id
                 };
                 /// <summary>
                 /// 构造函数，通过事件类型构造
@@ -116,6 +121,9 @@ namespace EarthView
                 /// <param name="posted">是否被post</param>
                 /// <returns></returns>
                 void setPosted(_in ev_bool posted);
+
+				virtual _extfree EarthView::World::Core::CEvent* clone() const;
+
             protected:
                 ev_uint16 m_type;
                 ev_bool m_posted;
@@ -169,7 +177,30 @@ namespace EarthView
                 NormalEventPriority = 0,
                 LowEventPriority = -1
             };
-            class CPostEvent;
+			class EV_CORE_DLL CPostEvent : public EarthView::World::Core::CBaseObject
+			{
+			public:
+				CPostEvent();
+				CPostEvent(EarthView::World::Core::CEventObject *r, EarthView::World::Core::CEvent *e, ev_int32 p);
+				~CPostEvent();
+			ev_private:
+				CPostEvent(EarthView::World::Core::CNameValuePairList *pList);
+				EarthView::World::Core::CEventObject *receiver;
+				EarthView::World::Core::CEvent *event;
+				ev_int32 priority;
+			};
+			class EV_CORE_DLL IEventHelper : public EarthView::World::Core::CBaseObject
+			{
+			public:
+				IEventHelper();
+				virtual void postEvent(EarthView::World::Core::CPostEvent *e);
+				virtual void removePostedEvents(EarthView::World::Core::CEventObject *receiver);
+				virtual void removePostedEvents(EarthView::World::Core::CEventObject *receiver, ev_int32 eventType);
+				virtual void registerTimer(ev_int32 timerID, ev_int32 interval, EarthView::World::Core::CEventObject *object);
+				virtual ev_bool unregisterTimer(ev_int32 timerID);
+			ev_private:
+				IEventHelper(EarthView::World::Core::CNameValuePairList *pList);
+			};
             /// <summary>
             /// 事件分发器类
             /// 用户可通过该类的静态函数向对象发送同步或异步事件
@@ -200,13 +231,22 @@ namespace EarthView
                 /// <returns>发送成功返回true，否则返回false</returns>
                 static ev_bool sendEvent(_in EarthView::World::Core::CEventObject *receiver, _in CEvent *e);
                 /// <summary>
-                /// 向指定对象发送异步事件，主要用在从工作线程向主线程发送事件
+                /// 向指定对象发送异步事件，主要用在从工作线程向渲染线程发送事件
                 /// </summary>
                 /// <param name="receiver">事件接收者对象</param>
                 /// <param name="e">事件</param>
                 /// <param name="priority">事件优先级，一般为NormalEventPriority</param>
                 /// <returns>发送成功返回true，否则返回false</returns>
                 static ev_bool postEvent(_in EarthView::World::Core::CEventObject *receiver, _nofree _in CEvent *e, _in ev_int32 priority);
+
+                /// <summary>
+                /// 向指定对象发送异步事件，主要用在从工作线程向渲染线程或主线程发送事件
+                /// </summary>
+                /// <param name="receiver">事件接收者对象</param>
+                /// <param name="e">事件</param>
+                /// <param name="priority">事件优先级，一般为NormalEventPriority</param>
+                /// <returns>发送成功返回true，否则返回false</returns>
+                static ev_bool postEvent(_in EarthView::World::Core::CEventObject *receiver, _nofree _in CEvent *e, _in ev_int32 priority, ev_bool bUIThread);
 
 				/// <summary>
 				/// 移除异步事件接收者
@@ -235,6 +275,14 @@ namespace EarthView
                 /// <param name="timerID">定时器id</param>
                 /// <returns></returns>
                 static void removePostedTimerEvent(_in EarthView::World::Core::CEventObject *pObject, _in ev_int32 timerID);
+
+				/// <summary>
+				/// 当开启后台渲染模式的时候，正常情况下posted events是在渲染线程处理的，但某些事件只能post到主线程处理，因此这里可供外部设置一个帮助者，以支持主线程处理
+				/// </summary>
+				/// <param name="object">事件接收者对象</param>
+				/// <param name="timerID">定时器id</param>
+				/// <returns></returns>
+				static void setEventHelper(EarthView::World::Core::IEventHelper *helper);
             ev_internal:
                 /// <summary>
                 /// 重载的事件处理函数
@@ -250,12 +298,20 @@ namespace EarthView
                 /// <returns></returns>
                 static void sendPostedEvents();
                 /// <summary>
-                /// 注册定时器的内部函数
+                /// 注册定时器的内部函数，默认定时器在渲染线程执行
                 /// </summary>
                 /// <param name="interval">定时器时间间隔</param>
                 /// <param name="object">定时器的开启者</param>
                 /// <returns>定时器id</returns>
                 static ev_int32 registerTimer(_in ev_int32 interval, _in EarthView::World::Core::CEventObject *pObject);
+				/// <summary>
+				/// 注册定时器的内部函数
+				/// </summary>
+				/// <param name="interval">定时器时间间隔</param>
+				/// <param name="object">定时器的开启者</param>
+				/// <param name="bUIThread">true表示定时器是在主线程执行，false表示在渲染线程执行</param>
+				/// <returns>定时器id</returns>
+				static ev_int32 registerTimer(_in ev_int32 interval, _in EarthView::World::Core::CEventObject *pObject, ev_bool bUIThread);
                 /// <summary>
                 /// 注销定时器的内部函数
                 /// </summary>
@@ -264,6 +320,7 @@ namespace EarthView
                 static ev_bool unregisterTimer(_in ev_int32 id);
             private:
                 static list<CPostEvent *> ms_listEvents;
+				static IEventHelper *ms_eventHelper;
                 friend class CEventObject;
             };
         }

@@ -345,6 +345,15 @@ namespace EarthView
 				/// <returns></returns>
 				const EarthView::World::Spatial::Math::CAxisAlignedBox& getVertexBoundingBox();
 
+				//
+				//新加
+				//
+				ev_void setVertexBoundingBox(EarthView::World::Spatial::Math::CAxisAlignedBox& boundingBox);
+
+				ev_void setReferenceSubmesh(CSubMesh* submesh);
+
+				CSubMesh* getReferenceSubmesh() const;
+
 				ev_void setBoundingBoxDirty();
 				ev_void setVertexBoundingBoxDirty();
 
@@ -446,6 +455,8 @@ namespace EarthView
 				EarthView::World::Spatial::Math::CAxisAlignedBox mVertexBox;				//顶点buffer的包围盒
 
 				EarthView::World::Spatial::Math::CMatrix4 mLocalMatrix;						///施加到submesh上的模型内部矩阵
+
+				CSubMesh* mReferenceSubmesh;
 			
 			private:					
 				static ev_bool select(const EarthView::World::Spatial::Math::CRay& ray,const EarthView::World::Graphic::CViewport* viewport,const EarthView::World::Graphic::CVertexData* vData,const EarthView::World::Graphic::CIndexData* iData,EarthView::World::Graphic::CRenderOperation::OperationType ot,const EarthView::World::Spatial::Math::CMatrix4& worldMatrix,ev_bool positiveSide,ev_bool negativeSide,

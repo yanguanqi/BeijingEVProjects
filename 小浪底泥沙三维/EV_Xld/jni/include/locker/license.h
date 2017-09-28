@@ -159,6 +159,8 @@ ev_private:
 				///                     反之，value无效。</param>
 				/// <returns>模块状态</returns>
 				EarthView::World::License::EVLicenseStatusType getModuleStatus(EarthView::World::License::EVLicenseModule module,const EVString& value);
+				
+				
 				/// <summary>
 				/// 获取模块过期时间
 				/// <summary>
@@ -204,6 +206,26 @@ ev_private:
 			public:
 				CWebLicense();
 				~CWebLicense();
+				/// <summary>
+				/// 获取模块初始化状态
+				/// <summary>
+				/// <param name="ip">IP地址</param>
+				/// <param name="value">端口号
+				/// <param name="module">模块名称
+				/// <param name="timeout_ms">请求超时时间
+				///                     如果许可模块为自定义，则value有效，用作判断
+				///                     反之，value无效。</param>
+				/// <returns>模块状态</returns>
+				EarthView::World::License::EVLicenseStatusType getModuleStatus( const EVString &ip, const EVString &port, const EVString &module,ev_uint32 timeout_ms);
+				/// <summary>
+				/// 获取模块初始化状态
+				/// <summary>
+				/// <param name="ip">IP地址</param>
+				/// <param name="value">端口号
+				/// <param name="module">模块名称
+				///                     如果许可模块为自定义，则value有效，用作判断
+				///                     反之，value无效。</param>
+				/// <returns>模块状态</returns>
 				EarthView::World::License::EVLicenseStatusType getModuleStatus( const EVString &ip, const EVString &port, const EVString &module);
 			private:
 				CWebLicensePrivate *d_ptr;

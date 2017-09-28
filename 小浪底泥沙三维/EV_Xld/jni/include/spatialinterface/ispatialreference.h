@@ -151,7 +151,16 @@ namespace EarthView{
 					/// <param name=""></param>
 					/// <returns>空间参考系统对象指针</returns>
 					virtual EarthView::World::Spatial::Geometry::ISpatialReference* clone() const;
-
+					/// <summary>
+					/// 是否是地理坐标系统
+					/// </summary>
+					///<returns>ev_real64</returns>
+					virtual const ev_bool isGeographic()const;
+					/// <summary>
+					/// 是否是投影坐标系统
+					/// </summary>
+					///<returns>ev_real64</returns>
+					virtual const ev_bool isProjected()const;
 					////by jiang guo wei 2012 12 03 
                     //{
 					/// <summary>

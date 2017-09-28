@@ -33,7 +33,7 @@ namespace EarthView{
 				/// 视图监听者的基类
 				/// 纯虚类                
 				/// </summary>
-				class EV_SPATIALGUI_DLL IViewListener : public EarthView::World::Core::CAllocatedObject
+				class EV_SPATIALGUI_DLL IViewListener : public EarthView::World::Core::CEventObject
 				{
 				ev_private:
 					IViewListener(_in EarthView::World::Core::CNameValuePairList* pList);
@@ -42,8 +42,7 @@ namespace EarthView{
 					virtual ~IViewListener();
 
 				public:
-					virtual ev_void onViewChanged(EarthView::World::Spatial::IViewArgs* args);
-					
+					virtual ev_void onViewChanged(EarthView::World::Spatial::IViewArgs* args);					
 				};
 
 		}

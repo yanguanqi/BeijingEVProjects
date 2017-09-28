@@ -279,6 +279,14 @@ ev_internal:
 					/// </summary>
 					EVString m_szDescription;
 					/// <summary>
+					/// 数据集名称
+					/// </summary>
+					EVString m_strDatasetName;
+					/// <summary>
+					/// 数据源名称
+					/// </summary>
+					EVString m_strDataSrcName;
+					/// <summary>
 					/// 图层是否在编辑
 					/// </summary>
 					ev_bool m_bIsEditing;

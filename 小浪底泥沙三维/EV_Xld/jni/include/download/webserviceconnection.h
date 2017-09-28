@@ -2,6 +2,7 @@
 #define EARTHVIEW_WORLD_SPATIAL_WEBSERVICECONNECTION_H
 #include "core/memoryallocatedobject.h"
 #include "core/mutex.h"
+#include "core/readwritelock.h"
 #include "core/ev_time.h"
 #include "core/multibytestring.h"
 #include "download/downloadglobal.h"
@@ -180,6 +181,7 @@ ev_private:
 					/// 
 					ev_bool mbIsConnected;
 					EVString mPluginFile;
+					EarthView::World:: Core::CReadWriteLock mRWMtx;
 				};
 
 			}

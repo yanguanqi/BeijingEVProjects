@@ -13,6 +13,34 @@ namespace EarthView{
 class CVectorFeatureClassOperator;
 class CVectorFeatureClassEditor;
 class CFeatureIterator;
+class CFeatureOperationItem;
+
+/// <summary>
+/// 矢量要素操作类型枚举
+/// </summary>
+enum FeatureOperaType
+{
+	FOT_ADD           = 1,    // 增加要素
+	FOT_DELETE        = 2,    // 删除要素
+	FOT_UPDATE        = 3,    // 更新要素
+	FOT_UPDATE_FIELD  = 4     // 更新要素属性
+};
+/// <summary>
+/// 矢量要素操作单元类
+/// </summary>
+class CFeatureOperationItem 
+{
+public:
+	CFeatureOperationItem(EVString datasetName,ev_uint32 featureID, ev_int32 operaType,EarthView::World::Spatial::Geometry::IEnvelope* featureEnv);
+	~CFeatureOperationItem();
+
+	void toStream(_inout EarthView::World::Core::CDataStream &dataStream);
+public:
+	EVString m_DatasetName;           // 操作数据集名称
+	ev_uint32 m_FeatureID;            // 操作要素ID
+	ev_uint32 m_OperaType;            // 操作类型
+	EarthView::World::Spatial::Geometry::IEnvelope* m_FeatureEnv;           // 操作要素的最小包围盒
+};
 /// <summary>
 /// 二维矢量要素集类
 /// </summary>
@@ -111,7 +139,6 @@ public:
 	/// <param name="isConfirm">提交操作，设置true;否则，设置false</param>
 	/// <returns>结束编辑操作成功，返回true;否则，返回false</returns>
 	virtual ev_bool endEditingOperation(ev_bool isConfirm);
-
 
 public:
 	/// <summary>
@@ -307,6 +334,20 @@ public:
 	/// <returns>若成功返回true；否则返回false</returns>
 	ev_bool fromBinary(EarthView::World::Core::CDataStream &stream);
 ev_private:
+	/// <summary>
+	/// 根据数据集的名称判断是否是网络数据集源数据集
+	/// <param name=""></param>
+	/// </summary>
+	/// <returns>是，true; 否，false</returns>
+	ev_bool isNetworkDatasetSource();
+
+	/// <summary>
+	/// 向数据库写入一条矢量要素操作项(添加，删除，更新)的记录
+	/// </summary>
+	/// <param name="featureOperaItem">要素操作项</param>
+	/// <returns></returns>
+	ev_void writeFeatureOperaRecord(CFeatureOperationItem* featureOperaItem);
+ev_private:
 	CVectorFeatureClass(EarthView::World::Core::CNameValuePairList *pList);
 	virtual ev_uint32   insertFeatureBuffers(ev_vector<const EarthView::World::Spatial::GeoDataset::IFeature*> buffers);
 ev_private:
@@ -354,30 +395,17 @@ protected:
 	
 	//mQueryIterators
 	EarthView::World::Core::CRecursiveMutex mLock;
+	EarthView::World::Spatial2D::GeoDataset::CFeatureOperationItem* m_pFeatureOperaItem;
 	
 	ev_bool						m_IsEditing;
 	ev_bool						m_IsEditingOperation;
 	ev_bool						m_bUndo;
 
 	ev_uint32					m_maxID;
-	//
 	CVectorFeatureClassOperator* m_impl;
 	CVectorFeatureClassEditor	*m_pEditor;
-
 };
 
-
-
-
-
-
-
-
-
-} //GeoDataset
-} //Spatial
-} //World
-} //EarthView
+}}}} // End of namespaces
 
 #endif //_VECTOR_FEATURE_CLASS_H_H_
-

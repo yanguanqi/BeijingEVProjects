@@ -3,7 +3,9 @@
 #include "spatialserverclient/weblayer.h"
 #include "spatialserverclient/webdataset.h"
 #include "spatialserverclient/wmslayerinfo.h"
-// using namespace EarthView::World::Spatial;
+#include "spatialinterface/ispatialreference.h"
+//using namespace EarthView::World::Spatial;
+
 namespace EarthView
 {
 	namespace World
@@ -112,6 +114,14 @@ namespace EarthView
 				/// <param name="result">查询结果</param>
                 /// <returns>操作结果</returns>
 				ev_int32 getFeatureInfo(_in const EVString& styles,_in const EVString& srs,_in const EarthView::World::Spatial::Geometry::IEnvelope* mapRect,_in ev_uint32 width,_in ev_uint32 height,_in ev_uint32 x,_in ev_uint32 y,_in const EVString& infoformat,_out EarthView::World::Spatial::COGCResult& result);
+				/// <summary>
+				/// 通过输入地图坐标系和数据范围，获取指定要素属性信息
+				/// </summary>
+				/// <param name="srs">地图坐标系</param>
+				/// <param name="dataEnv">数据范围：该地图坐标系下的鼠标点击位置包围盒</param>
+				/// <param name="result">查询结果</param>
+				/// <returns>属性信息</returns>
+				EarthView::World::Core::StringVector getWMSFeatureInfo(_in EarthView:: World::Spatial::Geometry::ISpatialReference* srs,_in EarthView::World::Spatial::Geometry::IEnvelope* dataEnv);
 
 				/// <summary>
                 /// 获取背景颜色
@@ -310,7 +320,7 @@ namespace EarthView
                 /// </summary>
 				/// <param name="dataset">数据机对象</param>
                 /// <returns></returns>
-				ev_void setDataset(_in const EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
+				virtual ev_void setDataset(_in  EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
 
 				/// <summary>
                 /// 获取包围盒信息

@@ -34,6 +34,7 @@
 #define EV_EFFECT_CACHE_ACCESSOR												"ev_effectcache"
 #define EV_KML_CACHE_ACCESSOR												"ev_kmlcache"
 #define EV_WEBMETADATA_ACCESSOR												"ev_webmetadatacache"
+#define EV_STREETVIEW_CACHE_ACCESSOR										"ev_streetviewcache"
 
 
 //cache更新代理实例名称
@@ -56,6 +57,7 @@
 #define EV_VECTOR_TILE_CACHE_UPDATE_PROXY									EV_VECTOR_TILE_CACHE_ACCESSOR
 #define EV_EFFECT_CACHE_ACCESSOR_PROXY										EV_EFFECT_CACHE_ACCESSOR
 #define EV_WEBMETADATA_ACCESSOR_PROXY										EV_WEBMETADATA_ACCESSOR
+#define EV_STREETVIEW_UPDATE_PROXY											EV_STREETVIEW_CACHE_ACCESSOR
 
 ev_void formatTime(_in EVString& strTime, EarthView::World::Core::CCoreTime& time);
 ev_void formatTime(_in const EarthView::World::Core::CCoreTime& time, EVString& strTime);

@@ -159,6 +159,13 @@ ev_private:
 					virtual ev_void clearSelection();
 
 					/// <summary>
+					/// 指定的瓦块是否存在缓存中
+					/// </summary>
+					/// <param name=""></param>
+					/// <returns></returns>
+					virtual ev_bool existTileInCache(ev_int32 level,ev_int32 row,ev_int32 col, const EVString& streamType);
+
+					/// <summary>
 					/// 获取瓦片最大级别
 					/// </summary>
 					/// <param name=""></param>
@@ -198,7 +205,7 @@ ev_private:
 					/// </summary>
 					/// <param name="visible">是否可见</param>
 					/// <returns></returns>
-					virtual ev_void setVisible(ev_bool visible);
+					virtual ev_void setVisible_impl(ev_bool visible);
 					/// <summary>
 					/// 通知图层增加
 					/// </summary>
@@ -210,14 +217,7 @@ ev_private:
 					/// </summary>
 					/// <param name="pSceneMgr">场景管理器</param>
 					/// <returns></returns>
-					virtual ev_void _notifyLayerRemoved(EarthView::World::Graphic::CSceneManager* pSceneMgr);
-					/// <summary>
-					/// 通知图层刷新
-					/// </summary>
-					/// <param name="camera">镜头</param>
-					/// <param name="updateType">刷新类型</param>
-					/// <returns></returns>
-					virtual ev_void _notifyRefreshed( const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
+					virtual ev_void _notifyLayerRemoved_impl(EarthView::World::Graphic::CSceneManager* pSceneMgr);
 
 					/// <summary>
 					/// 瓦片创建通知
@@ -322,6 +322,14 @@ ev_private:
 					/// <param name=""></param>   
 					/// <returns></returns>	
 					void startDrawing();
+ev_internal:
+					/// <summary>
+					/// Globe刷新时调用的函数
+					/// </summary>
+					/// <param name="camera">当前的相机</param>
+					/// <param name="updateType">刷新类型</param>
+					/// <returns></returns>
+					virtual ev_void _notifyRefreshed_impl(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
 
 				protected:
 					
@@ -396,6 +404,12 @@ ev_private:
 					void updateWebLabel(ev_int32 level,ev_int32 row,ev_int32 col,_inout EarthView::World::Spatial::CTileData& tile);
 
 					static EarthView::World::Core::MemoryDataStreamPtr ms_BlankTile;
+
+					EarthView::World::Core::CReadWriteLock mObqLayersLocker;
+				ev_private:
+					CFeatureGroupLayer* mRootFeatureGroupLayer;
+					typedef std::set<EarthView::World::Spatial3D::Atlas::IGlobeLayer*> ObqLayersSet;
+					ObqLayersSet mObqLayers;
 				};
 
 				/// <summary>

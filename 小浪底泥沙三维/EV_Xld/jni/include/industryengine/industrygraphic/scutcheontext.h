@@ -118,6 +118,7 @@ ev_private:
 				/// <param name="fontSize">字体大小</param>
 				/// <param name="color">字体颜色</param>
 				virtual void appendText(const EVString& caption, const EVString& fontName, const ev_uint32& fontSize, EarthView::World::Graphic::CColourValue color);
+				virtual void appendText(const EVString& caption, const EVString& fontName, const ev_uint32& fontSize, EarthView::World::Graphic::CColourValue color, const ev_uint32& index);
 
 				/// <summary>
 				/// 删除显示内容
@@ -258,6 +259,17 @@ ev_private:
 				/// </summary>
 				/// <param name="fontSize">字体大小</param>
 				virtual void resetAllFontSize(const ev_uint32& fontSize);
+
+
+				/// <summary>
+				/// 设置标牌文字的对齐方式
+				/// </summary>
+				/// <param name="index">对齐方式</param>
+				/// <returns> </returns>
+				void setLayoutMode(ScutcheonTextHLayout hLayout,ScutcheonTextVLayout vLayout);
+
+
+
 
 				/// <summary>
 				/// 获取字体大小

@@ -73,7 +73,6 @@ namespace EarthView{
 					virtual ev_void endDraw();
 				private:
 					void* mpBrush;
-					ev_void reInitialBrush();
 					CSymbolRenderer* mpOutlineRender;
 					const CSimpleFillSymbol* mpSimpleFill;
 				};

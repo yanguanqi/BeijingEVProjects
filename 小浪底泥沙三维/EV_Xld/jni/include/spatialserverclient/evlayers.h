@@ -34,11 +34,11 @@ namespace EarthView
 				CEVWMTSLayer();
 
 				/// <summary>
-                /// 设置关联数据集，pDataset为引用,需外部释放
-                /// </summary>
-				/// <param name="pDataset">关联数据集</param>
-                /// <returns></returns>
-				ev_void setDataset(_in const EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
+				/// 设置与图层所关联的数据集
+				/// </summary>
+				/// <param name="dataset">数据集指针</param>
+				/// <returns></returns>
+				virtual ev_void setDataset(EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
 
 				/// <summary>
                 /// 渲染
@@ -291,11 +291,11 @@ namespace EarthView
 				ev_void getRenderBackColor(_out ev_bool& transparent,_out ev_int32& red,_out ev_int32& green,_out ev_int32& blue);
 
 				/// <summary>
-                /// 设置关联数据集，需外部释放
-                /// </summary>
-				/// <param name="dataset">数据机对象</param>
-                /// <returns></returns>
-				ev_void setDataset(_in const EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
+				/// 设置与图层所关联的数据集
+				/// </summary>
+				/// <param name="dataset">数据集指针</param>
+				/// <returns></returns>
+				virtual ev_void setDataset(EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
 			ev_private:
 				CEVWMSMapLayer(_in EarthView::World::Core::CNameValuePairList* pList);
 			protected:
@@ -332,11 +332,11 @@ namespace EarthView
 				CEVWFSLayer();
 				
 				/// <summary>
-                /// 设置关联数据集
-                /// </summary>
-				/// <param name="dataset">关联数据集</param>
-                /// <returns></returns>
-				ev_void setDataset(_in const EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
+				/// 设置与图层所关联的数据集
+				/// </summary>
+				/// <param name="dataset">数据集指针</param>
+				/// <returns></returns>
+				virtual ev_void setDataset(EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
 
 				/// <summary>
                 /// 查询属性
@@ -423,11 +423,11 @@ namespace EarthView
 				CEVGeoCodeLayer();
 
 				/// <summary>
-                /// 设置关联数据集
-                /// </summary>
-				/// <param name="dataset">关联数据集</param>
-                /// <returns></returns>
-				ev_void setDataset(_in const EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
+				/// 设置与图层所关联的数据集
+				/// </summary>
+				/// <param name="dataset">数据集指针</param>
+				/// <returns></returns>
+				virtual ev_void setDataset(EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
 				/// <summary>
                 /// 获取地名文件
                 /// </summary>
@@ -494,11 +494,11 @@ namespace EarthView
 				CEVDEMLayer();
 
 				/// <summary>
-                /// 设置关联数据集
-                /// </summary>
-				/// <param name="dataset">关联数据集</param>
-                /// <returns></returns>
-				ev_void setDataset(_in const EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
+				/// 设置与图层所关联的数据集
+				/// </summary>
+				/// <param name="dataset">数据集指针</param>
+				/// <returns></returns>
+				virtual ev_void setDataset(EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
 			ev_private:
 				CEVDEMLayer(_in EarthView::World::Core::CNameValuePairList* pList);
 			protected:
@@ -525,11 +525,11 @@ namespace EarthView
 				CEVKMLLayer();
 
 				/// <summary>
-                /// 设置关联数据集
-                /// </summary>
-				/// <param name="dataset">关联数据集</param>
-                /// <returns></returns>
-				ev_void setDataset(_in const EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
+				/// 设置与图层所关联的数据集
+				/// </summary>
+				/// <param name="dataset">数据集指针</param>
+				/// <returns></returns>
+				virtual ev_void setDataset(EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
 
 				/// <summary>
                 /// 获取KML文件
@@ -650,11 +650,11 @@ namespace EarthView
 				//const CEVSpatialServer* getParentServerRef() const;
 				
 				/// <summary>
-                /// 设置关联数据集
-                /// </summary>
-				/// <param name="dataset">关联数据集</param>
-                /// <returns></returns>
-				ev_void setDataset(_in const EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
+				/// 设置与图层所关联的数据集
+				/// </summary>
+				/// <param name="dataset">数据集指针</param>
+				/// <returns></returns>
+				virtual ev_void setDataset(EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
 			
 				/// <summary>
                 /// 构造函数
@@ -682,11 +682,11 @@ namespace EarthView
 				~CEVModelLayer();
 
 				/// <summary>
-                /// 设置关联数据集
-                /// </summary>
-				/// <param name="dataset">关联数据集</param>
-                /// <returns></returns>
-				ev_void setDataset(_in const EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
+				/// 设置与图层所关联的数据集
+				/// </summary>
+				/// <param name="dataset">数据集指针</param>
+				/// <returns></returns>
+				virtual ev_void setDataset(EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
 
 				/// <summary>
                 /// 获取实体对象
@@ -749,11 +749,11 @@ namespace EarthView
 				~CEVModelTemplateLayer(){}
 
 				/// <summary>
-				/// 设置关联数据集
+				/// 设置与图层所关联的数据集
 				/// </summary>
-				/// <param name="dataset">关联数据集</param>
+				/// <param name="dataset">数据集指针</param>
 				/// <returns></returns>
-				ev_void setDataset(_in const EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset){}
+				virtual ev_void setDataset(EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset){}
 
 				/// <summary>
 				/// 获取实体对象

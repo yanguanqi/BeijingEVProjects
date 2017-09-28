@@ -664,7 +664,7 @@ ev_private:
 
 					static EVString toStringDmsLat(_in ev_real64 degree)
 					{
-						EVString southSuffix("Ｓ");
+						EVString southSuffix("S");
 						EVString northSuffix("N");
 						return toStringDmsLat(degree, southSuffix, northSuffix);	
 					}

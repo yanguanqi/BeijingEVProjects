@@ -7,6 +7,8 @@
 #include "mathengine/vector3.h"
 #include "mathengine/axisalignedbox.h"
 #include "kmlserializer/geoobjectextension.h"
+#include "core/ev_translator.h"
+
 namespace EarthView
 {
 	namespace World
@@ -300,7 +302,7 @@ private:
 			ev_bool treatWithModelFiles(const EV_ModelXml2Kml::XMLModelNode&Node);
 };
 
-#define CHECK_STOP_COMMAND do {if(mbStop){onInformation("已停止。"); return false;}} while (0);
+#define CHECK_STOP_COMMAND do {if(mbStop){onInformation(EVTR("已停止。")); return false;}} while (0);
 
 class EV_BUILD_MODEL_XML2KML_DLL EV_ModelXml2KmlDirector
 {
@@ -344,7 +346,7 @@ public:
 		}
 		else
 		{
-			onInformation("转换正在进行，请稍后再试......");
+			onInformation(EVTR("转换正在进行，请稍后再试......"));
 		}
 	}
 
@@ -352,7 +354,7 @@ public:
 	{
 		mpEV_ModelXml2Kml->stop();
 		mpEV_ModelXml2Kml->setUIInformationListener(NULL);
-		onInformation("正在停止......");		
+		onInformation(EVTR("正在停止......"));		
 		mbStop = true;
 	}
 
@@ -406,7 +408,7 @@ protected:
 		ev_int32 currentStep = 1;
 		EVString info;
 
-		info.format("第 %d/%d 步  检查源数据文件......", currentStep++, allStep);
+		info.format(EVTR("第 %d/%d 步  检查源数据文件......").getString(), currentStep++, allStep);
 		completePercent(0);
 		onInformation(info);
 		if (!mpEV_ModelXml2Kml->checkSrcFiles())
@@ -416,7 +418,7 @@ protected:
 		CHECK_STOP_COMMAND
 		completePercent(100);
 
-		info.format("第 %d/%d 步  初始化源数据文件......", currentStep++, allStep);
+		info.format(EVTR("第 %d/%d 步  初始化源数据文件......").getString(), currentStep++, allStep);
 		completePercent(0);
 		onInformation(info);
 		if (!mpEV_ModelXml2Kml->initSrcFile())
@@ -426,7 +428,7 @@ protected:
 		CHECK_STOP_COMMAND
 		completePercent(100);
 
-		info.format("第 %d/%d 步  获取数据信息......", currentStep++, allStep);
+		info.format(EVTR("第 %d/%d 步  获取数据信息......").getString(), currentStep++, allStep);
 		completePercent(0);
 		onInformation(info);
 		if (!mpEV_ModelXml2Kml->getSrcFileMetadata())
@@ -442,7 +444,7 @@ protected:
 		CHECK_STOP_COMMAND
 		completePercent(100);
 
-		info.format("第 %d/%d 步  初始化输出目录......", currentStep++, allStep);
+		info.format(EVTR("第 %d/%d 步  初始化输出目录......").getString(), currentStep++, allStep);
 		completePercent(0);
 		onInformation(info);
 		if (!mpEV_ModelXml2Kml->parseSrcFile(0))
@@ -460,7 +462,7 @@ protected:
 		for (ev_int32 i = 0; i < tileFileCount; ++i)
 		{			
 			CHECK_STOP_COMMAND
-			info.format("第 %d/%d 步  解析第 %d 个文件，共 %d 个文件......", currentStep, allStep, i+1, tileFileCount);
+			info.format(EVTR("第 %d/%d 步  解析第 %d 个文件，共 %d 个文件......").getString(), currentStep, allStep, i+1, tileFileCount);
 			completePercent(0);
 			onInformation(info);
 			if (!mpEV_ModelXml2Kml->parseSrcFile(i))
@@ -469,7 +471,7 @@ protected:
 			}
 			
 			CHECK_STOP_COMMAND
-			info.format("第 %d/%d 步  转换第 %d 个文件，共 %d 个文件......", currentStep, allStep, i+1, tileFileCount);
+			info.format(EVTR("第 %d/%d 步  转换第 %d 个文件，共 %d 个文件......").getString(), currentStep, allStep, i+1, tileFileCount);
 			completePercent(0);
 			onInformation(info);
 			if (!mpEV_ModelXml2Kml->createDesMemoryObjects())
@@ -478,7 +480,7 @@ protected:
 			}
 
 			CHECK_STOP_COMMAND
-			info.format("第 %d/%d 步  拷贝第 %d 个文件夹内的模型和资源，共 %d 个文件夹......", currentStep, allStep, i+1, tileFileCount);
+			info.format(EVTR("第 %d/%d 步  拷贝第 %d 个文件夹内的模型和资源，共 %d 个文件夹......").getString(), currentStep, allStep, i+1, tileFileCount);
 			completePercent(0);
 			onInformation(info);
 			if (!mpEV_ModelXml2Kml->getIsKmz())
@@ -496,7 +498,7 @@ protected:
 
 		}
 		completePercent(100);
-		onInformation("已完成。");
+		onInformation(EVTR("已完成。"));
 		if (NULL != mpUIInformationListener)
 		{
 			mpUIInformationListener->complete();

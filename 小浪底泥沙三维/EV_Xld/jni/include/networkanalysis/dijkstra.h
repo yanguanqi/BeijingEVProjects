@@ -13,7 +13,6 @@ ev_bool Dijkstra(ev_uint32 Start,
 					CRouteAnalyst *analyst,
 					ev_vector<ev_uint32> &path,
 					ev_real64 &totalDist);
-
 }}}} // End of Namespace
 
 

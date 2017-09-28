@@ -218,10 +218,10 @@ ev_private:
 				virtual ev_bool setObjectVisibility(ev_bool visible, EarthView::World::Spatial::CGeoObject* ref_geoObject,ev_bool bProcessAttach);
 
 				ev_void build(EarthView::World::Graphic::CCamera* pCamera);
-				void releaseText(list<CMultiGeometry3DExtension::pos_movable>& needRelease);
-				void unloadText(list<CMultiGeometry3DExtension::pos_movable>& needUnload);
-				void loadText(list<pos_movable>& needAttach);
-				ev_void updateByCameraInWorkqueue(list<pos_movable>& needRelease,list<pos_movable>& needAttach);
+				void releaseText(list<CMultiGeometry3DExtension::pos_movable *>& needRelease);
+				void unloadText(list<CMultiGeometry3DExtension::pos_movable *>& needUnload);
+				void loadText(list<pos_movable *>& needAttach);
+				ev_void updateByCameraInWorkqueue(list<pos_movable *>& needRelease,list<pos_movable *>& needAttach);
 
 				ev_bool setEntitySelected(const EarthView::World::Core::IntVector& objIndics);
 			protected:
@@ -247,7 +247,7 @@ ev_private:
 				ev_void copyCameraParams(EarthView::World::Graphic::CCamera& camera) const;
 			private:
 				EarthView::World::Core::CReadWriteLock mTxtPosLock;
-				vector<EarthView::World::Geometry3D::CMultiGeometry3DExtension::pos_movable> mTxtPos;	
+				vector<EarthView::World::Geometry3D::CMultiGeometry3DExtension::pos_movable *> mTxtPos;	
 				mutable EarthView::World::Core::CReadWriteLock mCameraLock;//相机锁
 				EarthView::World::Graphic::CCamera* mpCacheCamera;
 				EarthView::World::Core::CReadWriteLock mObj_bbIndexLock;
@@ -300,6 +300,7 @@ ev_private:
 				Real mReduceDis;
 
 				CMultiPolyline3DExtension* mpLineExtension;//延伸到地面的线
+				ev_bool m_bUpdateAbortFlag;
 			};
 			//
 			class EV_GEOMETRY3D_DLL CMultiPoint3DExtensionFactory : public EarthView::World::Spatial3D::Atlas::IGeometry3DFactory

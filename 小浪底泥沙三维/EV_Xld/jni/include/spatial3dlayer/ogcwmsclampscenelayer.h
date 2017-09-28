@@ -10,6 +10,8 @@
 #include "geometry3d/iclampscenelayer.h"
 
 #include "spatialserverclient/wmslayer.h"
+#include "core//stringvector.h"
+#include "spatialobject/geometry/polygon.h"
 
 namespace EarthView{
 	namespace World{
@@ -75,7 +77,7 @@ ev_private:
 					/// 设置图层可见性
 					/// </summary>
 					/// <param name="visible">可见性</param>				
-					virtual ev_void setVisible(ev_bool visible);
+					virtual ev_void setVisible_impl(ev_bool visible);
 					/// <summary>
 					/// 复制图层
 					/// </summary>	
@@ -165,6 +167,7 @@ ev_private:
 					/// <returns>坐标系统</returns>
 					virtual EarthView::World::Spatial::Geometry::ISpatialReference *getSpatialReference() const;
 
+					EarthView::World::Spatial::Geometry::CPolygon* getSelectProperty(_out EarthView::World::Core::StringVector& sv);
 				protected:
 
 					EarthView::World::Core::MemoryDataStreamPtr clipParentTile(EarthView::World::Core::MemoryDataStreamPtr& parentData,ev_int32 tileWidth,ev_int32 tileHeight,ev_uint32 x,ev_uint32 y);
@@ -188,14 +191,7 @@ ev_private:
 					/// </summary>
 					/// <param name=""></param>
 					/// <returns></returns>
-					virtual ev_void _notifyLayerRemoved(EarthView::World::Graphic::CSceneManager* pSceneMgr);
-					/// <summary>
-					/// Globe刷新时调用的函数
-					/// </summary>
-					/// <param name="camera">当前的相机</param>
-					/// <param name="updateType">刷新类型</param>
-					/// <returns></returns>
-					virtual ev_void _notifyRefreshed(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
+					virtual ev_void _notifyLayerRemoved_impl(EarthView::World::Graphic::CSceneManager* pSceneMgr);
 										
 					/// <summary>
 					/// 序列化成xml文本
@@ -203,6 +199,47 @@ ev_private:
 					/// <param name=""></param>   
 					/// <returns></returns>					
 					virtual EarthView::World::Core::CXmlElement toXmlElement() const;
+
+					/// <summary>
+					/// 设置是否可选择
+					/// </summary>
+					/// <param name="selectable">可选择性</param>
+					/// <returns></returns>
+					virtual ev_void setSelectable(ev_bool selectable);
+					/// <summary>
+					/// 图层选择
+					/// </summary>
+					/// <param name="filter">选择过滤条件</param>
+					/// <param name="type">选择类型</param>
+					/// <returns></returns>
+					virtual ev_void select( EarthView::World::Spatial::GeoDataset::IQueryFilter *filter, EarthView::World::Spatial::Atlas::EVSelectionResultType type );
+					/// <summary>
+					/// 获取图层选择
+					/// </summary>
+					/// <param name=""></param>
+					/// <returns>图层选择</returns>
+					virtual EarthView::World::Spatial::Atlas::ILayerSelection * getLayerSelection();
+					/// <summary>
+					/// 清空图层选择
+					/// </summary>
+					/// <param name=""></param>
+					/// <returns></returns>
+					virtual ev_void clearSelection();
+
+					/// <summary>
+					/// 获取图层选择记录集
+					/// </summary>
+					/// <param name=""></param>
+					/// <returns>选择记录集</returns>
+					EarthView::World::Spatial::GeoDataset::IFeatureSelection* getFeatureSelection() const;
+ev_internal:
+					/// <summary>
+					/// Globe刷新时调用的函数
+					/// </summary>
+					/// <param name="camera">当前的相机</param>
+					/// <param name="updateType">刷新类型</param>
+					/// <returns></returns>
+					virtual ev_void _notifyRefreshed_impl(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
 				protected:					
 					EarthView::World::Core::MemoryDataStreamPtr drawBlackImage();
 
@@ -217,6 +254,11 @@ ev_private:
 					/// <param name="obj">对象</param>
 					/// <returns></returns>
 					C_DISABLE_COPY(COGCWMSClampSceneLayer);
+					EarthView::World::Core::MemoryDataStreamPtr getThemeStream_noLock();
+					/// <summary>
+					/// 图层选择要素集合
+					/// </summary>
+					EarthView::World::Spatial::Atlas::ILayerSelection* m_pSelectionSet;
 										
 					ev_uint8 mTransparent;
 
@@ -232,6 +274,9 @@ ev_private:
 
 					ev_int32 mMaxVisibleLevel;
 					ev_int32 mMinVisibleLevel;
+
+					EarthView::World::Core::StringVector mPropertyVec;
+					EarthView::World::Spatial::Geometry::CPolygon* mSelectPolygon;
 
 					friend class CChartClampSceneLayerFactory;
 				};

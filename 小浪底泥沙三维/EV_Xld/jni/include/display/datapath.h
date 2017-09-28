@@ -156,6 +156,7 @@ namespace EarthView{
 				 
 				void* getNativePath() const{ return m_pPath; }
 ev_private:
+				CDataPath( void* path );
 				CDataPath( EarthView::World::Core::CNameValuePairList* pList );
 			private:
 				C_DISABLE_COPY(CDataPath);

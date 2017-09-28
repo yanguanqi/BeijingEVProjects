@@ -6,14 +6,18 @@
 #include "coordinatesequence.h"
 #include "envelope.h"
 
-EV_DECLARE_GEOMETRY_CLASS_PRIVATE(CLineString);
-
-EV_DECLARE_GEOMETRY_CLASS_UTILITY(CGeometryHelper);
 
 namespace EarthView{
 	namespace World{
 		namespace Spatial{
 			namespace Geometry{
+				namespace Private{
+					class CLineStringPrivate;
+				}
+				namespace Utility{
+					class CGeometryHelper;
+
+				}
 				/// <summary>
 				/// 折线类，描述了一组首尾相连的点串。
 				/// </summary>

@@ -88,7 +88,7 @@ namespace EarthView
 					///</summary>
 					/// <param name="pDataset">数据集指针</param>
 					///<returns></returns>
-					ev_void setDataset(_in EarthView::World::Spatial::GeoDataset::IDataset*ref_pDataset);
+					virtual ev_void setDataset(_in EarthView::World::Spatial::GeoDataset::IDataset* ref_pDataset);
 					///<summary>
 					///为R通道指定波段索引(波段索引不能超过，波段的总数)
 					///</summary>

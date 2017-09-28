@@ -50,7 +50,7 @@ namespace EarthView{
 					TBT_Element_Operation,
 					TBT_Output_Layout,
 					
-					
+					TBT_StreetViewTool_3d,
 				};
 				class ICommand;
 				class IItem;

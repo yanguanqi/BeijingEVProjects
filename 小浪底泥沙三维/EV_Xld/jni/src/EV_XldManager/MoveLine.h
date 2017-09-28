@@ -5,6 +5,7 @@
 #include "globecontrol\globecontrol.h"
 #include "mathengine\vector3.h"
 #include "graphic\scenenode.h"
+#include "spatial3danalysisobject\mathutility3d.h"
 namespace EarthView
 {
 	namespace Xld
@@ -14,7 +15,7 @@ namespace EarthView
 			class CMoveLine
 			{
 			public:
-				CMoveLine(const EVString& name, EarthView::World::Spatial3D::Controls::CGlobeControl* globeControl, CMoveLineType& style);
+				CMoveLine(const EVString& name, EarthView::World::Spatial3D::Controls::CGlobeControl* globeControl, CMoveLineType style);
 				~CMoveLine();
 				/// <summary>
 				/// 设置中心点
@@ -28,16 +29,16 @@ namespace EarthView
 				void ChangeCurrent(EarthView::World::Spatial::Math::CVector3& currentPoint);
 			private:
 				EarthView::World::Spatial3D::Controls::CGlobeControl* mpGlobeControl;
-				CMoveLineType mLineType=  CMoveLineType::Line;
+				CMoveLineType mLineType;
 				EarthView::World::Graphic::CManualObject* mpManualObject;
 				EarthView::World::Spatial::Math::CVector3 mGeoFirstPoint;
 				EarthView::World::Spatial::Math::CVector3 mGeoCenterPoint;
 				EarthView::World::Spatial::Math::CVector3 mGeoCurrentPoint;
 				EarthView::World::Graphic::CSceneNode* mpSceneNode;
 				EarthView::World::Spatial::Math::CVector3 mPosition;
-				EarthView::World::Graphic::CColourValue mLineColor = EarthView::World::Graphic::CColourValue::Blue;
+				EarthView::World::Graphic::CColourValue mLineColor;
 				EVString mName;
-				ev_int32 mInsertCount = 0;;
+				ev_int32 mInsertCount;
 				EarthView::World::Spatial3D::Analysis::CMathUtility3D mMathUtility3D;
 				void CreateMesh();
 			};

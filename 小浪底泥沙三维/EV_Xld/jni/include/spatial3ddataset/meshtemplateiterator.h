@@ -70,6 +70,15 @@ namespace EarthView{
 					virtual EarthView::World::Spatial::GeoDataset::IFeature* next(ev_bool bCreateNewOne);
 
 					/// <summary>
+					/// 获取下一个要素对象
+					/// </summary>
+					/// <param name="bCreateNewOne">是否创建新的要素对象，如果是，需要外部释放</param>
+					/// <param name="bOrigData">是否通过插件来取数据</param>
+					/// <returns>获取的要素对象</returns>
+
+					virtual EarthView::World::Spatial::GeoDataset::IFeature* next(ev_bool bCreateNewOne,ev_bool bPlugin);
+
+					/// <summary>
 					///获取要素所有字段信息
 					/// </summary>
 					/// <param name=""></param>

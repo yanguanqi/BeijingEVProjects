@@ -5,14 +5,21 @@
 #include "spatialobject/config.h"
 #include "geom_define.h"
 
-EV_DECLARE_GEOMETRY_CLASS_PRIVATE(CCoordinate);
-
-EV_DECLARE_GEOMETRY_CLASS_UTILITY(CGeometryHelper);
+//EV_DECLARE_GEOMETRY_CLASS_PRIVATE(CCoordinate);
+//
+//EV_DECLARE_GEOMETRY_CLASS_UTILITY(CGeometryHelper);
 
 namespace EarthView{
 	namespace World{
 		namespace Spatial{
 			namespace Geometry{
+				namespace Private{
+					class CCoordinatePrivate;
+				}
+				namespace Utility{
+					class CGeometryHelper;
+
+				}
 				/// <summary>
 				/// 
 				/// </summary>

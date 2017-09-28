@@ -53,6 +53,8 @@ namespace EarthView{
 					void setOldIndex(ev_int32 index);
 					void setNewIndex(ev_int32 index);
 
+					virtual _extfree EarthView::World::Core::CEvent* clone() const;
+
 				protected:
 					ev_uint32 mID;
 					EarthView::World::Spatial::Atlas::IScene* mScene;

@@ -8,6 +8,7 @@
 #include "geometry3d/visibleobject.h"
 #include "geometry3d/featureuserdata.h"
 #include "kmlserializer/geoobjectextension.h"
+#include "geometry3d/geometry3dextension/multipolyline3dextension.h"
 
 
 namespace EarthView{
@@ -72,6 +73,8 @@ ev_private:
 				/// <param name=""></param>
 				/// <returns></returns>
 				virtual ~CPlaceMarkList();
+				ev_void setSelectionColour( const EarthView::World::Graphic::CColourValue& colour );
+				
 
 				void setSelfAdaptGeoRange(EarthView::World::Spatial::Math::CVector3 center,Real r,Real targetSamplesPerDegrees);
 
@@ -170,6 +173,7 @@ ev_private:
 				EarthView::World::Spatial::Math::CDegree mpViewRange;
 				ev_bool mIsRegionFeatureList;
 				EarthView::World::Spatial::Atlas::ILayer* mpLayer ;
+				EarthView::World::Graphic::CColourValue mSelectionColour;
 
 
 			
@@ -197,6 +201,14 @@ ev_private:
 				/// <param name=""></param>
 				/// <returns></returns>
 				virtual ~CPolylineList();
+
+				void setLineInterpolationMode(EarthView::World::Geometry3D::CMultiPolyline3DExtension::LineInterpolationMode liMode);
+				
+				void setLineInterPolationDis(ev_real32 dis);
+			
+
+				ev_void setSelectionColour( const EarthView::World::Graphic::CColourValue& colour );
+				
 
 				void update(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial::Math::CDegree& rangeView);
 
@@ -292,6 +304,10 @@ ev_private:
 				EarthView::World::Spatial::Math::CDegree mpViewRange;
 				ev_bool mIsRegionFeatureList;
 				EarthView::World::Spatial::Atlas::ILayer* mpLayer ;
+				EarthView::World::Graphic::CColourValue mSelectionColour;
+
+				EarthView::World::Geometry3D::CMultiPolyline3DExtension::LineInterpolationMode mLineInterpolationMode;
+				ev_real32 mInterpolationDis;
 
 
 
@@ -321,6 +337,7 @@ ev_private:
 				/// <returns></returns>
 				virtual ~CPolygonList();
 
+				ev_void setSelectionColour( const EarthView::World::Graphic::CColourValue& colour );
 				
 				void setSelfAdaptGeoRange(EarthView::World::Spatial::Math::CVector3 center,Real r,Real targetSamplesPerDegrees);
 
@@ -418,6 +435,7 @@ ev_private:
 				EarthView::World::Spatial::Math::CDegree mpViewRange;
 				ev_bool mIsRegionFeatureList;
 				EarthView::World::Spatial::Atlas::ILayer* mpLayer ;
+				EarthView::World::Graphic::CColourValue mSelectionColour;
 			};
 
 			///

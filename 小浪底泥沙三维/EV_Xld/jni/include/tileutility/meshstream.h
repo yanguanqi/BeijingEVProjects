@@ -64,6 +64,10 @@ ev_private:
 				static void clearMemForBatch();
 
 				static MeshStream decodeMeshStreamFrom7z(const EarthView::World::Core::MemoryDataStreamPtr& package7z);
+
+				static ev_uchar extractDXTNum(const EarthView::World::Core::MemoryDataStreamPtr& ddsDataStream);
+
+				static void changeMaterialStreamForAndroid(MeshStream& meshStream);
 			};
 		
             /** @} */

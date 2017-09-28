@@ -97,6 +97,7 @@ namespace EarthView
 				virtual ev_void onInstancedEntityStateChanged(EarthView::World::Graphic::CInstancedEntity* instancedEntity);
 
 				ev_bool linkEntity(EarthView::World::Graphic::CEntity* pEntity);
+				ev_void delinkEntity();
 
 				ev_bool isAsyncUpdatingBuffer()const {return mAsyncUpdateBuffer;}
 				ev_void setAsyncUpdateBuffer(ev_bool async);

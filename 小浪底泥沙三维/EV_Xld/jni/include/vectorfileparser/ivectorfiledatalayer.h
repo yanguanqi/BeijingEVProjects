@@ -19,7 +19,7 @@ public:
 
 	EarthView::World::Spatial::Atlas::EVLayerType getType() const;
 	EarthView::World::Spatial::GeoDataset::IDataset* getDataset();
-	ev_void setDataset( EarthView::World::Spatial::GeoDataset::IDataset * ref_dataset );
+	virtual ev_void setDataset( EarthView::World::Spatial::GeoDataset::IDataset * ref_dataset );
 	//EVString getDatasetName();
 	//EarthView::World::Spatial::GeoDataset::IDataSource* getDataSource();
 	ev_void select( EarthView::World::Spatial::GeoDataset::IQueryFilter *filter,
@@ -75,6 +75,8 @@ ev_private:
 	IVectorFileDataLayer(EarthView::World::Core::CNameValuePairList* pList);
 private:
 	EVString m_szLayerName;
+	EVString m_strDatasetName;
+	EVString m_strDataSrcName;
 	EVString m_szDescription;
 	ev_bool m_bIsEditing;
 	ev_bool m_bIsVisible;

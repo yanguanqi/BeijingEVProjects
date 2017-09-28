@@ -159,7 +159,7 @@ ev_private:
 					/// 设置图层可见性
 					/// </summary>
 					/// <param name="visible">可见性</param>
-					virtual ev_void setVisible(ev_bool visible);
+					virtual ev_void setVisible_impl(ev_bool visible);
 
 					/// <summary>
 					/// 停止渲染
@@ -189,16 +189,7 @@ ev_private:
 					/// </summary>
 					/// <param name=""></param>
 					/// <returns></returns>
-					virtual ev_void _notifyLayerRemoved(EarthView::World::Graphic::CSceneManager* pSceneMgr);
-
-					/// <summary>
-					/// Globe刷新时调用的函数
-					/// </summary>
-					/// <param name="camera">当前的相机</param>
-					/// <param name="level">当前的级别</param>
-					/// <param name="force">是否为强制刷新</param>
-					/// <returns></returns>
-					virtual ev_void _notifyRefreshed(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
+					virtual ev_void _notifyLayerRemoved_impl(EarthView::World::Graphic::CSceneManager* pSceneMgr);
 
 					/// <summary>
 					/// 数据集更新事件的通知
@@ -264,10 +255,65 @@ ev_private:
 					/// <param name="listener">模型监听</param>
 					ev_void removeModelStateListener(_in COBQModelStateListener* listener);
 
+					/// <summary>
+					/// 应用环境纹理映射到图层
+					/// <returns></returns>
+					virtual void applySelfIlluminationMapTexture();
+
+					/// <summary>
+					/// 取消应用环境纹理映射从图层
+					/// <returns></returns>
+					virtual void cancelSelfIlluminationMapTexture();
+
+					/// <summary>
+					/// 取消应用环境纹理映射从图层
+					/// <returns></returns>
+					virtual ev_bool isApplySelfIlluminationMap();
+
+					/// <summary>
+					/// 设置图层对象可见过滤器,不带记忆功能（这次设置会把上次冲掉）
+					/// </summary>
+					/// <param name="visible">visible为true时，只有ids指定的对象可见；visible为false时，ids指定的对象不可见</param>
+					/// <param name="ids">对象的ID集合</param>
+					/// <returns></returns>
+					virtual ev_bool setVisibilityFilter(ev_bool visible, const EarthView::World::Core::IntVector& ids);
+
+					/// <summary>
+					/// 设置图层对象可见过滤器，带记忆功能（不会冲掉上次设置）
+					/// </summary>
+					/// <param name="visible">visible为true时，只有ids指定的对象可见；visible为false时，ids指定的对象不可见</param>
+					/// <param name="id">对象的ID</param>
+					/// <returns></returns>
+					virtual ev_bool setVisibilityFilter(ev_bool visible, ev_uint32 id);
+
+					/// <summary>
+					/// 获取图层对象不可见ID集合 
+					/// </summary>
+					/// <param name="ids">对象的ID集合</param>
+					/// <returns></returns>
+					virtual ev_bool getVisibilityFilter(_out EarthView::World::Core::IntVector& ids);
+
+					/// <summary>
+					/// 获取图层对象可见过滤器
+					/// </summary>
+					/// <param name="id">对象的ID集合</param>
+					/// <returns>返回当前对象在过滤器中的可见性</returns>
+					virtual ev_bool getVisibilityFilter(ev_uint32 id);
+ev_internal:
+					/// <summary>
+					/// Globe刷新时调用的函数
+					/// </summary>
+					/// <param name="camera">当前的相机</param>
+					/// <param name="updateType">刷新类型</param>
+					/// <returns></returns>
+					virtual ev_void _notifyRefreshed_impl(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
 				protected:
 					EarthView::World::Spatial::GeoDataset::IDataset* mpDataSet;
 					EarthView::World::Spatial3D::ModelManager::CObliqueModelManager* mpManager;
-
+					EVString mDataSourceName;
+					EVString mDataSetName;
+					//自发光纹理
+					ev_bool mApplySelfIlluminationMap;
 				private:
 					class CD3DDeviceListener : public EarthView::World::Graphic::CRenderSystem::CRenderSystemListener
 					{

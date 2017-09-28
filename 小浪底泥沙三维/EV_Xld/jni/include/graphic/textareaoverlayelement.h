@@ -270,6 +270,7 @@ ev_internal:
 				/// 分配内存，当必要的时候才分配
 				/// </summary>
 				void checkMemoryAllocation( ev_size_t numChars );
+				void addDefaultCodePointRange();
 ev_internal:
 				///继承方法
 				virtual void updatePositionGeometry();
