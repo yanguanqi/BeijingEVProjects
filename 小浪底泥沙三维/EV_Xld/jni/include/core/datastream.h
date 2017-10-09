@@ -313,7 +313,6 @@ namespace EarthView
             	ev_int32 readUInt64(ev_uint64& value);
             	ev_int32 readReal32(ev_real32& value);
             	ev_int32 readReal64(ev_real64& value);
-				ev_uint32 readChars(ev_char* chars,ev_uint32 len);
 
 				/// <summary>
 				/// 

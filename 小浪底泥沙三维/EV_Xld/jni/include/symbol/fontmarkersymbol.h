@@ -129,7 +129,6 @@ namespace EarthView{
 				CFontMarkerSymbol( EarthView::World::Core::CNameValuePairList* pList );
 			private:
 				C_DISABLE_COPY( CFontMarkerSymbol );
-			ev_internal:
 				void* makeImage(ev_real64 dMultiplier, int textRint);
 			private:
 				/// <summary>

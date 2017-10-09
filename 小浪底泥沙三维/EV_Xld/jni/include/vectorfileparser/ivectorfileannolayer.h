@@ -15,7 +15,7 @@ public:
 
 	EarthView::World::Spatial::Atlas::EVLayerType getType() const;
 	EarthView::World::Spatial::GeoDataset::IDataset* getDataset();
-	virtual ev_void setDataset( EarthView::World::Spatial::GeoDataset::IDataset * ref_dataset );
+	ev_void setDataset( EarthView::World::Spatial::GeoDataset::IDataset * ref_dataset );
 
 	ev_void select( EarthView::World::Spatial::GeoDataset::IQueryFilter *filter,
 		EarthView::World::Spatial::Atlas::EVSelectionResultType type );

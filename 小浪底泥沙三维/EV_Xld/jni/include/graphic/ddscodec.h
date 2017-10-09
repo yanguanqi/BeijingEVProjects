@@ -42,9 +42,6 @@ namespace EarthView
     	        //// convert to PF_BYTE_BGRA
     	        ev_bool convertToByteBGRA(EarthView::World::Core::MemoryDataStreamPtr& input, CCodec::CodecDataPtr& pData, ev_uchar*& outPixelBytes) const;
 
-				////开源A卡驱动下，转换为PF_BYTE_BGRA或者PF_BYTE_BGR
-    	        ev_bool convertToByteBGRAOrBGR(EarthView::World::Core::MemoryDataStreamPtr& input, CCodec::CodecDataPtr& pData, ev_uchar*& outPixelBytes, PixelFormat& pixFormat) const;
-
                 //// Single registered codec instance
                 static CDDSCodec* msInstance;
             ev_private:
@@ -75,8 +72,6 @@ namespace EarthView
                 static void startup();
                 //// Static method to shutdown and unregister the DDS codec
                 static void shutdown();
-				/// 提取dds流中数据格式
-				static PixelFormat extractPixelFormat(EarthView::World::Core::DataStreamPtr& stream);
 
 				EarthView::World::Core::DataStreamPtr encodeImage(EarthView::World::Core::MemoryDataStreamPtr& input, ev_int32 dxtFormat, EarthView::World::Graphic::CImageCodec::CImageData& imgData);
 

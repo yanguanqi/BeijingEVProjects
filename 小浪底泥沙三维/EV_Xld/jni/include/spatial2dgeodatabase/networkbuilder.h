@@ -15,17 +15,43 @@ class CPoint;
 class CLine;
 class CLineString;
 }}}}
-namespace EarthView{
-	namespace World{
-		namespace Spatial{		
-				class CPythonUtil;
-			}}}
+
 namespace EarthView{
 	namespace World{
 		namespace Spatial2D{
 			namespace GeoDataset{
-
-class CFeatureOperationItem;
+/// <summary>
+///联通策略枚举
+/// </summary>
+enum EVConnectivityPolicy
+{
+	/// <summary>
+	///端点联通
+	/// </summary>
+    CT_ENDPIONT    = 1,
+	/// <summary>
+	///任意节点联通
+	/// </summary>
+    CT_ANYVERTEX   = 2
+};
+/// <summary>
+///数据类型枚举
+/// </summary>
+enum EVDataValueType
+{
+	/// <summary>
+	///字段类型
+	/// </summary>
+	VT_FIELD	= 1,
+	/// <summary>
+	///常量类型
+	/// </summary>
+	VT_CONSTANT = 2,
+	/// <summary>
+	///函数类型
+	/// </summary>
+	VT_FUNCTION = 3
+};
 class EV_2DGEODATABSE_DLL ElevationSetting : public EarthView::World::Core::CAllocatedObject
 {
 ev_private:
@@ -196,29 +222,11 @@ public:
 	ev_bool buildWithEndPointConnectivityPolicy();
 	ev_bool buildWithVertexConnectivityPolicy();
 	/// <summary>
-	/// 更新网络数据集
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns></returns>
-	ev_bool update(EVString &networkName);
-	/// <summary>
-	/// 清空网络数据集的脏记录表
-	/// </summary>
-	/// <returns></returns>
-	ev_bool clearNetworkDirtyRecords();
-	ev_bool updateJunctionClass();
-	/// <summary>
 	/// 设置网络数据集名称
 	/// </summary>
 	/// <param name="name">名称</param>
 	/// <returns></returns>
 	ev_void setName(const EVString &name);
-	/// <summary>
-	/// 获取网络数据集名称
-	/// </summary>
-	/// <param name="name">名称</param>
-	/// <returns></returns>
-	EVString getName();
 	/// <summary>
 	/// 设置网络数据集源数据集
 	/// </summary>
@@ -277,7 +285,6 @@ public:
 	/// <returns>完成百分比</returns>
 	 ev_real64 getFinishPercent();
 
-	 EVString getErrorMsg();
 private:
 	typedef set<ev_uint32> idSet;
 	typedef map<ev_uint32, list<int> > idPointMap;
@@ -292,35 +299,17 @@ private:
 	ev_void DestroyObject(ev_vector<CSplitInfo> &splitInfo);
 	///////////////////////////////////////////////////////////////////////////////////
 	ev_uint32 AddJunction(const EarthView::World::Spatial::Geometry::CPoint *pt);
-	ev_bool buildAFeature2(EarthView::World::Spatial::GeoDataset::IFeature* feature);
+	ev_void buildAFeature2(EarthView::World::Spatial::GeoDataset::IFeature* feature);
 	///////////////////////////////////////////////////////////////////////////////////
 
-	ev_bool buildAFeature(EarthView::World::Spatial::GeoDataset::IFeature* feature);
-	ev_bool buildAAtrribute(EarthView::World::Spatial2D::GeoDataset::CNAAttribute &attr,
+	ev_void buildAFeature(EarthView::World::Spatial::GeoDataset::IFeature* feature);
+	ev_void buildAAtrribute(EarthView::World::Spatial2D::GeoDataset::CNAAttribute &attr,
                             EarthView::World::Spatial::GeoDataset::IFeature *feature,
                             ev_real64 &dFVal,
 							ev_real64 &dTVal);
 	ev_bool createJunctionFeatureClass();
 	ev_void toStream1(EarthView::World::Core::CDataStream &stream);
 	ev_void toStream2(EarthView::World::Core::CDataStream &stream);
-	ev_bool updateInit();
-	ev_void initNDEdgeSQL();
-	/// <summary>
-	/// 通过删除网络数据集中脏记录来更新网络数据集
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns></returns>
-	ev_bool updateNetworkByDeleteRecords(ev_map<EVString,ev_vector<ev_uint32> > deleteFeatureItems,
-		const EarthView::World::Spatial2D::GeoDataset::EVConnectivityPolicy& policy);
-	/// <summary>
-	/// 通过向网络数据集增加新纪录来更新网络数据集
-	/// </summary>
-	//
-	/// <param name=""></param>
-	/// <returns></returns>
-	ev_bool updateNetworkByAddRecords(ev_map<EVString,ev_vector<ev_uint32> > addFeatureItems,
-		const EarthView::World::Spatial2D::GeoDataset::EVConnectivityPolicy& policy);
-
 ev_private:
 	CNetworkDatasetBuilder(EarthView::World::Core::CNameValuePairList *pList);
 
@@ -339,20 +328,7 @@ private:
 
 	EVString								m_current;
 	ev_real64 m_dFinishPercent;
-	EVString  mstrErrorMsg;
-	map<void*, EarthView::World::Spatial::CPythonUtil*> mvPythonScripts;
-	map<void*,EarthView::World::Core::CStringArray> mvFieldNames;
 	idPointMap m_linePointMap;//记录每条边的id和边上的交点index，边上的交点可以多于一个
-
-    ///以下属性主要用于网络数据集的更新
-	ev_bool m_bUpdate;
-	ev_uint32 m_OldJunctionCount;                                                                    // 未更新前网络节点总数
-	EarthView::World::Spatial2D::GeoDataset::CNetworkDataset* m_Networkset;                          // 待更新的网络数据集
-	EarthView::World::Spatial::GeoDataset::IFeatureClass* m_JunctionFC;                              // 网络节点类
-	ev_vector<EarthView::World::Spatial2D::GeoDataset::CFeatureOperationItem*> m_DirtyFeatureItem;   // 网络数据集脏要素操作记录 
-    ev_map<EVString,ev_vector<ev_uint32> > m_DeleteFeatureItemsMap;                                   // 源数据集名称及要素ID
-	ev_map<EVString,ev_vector<ev_uint32> > m_AddFeatureItemsMap;                                      // 源数据集名称及要素ID                                  // 源数据集名称及要素ID
-
 };
 class CJunction
 {

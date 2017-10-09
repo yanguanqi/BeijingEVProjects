@@ -4,19 +4,14 @@
 #include "curve.h"
 #include "linestring.h"
 
+EV_DECLARE_GEOMETRY_CLASS_PRIVATE(CEllipticArc);
 
+EV_DECLARE_GEOMETRY_CLASS_UTILITY(CGeometryHelper);
 
 namespace EarthView{
 	namespace World{
 		namespace Spatial{
 			namespace Geometry{
-				namespace Private{
-					class CEllipticArcPrivate;
-				}
-				namespace Utility{
-					class CGeometryHelper;
-
-				}
 				/// <summary>
 				/// 椭圆弧类
 				/// </summary>

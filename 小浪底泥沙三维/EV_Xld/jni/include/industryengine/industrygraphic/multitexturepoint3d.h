@@ -61,21 +61,6 @@ namespace EarthView
 					const bool& faceToCamera,
 					const bool& showAsPixel);
 				/// <summary>
-				/// 添加单点
-				/// </summary>
-				/// <param name="ptName">单点名称</param>
-				/// <param name="worldPos">单点世界坐标</param>
-				/// <param name="iconPath">图标文件路径</param>
-				/// <param name="size">单点像素大小</param>
-				/// <param name="faceToCamera">是否始终朝向相机显示</param>
-				/// <param name="showAsPixel">是否以像素模式显示，显示大小不跟随镜头发生变化</param>
-				void addPoint3d(const EVString& ptName, 
-					const EarthView::World::Spatial::Math::CVector3& worldPos, 
-					const EVString& iconPath,
-					const float& size,
-					const bool& faceToCamera,
-					const bool& showAsPixel);
-				/// <summary>
 				/// 根据名称移除点
 				/// </summary>
 				/// <param name="ptName">单点名称</param>
@@ -100,18 +85,6 @@ namespace EarthView
 				void setStatus(const EVString& ptName, 
 					const EarthView::World::Spatial::Math::CVector3& worldPos, 
 					const EarthView::World::Spatial::Math::CDegree& heading);
-			    /// <summary>
-				/// 设置点对象被选中时的颜色
-				/// </summary>
-				/// <param name="ptName">单点名称</param>
-				/// <param name="colour">颜色</param>
-				ev_bool setSelectedColor(const EVString& ptName,EarthView::World::Graphic::CColourValue& colour);
-					    /// <summary>
-				/// 设置点对象被选中时的颜色
-				/// </summary>
-				/// <param name="ptName">单点名称</param>
-				/// <param name="colour">颜色</param>
-				void  setAllSelectedColor(EarthView::World::Graphic::CColourValue& colour);
 				/// <summary>
 				/// 获取当前多点对象名称
 				/// </summary>

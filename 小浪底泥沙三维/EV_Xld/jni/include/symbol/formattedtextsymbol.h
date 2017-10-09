@@ -104,6 +104,14 @@ namespace EarthView{
 				ev_real64 getFlipAngle();
 
 				/// <summary>
+				/// 获取文本在x和y轴上大小
+				/// </summary>
+				/// <param name="xSize">文本在x轴大小</param>
+				/// <param name="xSize">文本在y轴大小</param>
+				/// <returns></returns>
+				virtual ev_void getTextSize( ev_real64 *xSize, ev_real64 *ySize );
+
+				/// <summary>
 				/// 设置字据调整
 				/// </summary>
 				/// <param name="enable">字据调整</param>

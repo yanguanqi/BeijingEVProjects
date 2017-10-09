@@ -22,9 +22,6 @@
 #include "spatial3dproxy/modelfilesourcepublish.h"
 #include "spatial3dproxy/modeldbsourcepublish.h"
 #include "spatial3ddataset/spatial3ddatasetcomdef.h"
-#include "spatial3ddataset/modeltemplateplugin.h"
-#include "spatial3dproxy/modeldatastreamsourcepublish.h"
-
 
 namespace EarthView{
 	namespace World{
@@ -35,10 +32,7 @@ namespace EarthView{
 				EarthView::World::Spatial3D::Dataset::CModelDataSource* mpDataSource;
 				CModelDBSourcePublishTool* mpPublishTool;
 				ModelDataSourceTool* mModelDataSourceTool;
-#if EV_PLATFORM != EV_PLATFORM_ANDROID
 				CModelFileSourcePublishTool* mpModelFileSourcePublicTool;
-				CModelDataStreamSourcePublishTool* mpModelStreamPublishTool;
-#endif
 
 ev_private:
 				/// <summary>
@@ -150,7 +144,7 @@ ev_private:
 				/// <param name="bCoverOrInstead">覆盖或是替换</param>
 				/// <param name="userTypeNodecode">用户类别编码</param>
 				/// <returns></returns>
-				ev_bool importModelDBFromLocalFiles(const EVString& dataFolder, EarthView::World::Spatial3D::Dataset::CModelDataSource* pModelDBDataSource,EarthView::World::Graphic::CSceneManager* mgr, EarthView::World::Spatial3D::CModelPublishToolListener* listener,ev_bool bClear, ev_bool bCoverOrInstead,ev_bool bCompositorSubmesh,const EVString& userTypeNodecode,ev_bool isLeftHand,ev_bool doubleSideLight, ev_bool isReCalNormal);
+				ev_bool importModelDBFromLocalFiles(const EVString& dataFolder, EarthView::World::Spatial3D::Dataset::CModelDataSource* pModelDBDataSource,EarthView::World::Graphic::CSceneManager* mgr, EarthView::World::Spatial3D::CModelPublishToolListener* listener,ev_bool bClear, ev_bool bCoverOrInstead,ev_bool bCompositorSubmesh,const EVString& userTypeNodecode,ev_bool isLeftHand,ev_bool doubleSideLight);
 				/// <summary>
 				/// 从文件导入
 				/// </summary>
@@ -165,22 +159,6 @@ ev_private:
 				/// <returns></returns>
 				ev_bool importModelDBFromLocalFiles(const EVString& dataFolder, EarthView::World::Spatial3D::Dataset::CModelDataSource* pModelDBDataSource,EarthView::World::Graphic::CSceneManager* mgr, EarthView::World::Spatial3D::CModelPublishToolListener* listener,ev_bool bClear, ev_bool bCoverOrInstead,ev_bool bCompositorSubmesh,const EVString& userTypeNodecode,ev_bool isLeftHand,EarthView::World::Spatial3D::ModelIdAndNameMap &idAndNameMap);
 
-
-				/// <summary>
-				/// 从文件导入
-				/// </summary>
-				/// <param name="dataFolder">模型文件根目录</param>
-				/// <param name="pModelDBDataSource">目标数据源</param>
-				/// <param name="mgr">场景管理器</param>
-				/// <param name="listener">过程监听器</param>
-				/// <param name="bClear">是否清空原有数据</param>
-				/// <param name="bCoverOrInstead">覆盖或是替换</param>
-				/// <param name="userTypeNodecode">用户类别编码</param>
-				/// <param name="idAndNameMap">返回导入成功的模型id及其名称</param>
-				/// <returns></returns>
-				ev_bool importModelDBFromStream( const CModelData& modelData , EarthView::World::Spatial3D::Dataset::CModelDataSource* pModelDBDataSource,EarthView::World::Graphic::CSceneManager* mgr, ev_bool bCoverOrInstead,const EVString& userTypeNodecode,_out ev_uint32 &meshid );
-
-				
 				/// <summary>
 				/// 清除模板数据源
 				/// </summary>

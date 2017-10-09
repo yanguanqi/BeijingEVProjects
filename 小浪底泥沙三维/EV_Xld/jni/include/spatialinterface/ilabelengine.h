@@ -21,20 +21,20 @@ namespace EarthView{
 					/// <summary>
 					/// 添加要素
 					/// </summary>
-					virtual ev_bool addFeature(ev_int32 classID,
+					virtual ev_void addFeature(ev_int32 classID,
 						ILabelProperty * labelProperty,
 						const EarthView::World::Spatial::Geometry::IGeometry *geo,
 						EVString &label,
-						ev_int32 featureID,
-						const EarthView::World::Spatial::Display::ISymbol* featureSymbol);
+						ev_int32 featureID);
 					/// <summary>
-					/// 是否开启去重的功能,默认关闭
+					/// 添加要素(分数注记)
 					/// </summary>
-					virtual ev_void setDuplicateEnable(ev_bool b);
-					/// <summary>
-					/// 获取是否开启了去重的功能
-					/// </summary>
-					virtual ev_bool getDuplicateEnable();
+					virtual ev_void addFeature(ev_int32 classID,
+						ILabelProperty * labelProperty,
+						const EarthView::World::Spatial::Geometry::IGeometry *geo,
+						EVString &label_numerator,
+						EVString &label_denominator,
+						ev_int32 featureID);
 					/// <summary>
 					/// 获取标注元素集
 					/// </summary>
@@ -43,6 +43,10 @@ namespace EarthView{
 					/// 初始化
 					/// </summary>
 					virtual ev_void initialize(const EarthView::World::Spatial::Display::ISpatialDisplay * display,const EarthView::World::Spatial::Geometry::IEnvelope * extent);
+					/// <summary>
+					/// 是否初始化
+					/// </summary>
+					virtual ev_bool isInitialized();
 					/// <summary>
 					/// 释放资源
 					/// </summary>
@@ -55,8 +59,6 @@ namespace EarthView{
 					/// 添加障碍区域
 					/// </summary>
 					virtual ev_void addBarriers(const EarthView::World::Spatial::Geometry::IGeometry *geo);
-					virtual ev_bool checkUsed( double dx, double dy, double dfHori, double dfVert);
-					virtual ev_void setUsed( double dx, double dy, double dfHori, double dfVert);
 ev_private:
 					ILabelEngine( EarthView::World::Core::CNameValuePairList *pList );
 				protected:

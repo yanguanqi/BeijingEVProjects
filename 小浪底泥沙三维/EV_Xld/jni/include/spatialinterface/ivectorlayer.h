@@ -23,7 +23,7 @@ namespace EarthView{
 					SRT_And			= 3,
 					SRT_XOR			= 4
 				};*/
-				class ISpatialThemeScale;
+
 				class ILayerSelection;
 				/// <summary>
 				/// 矢量图层基类
@@ -61,13 +61,6 @@ namespace EarthView{
 					/// <param name="fieldName">显示字段</param>
 					/// <returns></returns>
 					virtual ev_void setDisplayField(const EVString& fieldName);
-
-					/// <summary>
-					/// 获取多比例尺专题图
-					/// </summary>
-					/// <param name=""></param>
-					/// <returns></returns>
-					virtual EarthView::World::Spatial::Atlas::ISpatialThemeScale * getSpatialThemeScale() const;
 					/// <summary>
 					/// 获取专题图信息
 					/// </summary>

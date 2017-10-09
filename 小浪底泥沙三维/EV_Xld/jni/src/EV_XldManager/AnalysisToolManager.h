@@ -22,6 +22,10 @@ namespace EarthView
 
 			void DrawRectBounds();
 
+			void DrawStraightLine();
+
+			void DrawPolyline();
+
 		private:
 			static CAnalysisToolManager* mpSingleton;
 			CAnalysisToolManager();

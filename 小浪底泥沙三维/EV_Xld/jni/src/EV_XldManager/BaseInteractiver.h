@@ -1,6 +1,7 @@
 #include "globecontrol\globecontrol.h"
 #include "ga\guieventhandler.h"
 #include "RenderLibDataType.h"
+#include "AnalysisEventObject.h"
 #ifndef BASEINTERACTIVER_H_
 #define BASEINTERACTIVER_H_
 namespace EarthView
@@ -42,7 +43,9 @@ namespace EarthView
 					/// 该值指示鼠标当前采点的地理坐标
 					/// </summary>
 					EarthView::World::Spatial::Math::CVector3 mCurrentGeoPos;
+					EarthView::World::Spatial::Math::CVector3 mCenterWrdPos;
 					EarthView::World::Spatial3D::Controls::CGlobeControl* mpGlobeControl;
+					EarthView::Xld::AnalysisTool::CAnalysisEventObject* mObejct;
 					/// <summary>
 					/// 该方法用于初始化其他的操作或参数
 					/// </summary>

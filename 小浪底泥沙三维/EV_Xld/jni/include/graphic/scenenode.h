@@ -189,7 +189,6 @@ namespace EarthView
             protected:
 				ev_bool mbVisible;
                 EarthView::World::Graphic::CSceneNode::ObjectMap mObjectsByName;
-				//mutable EarthView::World::Core::CRecursiveMutex mObjectsLocker;
                 /// <summary>
                 /// 指向当前节点的线框盒
                 /// </summary>
@@ -628,18 +627,6 @@ namespace EarthView
                 /// <param name=""></param>
                 /// <returns></returns>
                 virtual EarthView::World::Graphic::CNode::CDebugRenderable *getDebugRenderable();
-
-				/// <summary>
-				/// 针对mChildren访问的异步锁-加锁
-				/// </summary>                
-				/// <returns></returns>
-				virtual ev_void syncVisitObjectsLock();
-
-				/// <summary>
-				/// 针对mChildren访问的异步锁-解锁
-				/// </summary>                
-				/// <returns></returns>
-				virtual ev_void syncVisitObjectsUnLock();
 
 				inline ev_bool getIsOceanNode()
 				{

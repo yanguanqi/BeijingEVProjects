@@ -157,9 +157,7 @@ ev_private:
 					heightTest(false), readFoam(false), heightHost(0), foamHost(0), chopXHost(0),
 					chopZHost(0), foam(0), planX(0), planZ(0), chopZDataIn(0), xDeviceComplexBuffer(0),
 					zDeviceComplexBuffer(0), multiGPU(false), lastLoopingPeriod(-1), heightCopied(false),
-					heightComputed(false), sprayEnabled(true), nextAvailableDevice(0) {
-						g_referenceNum++;
-				}
+					heightComputed(false), sprayEnabled(true) {}
 
 				virtual void Release();
 
@@ -223,8 +221,7 @@ ev_private:
 				int hDevice, xDevice, zDevice;
 				int N,M;
 
-				int nextAvailableDevice;
-				static int g_referenceNum;
+				static int nextAvailableDevice;
 			};
         }
     }

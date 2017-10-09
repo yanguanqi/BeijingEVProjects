@@ -3,7 +3,6 @@
 #include "prerequisites.h"
 #include "root.h"
 #include "rendersystem.h"
-using namespace  EarthView::World::Core;
 namespace EarthView
 {
     namespace World

@@ -156,7 +156,14 @@ ev_private:
 					/// </summary>
 					/// <param name="pSceneMgr">场景管理器</param>
 					/// <returns></returns>
-					virtual ev_void _notifyLayerRemoved_impl(EarthView::World::Graphic::CSceneManager* pSceneMgr);
+					virtual ev_void _notifyLayerRemoved(EarthView::World::Graphic::CSceneManager* pSceneMgr);
+					/// <summary>
+					/// 通知图层刷新
+					/// </summary>
+					/// <param name="camera">镜头</param>
+					/// <param name="updateType">刷新类型</param>
+					/// <returns></returns>
+					virtual ev_void _notifyRefreshed( const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
 
 					/// <summary>
 					/// 数据集变更通知
@@ -165,14 +172,6 @@ ev_private:
 					/// <param name="strDatasetName">数据集名称</param>
 					/// <returns></returns>
 					virtual ev_void _notifyDataChanged(const EVString& strDataSourceName,const EVString& strDatasetName, EarthView::World::Core::CEvent* pEvent);
-ev_internal:
-					/// <summary>
-					/// Globe刷新时调用的函数
-					/// </summary>
-					/// <param name="camera">当前的相机</param>
-					/// <param name="updateType">刷新类型</param>
-					/// <returns></returns>
-					virtual ev_void _notifyRefreshed_impl(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
 
 				protected:
 					EarthView::World::Core::MemoryDataStreamPtr drawImages(list<EarthView::World::Core::DataStreamPtr>& images,ev_bool dds);

@@ -32,7 +32,7 @@ public:
 	~CRenderableChar();	
 
 	/// <summary>参见EarthView::World::Graphic::CRenderableFont</summary>
-	void onUpdateRenderQueue(EarthView::World::Graphic::CRenderQueue* queue, ev_uint8 renderQueueId, ev_uint16 priority);
+	void onUpdateRenderQueue(EarthView::World::Graphic::CRenderQueue* queue, ev_uint8 renderQueueId);
 	void onVisitRenderable(EarthView::World::Graphic::CRenderable::CVisitor* visitor,ev_bool debugRenderables);
 	/// //////////////////////////////////////
 
@@ -69,7 +69,7 @@ public:
 	~CRenderableString();
 
 	/// <summary>参见EarthView::World::Graphic::CRenderableFont</summary>
-	void onUpdateRenderQueue(EarthView::World::Graphic::CRenderQueue* queue, ev_uint8 renderQueueId, ev_uint16 priority);
+	void onUpdateRenderQueue(EarthView::World::Graphic::CRenderQueue* queue, ev_uint8 renderQueueId);
 	void onVisitRenderable(EarthView::World::Graphic::CRenderable::CVisitor* visitor,ev_bool debugRenderables);
 	void onAttachedToNode(EarthView::World::Graphic::CNode* node);
 	/// //////////////////////////////////////

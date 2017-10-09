@@ -45,6 +45,13 @@ public:
 
 ev_private:
 	/// <summary>
+	/// 获取阻抗值
+	/// </summary>
+	/// <param name="edgeID">边id</param>
+	/// <param name="FT">方向</param>
+	/// <returns>返回阻抗值</returns>
+	ev_real64 getImpedance(ev_uint32 edgeID,ev_bool FT);
+	/// <summary>
 	/// 获取网络要素集邻接表
 	/// </summary>
 	/// <param name=""></param>

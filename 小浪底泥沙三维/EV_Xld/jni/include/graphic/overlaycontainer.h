@@ -519,10 +519,6 @@ namespace EarthView
                 virtual EarthView::World::Graphic::COverlayElement *getChild(const EVString &name);
                 /***** @copydoc COverlayElement::initialise ****/
                 void initialise();
-				/***** Shows this element if it was hidden. ****/
-				virtual void show();
-				/***** Hides this element if it was visible. ****/
-				virtual void hide();
                 void _addChild(EarthView::World::Graphic::COverlayElement *elem);
                 void _removeChild(EarthView::World::Graphic::COverlayElement *elem)
                 {

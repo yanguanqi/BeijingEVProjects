@@ -1,4 +1,4 @@
-ï»¿#ifndef EARTHVIEW_WORLD_SPATIAL3D_GEOMETRY_SCREENPOINT_H
+#ifndef EARTHVIEW_WORLD_SPATIAL3D_GEOMETRY_SCREENPOINT_H
 #define EARTHVIEW_WORLD_SPATIAL3D_GEOMETRY_SCREENPOINT_H
 
 #include <core/memoryallocatedobject.h>
@@ -16,52 +16,52 @@ namespace EarthView
 		namespace Geometry3D
 		{
 			/// <summary>
-			/// å±å¹•ç‚¹ç±»å‹
+			/// ÆÁÄ»µãÀàĞÍ
 			/// <summary>
 			enum  ScreenPointType
 			{
 				/// <summary>
-				/// åœ†å½¢
+				/// Ô²ĞÎ
 				/// <summary>
 				SPT_Circle = 0,
 				/// <summary>
-				/// æ­£æ–¹å½¢
+				/// Õı·½ĞÎ
 				/// <summary>
 				SPT_Quad				
 			};
 
 			/// <summary>
-			///å±å¹•ç‚¹ç±»
+			///ÆÁÄ»µãÀà
 			/// </summary>
 			class EV_GEOMETRY3D_DLL CScreenPoint : public EarthView::World::Geometry3D::CScreenGeometry
 			{
 ev_private:
 				/// <summary>
-				/// æ„é€ å‡½æ•°
+				/// ¹¹Ôìº¯Êı
 				/// </summary>
-				/// <param name="pList">æ„é€ å‡½æ•°å‚æ•°é”®å€¼å¯¹è¡¨</param>
+				/// <param name="pList">¹¹Ôìº¯Êı²ÎÊı¼üÖµ¶Ô±í</param>
 				/// <returns></returns>
 				CScreenPoint(EarthView::World::Core::CNameValuePairList* pList);
 			public:
 				/// <summary>
-				/// æ„é€ å‡½æ•°
+				/// ¹¹Ôìº¯Êı
 				/// </summary>
-				/// <param name="scenemanager">åœºæ™¯ç®¡ç†å™¨</param>
-				/// <param name="type">ç‚¹ç±»å‹</param>
-				/// <param name="estimatedCount">é¢„è®¾ç‚¹ä¸ªæ•°</param>
+				/// <param name="scenemanager">³¡¾°¹ÜÀíÆ÷</param>
+				/// <param name="type">µãÀàĞÍ</param>
+				/// <param name="estimatedCount">Ô¤Éèµã¸öÊı</param>
 				/// <returns></returns>
 				CScreenPoint(EarthView::World::Graphic::CSceneManager* ref_scenemanager,ScreenPointType type,ev_uint32 estimatedCount);
 				/// <summary>
-				/// æ„é€ å‡½æ•°
+				/// ¹¹Ôìº¯Êı
 				/// </summary>
-				/// <param name="scenemanager">åœºæ™¯ç®¡ç†å™¨</param>
-				/// <param name="type">ç‚¹ç±»å‹</param>
-				/// <param name="estimatedCount">é¢„è®¾ç‚¹ä¸ªæ•°</param>
-				/// <param name="texture">çº¹ç†å›¾ç‰‡æµ</param>
+				/// <param name="scenemanager">³¡¾°¹ÜÀíÆ÷</param>
+				/// <param name="type">µãÀàĞÍ</param>
+				/// <param name="estimatedCount">Ô¤Éèµã¸öÊı</param>
+				/// <param name="texture">ÎÆÀíÍ¼Æ¬Á÷</param>
 				/// <returns></returns>
 				CScreenPoint(EarthView::World::Graphic::CSceneManager* ref_scenemanager,ScreenPointType type,ev_uint32 estimatedCount,EarthView::World::Core::DataStreamPtr& texture);
 				/// <summary>
-				/// ææ„å‡½æ•°
+				/// Îö¹¹º¯Êı
 				/// </summary>
 				/// <param name=""></param>
 				/// <returns></returns>
@@ -70,26 +70,26 @@ ev_private:
 			public:	
 
 				/// <summary>
-				/// å¼€å§‹ä¸€ç±»ç›¸åŒçš„ç‚¹,æ¸²æŸ“æ—¶ä»å¯ä»¥è¿½åŠ ç‚¹,beginå’Œendä¹‹é—´åªèƒ½æ‰§è¡ŒappenPoint
+				/// ¿ªÊ¼Ò»ÀàÏàÍ¬µÄµã,äÖÈ¾Ê±ÈÔ¿ÉÒÔ×·¼Óµã,beginºÍendÖ®¼äÖ»ÄÜÖ´ĞĞappenPoint
 				/// </summary>
-				/// <param name="color">é¢œè‰²</param>
-				/// <param name="size">å®½åº¦(ç›´å¾„ï¼Œå•ä½å’Œé‡‡ç”¨çš„åæ ‡ç±»å‹ä¸€è‡´)</param>
+				/// <param name="color">ÑÕÉ«</param>
+				/// <param name="size">¿í¶È(Ö±¾¶£¬µ¥Î»ºÍ²ÉÓÃµÄ×ø±êÀàĞÍÒ»ÖÂ)</param>
 				/// <returns></returns>
 				ev_void begin(const EarthView::World::Graphic::CColourValue& color,Real size);
 				ev_void begin(const EarthView::World::Graphic::CColourValue& color);
 				ev_void begin();
 				/// <summary>
-				/// è¿½åŠ ç‚¹
+				/// ×·¼Óµã
 				/// </summary>
-				/// <param name="position">å±å¹•åæ ‡</param>
-				/// <param name="color">é¢œè‰²</param>
-				/// <param name="size">å®½åº¦(ç›´å¾„ï¼Œå•ä½å’Œé‡‡ç”¨çš„åæ ‡ç±»å‹ä¸€è‡´)</param>
+				/// <param name="position">ÆÁÄ»×ø±ê</param>
+				/// <param name="color">ÑÕÉ«</param>
+				/// <param name="size">¿í¶È(Ö±¾¶£¬µ¥Î»ºÍ²ÉÓÃµÄ×ø±êÀàĞÍÒ»ÖÂ)</param>
 				/// <returns></returns>
 				ev_void appendPoint(const EarthView::World::Spatial::Math::CVector2& position,const EarthView::World::Graphic::CColourValue& color,Real size);
 				ev_void appendPoint(const EarthView::World::Spatial::Math::CVector2& position,const EarthView::World::Graphic::CColourValue& color);
 				ev_void appendPoint(const EarthView::World::Spatial::Math::CVector2& position);
 				/// <summary>
-				/// ç»“æŸä¸€ç±»ç›¸åŒç‚¹
+				/// ½áÊøÒ»ÀàÏàÍ¬µã
 				/// </summary>
 				/// <returns></returns>
 				ev_void end();				
@@ -107,16 +107,16 @@ ev_private:
 							
 			private:
 				/// <summary>
-				/// å¤åˆ¶æ„é€ å‡½æ•°
+				/// ¸´ÖÆ¹¹Ôìº¯Êı
 				/// </summary>
-				/// <param name="obj">å¯¹è±¡</param>
+				/// <param name="obj">¶ÔÏó</param>
 				/// <returns></returns>
 				CScreenPoint(const CScreenPoint& obj);
 				
 			private:
 
-				ev_uint32 mMaxPointCount;//æœ€å¤§ç‚¹æ•°
-				ev_uint32 mCurrentPointCount;//å½“å‰ç‚¹æ•°
+				ev_uint32 mMaxPointCount;//×î´óµãÊı
+				ev_uint32 mCurrentPointCount;//µ±Ç°µãÊı
 
 				ScreenPointType mPointType;
 				EarthView::World::Graphic::CColourValue mCurrentColor;

@@ -136,15 +136,10 @@ ev_private:
 					/// <returns>可见性</return>
 					virtual ev_bool isVisible() const;
 					/// <summary>
-					/// 设置图层可见性，子类重写该方法
+					/// 设置图层可见性
 					/// </summary>
 					/// <param name="visible">可见性</param>
-					virtual ev_void setVisible_impl(ev_bool visible);
-					/// <summary>
-					/// 设置图层可见性，不要重写这个方法
-					/// </summary>
-					/// <param name="visible">可见性</param>
-					ev_void setVisible(ev_bool visible);
+					virtual ev_void setVisible(ev_bool visible);
 					/// <summary>
 					/// 获知图层是否有效
 					/// </summary>
@@ -206,8 +201,7 @@ ev_private:
 					/// </summary>
 					/// <param name=""></param>
 					/// <returns></returns>
-					ev_void _notifyLayerRemoved(EarthView::World::Graphic::CSceneManager* pSceneMgr);
-					virtual ev_void _notifyLayerRemoved_impl(EarthView::World::Graphic::CSceneManager* pSceneMgr);
+					virtual ev_void _notifyLayerRemoved(EarthView::World::Graphic::CSceneManager* pSceneMgr);
 					/// <summary>
 					/// Globe刷新时调用的函数
 					/// </summary>
@@ -215,9 +209,9 @@ ev_private:
 					/// <param name="level">当前的级别</param>
 					/// <param name="force">是否为强制刷新</param>
 					/// <returns></returns>
-					ev_void _notifyRefreshed(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
+					virtual ev_void _notifyRefreshed(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
 										
-					ev_void _notifyRefreshed(const EarthView::World::Graphic::CCamera* camera);
+					virtual ev_void _notifyRefreshed(const EarthView::World::Graphic::CCamera* camera);
 
                     /// <summary>
                     /// 数据集更新事件的通知
@@ -255,19 +249,12 @@ ev_private:
                     /// <returns></returns>
                     virtual ev_void toStream( _out EarthView::World::Core::CDataStream &stream ) const;
 
-					/// <summary>
-					/// 设置输入参数layer的可见性，供子类重写，如需要线程同步的情况
-					/// </summary>
-					/// <param name="layer">图层</param>
-					/// <param name="visible">是否可见</param>
-					virtual ev_void setVisible(EarthView::World::Spatial3D::Atlas::IGlobeLayer *layer, ev_bool visible);
 					ev_internal:
 					/// <summary>
 					/// 流的反序列化
 					/// </summary>
 					/// <param name="stream">流</param>
                     virtual ev_void fromStream( EarthView::World::Core::CDataStream& stream );
-					virtual ev_void _notifyRefreshed_impl(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
 
 				private:
 					/// <summary>
@@ -276,6 +263,7 @@ ev_private:
 					/// <param name="obj">对象</param>
 					/// <returns></returns>
 					C_DISABLE_COPY(IGlobeLayer);
+
 					protected:
 						EVString mLayerName;
 
@@ -286,10 +274,9 @@ ev_private:
 						ev_bool mCanEdit;
 						ev_bool mIsEditing;
 						EVString msDescription;
-						IGlobeLayer* mParentGroup;
 
 						EarthView::World::Graphic::CSceneManager* mpSceneMgr;
-						friend class CImageGroupLayer;
+
 				};
 				
 

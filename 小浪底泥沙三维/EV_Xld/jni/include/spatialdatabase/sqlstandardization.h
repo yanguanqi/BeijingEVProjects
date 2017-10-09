@@ -88,12 +88,6 @@ namespace EarthView{
 					///<returns>时间类型</returns>
 					const ev_char* sqlDateType() const;
 					///<summary>
-					///64位整形
-					/// </summary>
-					/// <param name=""></param>
-					///<returns>时间类型</returns>
-					const ev_char* sqlLongIntType() const;
-					///<summary>
 					///自增长字段
 					/// </summary>
 					/// <param name="fieldname">字段名</param>

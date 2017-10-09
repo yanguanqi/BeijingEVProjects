@@ -498,15 +498,6 @@ ev_private:
 					/// <returns></returns>
 					void startAnimation(_in const EVString& animationName,_in ev_bool processChild);
 
-					/// <summary>
-					///根据动画的名字开启某个动画
-					/// </summary>
-					/// <param name="animationName">动画的名字</param>
-					/// <param name="processChild">是否处理子动画。(只有节点动画具有子节点)</param>
-					/// <param name="stopOthers">是否停止其他动画.</param>
-					/// <returns></returns>
-					void startAnimation(_in const EVString& animationName,_in ev_bool processChild, _in ev_bool stopOthers);
-
 					///// <summary>
 					/////根据动画的名字开启某个动画
 					///// </summary>

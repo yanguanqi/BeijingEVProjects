@@ -540,8 +540,8 @@ ev_private:
 					/// </summary>
 					/// <param name="geoobj">GeoObject对象</param>
 					/// <returns>返回kml扩展数据</returns>
-					kmldom::ExtendedDataPtr createExtendedDataFromFresnelSurface(EarthView::World::Spatial::Kml::CGeoObjectExtension* geoobj);
-					kmldom::ExtendedDataPtr createExtendedDataFromPoint(EarthView::World::Spatial::Kml::CGeoObjectExtension* geoobj);
+					kmldom::ExtendedDataPtr createExtendedDataFromFresnelSurface(const EarthView::World::Spatial::Kml::CGeoObjectExtension* geoobj);
+					kmldom::ExtendedDataPtr createExtendedDataFromPoint(const EarthView::World::Spatial::Kml::CGeoObjectExtension* geoobj);
 					kmldom::ExtendedDataPtr createExtendedDataFromModel(EarthView::World::Spatial::Kml::CGeoObjectExtension* geoobj, EVString kml_path);
 					kmldom::ExtendedDataPtr createExtendedDataFromArrow(EarthView::World::Spatial::Kml::CGeoObjectExtension* geoobj);
 					kmldom::ExtendedDataPtr createExtendedDataFromSurfaceTexture(EarthView::World::Spatial::Kml::CGeoObjectExtension* geoobj, EVString kml_path);

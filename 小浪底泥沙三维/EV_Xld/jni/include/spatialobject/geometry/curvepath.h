@@ -6,18 +6,14 @@
 #include "envelope.h"
 #include "linestring.h"
 
+EV_DECLARE_GEOMETRY_CLASS_PRIVATE(CCurvePath);
+
+EV_DECLARE_GEOMETRY_CLASS_UTILITY(CGeometryHelper);
 
 namespace EarthView{
 	namespace World{
 		namespace Spatial{
 			namespace Geometry{
-				namespace Private{
-					class CCurvePathPrivate;
-				}
-				namespace Utility{
-					class CGeometryHelper;
-
-				}
 				/// <summary>
 				/// 曲线路径类，包含了多个曲线。
 				/// 其中前一个曲线的尾节点，必须和后一个曲线首节点相连。

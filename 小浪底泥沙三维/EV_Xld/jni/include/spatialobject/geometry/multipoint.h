@@ -4,19 +4,14 @@
 #include "geometry.h"
 #include "point.h"
 
+EV_DECLARE_GEOMETRY_CLASS_PRIVATE(CMultiPoint);
 
+EV_DECLARE_GEOMETRY_CLASS_UTILITY(CGeometryHelper);
 
 namespace EarthView{
 	namespace World{
 		namespace Spatial{
 			namespace Geometry{
-				namespace Private{
-					class CMultiPointPrivate;
-				}
-				namespace Utility{
-					class CGeometryHelper;
-
-				}
 				/// <summary>
 				/// 多点类，可以包含多个点对象
 				/// </summary>

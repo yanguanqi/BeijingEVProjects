@@ -49,13 +49,6 @@ ev_private:
 				/// <memo></memo>
 				ev_void setIsLeftHand(bool isLeftHand);
 				/// <summary>
-				/// 设置重新计算法线
-				/// </summary>
-				/// <param isReCalNormal>是否重新计算法线</param>
-				/// <returns></returns>
-				/// <memo></memo>
-				ev_void setReCalNormal(bool isReCalNormal);
-				/// <summary>
 				/// 设置文件数据源路径
 				/// </summary>
 				/// <param name="path">路径</param>
@@ -88,7 +81,6 @@ ev_private:
 				ev_void setRenderWindow(EarthView::World::Graphic::CRenderWindow* ref_prenderwindow);
 
 				EarthView::World::Spatial3D::ModelIdAndNameMap getPulishedModelIdAndNameMap();
-
 			protected:
 				/// <summary>
 				/// 导入前预处理
@@ -182,16 +174,11 @@ ev_private:
 				ev_void addResourceFolder(const EVString& folder);
 				ev_void removeResourceFolder(const EVString& folder);
 				ev_void exportToLocal(EarthView::World::Graphic::CMesh* mesh,EVString exportPath,EarthView::World::Core::MemoryDataStreamPtr& aniStream,EarthView::World::Core::MemoryDataStreamPtr& skeletonStream);
-				
 				EarthView::World::Graphic::CMesh*  modelSerializer(EVString filePath,EarthView::World::Core::MemoryDataStreamPtr& aniStream,EarthView::World::Core::MemoryDataStreamPtr& skeletonStream);
-				
-				// 只处理X文件，限于D3D9渲染系统;(主要用于内部测试用)
-				EarthView::World::Graphic::CMesh*  modelSerializerOnlyXFile(const ev_bool& bOnlyZIP, EVString filePath,EarthView::World::Core::MemoryDataStreamPtr& aniStream,EarthView::World::Core::MemoryDataStreamPtr& skeletonStream);
 
-		private:
+			private:
 				bool mDoubleSideLight;
 				bool mIsLeftHand;
-				bool mReCalNormal;
 				EVString mModelFileSourcePath;	
 				EVString mAttrTableName;
 				EarthView::World::Spatial::GeoDataset::CFields* mpAttrTableFields;

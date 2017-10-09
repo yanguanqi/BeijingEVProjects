@@ -271,7 +271,7 @@ namespace EarthView
 					/// </summary>
 					/// <param name=""></param>
 					/// <returns></returns>
-					virtual _extfree EarthView::World::Display::IBitmap * getRenderingLayerCache();
+					virtual EarthView::World::Display::IBitmap * getRenderingLayerCache();
 					/// <summary>
 					/// 克隆元素
 					/// </summary>
@@ -305,7 +305,6 @@ namespace EarthView
 					/// <param name=""></param>
 					/// <returns>xml元素</returns>
 					virtual EarthView::World::Core::CXmlElement toXmlElement() const;
-					void setLayeringExport(bool b);
 				ev_internal:
 					virtual ev_void fromStream( _in EarthView::World::Core::CDataStream& stream );	
 				ev_private:
@@ -345,12 +344,9 @@ namespace EarthView
 					EarthView::World::Spatial::Atlas::IMap* m_pLayoutMap;
 					mutable EarthView::World::Core::CRecursiveMutex mMapCanvasLock;
 					EarthView::World::Display::IBitmap* m_pMapCanvas;
-					EarthView::World::Display::IPaintDevice* m_pScrCanvas;
 					EVString m_strName;
 					EVString m_strDescription;
 					ev_bool m_bAccordingPage;
-
-					ev_bool m_bLayeringExport;
 
 					CTrackingLayerAgent* mpTrackingProxy;
 				};

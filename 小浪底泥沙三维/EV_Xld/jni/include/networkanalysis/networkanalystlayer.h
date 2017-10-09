@@ -192,7 +192,18 @@ public:
 	/// <param name=""></param>
 	/// <returns>返回成本属性名称</returns>
 	EarthView::World::Core::CStringArray getCostAttributeName()const;
-
+	/// <summary>
+	/// 设置成本属性
+	/// </summary>
+	/// <param name="name">成本属性名称</param>
+	/// <returns></returns>
+	ev_void	setCostAttribute(const EVString &name);
+	/// <summary>
+	///获取成本属性
+	/// </summary>
+	/// <param name=""></param>
+	/// <returns>返回成本属性</returns>
+	EVString	getCurrentCostAttribute()const;
 private: 
 	ev_int32 findJunction(const EarthView::World::Spatial::Geometry::CPoint &location);
 	ev_int32 attachEdge(const EarthView::World::Spatial::Geometry::CPoint &location);
@@ -211,6 +222,7 @@ protected:
 	 ev_bool			m_lockFlag;
 	 // 透明度
 	 ev_uint8			m_nAlpha;
+	
 	 //CStringArray		m_costAttrNames;
 };
 

@@ -27,7 +27,6 @@ namespace EarthView
                 /// <param name=""></param>
                 /// <returns></returns>
                 CEventObject();
-				CEventObject(ev_bool receiveBroadcastEvent);
 
                 /// <summary>
                 /// 析构函数
@@ -36,26 +35,17 @@ namespace EarthView
                 /// <returns></returns>
                 virtual ~CEventObject();
                 /// <summary>
-                /// 启动一个定时器，返回定时器id，时间间隔为interval，默认定时器在渲染线程执行
+                /// 启动一个定时器，返回定时器id，时间间隔为interval
                 /// </summary>
                 /// <param name="interval">定时器时间间隔</param>
                 /// <returns>定时器id，大于0的值为有效定时器id</returns>
                 ev_int32 startTimer(_in ev_int32 interval);
-				/// <summary>
-				/// 启动一个定时器，返回定时器id，时间间隔为interval
-				/// </summary>
-				/// <param name="interval">定时器时间间隔</param>
-				/// <param name="bUIThread">true表示定时器是在主线程执行，false表示在渲染线程执行</param>
-				/// <returns>定时器id，大于0的值为有效定时器id</returns>
-				ev_int32 startTimer(_in ev_int32 interval, ev_bool bUIThread);
                 /// <summary>
                 /// 注销指定定时器id的定时器
                 /// </summary>
                 /// <param name="id">定时器id</param>
                 /// <returns>成功返回true，否则返回false</returns>
                 ev_bool killTimer(_in ev_int32 id);
-
-				ev_uint32 getCreatorThreadID();
             ev_private:
                 CEventObject(EarthView::World::Core::CNameValuePairList *pList);
             ev_internal:
@@ -77,12 +67,9 @@ namespace EarthView
                 /// <param name="e">事件</param>
                 /// <returns></returns>
                 virtual void onCustomEvent(_in EarthView::World::Core::CEvent *e);
-			ev_private:
-                /// post事件队列中的事件个数
-                ev_int16  m_nPostedEvents;
             private:
-				ev_bool mbReceiveBroadcastEvent;
-				ev_uint32 mThreadID;
+                /// post事件队列中的事件个数
+                ev_int32  m_nPostedEvents;
                 friend class CEventDispatcher;
             };
         }

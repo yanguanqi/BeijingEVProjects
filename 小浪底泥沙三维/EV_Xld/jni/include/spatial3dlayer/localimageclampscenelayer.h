@@ -106,7 +106,7 @@ ev_private:
 					/// </summary>
 					/// <param name=""></param>
 					/// <returns></returns>
-					virtual ev_void _notifyLayerRemoved_impl(EarthView::World::Graphic::CSceneManager* pSceneMgr);
+					virtual ev_void _notifyLayerRemoved(EarthView::World::Graphic::CSceneManager* pSceneMgr);
 
 					/// <summary>
 					/// 序列化成xml文本

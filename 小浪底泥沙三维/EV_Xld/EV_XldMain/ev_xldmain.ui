@@ -119,7 +119,15 @@
     <addaction name="actionGrdLOD"/>
     <addaction name="actionGrdRender"/>
    </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>功能交互</string>
+    </property>
+    <addaction name="actionDrawRect"/>
+    <addaction name="actionDrawPolyline"/>
+   </widget>
    <addaction name="menuGrd"/>
+   <addaction name="menu"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -148,6 +156,16 @@
   <action name="actionGrdRender">
    <property name="text">
     <string>Grd地形渲染</string>
+   </property>
+  </action>
+  <action name="actionDrawRect">
+   <property name="text">
+    <string>画矩形</string>
+   </property>
+  </action>
+  <action name="actionDrawPolyline">
+   <property name="text">
+    <string>画多边形</string>
    </property>
   </action>
  </widget>

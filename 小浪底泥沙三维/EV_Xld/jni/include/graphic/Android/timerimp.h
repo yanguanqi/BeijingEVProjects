@@ -9,7 +9,7 @@ namespace EarthView
         {
 
             /** Timer class */
-            class EV_GRAPHIC_DLL CTimer : public EarthView::World::Core::CAllocatedObject
+            class EV_GRAPHIC_DLL CTimer : public CAllocatedObject
             {
             private:
                 struct timeval start;
@@ -31,7 +31,7 @@ namespace EarthView
                     @par
                         On failure, false is returned.
                 */
-                bool setOption( const EVString &strKey, const void *pValue )
+                bool setOption( const String &strKey, const void *pValue )
                 {
                     return false;
                 }

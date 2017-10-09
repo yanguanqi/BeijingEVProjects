@@ -170,8 +170,6 @@ ev_private:
 					ev_void setGeoObjectExtensionAttribute(EarthView::World::Spatial::Kml::CGeoObjectExtensionAttribute att);
 
 					ev_void renderEditFrame();
-					ev_void renderEditLine();
-					ev_void deRender();
 					ev_void _notify(ev_bool isRefershView);
 				protected:
 					int mLastX;
@@ -190,6 +188,7 @@ ev_private:
 					EarthView::World::Geometry3D::CMultiPoint3DExtension* mEditFrame;
 					EarthView::World::Geometry3D::CMovablePolyline2* mEditLine;
 					
+					ev_void renderEditLine();
 					
 					EarthView::World::Spatial::Kml::CKmlDocument* mParent;
 					EarthView::World::Graphic::CMaterialPtr mMaterial;

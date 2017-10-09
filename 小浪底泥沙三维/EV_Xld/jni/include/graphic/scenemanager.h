@@ -688,8 +688,6 @@ namespace EarthView
                 can look up nodes this way.
                 */
                 SceneNodeList mSceneNodes;
-				static ev_bool mbSupportedMultiThread;
-
                 //// EarthView::World::Graphic::CCamera in progress
                 EarthView::World::Graphic::CCamera *mCameraInProgress;
                 //// Current EarthView::World::Graphic::CViewport
@@ -699,7 +697,6 @@ namespace EarthView
                 //// Autotracking scene nodes
                 typedef set<EarthView::World::Graphic::CSceneNode *> AutoTrackingSceneNodes;
                 AutoTrackingSceneNodes mAutoTrackingSceneNodes;
-				mutable EarthView::World::Core::CRecursiveMutex mVisitAutoTrackingSceneNodesLocker;
                 /// Sky params
                 /// Sky plane
                 EarthView::World::Graphic::CEntity *mSkyPlaneEntity;
@@ -2019,7 +2016,7 @@ namespace EarthView
 				/// <param name=""></param>				
 				/// <returns></returns>
                 virtual void _renderVisibleObjects();
-				
+                
 				/// <summary>
 				/// 渲染场景
 				/// </summary>

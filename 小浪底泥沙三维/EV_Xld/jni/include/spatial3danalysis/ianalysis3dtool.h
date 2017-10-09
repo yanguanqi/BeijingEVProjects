@@ -11,9 +11,6 @@
 #include "spatial3dengine/globecamera.h"
 #include "graphic/scenenode.h"
 #include "geometry3d/geometry3dextension/multipolyline3dextension.h"
-#include "core/ev_logger.h"
-
-#define DEBUG_Analysis3D 0
 
 namespace EarthView
 {
@@ -29,8 +26,7 @@ namespace EarthView
 				{
 					LU_AutoMeterToKilometer,//达到一定数量级后，米会自动转成公里
 					LU_Meter,//米
-					LU_Kilometer,//公里
-					LU_SeaMile//海里
+					LU_Kilometer//公里
 				};
 
 				enum AreaUnit
@@ -229,14 +225,6 @@ ev_private:
 					void addIndex(const ev_uint32& idx);
 
 					/// <summary>
-					/// 唤醒移动对象的摄像机线程用于下一次渲染操作
-					/// 内部方法
-					/// </summary>
-					/// <param name="cam">摄像机</param>
-					/// <returns></returns>
-					virtual void _notifyCurrentCamera(EarthView::World::Graphic::CCamera *cam);
-
-					/// <summary>
 					/// 设置材质
 					/// </summary>
 					/// <param name="matName">材质名称</param>
@@ -315,8 +303,6 @@ ev_private:
 
 					ev_bool getResponseState()const;	
 					ev_void setResponseState(ev_bool state);
-					virtual _extfree EarthView::World::Core::CEvent* clone() const;
-
 				protected:
 					EarthView::World::Spatial::Atlas::IScene* mScene;
 					EarthView::World::Spatial3D::Analysis::IAnalysis3DTool* mpAnalysis3DTool;
@@ -374,14 +360,12 @@ ev_private:
 					/// <summary>
 					/// 重置
 					/// </summary>
-					ev_void reset();
-					virtual ev_void reset_impl();
+					virtual ev_void reset();
 					/// <summary>
 					/// 初始化
 					/// </summary>
 					/// <param name=""></param>
-					ev_void initialize();
-					virtual ev_void initialize_impl();
+					virtual ev_void initialize();
 					///<summary>
 					///字体风格类的初始化
 					///</summary>
@@ -936,29 +920,24 @@ ev_private:
 					/// <param name="degree">数值</param>
 					/// <returns>字符串</returns>
 					static EVString toStringDms(ev_real64 degree);
-					static EVString toStringDms(ev_real64 degree,ev_uint32 accuracy);
-					/// static EVString toStringDms(ev_real64 degree,ev_uint8 accuracy=2);
 					/// <summary>
 					/// 数值转换为纬度
 					/// </summary>
 					/// <param name="degree">数值</param>
 					/// <returns>字符串</returns>
 					static EVString toStringDmsLon(ev_real64 degree);
-					static EVString toStringDmsLon(ev_real64 degree,ev_uint32 accuracy);
 					/// <summary>
 					/// 数值转换为经度
 					/// </summary>
 					/// <param name="degree">数值</param>
 					/// <returns>字符串</returns>
 					static EVString toStringDmsLat(ev_real64 degree);
-					static EVString toStringDmsLat(ev_real64 degree,ev_uint32 accuracy);
 					/// <summary>
 					/// 将长度格式化
 					/// </summary>
 					/// <param name="length">长度值</param>
 					/// <returns>格式化后的字符串</returns>
-
-					static EVString toFormatLength(ev_real64 length,LengthUnit unit=LU_AutoMeterToKilometer);
+					static EVString toFormatLength(ev_real64 length,LengthUnit unit = LU_AutoMeterToKilometer);
 					/// <summary>
 					/// 格式化面积
 					/// </summary>

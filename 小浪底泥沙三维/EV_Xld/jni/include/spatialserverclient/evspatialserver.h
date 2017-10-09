@@ -162,10 +162,6 @@ namespace EarthView
 				/// <returns>xml描述</returns>
 				virtual EVString toXML() const;
 
-				ev_void XML2DatasetInfos(EarthView::World::Core::CXmlElement& xmlElement);
-				ev_void XML2DatasetInfo(EarthView::World::Core::CXmlElement& xmlElement);
-				ev_void XML2ErrorDatasetinfo(EarthView::World::Core::CXmlElement& xmlElement);
-
 				/// <summary>
 				/// 深度拷贝
 				/// </summary>
@@ -291,9 +287,6 @@ namespace EarthView
 				EarthView::World::Spatial::CWebMeshXGDataset* getMeshXGDataset(_in const EVString& datasetname);
 
 				EarthView::World::Spatial::CWebLasDataset* getLasDataset(_in const EVString& datasetname);
-				EarthView::World::Spatial::CWebLasXGDataset* getLasXGDataset(_in const EVString& datasetname);
-				EarthView::World::Spatial::CWebStreetViewDataset* getStreetViewDataset(_in const EVString& datasetname);
-				EarthView::World::Spatial::CWebOSGBDataset* getOSGBDataset(_in const EVString& datasetname);
 				/// <summary>
 				/// 
 				/// </summary>
@@ -837,7 +830,7 @@ namespace EarthView
 				/// <returns></returns>				
 				ev_int32 getModelDatasetFeatures(const EVString& datasetName, Download::ModelDatasetFeatures::ModelDatasetFeatureMap& modelDatasetFeatures);
 				ev_int32 getModelTemplateDatasetFeatures(const EVString& datasetName, Download::ModelDatasetFeatures::ModelDatasetFeatureMap& modelDatasetFeatures);
-	ev_private:
+
 				/// <summary>
 				/// 更新当前服务的数据集名称
 				/// </summary>

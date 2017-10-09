@@ -4,19 +4,14 @@
 #include "curve.h"
 #include "curvepath.h"
 
+EV_DECLARE_GEOMETRY_CLASS_PRIVATE(CPolyline);
 
+EV_DECLARE_GEOMETRY_CLASS_UTILITY(CGeometryHelper);
 
 namespace EarthView{
 	namespace World{
 		namespace Spatial{
 			namespace Geometry{
-				namespace Private{
-					class CPolylinePrivate;
-				}
-				namespace Utility{
-					class CGeometryHelper;
-
-				}
 				/// <summary>
 				/// 折线类
 				/// </summary>

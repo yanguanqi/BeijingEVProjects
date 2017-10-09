@@ -17,7 +17,6 @@
 #include <spatialobject/geometry/geometrycollection.h>
 #include <spatialinterface/igeometry.h>
 #include "spatial3dlayer/vectoroctreecachepublisher.h"
-#include "spatial3dlayer/featuregrouplayer.h"
 
 namespace EarthView{
 	namespace World{
@@ -104,27 +103,8 @@ ev_private:
 					/// <param name=""></param>
 					/// <returns></returns>
                     virtual ~CVectorDBClampSceneLayer();
-					///<summary>
-					///获取该图层所在的图层组
-					///</summary>
-					/// <param name=""></param>
-					/// <returns>图层所在的图层组</returns>
-					EarthView::World::Spatial3D::Atlas::CFeatureGroupLayer* getParent();
-					///<summary>
-					///设置该图层所在的图层组
-					///</summary>
-					/// <param name=""></param>
-					/// <returns></returns>
-					void setParent(EarthView::World::Spatial3D::Atlas::CFeatureGroupLayer* parent);
-					
                 public:
-					/// <summary>
-					/// 判断图层是否有效
-					/// </summary>
-					/// <param name=""></param>
-					/// <returns>有效返回true,否则返回false</returns>
                     /// <summary>
-					virtual ev_bool isValid() const;
                     /// 绑定一个二维图层
                     /// </summary>
                     /// <param name="layer">二维图层</param>
@@ -171,27 +151,14 @@ ev_private:
 					/// </summary>
 					/// <param name="visible">可见性</param>
 					/// <returns></returns>
-					virtual ev_void setVisible_impl(ev_bool visible);
+					virtual ev_void setVisible(ev_bool visible);
 					/// <summary>
 					/// 返回数据集
 					/// </summary>
 					/// <param name=""></param>
 					/// <returns>数据集</returns>
 					virtual EarthView::World::Spatial::GeoDataset::IDataset* getDataset();
-					/// <summary>
-					/// 设置与图层所关联的数据集
-					/// </summary>
-					/// <param name="dataset">数据集指针</param>
-					/// <returns></returns>
-					/// <summary>
-					/// 获取数据集的名称
-					virtual ev_void setDataset(EarthView::World::Spatial::GeoDataset::IDataset* dataset);
-					/// <summary>
-					/// 更换数据集
-					/// </summary>
-					/// <param name="dataset">数据集指针</param>
-					/// <returns></returns>
-					virtual ev_void switchDataset(EarthView::World::Spatial::GeoDataset::IDataset* dataset);					
+										
 					/// <summary>
 					/// 获取瓦片最大级别
 					/// </summary>
@@ -383,8 +350,14 @@ ev_private:
                     /// </summary>
                     /// <param name=""></param>
                     /// <returns></returns>
-                    virtual ev_void _notifyLayerRemoved_impl(EarthView::World::Graphic::CSceneManager* pSceneMgr);
-
+                    virtual ev_void _notifyLayerRemoved(EarthView::World::Graphic::CSceneManager* pSceneMgr);
+					/// <summary>
+					/// Globe刷新时调用的函数
+					/// </summary>
+					/// <param name="camera">当前的相机</param>
+					/// <param name="updateType">刷新类型</param>
+					/// <returns></returns>
+                    virtual ev_void _notifyRefreshed(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
 					/// <summary>
 					/// 数据集更新事件的通知
 					/// </summary>
@@ -481,14 +454,6 @@ ev_private:
 					/// <param name=""></param>
 					/// <returns>坐标系统</returns>
 					virtual EarthView::World::Spatial::Geometry::ISpatialReference *getSpatialReference() const;
-ev_internal:
-					/// <summary>
-					/// Globe刷新时调用的函数
-					/// </summary>
-					/// <param name="camera">当前的相机</param>
-					/// <param name="updateType">刷新类型</param>
-					/// <returns></returns>
-					virtual ev_void _notifyRefreshed_impl(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
 
 				ev_private:
 					static ev_void clearCache(const EVString& sceneManagerName,const EVString& datasourceName,const EVString& datasetName);
@@ -544,7 +509,7 @@ ev_internal:
 					ev_bool getGeometryCenter(const EarthView::World::Spatial::Geometry::IGeometry* geometry, EarthView::World::Spatial::Math::CVector3& center,EarthView::World::Spatial::Math::CVector3& dirE);
 					ev_void calculateEDirection(Real lon,Real lat,const EarthView::World::Spatial::Math::CVector3& center,EarthView::World::Spatial::Math::CVector3& dirE);
 
-					virtual ev_uint32 getThemeStream(EarthView::World::Core::CDataStream& stream);
+					ev_uint32 getThemeStream(EarthView::World::Core::CDataStream& stream);
 
 					ev_void readIDs(EarthView::World::Core::MemoryDataStreamPtr& ids,EarthView::World::Core::IntVector& lstids,ev_bool considerVisibleFilter);
 					ev_void coordinateToCartesian(ev_bool isBestHeight,const EarthView::World::Spatial::Math::CVector3& srcCoordinate,EarthView::World::Spatial::Math::CVector3& resCoordinate );
@@ -663,7 +628,6 @@ ev_internal:
 					ev_void copyCameraParams(EarthView::World::Graphic::COctreeCamera& camera)const;
 
 					EarthView::World::Spatial::Geometry::EVGeometryType mVectorType;
-					EarthView::World::Spatial::Geometry::EVGeometryType mOldVectorType;
 
 					EarthView::World::Core::CReadWriteLock mRenderingLabelsLock;//label锁
 					map<EVString,map<ev_uint32,list<EarthView::World::Spatial3D::Atlas::pos_movable> > > mRenderingLabels;//正在渲染的注记
@@ -728,7 +692,6 @@ ev_internal:
 						
 					ev_real64 calculateStatisticsMaxValue(const EarthView::World::Spatial::Theme::ITheme* itheme);
 					static ev_bool find(const EarthView::World::Core::IntVector& ids,ev_uint32 id);
-					EarthView::World::Spatial3D::Atlas::CFeatureGroupLayer *mpParent;
 
                 };
 

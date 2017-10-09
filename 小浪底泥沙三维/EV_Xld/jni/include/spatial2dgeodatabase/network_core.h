@@ -49,38 +49,7 @@ enum EVDirectionType
     DT_TF = 2//to point 至 from point
 };
             
-/// <summary>
-///联通策略枚举
-/// </summary>
-enum EVConnectivityPolicy
-{
-	/// <summary>
-	///端点联通
-	/// </summary>
-    CT_ENDPIONT    = 1,
-	/// <summary>
-	///任意节点联通
-	/// </summary>
-    CT_ANYVERTEX   = 2
-};
-/// <summary>
-///数据类型枚举
-/// </summary>
-enum EVDataValueType
-{
-	/// <summary>
-	///字段类型
-	/// </summary>
-	VT_FIELD	= 1,
-	/// <summary>
-	///常量类型
-	/// </summary>
-	VT_CONSTANT = 2,
-	/// <summary>
-	///函数类型
-	/// </summary>
-	VT_FUNCTION = 3
-};
+
 
 }}}} // End of namespaces
 

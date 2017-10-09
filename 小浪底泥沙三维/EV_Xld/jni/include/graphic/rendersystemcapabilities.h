@@ -115,7 +115,6 @@ namespace EarthView
                 RSC_GEOMETRY_PROGRAM = 67108864,			///((0 << 28 ) | (1 <<  26)),
                 //// Supports rendering to vertex buffers
                 RSC_HWRENDER_TO_VERTEX_BUFFER = 134217728,			///((0 << 28 ) | (1 <<  27)),
-				RSC_TEXTURE_1D = 268435456,	
                 //// Supports compressed textures
                 RSC_TEXTURE_COMPRESSION = 268435457,			///((1 << 28) | (1 << 0)),
                 //// Supports compressed textures in the DXT/ST3C formats
@@ -141,7 +140,6 @@ namespace EarthView
                 RSC_RTT_DEPTHBUFFER_RESOLUTION_LESSEQUAL = 268436480,			///((1 << 28) | (1 << 10)),
                 RSC_VERTEX_BUFFER_INSTANCE_DATA = 268437504,			///((1 << 28) | (1 << 11)),
                 RSC_CAN_GET_COMPILED_SHADER_BUFFER = 268439552,			///((1 << 28) | (1 << 12)),
-				RSC_TEXTURE_COMPRESSION_ETC1 = 268443648,
                 /// ***** DirectX specific caps *****
                 //// Is DirectX feature "per stage constants" supported
                 RSC_PERSTAGECONSTANT = 536870913,			///((2 << 28) | (1 << 0)),
@@ -164,7 +162,6 @@ namespace EarthView
                 RSC_POINT_EXTENDED_PARAMETERS_EXT = 805306624,			///((3 << 28) | (1 << 8)),
                 //// Support for Separate Shader Objects
                 RSC_SEPARATE_SHADER_OBJECTS = 805306880,			///((3 << 28) | (1 << 9)),
-				RSC_VAO = 805307392 ///((3 << 28) | (1 << 10)),
             };
             /// <summary>
             /// RenderSystemCapabilities、OPENGL和D3D9使用的驱动版本

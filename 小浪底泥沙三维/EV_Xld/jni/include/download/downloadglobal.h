@@ -51,9 +51,6 @@
 
 #define  WCT_VECTOR3D                            WebConnectionType + 15
 #define WCT_LAS                              WebConnectionType + 16
-#define WCT_LASXG                            WebConnectionType + 17
-#define WCT_OSGB                             WebConnectionType + 18
-#define WCT_STREETVIEW                            WebConnectionType + 19
 
 #ifndef EV_OS_WIN
 #define SOCKET int

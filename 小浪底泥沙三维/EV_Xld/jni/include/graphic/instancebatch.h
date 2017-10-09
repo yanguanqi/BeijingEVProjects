@@ -367,13 +367,6 @@ ev_private:
 				/// <returns></returns>
 				virtual ev_void onInstancedEntityStateChanged(CInstancedEntity* instancedEntity){}
 
-				virtual ev_void setProjMatrixOffset(Real val);
-				virtual ev_void setIsOverlayElement(ev_bool val);
-				virtual ev_bool getIsOverlayElement();
-				virtual ev_void setIsFontInstance(ev_bool val);
-				virtual ev_bool getIsFontInstance();
-				virtual ev_void setCachedSquaredViewDepth(Real val);
-
             protected:
                 EarthView::World::Graphic::CRenderOperation		mRenderOperation;
                 ev_size_t				mInstancesPerBatch;
@@ -442,12 +435,6 @@ ev_private:
 
 				
 				ev_uint32 mRefCount;
-
-				Real mProjMatrixOffset;
-				ev_bool mIsOverlayElement;
-				ev_bool mIsFontInstance;
-				Real mCachedSquaredViewDepth;
-
             public:
                 CInstanceBatch( EarthView::World::Graphic::CInstanceManager *ref_creator, EarthView::World::Graphic::CMeshPtr &meshReference, const EarthView::World::Graphic::CMaterialPtr &material,
                     ev_size_t instancesPerBatch, const EarthView::World::Graphic::IndexMap *ref_indexToBoneMap,

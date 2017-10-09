@@ -124,7 +124,7 @@ ev_private:
 					/// </summary>
 					/// <param name=""></param>
 					/// <returns></returns>
-					virtual ev_void _notifyLayerRemoved_impl(EarthView::World::Graphic::CSceneManager* pSceneMgr);
+					virtual ev_void _notifyLayerRemoved(EarthView::World::Graphic::CSceneManager* pSceneMgr);
 
 					/// <summary>
 					/// 数据集变更通知
@@ -196,7 +196,7 @@ ev_private:
 					/// </summary>
 					/// <param name="visible">是否可见</param>
 					/// <returns></returns>
-					virtual ev_void setVisible_impl(ev_bool visible);
+					virtual ev_void setVisible(ev_bool visible);
 
 					/// <summary>
 					/// 检测图层是否可视

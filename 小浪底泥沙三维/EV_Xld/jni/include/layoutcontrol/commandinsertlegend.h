@@ -5,6 +5,7 @@
 #include "layoutcontrol/layoutcontrolconfig.h"
 #include "layoutcontrol/layoutcommand.h"
 
+using namespace EarthView::World::Spatial::Atlas;
 namespace EarthView{
 	namespace World{
 		namespace Layout{
@@ -84,7 +85,7 @@ namespace EarthView{
 					/// <param name="e">操作事件</param>
 					/// <returns>如果有操作更新，返回true,如果没有，返回false</returns>
 					ev_bool update( _in EarthView::World::Core::CEvent* e );
-				ev_private:
+ev_private:
 					CCommandInsertLegend ( EarthView::World::Core::CNameValuePairList *pList );
 				protected:
 					C_DISABLE_COPY( CCommandInsertLegend )

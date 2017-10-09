@@ -35,7 +35,7 @@ namespace EarthView{
 				/// <param name="pSymbol">符号</param>
 				/// <returns></returns>
 				virtual ev_void startDraw( EarthView::World::Display::IDisplay2D* ref_display, const EarthView::World::Spatial::Display::ISymbol*ref_pSymbol );
-				virtual ev_void startDraw( EarthView::World::Display::IDisplay2D* ref_display, const EarthView::World::Spatial::Display::ISymbol*ref_pSymbol,ev_bool bForceUsingDefaultEngine );
+
 				/// <summary>
 				/// 绘制符号
 				/// </summary>
@@ -48,20 +48,6 @@ namespace EarthView{
 					ev_real64 *dy,
 					ev_int32 *pSegments,
 					ev_int32 nCount );
-				/// <summary>
-				/// 绘制符号
-				/// </summary>
-				/// <param name="dx">x坐标数组</param>
-				/// <param name="dy">y坐标数组</param>
-				/// <param name="pSegments">分割数组</param>
-				/// <param name="nCount">分割数目</param>
-				/// <param name="rotation">旋转角度（对点符号有效）</param>
-				/// <returns></returns>
-				virtual ev_void draw( ev_real64 *dx,
-					ev_real64 *dy,
-					ev_int32 *pSegments,
-					ev_int32 nCount, 
-					ev_real64 rotation);
 
 				/// <summary>
 				/// 绘制符号
@@ -98,12 +84,6 @@ namespace EarthView{
 					ev_real64 top,
 					ev_real64 width,
 					ev_real64 height);
-				/// <summary>
-				///获取符号
-				/// </summary>
-				/// <param name=""></param>
-				/// <returns></returns>
-				virtual CDrawSymbol * getDrawSymbol();
 			ev_private:
 				CSymbolRenderer(EarthView::World::Core::CNameValuePairList *pList);
 			public:

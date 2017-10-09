@@ -7,6 +7,11 @@
 #include "spatialinterface/ispatialreference.h"
 #include "networkanalysis/networkanalystlayer.h"
 
+
+//// using namespace EarthView::World::Spatial::Utility;
+//// using namespace EarthView::World::Spatial::Geometry;
+//// using namespace EarthView::World::Spatial2D::GeoDataset;
+
 namespace EarthView{
 	namespace World{
 		namespace Spatial2D{
@@ -52,6 +57,7 @@ public:
 	/// <param name="">查找停靠点方法枚举</param>
 	/// <returns></returns>
 	virtual ev_void setAnalystMethod(EVNAAnalystMethod method);
+
 public: // ILayer Interface
 	/// <summary>
 	/// 获取图层类型
@@ -314,30 +320,7 @@ public: //CNetworkAnalystLayer interfaces
 	/// <param name=""></param>
 	/// <returns></returns>
 	virtual ev_void remove();
-	/// <summary>
-	/// 设置分析是否考虑等级属性
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns></returns>
-	ev_void	setUsingHierachy(ev_bool b);
-	/// <summary>
-	///获取分析是否考虑等级属性
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns></returns>
-	ev_bool	getUsingHierachy()const;
-	/// <summary>
-	/// 设置成本属性
-	/// </summary>
-	/// <param name="name">成本属性名称</param>
-	/// <returns></returns>
-	ev_void	setCostAttribute(const EVString &name);
-	/// <summary>
-	///获取成本属性
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns>返回成本属性</returns>
-	EVString	getCurrentCostAttribute()const;
+
 public: // CNetworkAnalystLayer interface
 	/// <summary>
 	/// 获取符号
@@ -351,10 +334,21 @@ public: // CNetworkAnalystLayer interface
 	/// <param name=""></param>
 	/// <returns>返回结果</returns>
 	const EarthView::World::Spatial2D::Analyst::CRouteResult*  getRouteResult() const;
+
 ev_private:
 	CRouteLayer( EarthView::World::Core::CNameValuePairList *pList );
 protected:
 	C_DISABLE_COPY( CRouteLayer )
+protected:
+	ev_real64          distanceBetweenTwoPoints(EarthView::World::Spatial::Geometry::CPoint pt1,
+		EarthView::World::Spatial::Geometry::CPoint pt2);
+	ev_int32	       findPedal(const EarthView::World::Spatial::Geometry::CPoint &location);
+	ev_int32	       findPedal2(const EarthView::World::Spatial::Geometry::CPoint &location);
+	void               changeAdjacentTable(const EarthView::World::Spatial::Geometry::CPoint &inter, ev_int32 edgeID);
+	ev_int32           findJunction(const EarthView::World::Spatial::Geometry::CPoint &location);
+	ev_int32           attachEdge(const EarthView::World::Spatial::Geometry::CPoint &location);
+	//ev_real64          getImpedance(ev_uint32 edgeID,ev_bool FT);
+
 private:
 	EVString m_name;
 	EVString m_description;
@@ -385,6 +379,15 @@ private:
 	EarthView::World::Core::CRecursiveMutex mLock;
 };
 
-}}}}
+} //GeoDataset
+} //Spatial
+} //World
+} //EarthView
+
+
+
+
+
+
 
 #endif //__SPATIAL2D_ANALYST_ROUTE_LAYER_H_H_

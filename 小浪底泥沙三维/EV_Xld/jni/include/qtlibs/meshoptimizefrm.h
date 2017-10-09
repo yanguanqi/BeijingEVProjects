@@ -6,7 +6,6 @@
 #include "meshoptimize/modellodgenerator.h"
 #include "spatialinterface/ifeatureclass.h"
 #include "meshoptimize/obqmerge.h"
-#include "spatialframeworkproxy/viewmanager.h"
 
 namespace Ui
 {
@@ -111,15 +110,7 @@ namespace EarthView
 						void deleteParamConfig();
 						//
 						void currentParamIndexChanged (const QString& text);
-
-						//合并SubMesh 复选框选中时;
-						void slotMergeSubMeshChecked(bool bChecked);
-						//渲染效率优先;
-						void slotRenderEfficientFirstChecked(bool bChecked);
-						//渲染效果优先;
-						void slotRenderEffectiveFirstChecked(bool bChecked);
 				private:
-					ev_void initSceneList();
 					ev_void btnStart();
 					ev_void btnStop();
 					ev_void loadParamInitPage();

@@ -73,6 +73,7 @@ namespace EarthView{
 				/// <param name="pSymbol">Symbol对象</param>
 				/// <returns></returns>
 				virtual ev_bool equal(const EarthView::World::Spatial::Display::ISymbol* pSymbol);
+				virtual ev_void getTextSize( _in ev_int64 hdc, _in const EVString& text, _out ev_real64* xSize, _out ev_real64* ySize ) const;
 			ev_internal:
 				/// <summary>
 				/// 从SLD恢复Symbol属性

@@ -19,17 +19,14 @@
 
 #include <QWidget>
 #include "qtlibs/atlastreeexport.h"
-#include <QCheckBox>
-//class QCheckBox;
+
 namespace EarthView{namespace World{namespace Desktop{namespace QT{
 
 class AtlasTreeHelper;
-class LayerOrderTreeHelper;
-class CLayerOrderTreeInternal;
-class CAtlasTreeInternal;
+
 class ATLASTREE_DLL AtlasTree : public QWidget
 {
-	Q_OBJECT
+
 public:
 
 	/// <summary>
@@ -39,11 +36,6 @@ public:
 	/// <returns></returns>
 	AtlasTree(QWidget* parent = 0);
 
-	/// <summary>
-	/// 虚构函数
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns></returns>
 	virtual ~AtlasTree();
 
 	/// <summary>
@@ -75,36 +67,9 @@ protected:
 	/// </summary>
 	/// <returns></returns>
 	QSize sizeHint() const;
-private slots:
-		void soltIsShowPanel();
-private:
-	void init(QWidget* parent);
-	CLayerOrderTreeInternal* m_pLayerOrderInternal;
-	CAtlasTreeInternal* m_pAtlasTreeInternal;
-	QCheckBox *m_pCheckBoxIsShow;
-};
 
-class CAtlasTreeInternal : public QWidget
-{
-
-public:
-	CAtlasTreeInternal(QWidget* parent = 0);
-	~CAtlasTreeInternal();
-	void setReadOnly(bool b);
-	void useDefaultKML(bool b);
-	AtlasTreeHelper& helper() const;
-protected:
+	// 辅助类对象，存放成员变量和操作树的接口。
 	QScopedPointer<AtlasTreeHelper> _helper;
-};
-
-class CLayerOrderTreeInternal : public QWidget
-{
-public:
-	CLayerOrderTreeInternal(QWidget* parent = 0);
-	~CLayerOrderTreeInternal();
-	LayerOrderTreeHelper& helper() const;
-private:
-	QScopedPointer<LayerOrderTreeHelper> _helper;
 };
 
 }}}}

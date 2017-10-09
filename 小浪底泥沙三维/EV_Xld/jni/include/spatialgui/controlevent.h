@@ -32,7 +32,6 @@ namespace EarthView{
 					/// <returns>返回专题图类型</returns>
 					CControlEvent( ev_uint16 type );
 					~CControlEvent();
-					virtual _extfree EarthView::World::Core::CEvent* clone() const;
 
 				public:
 					/// <summary>

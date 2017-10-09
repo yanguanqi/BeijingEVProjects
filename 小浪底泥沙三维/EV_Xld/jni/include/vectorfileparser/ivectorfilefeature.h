@@ -36,7 +36,7 @@ ev_private:
 	IVectorFileFeature(EarthView::World::Core::CNameValuePairList* pList);
 protected:
 	IVectorFileFeatureClass* m_VectorFileFeatureClass;
-	EarthView::World::Spatial::Geometry::IGeometry* m_pGeometry;
+	const EarthView::World::Spatial::Geometry::IGeometry* m_pGeometry;
 	const EarthView::World::Spatial::GeoDataset::IFields* m_pFieldSet;
 	vector<EarthView::World::Core::CVariant> m_pValueVector;
 	mutable ev_int32 m_pOID;

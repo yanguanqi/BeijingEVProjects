@@ -13,7 +13,7 @@ namespace EarthView{
 			{
 class Transformer;
 
-class EV_DataAnalyst_DLL CRectification:public EarthView::World::Core::CAllocatedObject
+class RECTIFY_DLL CRectification:public EarthView::World::Core::CAllocatedObject
 {   
 	ev_private:
 	     CRectification( EarthView::World::Core::CNameValuePairList *pList );

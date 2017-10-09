@@ -18,7 +18,8 @@ EarthView::Xld::RenderLib::Base::CBaseInteractiver::CBaseInteractiver(EarthView:
 	this->mCurrentGeoPos = CVector3::ZERO;
 	this->mLastGeoPos = CVector3::ZERO;
 	this->mLastMouseDownScreenPos = CVector2::ZERO;
-	this->mMousePickState = CMousePickState::ToFirst;
+	this->mCenterWrdPos = CVector3::ZERO;
+	this->mMousePickState = ToFirst;
 	this->mEvents[0] = eventEnable[0];
 	this->mEvents[1] = eventEnable[1];
 	this->mEvents[2] = eventEnable[2];
@@ -33,7 +34,17 @@ EarthView::Xld::RenderLib::Base::CBaseInteractiver::CBaseInteractiver(EarthView:
 	this->mEvents[1] = true;
 	this->mEvents[2] = true;
 	this->mEvents[3] = true;
-	CBaseInteractiver(globeControl, this->mEvents);
+	this->mpTimer = new EarthView::World::Graphic::CTimer();
+	this->mIsDragging = false;
+	this->mIsLoaded = false;
+	this->mIsMouseDown = false;
+	this->mLastMouseUpTime = 0;
+	this->mCurrentGeoPos = CVector3::ZERO;
+	this->mLastGeoPos = CVector3::ZERO;
+	this->mLastMouseDownScreenPos = CVector2::ZERO;
+	this->mMousePickState = ToFirst;
+	this->mpGlobeControl = globeControl;
+	this->Load();
 }
 
 EarthView::Xld::RenderLib::Base::CBaseInteractiver::~CBaseInteractiver()
@@ -63,7 +74,7 @@ ev_bool EarthView::Xld::RenderLib::Base::CBaseInteractiver::handleEvent(_in Eart
 	case EarthView::World::Spatial::SystemUI::CGUIEvent::MOUSEDOWN:
 		if (this->mEvents[1])
 		{
-			return this->HandleMouseDoubleClickEvent(guiEvent);
+			return this->HandleMouseDownEvent(guiEvent);
 		}
 		break;
 	case EarthView::World::Spatial::SystemUI::CGUIEvent::MOUSEUP:
@@ -124,7 +135,7 @@ bool EarthView::Xld::RenderLib::Base::CBaseInteractiver::HandleMouseUpEvent(_in 
 		this->mIsDragging = false;
 
 	}
-	return !(this->mIsDragging);
+	return false;
 }
 
 bool EarthView::Xld::RenderLib::Base::CBaseInteractiver::HandleMouseDownEvent(_in EarthView::World::Spatial::SystemUI::CGUIEvent * guiEvent)
@@ -133,6 +144,7 @@ bool EarthView::Xld::RenderLib::Base::CBaseInteractiver::HandleMouseDownEvent(_i
 	this->mLastMouseDownScreenPos.y = guiEvent->getY();
 	this->mpTimer->reset();
 	this->mIsMouseDown = true;
+	this->mIsDragging = false;
 	return false;
 }
 
@@ -144,6 +156,7 @@ bool EarthView::Xld::RenderLib::Base::CBaseInteractiver::HandleMouseMoveEvent(_i
 
 bool EarthView::Xld::RenderLib::Base::CBaseInteractiver::HandleMouseDoubleClickEvent(_in EarthView::World::Spatial::SystemUI::CGUIEvent * guiEvent)
 {
+	EndPickOver();
 	return false;
 }
 
@@ -154,7 +167,7 @@ void EarthView::Xld::RenderLib::Base::CBaseInteractiver::HandlePoint(EarthView::
 
 void EarthView::Xld::RenderLib::Base::CBaseInteractiver::EndPickOver()
 {
-	this->mMousePickState = CMousePickState::Over;
+	this->mMousePickState = Over;
 	EarthView::World::Core::CEventDispatcher::sendEvent(mpEventObj, mpEvent);
 }
 

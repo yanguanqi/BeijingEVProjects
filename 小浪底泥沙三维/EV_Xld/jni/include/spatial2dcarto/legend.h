@@ -8,7 +8,7 @@
 #include "spatialinterface/ilayer.h"
 #include "spatial2dcarto/cartoconfig.h"
 #include "spatialinterface/ilegend.h"
-#include "spatialinterface/ilegenditem.h"
+#include "spatialinterface/ilegendItem.h"
 #include "spatialinterface/ispatialdisplay.h"
 #include "spatial2dcarto/symbolconvertor.h"
 
@@ -20,7 +20,6 @@ namespace EarthView
 		{
 			namespace Carto
 			{
-				class CLegendItemVector; 
 				/// <summary>
 				/// 图例类
 				/// </summary>
@@ -234,11 +233,25 @@ namespace EarthView
 					virtual ev_int32 getColumnCount() const;
 
 					/// <summary>
+					/// 添加图例项
+					/// </summary>
+					/// <param name="vecLayer">图例项</param>
+					/// <returns></returns>
+					virtual ev_void setLegendItem(const  EarthView::World::Spatial::Carto::ILegendItemVector *pItemVector);
+
+					/// <summary>
 					/// 清空图例项
 					/// </summary>
 					/// <param name="vecLayer"></param>
 					/// <returns></returns>
 					virtual ev_void clearLegendItem();
+
+					/// <summary>
+					///获取图例项
+					/// </summary>
+					/// <param name="symbol"></param>
+					/// <returns>图例项</returns>
+					virtual EarthView::World::Spatial::Carto::ILegendItemVector* getLegendItems() const;
 
 					/// <summary>
 					///获取图例边框范围
@@ -267,111 +280,6 @@ namespace EarthView
 					/// <param name="pDisplay">是否被选择</param>
 					/// <returns></returns>
 					virtual ev_void setSelected(ev_bool b);
-
-					/// <summary>
-					/// 创建图例项(在内部创建，自动添加到图例容器中)
-					/// </summary>
-					/// <param name="pLayer">需要创建图例项的图层</param>
-					/// <returns></returns>
-					virtual ev_void createLegendItem(_in EarthView::World::Spatial::Atlas::ILayer* pLayer);
-
-					/// <summary>
-					/// 添加图列项(在外部创建，添加到图例容器中)
-					/// </summary>
-					/// <param name="pItem">图列项</param>
-					/// <returns></returns>
-					virtual ev_void addLegendItem(_in const EarthView::World::Spatial::Carto::ILegendItem * pItem);
-
-					/// <summary>
-					/// 移除图列项(按索引)
-					/// </summary>
-					/// <param name="c">图列项索引</param>
-					/// <returns></returns>
-					virtual ev_void removeLegendItem(_in const ev_int32 nIndex);
-
-					/// <summary>
-					/// 移除图列项(按图列项对应的图层)
-					/// </summary>
-					/// <param name="pLayer">图列项对应的图层</param>
-					/// <returns></returns>
-					virtual ev_void removeLegendItem(_in EarthView::World::Spatial::Atlas::ILayer* pLayer);
-
-					/// <summary>
-					/// 获取图列项总数目
-					/// </summary>
-					/// <param name="pItem"></param>
-					/// <returns>图列项数目</returns>
-					virtual ev_int32 getItemCount() const;
-
-					/// <summary>
-					/// 获取父图列项数目
-					/// </summary>
-					/// <param name="pItem"></param>
-					/// <returns>父图列项数目</returns>
-					virtual ev_int32 getParentItemCount() const;
-
-					/// <summary>
-					/// 获取图列项
-					/// </summary>
-					/// <param name="pItem">图列项的索引</param>
-					/// <returns></returns>
-					virtual ILegendItem* getLegendItem(_in const ev_int32 nIndex);
-
-					/// <summary>
-					/// 标记不需要添加图例的图层
-					/// </summary>
-					/// <param name="pLayer">不需要添加图例的图层</param>
-					/// <returns></returns>
-					virtual ev_void flagIgnoreLayer(EarthView::World::Spatial::Atlas::ILayer* pLayer);
-
-					/// <summary>
-					/// 移除不需要添加图例的图层
-					/// </summary>
-					/// <param name="pLayer">不需要添加图例的图层索引</param>
-					/// <returns></returns>
-					virtual ev_void removeIgnoreLayer(ev_int32 nIndex);
-
-					/// <summary>
-					/// 清空不需要添加图例的图层的标记
-					/// </summary>
-					/// <param name=""></param>
-					/// <returns></returns>
-					virtual ev_void clearIgnoreLayer();
-
-					/// <summary>
-					/// 获取不需要添加图例的图层数目
-					/// </summary>
-					/// <param name=""></param>
-					/// <returns>不需要添加图例的图层数目</returns>
-					virtual ev_int32 getIgnoreLayerCount();
-
-					/// <summary>
-					/// 获取不需要添加图例的图层
-					/// </summary>
-					/// <param name="nIndex">不需要添加图例的图层索引</param>
-					/// <returns>不需要添加图例的图层</returns>
-					virtual EarthView::World::Spatial::Atlas::ILayer* getIgnoreLayer(ev_int32 nIndex) const;
-
-					/// <summary>
-					/// 判断是否是不需要添加图例的图层
-					/// </summary>
-					/// <param name="pLayer">进行判断的图层</param>
-					/// <returns>是返回true,不是返回false</returns>
-					virtual ev_bool isIgnoreLayer(_in EarthView::World::Spatial::Atlas::ILayer* pLayer);
-
-					/// <summary>
-					/// 清空所有图例项
-					/// </summary>
-					/// <param name=""></param>
-					/// <returns></returns>
-					virtual ev_void clearAllItem();
-
-					/// <summary>
-					/// 设置图例对应的数据框
-					/// </summary>
-					/// <param name="pMapFrame">图例对应的数据框</param>
-					/// <returns></returns>
-					virtual ev_void setMapFrame(const EarthView::World::Spatial::Carto::IMapFrame *pMapFrame);
 
 					/// <summary>
 					/// 绘制图例准备
@@ -429,19 +337,11 @@ namespace EarthView
 					/// <returns>xml元素</returns>
 					virtual EarthView::World::Core::CXmlElement toXmlElement() const;
 
-					/// <summary>
-					/// 判断多比例尺专题图是否发生变化
-					/// </summary>
-					/// <param name=""></param>
-					/// <returns>如果多比例尺专题图发生了变化，返回true,否则返回false</returns>
-					ev_bool isThemeScaleChanged();
-
 				ev_internal:
 					ev_void fromStream( _in EarthView::World::Core::CDataStream& stream );
 				ev_private:
 					CLegend( EarthView::World::Core::CNameValuePairList *pList );
 				private:
-					ev_void drawLegendEnd(EarthView::World::Display::IPaintDevice *pTempDevice, ev_int32 nType, ev_int32 nTransValue);
 					ev_void initData();
 					ev_bool setSizeByEnvelope(EarthView::World::Spatial::Geometry::IEnvelope* pEnvelope);
 					ev_void drawBarFrame(EarthView::World::Spatial::Display::ISpatialDisplay* display);
@@ -475,7 +375,7 @@ namespace EarthView
 					EarthView::World::Spatial::Display::IColor *m_pBackGroundColor;
 					int m_nLayerCount;
 					CSymbolConvertor *m_pSymbolConvertor;
-					CLegendItemVector *m_pItemVector;
+					ILegendItemVector *m_pItemVector;
 				};
 			}
 		}

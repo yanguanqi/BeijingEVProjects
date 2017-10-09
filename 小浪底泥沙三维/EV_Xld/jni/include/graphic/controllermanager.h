@@ -24,7 +24,6 @@ namespace EarthView
             protected:
                 typedef set<EarthView::World::Graphic::CController *> ControllerList;
                 ControllerList mControllers;
-				EV_MUTEX(controllersMutex) 
                 EarthView::World::Graphic::ControllerValueRealPtr mFrameTimeController;
 
                 EarthView::World::Graphic::ControllerFunctionRealPtr mPassthroughFunction;

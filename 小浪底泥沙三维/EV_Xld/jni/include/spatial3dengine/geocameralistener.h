@@ -39,12 +39,6 @@ namespace EarthView
 				/// <param name="camera">被监听的虚拟相机</param>
 				/// <returns></returns>
                 virtual void cameraParamChanged(_in EarthView::World::Graphic::CCamera* camera);
-				/// <summary>
-				/// 场景的视域发生变化（较大的观察视角的变化）时通知。返回true，表示已经被处理，不再重复通知直到下一次视域发生变化，返回false，表示没有被处理，会延时然后重复通知一次
-				/// </summary>
-				/// <param name="cam">摄像机</param>
-				/// <returns>是否被处理</returns>
-				virtual ev_bool sceneViewChanged( _in EarthView::World::Graphic::CCamera *cam);
 
             ev_internal:                
                 EarthView::World::Spatial3D::CGlobeCamera* mCamera;

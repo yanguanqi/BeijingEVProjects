@@ -41,7 +41,6 @@ namespace EarthView{
 				/// <summary>
 				/// 专题图基类
 				/// </summary>
-				class CRotationPolicy;
 				class EV_INTERFACE_DLL ITheme :
 					public EarthView::World::Core::CAllocatedObject
 				{
@@ -129,9 +128,7 @@ namespace EarthView{
 					/// <param name="element">指定的EarthView::World::Core::CXmlElement</param>
 					/// <returns></returns>
 					virtual ev_void fromXmlElement( EarthView::World::Core::CXmlElement& element);
-					virtual ev_bool getGradeDrawEnable();
-					virtual ev_void setGradeDrawEnable(ev_bool bFlag);
-					virtual CRotationPolicy* getRotationPolicy();
+
 					virtual ev_void onBeforeQuery( EarthView::World::Spatial::GeoDataset::IFeatureClass *fc,EarthView::World::Spatial::GeoDataset::IQueryFilter * filter );
 					virtual ev_void onAfterQuery( EarthView::World::Spatial::GeoDataset::IFeatureSelection *fs, EarthView::World::Spatial::Geometry::IGeometry *dst );
 
@@ -143,43 +140,6 @@ namespace EarthView{
 					virtual ev_void fromStream( EarthView::World::Core::CDataStream& stream );
 				private:
 					ITheme(ITheme & theme);
-				protected:
-					CRotationPolicy* mpRotationPolicy;
-					ev_bool m_bGradeDrawFlag;
-				};
-				class EV_INTERFACE_DLL CRotationPolicy :
-					public EarthView::World::Core::CAllocatedObject
-				{
-				public:
-					enum RotationFlag
-					{
-						RF_Fixed,
-						RF_FieldBased
-					};
-				ev_private:
-					CRotationPolicy( EarthView::World::Core::CNameValuePairList *pList );
-				public:
-					CRotationPolicy();
-					~CRotationPolicy();
-					RotationFlag getRotationFlag();
-					ev_void setRotationFlag(RotationFlag flag);
-					EVString getValue();
-					ev_void setValue(EVString& value);
-					/// <summary>
-					/// 将专题图输出为EarthView::World::Core::CXmlElement
-					/// </summary>
-					/// <param name=""></param>
-					/// <returns>返回EarthView::World::Core::CXmlElement</returns>
-					virtual EarthView::World::Core::CXmlElement toXmlElement() const;
-					/// <summary>
-					/// 从EarthView::World::Core::CXmlElement读取专题图
-					/// </summary>
-					/// <param name="element">指定的EarthView::World::Core::CXmlElement</param>
-					/// <returns></returns>
-					virtual ev_void fromXmlElement( EarthView::World::Core::CXmlElement& element);
-				private:
-					RotationFlag mdRotationFlag;
-					EVString     mstrValue;
 				};
 			}
 		}

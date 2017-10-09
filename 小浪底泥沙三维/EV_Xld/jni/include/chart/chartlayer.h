@@ -416,7 +416,7 @@ ev_private:
 					/// </summary>
 					/// <param name="pDataset">关联数据集</param>
 					/// <returns></returns>
-					virtual ev_void setDataset(_in EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
+					ev_void setDataset(_in EarthView::World::Spatial::GeoDataset::IDataset* ref_dataset);
 
 					/// <summary>
 					/// 获取关联的条件对象
@@ -571,10 +571,6 @@ ev_private:
 					EVString mstrName;
 
 					EVString mstrDescription;
-
-					EVString m_strDatasetName;
-
-					EVString m_strDataSrcName;
 
 					EarthView::World::Spatial::Display::CChartOption* mpOption;
 					///物标类数目

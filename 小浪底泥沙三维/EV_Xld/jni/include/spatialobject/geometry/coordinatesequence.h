@@ -6,19 +6,16 @@
 #include "coordinate.h"
 #include "geom_define.h"
 
+//EV_DECLARE_GEOMETRY_CLASS_PRIVATE(CCoordinateSequence);
 
+EV_DECLARE_GEOMETRY_CLASS_PRIVATE(CCoordinateSequence);
+
+EV_DECLARE_GEOMETRY_CLASS_UTILITY(CGeometryHelper);
 
 namespace EarthView{
 	namespace World{
 		namespace Spatial{
 			namespace Geometry{
-				namespace Private{
-					class CCoordinateSequencePrivate;
-				}
-				namespace Utility{
-					class CGeometryHelper;
-
-				}
 				/// <summary>
 				/// 坐标点串，描述一组坐标点
 				/// </summary>
@@ -204,10 +201,7 @@ ev_private:
 
 					_extfree EarthView::World::Spatial::Geometry::CCoordinateSequence* mirror(const CCoordinate* coord1,const CCoordinate* coord2) const;
 					EarthView::World::Spatial::Geometry::CCoordinateSequence mirror2(const CCoordinate& coord1,const CCoordinate& coord2) const;
-ev_internal:
-					const ev_real64* getXPtr() const ;
-					const ev_real64* getYPtr() const;
-private:
+				private:
 					EV_DEFINE_CLASS_PRIVATE(CCoordinateSequence);
 					friend class EarthView::World::Spatial::Geometry::Utility::CGeometryHelper;
 				};

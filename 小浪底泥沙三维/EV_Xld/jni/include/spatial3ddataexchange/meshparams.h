@@ -78,8 +78,6 @@ ev_private:
 					ev_uint32      MaxHeight;           // 合并图像的最大高度
 					ev_uint32      Margin;              // 边沿像素
 
-					ev_uint32		m_TextureCoordScope;	//纹理平铺上限。选择渲染效果优先时，当纹理寻址模式为wrap或者mirror的时候，纹理坐标值小于这个值的时候合并，否则不合并。合法值是大于或等于1的整形值。默认为1;
-
 					ev_bool        m_bClearTarget;		  // 入库前是否清除目标
 
 					static const CMeshParams DEFAULT;

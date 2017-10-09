@@ -46,8 +46,7 @@ public:
 		// To	DataValue				determined by type
 		return false;
 	}
-	virtual ev_void setName(EVString &name){return;}
-	virtual EVString getName(){return "";}
+	
 	virtual ev_bool openDataset(EarthView::World::Core::CDataStream &stream,const EVString &name)
 	{
 		return false;
@@ -64,21 +63,15 @@ public:
 	{
 		return NULL;
 	}
+	virtual ev_int32 getFIDFromEdgeID(ev_uint32 edgeID)
+	{
+		return 0;
+	}
+	virtual void     getAttachEdgesFromFID(ev_uint32 FID,vector<ev_uint32>& Edges){}
 	virtual CNANode  getNode(ev_uint32 id){return CNANode(0);}
 	virtual CNAEdge  getEdge(ev_uint32 id){return CNAEdge(0);}
 	virtual ev_uint32 getEdgeCount(){return 0;}
 	virtual ev_uint32 getNodeCount(){return 0;}
-	virtual ev_int32 getMaxHierachy(){return 0;}
-	virtual ev_int32 getMinHierachy(){return 0;}
-	virtual ev_void initNDEdgeSQL(EVString& attriNames){return;}
-	virtual ev_bool clearNetworkDirtyRecords(EVString& networkName){return 0;}
-	virtual ev_void setNDConnectivityPolicy(const EarthView::World::Spatial2D::GeoDataset::EVConnectivityPolicy& policy){return;}
-	virtual ev_uint32 getNDConnectivityPolicy(){return 0;}
-	virtual ev_bool needUpdate() {return false;}
-ev_private:
-	virtual ev_bool updateNetworkByDeleteRecords(ev_map<EVString,ev_vector<ev_uint32> > deleteFeatureItems,
-		const EarthView::World::Spatial2D::GeoDataset::EVConnectivityPolicy& policy){return 0;};
-
 };
 
 }}}} // End of Namespaces

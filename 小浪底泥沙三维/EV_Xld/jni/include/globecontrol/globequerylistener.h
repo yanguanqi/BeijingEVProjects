@@ -8,14 +8,13 @@
 #include "globecontrol/globeselection.h"
 
 
+
 namespace EarthView
 {
 	namespace World
 	{
 		namespace Spatial3D
 		{	
-
-			class RaySceneQueryResultSimple;
 			namespace Controls
 			{
 				class CGlobeControl;
@@ -32,7 +31,6 @@ namespace EarthView
 		{
 			namespace SystemUI
 			{
-
 				/// <summary>
 				/// 三维场景查询监听器基类
 				/// </summary>
@@ -91,14 +89,6 @@ ev_private:
 					/// <param name="type">鼠标状态</param>
 					/// <returns></returns>	
 					virtual void onSelectedObjectMoved(EarthView::World::Spatial3D::Controls::CGlobeControl* globeControl,EarthView::World::Graphic::RaySceneQueryResultEntry& entry, const EarthView::World::Spatial::Math::CMatrix4& newMatrix, EarthView::World::Spatial3D::SystemUI::IGlobeQueryListener::MouseOpType type);
-					/// <summary>
-					/// 通知选择集发生了变化
-					/// </summary>
-					/// <param name="globeControl">场景控件</param>
-					/// <param name="result">射线求交结果</param>
-					/// <returns></returns>	
- 					virtual void onSelectionChanged(EarthView::World::Spatial3D::Controls::CGlobeControl* globeControl,EarthView::World::Spatial3D::RaySceneQueryResultSimple* result);
-					
 					/// <summary>
 					/// Delete键按下事件处理
 					/// </summary>

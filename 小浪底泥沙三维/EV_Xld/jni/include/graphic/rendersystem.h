@@ -24,8 +24,7 @@ namespace EarthView
             class CRenderOperation;
             class CCamera;
             class CViewport;
-            class CDepthBuffer;     
-            class CMesh;       
+            class CDepthBuffer;            
            
             class EV_GRAPHIC_DLL DepthBufferVec : public EarthView::World::Core::CBaseObject
             {
@@ -1887,12 +1886,6 @@ namespace EarthView
                 /// <param name="target"></param>
                 /// <returns></returns>
                 virtual void _setRenderTarget(_inout EarthView::World::Graphic::CRenderTarget *ref_target);
-
-				virtual ev_uint32 getActVideoMemory();
-
-				virtual void getCurrentRenderName(EVString& renderName){};
-
-				ev_bool isUsingMatroxCard();
                 /// <summary>
                 /// 对渲染系统自定义的事件定义一个监听器
                 /// </summary>
@@ -1990,33 +1983,6 @@ namespace EarthView
                 /// <param name=""></param>
                 /// <returns></returns>
                 virtual ev_uint32 getDisplayMonitorCount() const;
-				/// <summary>
-				/// android从后台恢复时调用
-				/// </summary>
-				/// <param name=""></param>
-				/// <returns></returns>
-				virtual void resumeFromBackground() {};
-
-				// <summary>
-				// 把X文件转换为mesh文件保存到本地，直接调用即可，只在D3D9环境使用，OPGL环境直接返回false
-				// </summary>
-				// <param name="xFile">x文件</param>
-				// <param name="exportPath">要保存到本地mesh的文件目录</param>
-				// <param name="bIsLeftHand">xFile原模型是否左手系</param>
-				// <param name="bIsExportNormal">是否导出法线</param>
-				// <param name="bIsDoubleLight">是否采用双面光照</param>
-				// <returns></returns>
-				virtual ev_bool EVConvertXToMesh(const EVString& xFile, EVString& exportPath, const ev_bool bIsLeftHand, const ev_bool bIsExportNormal, const ev_bool bIsDoubleLight);
-
-				// <summary>
-				// 将x文件转换为CMesh结构保存,只在D3D9环境使用，OPGL环境直接返回false
-				// </summary>
-				// <param name="pMesh">pMesh</param>
-				// <param name="bIsLeftHand">xFile原模型是否左手系</param>
-				// <param name="bIsExportNormal">是否导出法线</param>
-				// <param name="bIsDoubleLight">是否采用双面光照</param>
-				// <returns></returns>
-				virtual ev_bool convertXToMesh(const EVString& xFile, CMesh *pMesh, const ev_bool bIsLeftHand, const ev_bool bIsExportNormal, const ev_bool bIsDoubleLight);
 
             protected:
                 /** DepthBuffers to be attached to render targets */

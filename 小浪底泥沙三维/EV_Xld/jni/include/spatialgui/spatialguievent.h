@@ -2,10 +2,10 @@
 #define EV_SPATIAL_GUI_EVENT_H
 
 
-//101-200
+//1001-2000
 enum GuiEventType
 {
-	FET_PopUpMenu=101,
+	FET_PopUpMenu=1001,
 	FET_2D3DChange,	
 	FET_CameraChange,
 	
@@ -35,8 +35,6 @@ enum GuiEventType
 	FET_AnalysisMeasureFinished3D,
 	FET_CloseEditSelector3D,
 	FET_Information3D,
-	FET_CloseStreetViewer3D,
-	FET_ClearStreetViewer3D,
 
     //飞行工具条
 	///////////////////////////////////////////////////////////////////////////
@@ -99,7 +97,6 @@ enum GuiEventType
 	FET_MapNameChanged,
 	FET_SceneNameChanged,
 	FET_LayerThemeChanged,
-	FET_LayerDatasetChanged,
 	FET_MapLayerVisibilityChanging,
 	FET_MapLayerVisibilityChanged,
 
@@ -110,7 +107,6 @@ enum GuiEventType
 	FET_EventTypeEnd_AtlasManager,
 
 	FET_3DCurrentToolChanged,
-	FET_ReleaseInstanceObjectCreator,
 
 	////////////////二维操作///////////
 	FET_EventTypeStart_MapOperation,
@@ -159,9 +155,7 @@ enum GuiEventType
 	FET_LayoutNameChanged,
 	FET_FrameEnvelopeChange,
 	FET_MeshxgEdit,
-	FET_LasxgEdit,
 	//海图相关事件
 	FET_ChartShowChange,
-	FET_MapFrameScaleChanged,
 };
 #endif

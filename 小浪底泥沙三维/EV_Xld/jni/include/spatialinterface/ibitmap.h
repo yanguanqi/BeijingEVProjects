@@ -25,12 +25,6 @@ namespace EarthView{
 				/// 获取DC
 				/// </summary>
 				/// <param name=""></param>
-				/// <returns>返回类型</returns>
-				virtual EVPaintDeviceType getType();
-				/// <summary>
-				/// 获取DC
-				/// </summary>
-				/// <param name=""></param>
 				/// <returns>返回DC</returns>
 				virtual ev_int64 getDC();
 				/// <summary>

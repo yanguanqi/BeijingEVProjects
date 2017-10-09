@@ -9,7 +9,6 @@
 #include "core/logmanager.h"
 #include "core/archive.h"
 #include "core/archivemanager.h"
-#include "core/ev_translator.h"
 
 #include <mathengine/ev_math.h>
 #include <mathengine/matrix3.h>

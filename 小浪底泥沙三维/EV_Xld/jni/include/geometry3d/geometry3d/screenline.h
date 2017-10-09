@@ -1,4 +1,4 @@
-ï»¿#ifndef EARTHVIEW_WORLD_SPATIAL3D_GEOMETRY_SCREENLINE_H
+#ifndef EARTHVIEW_WORLD_SPATIAL3D_GEOMETRY_SCREENLINE_H
 #define EARTHVIEW_WORLD_SPATIAL3D_GEOMETRY_SCREENLINE_H
 
 #include <core/memoryallocatedobject.h>
@@ -17,36 +17,36 @@ namespace EarthView
 		namespace Geometry3D
 		{			
 			/// <summary>
-			///å±å¹•çº¿ç±»
+			///ÆÁÄ»ÏßÀà
 			/// </summary>
 			class EV_GEOMETRY3D_DLL CScreenLine : public EarthView::World::Geometry3D::CScreenGeometry
 			{
 ev_private:
 				/// <summary>
-				/// æ„é€ å‡½æ•°
+				/// ¹¹Ôìº¯Êı
 				/// </summary>
-				/// <param name="pList">æ„é€ å‡½æ•°å‚æ•°é”®å€¼å¯¹è¡¨</param>
+				/// <param name="pList">¹¹Ôìº¯Êı²ÎÊı¼üÖµ¶Ô±í</param>
 				/// <returns></returns>
 				CScreenLine(EarthView::World::Core::CNameValuePairList* pList);
 			public:
 				/// <summary>
-				/// æ„é€ å‡½æ•°
+				/// ¹¹Ôìº¯Êı
 				/// </summary>
-				/// <param name="estimatedVertexCount">é¢„ä¼°çš„ç‚¹æ•°(ä¸è¦æ±‚éå¸¸ç²¾å‡†)</param>
-				/// <param name="isWideline">æ˜¯å¦æ˜¯å®½çº¿ï¼Œå¦ä¸ºç®€å•çº¿</param>				
+				/// <param name="estimatedVertexCount">Ô¤¹ÀµÄµãÊı(²»ÒªÇó·Ç³£¾«×¼)</param>
+				/// <param name="isWideline">ÊÇ·ñÊÇ¿íÏß£¬·ñÎª¼òµ¥Ïß</param>				
 				/// <returns></returns>
 				CScreenLine(EarthView::World::Graphic::CSceneManager* ref_scenemanager,ev_uint32 estimatedCount, ev_bool isWideline);
 
 				/// <summary>
-				/// æ„é€ å‡½æ•°,å®½çº¿è´´çº¹ç†
+				/// ¹¹Ôìº¯Êı,¿íÏßÌùÎÆÀí
 				/// </summary>
-				/// <param name="estimatedVertexCount">é¢„ä¼°çš„ç‚¹æ•°(ä¸è¦æ±‚éå¸¸ç²¾å‡†)</param>				
-				/// <param name="texture">çº¹ç†</param>
+				/// <param name="estimatedVertexCount">Ô¤¹ÀµÄµãÊı(²»ÒªÇó·Ç³£¾«×¼)</param>				
+				/// <param name="texture">ÎÆÀí</param>
 				/// <returns></returns>
 				CScreenLine(EarthView::World::Graphic::CSceneManager* ref_scenemanager,ev_uint32 estimatedCount, EarthView::World::Core::DataStreamPtr& texture);
 
 				/// <summary>
-				/// ææ„å‡½æ•°
+				/// Îö¹¹º¯Êı
 				/// </summary>
 				/// <param name=""></param>
 				/// <returns></returns>
@@ -55,28 +55,28 @@ ev_private:
 			public:	
 
 				/// <summary>
-				/// å¼€å§‹ä¸€æ¡åˆ†æ®µçº¿
-				/// åœ¨æ¸²æŸ“æ—¶ä¹Ÿå¯ä»¥è°ƒç”¨æ­¤å‡½æ•°
+				/// ¿ªÊ¼Ò»Ìõ·Ö¶ÎÏß
+				/// ÔÚäÖÈ¾Ê±Ò²¿ÉÒÔµ÷ÓÃ´Ëº¯Êı
 				/// </summary>
-				/// <param name="colour">çº¿çš„é¢œè‰²</param>	
-				/// <param name="width">å®½çº¿çš„å®½åº¦,å•ä½å’Œè¦è®¾ç½®çš„åæ ‡ç±»å‹ä¸€è‡´,ä¸ºç®€å•çº¿æ—¶æ— æ•ˆ</param>
+				/// <param name="colour">ÏßµÄÑÕÉ«</param>	
+				/// <param name="width">¿íÏßµÄ¿í¶È,µ¥Î»ºÍÒªÉèÖÃµÄ×ø±êÀàĞÍÒ»ÖÂ,Îª¼òµ¥ÏßÊ±ÎŞĞ§</param>
 				/// <returns></returns>
 				ev_bool begin(const EarthView::World::Graphic::CColourValue& colour,Real width);
 				ev_bool begin(const EarthView::World::Graphic::CColourValue& colour);
 				ev_bool begin();
 
 				/// <summary>
-				/// å¾€å½“å‰åˆ†æ®µçº¿ä¸­è¿½åŠ ç‚¹
-				/// åœ¨æ¸²æŸ“æ—¶ä¹Ÿå¯ä»¥è°ƒç”¨æ­¤å‡½æ•°(å³å¯åœ¨æ¸²æŸ“æ—¶è¿½åŠ ç‚¹)
+				/// Íùµ±Ç°·Ö¶ÎÏßÖĞ×·¼Óµã
+				/// ÔÚäÖÈ¾Ê±Ò²¿ÉÒÔµ÷ÓÃ´Ëº¯Êı(¼´¿ÉÔÚäÖÈ¾Ê±×·¼Óµã)
 				/// </summary>
-				/// <param name="position">ç‚¹åæ ‡</param>
-				/// <param name="colour">çº¿çš„é¢œè‰²(æ­¤ç‚¹ä¸å‰ä¸€ç‚¹ä¹‹é—´çš„çº¿æ®µçš„é¢œè‰²)</param>
+				/// <param name="position">µã×ø±ê</param>
+				/// <param name="colour">ÏßµÄÑÕÉ«(´ËµãÓëÇ°Ò»µãÖ®¼äµÄÏß¶ÎµÄÑÕÉ«)</param>
 				/// <returns></returns>
 				ev_void appendPoint(const EarthView::World::Spatial::Math::CVector2& position,const EarthView::World::Graphic::CColourValue& colour);
 				ev_void appendPoint(const EarthView::World::Spatial::Math::CVector2& position);	
 				/// <summary>
-				/// ç»“æŸä¸€æ¡åˆ†æ®µçº¿(ä¸‹æ¬¡è°ƒç”¨beginSegmentåˆ™ä¼šå¦èµ·ä¸€æ®µçº¿)
-				/// åœ¨æ¸²æŸ“æ—¶ä¹Ÿå¯ä»¥è°ƒç”¨æ­¤å‡½æ•°
+				/// ½áÊøÒ»Ìõ·Ö¶ÎÏß(ÏÂ´Îµ÷ÓÃbeginSegmentÔò»áÁíÆğÒ»¶ÎÏß)
+				/// ÔÚäÖÈ¾Ê±Ò²¿ÉÒÔµ÷ÓÃ´Ëº¯Êı
 				/// </summary>
 				/// <param name=""></param>				
 				/// <returns></returns>
@@ -94,24 +94,24 @@ ev_private:
 
 			private:
 				/// <summary>
-				/// å¤åˆ¶æ„é€ å‡½æ•°
+				/// ¸´ÖÆ¹¹Ôìº¯Êı
 				/// </summary>
-				/// <param name="obj">å¯¹è±¡</param>
+				/// <param name="obj">¶ÔÏó</param>
 				/// <returns></returns>
 				CScreenLine(const CScreenLine& obj);
 
 			private:
 
-				ev_uint32 mMaxPointCount;//æœ€å¤§ç‚¹æ•°
-				ev_uint32 mCurrentPointCount;//å½“å‰ç‚¹æ•°
-				ev_uint32 mPointCountOnCurrentSegment; //å½“å‰åˆ†æ®µçº¿ä¸Šçš„é¡¶ç‚¹æ•°ç›®
-				EarthView::World::Spatial::Math::CVector2 mLastPoint;//å‰ä¸€ä¸ªç‚¹
-				ev_uint32  mPointIndexInBuffer;		//é¡¶ç‚¹åœ¨é¡¶ç‚¹bufferé‡Œçš„ç´¢å¼•
-				ev_uint32  mIndexCountInBuffer;		//é¡¶ç‚¹åœ¨é¡¶ç‚¹bufferé‡Œçš„ç´¢å¼•
+				ev_uint32 mMaxPointCount;//×î´óµãÊı
+				ev_uint32 mCurrentPointCount;//µ±Ç°µãÊı
+				ev_uint32 mPointCountOnCurrentSegment; //µ±Ç°·Ö¶ÎÏßÉÏµÄ¶¥µãÊıÄ¿
+				EarthView::World::Spatial::Math::CVector2 mLastPoint;//Ç°Ò»¸öµã
+				ev_uint32  mPointIndexInBuffer;		//¶¥µãÔÚ¶¥µãbufferÀïµÄË÷Òı
+				ev_uint32  mIndexCountInBuffer;		//¶¥µãÔÚ¶¥µãbufferÀïµÄË÷Òı
 
 				ev_bool mbWideline;
 				Real mCurrentWidth;
-				Real mSizeRadio;//çº¹ç†å®½é«˜æ¯”
+				Real mSizeRadio;//ÎÆÀí¿í¸ß±È
 				Real mCurrentSegmentAddupLength;
 
 				struct Color_Point;

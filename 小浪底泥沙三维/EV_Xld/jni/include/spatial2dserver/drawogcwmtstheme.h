@@ -44,19 +44,7 @@ namespace EarthView{
 						EarthView::World::Spatial::Geometry::IEnvelope* pEnv,
 						EarthView::World::Spatial::Geometry::ISpatialReference* pSRS);
 
-					virtual ev_bool makeMapping(EarthView::World::Spatial::GeoDataset::IDataset* pDataset,
-						EarthView::World::Spatial::Display::ISpatialDisplay* display,
-						EarthView::World::Spatial::Atlas::EVVectorLayerRendererType type,
-						EarthView::World::Spatial::Theme::ITheme* ref_pTheme);
-					virtual ev_bool makeMapping(EVString datasetName, EVString datasourceName,
-						EarthView::World::Spatial::Geometry::IEnvelope* pEnv,
-						EarthView::World::Spatial::Geometry::ISpatialReference* pSRS,
-						EarthView::World::Spatial::Display::ISpatialDisplay* display,
-						EarthView::World::Spatial::Atlas::EVVectorLayerRendererType type,
-						EarthView::World::Spatial::Theme::ITheme* ref_pTheme);
-
 					virtual ev_void drawTile( EarthView::World::Core::CWorkQueue::RequestPara* req );
-					virtual ev_void drawTile(EarthView::World::Spatial::Display::ISpatialDisplay* pDisplay, EarthView::World::Core::CWorkQueue::RequestPara* req, EVString strCacheName, EarthView::World::Spatial::EVTileModeType modeType);
 				ev_private:
 					CDrawOGCWMTSTheme( EarthView::World::Core::CNameValuePairList *pList );
 				private:

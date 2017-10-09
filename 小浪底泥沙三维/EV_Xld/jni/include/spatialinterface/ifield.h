@@ -48,10 +48,6 @@ namespace EarthView{
 					/// </summer>
 					FT_DATE					= 7,
 					/// <summer>
-					/// 长整型类型
-					/// </summer>
-					FT_LONGINT              = 8,
-					/// <summer>
 					/// EVID类型
 					/// </summer>
 					FT_EVID                 = 21,					

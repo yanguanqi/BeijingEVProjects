@@ -30,13 +30,6 @@ public:
 	///<returns>绑定有数据库句柄的cvariant对象</returns>
     virtual EarthView::World::Core::CVariant handle() const;
 
-	///<summary>
-	///返回当前sql查询语句
-	///</summary>
-	///<param name=""></param>
-	///<returns>当前sql查询语句</returns>
-	ev_wstring lastQuery() const;
-
 protected:
     enum EVBindingSyntax {
         BS_PositionalBinding,
@@ -50,7 +43,12 @@ protected:
 	///<param name=""></param>
 	///<returns>当前结果集中的行位置（从0开始）</returns>
     ev_int32 at() const;
-
+	///<summary>
+	///返回当前sql查询语句
+	///</summary>
+	///<param name=""></param>
+	///<returns>当前sql查询语句</returns>
+	ev_wstring lastQuery() const;
 	///<summary>
 	/// 添加绑定数据到下一个绑定位置，按顺序绑定
 	/// </summary>
@@ -141,12 +139,6 @@ ev_private:
 	/// </summary>
 	///<returns>成功返回true，失败返回false</returns>
     virtual ev_bool exec();
-	///<summary>
-	/// 执行已准备好的SQL语句
-	/// </summary>
-	///<param name="needCursor">是否使用游标</param>
-	///<returns>成功返回true，失败返回false</returns>
-	virtual ev_bool execQuery(ev_bool needCursor);
 	///<summary>
 	/// 设置当前行
 	/// </summary>

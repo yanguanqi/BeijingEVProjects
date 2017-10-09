@@ -1,7 +1,9 @@
 ﻿#ifndef EV_IMAGEOVERLAYEREDITTOOL_H
 #define EV_IMAGEOVERLAYEREDITTOOL_H
 #include "spatial3dengine/spatial3dengineconfig.h"
-
+#include "libgdiplus/gdip.h"  
+#include "libgdiplus/gdipstructs.h"
+#include "libgdiplus/gdiplusdef.h"
 #include "spatialgui/itool.h"
 #include "spatial3dengine/ikmlobserver.h"
 #include "spatial3dengine/positioncolor.h"
@@ -18,17 +20,7 @@
 #include "spatialinterface/altitudemode.h"
 #include "geometry3d/geometry3dextension/multipoint3dextension.h"
 #include "geometry3d/geometry3d/vector_graphics.h"
-#if EV_PLATFORM != EV_PLATFORM_ANDROID
-#include "libgdiplus/gdip.h"  
-#include "libgdiplus/gdipstructs.h"
-#include "libgdiplus/gdiplusdef.h"
 #include "libgdiplus/matrix.h"
-#else
-#include "gdip.h"
-#include "gdipstructs.h"
-#include "matrix.h"
-#endif
-
 
 
 namespace EarthView
@@ -195,8 +187,6 @@ ev_private:
 					/// <param name="att">CGeoObjectExtension属性</param>
 					/// <returns></returns>
 					ev_void setGeoObjectExtensionAttribute(EarthView::World::Spatial::Kml::CGeoObjectExtensionAttribute att);
-
-					ev_void refresh();
 				protected:
 					int mLastX;
 					int mLastY;
@@ -247,7 +237,7 @@ ev_private:
 					ev_real64 tempPsY[38];
 					ev_void renderFrame(ev_bool isRefersh);
 					ev_void createBoundary(ev_real64 leftTopX,ev_real64 leftTopY,ev_real64 rightBottomX,ev_real64 rightBottomY);
-					
+					ev_void refresh();
 					ev_bool pickingRayIntersection(_in int screenX,_in int screenY,_inout double& latitude,_inout double& longitude,_inout double& alt,_in ev_bool interestModel/*=false*/);
 					EarthView::World::Spatial::Math::CRay screenToScene(_in int x,_in int y);
 					ev_bool computeIntersectPoint(const EarthView::World::Spatial::Math::CVector3& selectedPoint,const EarthView::World::Spatial::Math::CVector3& reversePoint, const EarthView::World::Spatial::Math::CVector3& leftPoint,

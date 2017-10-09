@@ -139,7 +139,14 @@ ev_private:
 					/// </summary>
 					/// <param name="pSceneMgr">场景管理器</param>
 					/// <returns></returns>
-					virtual ev_void _notifyLayerRemoved_impl(EarthView::World::Graphic::CSceneManager* pSceneMgr);
+					virtual ev_void _notifyLayerRemoved(EarthView::World::Graphic::CSceneManager* pSceneMgr);
+					/// <summary>
+					/// Globe刷新时调用的函数
+					/// </summary>
+					/// <param name="camera">当前的相机</param>
+					/// <param name="updateType">刷新类型</param>
+					/// <returns></returns>
+					virtual ev_void _notifyRefreshed(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
 
 					/// <summary>
 					/// 返回风格流
@@ -294,14 +301,6 @@ ev_private:
 					/// </summary>
 					/// <returns>图层选择集对象指针，不需释放</returns>
 					virtual EarthView::World::Spatial::Atlas::ILayerSelection * getLayerSelection();
-ev_internal:
-					/// <summary>
-					/// Globe刷新时调用的函数
-					/// </summary>
-					/// <param name="camera">当前的相机</param>
-					/// <param name="updateType">刷新类型</param>
-					/// <returns></returns>
-					virtual ev_void _notifyRefreshed_impl(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
 
 				private:
 					/// <summary>

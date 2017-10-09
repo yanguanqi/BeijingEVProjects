@@ -4,7 +4,6 @@
 #include "core/archive.h"
 #include "core/archivefactory.h"
 #include <android/asset_manager.h>
-using namespace  EarthView::World::Core;
 namespace EarthView
 {
 	namespace World
@@ -12,14 +11,14 @@ namespace EarthView
 		namespace Graphic
 		{
 
-			class APKFileSystemArchive : public EarthView::World::Core::CArchive
+			class APKFileSystemArchive : public CArchive
 			{
 			private:
 				AAssetManager* mAssetMgr;
-				EVString mPathPreFix;
+				String mPathPreFix;
 
 			public:
-				APKFileSystemArchive(const EVString& name, const EVString& archType, AAssetManager* assetMgr);
+				APKFileSystemArchive(const String& name, const String& archType, AAssetManager* assetMgr);
 				~APKFileSystemArchive();
 
 				/// @copydoc CArchive::isCaseSensitive
@@ -31,15 +30,15 @@ namespace EarthView
 				void unload();
 
 				/// @copydoc CArchive::open
-				//DataStreamPtr open(const EVString& filename, bool readOnly = true) const;
-				DataStreamPtr open(const EVString &filename) const;
-				DataStreamPtr open(const EVString &filename, ev_bool readOnly ) const;
+				//DataStreamPtr open(const String& filename, bool readOnly = true) const;
+				DataStreamPtr open(const String &filename) const;
+				DataStreamPtr open(const String &filename, ev_bool readOnly ) const;
 
 				/// @copydoc CArchive::create
-				DataStreamPtr create(const EVString& filename) const;
+				DataStreamPtr create(const String& filename) const;
 
 				/// @copydoc CArchive::delete
-				void remove(const EVString& filename) const;
+				void remove(const String& filename) const;
 
 				/// @copydoc CArchive::list
 				//StringVectorPtr list(bool recursive = true, bool dirs = false);
@@ -54,22 +53,22 @@ namespace EarthView
 				FileInfoListPtr listFileInfo();
 
 				/// @copydoc CArchive::find
-				//StringVectorPtr find(const EVString& pattern, bool recursive = true);
-				StringVectorPtr find(const EVString &pattern, ev_bool recursive , ev_bool dirs );
-				StringVectorPtr find(const EVString &pattern, ev_bool recursive );
-				StringVectorPtr find(const EVString &pattern);
+				//StringVectorPtr find(const String& pattern, bool recursive = true);
+				StringVectorPtr find(const String &pattern, ev_bool recursive , ev_bool dirs );
+				StringVectorPtr find(const String &pattern, ev_bool recursive );
+				StringVectorPtr find(const String &pattern);
 
 				/// @copydoc CArchive::findFileInfo
-				//FileInfoListPtr findFileInfo(const EVString& pattern, bool recursive = true, bool dirs = false) const;
-				FileInfoListPtr findFileInfo(const EVString &pattern, ev_bool recursive, ev_bool dirs ) const;
-				FileInfoListPtr findFileInfo(const EVString &pattern, ev_bool recursive ) const;
-				FileInfoListPtr findFileInfo(const EVString &pattern) const;
+				//FileInfoListPtr findFileInfo(const String& pattern, bool recursive = true, bool dirs = false) const;
+				FileInfoListPtr findFileInfo(const String &pattern, ev_bool recursive, ev_bool dirs ) const;
+				FileInfoListPtr findFileInfo(const String &pattern, ev_bool recursive ) const;
+				FileInfoListPtr findFileInfo(const String &pattern) const;
 
 				/// @copydoc CArchive::exists
-				bool exists(const EVString& filename);
+				bool exists(const String& filename);
 
 				/// @copydoc CArchive::getModifiedTime
-				ev_int64 getModifiedTime(const EVString& filename);
+				ev_int64 getModifiedTime(const String& filename);
 			};
 
 			class APKFileSystemArchiveFactory : public CArchiveFactory
@@ -78,9 +77,9 @@ namespace EarthView
 				APKFileSystemArchiveFactory(AAssetManager* assetMgr) : mAssetMgr(assetMgr) {}
 				virtual ~APKFileSystemArchiveFactory() {}
 				/// @copydoc FactoryObj::getType
-				EVString getType(void) const;
+				String getType(void) const;
 				/// @copydoc FactoryObj::createInstance
-				CArchive *createInstance( const EVString& name )
+				CArchive *createInstance( const String& name ) 
 				{
 					return EV_NEW APKFileSystemArchive(name, getType(), mAssetMgr);
 				}

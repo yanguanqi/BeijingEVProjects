@@ -1,6 +1,8 @@
 #include "AnalysisToolManager.h"
 #include "RectangleAnalysisTool.h"
 #include "xld\WaterConservancyManager.h"
+#include "PolygonAnalysisTool.h"
+
 EarthView::Xld::CAnalysisToolManager* EarthView::Xld::CAnalysisToolManager::mpSingleton = NULL;
 
 
@@ -49,4 +51,24 @@ void EarthView::Xld::CAnalysisToolManager::DrawRectBounds()
 		mAnalysisTool = NULL;
 	}
 	mAnalysisTool =dynamic_cast<EarthView::Xld::RenderLib::Base::CBaseInteractiver*>(new EarthView::Xld::AnalysisTool::CRectangleAnalysisTool(EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->mpGlobeControl));
+}
+
+void EarthView::Xld::CAnalysisToolManager::DrawStraightLine()
+{
+	if (!this->mAnalysisTool)
+	{
+		delete mAnalysisTool;
+		mAnalysisTool = NULL;
+	}
+	mAnalysisTool = dynamic_cast<EarthView::Xld::RenderLib::Base::CBaseInteractiver*>(new EarthView::Xld::AnalysisTool::CRectangleAnalysisTool(EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->mpGlobeControl));
+}
+
+void EarthView::Xld::CAnalysisToolManager::DrawPolyline()
+{
+	if (!this->mAnalysisTool)
+	{
+		delete mAnalysisTool;
+		mAnalysisTool = NULL;
+	}
+	mAnalysisTool = dynamic_cast<EarthView::Xld::RenderLib::Base::CBaseInteractiver*>(new EarthView::Xld::AnalysisTool::CPolygonAnalysisTool(EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->mpGlobeControl));
 }

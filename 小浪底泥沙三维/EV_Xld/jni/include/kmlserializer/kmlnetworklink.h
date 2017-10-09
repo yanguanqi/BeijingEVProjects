@@ -13,10 +13,6 @@ namespace EarthView
 	{
 		namespace Spatial
 		{
-			namespace Geometry
-			{
-				class CEnvelope;
-			}
 			namespace Kml
 			{
 				class CKmlDocument;

@@ -191,10 +191,7 @@ namespace EarthView
 				WST_EV_MESHXG = 17,
 				WST_EV_MODELService = 18,
 				WST_EV_Vector3DService = 19,
-				WST_EV_LAS =20,
-				WST_EV_LASXG = 21,
-				WST_OSGB =22,
-				WST_TREETVIEW = 23
+				WST_EV_LAS =20
 			};
 
 

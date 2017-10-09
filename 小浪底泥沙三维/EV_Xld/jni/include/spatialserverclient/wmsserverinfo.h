@@ -182,7 +182,7 @@ namespace EarthView
 				ev_void parseCapabilityElements(_in EarthView::World::Core::CXmlElement *pElem);
 				COGCWebServiceStyle* parseStyle(_in EarthView::World::Core::CXmlElement *pElem);
 				EarthView::World::Spatial::CWMSLayerInfo* parseLayer(_in EarthView::World::Core::CXmlElement *pElem, _in EarthView::World::Spatial::CWMSLayerInfo* pParentLayerInfo);
-				EarthView::World::Spatial::Geometry::IEnvelope* parseLatLongBoundingBox(_in EarthView::World::Core::CXmlElement *pElem,_in EarthView::World::Spatial::CWMSLayerInfo* layerInfo,ev_bool isLatLong);
+				EarthView::World::Spatial::Geometry::IEnvelope* parseLatLongBoundingBox(_in EarthView::World::Core::CXmlElement *pElem,_in EarthView::World::Spatial::CWMSLayerInfo* layerInfo);
 				ev_void parseSRS(_in EarthView::World::Core::CXmlElement *pElem,_inout EarthView::World::Spatial::CWMSLayerInfo* layerInfo,ev_bool isSRS);
 				ev_void parseBoundingBox(_in EarthView::World::Core::CXmlElement *pElem,_in EarthView::World::Spatial::CWMSLayerInfo* parentLayerInfo,_inout EarthView::World::Spatial::CWMSLayerInfo* layerInfo);
 				ev_void parseUserDefinedSymbolization(_in EarthView::World::Core::CXmlElement* pElem);

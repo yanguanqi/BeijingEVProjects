@@ -148,19 +148,9 @@ namespace EarthView
 				
 				ev_bool getVector3DServiceOpenValue() const;
 
-				ev_void setOSGBServiceOpen(_in ev_bool value);
-				ev_bool getOSGBServiceOpenValue() const;
-
-				ev_void setSTREETVIEWServiceOpen(_in ev_bool value);
-				ev_bool getSTREETVIEWServiceOpenValue() const;
-
 	
 				ev_void setLasServiceOpen(_in ev_bool value);
 				ev_bool getLasServiceOpenValue() const;
-
-
-				ev_void setLasXGServiceOpen(_in ev_bool value);
-				ev_bool getLasXGServiceOpenValue() const;
 
 				/// <summary>
 				/// 获取Globe服务是否打开
@@ -208,9 +198,6 @@ namespace EarthView
 				ev_bool mbVector3DServiceOpen;
 				ev_bool mbModelServiceOpen;
 				ev_bool mbLasServiceOpen;
-				ev_bool mbLasXGServiceOpen;
-				ev_bool mbOSGBServiceOpen;
-				ev_bool mbSTREETVIEWServiceOpen;
 			};
 
 		}

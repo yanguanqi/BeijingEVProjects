@@ -18,54 +18,15 @@ class CNAAdjacentTable;
 class CNetworkOperator;
 class CNANode;
 class CNAEdge;
-class EV_2DGEODATABSE_DLL CNetworkFieldSetting: public EarthView::World::Core::CAllocatedObject
+
+class /*EV_2DGEODATABSE_DLL*/ CNetworkFieldInfo
 {
-ev_private:
-	CNetworkFieldSetting(EarthView::World::Core::CNameValuePairList *pList);
-public:
-	/// <summary>
-	///默认构造函数
-	/// </summary>
-	CNetworkFieldSetting();
-	EVString getSourceName() const ;
-	EVDirectionType getDirectionType() const ;
-	EVElementType getElementType() const ;
-	EVDataValueType getExpressionType() const ;
-	EVString getExpressionValue() const ;
-private:
-	EVString				m_sourceName;
-	EarthView::World::Spatial2D::GeoDataset::EVDirectionType		m_direction;
-	EarthView::World::Spatial2D::GeoDataset::EVElementType		m_element;
-	EarthView::World::Spatial2D::GeoDataset::EVDataValueType		m_type;
-	EVString				m_value;
-	friend class CNetworkDataset;
-};
-class EV_2DGEODATABSE_DLL CNetworkFieldInfo: public EarthView::World::Core::CAllocatedObject
-{
-ev_private:
-	CNetworkFieldInfo(EarthView::World::Core::CNameValuePairList *pList);
-public:
-	CNetworkFieldInfo();
-	///ev_void AddSetting(const CNAAttributeSetting &setting);
-	/// <summary>
-	/// 获取设置数量
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns>返回数量</returns>
-	ev_int32 getSettingCount() const;
-	/// <summary>
-	/// 获取设置
-	/// </summary>
-	const CNetworkFieldSetting* GetSettingRef(ev_uint32 idx) const;//by jiang 2013 08 04
 public:
 	EVString							m_Name;
 	EarthView::World::Core::CVariant::EVDataType			m_DataType;
 	EVUsageType						m_Usage;
 	EVUnitType						m_Unit;
 	ev_bool							m_IsDefault;
-private:
-	ev_vector<CNetworkFieldSetting>	m_Settings;
-	friend class CNetworkDataset;
 };
 
 class CNetworkDatasetElement
@@ -201,13 +162,23 @@ public:
 	/// <returns>若成功返回true；否则返回false</returns>
 	ev_bool fromStream(EarthView::World::Core::CDataStream &stream);
 	/// <summary>
-	///获取成本数据数组
+	///获取成本数据名数组
 	/// </summary>
 	/// <param name=""></param>
 	/// <returns>返回成本属性名称数组</returns>
-//	EarthView::World::Core::CStringArray getCostAttributeName()const;
-	ev_int32 getAttributeCount();
-	const CNetworkFieldInfo* getAttribute(ev_int32 index);
+	EarthView::World::Core::CStringArray getCostAttributeName()const;
+	/// <summary>
+	///设置成本属性名称
+	/// </summary>
+	/// <param name="name">名称</param>
+	/// <returns></returns>
+	ev_void	setCostAttribute(const EVString &name);
+	/// <summary>
+	///获取成本属性名称
+	/// </summary>
+	/// <param name=""></param>
+	/// <returns>返回成本属性名称</returns>
+	EVString	getCurrentCostAttribute()const;
 	/// <summary>
 	///获取边edgeID对应的几何体
 	/// </summary>
@@ -222,37 +193,12 @@ public:
 	ev_int32 attachEdge(const EarthView::World::Spatial::Geometry::CPoint &location);
 	ev_uint32 getEdgeCount();
 	ev_uint32 getNodeCount();
-	ev_real64 getImpedance(ev_uint32 EID,ev_bool FT,ev_int32 index);
-
-	/// <summary>
-	///是否有等级属性
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns>true表示存在等级属性</returns>
-	ev_bool existHierachyAttri() const;
-	/// <summary>
-	///获取最高等级
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns></returns>
-	ev_int32 getMaxHierachy();
-	/// <summary>
-	///获取最低等级
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns></returns>
-	ev_int32 getMinHierachy();
-	/// <summary>
-	///获取联通策略
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns></returns>
-	const EVConnectivityPolicy getNDConnectivityPolicy();
 ev_private:
 	CNANode  getNode(ev_uint32 id);
 	CNAEdge  getEdge(ev_uint32 id);
 	CNAAdjacentTable* getAdjacentTableRef();
-	ev_bool needUpdate();
+	ev_real64 getImpedance(ev_uint32 EID,ev_bool FT);
+
 private:
 	ev_void intial();
 ev_private:
@@ -264,6 +210,7 @@ private:
 	
 	ev_vector<CNetworkFieldInfo>		m_fields;
 	ev_vector<ev_vector<ev_real32> > 	m_values;
+	ev_int32							m_index;
 
 	EarthView::World::Spatial::GeoDataset::IFeatureClass		*m_junctionFC;
 	EarthView::World::Spatial::GeoDataset::IFeatureClass		*m_sourceFC;

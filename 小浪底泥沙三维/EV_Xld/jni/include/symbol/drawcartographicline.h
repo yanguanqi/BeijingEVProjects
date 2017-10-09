@@ -80,19 +80,11 @@ namespace EarthView{
 					ev_void computeAngleAndLength(ev_void* points,ev_int32 nPointCount,ev_real64 *pAngle,ev_real64 *pLength) const;
 					ev_real64 condenseOffset() const;
 
-					/// <summary>
-					/// 画装饰物
-					/// </summary>
-					/// <param name="pGraphics">图形</param>
-					/// <param name="pos">位置</param>
-					/// <returns></returns>
-					ev_void drawMarker( ev_void* pGraphics, ev_real64 dx,ev_real64 dy) ;
 					ev_real64 *m_dx, *m_dy;
 					ev_int32 *m_pSegments;
 					ev_int32 m_nCount;
 
 					ev_void* m_pDecorationBmp;
-					ev_void* m_pMarkerBmp;
 				};
 			}
 		}

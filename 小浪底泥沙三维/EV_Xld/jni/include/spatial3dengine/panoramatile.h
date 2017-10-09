@@ -70,19 +70,6 @@ namespace EarthView
 					/// <param name="radius">半径</param>
 					CPanoramaTile(EVString name,EarthView::World::Graphic::CSceneManager* sceneMgr,EarthView::World::Spatial3D::CGlobeCamera* camera,EVString imageFilePath,EVString uri,double latitude,double longitude,double altitude,float radius);
 					/// <summary>
-					/// 构造函数
-					/// </summary>
-					/// <param name="name">名称</param>
-					/// <param name="imageFilePath">本地图片路径</param>
-					/// <param name="iconFilePath">图标路径</param>
-					/// <param name="uri">服务器地址</param>
-					/// <param name="latitude">纬度</param>
-					/// <param name="longitude">经度</param>
-					/// <param name="altitude">相对地面高度</param>
-					/// <param name="radius">半径</param>
-					/// <param name="heading">图片拍摄时相机方向相对正北的夹角，以度为单位</param>
-					CPanoramaTile(EVString name,EarthView::World::Graphic::CSceneManager* sceneMgr,EarthView::World::Spatial3D::CGlobeCamera* camera,EVString imageFilePath, EVString iconFilePath, EVString uri,double latitude,double longitude,double altitude,float radius, ev_real32 heading);
-					/// <summary>
 					/// 释放
 					/// </summary>
 					virtual ~CPanoramaTile();
@@ -108,25 +95,6 @@ namespace EarthView
 					/// <param name="level">所属级别</param>
 					CPanoramaTile(EVString name,EarthView::World::Graphic::CSceneManager* sceneMgr, EVString imageFilePath,EVString uri,EarthView::World::Spatial::Math::CVector3 centerPos, double latitude, double longitude, double altitude, float radius,
 						double south, double north, double west, double east, int level);
-					/// <summary>
-					/// 构造函数
-					/// </summary>
-					/// <param name="name">名称</param>
-					/// <param name="imageFilePath">本地图片路径</param>
-					/// <param name="iconFilePath">图标路径</param>
-					/// <param name="uri">服务器地址</param>
-					/// <param name="latitude">纬度</param>
-					/// <param name="longitude">经度</param>
-					/// <param name="altitude">相对地面高度</param>
-					/// <param name="radius">半径</param>
-					/// <param name="south">最小纬度</param>
-					/// <param name="north">最大纬度</param>
-					/// <param name="west">最小经度</param>
-					/// <param name="east">最大经度</param>
-					/// <param name="level">所属级别</param>
-					/// <param name="heading">图片拍摄时相机方向相对正北的夹角，以度为单位</param>
-					CPanoramaTile(EVString name,EarthView::World::Graphic::CSceneManager* sceneMgr, EVString imageFilePath, EVString iconFilePath, EVString uri,EarthView::World::Spatial::Math::CVector3 centerPos, double latitude, double longitude, double altitude, float radius,
-						double south, double north, double west, double east, int level, ev_real32 heading);
 ev_private:
 					/// <summary>
 					/// 构造函数
@@ -149,9 +117,6 @@ ev_private:
 					/// </summary>
 					/// <param name="drawArgs">渲染参数</param>
 					virtual void build();   
-
-					void setPanoramaTilePath(EVString imageFilePath);
-					float getCameraDistance();
 					void reset();
 					/// <summary>
 					/// 渲染
@@ -273,7 +238,7 @@ public:
 					ev_real64 calculateZoomFactor(_in ev_real32 mouseWheelDelta);
 
 					void computePosition();
-					
+
 					/// <summary>
 					/// 更新
 					/// </summary>
@@ -325,11 +290,6 @@ public:
 					void computeBoundingBox();   
 
 					void recurAbort();
-				public:
-					void setDoubleClicked(ev_bool clicked)
-					{
-						mIsDoubleClicked = clicked;
-					}
 				protected:
 
 					/// <summary>
@@ -356,10 +316,8 @@ public:
 					double m_longitude;
 					double m_altitude;
 					float m_radius;
-					float m_heading;
 					int m_level;  
 					EVString m_imageFilePath;
-					EVString m_iconFilePath;
 					EVString m_uri;
 					EVString m_name;
 					EVString m_pathKey;

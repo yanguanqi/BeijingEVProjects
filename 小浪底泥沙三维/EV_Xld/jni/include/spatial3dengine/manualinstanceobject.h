@@ -374,7 +374,6 @@ ev_private:
 					virtual void setTransparency(ev_real64 percent);
 
 					void linkEntity(EarthView::World::Graphic::CEntity* pEntity);
-					void delinkEntity();
 
 					/// <summary>
 					/// 设置模型子部件透明度
@@ -412,7 +411,7 @@ ev_private:
 					/// <returns></returns>
 					virtual void setRefractable(ev_bool flag);
 
-					/// <summary>
+				/// <summary>
 					/// 获取是否开启折射
 					/// </summary>
 					/// <returns>TRUE开启折射/FALSE不开启折射</returns>
@@ -609,26 +608,6 @@ ev_private:
 					/// </summary>
 					/// <returns>是否异步更新buffer</returns>
 					ev_bool getAsyncUpdateBuffer();
-
-					/// <summary>
-					/// 设置是否加载绑定特效
-					/// </summary>
-					/// <returns>是否加载绑定特效</returns>
-				    ev_void setBindedEffectEnable(ev_bool enable);
-
-					/// <summary>
-					/// 设置是否加载绑定模型
-					/// </summary>
-					/// <returns>是否加载绑定模型</returns>
-					ev_void setBindedModelEnable(ev_bool enable);
-
-					/// <summary>
-					/// 设置被绑定所有特效可见性
-					/// </summary>
-					/// <param name="isVisible">可见性</param>
-					/// <returns></returns>
-					virtual void setBindedEffectVisibility(ev_bool isVisible);
-
 				protected:
 					CInstanceInternal* mpInstanceInternal;
 					EarthView::World::Spatial3D::InstancedEntityVector mInstanceEntities;
@@ -750,14 +729,6 @@ ev_private:
 					/// <param name=""></param>
 					/// <returns></returns>
 					virtual ev_void unRegisterLightListener();
-
-					/// <summary>
-					/// 加载绑定的部件
-					/// </summary>
-					/// <param name="refInfoVec">绑定的模型和特效集合</param>
-					/// <returns></returns>
-					virtual ev_bool loadBindedObject(const EarthView::World::Spatial3D::Dataset::CMeshEffectRefInfoVector& refInfoVec, const EarthView::World::Core::IntVector& subEntityIndexs);
-
 ev_private:
 					vector<EarthView::World::Graphic::CNode*> mNodeVector;
 					vector<EarthView::World::Graphic::CNode*> msceneNodeVector;
@@ -771,23 +742,8 @@ protected:
 					void findComponent(EarthView::World::Spatial3D::CComponent& component,_out EarthView::World::Spatial3D::CComponent& resultComponent,EarthView::World::Graphic::CInstancedEntity* pInstanceEntity );
 
 					EarthView::World::Graphic::CNode* _createLocalAxisNode(const InstancedEntityVector& instEntVec, const EarthView::World::Spatial::Math::CMatrix4& offMatrix);
-
-					ev_bool loadBindedEffect(const EarthView::World::Spatial3D::Dataset::CMeshEffectRefInfoVector& refInfoVec, const EarthView::World::Core::IntVector& subEntityIndexs);
-
-					ev_bool loadBindedModel(const EarthView::World::Spatial3D::Dataset::CMeshEffectRefInfoVector& refInfoVec, const EarthView::World::Core::IntVector& subEntityIndexs);
-
-				    ev_bool attachBindedEffect();
-
-					ev_bool attachBindedModel();
-
 					private:
 						ev_bool mbAsyncUpdateBuffer;
-						ev_bool mbLoadBindedEffect;
-						ev_bool mbLoadBindedModel;
-						ev_bool mbLoadedEffect;
-						ev_bool mbLoadedModel;
-						ev_bool mbAttachedEffect;
-						ev_bool mbAttachedModel;
 				};
 
 

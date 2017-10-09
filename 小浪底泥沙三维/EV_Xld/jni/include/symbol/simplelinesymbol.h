@@ -51,7 +51,7 @@ namespace EarthView{
 				/// </summary>
 				/// <param name=""></param>
 				/// <returns></returns>
-				EarthView::World::Spatial::Display::EVSimleLineType getSimpleLineType() const;
+				EarthView::World::Spatial::Display::EVSimleLineType getSimpleLineType();
 				
 				/// <summary>
 				/// 设置简单风格类型

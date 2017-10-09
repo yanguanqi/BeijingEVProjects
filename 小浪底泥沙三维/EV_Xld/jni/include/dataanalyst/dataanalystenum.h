@@ -4,10 +4,10 @@
 #define _DATA_ANALYST_H_WW_
 
 //////导出宏定义
-#ifdef  EV_DataAnalys_ETEXPORTS
-#define EV_DataAnalyst_DLL  EV_DLL_EXPORT
+#ifdef  RECTIFY_ETEXPORTS
+#define RECTIFY_DLL  EV_DLL_EXPORT
 #else
-#define EV_DataAnalyst_DLL EV_DLL_IMPORT
+#define RECTIFY_DLL EV_DLL_IMPORT
 #endif
 
 

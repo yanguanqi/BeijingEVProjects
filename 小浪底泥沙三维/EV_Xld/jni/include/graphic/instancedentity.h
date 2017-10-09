@@ -44,13 +44,13 @@ namespace EarthView
 				CInstancedEntity( EarthView::World::Graphic::CInstanceBatch *ref_batchOwner, ev_uint32 instanceID);
 				virtual ~CInstancedEntity();
 			public:
-				EarthView::World::Graphic::CInstanceBatch *_getOwner()const;
+				EarthView::World::Graphic::CInstanceBatch *_getOwner()const	{return mBatchOwner;}
 
-				ev_bool isInUse() const;				
-				ev_bool isInScene() const;
+				ev_bool isInUse() const	{return mInUse;}				
+				ev_bool isInScene() const{return mInUse;}
 				void setInUse(ev_bool used);
 
-				ev_bool getVisible()const;
+				ev_bool getVisible()const{return mVisible;}
 				ev_void setVisible(ev_bool visible);
 
 				/// <summary>
@@ -79,14 +79,14 @@ namespace EarthView
 				/// <returns></returns>
 				EarthView::World::Spatial::Math::CMatrix4 getSubMeshInstanceMatrix()const;				
 				
-				virtual ev_void setUserColour(const EarthView::World::Graphic::CColourValue& color);				
-				virtual EarthView::World::Graphic::CColourValue  getUserColour() const;
+				ev_void setUserColour(const EarthView::World::Graphic::CColourValue& color);				
+				EarthView::World::Graphic::CColourValue  getUserColour() const;
 
 			protected:
-				virtual EarthView::World::Graphic::CColourValue getColour()const;
+				EarthView::World::Graphic::CColourValue getColour()const;
 			ev_private:
-				void setInstanceIndex(ev_uint32 index);
-				void setSubMeshInstanceIndex(ev_uint32 submeshInstanceIndex);			
+				void setInstanceIndex(ev_uint32 index){mInstanceIndex = index;}
+				void setSubMeshInstanceIndex(ev_uint32 submeshInstanceIndex){mSubMeshInstanceIndex = submeshInstanceIndex;}			
 			public:
 				/// <summary>
 				/// 设置选中的对象				
@@ -98,13 +98,28 @@ namespace EarthView
 				/// 获得选中的对象				
 				/// <param name=""></param>				
 				/// <returns>选中的对象集合</returns>
-				EarthView::World::Core::IntVector getSelected()const;
+				EarthView::World::Core::IntVector getSelected()const
+				{
+					EarthView::World::Core::IntVector vec;
+					if(mSelected)
+						vec.push_back(0);
+					return vec;
+				}
 
 				/// <summary>
 				/// 获得选中时的高亮颜色				
 				/// <param name=""></param>				
 				/// <returns></returns>
-				EarthView::World::Graphic::CColourValue getSelectionColour()const;
+				EarthView::World::Graphic::CColourValue getSelectionColour()const
+				{
+					EarthView::World::Graphic::CColourValue colour(
+						(ev_real32) mSelectionColourR / 255.0,
+						(ev_real32) mSelectionColourG / 255.0,
+						(ev_real32) mSelectionColourB / 255.0,
+						(ev_real32) mSelectionColourA / 255.0
+						);
+					return colour;
+				}
 
 				/// <summary>
 				/// 设置选中时的高亮颜色				
@@ -139,7 +154,6 @@ namespace EarthView
 
 			};
 
-			struct LocalTransform;
             class EV_GRAPHIC_DLL CInstancedEntity2 : public EarthView::World::Graphic::CInstancedEntity
             {
                 friend class CInstanceBatch;
@@ -155,30 +169,71 @@ namespace EarthView
 				private:
 					EarthView::World::Graphic::CInstancedEntity2* mParent;
 				public:
-					CInstancedEntityMovable(EVString name,EarthView::World::Graphic::CInstancedEntity2* parent);
+					CInstancedEntityMovable(EVString name,EarthView::World::Graphic::CInstancedEntity2* parent) : mParent(parent)
+					{
+						 mName = name;
+					}
 				ev_private:
-					CInstancedEntityMovable(EarthView::World::Core::CNameValuePairList* pList);
+					CInstancedEntityMovable(EarthView::World::Core::CNameValuePairList* pList) : mParent((CInstancedEntity2*)pList->GetAt("parent"))
+					{
+						mName = (char*)pList->GetAt("name");
+					}
 				public:
-					CInstancedEntity2* getParent()const;
-					virtual EVString getMovableType() const;
-					virtual const EarthView::World::Spatial::Math::CAxisAlignedBox &getBoundingBox() const;
-					virtual Real getBoundingRadius() const;			
-					virtual Real getSquaredViewDepth( const EarthView::World::Graphic::CCamera *cam ) const;					
-					virtual void _notifyMoved();				
+					CInstancedEntity2* getParent()const{return mParent;}
+					virtual EVString getMovableType() const
+					{
+						return mParent->getMovableType();
+					}
+					virtual const EarthView::World::Spatial::Math::CAxisAlignedBox &getBoundingBox() const
+					{
+						return mParent->getBoundingBox();
+					}
+					virtual Real getBoundingRadius() const
+					{
+						return mParent->getBoundingRadius();
+					}			
+					virtual Real getSquaredViewDepth( const EarthView::World::Graphic::CCamera *cam ) const
+					{
+						return mParent->getSquaredViewDepth(cam);
+					}					
+					virtual void _notifyMoved()
+					{
+						EarthView::World::Graphic::CMovableObject::_notifyMoved();
+						mParent->_notifyMoved();
+					}				
 					virtual void _notifyAttached( EarthView::World::Graphic::CNode *ref_parent, ev_bool isTagPoint );				
-					virtual void _updateRenderQueue( EarthView::World::Graphic::CRenderQueue *queue );
-					virtual void visitRenderables( EarthView::World::Graphic::CRenderable::CVisitor *visitor, ev_bool debugRenderables = false );
-					virtual const EarthView::World::Spatial::Math::CMatrix4 &_getParentNodeFullTransform() const;
+					virtual void _updateRenderQueue( EarthView::World::Graphic::CRenderQueue *queue )
+					{
+						mParent->_updateRenderQueue(queue);
+					}
+					virtual void visitRenderables( EarthView::World::Graphic::CRenderable::CVisitor *visitor, ev_bool debugRenderables = false )
+					{
+						mParent->visitRenderables(visitor,debugRenderables);
+					}
+					virtual const EarthView::World::Spatial::Math::CMatrix4 &_getParentNodeFullTransform() const
+					{
+						return mParent->_getParentNodeFullTransform();
+					}
 					
 					virtual void _notifyCurrentCamera(EarthView::World::Graphic::CCamera *ref_cam);
 					
-					virtual ev_bool isInScene() const;	
+					virtual ev_bool isInScene() const
+					{
+						return mParent->isInUse();
+					}	
 
 					virtual ev_bool isVisible() const;
 
-					ev_bool getVisible()const;
+					ev_bool getVisible()const
+					{
+						return mParent->getVisible();
+					}
 
-					void setVisible(ev_bool visible);
+					void setVisible(ev_bool visible)
+					{
+						mParent->setVisible(visible);
+						CMovableObject::setVisible(visible);
+					}
 				};
 
             protected:
@@ -199,11 +254,17 @@ namespace EarthView
                 /// Parameters used for local transformation offset information
                 /// The
                 ///////////////////////////////////////////////////////////////////////////
-				LocalTransform *mpLocalTransform;
+                //// Object position
+                EarthView::World::Spatial::Math::CVector3 mPosition;
+                EarthView::World::Spatial::Math::CVector3 mDerivedLocalPosition;
+                //// Object orientation
+                EarthView::World::Spatial::Math::CQuaternion mOrientation;
+                //// Object scale
+                EarthView::World::Spatial::Math::CVector3 mScale;
+                //// The maximum absolute scale for all dimension
+                Real mMaxScaleLocal;
                 //// Full world transform
                 EarthView::World::Spatial::Math::CMatrix4 mFullLocalTransform;
-
-				EarthView::World::Spatial::Math::CMatrix4 mLocalMatrix;
 								
 
                 //// Tells if mFullTransform needs an updated
@@ -218,8 +279,6 @@ namespace EarthView
 				mutable EarthView::World::Spatial::Math::CAxisAlignedBox mBoundingBox;
 				mutable Real mBoundingRadius;
 
-				ev_real32 r, g, b, a;
-
 			public:
 				EarthView::World::Graphic::CTagPoint *attachObjectToBone(const EVString &boneName, EarthView::World::Graphic::CMovableObject *ref_pMovable,
 					const EarthView::World::Spatial::Math::CQuaternion &offsetOrientation, const EarthView::World::Spatial::Math::CVector3 &offsetPosition);
@@ -229,14 +288,17 @@ namespace EarthView
 				
 				EarthView::World::Spatial::Math::CMatrix4 getLocalTransform()const;
 
-				EarthView::World::Core::CRecursiveMutex* getTransformMutex()const;
+				EarthView::World::Core::CRecursiveMutex* getTransformMutex()const
+				{
+					return &mTransformMutex;
+				}
 
 			protected:				
 				ev_void updateBoundingBox()const;				
 
 				ev_void attachObjectToBoneImpl(EarthView::World::Graphic::CMovableObject *pMovable, EarthView::World::Graphic::CTagPoint *pAttachingPoint);
 				ev_void detachObjectFromBoneImpl(EarthView::World::Graphic::CMovableObject *pMovable);
-				ev_void initLocalTransform();
+
 			protected:
                 //// Returns number of matrices written to transform, assumes transform has enough space
                 ev_size_t getTransforms( EarthView::World::Spatial::Math::CMatrix4 *xform ) const;
@@ -263,12 +325,15 @@ namespace EarthView
                 CInstancedEntity2( EarthView::World::Graphic::CInstanceBatch *ref_batchOwner, ev_uint32 instanceID);
                 
                 virtual ~CInstancedEntity2();
-				ev_void reset();
 			public:  
                 
-				CInstancedEntityMovable* getMovable();				
 
-                EVString getMovableType();
+				CInstancedEntityMovable* getMovable()const
+				{
+					return mpMovable;
+				}				
+
+                EVString getMovableType() const;
                 const EarthView::World::Spatial::Math::CAxisAlignedBox &getBoundingBox() const;
                 Real getBoundingRadius() const;
 				void calBoundingRadius() const;
@@ -279,12 +344,18 @@ namespace EarthView
                 void _notifyMoved();				
                 void _notifyAttached( EarthView::World::Graphic::CNode *ref_parent, ev_bool isTagPoint );
                 //// Do nothing, InstanceBatch takes care of this.
-                void _updateRenderQueue( EarthView::World::Graphic::CRenderQueue *queue );
-                void visitRenderables( EarthView::World::Graphic::CRenderable::CVisitor *visitor, ev_bool debugRenderables = false );
+                void _updateRenderQueue( EarthView::World::Graphic::CRenderQueue *queue )	{}
+                void visitRenderables( EarthView::World::Graphic::CRenderable::CVisitor *visitor, ev_bool debugRenderables = false ) {}
                 /** @see Entity::hasSkeleton */
-                ev_bool hasSkeleton() const;
+                ev_bool hasSkeleton() const
+                {
+                    return mSkeletonInstance != 0;
+                }
                 /** @see Entity::getSkeleton */
-                EarthView::World::Graphic::CSkeletonInstance *getSkeleton() const;
+                EarthView::World::Graphic::CSkeletonInstance *getSkeleton() const
+                {
+                    return mSkeletonInstance;
+                }
                 /** @see Entity::getAnimationState */
                 EarthView::World::Graphic::CAnimationState *getAnimationState(const EVString &name) const;
                 /** @see Entity::getAllAnimationStates */
@@ -296,33 +367,36 @@ namespace EarthView
                 */
                 virtual ev_bool _updateAnimation();
                
-				void setTransformLookupNumber(ev_uint16 num);
+				void setTransformLookupNumber(ev_uint16 num)
+				{
+					mTransformLookupNumber = num;
+				}
 
                 /** Retrieve the position */
-                const EarthView::World::Spatial::Math::CVector3 &getPosition() const;
+                const EarthView::World::Spatial::Math::CVector3 &getPosition() const
+                {
+                    return mPosition;
+                }
                 /** Set the position or the offset from the parent node if a parent node exists */
                 void setPosition(const EarthView::World::Spatial::Math::CVector3 &position, ev_bool doUpdate = true);
                 /** Retrieve the orientation */
-                const EarthView::World::Spatial::Math::CQuaternion &getOrientation() const;
+                const EarthView::World::Spatial::Math::CQuaternion &getOrientation() const
+                {
+                    return mOrientation;
+                }
                 /** Set the orientation or the offset from the parent node if a parent node exists */
                 void setOrientation(const EarthView::World::Spatial::Math::CQuaternion &orientation, ev_bool doUpdate = true);
                 /** Retrieve the local scale */
-                const EarthView::World::Spatial::Math::CVector3 &getScale() const;
+                const EarthView::World::Spatial::Math::CVector3 &getScale() const
+                {
+                    return mScale;
+                }
                 /** Set the  scale or the offset from the parent node if a parent node exists  */
                 void setScale(const EarthView::World::Spatial::Math::CVector3 &scale, ev_bool doUpdate = true);
 
 				EarthView::World::Spatial::Math::CMatrix4 getMatrix()const;
 				void setMatrix(const EarthView::World::Spatial::Math::CMatrix4& matrix, ev_bool doUpdate = true);
-				void setMatrix2(const EarthView::World::Spatial::Math::CMatrix4& matrix);
 
-				EarthView::World::Spatial::Math::CMatrix4 getLocalMatrix()const;
-				void setLocalMatrix(const EarthView::World::Spatial::Math::CMatrix4& matrix);
-				ev_void setUserColour(const EarthView::World::Graphic::CColourValue& color);				
-				EarthView::World::Graphic::CColourValue  getUserColour() const;
-			protected:
-				EarthView::World::Graphic::CColourValue getColour()const;
-
-			public:
                 /** Returns the maximum derived scale coefficient among the xyz values */
                 Real getMaxScaleCoef() const;
                 /** Update the world transform and derived values */
@@ -374,13 +448,19 @@ namespace EarthView
 				/// 询问是否使用了SubMesh局部变换矩阵				
 				/// <param name=""></param>				
 				/// <returns></returns>
-				ev_bool getSubMeshLocalMatrixUsed()const;
+				ev_bool getSubMeshLocalMatrixUsed()const
+				{
+					return mSubMeshLocalMatrixUsed;
+				}
 
 				/// <summary>
 				/// 设置是否使用SubMesh局部变换矩阵				
 				/// <param name=""></param>				
 				/// <returns></returns>
-				ev_void useSubMeshLocalMatrix(ev_bool use);
+				ev_void useSubMeshLocalMatrix(ev_bool use)
+				{
+					mSubMeshLocalMatrixUsed = use;
+				}
 
 				/// <summary>
 				/// 获得SubMesh局部变换矩阵				
@@ -392,7 +472,7 @@ namespace EarthView
 				/// 获得所有者(EarthView::World::Graphic::CInstanceObject)				
 				/// <param name=""></param>				
 				/// <returns></returns>
-				EarthView::World::Graphic::CInstanceObject* getObjectOwner()const;
+				EarthView::World::Graphic::CInstanceObject* getObjectOwner()const{return mObjectOwner;}
             };
         }
     }

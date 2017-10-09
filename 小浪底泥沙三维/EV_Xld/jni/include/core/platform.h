@@ -19,12 +19,6 @@
 #define EV_ENDIAN_BIG 4321
 #define EV_ARCHITECTURE_32 1
 #define EV_ARCHITECTURE_64 2
-
-/* 追加EV_ARCH_AARCH64这个宏*/
-#if defined(__aarch64__)
-#define EV_PLATFORM  EV_ARCH_AARCH64
-#endif 
-
 /* Finds the compiler type and version.
 */
 ///编译器类型标识宏定义--开始
@@ -93,8 +87,6 @@
 #else
 #define EV_PLATFORM EV_PLATFORM_LINUX
 #endif
-
-
 /* Finds the current platform */
 /*操作系统标识宏定义--开始*/
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__) ||  defined(_WIN32_WCE) || defined(WINCE)
@@ -142,7 +134,7 @@
 #if defined(__linux__) || defined(__linux) || defined(EV_OS_ANDROID) || defined(EV_OS_IOS) || defined(EV_OS_CYGWIN)
 #ifndef EV_OS_LINUX
 #define EV_OS_LINUX
-# if defined(__x86_64__) || defined(_M_X64) || defined(__powerpc64__) || defined(__alpha__) || defined(__ia64__) || defined(__s390__) || defined(__s390x__) || defined(__mips64) || defined(__aarch64__)
+# if defined(__x86_64__) || defined(_M_X64) || defined(__powerpc64__) || defined(__alpha__) || defined(__ia64__) || defined(__s390__) || defined(__s390x__)
 #  ifndef EV_OS_LINUX64
 #   define EV_OS_LINUX64
 #  endif

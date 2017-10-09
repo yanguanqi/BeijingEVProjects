@@ -214,41 +214,6 @@ namespace EarthView
 					/// <param name="virtualKey">虚拟的按键值，CGUIEvent::GUIKeySymbol的组合</param>
 					/// <returns></returns>
 					void keyRelease(_in ev_int32 key,_in ev_int32 virtualKey);
-
-					/// <summary>
-					/// 开始触屏事件，用法：
-					/// CGUIEventPtr event = new CGUIEvent();
-					///	event->setEventType(CGUIEvent::TOUCHBEGIN);
-					///	event->setTime(time);
-					///	event->addTouchPoint(0, TOUCH_BEGAN, QTouchEvent::touchPoints().at(0).lastPos().x(),QTouchEvent::touchPoints().at(0).lastPos().y());
-					///	control->touchBegin(event);
-					/// </summary>
-					/// <param name="event">触屏事件</param>
-					/// <returns></returns>
-					void touchBegin(EarthView::World::Spatial::SystemUI::CGUIEventPtr event);
-					/// <summary>
-					/// 更新触屏事件，用法：
-					/// CGUIEventPtr event = new CGUIEvent();
-					///	event->setEventType(CGUIEvent::TOUCHMOVE);
-					///	event->setTime(time);
-					/// for (int i = 0; i < QTouchEvent::touchPoints().count(); i++)
-					///		event->addTouchPoint(i, TOUCH_MOVED, QTouchEvent::touchPoints().at(i).lastPos().x(),QTouchEvent::touchPoints().at(i).lastPos().y());
-					///	control->touchMove(event);
-					/// </summary>
-					/// <param name="event">触屏事件</param>
-					/// <returns></returns>
-					void touchMove(EarthView::World::Spatial::SystemUI::CGUIEventPtr event);
-					/// <summary>
-					/// 结束触屏事件，用法：
-					/// CGUIEventPtr event = new CGUIEvent();
-					///	event->setEventType(CGUIEvent::TOUCHEND);
-					///	event->setTime(time);
-					///	event->addTouchPoint(0, TOUCH_ENDED, QTouchEvent::touchPoints().at(0).lastPos().x(),QTouchEvent::touchPoints().at(0).lastPos().y());
-					///	control->touchEnd(event);
-					/// </summary>
-					/// <param name="event">触屏事件</param>
-					/// <returns></returns>
-					void touchEnd(EarthView::World::Spatial::SystemUI::CGUIEventPtr event);
 					/// <summary>
 					///窗体失去焦点触发
 					/// </summary>

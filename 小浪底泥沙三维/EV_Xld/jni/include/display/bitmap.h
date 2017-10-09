@@ -275,11 +275,9 @@ namespace EarthView{
 				friend class CCacheBitmap;
 				friend class CImageRender;
 			private:
-				mutable ev_uchar* mpData;
 				ev_void modifyBitmapFromAttribute(ev_void* pImageAtt);
 				static ev_void modifyBitmapFromAttribute(ev_void*& gpBitmap,ev_void*& gpGraphic,ev_void* pImageAtt);
 				ev_void makeShape();
-				mutable EarthView::World::Core::CRecursiveMutex mMutexLock;
 			};
 		}
 	}

@@ -4,16 +4,6 @@
 #include "spatialinterface/idatasetoperator.h"
 #include "spatialinterface/ienvelope.h"
 
-#if EV_PLATFORM == EV_PLATFORM_ANDROID
-#	ifdef max
-#	undef max
-#	endif
-
-#	ifdef min
-#	undef min
-#	endif
-#endif
-
 namespace EarthView
 {
 	namespace World
@@ -64,12 +54,12 @@ public:
 	{
 		return false;
 	}
-	virtual ev_void* query(EarthView::World::Core::CDataStream &filter) {return false;}
-	virtual ev_bool endQuery(void* queryData) {return false;}
+	virtual ev_bool query(EarthView::World::Core::CDataStream &filter,EVString &key) {return false;}
+	virtual ev_bool endQuery(const EVString &key) {return false;}
 	virtual ev_bool getFeature(ev_uint32 id,ev_vector<EarthView::World::Core::CVariant>& values){return false;}
 	virtual ev_bool updateExtent() {return false;}
 	virtual ev_bool getExtent(EarthView::World::Spatial::Geometry::IEnvelope *pEnvelope) {return false;}
-	virtual ev_bool nextFeature(ev_vector<EarthView::World::Core::CVariant>& values,void* queryData){return false;}
+	virtual ev_bool nextFeature(ev_vector<EarthView::World::Core::CVariant>& values,const EVString & key){return false;}
 	virtual ev_bool addFeature(_in EarthView::World::Core::CDataStream &feature) {return false;}
 	virtual ev_bool addFeatures(ev_vector<EVString> fields,
 		ev_vector<ev_vector<EarthView::World::Core::CVariant> > values,

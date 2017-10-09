@@ -2,19 +2,14 @@
 #define EARTHVIEW_WORLD_SPATIAL_GEOMETRY_TRIANGLERING_H
 
 #include "curvering.h"
+EV_DECLARE_GEOMETRY_CLASS_PRIVATE(CTriangleRing);
 
+EV_DECLARE_GEOMETRY_CLASS_UTILITY(CGeometryHelper);
 
 namespace EarthView{
 	namespace World{
 		namespace Spatial{
 			namespace Geometry{
-				namespace Private{
-					class CTriangleRingPrivate;
-				}
-				namespace Utility{
-					class CGeometryHelper;
-
-				}
 				/// <summary>
 				/// 三角环类，由一个三角形的三条边构成的环
 				/// </summary>

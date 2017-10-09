@@ -272,7 +272,6 @@ namespace EarthView
 
 				typedef map<EVString, EarthView::World::Graphic::CMovableObject *> ChildObjectMap;
                 ChildObjectMap mChildObjects;
-				//mutable EarthView::World::Core::CRecursiveMutex mChildObjectsLocker;
 
                 mutable EarthView::World::Spatial::Math::CMatrix4 mFullLocalTransform;
                 ev_bool mInheritParentEntityOrientation;

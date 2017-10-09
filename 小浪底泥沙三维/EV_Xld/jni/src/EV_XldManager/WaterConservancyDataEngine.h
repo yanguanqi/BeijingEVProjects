@@ -20,7 +20,22 @@ namespace EarthView
 			WaterConservancyDataEngine(EarthView::World::Core::CNameValuePairList* pList);*/
 
 		public:
-
+			/// <summary>
+			/// 将水下地形模板写入本底缓存
+			/// </summary>
+			/// <param name="fileName">文件名</param>
+			/// <param name="materialName">纹理名称</param>
+			/// <param name="vertexVector">顶点缓存</param>
+			/// <param name="indexVector">索引缓存</param>
+			static void WrtiteTerrainModelStencil(vector<EarthView::World::Spatial::Math::CVector2*>* bounds);
+			/// <summary>
+			/// 生产水下地形模板
+			/// </summary>
+			/// <param name="fileName">文件名</param>
+			/// <param name="materialName">纹理名称</param>
+			/// <param name="vertexVector">顶点缓存</param>
+			/// <param name="indexVector">索引缓存</param>
+			static void GenerateTerrainModelStencil();
 			/// <summary>
 			/// 将水下地形模型以二进制的形式写入缓存文件
 			/// </summary>

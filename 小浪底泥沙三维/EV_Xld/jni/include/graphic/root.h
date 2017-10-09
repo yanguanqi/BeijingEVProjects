@@ -8,9 +8,6 @@
 #include "timer.h"
 
 #include "locker/license.h"
-#ifndef GRAPHIC_UNWARP_EXPORT
-#define GRAPHIC_UNWARP_EXPORT EV_GRAPHIC_DLL
-#endif
 
 namespace EarthView
 {
@@ -33,7 +30,7 @@ namespace EarthView
     {
         namespace Graphic
         {
-			class CSyncCommand;
+
             class EV_GRAPHIC_DLL CRenderSystemThread : EarthView::World::Core::CBaseObject
             {
             ev_private:
@@ -46,9 +43,6 @@ namespace EarthView
                 static void registerThread();
 				static void unregisterThread();
 				static void flushRenderSystem();
-			private:
-				static CSyncCommand *mPostExtraThreadsCommand;
-				static EarthView::World::Core::CMutex mMtx;
             };
         }
     }
@@ -88,111 +82,6 @@ namespace EarthView
             class CFrameListener;
             struct FrameEvent;
             class CControllerManager;
-			class CSyncCommandProcessor;
-			class GRAPHIC_UNWARP_EXPORT CSyncCommand
-			{
-			public:
-				CSyncCommand(ev_bool needSync = true);
-				virtual ~CSyncCommand();
-				CSyncCommand *mNext;
-			protected:
-				virtual ev_bool doCommand();
-				EarthView::World::Core::CMutex *mSyncMutex;
-				friend class CSyncCommandProcessor;
-			};
-			class GRAPHIC_UNWARP_EXPORT CSyncCommandProcessor : public EarthView::World::Core::CEventObject
-			{
-			public:
-				CSyncCommandProcessor();
-				static EarthView::World::Graphic::CSyncCommandProcessor* getSingleton();
-				void exec(EarthView::World::Graphic::CSyncCommand *command);
-				void exec(EarthView::World::Graphic::CSyncCommand *command, ev_bool uiThread);
-				void processAllCommands();
-				static EarthView::World::Graphic::CSyncCommandProcessor* instance;
-ev_internal:
-				/// <summary>
-				/// 事件处理函数，可重载
-				/// </summary>
-				/// <param name="e">事件</param>
-				/// <returns>已处理返回true，否则返回false</returns>
-				virtual ev_bool onEvent(_in EarthView::World::Core::CEvent *e);
-			protected:
-				void addCommand_internal(EarthView::World::Graphic::CSyncCommand *command);
-				EarthView::World::Graphic::CSyncCommand *peekCommand(); 
-				list<EarthView::World::Graphic::CSyncCommand *> mCommands;
-				EarthView::World::Core::CMutex mMtx;
-			private:
-				ev_bool isWebApp;
-			};
-			class GRAPHIC_UNWARP_EXPORT CRenderer
-			{
-			public:
-				/// <summary>
-				/// 初始化三维环境，例如初始化root，可重写
-				/// </summary>
-				/// <returns></returns>
-				/// <memo></memo>
-				virtual ev_bool init();
-				/// <summary>
-				/// 真正渲染一帧需要执行的操作，可重写
-				/// </summary>
-				/// <returns></returns>
-				/// <memo></memo>
-				virtual ev_int32 render();
-			};
-			class GRAPHIC_UNWARP_EXPORT CGraphicRenderer : public CRenderer
-			{
-			public:
-				virtual ev_bool init();
-				virtual ev_int32 render();
-			};
-			class GRAPHIC_UNWARP_EXPORT CRenderTimer
-			{
-			public:
-				CRenderTimer();
-				static EarthView::World::Graphic::CRenderTimer* getSingleton();
-				/// <summary>
-				/// 开始三维渲染循环，可重写，渲染循环可能在主线程，也可能在后台线程，取决于CRoot::getBackgroundRendering()的取值
-				/// </summary>
-				/// <returns></returns>
-				/// <memo></memo>
-				virtual void startRendering();
-				/// <summary>
-				/// 结束三维渲染循环，可重写
-				/// </summary>
-				/// <returns></returns>
-				/// <memo></memo>
-				virtual void stopRendering();
-				/// <summary>
-				/// 渲染一帧
-				/// </summary>
-				/// <returns></returns>
-				/// <memo></memo>
-				void renderOneFrame();
-
-				/// <summary>
-				/// 设置三维渲染器，默认有一个渲染器
-				/// </summary>
-				/// <returns></returns>
-				/// <memo></memo>
-				void setRenderer(EarthView::World::Graphic::CRenderer *renderer);
-				/// <summary>
-				/// 获得三维渲染器，默认有一个渲染器
-				/// </summary>
-				/// <returns></returns>
-				/// <memo></memo>
-				CRenderer *getRenderer();
-				static EarthView::World::Graphic::CRenderTimer* instance;
-			protected:
-				CRenderer *mRenderer;
-			};
-			class GRAPHIC_UNWARP_EXPORT CRenderTimerFactory
-			{
-			public:
-				CRenderTimerFactory();
-				virtual EarthView::World::Graphic::CRenderTimer *create();
-			};
-
             /// <summary>
             /// 渲染系统列表
             /// </summary>
@@ -235,9 +124,9 @@ ev_internal:
 
             /// <summary>
             /// 根类
-            /// 根类是三维渲染引擎的入口，可帮助配置渲染系统，获取其他对象的指针
+            /// 根类是EV_World系统的入口，可帮助配置系统，获取其他对象的指针
             /// </summary>
-            class EV_GRAPHIC_DLL CRoot : public EarthView::World::Core::CEventObject
+            class EV_GRAPHIC_DLL CRoot : public EarthView::World::Core::CAllocatedObject
             {
                 friend class CRenderSystem;
             private:
@@ -269,7 +158,6 @@ ev_internal:
                 COverlayElementFactory *mPanelFactory;
                 COverlayElementFactory *mBorderPanelFactory;
                 COverlayElementFactory *mTextAreaFactory;
-				COverlayElementFactory *mTextAreaFactoryInstanced;
 				COverlayElementFactory *mCharElementFactory;
                 COverlayManager *mOverlayManager;
                 CFontManager *mFontManager;
@@ -291,17 +179,10 @@ ev_internal:
                 CHighLevelGpuProgramManager *mHighLevelGpuProgramManager;
                 CExternalTextureSourceManager *mExternalTextureSourceManager;
                 CCompositorManager *mCompositorManager;
-                mutable ev_uint32 mNextFrame;
+                ev_uint32 mNextFrame;
                 Real mFrameSmoothingTime;
                 ev_bool mRemoveQueueStructuresOnClear;
                 Real mDefaultMinPixelSize;
-ev_internal:
-				/// <summary>
-				/// 事件处理函数，可重载
-				/// </summary>
-				/// <param name="e">事件</param>
-				/// <returns>已处理返回true，否则返回false</returns>
-				virtual ev_bool onEvent(_in EarthView::World::Core::CEvent *e);
             public:
                 /// <summary>
                 /// 插件接口列表
@@ -909,30 +790,9 @@ ev_internal:
 				/// <returns></returns>
                 const EarthView::World::Graphic::CRoot::PluginInstanceList &getInstalledPlugins() const;
 
-				enum GPUPerformanceLevel
-				{
-					GPU_PERFORMANCE_LOW = 0,
-					GPU_PERFORMANCE_NORMAL = 1,
-					GPU_PERFORMANCE_HIGH = 2
-				};
-
-				GPUPerformanceLevel getGraphicCardPerformanceLevel();
-
-				void setAutoQualityLevel(bool isAutoQualityLevel);
-
-				bool getAutoQualityLevel();
-
-				void setQualityLevel(GPUPerformanceLevel performanceLevel);
-
-				GPUPerformanceLevel getQualityLevel();
-
             ev_private :
                 /** Gets a pointer to the central timer used for all EV_World timings */
                 CTimer *getTimer();
-				
-				GPUPerformanceLevel mPerformanceLevel;
-
-				bool mIsAutoQualityLevel;
 
             public :
 				/// <summary>
@@ -1279,60 +1139,8 @@ ev_internal:
                 {
                     return mDefaultMinPixelSize;
                 }
-				/// <summary>
-				/// 设置是否在后台线程执行三维渲染循环，该方法只能在程序启动时调用（在CApplication构造前），不能在运行过程中调用。CApplication会根据该取值使用不同的渲染循环工厂。
-				/// </summary>
-				/// <param name="backgroundRendering">是否在后台渲染三维场景</param>
-				/// <returns></returns>
-				/// <memo></memo>
-				static void setBackgroundRendering(ev_bool backgroundRendering);
-				/// <summary>
-				/// 获取是否在后台线程执行三维渲染循环
-				/// </summary>
-				/// <returns>是否在后台线程执行三维渲染循环</returns>
-				/// <memo></memo>
-				static ev_bool getBackgroundRendering();
-
-				/// <summary>
-				/// 设置是否异步加载贴地特征图层
-				/// </summary>
-				/// <param name="flag">true为异步加载，false为同步加载(默认值)</param>
-				/// <returns></returns>
-				static ev_void setAsyncLoadClampSceneLayer(ev_bool flag=false);
-				
-				/// <summary>
-				/// 获取是否异步加载贴地特征图层
-				/// </summary>
-				/// <returns>true为异步加载，false为同步加载</returns>
-				static ev_bool getAsyncLoadClampSceneLayer();
             private:
                 void init(const EVString &pluginFileName, const EVString &configFileName, const EVString &logFileName);
-				static map<EVString, CRenderTimerFactory *> mRenderTimerFactories;
-				static ev_bool mbBackgroundRendering;
-				static ev_bool mbAsyncLoadClampSceneLayer;
-ev_private:
-				/// <summary>
-				/// 注册渲染循环工厂，渲染循环工厂用以创建三维渲染循环
-				/// </summary>
-				/// <param name="name">工厂的名字</param>
-				/// <param name="factory">工厂对象的指针</param>
-				/// <returns></returns>
-				/// <memo></memo>
-				static void addRenderTimerFactory(EVString name, EarthView::World::Graphic::CRenderTimerFactory *factory);
-				/// <summary>
-				/// 反注册渲染循环工厂
-				/// </summary>
-				/// <param name="name">工厂的名字</param>
-				/// <returns></returns>
-				/// <memo></memo>
-				static void removeRenderTimerFactory(EVString name);
-				/// <summary>
-				/// 获取渲染循环工厂
-				/// </summary>
-				/// <param name="name">工厂的名字</param>
-				/// <returns></returns>
-				/// <memo></memo>
-				static CRenderTimerFactory *getRenderTimerFactory(EVString name);
             };
         }
     }

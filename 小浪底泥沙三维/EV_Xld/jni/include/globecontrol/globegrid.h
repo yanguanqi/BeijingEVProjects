@@ -49,7 +49,27 @@ namespace EarthView
                 ev_real64 East;
             };
 
-			class CCameraListenerInternal;
+			class CGlobeGrid;
+			class CCameraListenerInternal : public CGlobeCamera::CGlobeCameraListener
+			{
+			public:
+				CCameraListenerInternal(CGlobeGrid* parent);
+				~CCameraListenerInternal();
+			public:
+				virtual void cameraParamChanged(_in EarthView::World::Graphic::CCamera* camera);
+
+				virtual void cameraPreRenderScene( _in EarthView::World::Graphic::CCamera *camera);
+				virtual void cameraPostRenderScene( _in EarthView::World::Graphic::CCamera *camera);
+
+				virtual void cameraDestroyed( _in EarthView::World::Graphic::CCamera *camera);
+
+				void beginListen(EarthView::World::Graphic::CCamera *camera);
+				void endListen();
+				EarthView::World::Graphic::CCamera* getCamera(){return mCamera;}
+			protected:
+				CGlobeGrid* mParent;
+				EarthView::World::Graphic::CCamera* mCamera;
+			};
 
             class EV_GLOBECONTROL_DLL CGlobeGrid : public EarthView::World::Graphic::CManualObject
             {
@@ -76,16 +96,13 @@ namespace EarthView
 				void show(EarthView::World::Graphic::CCamera *cam,ev_bool visible);
 
 				void setTextStyle(const EarthView::World::Graphic::CTextureTextStyle& genericStyle,const EarthView::World::Graphic::CTextureTextStyle& tropicStyle);
-				void setSheetTextStyle(const EarthView::World::Graphic::CTextureTextStyle& sheetStyle);
-				void getSheetTextStyle(_out EarthView::World::Graphic::CTextureTextStyle& sheetStyle);
 				void getTextStyle(EarthView::World::Graphic::CTextureTextStyle& genericStyle,EarthView::World::Graphic::CTextureTextStyle& tropicStyle);
 
 				void setGridColor(const EarthView::World::Graphic::CColourValue& genericColor,const EarthView::World::Graphic::CColourValue& tropicColor);
 				void getGridColor(EarthView::World::Graphic::CColourValue& genericColor,EarthView::World::Graphic::CColourValue& tropicColor);
 
 				void refresh();
-				void setSheetStringVisible(ev_bool visible);
-				ev_bool getSheetStringVisible();
+
             protected:
 				void refreshByCamera(EarthView::World::Graphic::CCamera *cam);
                 void rebuildGridBuffer(EarthView::World::Graphic::CCamera* cam);
@@ -133,7 +150,6 @@ namespace EarthView
                 ev_real64 m_latInterval;
                 ev_real64 m_lonInterval;             
                 bool m_containsPI;
-				ev_uint32 m_currentIndex;
 
                 EarthView::World::Spatial3D::Controls::CGlobeControl* mParentControl;                
 
@@ -143,7 +159,6 @@ namespace EarthView
                 EVString mMaterialName;  
 
 				CCameraListenerInternal* mCameraListener;
-				ev_bool mbShowSheetString;
 
 			protected:
 				struct TextUnit
@@ -176,7 +191,6 @@ namespace EarthView
 
 				EarthView::World::Graphic::CTextureTextStyle* mLongLatTextStyle;
 				EarthView::World::Graphic::CTextureTextStyle* mTropicTextStyle;
-				EarthView::World::Graphic::CTextureTextStyle* mSheetTextStyle;
 				EarthView::World::Graphic::CColourValue mGenericLineColor;
 				EarthView::World::Graphic::CColourValue mTropicLineColor;
 

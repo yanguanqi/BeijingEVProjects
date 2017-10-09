@@ -550,17 +550,15 @@ ev_private:
 					/// <returns></returns>
 					//static EarthView::World::Spatial3DProxy::KmlManager::CKmlTreeManager* getSingletonPtr(EarthView::World::Spatial::Atlas::ILayer* ref_layer);
 
-/// <summary>
+				ev_private:
+						EarthView::World::Spatial3D::Atlas::CKmlLayer* mLayer;
+				private:
+					/// <summary>
 					/// 迭代数据集
 					/// </summary>
 					/// <param name="kmldoc">kml文档</param>
 					/// <returns></returns>
 					ev_void iteratorDataset(EarthView::World::Spatial::Kml::CKmlDocument* kmldoc);
-
-				ev_private:
-						EarthView::World::Spatial3D::Atlas::CKmlLayer* mLayer;
-				private:
-					
 					/// <summary>
 					/// 发送事件
 					/// </summary>

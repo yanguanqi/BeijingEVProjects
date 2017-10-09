@@ -47,14 +47,6 @@ public:
 	/// <returns>返回数据源</returns>
 	virtual EarthView::World::Spatial::GeoDataset::IDataSource * openDataSource(const EVString &path,const EVString &fileName);
 	/// <summary>
-	/// 通过路径打开数据源
-	/// </summary>
-	/// <param name="path">路径</param>
-	/// <param name="fileName">文件名</param>
-	/// <param name="bAddSuffix">是否添加“.evd”后缀</param>
-	/// <returns>返回数据源</returns>
-	virtual EarthView::World::Spatial::GeoDataset::IDataSource * openDataSource(const EVString &path,const EVString &fileName, ev_bool bAddSuffix);
-	/// <summary>
 	/// 通过连接参数打开数据源
 	/// </summary>
 	/// <param name="connection">连接参数</param>

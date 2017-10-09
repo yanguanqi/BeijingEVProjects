@@ -65,13 +65,7 @@
 #define EV_LOCK_RW_MUTEX_READ(name)
 #define EV_LOCK_RW_MUTEX_WRITE(name)
 #define EV_THREAD_SYNCHRONISER(sync)
-
-#ifndef EV_OS_ANDROID
 #define EV_THREAD_WAIT(sync, lock)
-#else
-#define EV_THREAD_WAIT(sync, mutex, lock)
-#endif
-
 #define EV_THREAD_NOTIFY_ONE(sync)
 #define EV_THREAD_NOTIFY_ALL(sync)
 #define EV_THREAD_POINTER(T, var) T* var

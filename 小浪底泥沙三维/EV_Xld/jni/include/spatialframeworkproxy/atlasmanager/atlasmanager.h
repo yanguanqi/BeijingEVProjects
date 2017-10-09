@@ -186,7 +186,7 @@ ev_private:
 
 				};
 
-				class EV_FRAMEWORKPROXY_DLL CAtlasManager : public EarthView::World::Core::CEventObject
+				class EV_FRAMEWORKPROXY_DLL CAtlasManager : public EarthView::World::Core::CAllocatedObject
 				{
 				protected:
 					class CAtlasListener : public EarthView::World::Spatial::Utility::CProjectManager::IProjectManagerListener
@@ -774,21 +774,7 @@ ev_private:
 					/// <returns></returns>
 					/// <memo></memo>
 					EarthView::World::Spatial3D::Atlas::IGlobeLayer* createSceneLayer(EarthView::World::Spatial3D::Atlas::IGlobeLayer* grouplayer, const EVString& datasourceName, const EVString& datasetName);			
-					ev_bool createLayersFromXML(CLayerVector& vLayers, EarthView::World::Core::CXmlFile* vXML);
-					/// <summary>
-					/// 导入场景图层（组）
-					/// </summary>
-					/// <param name="pGroupLayer">图层组</param>
-					/// <param name="vLayers">图层集合</param>
-					/// <returns></returns>
-					ev_bool importSceneLayer(EarthView::World::Spatial::Atlas::ILayer* pGroupLayer, EarthView::World::Core::CXmlFile* vXML);
-					/// <summary>
-					/// 导出场景图层（组）
-					/// </summary>
-					/// <param name="pLayer">图层组</param>
-					/// <param name="destPath">文件路径</param>
-					/// <returns></returns>
-					ev_void exportSceneLayer(EarthView::World::Spatial::Atlas::ILayer* pLayer, _in EVString& destPath);
+
 					/// <summary>
 					/// 创建场景图层组
 					/// </summary>
@@ -912,10 +898,6 @@ ev_private:
 					/// <param name="datasetName">数据集名称。</param>
 					/// <returns>EarthView::World::Spatial::GeoDataset::IDataset对象指针。</returns>
 					EarthView::World::Spatial::GeoDataset::IDataset* openDataset(const EVString& datasourceName, const EVString& datasetName);
-
-ev_internal:
-					virtual ev_bool onEvent(_in EarthView::World::Core::CEvent *e);
-
 ev_private:
 					void getSceneLayersByDataSource(EarthView::World::Spatial::GeoDataset::IDataSource* pDataSource,map<EarthView::World::Spatial3D::Atlas::IGlobeLayer*,EarthView::World::Spatial3D::Atlas::IGlobeLayer*>& layers);
 					void getSceneLayersByDataSource(EarthView::World::Spatial::GeoDataset::IDataSource* pDataSource,EarthView::World::Spatial3D::Atlas::IGlobeLayer* pGroupLayer,map<EarthView::World::Spatial3D::Atlas::IGlobeLayer*,EarthView::World::Spatial3D::Atlas::IGlobeLayer*>& layers);
@@ -928,7 +910,7 @@ ev_private:
 
 					void addMap(EarthView::World::Spatial::Atlas::IMap* map);
 					void addScene(EarthView::World::Spatial::Atlas::IScene* scene);
-
+					
 					/// <summary>
 					/// 关闭数据集。
 					/// </summary>
@@ -964,14 +946,6 @@ ev_private:
 					EarthView::World::Spatial::Atlas::CLayerFactoryEnumerator* mpLayerFactoryEnumerator;	
 					EarthView::World::FrameWorkProxy::AtlasManager::CLayerSimpleProperty* mpLayerStringinterface;
 					EarthView::World::FrameWorkProxy::AtlasManager::CMapSimpleProperty* mpMapStringinterface;
-
-					/// <summary>
-					/// 导入场景图层（组）
-					/// </summary>
-					/// <param name="pGroupLayer">图层组</param>
-					/// <param name="vLayers">图层集合</param>
-					/// <returns></returns>
-					ev_bool importIteraSceneLayer(EarthView::World::Spatial::Atlas::ILayer* pGroupLayer, _in CLayerVector& vLayers);
 
 					//用于递归查找图层组下的图层
 					ev_void findLayers(EarthView::World::Spatial3D::Atlas::IGlobeLayer* grouplayer,EarthView::World::FrameWorkProxy::AtlasManager::CLayerVector& layers);

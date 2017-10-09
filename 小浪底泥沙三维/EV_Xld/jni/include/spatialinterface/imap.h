@@ -147,27 +147,6 @@ ev_private:
 				//class IScaleBar;
 				//class ILegendBar;
 				//class IMarkNorthArrow;
-				class EV_INTERFACE_DLL LayerList : public EarthView::World::Core::CAllocatedObject
-				{
-				ev_private:
-					LayerList( EarthView::World::Core::CNameValuePairList *pList );
-				public:
-					LayerList();
-					~LayerList();
-					ev_void addLayer( _in EarthView::World::Spatial::Atlas::ILayer *layer );
-					ev_void insertLayer( _in ev_uint32 index, _in EarthView::World::Spatial::Atlas::ILayer * layer );
-					ev_void removeLayer( _in ev_uint32 index );
-					ev_void removeLayer(EarthView::World::Spatial::Atlas::ILayer *pLayer);
-					ev_void removeAll();
-					ev_void moveLayer( _in ev_uint32 oldIndex, _in ev_uint32 newIndex );					
-					EarthView::World::Spatial::Atlas::ILayer* getLayer( _in ev_uint32 index ) const;
-					bool    isExist(EarthView::World::Spatial::Atlas::ILayer* pLayer);
-					ev_int32 getLayerCount() const;
-				private:
-					ev_vector <EarthView::World::Spatial::Atlas::ILayer*> m_vLayers;
-				};
-				class LayerRenderOrderController;
-				class IGroupLayer;
 				class EV_INTERFACE_DLL IMap : public EarthView::World::Core::CAllocatedObject
 				{
 				public:
@@ -177,6 +156,7 @@ ev_private:
 
 					virtual ev_bool isActive() const; // added by wangwei in 2013-04-22
 					virtual ev_void setActive(ev_bool isActive); // added by wangwei in 2013-04-22
+
 					/// <summary>
 					/// 获取地图名称
 					/// </summary>
@@ -338,21 +318,24 @@ ev_private:
 					/// </summary>
 					/// <param name="layer">要追加的图层</param>
 					/// <returns></returns>
-					virtual ev_void addLayer( _in EarthView::World::Spatial::Atlas::ILayer *layer );
+					virtual ev_void addLayer( _in EarthView::World::Spatial::Atlas::ILayer *ref_layer );
 					///<summary>
 					///向图层组中添加一个图层
 					///</summary>
-					virtual ev_void addLayer( _in EarthView::World::Spatial::Atlas::IGroupLayer* parentlayer,
-															_in EarthView::World::Spatial::Atlas::ILayer* layer);
+					//virtual ev_void addLayer( _in EarthView::World::Spatial::Atlas::ILayer* parentlayer,
+					//										_in EarthView::World::Spatial::Atlas::ILayer* layer);
+					///<summary>
+					///更新图层改变后map的状态
+					///</summary>
+					virtual ev_void updateLayerChanged(EarthView::World::Spatial::Atlas::ILayer* pLayer, ev_bool isAdd = false);
 					/// <summary>
 					/// 插入一个图层到指定索引处
 					/// </summary>
 					/// <param name="index">索引</param>
 					/// <param name="layer">图层</param>
 					/// <returns></returns>
-					virtual ev_void insertLayer( _in ev_uint32 index, _in EarthView::World::Spatial::Atlas::ILayer * layer );
-					virtual ev_void insertLayer( _in EarthView::World::Spatial::Atlas::IGroupLayer* parentlayer, _in ev_uint32 index,
-						_in EarthView::World::Spatial::Atlas::ILayer* layer);
+					virtual ev_void insertLayer( _in ev_uint32 index, _in EarthView::World::Spatial::Atlas::ILayer * ref_layer );
+
 					/// <summary>
 					/// 移除指定索引的图层
 					/// </summary>
@@ -360,7 +343,10 @@ ev_private:
 					/// <returns></returns>
 					/// <memo>不删除内存</memo>
 					virtual ev_void removeLayer( _in ev_uint32 index );
-					virtual ev_void removeLayer( _in EarthView::World::Spatial::Atlas::IGroupLayer* parentlayer, _in ev_uint32 index );
+					///<summary>
+					///移除图层组中，指定索引的图层
+					///</summary>
+					//virtual ev_void removeLayer( _in EarthView::World::Spatial::Atlas::ILayer* pLayer, _in ev_uint32 index);
 					/// <summary>
 					/// 移除地图中的所有图层
 					/// </summary>
@@ -376,8 +362,7 @@ ev_private:
 					/// <param name="newIndex">目标索引</param>
 					/// <returns></returns>
 					virtual ev_void moveLayer( _in ev_uint32 oldIndex, _in ev_uint32 newIndex );
-					virtual ev_void moveLayer( _in EarthView::World::Spatial::Atlas::IGroupLayer* fromlayer, _in ev_uint32 oldIndex, 
-						_in EarthView::World::Spatial::Atlas::IGroupLayer* tolayer, _in ev_uint32 newIndex );
+
 					/// <summary>
 					/// 根据设定好的配置时行选择
 					/// </summary>
@@ -407,8 +392,7 @@ ev_private:
 					/// <param name="info">渲染进程的反馈信息</param>
 					/// <returns></returns>
 					virtual ev_void draw( _in EarthView::World::Spatial::Display::ISpatialDisplay *display, IRenderInformation *info );
-					virtual ev_void draw( _in EarthView::World::Spatial::Display::ISpatialDisplay *display, IRenderInformation *info,ev_bool& isBlank);
-					virtual ev_bool makeBaseMapping(EarthView::World::Spatial::Display::ISpatialDisplay* display);
+
 
 					/// <summary>
 					/// 获取地图对应的纸张布局
@@ -423,13 +407,6 @@ ev_private:
 					/// <param name=""></param>
 					/// <returns></returns>
 					virtual EarthView::World::Spatial::Carto::IPageLayout* createPageLayout();
-
-					/// <summary>
-					/// 获取渲染顺序控制器
-					/// </summary>
-					/// <param name=""></param>
-					/// <returns>渲染顺序控制器</returns>
-					virtual EarthView::World::Spatial::Atlas::LayerRenderOrderController* getLayerRenderOrderController() const;
 					///// <summary>
 					///// 获取比例尺对象
 					///// </summary>
@@ -461,7 +438,6 @@ ev_private:
 					virtual ev_void removeMapListner( _in EarthView::World::Spatial::Atlas::IMapListener* listener ){}
 					virtual ev_void registSpatialDisplay(EarthView::World::Spatial::Display::ISpatialDisplay* display);
 					virtual ev_void unRegistSpatialDisplay(EarthView::World::Spatial::Display::ISpatialDisplay* display);
-
 					/// <summary>
 					/// 创建地图的克隆体
 					/// </summary>

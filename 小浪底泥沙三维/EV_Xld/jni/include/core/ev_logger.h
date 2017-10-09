@@ -6,18 +6,12 @@
 #include "core/object.h"
 #include "core/config.h"
 
-
 ////// android 调试日志
 #ifdef EV_OS_ANDROID
 #include "android/log.h"
 #define  EV_ANDROID_GLOBE_LOG(info) __android_log_print(ANDROID_LOG_VERBOSE, "android_globe", info);
-#define  LOG_TAG    "ev_globe"
-#define  EV_ALOG_I(...)  __android_log_print(ANDROID_LOG_INFO,LOG_TAG,__VA_ARGS__)
-#define  EV_ALOG_e(...)  __android_log_print(ANDROID_LOG_ERROR,LOG_TAG,__VA_ARGS__)
 #else
 #define  EV_ANDROID_GLOBE_LOG(info) 
-#define  EV_ALOG_I(...)
-#define  EV_ALOG_e(...)
 #endif
 
 #ifdef EV_LOG_ENABLE  //////日志锁，定义在config.h文件中
@@ -25,8 +19,6 @@
 #include "core/logger_def.h"
 #include "core/multibytestring.h"
 #include <map>
-#include <vector>
-
 namespace EarthView
 {
     namespace World
@@ -43,31 +35,6 @@ namespace EarthView
 				{
 	
 				}
-			public:
-				 /*
-                * 函数功能： 新日志的输出函数，msg为输出信息内容，strFile为方法调用的代码文件，nLine为调用行数         
-                */
-				static ev_void Trace(const EVString& msg);
-				static ev_void Debug(const EVString& msg);
-				static ev_void Info(const EVString& msg);
-				static ev_void Warn(const EVString& msg);
-				static ev_void Error(const EVString& msg);
-				static ev_void Fatal(const EVString& msg);
-				
-				static ev_void Trace(const EVString& msg,const EVString &strFile, ev_uint32 nLine);
-				static ev_void Debug(const EVString& msg,const EVString &strFile, ev_uint32 nLine);
-				static ev_void Info(const EVString& msg,const EVString &strFile, ev_uint32 nLine);
-				static ev_void Warn(const EVString& msg,const EVString &strFile, ev_uint32 nLine);
-				static ev_void Error(const EVString& msg,const EVString &strFile, ev_uint32 nLine);
-				static ev_void Fatal(const EVString& msg,const EVString &strFile, ev_uint32 nLine);
-				
-			private:
-				static ev_void init();	
-				static ev_void beforeConfig(const EVString& filenaem);
-				static ev_void afterConfig(const EVString& filename);
-				static ev_bool mbHasInit;
-				static ev_bool mbIsDefaultCfg;
-				
             public:
                 /*
                 * 函数功能： 打开日志系统的日志调试信息
@@ -208,15 +175,6 @@ namespace EarthView
             };
 
 
-//新的日志宏，请大家使用下面6个宏来打印日志
-//FATAL > ERROR > WARN > INFO > DEBUG > TRACE
-#define EVLogTrace(msg) EarthView::World::Core::CLogger::Trace(msg,__FILE__, __LINE__);
-#define EVLogDebug(msg) EarthView::World::Core::CLogger::Debug(msg,__FILE__, __LINE__);
-#define EVLogInfo(msg)  EarthView::World::Core::CLogger::Info(msg,__FILE__, __LINE__);
-#define EVLogWarn(msg)  EarthView::World::Core::CLogger::Warn(msg,__FILE__, __LINE__);
-#define EVLogError(msg) EarthView::World::Core::CLogger::Error(msg,__FILE__, __LINE__);
-#define EVLogFatal(msg) EarthView::World::Core::CLogger::Fatal(msg,__FILE__, __LINE__);
-
             /**************************************日志宏定义**********************************/
 
             ///打开输出终端宏
@@ -247,7 +205,6 @@ namespace EarthView
 			EarthView::World::Core::CLogger  *ptInstance = EarthView::World::Core::CLogger::getInstance(loggerName);\
 			ptInstance->openSocketAppender(strHost, nPort, strServerName);\
 		}while(0)
-
 
 
             ///日志打印宏

@@ -4,7 +4,6 @@
 #include "graphic/graphic_config.h"
 #include "graphic/zip.h"
 #include <android/asset_manager.h>
-using namespace  EarthView::World::Core;
 namespace EarthView
 {
 	namespace World
@@ -21,12 +20,12 @@ namespace EarthView
 				virtual ~APKZipArchiveFactory() {}
 
 				/// @copydoc FactoryObj::getType
-				EVString getType() const;
+				String getType() const;
 
 				/// @copydoc FactoryObj::createInstance
-				CArchive *createInstance( const EVString& name)
+				CArchive *createInstance( const String& name)
 				{
-					EVString apkName = name;
+					String apkName = name;
 					if (apkName.size() > 0 && apkName[0] == '/')
 						apkName.erase(apkName.begin());
 

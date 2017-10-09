@@ -53,11 +53,6 @@ ev_private:
 				/// </summary>
 				/// <returns>无</returns>
 				ev_void stopRecord();
-				///<summary>
-				///是否正在录制
-				///<returns>无</return>
-				///</summary>
-				ev_bool isRecording();
 			private:
 				ev_int32 m_width;		//录制宽度
 				ev_int32 m_height;		//录制高度
@@ -86,9 +81,6 @@ ev_private:
 				AVCodecContext *m_pOutCodecCtx;
 				AVStream* video_st;
 				//AVPacket* m_OutPkt;
-
-				ev_void init();
-				ev_void release();
 
 				ev_bool initInputFile(const EarthView::World::Graphic::Rect& rectRegion);
 				ev_bool initOutputFile(const EVString& fileAVI);

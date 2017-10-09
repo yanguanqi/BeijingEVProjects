@@ -70,7 +70,7 @@ ev_private:
 					};
 					ev_list<CacheName> mCacheName;
 
-					//EV_MUTEX(mMutex)
+					EV_MUTEX(mMutex)
 				};
 
 				class EV_Spatial3DEngine_DLL BILStruct : public EarthView::World::Core::CAllocatedObject

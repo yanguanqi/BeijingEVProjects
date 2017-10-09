@@ -31,33 +31,6 @@ namespace EarthView
 				/// <returns></returns>
 				~CTileData();
 
-				CTileData(const CTileData& other)
-				{
-					mTileInfo = other.mTileInfo;
-					mDataStream = other.mDataStream;
-					mThemeStream = other.mThemeStream;
-
-					mLayerName = other.mLayerName;
-					mFileName = other.mFileName;
-					mStreamType = other.mStreamType;
-					mTileAttachments = other.mTileAttachments;
-					mDefective = other.mDefective;
-				}
-
-				CTileData& operator=(const CTileData& other)
-				{
-					mTileInfo = other.mTileInfo;
-					mDataStream = other.mDataStream;
-					mThemeStream = other.mThemeStream;
-
-					mLayerName = other.mLayerName;
-					mFileName = other.mFileName;
-					mStreamType = other.mStreamType;
-					mTileAttachments = other.mTileAttachments;
-					mDefective = other.mDefective;
-
-					return *this;
-				}
 				/// <summary>
                 /// 获取瓦片分块信息对象
                 /// </summary>

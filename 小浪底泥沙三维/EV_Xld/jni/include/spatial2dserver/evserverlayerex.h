@@ -115,29 +115,17 @@ namespace EarthView
 					/// <returns>xml要素</returns>
 
 					EarthView::World::Core::CXmlElement toXmlElement() const;
-
-					virtual ev_int32 baseMapFalg();// 0 不支持，1 支持但不可设置 2 支持可设置开关
-					virtual ev_bool getBaseMapActive();
-					virtual ev_void setBaseMapActive(ev_bool b);
-					ev_bool makeBaseMapping(EarthView::World::Spatial::Display::ISpatialDisplay* display,
-						EarthView::World::Spatial::Atlas::EVVectorLayerRendererType type);
-
-					ev_bool getNoBoundaryRoamActive();
-					ev_void setNoBoundaryRoamActive(ev_bool b);
 ev_private:
 					CEVServerLayerEx(_in EarthView::World::Core::CNameValuePairList* pList);
 				private:
-					ev_void iniBaseMapDrawTheme();
+				
 					EVString makeCacheName( const EVString& srcName );
 					ev_uint8 m_TransparentValue;
 
-					EarthView::World::Spatial::Display::CDrawServerLayerTheme* m_pBaseMapDrawTheme;
 					EarthView::World::Spatial::Theme::ITheme* m_pTheme;
 					EarthView::World::Spatial::Geometry::IEnvelope *mGeoExtent;
 					EVString mDatasetName;
 					EVString mDatasourceName;
-					ev_bool  mbBaseMapActive;
-					ev_bool  mbNoBoundaryRoamActive;
 				};
 
 				class EV_2DWMS_DLL CEVServerLayerExFactory

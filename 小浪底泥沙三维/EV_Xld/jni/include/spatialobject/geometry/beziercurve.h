@@ -7,19 +7,14 @@
 #include "curve.h"
 #include "linestring.h"
 
+EV_DECLARE_GEOMETRY_CLASS_PRIVATE(CBezierCurve);
 
+EV_DECLARE_GEOMETRY_CLASS_UTILITY(CGeometryHelper);
 
 namespace EarthView{
 	namespace World{
 		namespace Spatial{
 			namespace Geometry{
-				namespace Private{
-					class CBezierCurvePrivate;
-				}
-				namespace Utility{
-					class CGeometryHelper;
-
-				}
 				/// <summary>
 				/// 贝赛尔曲线类
 				/// </summary>

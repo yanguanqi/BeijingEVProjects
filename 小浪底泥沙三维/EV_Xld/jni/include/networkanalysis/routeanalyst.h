@@ -4,16 +4,7 @@
 #include "networkanalysis/config.h"
 #include "networkanalysis/networkanalyst.h"
 #include "networkanalysis/networkanalystlayer.h"
-#include "core/core_common.h"
-namespace EarthView{
-	namespace World{
-		namespace Spatial{
-		namespace Geometry{
-			class CGeometryCollection;
-		}
-		}
-	}
-}
+
 namespace EarthView{
 	namespace World{
 		namespace Spatial2D{
@@ -28,7 +19,6 @@ struct  ChangedEdge
 	ev_real64   newTLength;
 	ev_int32    inter_ID;
 };
-
 struct Inter
 {
     ev_int32    lastNum;
@@ -253,7 +243,6 @@ private:
 	ev_real64				m_totalCost;
 	ev_vector<ev_uint32>	m_skipStops;
 };
-
 /// <summary>
 /// 路径分析
 /// </summary>
@@ -290,18 +279,6 @@ public:
 	/// <returns>如果求解成功，则返回true；否则，返回false</returns>
 	ev_bool solve(const CRouteParamI &param, CRouteResult &result);
 	/// <summary>
-	/// 分析完后可返回停靠点在路径上对应的点
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns></returns>
-	const EarthView::World::Spatial::Geometry::CGeometryCollection* getMatchedPoints();
-	/// <summary>
-	/// 分析完后可返回停靠点对应路径上的ID
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns></returns>
-	EarthView::World::Core::IntVector getMatchedEdgeIDs();
-	/// <summary>
 	/// 设置路径分析时查找停靠点方法
 	/// </summary>
 	/// <param name="">查找停靠点方法枚举</param>
@@ -314,65 +291,13 @@ public:
 	/// <param name="FT">方向</param>
 	/// <returns>返回阻抗值</returns>
 	ev_real64 getImpedance(ev_uint32 edgeID,ev_bool FT);
-	ev_int32  getHierachy(ev_uint32 edgeID,ev_bool FT);
-	/// <summary>
-	/// 设置成本属性
-	/// </summary>
-	/// <param name="name">成本属性名称</param>
-	/// <returns></returns>
-	ev_void	setCostAttribute(const EVString &name);
-	/// <summary>
-	///获取成本属性
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns>返回成本属性</returns>
-	EVString	getCurrentCostAttribute()const;
-	/// <summary>
-	/// 设置分析是否考虑等级属性
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns></returns>
-	ev_void	setUsingHierachy(ev_bool b);
-	/// <summary>
-	///获取分析是否考虑等级属性
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns></returns>
-	ev_bool	getUsingHierachy()const;
-	/// <summary>
-	///获取最高等级
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns></returns>
-	ev_int32 getMaxHierachy();
-	/// <summary>
-	///获取最低等级
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns></returns>
-	ev_int32 getMinHierachy();
 private:
-	ev_real64  distanceBetweenTwoPoints(EarthView::World::Spatial::Geometry::CPoint pt1, EarthView::World::Spatial::Geometry::CPoint pt2);
-	ev_real64  pointToSegDist(double x, double y, double x1, double y1, double x2, double y2);
-	/// <summary>
-	/// 获取某位置点在线段上的垂足（垂足在线段上）
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns>垂足点ID</returns>
-	ev_int32  findPedal(const EarthView::World::Spatial::Geometry::CPoint &location);
-	/// <summary>
-	/// 获取某位置点在线段上的垂足（垂足在线段延长线上，垂足取线段上离位置点最近的点）
-	/// </summary>
-	/// <param name=""></param>
-	/// <returns>垂足点ID</returns>
-	ev_int32  findPedal2(const EarthView::World::Spatial::Geometry::CPoint &location);
-	/// <summary>
-	/// 修改网络邻接表
-	/// </summary>
-	/// <param name="inter">新垂足，即停靠点在网络边上的垂足</param>
-	/// <param name="inter">edgeID，网络边的ID</param>
-	/// <returns></returns>
-	void  changeAdjacentTable(const EarthView::World::Spatial::Geometry::CPoint &inter, ev_int32 edgeID);
+	ev_real64          distanceBetweenTwoPoints(EarthView::World::Spatial::Geometry::CPoint pt1,
+		                                        EarthView::World::Spatial::Geometry::CPoint pt2);
+	ev_real64          pointToSegDist(double x, double y, double x1, double y1, double x2, double y2);
+	ev_int32	       findPedal(const EarthView::World::Spatial::Geometry::CPoint &location);
+	ev_int32	       findPedal2(const EarthView::World::Spatial::Geometry::CPoint &location);
+	void	           changeAdjacentTable(const EarthView::World::Spatial::Geometry::CPoint &inter, ev_int32 edgeID);
 ev_private:
 	CRouteAnalyst(EarthView::World::Core::CNameValuePairList *pList);
 private:
@@ -381,13 +306,8 @@ private:
 	ChangedEdge                                                   m_changedEdge;
 	ev_map<ev_int32,Inter>                                        m_Inter;
 	ev_vector<ChangedEdge>                                        m_C;
-	EarthView::World::Spatial::Geometry::CGeometryCollection*     mpMatchedPoints;
-	EarthView::World::Core::IntVector                             mvMatchEdgeIDs;
 	EVNAAnalystMethod   m_nMethod;
-	ev_int32			m_FieldIdx;
-	ev_int32            m_HierachyIndex;
-	ev_bool             m_bHasHierachyAttri;
-	ev_bool             m_bUsingHierachy;
+	
 };
 
 }}}} // End of Namespace

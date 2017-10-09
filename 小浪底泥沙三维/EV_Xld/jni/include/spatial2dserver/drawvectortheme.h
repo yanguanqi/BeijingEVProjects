@@ -40,19 +40,8 @@ namespace EarthView{
 					virtual ev_bool draw( EVString datasetName, EVString datasourceName,
 						EarthView::World::Spatial::Geometry::IEnvelope* pEnv,
 						EarthView::World::Spatial::Geometry::ISpatialReference* pSRS);
-					virtual ev_bool makeMapping(EarthView::World::Spatial::GeoDataset::IDataset* pDataset,
-						EarthView::World::Spatial::Display::ISpatialDisplay* display,
-						EarthView::World::Spatial::Atlas::EVVectorLayerRendererType type,
-						EarthView::World::Spatial::Theme::ITheme* ref_pTheme);
-					virtual ev_bool makeMapping(EVString datasetName, EVString datasourceName,
-						EarthView::World::Spatial::Geometry::IEnvelope* pEnv,
-						EarthView::World::Spatial::Geometry::ISpatialReference* pSRS,
-						EarthView::World::Spatial::Display::ISpatialDisplay* display,
-						EarthView::World::Spatial::Atlas::EVVectorLayerRendererType type,
-						EarthView::World::Spatial::Theme::ITheme* ref_pTheme);
 
 					virtual ev_void drawTile( EarthView::World::Core::CWorkQueue::RequestPara* req );
-					virtual ev_void drawTile(EarthView::World::Spatial::Display::ISpatialDisplay* pDisplay, EarthView::World::Core::CWorkQueue::RequestPara* req, EarthView::World::Spatial::Theme::ITheme* pTheme, EVString strCacheName, EarthView::World::Spatial::EVTileModeType modeType,ev_bool bIsImage);
 				private:
 					EVString m_CacheName;
 					EVString m_Filter;
@@ -72,7 +61,6 @@ namespace EarthView{
 					EarthView::World::Core::MemoryDataStreamPtr getSymbolStream();
 					EVString makeCacheName( const EVString& srcName );
 					ev_bool equalSymbolStream(EarthView::World::Core::MemoryDataStreamPtr stream);
-					ev_bool equalSymbolStream(EarthView::World::Core::MemoryDataStreamPtr stream, EarthView::World::Spatial::Theme::ITheme *pTheme);
 					ev_bool getParentTileStream(ev_int32 level,ev_int32 row,ev_int32 col,EarthView::World::Spatial::GeoDataset::IDataset * dataset, EarthView::World::Core::MemoryDataStreamPtr & result);
 					ev_bool getTile( ev_int32 level,ev_int32 row,ev_int32 col,EarthView::World::Spatial::GeoDataset::IDataset * dataset,EarthView::World::Core::MemoryDataStreamPtr& result);
 					EarthView::World::Core::MemoryDataStreamPtr clipParentTile( EarthView::World::Core::MemoryDataStreamPtr& parentData,ev_uint32 x,ev_uint32 y);

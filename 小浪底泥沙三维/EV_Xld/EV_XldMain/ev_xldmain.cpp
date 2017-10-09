@@ -7,9 +7,14 @@
 #include <QtGui\QTreeView>
 #include <QtGui\QStandardItem>
 #include "QStandardItemModel"
+#include "QTextCodec"
 EV_XldMain::EV_XldMain(QWidget *parent, Qt::WFlags flags)
 	: QMainWindow(parent, flags)
 {
+	QTextCodec *codec = QTextCodec::codecForName("system");
+	QTextCodec::setCodecForLocale(codec);
+	QTextCodec::setCodecForCStrings(codec);
+	QTextCodec::setCodecForTr(codec);
 	ui.setupUi(this);
 	
 	ui.actionReadGrd->setCheckable(true);
@@ -28,6 +33,8 @@ EV_XldMain::EV_XldMain(QWidget *parent, Qt::WFlags flags)
 	connect(ui.treeView, SIGNAL(clicked(QModelIndex)), this, SLOT(treeViewSelected(QModelIndex)));
 	connect(ui.treeView, SIGNAL(doubleClicked(const QModelIndex)), this, SLOT());
 	connect(ui.treeWidget, SIGNAL(itemClicked(QTreeWidgetItem *item, int column)), this, SLOT(treeViewSelected(QTreeWidgetItem *item, int column)));
+	connect(ui.actionDrawRect, SIGNAL(triggered()), this, SLOT(DrawRect()));
+	connect(ui.actionDrawPolyline, SIGNAL(triggered()), this, SLOT(DrawPolyline()));
 	currrentName = "";
 	model = NULL;
 }
@@ -48,7 +55,7 @@ void EV_XldMain::GrdToLOD()
 {
 	EVString s = currrentName.toStdString().c_str();
 	EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->SetTerrainVisible(s, ui.checkBox->isChecked());
-	
+
 }
 void EV_XldMain::GrdToRenderTerrain()
 {
@@ -66,7 +73,7 @@ void EV_XldMain::SliderValueChanged(int value)
 void EV_XldMain::GrdVisible(int g)
 {
 	EVString s = currrentName.toStdString().c_str();
-	if (g == Qt::Checked) 
+	if (g == Qt::Checked)
 	{
 		EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->SetTerrainVisible(s, ui.checkBox->isChecked());
 	}
@@ -74,11 +81,19 @@ void EV_XldMain::GrdVisible(int g)
 	{
 		EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->SetTerrainVisible(s, ui.checkBox->isChecked());
 	}
-	else 
+	else
 	{
 		EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->SetTerrainVisible(s, ui.checkBox->isChecked());
 	}
 	
+}
+void EV_XldMain::DrawRect()
+{
+	EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->DrawRectBounds();
+}
+void EV_XldMain::DrawPolyline()
+{
+	EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->DrawPolylineBounds();
 }
 void EV_XldMain::ReadGrd()
 {

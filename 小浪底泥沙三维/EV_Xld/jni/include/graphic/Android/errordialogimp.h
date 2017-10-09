@@ -1,7 +1,6 @@
 ﻿#ifndef __AndroidErrorDialog_H__
 #define __AndroidErrorDialog_H__
 #include "prerequisites.h"
-using namespace  EarthView::World::Core;
 namespace EarthView
 {
     namespace World
@@ -22,7 +21,7 @@ namespace EarthView
                 @param
                 	logName Optional name of the log to display in the detail pane.
                 */
-                void display(const EVString &errorMessage, EVString logName = "");
+                void display(const String &errorMessage, String logName = "");
             };
         }
     }

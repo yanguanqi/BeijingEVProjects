@@ -9,13 +9,8 @@
 #include "spatialdatabase/fields.h"
 #include "spatialdatabase/queryfilter.h"
 #include "download/featurevector.h"
-#include "download/osgbserviceconnection.h"
-#include "download/streetviewserviceconnection.h"
-#include "spatialobject/geometry/envelope.h"
-//#include "spatialserverclient/evspatialserver.h"
 using namespace EarthView::World::Spatial::GeoDataset;
 using namespace EarthView::World::Spatial::Download;
-//using namespace EarthView::World::Spatial;
 
 namespace EarthView
 {
@@ -23,10 +18,6 @@ namespace EarthView
 	{
 		namespace Spatial
 		{
-			namespace Geometry
-			{
-				class CEnvelope;
-			}
 			class CEVSpatialServer;
 
 			class CWMTSServerInfo;
@@ -56,7 +47,7 @@ namespace EarthView
 				/// <param name="gettime">true表示获取对应瓦片的时间信息</param>
 				/// <param name="tileInfo">查询结果</param>
                 /// <returns>ok返回0，其他值均为错误</returns>
-				virtual ev_int32 getTile(_in const EVString& style,_in const EVString& format,_in ev_int32 level,_in ev_uint32 row ,_in ev_uint32 col,
+				ev_int32 getTile(_in const EVString& style,_in const EVString& format,_in ev_int32 level,_in ev_uint32 row ,_in ev_uint32 col,
 					_in ev_bool getoriginformat,_in ev_bool gettime,_out EarthView::World::Spatial::CEVTileInfo& tileInfo);
 
 				/// <summary>
@@ -68,7 +59,7 @@ namespace EarthView
 				/// <param name="fieldname">字段名</param>
 				/// <param name="serverresult">查询结果</param>
                 /// <returns>ok返回0，其他值均为错误</returns>
-				virtual ev_int32 getTileProperty(_in ev_int32 level,_in ev_uint32 row ,_in ev_uint32 col,
+				ev_int32 getTileProperty(_in ev_int32 level,_in ev_uint32 row ,_in ev_uint32 col,
 					_in const EVString& fieldname,_out EarthView::World::Spatial::CMemoryStreamResult& serverresult);
 
 				/// <summary>
@@ -82,27 +73,27 @@ namespace EarthView
 				/// <param name="infoformat">返回数据格式</param>
 				/// <param name="serverresult">查询结果</param>
                 /// <returns>ok返回0，其他值均为错误</returns>
-				virtual ev_int32 getFeatureInfo(_in ev_int32 level,_in ev_uint32 tilerow,_in ev_uint32 tilecol,
+				ev_int32 getFeatureInfo(_in ev_int32 level,_in ev_uint32 tilerow,_in ev_uint32 tilecol,
 					_in ev_int32 x,_in ev_int32 y,_in const EVString& infoformat,_out EarthView::World::Spatial::CMemoryStreamResult& serverresult);
 
 				/// <summary>
                 /// 获取OGC元数据对象
                 /// </summary>
                 /// <returns>OGC格式的源数据对象指针</returns>
-				virtual const EarthView::World::Spatial::CWMTSServerInfo* getOGCWMTSCapabilitiesRef();
+				const EarthView::World::Spatial::CWMTSServerInfo* getOGCWMTSCapabilitiesRef();
 
 				/// <summary>
                 /// 获取xml格式的EarthView元数据
                 /// </summary>
 				/// <param name="value">查询结果</param>
                 /// <returns>ok返回0，其他值均为错误</returns>
-				virtual ev_int32 getEVWMTSCapabilities(_inout EVString& value);
+				ev_int32 getEVWMTSCapabilities(_inout EVString& value);
 
 				/// <summary>
                 /// 获取EarthView元数据对象
                 /// </summary>
                 /// <returns>元数据对象指针</returns>
-				virtual const EarthView::World::Spatial::CEVWMTSLayerInfo* getLayerInfoRef()const;
+				const EarthView::World::Spatial::CEVWMTSLayerInfo* getLayerInfoRef()const;
 				
 				/// <summary>
                 /// 获取更新时间
@@ -114,7 +105,7 @@ namespace EarthView
                 /// 获取缓存数据类型
                 /// </summary>
                 /// <returns>vector/image/dem</returns>
-				virtual EarthView::World::Spatial::EVSSCCacheDataType getCacheDataType();
+				EarthView::World::Spatial::EVSSCCacheDataType getCacheDataType();
 			ev_private:
 				CEVWMTSDataset(_in EarthView::World::Core::CNameValuePairList* pList);
 			protected:
@@ -420,13 +411,13 @@ namespace EarthView
 				/// <param name="col">列</param>
 				/// <param name="serverresult">查询结果</param>
                 /// <returns>ok返回0，其他值均为错误</returns>
-				virtual ev_int32 getDEMFile(_in ev_int32 level,_in ev_int32 row,_in ev_int32 col,_out EarthView::World::Spatial::CMemoryStreamResult& serverresult);
+				ev_int32 getDEMFile(_in ev_int32 level,_in ev_int32 row,_in ev_int32 col,_out EarthView::World::Spatial::CMemoryStreamResult& serverresult);
 
 				/// <summary>
                 /// 获取元数据信息
                 /// </summary>
                 /// <returns>元数据对象指针</returns>
-				virtual const EarthView::World::Spatial::CEVDEMLayerInfo* getLayerInfoRef() const;
+				const EarthView::World::Spatial::CEVDEMLayerInfo* getLayerInfoRef() const;
 				/// <summary>
                 /// 更新时间
                 /// </summary>
@@ -434,11 +425,10 @@ namespace EarthView
 				virtual EVString getUpdateTime() const;
 			ev_private:
 				CEVDEMDataset(_in EarthView::World::Core::CNameValuePairList* pList);
-				EarthView::World::Spatial::CEVDEMLayerInfo* mpLayerInfo;
 			protected:
 				CEVDEMDataset(_in EarthView::World::Spatial::GeoDataset::EVDatasetType type,_in EarthView::World::Spatial::GeoDataset::IDataSource* ref_source,_in const EVString& name);
 
-				
+				EarthView::World::Spatial::CEVDEMLayerInfo* mpLayerInfo;
 
 				friend class CEVSpatialServer;
 			};
@@ -719,72 +709,6 @@ ev_private:
 				CWebMeshXGDataset(_in EarthView::World::Core::CNameValuePairList* pList);
 			protected:
 				CWebMeshXGDataset(_in EarthView::World::Spatial::GeoDataset::EVDatasetType type,_in EarthView::World::Spatial::GeoDataset::IDataSource* ref_source,_in const EVString& name);
-				//CWebMeshXGDataset(_in const EVString& name,_in EarthView::World::Spatial::GeoDataset::IDataSource* ref_source);
-
-
-			private:
-				EarthView::World::Spatial::CEVOBQDataMetaInfo* mpDataMetaInfo;
-				friend class CEVSpatialServer;
-			};
-
-			class EV_SPATIALSERVERCLIENT_DLL CWebLasXGDataset
-				:public EarthView::World::Spatial::IWebOBQDataset
-			{
-			public:
-				/// <summary>
-				/// 析构函数
-				/// </summary>
-				/// <returns></returns>
-				~CWebLasXGDataset();
-
-				/// <summary>
-				/// 读取初始化信息
-				/// </summary>
-				/// <param name=""></param>
-				/// <returns>失败返回-1</returns>
-				virtual ev_int32 readInitData(_out EarthView::World::Core::MemoryDataStreamPtr& streamPackage);
-
-				/// <summary>
-				/// 读取瓦块流信息
-				/// </summary>
-				/// <param name=""></param>
-				/// <returns>失败返回-1</returns>
-				virtual ev_int32 readTileData(_in const EVString& url
-					, _out EarthView::World::Core::MemoryDataStreamPtr& streamPackage);
-
-				/// <summary>
-				/// 读取DEM信息
-				/// </summary>
-				/// <param name=""></param>
-				/// <returns>失败返回-1</returns>
-				virtual ev_int32 readDem(_in const EVString& url
-					, _out EarthView::World::Core::MemoryDataStreamPtr& streamPackage);
-
-				/// <summary>
-				/// 读取WFS元数据
-				/// </summary>
-				/// <param name=""></param>
-				/// <returns>失败返回-1</returns>
-				virtual ev_int32 getWFSMetaData(_in const EVString& servicename,_out CDataMetaInfo& metadata);
-
-				/// <summary>
-				/// 读取字段数据
-				/// </summary>
-				/// <param name=""></param>
-				/// <returns>失败返回-1</returns>
-				virtual ev_int32 getFields(_in const EVString& servicename,_out CFields& fields);
-
-				/// <summary>
-				/// 读取要素数据
-				/// </summary>
-				/// <param name=""></param>
-				/// <returns>失败返回-1</returns>
-				virtual ev_int32 getFeatures(_in ev_int32 type, _out EarthView::World::Spatial::Download::EVLasFeatureVector& featurevector);
-
-ev_private:
-				CWebLasXGDataset(_in EarthView::World::Core::CNameValuePairList* pList);
-			protected:
-				CWebLasXGDataset(_in EarthView::World::Spatial::GeoDataset::EVDatasetType type,_in EarthView::World::Spatial::GeoDataset::IDataSource* ref_source,_in const EVString& name);
 				//CWebMeshXGDataset(_in const EVString& name,_in EarthView::World::Spatial::GeoDataset::IDataSource* ref_source);
 
 
@@ -1369,165 +1293,6 @@ ev_private:
 				friend class CEVSpatialServer;
 
 			};
-
-
-		
-
-
-		
-			class EV_SPATIALSERVERCLIENT_DLL IStreetViewDataset
-				:public EarthView::World::Spatial::CWebDataset 
-			{
-
-			public:
-				/// <summary>
-				/// 析构函数
-				/// </summary>
-				/// <returns></returns>
-				
-				virtual ~IStreetViewDataset()
-				{
-
-				}
-
-				virtual CStreetViewMetaDataInfo* getMetaDataInfo()
-				{
-					return mpMetaDataInfo;
-				}
-				virtual ev_bool getStreetPoints(_in const EVString& mapCode,_out EarthView::World::Spatial::Download::CStreetPointList& streetPoints)
-				{
-					return false;
-				}
-				virtual EarthView::World::Core::MemoryDataStreamPtr getPicture(ev_int32 ID, ev_int32 level, ev_int32 row, ev_int32 col)
-				{
-					return EarthView::World::Core::MemoryDataStreamPtr();
-				}
-				virtual EVString getGUID()
-				{
-					return mGUID;
-				}
-
-			protected:
-				IStreetViewDataset(_in EarthView::World::Spatial::GeoDataset::EVDatasetType type,_in EarthView::World::Spatial::GeoDataset::IDataSource* ref_source,_in const EVString& name)
-					:CWebDataset(type,ref_source,name)
-				{
-
-				}
-				EVString mGUID;
-ev_private:
-				IStreetViewDataset(_in EarthView::World::Core::CNameValuePairList* pList)
-					:CWebDataset(pList)
-				{
-					mpMetaDataInfo = NULL;
-
-				}
-				CStreetViewMetaDataInfo* mpMetaDataInfo;
-
-				friend class CEVSpatialServer;
-			};
-
-
-			
-			/// <summary>
-			/// EarthView 街景数据集类
-			/// </summary>
-			class EV_SPATIALSERVERCLIENT_DLL CWebStreetViewDataset
-				:public EarthView::World::Spatial::IStreetViewDataset 
-			{
-
-			public:
-				/// <summary>
-				/// 析构函数
-				/// </summary>
-				/// <returns></returns>
-				virtual ~CWebStreetViewDataset();
-				virtual CStreetViewMetaDataInfo* getMetaDataInfo();
-				ev_void parseEnvelope(EVString strenvelope, EarthView::World::Spatial::Geometry::CEnvelope* envelope);
-				virtual ev_bool readinitdata(_out EarthView::World::Core::MemoryDataStreamPtr& mPtr);
-				virtual ev_bool getStreetPoints(_in const EVString& mapCode,_out EarthView::World::Spatial::Download::CStreetPointList& streetPoints);
-			    virtual EarthView::World::Core::MemoryDataStreamPtr getPicture(ev_int32 ID, ev_int32 level, ev_int32 row, ev_int32 col);
-			protected:
-				CWebStreetViewDataset(_in EarthView::World::Spatial::GeoDataset::EVDatasetType type,_in EarthView::World::Spatial::GeoDataset::IDataSource* ref_source,_in const EVString& name);
-
-ev_private:
-				CWebStreetViewDataset(_in EarthView::World::Core::CNameValuePairList* pList);
-
-				friend class CEVSpatialServer;
-			};
-
-
-			
-
-			/// <summary>
-			/// OSGB倾斜摄影数据（同时还需要兼容地图通的服务）
-			/// </summary>
-			class EV_SPATIALSERVERCLIENT_DLL IOSGBDataset:public EarthView::World::Spatial::CWebDataset 				
-			{
-
-			public:
-				/// <summary>
-				/// 析构函数
-				/// </summary>
-				/// <returns></returns>
-				virtual ~IOSGBDataset()
-				{
-
-				}
-
-				virtual EVString getGUID()
-				{
-					return mGUID;
-				}
-
-				virtual ev_bool getMetaData(_out EarthView::World::Spatial::Download::COSGBLayerMetaData& metadata)
-				{
-					return false;
-				}
-
-				virtual  ev_bool getOSGBData(const EVString& fileName,_out EarthView::World::Core::MemoryDataStreamPtr& osgbData)
-				{
-					return false;
-				}
-
-
-			protected:
-				IOSGBDataset(_in EarthView::World::Spatial::GeoDataset::EVDatasetType type,_in EarthView::World::Spatial::GeoDataset::IDataSource* ref_source,_in const EVString& name);
-				
-
-ev_private:
-				IOSGBDataset(_in EarthView::World::Core::CNameValuePairList* pList);
-
-
-
-				friend class CEVSpatialServer;
-			protected:
-				EVString mGUID;
-			}; 
-			class EV_SPATIALSERVERCLIENT_DLL CWebOSGBDataset
-				:public EarthView::World::Spatial::IOSGBDataset 
-			{
-
-			public:
-				/// <summary>
-				/// 析构函数
-				/// </summary>
-				/// <returns></returns>
-				virtual ~CWebOSGBDataset();
-
-
-				virtual ev_bool getMetaData(_out EarthView::World::Spatial::Download::COSGBLayerMetaData& metadata);
-		
-
-				virtual  ev_bool getOSGBData(const EVString& fileName,_out EarthView::World::Core::MemoryDataStreamPtr& osgbData);		
-
-			protected:
-				CWebOSGBDataset(_in EarthView::World::Spatial::GeoDataset::EVDatasetType type,_in EarthView::World::Spatial::GeoDataset::IDataSource* ref_source,_in const EVString& name);
-
-ev_private:
-				CWebOSGBDataset(_in EarthView::World::Core::CNameValuePairList* pList);
-
-				friend class CEVSpatialServer;
-			}; 
 		}
 	}
 }

@@ -58,7 +58,9 @@ namespace EarthView{
 					/// </summary>
 					/// <param name=""></param>
 					/// <returns></returns>
+					
 					CGeometryRenderer();
+
 					/// <summary>
 					/// 默认析构函数
 					/// </summary>
@@ -90,14 +92,8 @@ namespace EarthView{
 					/// </summary>
 					/// <param name="pGeometry">几何图形</param>
 					/// <returns></returns>
+					
 					ev_void drawGeometry(const EarthView::World::Spatial::Geometry::IGeometry* pGeometry);
-					/// <summary>
-					/// 渲染几何图形
-					/// </summary>
-					/// <param name="pGeometry">几何图形</param>
-					/// <param name="rotation">旋转角度，对点符号有效</param>
-					/// <returns></returns>
-					ev_void drawGeometry(const EarthView::World::Spatial::Geometry::IGeometry* pGeometry, ev_real64 rotation);
 
 					/// <summary>
 					/// 渲染可编辑的几何图形
@@ -108,8 +104,7 @@ namespace EarthView{
 					 
 					ev_void drawEditingGeometry( const EarthView::World::Spatial::Geometry::IGeometry* pGeometry,
 						const EarthView::World::Spatial::Display::ISymbol *pVertexSymbol);
-					ev_void drawEditingGeometry( const EarthView::World::Spatial::Geometry::IGeometry* pGeometry,
-						const EarthView::World::Spatial::Display::ISymbol *pVertexSymbol,ev_real64 rotation);
+
 					/// <summary>
 					/// 渲染几何中心点
 					/// </summary>
@@ -126,6 +121,7 @@ namespace EarthView{
 					/// <returns></returns>
 					 
 					ev_void drawEnvelope(EarthView::World::Spatial::Geometry::IEnvelope* pEnvelope, EarthView::World::Spatial::Display::ISymbol* pSymbol);
+
 				ev_private:
 
 					CGeometryRenderer( EarthView::World::Core::CNameValuePairList *pList );
@@ -134,7 +130,6 @@ namespace EarthView{
 				ev_private:
 
 					ev_void draw( const EarthView::World::Spatial::Geometry::IGeometry* pGeometry, const EarthView::World::Spatial::Display::ISymbol *pVertexSymbol);
-					ev_void draw( const EarthView::World::Spatial::Geometry::IGeometry* pGeometry, const EarthView::World::Spatial::Display::ISymbol *pVertexSymbol,ev_real64 rotation);
 					ev_void drawVertex( _in const EarthView::World::Spatial::Geometry::IGeometry* curve, _in const EarthView::World::Spatial::Display::ISymbol* pVerSym );
 					ev_bool checkPolygon(const EarthView::World::Spatial::Geometry::CPolygon *pPolygon,_out ev_uint32& pointNum);
 					

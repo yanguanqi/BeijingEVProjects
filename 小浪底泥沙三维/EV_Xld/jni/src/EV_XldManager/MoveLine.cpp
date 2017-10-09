@@ -14,6 +14,12 @@ EarthView::Xld::RenderLib::CMoveLine::CMoveLine(const EVString & name, EarthView
 	this->mpGlobeControl = globeControl;
 	this->mpManualObject = new CManualObject(name);
 	this->mLineType = style;
+	this->mpSceneNode = NULL;
+	this->mGeoFirstPoint = EarthView::World::Spatial::Math::CVector3::ZERO;
+	this->mGeoCenterPoint = EarthView::World::Spatial::Math::CVector3::ZERO;
+	this->mGeoCurrentPoint = EarthView::World::Spatial::Math::CVector3::ZERO;
+	this->mPosition = EarthView::World::Spatial::Math::CVector3::ZERO;
+	this->mLineColor = EarthView::World::Graphic::CColourValue::Blue;
 }
 
 EarthView::Xld::RenderLib::CMoveLine::~CMoveLine()
@@ -45,7 +51,7 @@ void EarthView::Xld::RenderLib::CMoveLine::SetCenter(CVector3& point)
 }
 void EarthView::Xld::RenderLib::CMoveLine::ChangeCurrent(EarthView::World::Spatial::Math::CVector3 & currentPoint)
 {
-	if (currentPoint.x - this->mGeoCenterPoint.x > DBL_MIN && currentPoint.y - this->mGeoCenterPoint.y > DBL_MIN)
+	//if (currentPoint.x - this->mGeoCenterPoint.x > DBL_MIN && currentPoint.y - this->mGeoCenterPoint.y > DBL_MIN)
 	{
 		mGeoCurrentPoint.x = currentPoint.x;
 		mGeoCurrentPoint.y = currentPoint.y;
@@ -62,24 +68,24 @@ void EarthView::Xld::RenderLib::CMoveLine::CreateMesh()
 	this->mpManualObject->setUseIdentityProjection(false);
 	this->mpManualObject->setUseIdentityView(false);
 
-	if (this->mLineType == CMoveLineType::StraightLine)
+	if (this->mLineType == StraightLine)
 	{
 		CVector3 vectors[] = { CVector3::ZERO,CVector3::ZERO };
 		vectors[0] = CVector3(0, 0, 0);
 		vectors[1] = EarthView::World::Spatial::Math::CMathUtility::sphericalToCartesian(this->mGeoCurrentPoint.y, this->mGeoCurrentPoint.x, this->mGeoCurrentPoint.z + EarthView::World::Spatial::Math::CMath::EARTH_RADIUS) - this->mPosition;
-		this->mpManualObject->begin("", CRenderOperation::OT_LINE_STRIP);
-		for (int i = 0; i < vectors->length(); i++)
+		this->mpManualObject->begin("MoveLineColor", CRenderOperation::OT_LINE_STRIP);
+		for (int i = 0; i < sizeof(vectors) / sizeof(CVector3); i++)
 		{
 			this->mpManualObject->position(vectors[i].x, vectors[i].y, vectors[i].z);
 			this->mpManualObject->colour(this->mLineColor);
 		}
 		this->mpManualObject->end();
 	}
-	else if (this->mLineType == CMoveLineType::Circle) {
+	else if (this->mLineType == Circle) {
 		double leng = EarthView::World::Spatial3D::Analysis::CMathUtility3D::lineProjectMeasure(this->mGeoCenterPoint, this->mGeoCurrentPoint);
 		EarthView::World::Spatial::Math::VertexList vectors;
 		this->mMathUtility3D.splitCircle2WorldPosition(this->mGeoCenterPoint.y, this->mGeoCenterPoint.x, leng, 60, vectors);
-		this->mpManualObject->begin("", CRenderOperation::OT_LINE_STRIP);
+		this->mpManualObject->begin("MoveLineColor", CRenderOperation::OT_LINE_STRIP);
 		for (int i = 0; i < vectors.size(); i++)
 		{
 			vectors[i] -= this->mPosition;
@@ -88,7 +94,7 @@ void EarthView::Xld::RenderLib::CMoveLine::CreateMesh()
 		}
 		this->mpManualObject->end();
 	}
-	else if (this->mLineType == CMoveLineType::Rectangle)
+	else if (this->mLineType == Rectangle)
 	{
 		CVector3 rect[4];
 		CVector3 min(DBL_MAX, DBL_MAX, DBL_MAX);
@@ -142,9 +148,9 @@ void EarthView::Xld::RenderLib::CMoveLine::CreateMesh()
 		terrain = this->mpGlobeControl->getSceneManager()->getHeightAt(rect[3].y, rect[3].x, 1000);
 		vectors[3] = CMathUtility::sphericalToCartesian(rect[3].y, rect[3].x, EarthView::World::Spatial::Math::CMath::EARTH_RADIUS + terrain);
 		//设置顶点参数  
-		this->mpManualObject->begin("", CRenderOperation::OT_LINE_STRIP);
+		this->mpManualObject->begin("MoveLineColor", CRenderOperation::OT_LINE_STRIP);
 
-		for (int i = 0; i < vectors->length(); i++)
+		for (int i = 0; i < sizeof(vectors) / sizeof(CVector3); i++)
 		{
 			vectors[i] -= this->mPosition;
 			this->mpManualObject->position(vectors[i].x, vectors[i].y, vectors[i].z);
@@ -152,18 +158,17 @@ void EarthView::Xld::RenderLib::CMoveLine::CreateMesh()
 			this->mpManualObject->colour(this->mLineColor);
 		}
 		this->mpManualObject->end();
-
 	}
-	else if (this->mLineType == CMoveLineType::Polygon)
+	else if (this->mLineType == Polygon)
 	{
 		CVector3 vectors[3];
 		vectors[0] = CMathUtility::sphericalToCartesian(mGeoCenterPoint.y, mGeoCenterPoint.x, mGeoCenterPoint.z + EarthView::World::Spatial::Math::CMath::EARTH_RADIUS);
 		vectors[1] = CMathUtility::sphericalToCartesian(mGeoCurrentPoint.y, mGeoCurrentPoint.x, mGeoCurrentPoint.z + EarthView::World::Spatial::Math::CMath::EARTH_RADIUS);
 		vectors[2] = CMathUtility::sphericalToCartesian(mGeoFirstPoint.y, mGeoFirstPoint.x, mGeoFirstPoint.z + EarthView::World::Spatial::Math::CMath::EARTH_RADIUS);
 		//设置顶点参数  
-		this->mpManualObject->begin("", CRenderOperation::OT_LINE_STRIP);
+		this->mpManualObject->begin("MoveLineColor", CRenderOperation::OT_LINE_STRIP);
 
-		for (int i = 0; i < vectors->length(); i++)
+		for (int i = 0; i < sizeof(vectors) / sizeof(CVector3); i++)
 		{
 			vectors[i] -= this->mPosition;
 			this->mpManualObject->position(vectors[i].x, vectors[i].y, vectors[i].z);
@@ -171,7 +176,7 @@ void EarthView::Xld::RenderLib::CMoveLine::CreateMesh()
 		}
 		this->mpManualObject->end();
 	}
-	this->mpManualObject->setMaterialName(0, "PositionColor");
+	//this->mpManualObject->setMaterialName(0, "MoveLineColor");
 	if (!this->mpSceneNode)
 	{
 		this->mpSceneNode = mpGlobeControl->getSceneManager()->getRootSceneNode()->createChildSceneNode(this->mName);

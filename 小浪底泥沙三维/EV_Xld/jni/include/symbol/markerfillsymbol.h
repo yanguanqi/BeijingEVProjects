@@ -16,9 +16,7 @@ namespace EarthView{
 			{
 				MFS_MarkerFillStyle_Grid                  = 0,//格网样式
 				MFS_MarkerFillStyle_Single                = 1,//单个样式
-				MFS_MarkerFillStyle_Random                = 2,//随机样式
-				MFS_MarkerFillStyle_Tin                   = 3,//三角点填充
-				MFS_MarkerFillStyle_Hash                  = 4 //哈希点填充
+				MFS_MarkerFillStyle_Random                = 2 //随机样式
 			};
 			/// <summary>
 			/// 点填充面类

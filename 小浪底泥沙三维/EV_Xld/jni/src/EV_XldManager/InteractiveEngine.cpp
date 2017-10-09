@@ -22,7 +22,7 @@ EarthView::World::Spatial::Math::CVector3  EarthView::Xld::AnalysisTool::CIntera
 		ev_real64 lati = 0;
 		ev_real64 longi = 0;
 		EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->mpGlobeControl->pickingRayIntersection(screenX, screenY, lati, longi);
-		ev_real64 alti = EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->mpGlobeControl->getSceneManager()->getHeightAt(lati, longi,0);
+		ev_real64 alti = EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->mpGlobeControl->getSceneManager()->getHeightAt(lati, longi,-1);
 		return EarthView::World::Spatial::Math::CVector3(longi, lati, alti);
 	}
 	else 

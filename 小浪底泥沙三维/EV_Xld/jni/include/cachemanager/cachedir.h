@@ -55,7 +55,6 @@ namespace EarthView{
 				static EVString getVectorTileRootCacheDir(const EVString& layerName);
 				static EVString getKmlRootCacheDir();
 				static EVString getWebMetadataCacheDir();
-				static EVString getStreetViewCacheDir(const EVString& layerName);
 				
 				///  一个库文件，一个表格 ， 数据源为子目录
 				static EVString calcDatasetInfoCacheFilePath(const EVString& datasource);
@@ -97,9 +96,6 @@ namespace EarthView{
 
 				/// 通过网络服务url获取到元数据信息缓存文件路径
 				static EVString calcWebMetadataCacheFilePath(const EVString& serverurl, const EVString& servername);
-
-				///
-				static EVString calcStreetviewCacheFilePath(const EVString& layerName);
 
 				/// <summary>
 				/// 获取缓存存放目录

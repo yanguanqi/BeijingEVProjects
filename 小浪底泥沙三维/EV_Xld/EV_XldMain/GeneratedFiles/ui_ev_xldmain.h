@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ev_xldmain.ui'
 **
-** Created: Thu Sep 28 16:43:06 2017
+** Created: Sat Oct 7 13:43:28 2017
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -37,6 +37,8 @@ public:
     QAction *actionGrd2GTiff;
     QAction *actionGrdLOD;
     QAction *actionGrdRender;
+    QAction *actionDrawRect;
+    QAction *actionDrawPolyline;
     QWidget *centralWidget;
     EVWorkspace *evWorkspace;
     GlobeWidget *globeWidget;
@@ -46,6 +48,7 @@ public:
     QSlider *horizontalSlider;
     QMenuBar *menuBar;
     QMenu *menuGrd;
+    QMenu *menu;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -62,6 +65,10 @@ public:
         actionGrdLOD->setObjectName(QString::fromUtf8("actionGrdLOD"));
         actionGrdRender = new QAction(EV_XldMainClass);
         actionGrdRender->setObjectName(QString::fromUtf8("actionGrdRender"));
+        actionDrawRect = new QAction(EV_XldMainClass);
+        actionDrawRect->setObjectName(QString::fromUtf8("actionDrawRect"));
+        actionDrawPolyline = new QAction(EV_XldMainClass);
+        actionDrawPolyline->setObjectName(QString::fromUtf8("actionDrawPolyline"));
         centralWidget = new QWidget(EV_XldMainClass);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         evWorkspace = new EVWorkspace(centralWidget);
@@ -94,6 +101,8 @@ public:
         menuBar->setGeometry(QRect(0, 0, 1372, 23));
         menuGrd = new QMenu(menuBar);
         menuGrd->setObjectName(QString::fromUtf8("menuGrd"));
+        menu = new QMenu(menuBar);
+        menu->setObjectName(QString::fromUtf8("menu"));
         EV_XldMainClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(EV_XldMainClass);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -103,10 +112,13 @@ public:
         EV_XldMainClass->setStatusBar(statusBar);
 
         menuBar->addAction(menuGrd->menuAction());
+        menuBar->addAction(menu->menuAction());
         menuGrd->addAction(actionReadGrd);
         menuGrd->addAction(actionGrd2GTiff);
         menuGrd->addAction(actionGrdLOD);
         menuGrd->addAction(actionGrdRender);
+        menu->addAction(actionDrawRect);
+        menu->addAction(actionDrawPolyline);
 
         retranslateUi(EV_XldMainClass);
 
@@ -120,11 +132,14 @@ public:
         actionGrd2GTiff->setText(QApplication::translate("EV_XldMainClass", "Grd\346\226\207\344\273\266\350\275\254\346\215\242", 0, QApplication::UnicodeUTF8));
         actionGrdLOD->setText(QApplication::translate("EV_XldMainClass", "Grd\345\234\260\345\275\242\346\225\260\346\215\256\345\244\204\347\220\206", 0, QApplication::UnicodeUTF8));
         actionGrdRender->setText(QApplication::translate("EV_XldMainClass", "Grd\345\234\260\345\275\242\346\270\262\346\237\223", 0, QApplication::UnicodeUTF8));
+        actionDrawRect->setText(QApplication::translate("EV_XldMainClass", "\347\224\273\347\237\251\345\275\242", 0, QApplication::UnicodeUTF8));
+        actionDrawPolyline->setText(QApplication::translate("EV_XldMainClass", "\347\224\273\345\244\232\350\276\271\345\275\242", 0, QApplication::UnicodeUTF8));
         evWorkspace->setProperty("projectName", QVariant(QApplication::translate("EV_XldMainClass", "xld.evproj", 0, QApplication::UnicodeUTF8)));
         evWorkspace->setProperty("localProjectName", QVariant(QApplication::translate("EV_XldMainClass", "D:/Projects/XiaolangdiSystem/System/EV_Xld/bin64/MyData/xld.evproj", 0, QApplication::UnicodeUTF8)));
         globeWidget->setProperty("globeName", QVariant(QApplication::translate("EV_XldMainClass", "\346\226\260\345\234\272\346\231\2571", 0, QApplication::UnicodeUTF8)));
         checkBox->setText(QApplication::translate("EV_XldMainClass", "CheckBox", 0, QApplication::UnicodeUTF8));
         menuGrd->setTitle(QApplication::translate("EV_XldMainClass", "Grd\346\226\207\344\273\266", 0, QApplication::UnicodeUTF8));
+        menu->setTitle(QApplication::translate("EV_XldMainClass", "\345\212\237\350\203\275\344\272\244\344\272\222", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

@@ -238,7 +238,7 @@ ev_private:
 						MOT_MeshX,
 						MOT_MeshXG
 					};
-					MovableObjectType mObjectType;		
+					MovableObjectType mObjectType;
 				};
             private:
                 EarthView::World::Graphic::CMovableObject::CMovableObjectInternalAnimableObject *mpAnimableObject;
@@ -329,7 +329,6 @@ ev_private:
 				ev_bool mRenderingDisabled;
 
 				EarthView::World::Graphic::CMovableObject::CUserData* mUserData;
-				EVString mTag;
             public:
                 /// <summary>
                 /// 构造函数
@@ -1062,13 +1061,6 @@ ev_private:
                 /// <param name=""></param>
                 /// <returns></returns>
                 virtual ev_bool isDebugDisplayEnabled() const;
-
-				/// <summary>
-				///  附加的属性字段，外部关联业务使用
-				/// </summary>
-				/// <returns></returns>
-				void setTag(const EVString& tag);
-				EVString getTag();
             };
             /// <summary>
             /// 移动对象工厂类

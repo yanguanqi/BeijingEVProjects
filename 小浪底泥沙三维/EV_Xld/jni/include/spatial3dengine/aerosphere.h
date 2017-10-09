@@ -96,18 +96,6 @@ namespace EarthView
 				/// </summary>
 				/// <returns>包围盒</returns>
 				const EarthView::World::Spatial::Math::CAxisAlignedBox &getBoundingBox() const;
-
-				/// <summary>
-				/// 设置大气圈厚度，默认厚度是1200km，厚度范围为20km到1500km之间
-				/// </summary>
-				/// <param name="thickness">大气圈厚度，默认厚度是1200km</param>
-				/// <returns></returns>
-				void setThickness(Real thickness);
-				/// <summary>
-				/// 获取大气圈显示厚度
-				/// </summary>
-				/// <returns>大气圈厚度</returns>
-				Real getThickness();
             protected:
                 /// <summary>
                 /// 初始化
@@ -124,7 +112,6 @@ namespace EarthView
 				EarthView::World::Spatial3D::CGeoSceneManager *mGeoSceneManager;
 				friend class CAerosphereSection;
 				GPUParams *mParams;
-				Real mThickness;
             };
         }
     }

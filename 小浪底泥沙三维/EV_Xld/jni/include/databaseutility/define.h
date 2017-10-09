@@ -7,7 +7,6 @@
 #include "core/string_array.h"
 #include "core/datastream.h"
 #include "core/char.h"
-#include "core/atomicint.h"
 
 #ifdef EV_DatabaseUtility_Export
 #	define EV_SQL_DLL EV_DLL_EXPORT

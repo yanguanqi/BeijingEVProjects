@@ -28,6 +28,7 @@ namespace EarthView
 			void SetSectionQueryEnable(const ev_bool& isEnable);
 			void SetTerrainHeightQueryEnable(const ev_bool& isEnable);
 			void DrawRectBounds();
+			void DrawPolylineBounds();
 			ev_uint64 GetTerrainCount();
 			EarthView::World::Spatial3D::Controls::CGlobeControl* mpGlobeControl;
 		protected:

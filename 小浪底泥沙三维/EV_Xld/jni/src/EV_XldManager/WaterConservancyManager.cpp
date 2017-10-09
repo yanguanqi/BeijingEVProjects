@@ -77,6 +77,11 @@ void EarthView::XldManager::CWaterConservancyManager::DrawRectBounds()
 	EarthView::Xld::CAnalysisToolManager::GetSingletonPtr()->DrawRectBounds();
 }
 
+void EarthView::XldManager::CWaterConservancyManager::DrawPolylineBounds()
+{
+	EarthView::Xld::CAnalysisToolManager::GetSingletonPtr()->DrawPolyline();
+}
+
 ev_uint64 EarthView::XldManager::CWaterConservancyManager::GetTerrainCount()
 {
 	return EarthView::Xld::RenderLib::CTerrainManager::getSingletonPtr()->GetTerrainCount();

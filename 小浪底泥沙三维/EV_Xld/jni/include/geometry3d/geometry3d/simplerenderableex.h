@@ -53,7 +53,6 @@ namespace EarthView
 			{
 				class CCurve;
 				class CPoint;
-				class CCoordinateSequence;
 			}
 
 			namespace Display

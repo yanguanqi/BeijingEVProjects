@@ -92,7 +92,6 @@ namespace EarthView{
 					TT_TerrainQuery         = 3004, //地形选择
 					TT_RegionQuery          = 3005, //区域选择
 					TT_CurtainEdit			= 3006,	//卷帘范围编辑工具
-					TT_StreetViewSelect     = 3007, //街景选择工具
 
 					TT_CommonRaySelect		= 3099, //局部场景射线选择
 					//三维分析
@@ -101,7 +100,6 @@ namespace EarthView{
 					TT_Slope				= 3152,
 					TT_Volume				= 3153,
 					TT_RegionFlood			= 3154,
-					TT_Skyline				=3155,
 
 					//三维测量
 					TT_Measure3DLength      = 3160,

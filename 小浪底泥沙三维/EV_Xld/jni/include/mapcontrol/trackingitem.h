@@ -180,13 +180,13 @@ public:
 	/// <returns>对象类型</returns>
 	ev_void setFlags( EVTrackingItemFlags flags );
 	/// <summary>
-	/// 返回地图漫游、缩放或者刷新时是否同时刷新此项到屏幕
+	/// 返回地图漫游或缩放时是否实时刷新此项
 	/// </summary>
 	/// <param name=""></param>
 	/// <returns>返回true表示已设置为实时刷新</returns>
 	ev_bool isInterest() const;
 	/// <summary>
-	/// 设置地图漫游、缩放或者刷新时是否同时刷新此项到屏幕
+	/// 设置地图漫游或缩放时是否实时刷新此项
 	/// </summary>
 	/// <param name="b">true为设置实时刷新</param>
 	/// <returns></returns>

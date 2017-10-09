@@ -4,19 +4,14 @@
 #include "curve.h"
 #include "linestring.h"
 
+EV_DECLARE_GEOMETRY_CLASS_PRIVATE(CCircleArc);
 
+EV_DECLARE_GEOMETRY_CLASS_UTILITY(CGeometryHelper);
 
 namespace EarthView{
 	namespace World{
 		namespace Spatial{
 			namespace Geometry{
-				namespace Private{
-					class CCircleArcPrivate;
-				}
-				namespace Utility{
-					class CGeometryHelper;
-
-				}
 				/// <summary>
 				/// 圆弧类，用中心点、起始点、起始角度以及半径描述圆弧。
 				/// </summary>

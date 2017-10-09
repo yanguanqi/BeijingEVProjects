@@ -59,8 +59,6 @@ ev_private:
 					/// <returns>图层</returns>
 					EarthView::World::Spatial::Atlas::ILayer* getEditingLayer() const;
 
-					virtual _extfree EarthView::World::Core::CEvent* clone() const;
-
 				protected:
 					EarthView::World::Spatial::Atlas::ILayer* mpLayer;
 ev_private:

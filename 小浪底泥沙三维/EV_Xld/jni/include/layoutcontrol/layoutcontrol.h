@@ -104,7 +104,6 @@ namespace EarthView
 				class CDrawThread;
 				class CDrawTimer;
 				class CLayoutEventReceiver;
-				class CLegendEventReceiver;
 
 				class EV_LAYOUTCONTROL_DLL CLayoutControl : public EarthView::World::Spatial::Atlas::ISpatialControl
 				{
@@ -299,29 +298,6 @@ namespace EarthView
 					/// <param name="dValue">目标显示比例</param>
 					/// <returns></returns>
 					ev_void setCurrentScale(ev_real64 dValue);
-
-					///<summary>
-					/// 获取数据框的比例尺
-					/// </summary>
-					/// <param name=""></param>
-					/// <returns>当前数据框的比例尺</returns>
-					ev_real64 getMapFrameScale();
-
-					///<summary>
-					/// 设置数据框的比例尺
-					/// </summary>
-					/// <param name="dValue">数据框的比例尺</param>
-					/// <returns></returns>
-					ev_void setMapFrameScale(ev_real64 dScale);
-
-					///<summary>
-					/// 以某个点为中心设置数据框的比例尺
-					/// </summary>
-					/// <param name="dPX">中心点的X坐标</param>
-					/// <param name="dPY">中心点的Y坐标</param>
-					/// <param name="dValue">数据框的比例尺</param>
-					/// <returns></returns>
-					ev_void setMapFrameScaleAt(ev_real64 dPX, ev_real64 dPY, ev_real64 dScale);
 
 					/// <summary>
 					/// 获取纸张中心点坐标
@@ -608,15 +584,12 @@ namespace EarthView
 					/// <returns></returns>
 					_extfree EarthView::World::Display::CMetaFile*  exportViewToMetafile(
 						EarthView::World::Spatial::Geometry::IEnvelope * pDataEnv, ev_uint32 dpi);
-
-					ev_void exportLayout(EarthView::World::Display::IPaintDevice* device,bool exportByLayer);
 					/// <summary>
 					/// 打印
 					/// </summary>
 					/// <param name=""></param> 
 					/// <returns></returns>
 					ev_int32 print();
-					EVString getErrorMsg();
 				private:
 					ev_real64  mdPanStartX;
 					ev_real64  mdPanStartY;
@@ -653,7 +626,6 @@ namespace EarthView
 					ev_real64 m_fLastScale;
 					ev_int32 mdCursor;
 					EarthView::World::Layout::Controls::CLayoutEventReceiver* m_pEventReceiver;
-					EarthView::World::Layout::Controls::CLegendEventReceiver* m_pLegendEventReceiver;
 					EarthView::World::Spatial::Carto::IPageLayout* m_pPageLayout;
 					EarthView::World::Spatial::Display::ISpatialDisplay* m_pPageDisplay;
 					EarthView::World::Spatial::Display::IColor* m_BackgroundColor;
@@ -668,7 +640,6 @@ namespace EarthView
 					EarthView::World::Spatial::GeoDataset::CWorkCommandManager *m_pViewportManager;
 					CLayoutOperationManager *m_pOperationManager;
 					void* mpTrackingProxy;
-					EVString mstrErrorMsg;
 				ev_private:
 					CLayoutControl(EarthView::World::Core::CNameValuePairList *pList );
 				protected:

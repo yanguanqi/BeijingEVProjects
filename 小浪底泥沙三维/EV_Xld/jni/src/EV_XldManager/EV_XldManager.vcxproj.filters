@@ -57,6 +57,15 @@
     <ClCompile Include="RectangleAnalysisTool.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="PolygonAnalysisTool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AnalysisEvent.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AnalysisEventObject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\xld\WaterConservancyManager.h">
@@ -105,6 +114,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="RectangleAnalysisTool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PolygonAnalysisTool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AnalysisEvent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AnalysisEventObject.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

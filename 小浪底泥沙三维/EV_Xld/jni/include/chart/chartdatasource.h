@@ -268,9 +268,7 @@ namespace EarthView
 					
 					CChartDataSource* mpDataSource;
 					ev_uint32 mnCount;
-
 					EarthView::World::Core::StringVector mlistLayerName;
-					mutable ev_map<EVString,EarthView::World::Spatial::GeoDataset::IDataMetaInfo*> mlistInfos;
 
 					friend class CChartDataSource;
 				};

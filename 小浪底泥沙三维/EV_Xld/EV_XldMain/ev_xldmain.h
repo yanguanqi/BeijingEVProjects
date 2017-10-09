@@ -21,6 +21,8 @@ public:
 		void slotGlobeOpened(GlobeWidget* globeWidget);
 		void SliderValueChanged(int value);
 		void GrdVisible(int g);
+		void DrawRect();
+		void DrawPolyline();
 		void EV_XldMain::treeViewSelected(QTreeWidgetItem *item, int column);
 private:
 	Ui::EV_XldMainClass ui;

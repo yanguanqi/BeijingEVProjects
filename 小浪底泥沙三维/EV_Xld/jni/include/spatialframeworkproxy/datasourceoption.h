@@ -133,21 +133,6 @@ ev_private:
 		);
 
 		/// <summary>
-		/// 设置一个打开postgis数据源的选项，具体请见AppDataSource::openDataSource()。
-		/// </summary>
-		/// <param name="ip">服务器IP地址。</param>
-		/// <param name="port">服务器端口。</param>
-		/// <param name="user">数据库用户名。</param>
-		/// <param name="password">数据库密码。</param>
-		/// <returns></returns>
-		EarthView::World::Utilities::DataSourceOption& postgis (
-			const EVString&   ip,
-			int	port,
-			const EVString&   user,
-			const EVString&   password
-			);
-
-		/// <summary>
 		/// 析构函数。
 		/// </summary>
 		/// <returns></returns>

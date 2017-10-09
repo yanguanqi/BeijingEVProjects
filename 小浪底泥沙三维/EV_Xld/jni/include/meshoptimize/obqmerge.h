@@ -35,10 +35,6 @@ ev_private:
 			ev_void setMinDivideBoundsSize(ev_real32 minDivideSize);
 			//获取单个块最小包围盒大小
 			ev_real32 getMinDivideBoundsSize();
-			//设置单个块最大包围盒大小(仅x,z平面对角线长度)
-			ev_void setMaxDivideBoundsSize(ev_real32 maxDivideSize);
-			//获取单个块最大包围盒大小
-			ev_real32 getMaxDivideBoundsSize();
 			//设置合并后名字
 			ev_void setMergeName(EVString mergeName);
 			//获取合并后名字
@@ -54,7 +50,6 @@ ev_private:
 			ev_bool mbEncode7z;
 			ev_uint32 mObqCountLowerLimit;
 			ev_real32 mMinDivideBoundsSize;
-			ev_real32 mMaxDivideBoundsSize;
 			ev_real32 mTileVisibleMultiplier;
 			EVString mMergeName;
 		};
@@ -67,7 +62,6 @@ ev_private:
 			CObqMergeListener();
 			~CObqMergeListener();
 			virtual ev_void processMsg(EVString msg);
-			virtual ev_void processProgress(ev_int32 percent);
 			virtual ev_void paused();
 			virtual ev_void finished();
 		};
@@ -196,7 +190,7 @@ ev_private:
 			//开始合并,isAsyn == true则内部开启线程采用异步处理
 			ev_void merge(const EVString& dstFolder,CObqMergeInstanceDataList dataList,ev_bool isAsyn);
 			//根据RecordInfoList记录，合并多个Meshxg中的meshx文件, isAsyn == true则内部开启线程采用异步处理
-			ev_void merge(EarthView::World::Core::CStringArray& folders, const EVString& desFolder, const EVString& mergeName, ev_bool isAsyn, ev_bool keepSourceData,ev_bool samePath);
+			ev_void merge(EarthView::World::Core::CStringArray& folders, const EVString& desFolder, const EVString& mergeName, ev_bool isAsyn);
 
 			
 			//设置参数
@@ -211,11 +205,6 @@ ev_private:
 			ev_void removeListener(CObqMergeListener* observer);
 			//添加meshx复用
 			ev_void addMeshxInstance(CObqMergeInstanceData instanceData);
-			//停止进行obq合并的操作
-			ev_void stopObqMerge();
-			//判断当前线程是否在运行处理中
-			ev_bool isRunning();
-
 		private:
 			// <summary>       
 			// 创建线程类
@@ -234,10 +223,8 @@ ev_private:
 				ev_void run();
 			};
 			ev_void _notifyProcessMsg(EVString msg);
-			ev_void _notifyProcessProgress(ev_int32 percent);
 			ev_void _notifyPaused();
 			ev_void _notifyFinished();
-			
 			ev_bool start();
 			ev_void stop();
 			
@@ -266,11 +253,6 @@ ev_private:
 			EarthView::World::Core::CStringArray mMergeFolders;//参与合并的文件夹集合
 			EVString mMergeDstFolder;//目标文件夹，用于存放合并的meshx
 			EVString mMergeName;//合并之后，新的meshxg的名称
-			ev_map<EVString, EVString> instanceMap;//合并meshxg时，判断同一meshxg中是否存在复用关系，存在则只拷贝一份数据
-			ev_map<ev_uint32, CObqMergeInstanceData> instanceDataMap;//合并meshxg时，存放各个源meshxg的Instance数据，用于修改新的evid对应关系  
-			ev_bool mKeepSourceData;//合并meshxg时，是否保留源数据
-			ev_bool mIsSamePath;//合并meshxg时，源路径和目标路径是否一致
-			set<EVString> mNewDirSet;
 
 			//
 			EarthView::World::Spatial3D::ModelManager::OBQRecordInfoList mObqRecordInfoList;
@@ -353,8 +335,6 @@ ev_private:
 			//计算Instance数据的流大小
 			ev_uint32 caclInstanceDataMemSize();
 
-			//根据meshx源目录路径、源mesh相对路径，计算出meshx在目标目录中的绝对路径
-			EVString getTargetModelPath(const EVString& srcPath, EVString srcModelPath, ev_int32 evid);
 		};
 	}
 }

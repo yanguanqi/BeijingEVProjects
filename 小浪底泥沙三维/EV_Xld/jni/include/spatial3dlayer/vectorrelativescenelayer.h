@@ -19,7 +19,6 @@
 #include "spatial3ddataset/vectoroctreedataset.h"
 
 #include "spatial3dlayer/vectoroctreecachepublisher.h"
-#include "spatial3dlayer/featuregrouplayer.h"
 
 
 namespace EarthView{
@@ -104,7 +103,7 @@ ev_private:
 					/// 设置图层可见性
 					/// </summary>
 					/// <param name="visible">可见性</param>
-					virtual ev_void setVisible_impl(ev_bool visible);
+					virtual ev_void setVisible(ev_bool visible);
 					/// <summary>
 					/// 获取注记可见距离
 					/// </summary>
@@ -114,25 +113,7 @@ ev_private:
 					/// 获取推荐的注记可见距离
 					/// </summary>
 					ev_real64 getSuggestLabelVisibleDistance();
-					///<summary>
-					///获取该图层所在的图层组
-					///</summary>
-					/// <param name=""></param>
-					/// <returns>图层所在的图层组</returns>
-					EarthView::World::Spatial3D::Atlas::CFeatureGroupLayer* getParent();
-					///<summary>
-					///设置该图层所在的图层组
-					///</summary>
-					/// <param name=""></param>
-					/// <returns></returns>
-					void setParent(EarthView::World::Spatial3D::Atlas::CFeatureGroupLayer* parent);
-					/// <summary>
-					/// 判断图层是否有效
-					/// </summary>
-					/// <param name=""></param>
-					/// <returns>有效返回true,否则返回false</returns>
-					/// <summary>
-					virtual ev_bool isValid() const;
+
 					/// <summary>
 					/// 设置图层注记可见距离
 					/// </summary>
@@ -186,18 +167,6 @@ ev_private:
 					/// </summary>
 					/// <returns>数据集指针</returns>
 					virtual EarthView::World::Spatial::GeoDataset::IDataset* getDataset();
-					/// <summary>
-					/// 设置与图层所关联的数据集
-					/// </summary>
-					/// <param name="dataset">数据集指针</param>
-					/// <returns></returns>
-					virtual ev_void setDataset(EarthView::World::Spatial::GeoDataset::IDataset* dataset);
-					/// <summary>
-					/// 更换数据集
-					/// </summary>
-					/// <param name="dataset">数据集指针</param>
-					/// <returns></returns>
-					virtual ev_void switchDataset(EarthView::World::Spatial::GeoDataset::IDataset* dataset);
 					/// <summary>
 					/// 获取矢量的类型
 					/// </summary>
@@ -458,8 +427,14 @@ ev_private:
 					/// </summary>
 					/// <param name=""></param>
 					/// <returns></returns>
-					virtual ev_void _notifyLayerRemoved_impl(EarthView::World::Graphic::CSceneManager* pSceneMgr);
-
+					virtual ev_void _notifyLayerRemoved(EarthView::World::Graphic::CSceneManager* pSceneMgr);
+					/// <summary>
+					/// Globe刷新时调用的函数
+					/// </summary>
+					/// <param name="camera">当前的相机</param>
+					/// <param name="updateType">刷新类型</param>
+					/// <returns></returns>
+					virtual ev_void _notifyRefreshed(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
 					/// <summary>
 					/// 数据集更新事件的通知
 					/// </summary>
@@ -492,15 +467,7 @@ ev_private:
 					/// <param name="ref_geoent">扩展实体</param>
 					/// <returns></returns>
 					const EarthView::World::Spatial3D::Atlas::CSelectedGeometryStringInterface* updateStringInterface(EarthView::World::Geometry3D::CGeoEntity* ref_geoent);
-ev_internal:
-					/// <summary>
-					/// Globe刷新时调用的函数
-					/// </summary>
-					/// <param name="camera">当前的相机</param>
-					/// <param name="updateType">刷新类型</param>
-					/// <returns></returns>
-					virtual ev_void _notifyRefreshed_impl(const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
-			
+				
 ev_private:
 					void notifyAbortLayerRequest();
 					static ev_void clearCache(const EVString& sceneManagerName,const EVString& datasourceName,const EVString& datasetName);
@@ -511,7 +478,7 @@ ev_private:
 					/// <param name="obj">对象</param>
 					/// <returns></returns>
 					C_DISABLE_COPY(CVectorRelativeSceneLayer);
-				protected:
+
 					void init();
 
 					size_t readGeoIndexFromStream(EarthView::World::Core::MemoryDataStreamPtr& meshStream,EarthView::World::Spatial::CGeoObject& geoObject);
@@ -596,7 +563,6 @@ ev_private:
 					ev_void copyCameraParams(EarthView::World::Graphic::COctreeCamera& camera)const;
 
 					EarthView::World::Spatial::Geometry::EVGeometryType mVectorType;
-					EarthView::World::Spatial::Geometry::EVGeometryType mOldVectorType;
 
 					ev_bool mbStencilEnabled;
 
@@ -609,8 +575,7 @@ ev_private:
 
 					ev_bool mbPublishStoped;
 
-				//private:
-				protected:
+				private:
 					EarthView::World::Spatial::GeoDataset::IFeatureClass* mpFeatureClass;
 					EarthView::World::Spatial::Geometry::ISpatialReference* mpSR;
 					EarthView::World::Core::MemoryDataStreamPtr mpThemeDataStream;
@@ -649,7 +614,6 @@ ev_private:
 					CRelativeLayerUpdator* mUpdator;
 
 					EarthView::World::Spatial3D::Atlas::CSelectedGeometryStringInterface* mpStringInterface;
-					EarthView::World::Spatial3D::Atlas::CFeatureGroupLayer *mpParent;
 				};
 
 				/// <summary>

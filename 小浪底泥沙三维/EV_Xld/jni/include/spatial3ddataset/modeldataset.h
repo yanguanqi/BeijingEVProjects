@@ -72,17 +72,6 @@ namespace EarthView{
 					/// <param name=""></param>
 					/// <returns>数据集别名</returns>
 					virtual EVString getAliasName() const;
-					/// <summary>
-					/// 获取数据集的范围
-					/// </summary>
-					/// <returns>包围盒对象</returns>
-					virtual EarthView::World::Spatial::Geometry::IEnvelope* getEnvelopeRef() const;
-					/// <summary>
-					/// 获取数据集的空间坐标系参考对象
-					/// </summary>
-					/// <returns>空间坐标参考系对象，内部引用，无需释放</returns>
-					virtual EarthView::World::Spatial::Geometry::ISpatialReference* getSpatialReferenceRef() const;
-
 				protected:
 					
 					EVString mDatasetName;  ///数据集名称，对应的数据库的表名

@@ -147,8 +147,6 @@ ev_private:
 					ev_void setGeoObjectExtensionAttribute(EarthView::World::Spatial::Kml::CGeoObjectExtensionAttribute att);
 
 					ev_void renderEditFrame();
-					ev_void deRender();
-
 					ev_void _notify(ev_bool isRefershView);
 protected:
 					int mLastX;

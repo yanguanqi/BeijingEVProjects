@@ -150,7 +150,6 @@ ev_private:
 
 					ev_void _notify(ev_bool isRefershView);
 					ev_void renderEditFrame();
-					ev_void deRender();
 
 				protected:
 					int mLastX;

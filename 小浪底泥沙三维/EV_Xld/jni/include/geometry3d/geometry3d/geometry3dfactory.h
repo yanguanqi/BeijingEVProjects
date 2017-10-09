@@ -18,17 +18,6 @@ namespace EarthView
 {
 	namespace World
 	{
-		namespace Spatial{
-			namespace Geometry{	
-				class CBox;
-				class CCone;
-				class CColumn;
-				class CEllipsoid;
-				class CRing;
-				class CRevolvingVolume;
-
-			}
-		}
 		namespace Geometry3D
 		{
             class CSimpleRenderableEx;

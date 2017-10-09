@@ -30,12 +30,12 @@ public:
 	
 	virtual EarthView::World::Spatial::GeoDataset::IDataSource* getDataSourceRef();
 	
-	virtual ev_void* query(EarthView::World::Core::CDataStream &filter);
-	virtual ev_bool endQuery(void* queryData);
+	virtual ev_bool query(EarthView::World::Core::CDataStream &filter,EVString &key); 
+	virtual ev_bool endQuery(const EVString &key) ;
 	virtual ev_bool getFeature(ev_uint32 id,ev_vector<EarthView::World::Core::CVariant>& values);
 	virtual ev_bool updateExtent() ;
 	virtual ev_bool getExtent(EarthView::World::Spatial::Geometry::IEnvelope *pEnvelope);
-	virtual ev_bool nextFeature(ev_vector<EarthView::World::Core::CVariant>& values,void* queryData);
+	virtual ev_bool nextFeature(ev_vector<EarthView::World::Core::CVariant>& values,const EVString & key);
 	virtual ev_bool addFeature(_in EarthView::World::Core::CDataStream &feature) ;
 	virtual ev_bool addFeatures(ev_vector<EVString> fields,
 		ev_vector<ev_vector<EarthView::World::Core::CVariant> > values,
@@ -69,8 +69,11 @@ private:
 	struct QueryInfo
 	{
 		EarthView::World::Core::Database::CSqlQuery		   q;
+		//ev_vector<ev_bool> *indicator;
 	};
 	EarthView::World::Spatial::GeoDataset::CSqlstandardization				*sqlStd;
+	EarthView::World::Core::ev_hashmap<EVString,QueryInfo>    m_queryDict;
+	EarthView::World::Core::CReadWriteLock mLock;
 };
 }}}}
 

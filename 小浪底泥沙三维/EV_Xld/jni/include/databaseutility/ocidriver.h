@@ -29,6 +29,7 @@ namespace EarthView{
 					CVariant handle() const;
 				protected:
 					ev_void virtual_hook(int id, ev_void *data);
+					ev_int32 size();
 					CVariant lastInsertId() const;
 					ev_bool gotoNext(ValueCache &values, ev_int32 index);
 					ev_bool reset (const ev_wstring& query);

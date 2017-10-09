@@ -93,12 +93,12 @@ namespace EarthView
 					/// 是否是地理坐标系统
 					/// </summary>
 					///<returns>ev_real64</returns>
-					virtual const ev_bool isGeographic()const;
+					const ev_bool isGeographic()const;
 					/// <summary>
 					/// 是否是投影坐标系统
 					/// </summary>
 					///<returns>ev_real64</returns>
-					virtual const ev_bool isProjected()const;
+					const ev_bool isProjected()const;
 					/// <summary>
 					/// 获取空间参考系统的类型
 					/// </summary>

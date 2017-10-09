@@ -6,7 +6,6 @@ namespace EarthView{
 	namespace World{
 		namespace Spatial{
 			namespace Display{
-				class CSymbolRenderer;
 				class CDrawPictureFill : public CDrawFill
 				{
 				public:
@@ -72,7 +71,6 @@ namespace EarthView{
 					virtual ev_void endDraw();
 				private:
 					void *mpTexture;
-					CSymbolRenderer* mpOutlineRender;
 				};
 			}
 		}

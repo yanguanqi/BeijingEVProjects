@@ -46,7 +46,8 @@ namespace EarthView
 				/// <summary>
 				/// 数据交换类
 				/// </summary>
-				class EV_Spatial3DDataExchange_DLL CModelDataExchange : public EarthView::World::Spatial::Convertor::IDataExchange
+				class EV_Spatial3DDataExchange_DLL CModelDataExchange:
+					public EarthView::World::Spatial::Convertor::IDataExchange
 				{
 				public:
 					/// <summary>
@@ -68,12 +69,8 @@ namespace EarthView
 					{
 						public:
 							CModelDataExchange *dataExchange;
-
-							WorkerFunc(CModelDataExchange *ref_q) : dataExchange(ref_q) 
-							{
-
-							}
-
+							WorkerFunc(CModelDataExchange *ref_q)
+								: dataExchange(ref_q) {}
 							ev_void run();
 					};
 
@@ -100,13 +97,9 @@ namespace EarthView
 					/// <param name="driver">驱动对象</param>
 					/// <returns></returns>
 					virtual ev_void setDestDataDriver(_in const CModelDataDriver* ref_driver);
-
 					ev_void setSource(EarthView::World::Spatial3D::Dataset::CModelDataSource* pSource, const EVString& dSetName);
-
 					ev_void setPath(const EVString& path);
-
 					ev_void setParams(const CMeshParams& params);
-
 					/// <summary>
 					/// 获取数据转换类型
 					/// </summary>
@@ -144,7 +137,6 @@ namespace EarthView
 					ev_void stop();
 					ev_int32 getExportPercentage();
                     ev_void resetImportIndex();
-
 				ev_private:
 					CModelDataExchange(_in EarthView::World::Core::CNameValuePairList* pList );
 				protected:
@@ -154,32 +146,27 @@ namespace EarthView
 					/// <param name=""></param>
 					/// <returns></returns>
 					virtual ev_void _threadMain();
-
 					ev_void refreshDsetByName(EVString datasetName);
-
 					ev_void processLog(const EVString& outInfo, ev_uint32 current, ev_uint32 count );
-				
-				protected:
-					EarthView::World::Spatial::Convertor::EVDataExchangeType mDataExchangeType;      //数据交换类型
-					EarthView::World::Spatial3D::Dataset::CModelDataSource* mpDataSource;
-					EarthView::World::Spatial3D::DataExchange::CModelDataDriver* mpSrcDriver;             //源驱动
-					EarthView::World::Spatial3D::DataExchange::CModelDataDriver* mpDestDriver;            //目标驱动 
-					EVString mPath;                   //外面传进来的scene文件路径/文件夹目录 
-					EarthView::World::Spatial3D::DataExchange::CMeshParams mParse;                  //设置的参数
+					EarthView::World::Spatial::Convertor::EVDataExchangeType            mDataExchangeType;      //数据交换类型
+					EarthView::World::Spatial3D::Dataset::CModelDataSource*             mpDataSource;
+					EarthView::World::Spatial3D::DataExchange::CModelDataDriver*             mpSrcDriver;             //源驱动
+					EarthView::World::Spatial3D::DataExchange::CModelDataDriver*             mpDestDriver;            //目标驱动 
+					EVString                        mPath;                   //外面传进来的scene文件路径/文件夹目录 
+					EarthView::World::Spatial3D::DataExchange::CMeshParams                   mParse;                  //设置的参数
 			          
-				protected:
-					EarthView::World::Core::CThread * mpThread;
-					EarthView::World::Spatial3D::DataExchange::CModelDataExchangeListener* mpListener;              //监听
-					WorkerFunc* mpWorkerFunc;
-
+				private:
+					EarthView::World::Core::CThread *                     mpThread;
+					EarthView::World::Spatial3D::DataExchange::CModelDataExchangeListener*   mpListener;              //监听
+					WorkerFunc*                   mpWorkerFunc;
 					EV_MUTEX(mInitMutex)                                   //EV_MUTEX据说此宏的作用是定义个
-					EV_THREAD_SYNCHRONISER(mInitSync)
+						EV_THREAD_SYNCHRONISER(mInitSync)
 
-		            EVString mDatasetName; 
+		            EVString                        mDatasetName; 
 
-                    EarthView::World::Spatial3D::DataExchange::CDataImport* mpImportTool;    
-                    ev_bool mIsImOrExport;            //mIsImOrExport为真表示导入，假表示导出
-					EarthView::World::Graphic::CSceneManager* mpScemgr;
+                    EarthView::World::Spatial3D::DataExchange::CDataImport*                  mpImportTool;    
+                    ev_bool                       mIsImOrExport;            //mIsImOrExport为真表示导入，假表示导出
+					EarthView::World::Graphic::CSceneManager*                mpScemgr;
 					ev_int32 currentExportPercentage;
 				};
 			}

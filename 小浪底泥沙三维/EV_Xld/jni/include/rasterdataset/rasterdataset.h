@@ -475,10 +475,6 @@ namespace EarthView
 					 ///<returns></returns>
 					 
 					 virtual EVString getDatasetFullpath()const;
-					 //获取数据集核心
-					virtual RasterDatasetH* getRasterDatasetH();
-	
-
 
 				protected:
 					///<summary>
@@ -511,8 +507,6 @@ namespace EarthView
 				friend class CRasterBand;
 				friend class CReprojectAlg;
 				friend class CRasterLayer;
-				
-
 				};
 		}///Raster
 		}

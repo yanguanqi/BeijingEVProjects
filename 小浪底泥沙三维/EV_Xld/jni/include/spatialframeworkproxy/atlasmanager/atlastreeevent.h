@@ -9,9 +9,6 @@
 
 namespace EarthView{
 	namespace World{
-		namespace Core{
-			class CEventObject;
-		}
 		namespace Spatial{
 			namespace Atlas{
 				class ILayer;
@@ -28,7 +25,7 @@ class AtlasTreeEventData;
 class EV_FRAMEWORKPROXY_DLL AtlasTreeEvent : public EarthView::World::Core::CEvent
 {
 ev_private:
-	AtlasTreeEvent(_in EarthView::World::Core::CNameValuePairList *pList);
+	AtlasTreeEvent(_in EarthView::World::Core::CNameValuePairList *pLsit);
 public:
 	// 动作类型，一般地，Property在dock中显示，而Detail在弹窗中显示。
 	enum ActionType
@@ -253,7 +250,6 @@ ev_private:
 	/// </summary>
 	/// <returns></returns>
 	AtlasTreeEvent();
-	AtlasTreeEvent(ev_uint16 type, EarthView::World::Core::CEventObject *sender);
 	~AtlasTreeEvent();
 
 	/// <summary>
@@ -351,8 +347,6 @@ ev_private:
 	/// </summary>
 	/// <returns></returns>
 	EarthView::World::FrameWorkProxy::AtlasManager::AtlasTreeEventData& data() const;
-
-	virtual _extfree EarthView::World::Core::CEvent* clone() const;
 
 protected:
 

@@ -5,19 +5,14 @@
 #include "coordinate.h"
 #include "envelope.h"
 
+EV_DECLARE_GEOMETRY_CLASS_PRIVATE(CPoint);
 
+EV_DECLARE_GEOMETRY_CLASS_UTILITY(CGeometryHelper);
 
 namespace EarthView{
 	namespace World{
 		namespace Spatial{
 			namespace Geometry{
-				namespace Private{
-					class CPointPrivate;
-				}
-				namespace Utility{
-					class CGeometryHelper;
-
-				}
 				/// <summary>
 				/// 几何体点类，该点类是三维点类。
 				/// </summary>

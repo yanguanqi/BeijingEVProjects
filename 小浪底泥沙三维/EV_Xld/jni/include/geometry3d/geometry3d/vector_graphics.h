@@ -2429,18 +2429,6 @@ namespace EarthView
                 EarthView::World::Geometry3D::CMovableCone &operator=(const EarthView::World::Geometry3D::CMovableCone &other);
                 virtual ~CMovableCone();
             public:
-
-				/// <summary>
-				///   设置圆锥的中心点是在底端圆心还是圆锥头
-				/// <summary>
-				void setCenterPointMode(ev_bool isBottom)
-				{
-					mCentPointMode = isBottom;
-				}
-				ev_bool getCenterPointMode()
-				{
-					return mCentPointMode;
-				}
                 /// <summary>
                 ///   获取圆柱体的高
                 /// <summary>
@@ -2677,7 +2665,6 @@ namespace EarthView
                
 				EarthView::World::Graphic::CColourValue  m_Fillcolor;				///颜色
 				EarthView::World::Graphic::CColourValue  m_Framecolor;				///颜色
-				ev_bool mCentPointMode;  
 
 				ev_uint32 mGranularity;
 

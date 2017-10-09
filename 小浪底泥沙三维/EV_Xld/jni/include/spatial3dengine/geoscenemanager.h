@@ -591,18 +591,6 @@ ev_private:
 				/// <returns></returns>
 				void destroyQuadMaps();
 
-					/// <summary>
-				/// </summary>
-				/// <returns>返回地形修改器中是否有关于倾斜模型的修改器,含判断</returns>
-				ev_bool hasOBQTerrainRevisors();
-				/// <summary>
-				/// </summary>
-				/// <returns>返回地形修改器中是否有关于倾斜模型的修改器,不含判断</returns>
-				ev_bool existObqTerrainRevisors()
-				{
-					return mHasObqReviser;
-				}
-
 			public:
 				/// <summary>
 				/// 内部方法，更新自然环境视口
@@ -810,17 +798,6 @@ ev_private:
 				Real modifyHeightByTerrainRevisors(Real latitude,Real longitude,Real altitude);
 
 				/// <summary>
-				/// 内部函数，瓦片的每个顶点获取高程的时候都会通过这个函数修正 加上特征层的修正高度
-				/// </summary>
-				/// <param name="latitude">纬度</param>
-				/// <param name="longitude">经度</param>
-				/// <param name="altitude">原高程</param>
-				/// <returns>修正后的高度</returns>
-				Real modifyHeightByTerrainRevisors(Real latitude,Real lontitude,Real altitude,Real featureAtitude);
-
-
-			
-				/// <summary>
 				/// 获取高程瓦片数据流
 				/// </summary>
 				/// <param name="level">级别</param>
@@ -927,20 +904,7 @@ ev_private:
                 ev_bool getAerosphereVisible()const
                 {
                     return mShowAerosphere;
-                }	
-
-				/// <summary>
-				/// 设置大气圈厚度，默认厚度是1200km，厚度范围为20km到1500km之间
-				/// </summary>
-				/// <param name="thickness">大气圈厚度，默认厚度是1200km</param>
-				/// <returns></returns>
-				void setAerosphereThickness(Real thickness);
-				/// <summary>
-				/// 获取大气圈显示厚度
-				/// </summary>
-				/// <returns>大气圈厚度</returns>
-				Real getAerosphereThickness();
-
+                }				
 				/// <summary>
 				/// 二三维编辑一体化的时候，二维编辑保存之后需要调用该函数通知场景更新数据集
 				/// </summary>
@@ -1406,21 +1370,6 @@ ev_private:
 				/// <returns></returns>
 				ev_bool exportTiles(const EVString& strOutPath,ev_real64 minLon, ev_real64 minLat, ev_real64 maxLon, ev_real64 maxLat, ev_uint32 pixelWidth,ev_uint32 pixelHeight,ev_bool exportImage,ev_bool exportVector,EarthView::World::Spatial2D::Analyst::CRasterTileMosaic::CTileMosaicListener* pListener);
 
-				/// <summary>
-				/// 获取地形当前经纬度矩形框
-				/// </summary>
-				/// <returns></returns>
-				const EarthView::World::Spatial::Geometry::CEnvelope& getTerrainEnvlope() const;
-				
-				/// <summary>
-				/// 获取地形当前经纬度矩形框
-				/// </summary>
-				///<param name="minX">获取范围框最小X值</param>
-				///<param name="maxX">获取范围框最大X值</param>
-				///<param name="minY">获取范围框最小Y值</param>
-				///<param name="maxY">获取范围框最大Y值</param>
-				/// <returns></returns>
-				void getTerrainEnvlope(double& minX, double& maxX, double& minY, double& maxY );
 ev_private:
 				/// <summary>
 				/// 获取地形信息
@@ -1480,7 +1429,7 @@ ev_private:
 				ev_bool mFadeInOutEnabled;
 				ev_real64 mFadeInOutTime;
 				EarthView::World::Graphic::CViewport* mFadeInOutViewport;
-				bool mHasObqReviser;
+
 
            ev_private:
                 void getTrueTargetInfo(_in ev_int32& hasTrueDistanceInfo,_in EarthView::World::Spatial::Math::CVector3& realTarget,_in ev_real64& trueDistance,_in ev_real64& targetAltitude,_in ev_real64& altitudeUnderCamera,_in EarthView::World::Spatial::Math::CDegree& trueViewRange);
@@ -1594,21 +1543,10 @@ ev_private:
 				ev_bool mImageColorEnabled;
 
 				Real mImageDivideFactor;
-				mutable ev_uint32 mNextFrameNumber;
 
 				//ev_void createWindowSurface();
-				EarthView::World::Graphic::CTexturePtr mLeftEyeTex;
-				EarthView::World::Graphic::CTexturePtr mRightEyeTex;
-				ev_uint32 m;
-				ev_bool mIs3DGlassesMode;
 
-				EarthView::World::Graphic::CRectangle2D* mLeftEyeRect;
-				EarthView::World::Graphic::CRectangle2D* mRightEyeRect;
-				EarthView::World::Spatial3D::CGlobeCamera* mLeftEyeCam;
-				EarthView::World::Spatial3D::CGlobeCamera* mRightEyeCam;
-				EarthView::World::Graphic::CMaterialPtr mLeftEyeMaterialPtr;
-				EarthView::World::Graphic::CMaterialPtr mRightEyeMaterialPtr;
-				ev_real32 mDistanceOfTwoEyes;
+				//EarthView::World::Graphic::CRectangle2D* mWindowSurfaceRenderable;
 		ev_private:
 				//ev_void setWindowSurfaceRenderableMaterial(const EarthView::World::Graphic::CMaterialPtr& material);
 #if defined(USE_FFT_OCEAN)
@@ -1618,43 +1556,10 @@ ev_private:
 				}
 #endif
 		public:
-				/// <summary>
-				/// 进入该模式后将支持3D显示器，可通过3D眼镜看到立体效果，必须在全屏状态下调用该接口
-				/// </summary>
-				void enter3DGlassesMode();
-				/// <summary>
-				/// 离开3D模式
-				/// </summary>
-				void leave3DGlassesMode();
-
-				/// <summary>
-				/// 返回是否是3D眼镜模式
-				/// </summary>
-				ev_bool is3DGlassesMode();
-
-				/// <summary>
-				/// 设置3D模式下两眼间距离，默认是0.12米，距离越大3D效果越明显但看起来越难受
-				/// </summary>
-				/// <param name="distance">两眼间距离，单位是米，默认值：0.12</param>
-				void setDistanceOfTwoEyes(ev_real32 distance);
-
-				/// <summary>
-				/// 返回3D模式下两眼间距离
-				/// </summary>
-				/// <returns>以米为单位的两眼间距离，默认值：0.12</returns>
-				ev_real32 getDistanceOfTwoEyes();
-
-				/// <summary>
-				/// 类似于CRoot::getNextFrameNumber()，但CRoot::getNextFrameNumber()是每帧不管绘不绘制场景都自增，而这个是真正绘制场景才自增
-				/// </summary>
-				ev_uint32 getNextFrameNumber()
-			    {
-					return mNextFrameNumber;
-			    }
 				inline ev_void setHeightMapRendering(ev_bool flag)
-				{
+			    {
 					mIsHeightMapRendering = flag;
-				}
+			    }
 				inline ev_void setOceanDepthRendering(ev_bool flag)
 				{
 					mIsOceanDepthRendering = flag;

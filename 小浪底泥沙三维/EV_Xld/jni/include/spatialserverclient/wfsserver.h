@@ -210,6 +210,12 @@ ev_private:
 				virtual EarthView::World::Spatial::GeoDataset::IPropertySet* getPropertySet() const;
 
 				/// <summary>
+				/// 判断数据源是否有效
+				/// </summary>
+				/// <returns>是，返回true;否则，返回false</returns>
+				virtual ev_bool isValid() const;
+
+				/// <summary>
 				/// 获取指定数据集类型的数据元信息
 				/// </summary>
 				/// <param name="name">数据集名称</param>

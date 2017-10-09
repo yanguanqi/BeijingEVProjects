@@ -146,12 +146,6 @@ namespace EarthView
 					/// <returns>是否需要向下传递事件</returns>
 					virtual ev_bool onMouseMove(ev_int32 button,ev_int32 shift,ev_int32 x,ev_int32 y);
 
-					/// <summary>
-					/// 鼠标双击事件触发
-					/// </summary>
-					/// <param name=""></param>
-					/// <returns>标识此事件是否已经被ITool处理过,true:处理过(不再向父控件传递此事件);false:未处理(父控件对象可以继续处理)</returns>
-					virtual ev_bool onDoubleClick();
 				public:
 					/// <summary>
 					/// 获取拉框的线颜色
@@ -165,13 +159,6 @@ namespace EarthView
 					/// <param name="color">线颜色</param>					
 					/// <returns></returns>
 					void setLineColor(const EarthView::World::Graphic::CColourValue& color);
-
-					/// <summary>
-					/// 重置拉框相关参数
-					/// </summary>
-					/// <param name="color">线颜色</param>					
-					/// <returns></returns>
-					void resetLine();
 
 				protected:
 					ev_void clearLayerSelection();

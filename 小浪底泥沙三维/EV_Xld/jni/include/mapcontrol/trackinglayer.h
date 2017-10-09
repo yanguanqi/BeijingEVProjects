@@ -184,8 +184,6 @@ protected:
 	friend class CMapControl;
 	friend class CResizeHandler;
 	friend class CDrawDelayHandlerPrivate;
-	friend class CWheelHandler;
-	friend class CPanHandler;
 };
 
 }}}}

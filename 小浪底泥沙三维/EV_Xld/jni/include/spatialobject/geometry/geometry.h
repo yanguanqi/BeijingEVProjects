@@ -8,19 +8,14 @@
 #include "spatialobject/config.h"
 #include "envelope.h"
 
+EV_DECLARE_GEOMETRY_CLASS_PRIVATE(CGeometry);
 
+EV_DECLARE_GEOMETRY_CLASS_UTILITY(CGeometryHelper);
 
 namespace EarthView{
 	namespace World{
 		namespace Spatial{
 			namespace Geometry{
-				namespace Private{
-					class CGeometryPrivate;
-				}
-				namespace Utility{
-					class CGeometryHelper;
-
-				}
 				enum EVGeometrySnapType
 				{
 					GST_UNKNOWN,
@@ -415,10 +410,6 @@ ev_private:
 					/// <param name="coor">内部中心点</param>
 					/// <returns>获取成功返回true,否则返回false</returns>
 					virtual ev_bool getInteriorPoint(EarthView::World::Spatial::Geometry::IGeometry* point) const;
-					/// <summary> 
-					/// 判断几何体是否为矩形面
-					/// </summary>
-					virtual ev_bool isRectangle() const ;
 				protected:
 					/// <summary>
 					/// 默认构造函数
@@ -438,7 +429,7 @@ ev_private:
 					CGeometry& operator=(const CGeometry& obj);
 
 					virtual CEnvelope getEnvelope() const;
-					ev_void setGeometryType(EarthView::World::Spatial::Geometry::EVGeometryType type, /*const EVString& typeString,*/ev_int32 typeInt);
+					ev_void setGeometryType(EarthView::World::Spatial::Geometry::EVGeometryType type, const EVString& typeString,ev_int32 typeInt);
 					virtual ev_void setZMarker(ev_bool z);
 					virtual ev_void setMMarker(ev_bool m);
 ev_private:

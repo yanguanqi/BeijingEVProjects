@@ -61,23 +61,14 @@ ev_private:
 				/// <param name="pt">位置</param>
 				/// <returns>是否成功</returns>
                 virtual ev_bool modifyTerrain(EarthView::World::Spatial::Geometry::CPoint& pt){return false;}
-				virtual ev_bool modifyTerrain(EarthView::World::Spatial::Geometry::CPoint& pt,ev_real32 featureAtitude){return false;}
-				/// <summary>
-				/// 判断是否有关于倾斜模型的修改器
-				/// </summary>
-				/// <param name="pt"> </param>
-				/// <returns>是否成功</returns>
-				virtual ev_bool hasOBQTerrainRevisor(){return false;}	//dm+20161129
-			};
+
+            };
 
             enum TerrainReviseMode
             {
                 TRM_Exaggerate,
                 TRM_Increase,
-                TRM_Unify,
-				TRM_OBQ_PAST,
-				TRM_OBQ_UNIFY
-
+                TRM_Unify
             };
 
 			enum TerrainRangeMode
@@ -219,22 +210,11 @@ ev_private:
 				/// <returns>是否成功</returns>
                 virtual ev_bool modifyTerrain(EarthView::World::Spatial::Geometry::CPoint& pt);
 
-
-				/// <summary>
-				/// 修改地形
-				/// </summary>
-				/// <param name="pt">位置</param>
-				/// <returns>是否成功</returns>
-				virtual ev_bool modifyTerrain(EarthView::World::Spatial::Geometry::CPoint& pt,ev_real32 featureAtitude);
 				/// <summary>
 				/// 设置是否可用
 				/// </summary>
 				/// <param name="value">是否可用</param>
 				/// <returns></returns>
-				virtual ev_bool hasOBQTerrainRevisor()	//dm+20161129
-				{
-					return ( mMode==TRM_OBQ_PAST || mMode ==TRM_OBQ_UNIFY) ;
-				}
 				ev_void setEnabled(ev_bool value);
 
 				/// <summary>

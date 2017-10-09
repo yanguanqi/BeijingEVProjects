@@ -5,16 +5,25 @@
 #include "mathengine\vector3.h"
 #include "graphic\colourvalue.h"
 #include "core\file.h"
+#include "spatialobject\coordinatesystem\coordinatefactory.h"
+#include "spatialobject\geometry\curvering.h"
+#include "spatialobject\geometry\point.h"
+#include "spatialobject\geometry\polygon.h"
 
 using namespace EarthView::World::Core;
 using namespace EarthView::World::Spatial::Math;
 using namespace EarthView::World::Graphic;
 using namespace EarthView::World::Geometry3D;
-
+using namespace EarthView::World::Spatial::Geometry;
+using namespace EarthView::World::Spatial::Utility;
 //EarthView::Xld::WaterConservancyDataEngine::WaterConservancyDataEngine(EarthView::World::Core::CNameValuePairList* pList)
 //{
 //
 //}
+
+void EarthView::Xld::CWaterConservancyDataEngine::GenerateTerrainModelStencil()
+{
+}
 
 void EarthView::Xld::CWaterConservancyDataEngine::WriteTerrainCache(const EVString & fileName, const EVString & materialName, _in EarthView::World::Geometry3D::CVertexVector * vertexVector, _in EarthView::World::Geometry3D::CIndexVector * indexVector)
 {
@@ -124,4 +133,30 @@ void EarthView::Xld::CWaterConservancyDataEngine::ReadTerrainCache(const EVStrin
 	delete reader;
 	reader = NULL;
 	return;
+}
+
+void EarthView::Xld::CWaterConservancyDataEngine::WrtiteTerrainModelStencil(vector<EarthView::World::Spatial::Math::CVector3*>* bounds)
+{
+	//if (!mpSR)
+	CSpatialReference* mpSR = CCoordinateSystemFactory::createCoordSys(GEO_WGS84);
+
+	CPolygon* polygon = new CPolygon();
+	CCurveRing curvering;
+	EarthView::World::Spatial::Geometry::CLineString linestring;
+	for (ev_size_t i = 0; i < bounds->size(); i++)
+	{
+		CPoint point;
+		point.setX(bounds->at(i)->x);
+		point.setY(bounds->at(i)->y);
+		point.setZ(bounds->at(i)->z);
+		linestring.add(point, i);
+	}
+	linestring.setSpatialReferenceRef(mpSR);
+	linestring.update();
+	curvering.add(linestring, 0);
+	curvering.update();
+	polygon->addExteriorRing(curvering);
+	polygon->update();
+	polygon->setSpatialReferenceRef(mpSR);
+	polygon->update();
 }

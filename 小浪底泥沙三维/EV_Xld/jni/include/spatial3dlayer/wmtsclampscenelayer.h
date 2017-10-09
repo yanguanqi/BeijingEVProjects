@@ -74,7 +74,13 @@ ev_private:
 					/// </summary>
 					/// <param name=""></param>
 					/// <returns></returns>
-					virtual ev_void _notifyLayerRemoved_impl(EarthView::World::Graphic::CSceneManager* pSceneMgr);
+					virtual ev_void _notifyLayerRemoved(EarthView::World::Graphic::CSceneManager* pSceneMgr);
+					/// <summary>
+					/// Globe刷新时调用的函数
+					/// </summary>
+					/// <param name=""></param>
+					/// <returns></returns>
+					virtual ev_void _notifyRefreshed( const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
 
 					/// <summary>
 					/// 序列化成xml文本
@@ -89,14 +95,8 @@ ev_private:
 					/// <param name="element">xml</param>
 					/// <returns></returns>
 					virtual ev_void fromXmlElement( _in EarthView::World::Core::CXmlElement& element);
-				ev_internal:
+				protected:
 					
-					/// <summary>
-					/// Globe刷新时调用的函数
-					/// </summary>
-					/// <param name=""></param>
-					/// <returns></returns>
-					virtual ev_void _notifyRefreshed_impl( const EarthView::World::Graphic::CCamera* camera,EarthView::World::Spatial3D::Atlas::LayerRefreshFactor updateType);
 					
 				private:
 					/// <summary>

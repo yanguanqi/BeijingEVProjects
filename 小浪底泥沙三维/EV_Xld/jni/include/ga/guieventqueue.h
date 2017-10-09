@@ -205,36 +205,36 @@ namespace EarthView
 					/// <param name="time">事件发生时的时间</param>
 					/// <returns></returns>
 					ev_void keyRelease(_in ev_int32 key,_in ev_int32 virtualKey,_in ev_real64 time);
-					///// <summary>
-					///// 处理touchBegan事件
-					///// </summary>
-					///// <param name="id">点的ＩＤ</param>
-					///// <param name="phase">触摸的类型</param>
-					///// <param name="x">触摸点的Ｘ坐标</param>
-					///// <param name="y">触摸点的Ｙ坐标</param>
-					///// <param name="time">事件发生时的时间</param>
-					///// <returns></returns>
-					//ev_void touchBegan(_in ev_uint32 id,_in EarthView::World::Spatial::SystemUI::GUITouchPhase phase,_in ev_real32 x,_in ev_real32 y,_in ev_real64 time);
-					///// <summary>
-					///// 处理touchMove事件
-					///// </summary>
-					///// <param name="id">点的ＩＤ</param>
-					///// <param name="phase">触摸的类型</param>
-					///// <param name="x">触摸点的Ｘ坐标</param>
-					///// <param name="y">触摸点的Ｙ坐标</param>
-					///// <param name="time">事件发生时的时间</param>
-					///// <returns></returns>
-					//ev_void touchMove(_in ev_uint32 id,_in EarthView::World::Spatial::SystemUI::GUITouchPhase phase,_in ev_real32 x,_in ev_real32 y,_in ev_real64 time);
-					///// <summary>
-					///// 处理touchEnded事件
-					///// </summary>
-					///// <param name="id">点的ＩＤ</param>
-					///// <param name="phase">触摸的类型</param>
-					///// <param name="x">触摸点的Ｘ坐标</param>
-					///// <param name="y">触摸点的Ｙ坐标</param>
-					///// <param name="time">事件发生时的时间</param>
-					///// <returns></returns>
-					//ev_void touchEnded(_in ev_uint32 id,_in EarthView::World::Spatial::SystemUI::GUITouchPhase phase,_in ev_real32 x,_in ev_real32 y,_in ev_uint32 tap_count,_in ev_real64 time);
+					/// <summary>
+					/// 处理touchBegan事件
+					/// </summary>
+					/// <param name="id">点的ＩＤ</param>
+					/// <param name="phase">触摸的类型</param>
+					/// <param name="x">触摸点的Ｘ坐标</param>
+					/// <param name="y">触摸点的Ｙ坐标</param>
+					/// <param name="time">事件发生时的时间</param>
+					/// <returns></returns>
+					ev_void touchBegan(_in ev_uint32 id,_in EarthView::World::Spatial::SystemUI::GUITouchPhase phase,_in ev_real32 x,_in ev_real32 y,_in ev_real64 time);
+					/// <summary>
+					/// 处理touchMove事件
+					/// </summary>
+					/// <param name="id">点的ＩＤ</param>
+					/// <param name="phase">触摸的类型</param>
+					/// <param name="x">触摸点的Ｘ坐标</param>
+					/// <param name="y">触摸点的Ｙ坐标</param>
+					/// <param name="time">事件发生时的时间</param>
+					/// <returns></returns>
+					ev_void touchMove(_in ev_uint32 id,_in EarthView::World::Spatial::SystemUI::GUITouchPhase phase,_in ev_real32 x,_in ev_real32 y,_in ev_real64 time);
+					/// <summary>
+					/// 处理touchEnded事件
+					/// </summary>
+					/// <param name="id">点的ＩＤ</param>
+					/// <param name="phase">触摸的类型</param>
+					/// <param name="x">触摸点的Ｘ坐标</param>
+					/// <param name="y">触摸点的Ｙ坐标</param>
+					/// <param name="time">事件发生时的时间</param>
+					/// <returns></returns>
+					ev_void touchEnded(_in ev_uint32 id,_in EarthView::World::Spatial::SystemUI::GUITouchPhase phase,_in ev_real32 x,_in ev_real32 y,_in ev_uint32 tap_count,_in ev_real64 time);
 					/// <summary>
 					/// 处理窗体关闭事件
 					/// </summary>
@@ -332,42 +332,42 @@ namespace EarthView
 					{
 						keyRelease(key,virtualKey,0.0);
 					}
-					///// <summary>
-					///// 处理touchBegan事件
-					///// </summary>
-					///// <param name="id">点的ＩＤ</param>
-					///// <param name="phase">触摸的类型</param>
-					///// <param name="x">触摸点的Ｘ坐标</param>
-					///// <param name="y">触摸点的Ｙ坐标</param>
-					///// <returns></returns>
-					//ev_void touchBegan(_in ev_uint32 id,_in EarthView::World::Spatial::SystemUI::GUITouchPhase phase,_in ev_real32 x,_in ev_real32 y)
-					//{
-					//	touchBegan(id,phase,x,y,0.0);
-					//}
-					///// <summary>
-					///// 处理touchMove事件
-					///// </summary>
-					///// <param name="id">点的ＩＤ</param>
-					///// <param name="phase">触摸的类型</param>
-					///// <param name="x">触摸点的Ｘ坐标</param>
-					///// <param name="y">触摸点的Ｙ坐标</param>
-					///// <returns></returns>
-					//ev_void touchMove(_in ev_uint32 id,_in EarthView::World::Spatial::SystemUI::GUITouchPhase phase,_in ev_real32 x,_in ev_real32 y)
-					//{
-					//	touchMove(id,phase,x,y,0.0);
-					//}
-					///// <summary>
-					///// 处理touchEnded事件
-					///// </summary>
-					///// <param name="id">点的ＩＤ</param>
-					///// <param name="phase">触摸的类型</param>
-					///// <param name="x">触摸点的Ｘ坐标</param>
-					///// <param name="y">触摸点的Ｙ坐标</param>
-					///// <returns></returns>
-					//ev_void touchEnded(_in ev_uint32 id,_in EarthView::World::Spatial::SystemUI::GUITouchPhase phase,_in ev_real32 x,_in ev_real32 y,_in ev_uint32 tap_count)
-					//{
-					//	touchEnded(id,phase,x,y,tap_count,0.0);
-					//}
+					/// <summary>
+					/// 处理touchBegan事件
+					/// </summary>
+					/// <param name="id">点的ＩＤ</param>
+					/// <param name="phase">触摸的类型</param>
+					/// <param name="x">触摸点的Ｘ坐标</param>
+					/// <param name="y">触摸点的Ｙ坐标</param>
+					/// <returns></returns>
+					ev_void touchBegan(_in ev_uint32 id,_in EarthView::World::Spatial::SystemUI::GUITouchPhase phase,_in ev_real32 x,_in ev_real32 y)
+					{
+						touchBegan(id,phase,x,y,0.0);
+					}
+					/// <summary>
+					/// 处理touchMove事件
+					/// </summary>
+					/// <param name="id">点的ＩＤ</param>
+					/// <param name="phase">触摸的类型</param>
+					/// <param name="x">触摸点的Ｘ坐标</param>
+					/// <param name="y">触摸点的Ｙ坐标</param>
+					/// <returns></returns>
+					ev_void touchMove(_in ev_uint32 id,_in EarthView::World::Spatial::SystemUI::GUITouchPhase phase,_in ev_real32 x,_in ev_real32 y)
+					{
+						touchMove(id,phase,x,y,0.0);
+					}
+					/// <summary>
+					/// 处理touchEnded事件
+					/// </summary>
+					/// <param name="id">点的ＩＤ</param>
+					/// <param name="phase">触摸的类型</param>
+					/// <param name="x">触摸点的Ｘ坐标</param>
+					/// <param name="y">触摸点的Ｙ坐标</param>
+					/// <returns></returns>
+					ev_void touchEnded(_in ev_uint32 id,_in EarthView::World::Spatial::SystemUI::GUITouchPhase phase,_in ev_real32 x,_in ev_real32 y,_in ev_uint32 tap_count)
+					{
+						touchEnded(id,phase,x,y,tap_count,0.0);
+					}
 					/// <summary>
 					/// 处理窗体关闭事件
 					/// </summary>

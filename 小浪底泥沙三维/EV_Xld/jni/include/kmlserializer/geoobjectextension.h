@@ -383,10 +383,6 @@ ev_private:
 					ev_real64 getAltitude()const;
 					ev_real64 getOldAltitude()const;
 
-					void setNeedInterpolation(ev_bool needInterpolation);
-					ev_bool getNeedInterpolation()const;
-					ev_bool getOldNeedInterpolation()const;
-
 					void setAltitudeMode(EarthView::World::Spatial::Utility::EVAltitudeMode altitudemode);
 					EarthView::World::Spatial::Utility::EVAltitudeMode getAltitudeMode()const;
 					EarthView::World::Spatial::Utility::EVAltitudeMode getOldAltitudeMode()const;
@@ -661,15 +657,6 @@ ev_private:
 					ev_bool isOldPixelWidth();
 					ev_void setPixelWidth(ev_bool isPixelWidth);
 					//------------
-					ev_real32 getSymbolTextOffsetX();
-					ev_real32 getOldSymbolTextOffsetX();
-					void setSymbolTextOffsetX(ev_real32 x);
-					ev_real32 getSymbolTextOffsetY();
-					ev_real32 getOldSymbolTextOffsetY();
-					void setSymbolTextOffsetY(ev_real32 y);
-				private:
-					ev_real32 mTextOffsetX;
-					ev_real32 mTextOffsetY;
 
 				private:
 					ev_void updateLod();  //修改点的经纬度时自动更新lod
@@ -705,7 +692,6 @@ ev_private:
 					ev_real64 m_Longitude;
 					ev_real64 m_Altitude;
 					EarthView::World::Spatial::Utility::EVAltitudeMode m_AltitudeMode;
-					ev_bool m_NeedInterpolation;
 
 					EVString m_FontName;
 					ev_bool m_IsTextShadowEnabled;
@@ -891,7 +877,6 @@ ev_private:
 					/// <param name="">目标CGeoObjectExtension</param>
 					void cloneProperty(_out CGeoObjectExtension* ref_geoObject);
 					CGeoObjectExtension* clone();
-					
 				};
 			}
 		}
