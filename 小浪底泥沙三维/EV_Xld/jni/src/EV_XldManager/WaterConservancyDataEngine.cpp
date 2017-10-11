@@ -32,8 +32,6 @@ using namespace EarthView::World::Spatial::Geometry;
 using namespace EarthView::World::Spatial3D::Atlas;
 
 
-EarthView::World::Spatial::Geometry::ISpatialReference* EarthView::Xld::CWaterConservancyDataEngine::mpGlobalSR = NULL;
-
 void EarthView::Xld::CWaterConservancyDataEngine::GenerateTerrainModelStencil()
 {
 	EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->mpGlobeControl;
@@ -59,8 +57,6 @@ void EarthView::Xld::CWaterConservancyDataEngine::ReadTerrainModelStencil(EarthV
 
 EarthView::World::Spatial::Geometry::CPolygon * EarthView::Xld::CWaterConservancyDataEngine::GetRiverRange()
 {
-	if (!mpGlobalSR)
-		mpGlobalSR = CCoordinateSystemFactory::createCoordSys(GEO_Beijing54);
 	EarthView::World::Spatial::Geometry::CPolygon* polygon = new EarthView::World::Spatial::Geometry::CPolygon();
 	CCurveRing curvering;
 	EarthView::World::Spatial::Geometry::CLineString linestring;
@@ -72,13 +68,13 @@ EarthView::World::Spatial::Geometry::CPolygon * EarthView::Xld::CWaterConservanc
 		point.setZ(bounds->at(i)->z);
 		linestring.add(point, i);
 	}*/
-	linestring.setSpatialReferenceRef(mpGlobalSR);
+	linestring.setSpatialReferenceRef(CWorldSetting::GetSingtonPtr()->mpGlobeSpatialReference);
 	linestring.update();
 	curvering.add(linestring, 0);
 	curvering.update();
 	polygon->addExteriorRing(curvering);
 	polygon->update();
-	polygon->setSpatialReferenceRef(mpGlobalSR);
+	polygon->setSpatialReferenceRef(CWorldSetting::GetSingtonPtr()->mpGlobeSpatialReference);
 	polygon->update();
 	return polygon;
 }

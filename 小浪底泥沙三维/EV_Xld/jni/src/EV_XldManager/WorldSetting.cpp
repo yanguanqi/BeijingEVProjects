@@ -1,5 +1,7 @@
 #include "WorldSetting.h"
-#include "..\..\include\globecontrol\globecontrol.h"
+#include "globecontrol\globecontrol.h"
+#include "spatialobject\coordinatesystem\coordinatefactory.h"
+#include "spatialobject\coordinatesystem\coordinatesysenumtype.h"
 
 
 
@@ -20,6 +22,8 @@ EarthView::Xld::CWorldSetting::CWorldSetting()
 	this->mpAppDataSource = new EarthView::World::Utilities::AppDataSource();
 	this->mpDataSourceOption = new EarthView::World::Utilities::DataSourceOption();
 	this->mpKmlTreeManager = new EarthView::World::Spatial3DProxy::KmlManager::CKmlTreeManager();
+	this->mpGlobeSpatialReference = EarthView::World::Spatial::Utility::CCoordinateSystemFactory::createCoordSys(EarthView::World::Spatial::Utility::GEO_Beijing54);
+	this->mpGISDataSpatialReference = EarthView::World::Spatial::Utility::CCoordinateSystemFactory::createCoordSys(EarthView::World::Spatial::Utility::Beijing_1954_Gauss_Kruger_Zone_19N);
 }
 
 EarthView::Xld::CWorldSetting::~CWorldSetting()

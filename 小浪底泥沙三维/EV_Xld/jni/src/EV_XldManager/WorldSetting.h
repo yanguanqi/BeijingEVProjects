@@ -32,6 +32,8 @@ namespace EarthView
 			EarthView::World::Utilities::AppDataSource* mpAppDataSource;
 			EarthView::World::Utilities::DataSourceOption* mpDataSourceOption;
 			EarthView::World::Spatial3DProxy::KmlManager::CKmlTreeManager* mpKmlTreeManager;
+			EarthView::World::Spatial::Geometry::ISpatialReference* mpGlobeSpatialReference;
+			EarthView::World::Spatial::Geometry::ISpatialReference* mpGISDataSpatialReference;
 			void Initialize(EarthView::World::Spatial3D::Controls::CGlobeControl* gc, EVString runtimePath);
 		protected:
 			static EarthView::Xld::CWorldSetting* mpSinglton;

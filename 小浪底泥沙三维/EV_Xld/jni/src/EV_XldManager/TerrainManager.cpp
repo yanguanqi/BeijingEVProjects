@@ -19,6 +19,7 @@
 #include "spatialobject\coordinatesystem\coordinatefactory.h"
 #include "spatialobject/coordinatesystem/transformation.h"
 #include "BillboardManager.h"
+#include "WorldSetting.h"
 
 using namespace EarthView::World::Spatial::Math;
 using namespace EarthView::World::Geometry3D;
@@ -202,8 +203,8 @@ void EarthView::Xld::RenderLib::CTerrainManager::CreateTerrain(const EVString& t
 	}
 	//坐标系转换北京54平面6度带投影经线110度，投影至北京54经纬度
 	CCoordinateSystemFactory objCreateFactory;
-	CSpatialReference*pSpatialRef = objCreateFactory.createCoordSys(Beijing_1954_Gauss_Kruger_Zone_19N);
-	CSpatialReference*pSpatialRef2 = objCreateFactory.createCoordSys(GEO_Beijing54);
+	CSpatialReference* pSpatialRef = (CSpatialReference*) EarthView::Xld::CWorldSetting::GetSingtonPtr()->mpGISDataSpatialReference;
+	CSpatialReference* pSpatialRef2 = (CSpatialReference*)EarthView::Xld::CWorldSetting::GetSingtonPtr()->mpGlobeSpatialReference;
 	CCoordinateTransformation transformationObj;
 	transformationObj.setSourceCS(pSpatialRef);
 	transformationObj.setTargetCS(pSpatialRef2);

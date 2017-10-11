@@ -84,6 +84,8 @@ void EarthView::Xld::RenderLib::CWaterManager::CreateKMLWaterSurface(EVString km
 						if (kmlObjName == systemwatersurfaceName)
 						{
 							this->mpKMLWaterSurface = rootParent->getGeoObjects().at(j);
+							this->mpKMLWaterSurface->GeoObjectExtAttr.setVisible(true);
+							EarthView::Xld::CWorldSetting::GetSingtonPtr()->mpKmlTreeManager->updateKmlObject(mpKMLWaterSurface, rootParent);
 							isExistWaterFace = true;
 						}
 					}
