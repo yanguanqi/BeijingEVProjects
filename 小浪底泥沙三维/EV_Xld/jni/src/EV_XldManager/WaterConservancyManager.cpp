@@ -3,6 +3,9 @@
 #include "BillboardManager.h"
 #include "QtCore\QTextCodec"
 #include "AnalysisToolManager.h"
+#include "WaterManager.h"
+#include "WorldSetting.h"
+
 using namespace EarthView::XldManager;
 
 EarthView::XldManager::CWaterConservancyManager* CWaterConservancyManager::mpSingleton = NULL;
@@ -19,9 +22,10 @@ EarthView::XldManager::CWaterConservancyManager::~CWaterConservancyManager()
 {
 }
 
-void EarthView::XldManager::CWaterConservancyManager::Initialise(EarthView::World::Spatial3D::Controls::CGlobeControl * ref_globecontrol)
+void EarthView::XldManager::CWaterConservancyManager::Initialise(EarthView::World::Spatial3D::Controls::CGlobeControl * ref_globecontrol,EVString& runtimePath)
 {
 	mpGlobeControl = ref_globecontrol;
+	EarthView::Xld::CWorldSetting::GetSingtonPtr()->Initialize(mpGlobeControl, runtimePath);
 	EarthView::World::Graphic::CResourceGroupManager* resourceGM = EarthView::World::Graphic::CResourceGroupManager::getSingletonPtr();
 	EVString folder;
 	CDirectory::getCurrentDirectory(folder);
@@ -32,6 +36,7 @@ void EarthView::XldManager::CWaterConservancyManager::Initialise(EarthView::Worl
 		resourceGM->addResourceLocation(folder, "FileSystem", "Resource");
 		resourceGM->initialiseResourceGroup("Resource");
 	}
+	
 }
 
 void EarthView::XldManager::CWaterConservancyManager::CreateTerrain(const EVString& grdFileName)
@@ -62,6 +67,22 @@ void EarthView::XldManager::CWaterConservancyManager::MarkPosistion(const EVStri
 
 void EarthView::XldManager::CWaterConservancyManager::CreateWaterSurface(const ev_real64 & waterHeight)
 {
+	EarthView::Xld::RenderLib::CWaterManager::GetSingletonPtr()->CreateWaterSurface(waterHeight);
+}
+
+void EarthView::XldManager::CWaterConservancyManager::SetWaterSurfaceVisible(const ev_bool & isVisible)
+{
+	EarthView::Xld::RenderLib::CWaterManager::GetSingletonPtr()->SetWaterSurfaceVisible(isVisible);
+}
+
+void EarthView::XldManager::CWaterConservancyManager::SetWaterLineHeight(const ev_real64 & waterLineHeight)
+{
+	EarthView::Xld::RenderLib::CWaterManager::GetSingletonPtr()->SetWaterSurfaceHeight(waterLineHeight);
+}
+
+void EarthView::XldManager::CWaterConservancyManager::DeleteWaterSurface(const ev_bool& isSure)
+{
+	EarthView::Xld::RenderLib::CWaterManager::GetSingletonPtr()->DeleteWaterSurface(isSure);
 }
 
 void EarthView::XldManager::CWaterConservancyManager::SetSectionQueryEnable(const ev_bool & isEnable)

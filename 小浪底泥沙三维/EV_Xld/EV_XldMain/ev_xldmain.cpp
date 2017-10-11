@@ -8,6 +8,7 @@
 #include <QtGui\QStandardItem>
 #include "QStandardItemModel"
 #include "QTextCodec"
+int EV_XldMain::waterHeight = 219;
 EV_XldMain::EV_XldMain(QWidget *parent, Qt::WFlags flags)
 	: QMainWindow(parent, flags)
 {
@@ -35,6 +36,12 @@ EV_XldMain::EV_XldMain(QWidget *parent, Qt::WFlags flags)
 	connect(ui.treeWidget, SIGNAL(itemClicked(QTreeWidgetItem *item, int column)), this, SLOT(treeViewSelected(QTreeWidgetItem *item, int column)));
 	connect(ui.actionDrawRect, SIGNAL(triggered()), this, SLOT(DrawRect()));
 	connect(ui.actionDrawPolyline, SIGNAL(triggered()), this, SLOT(DrawPolyline()));
+	connect(ui.actionRenderWater, SIGNAL(triggered()), this, SLOT(RenderWater()));
+	connect(ui.actionRaiseWater, SIGNAL(triggered()), this, SLOT(IncreaseWater()));
+	connect(ui.actionDecreaseWater, SIGNAL(triggered()), this, SLOT(DecreaseWater()));
+	connect(ui.actionShowWater, SIGNAL(triggered()), this, SLOT(ShowWater()));
+	connect(ui.actionHideWater, SIGNAL(triggered()), this, SLOT(HideWater()));
+	connect(ui.actionDeleteWater, SIGNAL(triggered()), this, SLOT(DeleteWater()));
 	currrentName = "";
 	model = NULL;
 }
@@ -63,7 +70,8 @@ void EV_XldMain::GrdToRenderTerrain()
 }
 void EV_XldMain::slotGlobeOpened(GlobeWidget * globeWidget)
 {
-	EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->Initialise(ui.globeWidget->getGlobeControl());
+	EVString path = "D:\\EVProjects\\BeijingEVProjects\\Ð¡ÀËµ×ÄàÉ³ÈýÎ¬\\EV_Xld\\bin64";
+	EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->Initialise(ui.globeWidget->getGlobeControl(), path);
 }
 void EV_XldMain::SliderValueChanged(int value)
 {
@@ -94,6 +102,30 @@ void EV_XldMain::DrawRect()
 void EV_XldMain::DrawPolyline()
 {
 	EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->DrawPolylineBounds();
+}
+void EV_XldMain::RenderWater()
+{
+	EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->CreateWaterSurface(waterHeight);
+}
+void EV_XldMain::IncreaseWater()
+{
+	EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->SetWaterLineHeight(this->waterHeight += 1);
+}
+void EV_XldMain::DecreaseWater()
+{
+	EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->SetWaterLineHeight(this->waterHeight -= 1);
+}
+void EV_XldMain::ShowWater()
+{
+	EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->SetWaterSurfaceVisible(true);
+}
+void EV_XldMain::HideWater()
+{
+	EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->SetWaterSurfaceVisible(false);
+}
+void EV_XldMain::DeleteWater()
+{
+	EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->DeleteWaterSurface(true);
 }
 void EV_XldMain::ReadGrd()
 {

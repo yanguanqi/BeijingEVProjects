@@ -15,6 +15,7 @@ EarthView::Xld::RenderableObject::CTerrainMovable::CTerrainMovable(EVString terr
 
 EarthView::Xld::RenderableObject::CTerrainMovable::~CTerrainMovable()
 {
+	//mpGlobeControl->getScene()->getS
 	this->mpGlobeControl = NULL;
 	if (mpTestSurfaceRenderable)
 	{
@@ -74,7 +75,7 @@ void EarthView::Xld::RenderableObject::CTerrainMovable::buildSurfaceBuffer(const
 		mpTestSurfaceRenderable->getRenderOperation()->vertexData->vertexDeclaration->getVertexSize(0), mpTestSurfaceRenderable->getRenderOperation()->vertexData->vertexCount,
 		CHardwareBuffer::HBU_DYNAMIC_WRITE_ONLY_DISCARDABLE);
 	mpTestSurfaceRenderable->getRenderOperation()->vertexData->vertexBufferBinding->setBinding(0, boardVertexBuffer);
-	
+
 	float* lockPtr = static_cast<float*>(boardVertexBuffer->lock(0, boardVertexBuffer->getSizeInBytes(), CHardwareBuffer::HBL_DISCARD));
 	//RGBA* pCol;
 	CVector3 pos;

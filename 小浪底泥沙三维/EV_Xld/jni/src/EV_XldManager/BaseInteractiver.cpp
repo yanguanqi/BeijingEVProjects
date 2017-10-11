@@ -24,6 +24,8 @@ EarthView::Xld::RenderLib::Base::CBaseInteractiver::CBaseInteractiver(EarthView:
 	this->mEvents[1] = eventEnable[1];
 	this->mEvents[2] = eventEnable[2];
 	this->mEvents[3] = eventEnable[3];
+	this->mpEvent = NULL;
+	this->mpEventObject = NULL;
 	this->mpGlobeControl = globeControl;
 	this->Load();
 }
@@ -44,6 +46,8 @@ EarthView::Xld::RenderLib::Base::CBaseInteractiver::CBaseInteractiver(EarthView:
 	this->mLastMouseDownScreenPos = CVector2::ZERO;
 	this->mMousePickState = ToFirst;
 	this->mpGlobeControl = globeControl;
+	this->mpEvent = NULL;
+	this->mpEventObject = NULL;
 	this->Load();
 }
 
@@ -104,16 +108,34 @@ vector<EarthView::World::Spatial::Math::CVector3*>* EarthView::Xld::RenderLib::B
 	return &(this->mHandlePoints);
 }
 
+void EarthView::Xld::RenderLib::Base::CBaseInteractiver::SetEvent(EarthView::World::Core::CEvent * event)
+{
+	this->mpEvent = event;
+}
+
+void EarthView::Xld::RenderLib::Base::CBaseInteractiver::SetEventObject(EarthView::World::Core::CEventObject * eventObj)
+{
+	this->mpEventObject = eventObj;
+}
+
 void EarthView::Xld::RenderLib::Base::CBaseInteractiver::Load()
 {
-	if(this->mpGlobeControl)
-		this->mpGlobeControl->addGuiHandler(this);
+	if (!mIsLoaded) 
+	{
+		if (this->mpGlobeControl)
+			this->mpGlobeControl->addGuiHandler(this);
+		this->mIsLoaded = true;
+	}
 }
 
 void EarthView::Xld::RenderLib::Base::CBaseInteractiver::Unload()
 {
-	if (this->mpGlobeControl)
-		this->mpGlobeControl->removeHandler(this);
+	if (mIsLoaded)
+	{
+		if (this->mpGlobeControl)
+			this->mpGlobeControl->removeHandler(this);
+		this->mIsLoaded = false;
+	}
 }
 
 void EarthView::Xld::RenderLib::Base::CBaseInteractiver::SetInteractiveEnable(ev_bool mouseDown, ev_bool mouseUp, ev_bool mouseMove, ev_bool mouseDoubleClick)
@@ -168,10 +190,14 @@ void EarthView::Xld::RenderLib::Base::CBaseInteractiver::HandlePoint(EarthView::
 void EarthView::Xld::RenderLib::Base::CBaseInteractiver::EndPickOver()
 {
 	this->mMousePickState = Over;
-	EarthView::World::Core::CEventDispatcher::sendEvent(mpEventObj, mpEvent);
+	if (mpEventObject && mpEvent)
+	{
+		EarthView::World::Core::CEventDispatcher::sendEvent(mpEventObject, mpEvent);
+		this->Unload();
+	}
 }
 
 void EarthView::Xld::RenderLib::Base::CBaseInteractiver::AddPoint(EarthView::World::Spatial::Math::CVector3* handledPos)
 {
-	mHandlePoints.push_back(handledPos);
+	mHandlePoints.push_back(new CVector3(handledPos->x,handledPos->y,handledPos->z));
 }

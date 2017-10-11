@@ -25,7 +25,14 @@ namespace EarthView
 					virtual ev_bool handleEvent(_in EarthView::World::Spatial::SystemUI::CGUIEvent* guiEvent) override;
 
 					vector<EarthView::World::Spatial::Math::CVector3*>* GetHandlePoints();
+
+					void SetEvent(EarthView::World::Core::CEvent* event);
+
+					void SetEventObject(EarthView::World::Core::CEventObject* eventObj);
+
 				protected:
+					EarthView::World::Core::CEvent* mpEvent;
+					EarthView::World::Core::CEventObject* mpEventObject;
 					EarthView::World::Graphic::CTimer* mpTimer;
 					ev_bool mIsDragging ;
 					ev_bool mIsLoaded ;
@@ -33,8 +40,6 @@ namespace EarthView
 					EarthView::Xld::RenderLib::CMousePickState mMousePickState;
 					EarthView::World::Spatial::Math::CVector2 mLastMouseDownScreenPos;
 					ev_uint32 mLastMouseUpTime;
-					EarthView::World::Core::CEventObject* mpEventObj;
-					EarthView::World::Core::CEvent* mpEvent;
 					/// <summary>
 					/// 该对象指示鼠标上一次采点的地理坐标
 					/// </summary>

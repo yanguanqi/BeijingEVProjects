@@ -23,11 +23,19 @@ public:
 		void GrdVisible(int g);
 		void DrawRect();
 		void DrawPolyline();
+		void RenderWater();
+		void IncreaseWater();
+		void DecreaseWater();
+		void ShowWater();
+		void HideWater();
+		void DeleteWater();
 		void EV_XldMain::treeViewSelected(QTreeWidgetItem *item, int column);
+
 private:
 	Ui::EV_XldMainClass ui;
 	QStandardItemModel* model;
 	QString currrentName;
+	static int waterHeight;
 };
 
 #endif // EV_XLDMAIN_H

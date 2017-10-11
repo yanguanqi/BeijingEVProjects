@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ev_xldmain.ui'
 **
-** Created: Sat Oct 7 13:43:28 2017
+** Created: Wed Oct 11 10:54:15 2017
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -25,8 +25,10 @@
 #include <QtGui/QTreeView>
 #include <QtGui/QTreeWidget>
 #include <QtGui/QWidget>
+#include "qtplugins/atlaswidget.h"
 #include "qtplugins/evworkspace.h"
 #include "qtplugins/globewidget.h"
+#include "qtplugins/kmlwidget.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -39,6 +41,12 @@ public:
     QAction *actionGrdRender;
     QAction *actionDrawRect;
     QAction *actionDrawPolyline;
+    QAction *actionRenderWater;
+    QAction *actionRaiseWater;
+    QAction *actionDecreaseWater;
+    QAction *actionHideWater;
+    QAction *actionShowWater;
+    QAction *actionDeleteWater;
     QWidget *centralWidget;
     EVWorkspace *evWorkspace;
     GlobeWidget *globeWidget;
@@ -46,9 +54,12 @@ public:
     QTreeView *treeView;
     QCheckBox *checkBox;
     QSlider *horizontalSlider;
+    AtlasWidget *atlasWidget;
+    KmlWidget *kmlWidget;
     QMenuBar *menuBar;
     QMenu *menuGrd;
     QMenu *menu;
+    QMenu *menu_2;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -69,6 +80,18 @@ public:
         actionDrawRect->setObjectName(QString::fromUtf8("actionDrawRect"));
         actionDrawPolyline = new QAction(EV_XldMainClass);
         actionDrawPolyline->setObjectName(QString::fromUtf8("actionDrawPolyline"));
+        actionRenderWater = new QAction(EV_XldMainClass);
+        actionRenderWater->setObjectName(QString::fromUtf8("actionRenderWater"));
+        actionRaiseWater = new QAction(EV_XldMainClass);
+        actionRaiseWater->setObjectName(QString::fromUtf8("actionRaiseWater"));
+        actionDecreaseWater = new QAction(EV_XldMainClass);
+        actionDecreaseWater->setObjectName(QString::fromUtf8("actionDecreaseWater"));
+        actionHideWater = new QAction(EV_XldMainClass);
+        actionHideWater->setObjectName(QString::fromUtf8("actionHideWater"));
+        actionShowWater = new QAction(EV_XldMainClass);
+        actionShowWater->setObjectName(QString::fromUtf8("actionShowWater"));
+        actionDeleteWater = new QAction(EV_XldMainClass);
+        actionDeleteWater->setObjectName(QString::fromUtf8("actionDeleteWater"));
         centralWidget = new QWidget(EV_XldMainClass);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         evWorkspace = new EVWorkspace(centralWidget);
@@ -95,6 +118,12 @@ public:
         horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
         horizontalSlider->setGeometry(QRect(850, 500, 511, 22));
         horizontalSlider->setOrientation(Qt::Horizontal);
+        atlasWidget = new AtlasWidget(centralWidget);
+        atlasWidget->setObjectName(QString::fromUtf8("atlasWidget"));
+        atlasWidget->setGeometry(QRect(940, 520, 211, 316));
+        kmlWidget = new KmlWidget(centralWidget);
+        kmlWidget->setObjectName(QString::fromUtf8("kmlWidget"));
+        kmlWidget->setGeometry(QRect(1177, 520, 181, 180));
         EV_XldMainClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(EV_XldMainClass);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -103,6 +132,8 @@ public:
         menuGrd->setObjectName(QString::fromUtf8("menuGrd"));
         menu = new QMenu(menuBar);
         menu->setObjectName(QString::fromUtf8("menu"));
+        menu_2 = new QMenu(menuBar);
+        menu_2->setObjectName(QString::fromUtf8("menu_2"));
         EV_XldMainClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(EV_XldMainClass);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -113,12 +144,19 @@ public:
 
         menuBar->addAction(menuGrd->menuAction());
         menuBar->addAction(menu->menuAction());
+        menuBar->addAction(menu_2->menuAction());
         menuGrd->addAction(actionReadGrd);
         menuGrd->addAction(actionGrd2GTiff);
         menuGrd->addAction(actionGrdLOD);
         menuGrd->addAction(actionGrdRender);
         menu->addAction(actionDrawRect);
         menu->addAction(actionDrawPolyline);
+        menu_2->addAction(actionRenderWater);
+        menu_2->addAction(actionRaiseWater);
+        menu_2->addAction(actionDecreaseWater);
+        menu_2->addAction(actionHideWater);
+        menu_2->addAction(actionShowWater);
+        menu_2->addAction(actionDeleteWater);
 
         retranslateUi(EV_XldMainClass);
 
@@ -134,12 +172,19 @@ public:
         actionGrdRender->setText(QApplication::translate("EV_XldMainClass", "Grd\345\234\260\345\275\242\346\270\262\346\237\223", 0, QApplication::UnicodeUTF8));
         actionDrawRect->setText(QApplication::translate("EV_XldMainClass", "\347\224\273\347\237\251\345\275\242", 0, QApplication::UnicodeUTF8));
         actionDrawPolyline->setText(QApplication::translate("EV_XldMainClass", "\347\224\273\345\244\232\350\276\271\345\275\242", 0, QApplication::UnicodeUTF8));
+        actionRenderWater->setText(QApplication::translate("EV_XldMainClass", "\346\270\262\346\237\223\346\260\264\351\235\242", 0, QApplication::UnicodeUTF8));
+        actionRaiseWater->setText(QApplication::translate("EV_XldMainClass", "\346\212\254\351\253\230", 0, QApplication::UnicodeUTF8));
+        actionDecreaseWater->setText(QApplication::translate("EV_XldMainClass", "\351\231\215\344\275\216", 0, QApplication::UnicodeUTF8));
+        actionHideWater->setText(QApplication::translate("EV_XldMainClass", "\351\232\220\350\227\217", 0, QApplication::UnicodeUTF8));
+        actionShowWater->setText(QApplication::translate("EV_XldMainClass", "\346\230\276\347\244\272", 0, QApplication::UnicodeUTF8));
+        actionDeleteWater->setText(QApplication::translate("EV_XldMainClass", "\345\210\240\351\231\244", 0, QApplication::UnicodeUTF8));
         evWorkspace->setProperty("projectName", QVariant(QApplication::translate("EV_XldMainClass", "xld.evproj", 0, QApplication::UnicodeUTF8)));
         evWorkspace->setProperty("localProjectName", QVariant(QApplication::translate("EV_XldMainClass", "D:/Projects/XiaolangdiSystem/System/EV_Xld/bin64/MyData/xld.evproj", 0, QApplication::UnicodeUTF8)));
         globeWidget->setProperty("globeName", QVariant(QApplication::translate("EV_XldMainClass", "\346\226\260\345\234\272\346\231\2571", 0, QApplication::UnicodeUTF8)));
         checkBox->setText(QApplication::translate("EV_XldMainClass", "CheckBox", 0, QApplication::UnicodeUTF8));
         menuGrd->setTitle(QApplication::translate("EV_XldMainClass", "Grd\346\226\207\344\273\266", 0, QApplication::UnicodeUTF8));
         menu->setTitle(QApplication::translate("EV_XldMainClass", "\345\212\237\350\203\275\344\272\244\344\272\222", 0, QApplication::UnicodeUTF8));
+        menu_2->setTitle(QApplication::translate("EV_XldMainClass", "\346\260\264\351\235\242", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

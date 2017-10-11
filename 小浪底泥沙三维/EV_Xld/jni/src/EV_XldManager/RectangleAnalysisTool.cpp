@@ -55,7 +55,7 @@ bool EarthView::Xld::AnalysisTool::CRectangleAnalysisTool::HandleMouseUpEvent(_i
 
 bool EarthView::Xld::AnalysisTool::CRectangleAnalysisTool::HandleMouseMoveEvent(_in EarthView::World::Spatial::SystemUI::CGUIEvent* guiEvent)
 {
-	if (this->mMousePickState != CMousePickState::Over && this->mMousePickState != CMousePickState::ToFirst)
+	if (this->mMousePickState != Over && this->mMousePickState != ToFirst)
 	{
 		if (guiEvent->getX() == mLastMouseDownScreenPos.x && guiEvent->getY() == mLastMouseDownScreenPos.y)
 			return false;
@@ -70,7 +70,7 @@ bool EarthView::Xld::AnalysisTool::CRectangleAnalysisTool::HandleMouseMoveEvent(
 
 void EarthView::Xld::AnalysisTool::CRectangleAnalysisTool::HandlePoint(EarthView::World::Spatial::Math::CVector3* vPos)
 {
-	if (this->mMousePickState == CMousePickState::ToSecond)
+	if (this->mMousePickState == ToSecond)
 	{
 		
 		this->mLastGeoPos.x = vPos->x;
@@ -78,7 +78,7 @@ void EarthView::Xld::AnalysisTool::CRectangleAnalysisTool::HandlePoint(EarthView
 		this->mLastGeoPos.z = vPos->z;
 		this->mpMoveLine->SetCenter(mLastGeoPos);
 	}
-	else if (this->mMousePickState == CMousePickState::ToThird)
+	else if (this->mMousePickState == ToThird)
 	{
 		//Vector3[] vectors = EarthView.UPGIS.RenderLib.GeometryExtensionLib.GetRectangle(m_lastGeoPos, point);//获得最大最小经纬度
 		this->mpMoveLine->SetCenter(*vPos);

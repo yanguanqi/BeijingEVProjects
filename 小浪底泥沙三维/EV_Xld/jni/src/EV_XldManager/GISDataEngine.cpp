@@ -117,6 +117,16 @@ void EarthView::Xld::CGISDataEngine::SplitGrdFile(_in const EVString& srcFile, _
 	
 }
 
+EarthView::World::Spatial::Math::CVector3 EarthView::Xld::CGISDataEngine::PrjToGeo(EarthView::World::Spatial::Math::CVector3 & vec)
+{
+	return EarthView::World::Spatial::Math::CVector3();
+}
+
+EarthView::World::Spatial::Math::CVector3 EarthView::Xld::CGISDataEngine::GeoToPrj(EarthView::World::Spatial::Math::CVector3 & vec)
+{
+	return EarthView::World::Spatial::Math::CVector3();
+}
+
 EarthView::GISDataType::CGrdData* EarthView::Xld::CGISDataEngine::ReadGrd(_in const EVString& srcFileName)
 {
 	QFile* pFile = new QFile(srcFileName.c_str());

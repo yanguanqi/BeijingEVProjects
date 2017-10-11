@@ -17,5 +17,5 @@ ev_bool EarthView::Xld::AnalysisTool::CAnalysisEventObject::onEvent(_in EarthVie
 
 void EarthView::Xld::AnalysisTool::CAnalysisEventObject::onCustomEvent(_in EarthView::World::Core::CEvent *e)
 {
-	throw std::logic_error("The method or operation is not implemented.");
+	
 }

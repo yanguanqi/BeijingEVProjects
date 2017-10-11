@@ -8,7 +8,7 @@ using namespace EarthView::World::Spatial::Math;
 
 EarthView::Xld::AnalysisTool::CPolygonAnalysisTool::CPolygonAnalysisTool(EarthView::World::Spatial3D::Controls::CGlobeControl * globeControl) :EarthView::Xld::RenderLib::Base::CBaseInteractiver(globeControl)
 {
-	this->mpMoveLine = new EarthView::Xld::RenderLib::CMoveLine("PolygonAnalysisLine", globeControl, EarthView::Xld::RenderLib::CMoveLineType::Polygon);
+	this->mpMoveLine = new EarthView::Xld::RenderLib::CMoveLine("PolygonAnalysisLine", globeControl, EarthView::Xld::RenderLib::Polygon);
 
 }
 
@@ -24,28 +24,28 @@ bool EarthView::Xld::AnalysisTool::CPolygonAnalysisTool::HandleMouseUpEvent(_in 
 {
 	CBaseInteractiver::HandleMouseUpEvent(guiEvent);
 	if (this->mIsDragging) return false;
-	if (guiEvent->getButton() == EarthView::World::Spatial::SystemUI::CGUIEvent::GUIMouseButtonMask::LEFT_MOUSE_BUTTON)
+	if (guiEvent->getButton() == EarthView::World::Spatial::SystemUI::CGUIEvent::LEFT_MOUSE_BUTTON)
 	{
 		CMousePickState lastState = this->mMousePickState;
 		switch (this->mMousePickState)
 		{
-		case CMousePickState::ToFirst:
+		case ToFirst:
 		{
-			this->mMousePickState = CMousePickState::ToSecond;
+			this->mMousePickState = ToSecond;
 			break;
 		}
-		case CMousePickState::ToSecond:
+		case ToSecond:
 		{
-			this->mMousePickState = CMousePickState::ToThird;
+			this->mMousePickState = ToThird;
 			break;
 		}
-		case CMousePickState::ToThird:
+		case ToThird:
 		{
-			this->mMousePickState = CMousePickState::Picking;
+			this->mMousePickState = Picking;
 			break;
 		}
 		}
-		if (this->mMousePickState != CMousePickState::ToFirst && this->mMousePickState != CMousePickState::Over)
+		if (this->mMousePickState != ToFirst && this->mMousePickState !=Over)
 		{
 			ev_real64 lati = 0;
 			ev_real64 longi = 0;
@@ -62,7 +62,7 @@ bool EarthView::Xld::AnalysisTool::CPolygonAnalysisTool::HandleMouseUpEvent(_in 
 
 bool EarthView::Xld::AnalysisTool::CPolygonAnalysisTool::HandleMouseMoveEvent(_in EarthView::World::Spatial::SystemUI::CGUIEvent * guiEvent)
 {
-	if (this->mMousePickState != CMousePickState::Over && this->mMousePickState != CMousePickState::ToFirst)
+	if (this->mMousePickState != Over && this->mMousePickState != ToFirst)
 	{
 		if (guiEvent->getX() == this->mLastMouseDownScreenPos.x && guiEvent->getY() == this->mLastMouseDownScreenPos.y)
 			return false;
@@ -129,6 +129,9 @@ void EarthView::Xld::AnalysisTool::CPolygonAnalysisTool::HandlePoint(EarthView::
 
 bool EarthView::Xld::AnalysisTool::CPolygonAnalysisTool::HandleMouseDoubleClickEvent(_in EarthView::World::Spatial::SystemUI::CGUIEvent * guiEvent)
 {
-	return EarthView::Xld::RenderLib::Base::CBaseInteractiver::HandleMouseDoubleClickEvent(guiEvent);
+	//return EarthView::Xld::RenderLib::Base::CBaseInteractiver::HandleMouseDoubleClickEvent(guiEvent);
+	
+
+	return false;
 
 }

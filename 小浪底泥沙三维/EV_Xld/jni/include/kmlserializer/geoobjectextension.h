@@ -849,7 +849,6 @@ ev_private:
 					/// <summary>
 					/// 枚举定义 扩展的类型
 					/// </summary>
-
 					EarthView::World::Spatial::Kml::CGeoObjectExtensionAttribute GeoObjectExtAttr;
 				public:
 					CKmlWorkQueueState* WorkState;

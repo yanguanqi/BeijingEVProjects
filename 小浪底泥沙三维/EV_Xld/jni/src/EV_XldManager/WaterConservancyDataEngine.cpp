@@ -9,6 +9,18 @@
 #include "spatialobject\geometry\curvering.h"
 #include "spatialobject\geometry\point.h"
 #include "spatialobject\geometry\polygon.h"
+#include "geometry3d\iglobelayer.h"
+#include "spatial3dlayer\vectordbclampscenelayer.h"
+#include "spatialinterface\ifeature.h"
+#include "spatialinterface\ifeatureclass.h"
+#include "spatialobject\geometry\polyline.h"
+#include "spatial3dlayer\featuregrouplayer.h"
+#include "kmlserializer\geoobjectextension.h"
+#include "WaterManager.h"
+#include "BillboardManager.h"
+#include "spatial3dcalculator\spatialcalculator.h"
+#include "xld\WaterConservancyManager.h"
+
 
 using namespace EarthView::World::Core;
 using namespace EarthView::World::Spatial::Math;
@@ -16,13 +28,67 @@ using namespace EarthView::World::Graphic;
 using namespace EarthView::World::Geometry3D;
 using namespace EarthView::World::Spatial::Geometry;
 using namespace EarthView::World::Spatial::Utility;
-//EarthView::Xld::WaterConservancyDataEngine::WaterConservancyDataEngine(EarthView::World::Core::CNameValuePairList* pList)
-//{
-//
-//}
+using namespace EarthView::World::Spatial::Geometry;
+using namespace EarthView::World::Spatial3D::Atlas;
+
+
+EarthView::World::Spatial::Geometry::ISpatialReference* EarthView::Xld::CWaterConservancyDataEngine::mpGlobalSR = NULL;
 
 void EarthView::Xld::CWaterConservancyDataEngine::GenerateTerrainModelStencil()
 {
+	EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->mpGlobeControl;
+	EarthView::World::Spatial::Geometry::CEnvelope* env = EarthView::Xld::CWaterConservancyDataEngine::GetWaterSurfaceEnvelope();
+	EarthView::World::Spatial::Geometry::CPolygon* polygon = EarthView::Xld::CWaterConservancyDataEngine::GetRiverRange();
+	CVector3 minPos(env->getMinX(), env->getMinY(), env->getMinZ());
+	CVector3 maxPos(env->getMaxX(), env->getMaxY(), env->getMaxZ());
+	CVector3 minWrdPos = EarthView::World::Spatial3D::Utility::CSpatialCalculator::sphericalToCartesian(minPos.y, minPos.x, minPos.z + EarthView::World::Spatial::Math::CMath::EARTH_RADIUS);
+	CVector3 maxWrdPos = EarthView::World::Spatial3D::Utility::CSpatialCalculator::sphericalToCartesian(maxPos.y, maxPos.x, maxPos.z + EarthView::World::Spatial::Math::CMath::EARTH_RADIUS);
+	int longiCount = maxWrdPos.x*0.2 - minWrdPos.x*0.2;
+	int latiCount = maxWrdPos.y*0.2 - minWrdPos.y*0.2;
+	vector<vector<CVector3*> > wholeGrid(longiCount, vector<CVector3*>(latiCount));
+	for (int j = 0; j < longiCount; j++)
+		for (int k = 0; k < latiCount; k++)
+			wholeGrid[j][k] = new CVector3();
+
+}
+
+void EarthView::Xld::CWaterConservancyDataEngine::ReadTerrainModelStencil(EarthView::World::Spatial::Math::VertexList* verLst)
+{
+
+}
+
+EarthView::World::Spatial::Geometry::CPolygon * EarthView::Xld::CWaterConservancyDataEngine::GetRiverRange()
+{
+	if (!mpGlobalSR)
+		mpGlobalSR = CCoordinateSystemFactory::createCoordSys(GEO_Beijing54);
+	EarthView::World::Spatial::Geometry::CPolygon* polygon = new EarthView::World::Spatial::Geometry::CPolygon();
+	CCurveRing curvering;
+	EarthView::World::Spatial::Geometry::CLineString linestring;
+	/*for (ev_size_t i = 0; i < bounds->size(); i++)
+	{
+		CPoint point;
+		point.setX(bounds->at(i)->x);
+		point.setY(bounds->at(i)->y);
+		point.setZ(bounds->at(i)->z);
+		linestring.add(point, i);
+	}*/
+	linestring.setSpatialReferenceRef(mpGlobalSR);
+	linestring.update();
+	curvering.add(linestring, 0);
+	curvering.update();
+	polygon->addExteriorRing(curvering);
+	polygon->update();
+	polygon->setSpatialReferenceRef(mpGlobalSR);
+	polygon->update();
+	return polygon;
+}
+
+void EarthView::Xld::CWaterConservancyDataEngine::CreateStardardTerrain(_in EarthView::GISDataType::CGrdData * pData, _out EarthView::World::Geometry3D::CVertexVector * vertexVector, _out EarthView::World::Geometry3D::CIndexVector * indexVector)
+{
+	EarthView::World::Spatial::Geometry::CEnvelope* env = EarthView::Xld::CWaterConservancyDataEngine::GetWaterSurfaceEnvelope();
+	ev_real64 xStep = pData->GetXPix();
+	ev_real64 yStep = pData->GetYPix();
+
 }
 
 void EarthView::Xld::CWaterConservancyDataEngine::WriteTerrainCache(const EVString & fileName, const EVString & materialName, _in EarthView::World::Geometry3D::CVertexVector * vertexVector, _in EarthView::World::Geometry3D::CIndexVector * indexVector)
@@ -80,7 +146,6 @@ void EarthView::Xld::CWaterConservancyDataEngine::WriteTerrainCache(const EVStri
 	return;
 }
 
-
 void EarthView::Xld::CWaterConservancyDataEngine::ReadTerrainCache(const EVString & fileName, _out EVString materialName, _out EarthView::World::Geometry3D::CVertexVector * vertexVector, _out EarthView::World::Geometry3D::CIndexVector * indexVector)
 {
 	if (!CFile::exists(fileName))
@@ -135,28 +200,53 @@ void EarthView::Xld::CWaterConservancyDataEngine::ReadTerrainCache(const EVStrin
 	return;
 }
 
-void EarthView::Xld::CWaterConservancyDataEngine::WrtiteTerrainModelStencil(vector<EarthView::World::Spatial::Math::CVector3*>* bounds)
+EarthView::World::Spatial::Geometry::CEnvelope * EarthView::Xld::CWaterConservancyDataEngine::GetWaterSurfaceEnvelope()
 {
-	//if (!mpSR)
-	CSpatialReference* mpSR = CCoordinateSystemFactory::createCoordSys(GEO_WGS84);
-
-	CPolygon* polygon = new CPolygon();
-	CCurveRing curvering;
-	EarthView::World::Spatial::Geometry::CLineString linestring;
-	for (ev_size_t i = 0; i < bounds->size(); i++)
+	CFeatureGroupLayer* fg = ((EarthView::World::Spatial3D::CGeoSceneManager*)(EarthView::Xld::CWorldSetting::GetSingtonPtr()->mpGlobeControl->getSceneManager()))->getFeatureGroupLayer();
+	for (ev_uint32 i = 0; i < fg->getLayerCount(); i++)
 	{
-		CPoint point;
-		point.setX(bounds->at(i)->x);
-		point.setY(bounds->at(i)->y);
-		point.setZ(bounds->at(i)->z);
-		linestring.add(point, i);
+		IGlobeLayer* gl = fg->getLayer(0);
+		if (gl->getName() == "xldextent.shp")
+		{
+			CVectorDBClampSceneLayer* vl = dynamic_cast<CVectorDBClampSceneLayer*>(gl);
+			return new CEnvelope(vl->getGeoExtent());
+		}
 	}
-	linestring.setSpatialReferenceRef(mpSR);
-	linestring.update();
-	curvering.add(linestring, 0);
-	curvering.update();
-	polygon->addExteriorRing(curvering);
-	polygon->update();
-	polygon->setSpatialReferenceRef(mpSR);
-	polygon->update();
+	return NULL;
+}
+
+EarthView::World::Spatial::Math::VertexList* EarthView::Xld::CWaterConservancyDataEngine::CreateWaterSurfaceBounds(EVString layerName)
+{
+	CFeatureGroupLayer* fg = ((EarthView::World::Spatial3D::CGeoSceneManager*)(EarthView::Xld::CWorldSetting::GetSingtonPtr()->mpGlobeControl->getSceneManager()))->getFeatureGroupLayer();
+	VertexList* vertextList = new VertexList();
+	for (ev_int32 i = 0; i < fg->getLayerCount(); i++)
+	{
+		IGlobeLayer* gl = fg->getLayer(i);
+		if (gl->getName() == layerName)
+		{
+			CVectorDBClampSceneLayer* vl = dynamic_cast<CVectorDBClampSceneLayer*>(gl);
+			EarthView::World::Spatial::GeoDataset::IDataset* da = vl->getDataset();
+			EarthView::World::Spatial::GeoDataset::IFeatureClass* fc = dynamic_cast<EarthView::World::Spatial::GeoDataset::IFeatureClass*>(da);
+			EarthView::World::Spatial::GeoDataset::IFeature* feature = fc->getFeature(1);
+			const IGeometry* geo = feature->getGeometryRef();
+			const EarthView::World::Spatial::Geometry::CPolyline* polyline = dynamic_cast<const EarthView::World::Spatial::Geometry::CPolyline*> (geo);
+			if (polyline) 
+			{
+				EarthView::World::Spatial::Geometry::CLineString* linestr = polyline->toLineString(0);
+				int pointC = linestr->getCount();
+				for (int i = 0; i < pointC; i++)
+				{
+					CPoint* p = linestr->getPoint(i);
+					ev_real64 x = p->getX();
+					ev_real64 y = p->getY();
+					ev_real64 z = p->getZ();
+					CVector3 pos(x, y, z);
+					vertextList->push_back(pos);
+					delete p;
+				}
+			}
+			
+		}
+	}
+	return vertextList;
 }

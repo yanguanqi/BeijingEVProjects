@@ -100,6 +100,26 @@
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
+   <widget class="AtlasWidget" name="atlasWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>520</y>
+      <width>211</width>
+      <height>316</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="KmlWidget" name="kmlWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>1177</x>
+      <y>520</y>
+      <width>181</width>
+      <height>180</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -126,8 +146,20 @@
     <addaction name="actionDrawRect"/>
     <addaction name="actionDrawPolyline"/>
    </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>水面</string>
+    </property>
+    <addaction name="actionRenderWater"/>
+    <addaction name="actionRaiseWater"/>
+    <addaction name="actionDecreaseWater"/>
+    <addaction name="actionHideWater"/>
+    <addaction name="actionShowWater"/>
+    <addaction name="actionDeleteWater"/>
+   </widget>
    <addaction name="menuGrd"/>
    <addaction name="menu"/>
+   <addaction name="menu_2"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -168,6 +200,36 @@
     <string>画多边形</string>
    </property>
   </action>
+  <action name="actionRenderWater">
+   <property name="text">
+    <string>渲染水面</string>
+   </property>
+  </action>
+  <action name="actionRaiseWater">
+   <property name="text">
+    <string>抬高</string>
+   </property>
+  </action>
+  <action name="actionDecreaseWater">
+   <property name="text">
+    <string>降低</string>
+   </property>
+  </action>
+  <action name="actionHideWater">
+   <property name="text">
+    <string>隐藏</string>
+   </property>
+  </action>
+  <action name="actionShowWater">
+   <property name="text">
+    <string>显示</string>
+   </property>
+  </action>
+  <action name="actionDeleteWater">
+   <property name="text">
+    <string>删除</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -181,6 +243,17 @@
    <extends>QWidget</extends>
    <header>qtplugins/globewidget.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>AtlasWidget</class>
+   <extends>QWidget</extends>
+   <header>qtplugins/atlaswidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KmlWidget</class>
+   <extends>QWidget</extends>
+   <header>qtplugins/kmlwidget.h</header>
   </customwidget>
  </customwidgets>
  <resources>

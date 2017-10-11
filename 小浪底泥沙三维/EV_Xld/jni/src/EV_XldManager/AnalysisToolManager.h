@@ -5,6 +5,7 @@
 #include "core\global.h"
 #include "BaseInteractiver.h"
 
+
 namespace EarthView
 {
 	namespace Xld
@@ -25,6 +26,8 @@ namespace EarthView
 			void DrawStraightLine();
 
 			void DrawPolyline();
+
+			
 
 		private:
 			static CAnalysisToolManager* mpSingleton;
