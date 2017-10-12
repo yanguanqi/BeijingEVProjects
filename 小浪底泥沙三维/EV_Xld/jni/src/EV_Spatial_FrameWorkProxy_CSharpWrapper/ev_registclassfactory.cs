@@ -71,6 +71,14 @@ public static class EV_Spatial_FrameWorkProxy_ClassFactory
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Utilities::DataSourceOption_Create_DB", new EarthView.World.Utilities.DataSourceOptionCreateDbClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Utilities::DataSourceOption_Open", new EarthView.World.Utilities.DataSourceOptionOpenClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Utilities::DataSourceOption_Create", new EarthView.World.Utilities.DataSourceOptionCreateClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Controls::CEagleEyeControlAgent", new EarthView.World.Spatial2D.Controls.EagleEyeControlAgentClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Controls::CEagleEyeControlAgentProxy", new EarthView.World.Spatial2D.Controls.EagleEyeControlAgentClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Controls::IEagleEyeControlListener", new EarthView.World.Spatial2D.Controls.IeagleeyecontrollistenerClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Controls::IEagleEyeControlListenerProxy", new EarthView.World.Spatial2D.Controls.IeagleeyecontrollistenerClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Controls::CEagleEyeControl", new EarthView.World.Spatial2D.Controls.EagleEyeControlClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Controls::CEagleEyeControlProxy", new EarthView.World.Spatial2D.Controls.EagleEyeControlClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Controls::CToolEagleEyeControl", new EarthView.World.Spatial2D.Controls.ToolEagleEyeControlClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Controls::CToolEagleEyeControlProxy", new EarthView.World.Spatial2D.Controls.ToolEagleEyeControlClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("CGlobleControlSpace", new GlobleControlSpaceClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("CGlobleControlSpaceProxy", new GlobleControlSpaceClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::FrameWorkProxy::CGroupStringinterfaceMap", new EarthView.World.FrameWorkProxy.GroupStringinterfaceMapClassFactory());

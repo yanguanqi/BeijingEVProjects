@@ -89,11 +89,52 @@ namespace EarthView
 					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
 				#endif 
 			#endif 
-			private static extern void EarthView_XldManager_CWaterConservancyManager_Initialise_void_CGlobeControl(IntPtr pNativeObject, IntPtr ref_globecontrol);
+			private static extern void EarthView_XldManager_CWaterConservancyManager_Initialise_void_CGlobeControl_EVString(IntPtr pNativeObject, IntPtr ref_globecontrol, ref IntPtr runtimePath);
 
-			public void Initialise(EarthView.World.Spatial3D.Controls.GlobeControl ref_globecontrol)
+			public void Initialise(EarthView.World.Spatial3D.Controls.GlobeControl ref_globecontrol, ref string runtimePath)
 			{
-				EarthView_XldManager_CWaterConservancyManager_Initialise_void_CGlobeControl(this.NativeObject, object.Equals(ref_globecontrol, null) ? IntPtr.Zero : ref_globecontrol.NativeObject);
+				IntPtr __ptrruntimePath = Marshal.StringToHGlobalAnsi(runtimePath);
+				IntPtr pTmpruntimePath = __ptrruntimePath;
+				
+				EarthView_XldManager_CWaterConservancyManager_Initialise_void_CGlobeControl_EVString(this.NativeObject, object.Equals(ref_globecontrol, null) ? IntPtr.Zero : ref_globecontrol.NativeObject, ref __ptrruntimePath);
+				
+				 Marshal.FreeHGlobal(pTmpruntimePath);
+				runtimePath= Marshal.PtrToStringAnsi(__ptrruntimePath);
+				ClassFactory.FreeString(ref __ptrruntimePath);
+				
+			}
+
+
+			#if DEBUG 
+				#if Windows 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+				#elif Linux 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Android 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Apple 
+					[System.Runtime.InteropServices.DllImport("__Internal")]
+				#else 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+				#endif 
+			#else 
+				#if Windows 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+				#elif Linux 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Android 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Apple 
+					[System.Runtime.InteropServices.DllImport("__Internal")]
+				#else 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+				#endif 
+			#endif 
+			private static extern void EarthView_XldManager_CWaterConservancyManager_SetExaggerationFactor_void_ev_real32(IntPtr pNativeObject, ref float factor);
+
+			public void SetExaggerationFactor(float factor)
+			{
+				EarthView_XldManager_CWaterConservancyManager_SetExaggerationFactor_void_ev_real32(this.NativeObject, ref factor);
 				
 			}
 
@@ -157,18 +198,15 @@ namespace EarthView
 					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
 				#endif 
 			#endif 
-			private static extern void EarthView_XldManager_CWaterConservancyManager_GetTerrainNames_void_ev_int32_EVString(IntPtr pNativeObject, int terrainIndex, ref IntPtr terrainNames);
+			private static extern IntPtr EarthView_XldManager_CWaterConservancyManager_GetTerrainName_EVString_ev_int32(IntPtr pNativeObject, int terrainIndex);
 
-			public void GetTerrainNames(int terrainIndex, string terrainNames)
+			public string GetTerrainName(int terrainIndex)
 			{
-				IntPtr __ptrterrainNames = Marshal.StringToHGlobalAnsi(terrainNames);
-				IntPtr pTmpterrainNames = __ptrterrainNames;
+				IntPtr __ptr = EarthView_XldManager_CWaterConservancyManager_GetTerrainName_EVString_ev_int32(this.NativeObject, terrainIndex);
 				
-				EarthView_XldManager_CWaterConservancyManager_GetTerrainNames_void_ev_int32_EVString(this.NativeObject, terrainIndex, ref __ptrterrainNames);
-				
-				 Marshal.FreeHGlobal(pTmpterrainNames);
-				terrainNames= Marshal.PtrToStringAnsi(__ptrterrainNames);
-				ClassFactory.FreeString(ref __ptrterrainNames);
+				string ret = Marshal.PtrToStringAnsi(__ptr);
+				ClassFactory.FreeString(ref __ptr);
+				return ret;
 				
 			}
 
@@ -266,11 +304,79 @@ namespace EarthView
 					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
 				#endif 
 			#endif 
-			private static extern void EarthView_XldManager_CWaterConservancyManager_MarkPosistion_void_EVString_ev_real64_ev_real64_ev_real64(IntPtr pNativeObject, string imgeFileName, double longi, double lati, double alti);
+			private static extern void EarthView_XldManager_CWaterConservancyManager_MarkPosistion_void_EVString_EVString_EVString_ev_real64_ev_real64_ev_real64(IntPtr pNativeObject, string name, string imgeFileName, string tip, double longi, double lati, double alti);
 
-			public void MarkPosistion(string imgeFileName, double longi, double lati, double alti)
+			public void MarkPosistion(string name, string imgeFileName, string tip, double longi, double lati, double alti)
 			{
-				EarthView_XldManager_CWaterConservancyManager_MarkPosistion_void_EVString_ev_real64_ev_real64_ev_real64(this.NativeObject, imgeFileName, longi, lati, alti);
+				EarthView_XldManager_CWaterConservancyManager_MarkPosistion_void_EVString_EVString_EVString_ev_real64_ev_real64_ev_real64(this.NativeObject, name, imgeFileName, tip, longi, lati, alti);
+				
+			}
+
+
+			#if DEBUG 
+				#if Windows 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+				#elif Linux 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Android 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Apple 
+					[System.Runtime.InteropServices.DllImport("__Internal")]
+				#else 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+				#endif 
+			#else 
+				#if Windows 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+				#elif Linux 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Android 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Apple 
+					[System.Runtime.InteropServices.DllImport("__Internal")]
+				#else 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+				#endif 
+			#endif 
+			private static extern void EarthView_XldManager_CWaterConservancyManager_SetSectionQueryEnable_void_ev_bool(IntPtr pNativeObject, ref bool isEnable);
+
+			public void SetSectionQueryEnable(bool isEnable)
+			{
+				EarthView_XldManager_CWaterConservancyManager_SetSectionQueryEnable_void_ev_bool(this.NativeObject, ref isEnable);
+				
+			}
+
+
+			#if DEBUG 
+				#if Windows 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+				#elif Linux 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Android 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Apple 
+					[System.Runtime.InteropServices.DllImport("__Internal")]
+				#else 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+				#endif 
+			#else 
+				#if Windows 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+				#elif Linux 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Android 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Apple 
+					[System.Runtime.InteropServices.DllImport("__Internal")]
+				#else 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+				#endif 
+			#endif 
+			private static extern void EarthView_XldManager_CWaterConservancyManager_SetTerrainHeightQueryEnable_void_ev_bool(IntPtr pNativeObject, ref bool isEnable);
+
+			public void SetTerrainHeightQueryEnable(bool isEnable)
+			{
+				EarthView_XldManager_CWaterConservancyManager_SetTerrainHeightQueryEnable_void_ev_bool(this.NativeObject, ref isEnable);
 				
 			}
 
@@ -302,9 +408,195 @@ namespace EarthView
 			#endif 
 			private static extern void EarthView_XldManager_CWaterConservancyManager_CreateWaterSurface_void_ev_real64(IntPtr pNativeObject, ref double waterHeight);
 
+			/// <summary>
+			/// 创建水面，该方法仅在无水面时使用，并且仅使用一次即可
+			/// </summary>
+			/// <param name="waterHeight">水面高度</param>
 			public void CreateWaterSurface(double waterHeight)
 			{
 				EarthView_XldManager_CWaterConservancyManager_CreateWaterSurface_void_ev_real64(this.NativeObject, ref waterHeight);
+				
+			}
+
+
+			#if DEBUG 
+				#if Windows 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+				#elif Linux 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Android 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Apple 
+					[System.Runtime.InteropServices.DllImport("__Internal")]
+				#else 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+				#endif 
+			#else 
+				#if Windows 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+				#elif Linux 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Android 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Apple 
+					[System.Runtime.InteropServices.DllImport("__Internal")]
+				#else 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+				#endif 
+			#endif 
+			private static extern void EarthView_XldManager_CWaterConservancyManager_SetWaterSurfaceVisible_void_ev_bool(IntPtr pNativeObject, ref bool isVisible);
+
+			/// <summary>
+			/// 设置水面的可见性
+			/// </summary>
+			/// <param name="isVisible">是否可见</param>
+			public void SetWaterSurfaceVisible(bool isVisible)
+			{
+				EarthView_XldManager_CWaterConservancyManager_SetWaterSurfaceVisible_void_ev_bool(this.NativeObject, ref isVisible);
+				
+			}
+
+
+			#if DEBUG 
+				#if Windows 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+				#elif Linux 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Android 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Apple 
+					[System.Runtime.InteropServices.DllImport("__Internal")]
+				#else 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+				#endif 
+			#else 
+				#if Windows 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+				#elif Linux 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Android 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Apple 
+					[System.Runtime.InteropServices.DllImport("__Internal")]
+				#else 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+				#endif 
+			#endif 
+			private static extern void EarthView_XldManager_CWaterConservancyManager_SetWaterLineHeight_void_ev_real64(IntPtr pNativeObject, ref double waterLineHeight);
+
+			/// <summary>
+			/// 设置水位高度
+			/// </summary>
+			/// <param name="waterLineHeight">水位数值</param>
+			public void SetWaterLineHeight(double waterLineHeight)
+			{
+				EarthView_XldManager_CWaterConservancyManager_SetWaterLineHeight_void_ev_real64(this.NativeObject, ref waterLineHeight);
+				
+			}
+
+
+			#if DEBUG 
+				#if Windows 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+				#elif Linux 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Android 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Apple 
+					[System.Runtime.InteropServices.DllImport("__Internal")]
+				#else 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+				#endif 
+			#else 
+				#if Windows 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+				#elif Linux 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Android 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Apple 
+					[System.Runtime.InteropServices.DllImport("__Internal")]
+				#else 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+				#endif 
+			#endif 
+			private static extern void EarthView_XldManager_CWaterConservancyManager_DeleteWaterSurface_void_ev_bool(IntPtr pNativeObject, ref bool isSure);
+
+			/// <summary>
+			/// 删除水面
+			/// </summary>
+			/// <param name="isSure">确认？</param>
+			public void DeleteWaterSurface(bool isSure)
+			{
+				EarthView_XldManager_CWaterConservancyManager_DeleteWaterSurface_void_ev_bool(this.NativeObject, ref isSure);
+				
+			}
+
+
+			#if DEBUG 
+				#if Windows 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+				#elif Linux 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Android 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Apple 
+					[System.Runtime.InteropServices.DllImport("__Internal")]
+				#else 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+				#endif 
+			#else 
+				#if Windows 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+				#elif Linux 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Android 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Apple 
+					[System.Runtime.InteropServices.DllImport("__Internal")]
+				#else 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+				#endif 
+			#endif 
+			private static extern void EarthView_XldManager_CWaterConservancyManager_DrawRectBounds_void(IntPtr pNativeObject);
+
+			public void DrawRectBounds()
+			{
+				EarthView_XldManager_CWaterConservancyManager_DrawRectBounds_void(this.NativeObject);
+				
+			}
+
+
+			#if DEBUG 
+				#if Windows 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+				#elif Linux 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Android 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Apple 
+					[System.Runtime.InteropServices.DllImport("__Internal")]
+				#else 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp_d.dll", CallingConvention = CallingConvention.StdCall)]
+				#endif 
+			#else 
+				#if Windows 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+				#elif Linux 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Android 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.so", CallingConvention = CallingConvention.StdCall)]
+				#elif Apple 
+					[System.Runtime.InteropServices.DllImport("__Internal")]
+				#else 
+					[System.Runtime.InteropServices.DllImport("EV_XldManager_CSharp.dll", CallingConvention = CallingConvention.StdCall)]
+				#endif 
+			#endif 
+			private static extern void EarthView_XldManager_CWaterConservancyManager_DrawPolylineBounds_void(IntPtr pNativeObject);
+
+			public void DrawPolylineBounds()
+			{
+				EarthView_XldManager_CWaterConservancyManager_DrawPolylineBounds_void(this.NativeObject);
 				
 			}
 

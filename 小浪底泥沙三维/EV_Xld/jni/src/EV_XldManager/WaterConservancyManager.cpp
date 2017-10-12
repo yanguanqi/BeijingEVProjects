@@ -39,6 +39,11 @@ void EarthView::XldManager::CWaterConservancyManager::Initialise(EarthView::Worl
 	
 }
 
+void EarthView::XldManager::CWaterConservancyManager::SetExaggerationFactor(const ev_real32& factor)
+{
+	EarthView::Xld::CWorldSetting::GetSingtonPtr()->mGlobalExaggerationFactor = factor;
+}
+
 void EarthView::XldManager::CWaterConservancyManager::CreateTerrain(const EVString& grdFileName)
 {
 	EarthView::Xld::RenderLib::CTerrainManager::getSingletonPtr()->CreateGrdTerrain(grdFileName);
@@ -105,6 +110,7 @@ void EarthView::XldManager::CWaterConservancyManager::DrawPolylineBounds()
 
 ev_uint64 EarthView::XldManager::CWaterConservancyManager::GetTerrainCount()
 {
+	EarthView::Xld::CWaterConservancyDataEngine::CreateStardardTerrain();
 	return EarthView::Xld::RenderLib::CTerrainManager::getSingletonPtr()->GetTerrainCount();
 }
 

@@ -16,6 +16,12 @@ public class EV_Symbol_ClassFactory
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCBillboard3DSymbolProxy", new com.earthview.world.spatial.display.Billboard3DSymbolClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CCartographicLineSymbol", new com.earthview.world.spatial.display.CartographicLineSymbolClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCCartographicLineSymbolProxy", new com.earthview.world.spatial.display.CartographicLineSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::COutputEngine", new com.earthview.world.spatial.display.OutputEngineClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCOutputEngineProxy", new com.earthview.world.spatial.display.OutputEngineClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::EVOutputEngineManager", new com.earthview.world.spatial.display.EvoutputenginemanagerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CRenderEngine", new com.earthview.world.spatial.display.RenderEngineClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCRenderEngineProxy", new com.earthview.world.spatial.display.RenderEngineClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::EVRenderEngineManager", new com.earthview.world.spatial.display.EvrenderenginemanagerClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CFillSymbol", new com.earthview.world.spatial.display.FillSymbolClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCFillSymbolProxy", new com.earthview.world.spatial.display.FillSymbolClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CFontMarkerSymbol", new com.earthview.world.spatial.display.FontMarkerSymbolClassFactory());
@@ -56,6 +62,8 @@ public class EV_Symbol_ClassFactory
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCPieStatistics3DSymbolProxy", new com.earthview.world.spatial.display.PieStatistics3DSymbolClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CPieStatisticsSymbol", new com.earthview.world.spatial.display.PieStatisticsSymbolClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCPieStatisticsSymbolProxy", new com.earthview.world.spatial.display.PieStatisticsSymbolClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CRichTextRenderMeasure", new com.earthview.world.spatial.display.RichTextRenderMeasureClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CRichTextRender", new com.earthview.world.spatial.display.RichTextRenderClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CSimpleFill3DSymbol", new com.earthview.world.spatial.display.SimpleFill3DSymbolClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JCSimpleFill3DSymbolProxy", new com.earthview.world.spatial.display.SimpleFill3DSymbolClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::CSimpleFillSymbol", new com.earthview.world.spatial.display.SimpleFillSymbolClassFactory());

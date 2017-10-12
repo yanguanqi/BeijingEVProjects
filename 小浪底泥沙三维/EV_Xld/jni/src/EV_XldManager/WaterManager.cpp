@@ -15,6 +15,7 @@
 #include "spatialframeworkproxy\datasourceoption.h"
 #include "globecontrol\globecontrol.h"
 #include "BillboardManager.h"
+#include "WorldSetting.h"
 
 
 using namespace EarthView::World::Spatial::Geometry;
@@ -68,12 +69,11 @@ void EarthView::Xld::RenderLib::CWaterManager::CreateKMLWaterSurface(EVString km
 		{
 			for (int i = 0; i < gl->getLayerCount(); i++)
 			{
-				EarthView::World::Spatial3D::Atlas::CKmlLayer* mkmllayer = gl->getLayer(i);
-				if (mkmllayer->getName() == CWorldSetting::GetSingtonPtr()->mWaterSurfaceKMLName)
+				this->mpKmlLayer = gl->getLayer(i);
+				mpKmlLayer->setVisible(true);
+				if (mpKmlLayer->getName() == CWorldSetting::GetSingtonPtr()->mWaterSurfaceKMLName)
 				{
-					this->mpKmlLayer = mkmllayer;
-					EVString systemwatersurfaceName = kmlName;
-					EarthView::World::Spatial3D::KmlManager::CKmlDataSet* kmlDS = (EarthView::World::Spatial3D::KmlManager::CKmlDataSet*)mkmllayer->getDataset();
+					EarthView::World::Spatial3D::KmlManager::CKmlDataSet* kmlDS = (EarthView::World::Spatial3D::KmlManager::CKmlDataSet*)mpKmlLayer->getDataset();
 					EarthView::World::Spatial::Kml::CKmlDocument* rootParent = kmlDS->mKmlDocument;
 					this->mpKMLRootDocument = rootParent;
 					ev_int32 kmlObjCount = rootParent->getGeoObjects().size();
@@ -81,10 +81,11 @@ void EarthView::Xld::RenderLib::CWaterManager::CreateKMLWaterSurface(EVString km
 					for (ev_int32 j = 0; j < kmlObjCount; j++)
 					{
 						EVString kmlObjName = rootParent->getGeoObjects().at(j)->GeoObjectExtAttr.getName();
-						if (kmlObjName == systemwatersurfaceName)
+						if (kmlObjName == kmlName)
 						{
 							this->mpKMLWaterSurface = rootParent->getGeoObjects().at(j);
 							this->mpKMLWaterSurface->GeoObjectExtAttr.setVisible(true);
+							EarthView::Xld::CWorldSetting::GetSingtonPtr()->mpKmlTreeManager->setCurrentLayer(mpKmlLayer);
 							EarthView::Xld::CWorldSetting::GetSingtonPtr()->mpKmlTreeManager->updateKmlObject(mpKMLWaterSurface, rootParent);
 							isExistWaterFace = true;
 						}
@@ -95,30 +96,25 @@ void EarthView::Xld::RenderLib::CWaterManager::CreateKMLWaterSurface(EVString km
 						EarthView::World::Spatial::Kml::CGeoObjectExtensionAttribute& attribute = polygon->GeoObjectExtAttr;
 						this->mpKMLWaterSurface = polygon;
 						attribute.setKmlType(GXT_SURFACEPOLYGON);
-						attribute.setName(systemwatersurfaceName);
-						VertexList* v = new VertexList();
-						for (int i = 0; i < lstVert->size(); i++)
-						{
-							CVector3 tv = lstVert->at(i);
-							tv.z = 218;
-							v->push_back(CVector3(tv));
-						}
-						attribute.setPoints(*v);
+						attribute.setName(kmlName);
+						attribute.setPoints(*lstVert);
 						attribute.setAltitudeMode(EarthView::World::Spatial::Utility::AM_Absolute);
 						attribute.setExtrude(false);
 						attribute.setHeigth(waterHeight);
-						
-						EarthView::Xld::CWorldSetting::GetSingtonPtr()->mpKmlTreeManager->setCurrentLayer(mkmllayer);
+						attribute.setFresnelsurfaceColor(CWorldSetting::GetSingtonPtr()->mWaveDensity, CWorldSetting::GetSingtonPtr()->mFlowSpeed, CWorldSetting::GetSingtonPtr()->mWaterDeep, CWorldSetting::GetSingtonPtr()->mWavePower, CWorldSetting::GetSingtonPtr()->mLightPower, CWorldSetting::GetSingtonPtr()->mWaveDirection, *CWorldSetting::GetSingtonPtr()->mWaterColor);
+						attribute.setFresnelsurface(CWorldSetting::GetSingtonPtr()->mEnableUnderwater, CWorldSetting::GetSingtonPtr()->mEnableReflect, CWorldSetting::GetSingtonPtr()->mEnableReflectSky, CWorldSetting::GetSingtonPtr()->mEnableRefract);
+						EarthView::Xld::CWorldSetting::GetSingtonPtr()->mpKmlTreeManager->setCurrentLayer(mpKmlLayer);
 						EarthView::Xld::CWorldSetting::GetSingtonPtr()->mpKmlTreeManager->addKmlObject(polygon, rootParent);
 						EarthView::Xld::CWorldSetting::GetSingtonPtr()->mpKmlTreeManager->updateKmlObject(polygon, rootParent);
 						EVString kmlPath = rootParent->mKmlPath;
 						rootParent->save(kmlPath);
-						delete v;
+						
 					}
 				}
 			}
 		}
 		mWaterCreated = true;
+		this->SetWaterSurfaceHeight(waterHeight);
 	}
 }
 

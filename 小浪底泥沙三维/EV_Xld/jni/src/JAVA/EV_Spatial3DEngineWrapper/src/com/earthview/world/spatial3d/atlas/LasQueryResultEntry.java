@@ -5,7 +5,7 @@ import com.earthview.world.base.*;
 import com.earthview.world.util.*;
 import com.earthview.world.core.*;
 
-///ç®€å•è®¾ç½®é¢œè‰²
+///¼òµ¥ÉèÖÃÑÕÉ«
 public class LasQueryResultEntry extends com.earthview.world.core.BaseObject {
 	
 	static {

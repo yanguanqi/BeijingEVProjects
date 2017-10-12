@@ -13,6 +13,7 @@ public class EV_Spatial_LASConvertProxy_ClassFactory
 		GlobalClassFactoryMap.put("EarthView::World::SpatialLASConvertProxy::JCLasLODGenerateListenerProxy", new com.earthview.world.spatiallasconvertproxy.LasLODGenerateListenerClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::SpatialLASConvertProxy::CLasLODParam", new com.earthview.world.spatiallasconvertproxy.LasLODParamClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::SpatialLASConvertProxy::CLasLODGenerator", new com.earthview.world.spatiallasconvertproxy.LasLODGeneratorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::SpatialLASConvertProxy::CLasMerge", new com.earthview.world.spatiallasconvertproxy.LasMergeClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::SpatialLASConvertProxy::CTempVertex", new com.earthview.world.spatiallasconvertproxy.TempVertexClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::SpatialLASConvertProxy::CTempVertexVector", new com.earthview.world.spatiallasconvertproxy.TempVertexVectorClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::SpatialLASConvertProxy::CLasOptimizeParams", new com.earthview.world.spatiallasconvertproxy.LasOptimizeParamsClassFactory());

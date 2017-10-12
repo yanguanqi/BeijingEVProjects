@@ -34,6 +34,12 @@ public static class EV_Spatial2DAtlas_ClassFactory
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Atlas::CMapSelection", new EarthView.World.Spatial2D.Atlas.MapSelectionClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Atlas::CMapSelectionProxy", new EarthView.World.Spatial2D.Atlas.MapSelectionClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Atlas::CMapSet", new EarthView.World.Spatial2D.Atlas.MapSetClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Atlas::CSpatialThemeScale", new EarthView.World.Spatial2D.Atlas.SpatialThemeScaleClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Atlas::CSpatialThemeScaleProxy", new EarthView.World.Spatial2D.Atlas.SpatialThemeScaleClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Atlas::CWFSDataLayer", new EarthView.World.Spatial2D.Atlas.WfsdatalayerClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Atlas::CWFSDataLayerProxy", new EarthView.World.Spatial2D.Atlas.WfsdatalayerClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Atlas::CWFSDataLayerFactory", new EarthView.World.Spatial2D.Atlas.WfsdatalayerfactoryClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Atlas::CWFSDataLayerFactoryProxy", new EarthView.World.Spatial2D.Atlas.WfsdatalayerfactoryClassFactory());
 	}
 }
 

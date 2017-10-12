@@ -58,6 +58,11 @@ public static class EV_Core_ClassFactory
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Core::CSemaphoreProxy", new EarthView.World.Core.SemaphoreClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Core::CStringUtil", new EarthView.World.Core.StringUtilClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Core::CCoreTime", new EarthView.World.Core.CoreTimeClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Core::CEvTranslator", new EarthView.World.Core.EvTranslatorClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Core::CEvTranslatorProxy", new EarthView.World.Core.EvTranslatorClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Core::CEvTranslatorListener", new EarthView.World.Core.EvTranslatorListenerClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Core::CEvTranslatorListenerProxy", new EarthView.World.Core.EvTranslatorListenerClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Core::CEvTranslatorManager", new EarthView.World.Core.EvTranslatorManagerClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Core::CEvent", new EarthView.World.Core.EventClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Core::CTimerEvent", new EarthView.World.Core.TimerEventClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Core::CEventDispatcher", new EarthView.World.Core.EventDispatcherClassFactory());

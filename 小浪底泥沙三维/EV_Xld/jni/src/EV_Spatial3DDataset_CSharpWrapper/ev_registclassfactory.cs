@@ -73,6 +73,11 @@ public static class EV_Spatial3DDataset_ClassFactory
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Dataset::CModelEventUtility", new EarthView.World.Spatial3D.Dataset.ModelEventUtilityClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Dataset::CModelFeatureUtility", new EarthView.World.Spatial3D.Dataset.ModelFeatureUtilityClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Dataset::CModelOctreeManager", new EarthView.World.Spatial3D.Dataset.ModelOctreeManagerClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("CResourceData", new ResourceDataClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("CResourceDataList", new ResourceDataListClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("CModelData", new ModelDataClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("IModelTemplatePlugin", new ImodeltemplatepluginClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("IModelTemplatePluginProxy", new ImodeltemplatepluginClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Dataset::CObjectIDList", new EarthView.World.Spatial3D.Dataset.ObjectIDListClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Dataset::CPropertyManager", new EarthView.World.Spatial3D.Dataset.PropertyManagerClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Dataset::CResourceDataset", new EarthView.World.Spatial3D.Dataset.ResourceDatasetClassFactory());

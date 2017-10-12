@@ -30,6 +30,8 @@ public class EV_Spatial2DGeoDatabase_ClassFactory
 		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::GeoDataset::JCSpatialIndexParamFactoryProxy", new com.earthview.world.spatial2d.geodataset.SpatialIndexParamFactoryClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::GeoDataset::CVectorFeatureClass", new com.earthview.world.spatial2d.geodataset.VectorFeatureClassClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::GeoDataset::JCVectorFeatureClassProxy", new com.earthview.world.spatial2d.geodataset.VectorFeatureClassClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::GeoDataset::CVectorFeatureClassPostGisOperator", new com.earthview.world.spatial2d.geodataset.VectorFeatureClassPostGisOperatorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::GeoDataset::JCVectorFeatureClassPostGisOperatorProxy", new com.earthview.world.spatial2d.geodataset.VectorFeatureClassPostGisOperatorClassFactory());
 	}
 }
 

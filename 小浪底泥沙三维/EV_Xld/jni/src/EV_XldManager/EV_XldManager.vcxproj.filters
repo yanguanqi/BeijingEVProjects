@@ -69,6 +69,9 @@
     <ClCompile Include="WorldSetting.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="CustomRenderManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\xld\WaterConservancyManager.h">
@@ -129,6 +132,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="WorldSetting.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomRenderManager.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

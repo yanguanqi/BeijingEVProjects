@@ -14,6 +14,7 @@ public static class EV_Spatial_LASConvertProxy_ClassFactory
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::SpatialLASConvertProxy::CLasLODGenerateListenerProxy", new EarthView.World.SpatialLASConvertProxy.LasLODGenerateListenerClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::SpatialLASConvertProxy::CLasLODParam", new EarthView.World.SpatialLASConvertProxy.LasLODParamClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::SpatialLASConvertProxy::CLasLODGenerator", new EarthView.World.SpatialLASConvertProxy.LasLODGeneratorClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::SpatialLASConvertProxy::CLasMerge", new EarthView.World.SpatialLASConvertProxy.LasMergeClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::SpatialLASConvertProxy::CTempVertex", new EarthView.World.SpatialLASConvertProxy.TempVertexClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::SpatialLASConvertProxy::CTempVertexVector", new EarthView.World.SpatialLASConvertProxy.TempVertexVectorClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::SpatialLASConvertProxy::CLasOptimizeParams", new EarthView.World.SpatialLASConvertProxy.LasOptimizeParamsClassFactory());

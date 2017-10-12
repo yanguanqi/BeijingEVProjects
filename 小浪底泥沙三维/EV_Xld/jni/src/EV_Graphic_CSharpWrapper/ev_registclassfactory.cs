@@ -802,6 +802,8 @@ public static class EV_Graphic_ClassFactory
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::PixelFormatList", new EarthView.World.Graphic.PixelFormatListClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CPixelBox", new EarthView.World.Graphic.PixelBoxClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CPixelUtil", new EarthView.World.Graphic.PixelUtilClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CPKMCodec", new EarthView.World.Graphic.PkmcodecClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CPKMCodecProxy", new EarthView.World.Graphic.PkmcodecClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CPose", new EarthView.World.Graphic.PoseClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CPose::VertexOffsetMap", new EarthView.World.Graphic.Pose.VertexOffsetMapClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CPose::VertexOffsetPair", new EarthView.World.Graphic.Pose.VertexOffsetPairClassFactory());
@@ -855,6 +857,9 @@ public static class EV_Graphic_ClassFactory
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CRenderable::CustomParameterMap", new EarthView.World.Graphic.Renderable.CustomParameterMapClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CRenderableFont", new EarthView.World.Graphic.RenderableFontClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CRenderableFontProxy", new EarthView.World.Graphic.RenderableFontClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CRenderableFontInstanced", new EarthView.World.Graphic.RenderableFontInstancedClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CRenderableFontInstancedProxy", new EarthView.World.Graphic.RenderableFontInstancedClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CRenderableFontInstanceObjectCreatorManager", new EarthView.World.Graphic.RenderableFontInstanceObjectCreatorManagerClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CRenderableChar", new EarthView.World.Graphic.RenderableCharClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CRenderableCharProxy", new EarthView.World.Graphic.RenderableCharClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CRenderableString", new EarthView.World.Graphic.RenderableStringClassFactory());
@@ -1272,6 +1277,9 @@ public static class EV_Graphic_ClassFactory
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CTextAreaOverlayElementProxy", new EarthView.World.Graphic.TextAreaOverlayElementClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CCharOverlayElement", new EarthView.World.Graphic.CharOverlayElementClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CCharOverlayElementProxy", new EarthView.World.Graphic.CharOverlayElementClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CTextAreaOverlayElementInstanced", new EarthView.World.Graphic.TextAreaOverlayElementInstancedClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CTextAreaOverlayElementInstancedProxy", new EarthView.World.Graphic.TextAreaOverlayElementInstancedClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CTextAreaInstanceObjectCreatorManager", new EarthView.World.Graphic.TextAreaInstanceObjectCreatorManagerClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CTexture", new EarthView.World.Graphic.TextureClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CTextureProxy", new EarthView.World.Graphic.TextureClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Graphic::CTexturePtr", new EarthView.World.Graphic.TexturePtrClassFactory());

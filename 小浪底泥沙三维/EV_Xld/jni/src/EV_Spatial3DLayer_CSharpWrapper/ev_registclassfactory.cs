@@ -58,6 +58,10 @@ public static class EV_Spatial3DLayer_ClassFactory
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Atlas::COGCWFSVectorClampLayerProxy", new EarthView.World.Spatial3D.Atlas.OgcwfsvectorclamplayerClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Atlas::COGCWFSVectorClampLayerFactory", new EarthView.World.Spatial3D.Atlas.OgcwfsvectorclamplayerfactoryClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Atlas::COGCWFSVectorClampLayerFactoryProxy", new EarthView.World.Spatial3D.Atlas.OgcwfsvectorclamplayerfactoryClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Atlas::COGCWFSVectorRelativeSceneLayer", new EarthView.World.Spatial3D.Atlas.OgcwfsvectorrelativescenelayerClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Atlas::COGCWFSVectorRelativeSceneLayerProxy", new EarthView.World.Spatial3D.Atlas.OgcwfsvectorrelativescenelayerClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Atlas::COGCWFSVectorRelativeSceneLayerFactory", new EarthView.World.Spatial3D.Atlas.OgcwfsvectorrelativescenelayerfactoryClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Atlas::COGCWFSVectorRelativeSceneLayerFactoryProxy", new EarthView.World.Spatial3D.Atlas.OgcwfsvectorrelativescenelayerfactoryClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Atlas::COGCWMSClampSceneLayer", new EarthView.World.Spatial3D.Atlas.OgcwmsclampscenelayerClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Atlas::COGCWMSClampSceneLayerProxy", new EarthView.World.Spatial3D.Atlas.OgcwmsclampscenelayerClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Atlas::COGCWMSClampSceneLayerFactory", new EarthView.World.Spatial3D.Atlas.OgcwmsclampscenelayerfactoryClassFactory());

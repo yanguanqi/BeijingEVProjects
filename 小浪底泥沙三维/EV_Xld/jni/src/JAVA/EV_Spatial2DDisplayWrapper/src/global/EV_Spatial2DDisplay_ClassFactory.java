@@ -27,6 +27,9 @@ public class EV_Spatial2DDisplay_ClassFactory
 		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Renderer::JCFeatureRendererProxy", new com.earthview.world.spatial2d.renderer.FeatureRendererClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Renderer::CLabelRenderer", new com.earthview.world.spatial2d.renderer.LabelRendererClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Renderer::JCLabelRendererProxy", new com.earthview.world.spatial2d.renderer.LabelRendererClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Display::CLayerLabelProperty", new com.earthview.world.spatial2d.display.LayerLabelPropertyClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Display::JCLayerLabelPropertyProxy", new com.earthview.world.spatial2d.display.LayerLabelPropertyClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Renderer::CLayerLabelRenderer", new com.earthview.world.spatial2d.renderer.LayerLabelRendererClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Renderer::CRasterRenderer", new com.earthview.world.spatial2d.renderer.RasterRendererClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Renderer::JCRasterRendererProxy", new com.earthview.world.spatial2d.renderer.RasterRendererClassFactory());
 	}

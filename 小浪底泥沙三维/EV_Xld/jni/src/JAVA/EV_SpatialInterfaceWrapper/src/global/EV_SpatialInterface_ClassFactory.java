@@ -166,6 +166,8 @@ public class EV_SpatialInterface_ClassFactory
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Geometry::JISpatialReferenceProxy", new com.earthview.world.spatial.geometry.IspatialreferenceClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Atlas::ISpatialScale", new com.earthview.world.spatial.atlas.IspatialscaleClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Atlas::JISpatialScaleProxy", new com.earthview.world.spatial.atlas.IspatialscaleClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Atlas::ISpatialThemeScale", new com.earthview.world.spatial.atlas.IspatialthemescaleClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Atlas::JISpatialThemeScaleProxy", new com.earthview.world.spatial.atlas.IspatialthemescaleClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::ISpatialTransformer", new com.earthview.world.spatial.display.IspatialtransformerClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Display::JISpatialTransformerProxy", new com.earthview.world.spatial.display.IspatialtransformerClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Carto::ISquareGrid", new com.earthview.world.spatial.carto.IsquaregridClassFactory());
@@ -188,6 +190,8 @@ public class EV_SpatialInterface_ClassFactory
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Atlas::JIVectorLayerProxy", new com.earthview.world.spatial.atlas.IvectorlayerClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Accessor::IWebAccessor", new com.earthview.world.spatial.accessor.IwebaccessorClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial::Accessor::JIWebAccessorProxy", new com.earthview.world.spatial.accessor.IwebaccessorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Atlas::LayerRenderOrderController", new com.earthview.world.spatial.atlas.LayerRenderOrderControllerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial::Atlas::JLayerRenderOrderControllerProxy", new com.earthview.world.spatial.atlas.LayerRenderOrderControllerClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Raster::CProgressInfo", new com.earthview.world.spatial2d.raster.ProgressInfoClassFactory());
 	}
 }

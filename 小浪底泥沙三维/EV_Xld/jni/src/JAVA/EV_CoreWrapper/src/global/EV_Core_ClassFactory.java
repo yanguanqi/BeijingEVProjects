@@ -57,6 +57,11 @@ public class EV_Core_ClassFactory
 		GlobalClassFactoryMap.put("EarthView::World::Core::JCSemaphoreProxy", new com.earthview.world.core.SemaphoreClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Core::CStringUtil", new com.earthview.world.core.StringUtilClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Core::CCoreTime", new com.earthview.world.core.CoreTimeClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Core::CEvTranslator", new com.earthview.world.core.EvTranslatorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Core::JCEvTranslatorProxy", new com.earthview.world.core.EvTranslatorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Core::CEvTranslatorListener", new com.earthview.world.core.EvTranslatorListenerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Core::JCEvTranslatorListenerProxy", new com.earthview.world.core.EvTranslatorListenerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Core::CEvTranslatorManager", new com.earthview.world.core.EvTranslatorManagerClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Core::CEvent", new com.earthview.world.core.EventClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Core::CTimerEvent", new com.earthview.world.core.TimerEventClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Core::CEventDispatcher", new com.earthview.world.core.EventDispatcherClassFactory());

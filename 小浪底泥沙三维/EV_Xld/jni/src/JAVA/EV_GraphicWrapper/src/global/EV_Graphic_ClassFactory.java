@@ -801,6 +801,8 @@ public class EV_Graphic_ClassFactory
 		GlobalClassFactoryMap.put("EarthView::World::Graphic::PixelFormatList", new com.earthview.world.graphic.PixelFormatListClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Graphic::CPixelBox", new com.earthview.world.graphic.PixelBoxClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Graphic::CPixelUtil", new com.earthview.world.graphic.PixelUtilClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Graphic::CPKMCodec", new com.earthview.world.graphic.PkmcodecClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Graphic::JCPKMCodecProxy", new com.earthview.world.graphic.PkmcodecClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Graphic::CPose", new com.earthview.world.graphic.PoseClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Graphic::CPose::VertexOffsetMap", new com.earthview.world.graphic.Pose.VertexOffsetMapClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Graphic::CPose::VertexOffsetPair", new com.earthview.world.graphic.Pose.VertexOffsetPairClassFactory());
@@ -854,6 +856,9 @@ public class EV_Graphic_ClassFactory
 		GlobalClassFactoryMap.put("EarthView::World::Graphic::CRenderable::CustomParameterMap", new com.earthview.world.graphic.Renderable.CustomParameterMapClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Graphic::CRenderableFont", new com.earthview.world.graphic.RenderableFontClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Graphic::JCRenderableFontProxy", new com.earthview.world.graphic.RenderableFontClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Graphic::CRenderableFontInstanced", new com.earthview.world.graphic.RenderableFontInstancedClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Graphic::JCRenderableFontInstancedProxy", new com.earthview.world.graphic.RenderableFontInstancedClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Graphic::CRenderableFontInstanceObjectCreatorManager", new com.earthview.world.graphic.RenderableFontInstanceObjectCreatorManagerClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Graphic::CRenderableChar", new com.earthview.world.graphic.RenderableCharClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Graphic::JCRenderableCharProxy", new com.earthview.world.graphic.RenderableCharClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Graphic::CRenderableString", new com.earthview.world.graphic.RenderableStringClassFactory());
@@ -1271,6 +1276,9 @@ public class EV_Graphic_ClassFactory
 		GlobalClassFactoryMap.put("EarthView::World::Graphic::JCTextAreaOverlayElementProxy", new com.earthview.world.graphic.TextAreaOverlayElementClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Graphic::CCharOverlayElement", new com.earthview.world.graphic.CharOverlayElementClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Graphic::JCCharOverlayElementProxy", new com.earthview.world.graphic.CharOverlayElementClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Graphic::CTextAreaOverlayElementInstanced", new com.earthview.world.graphic.TextAreaOverlayElementInstancedClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Graphic::JCTextAreaOverlayElementInstancedProxy", new com.earthview.world.graphic.TextAreaOverlayElementInstancedClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Graphic::CTextAreaInstanceObjectCreatorManager", new com.earthview.world.graphic.TextAreaInstanceObjectCreatorManagerClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Graphic::CTexture", new com.earthview.world.graphic.TextureClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Graphic::JCTextureProxy", new com.earthview.world.graphic.TextureClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Graphic::CTexturePtr", new com.earthview.world.graphic.TexturePtrClassFactory());

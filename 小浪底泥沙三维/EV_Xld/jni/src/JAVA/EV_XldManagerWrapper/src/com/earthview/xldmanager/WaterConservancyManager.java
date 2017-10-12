@@ -32,11 +32,18 @@ public class WaterConservancyManager extends com.earthview.world.core.BaseObject
 		}
 		return __returnValue;
 	}
-	native private void Initialise_CGlobeControl(long pNativeObject, long ref_globecontrol);
-	public void Initialise(com.earthview.world.spatial3d.controls.GlobeControl ref_globecontrol)
+	native private void Initialise_CGlobeControl_EVString(long pNativeObject, long ref_globecontrol, long runtimePath);
+	public void Initialise(com.earthview.world.spatial3d.controls.GlobeControl ref_globecontrol, StringPointer runtimePath)
 	{
 		long ref_globecontrolParamValue = (ref_globecontrol == null ? 0L : ref_globecontrol.nativeObject.pointer);
-		Initialise_CGlobeControl(this.nativeObject.pointer, ref_globecontrolParamValue);
+		long runtimePathParamValue = runtimePath.nativeObject.pointer;
+		Initialise_CGlobeControl_EVString(this.nativeObject.pointer, ref_globecontrolParamValue, runtimePathParamValue);
+	}
+	native private void SetExaggerationFactor_ev_real32(long pNativeObject, float factor);
+	public void SetExaggerationFactor(float factor)
+	{
+		float factorParamValue = factor;
+		SetExaggerationFactor_ev_real32(this.nativeObject.pointer, factorParamValue);
 	}
 	native private void CreateTerrain_EVString(long pNativeObject, String grdFileName);
 	public void CreateTerrain(String grdFileName)
@@ -44,12 +51,12 @@ public class WaterConservancyManager extends com.earthview.world.core.BaseObject
 		String grdFileNameParamValue = grdFileName;
 		CreateTerrain_EVString(this.nativeObject.pointer, grdFileNameParamValue);
 	}
-	native private void GetTerrainNames_ev_int32_EVString(long pNativeObject, int terrainIndex, String terrainNames);
-	public void GetTerrainNames(int terrainIndex, String terrainNames)
+	native private String GetTerrainName_ev_int32(long pNativeObject, int terrainIndex);
+	public String GetTerrainName(int terrainIndex)
 	{
 		int terrainIndexParamValue = terrainIndex;
-		String terrainNamesParamValue = terrainNames;
-		GetTerrainNames_ev_int32_EVString(this.nativeObject.pointer, terrainIndexParamValue, terrainNamesParamValue);
+		String returnValue = GetTerrainName_ev_int32(this.nativeObject.pointer, terrainIndexParamValue);
+		return returnValue;
 	}
 	native private void SetTerrainVisible_EVString_ev_bool(long pNativeObject, String terrainName, boolean isVisible);
 	public void SetTerrainVisible(String terrainName, boolean isVisible)
@@ -65,20 +72,78 @@ public class WaterConservancyManager extends com.earthview.world.core.BaseObject
 		double offsetParamValue = offset;
 		SetTerrainOffset_EVString_ev_real64(this.nativeObject.pointer, terrainNameParamValue, offsetParamValue);
 	}
-	native private void MarkPosistion_EVString_ev_real64_ev_real64_ev_real64(long pNativeObject, String imgeFileName, double longi, double lati, double alti);
-	public void MarkPosistion(String imgeFileName, double longi, double lati, double alti)
+	native private void MarkPosistion_EVString_EVString_EVString_ev_real64_ev_real64_ev_real64(long pNativeObject, String name, String imgeFileName, String tip, double longi, double lati, double alti);
+	public void MarkPosistion(String name, String imgeFileName, String tip, double longi, double lati, double alti)
 	{
+		String nameParamValue = name;
 		String imgeFileNameParamValue = imgeFileName;
+		String tipParamValue = tip;
 		double longiParamValue = longi;
 		double latiParamValue = lati;
 		double altiParamValue = alti;
-		MarkPosistion_EVString_ev_real64_ev_real64_ev_real64(this.nativeObject.pointer, imgeFileNameParamValue, longiParamValue, latiParamValue, altiParamValue);
+		MarkPosistion_EVString_EVString_EVString_ev_real64_ev_real64_ev_real64(this.nativeObject.pointer, nameParamValue, imgeFileNameParamValue, tipParamValue, longiParamValue, latiParamValue, altiParamValue);
+	}
+	native private void SetSectionQueryEnable_ev_bool(long pNativeObject, boolean isEnable);
+	public void SetSectionQueryEnable(boolean isEnable)
+	{
+		boolean isEnableParamValue = isEnable;
+		SetSectionQueryEnable_ev_bool(this.nativeObject.pointer, isEnableParamValue);
+	}
+	native private void SetTerrainHeightQueryEnable_ev_bool(long pNativeObject, boolean isEnable);
+	public void SetTerrainHeightQueryEnable(boolean isEnable)
+	{
+		boolean isEnableParamValue = isEnable;
+		SetTerrainHeightQueryEnable_ev_bool(this.nativeObject.pointer, isEnableParamValue);
 	}
 	native private void CreateWaterSurface_ev_real64(long pNativeObject, double waterHeight);
+	/**
+	 * 创建水面，该方法仅在无水面时使用，并且仅使用一次即可
+	 * @param waterHeight 水面高度
+	 */
 	public void CreateWaterSurface(double waterHeight)
 	{
 		double waterHeightParamValue = waterHeight;
 		CreateWaterSurface_ev_real64(this.nativeObject.pointer, waterHeightParamValue);
+	}
+	native private void SetWaterSurfaceVisible_ev_bool(long pNativeObject, boolean isVisible);
+	/**
+	 * 设置水面的可见性
+	 * @param isVisible 是否可见
+	 */
+	public void SetWaterSurfaceVisible(boolean isVisible)
+	{
+		boolean isVisibleParamValue = isVisible;
+		SetWaterSurfaceVisible_ev_bool(this.nativeObject.pointer, isVisibleParamValue);
+	}
+	native private void SetWaterLineHeight_ev_real64(long pNativeObject, double waterLineHeight);
+	/**
+	 * 设置水位高度
+	 * @param waterLineHeight 水位数值
+	 */
+	public void SetWaterLineHeight(double waterLineHeight)
+	{
+		double waterLineHeightParamValue = waterLineHeight;
+		SetWaterLineHeight_ev_real64(this.nativeObject.pointer, waterLineHeightParamValue);
+	}
+	native private void DeleteWaterSurface_ev_bool(long pNativeObject, boolean isSure);
+	/**
+	 * 删除水面
+	 * @param isSure 确认？
+	 */
+	public void DeleteWaterSurface(boolean isSure)
+	{
+		boolean isSureParamValue = isSure;
+		DeleteWaterSurface_ev_bool(this.nativeObject.pointer, isSureParamValue);
+	}
+	native private void DrawRectBounds_void(long pNativeObject);
+	public void DrawRectBounds()
+	{
+		DrawRectBounds_void(this.nativeObject.pointer);
+	}
+	native private void DrawPolylineBounds_void(long pNativeObject);
+	public void DrawPolylineBounds()
+	{
+		DrawPolylineBounds_void(this.nativeObject.pointer);
 	}
 	native private String GetTerrainCount_void(long pNativeObject);
 	public ULongPointer GetTerrainCount()

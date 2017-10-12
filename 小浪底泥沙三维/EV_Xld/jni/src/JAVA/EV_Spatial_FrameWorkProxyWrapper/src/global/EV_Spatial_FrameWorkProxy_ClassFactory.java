@@ -70,6 +70,14 @@ public class EV_Spatial_FrameWorkProxy_ClassFactory
 		GlobalClassFactoryMap.put("EarthView::World::Utilities::DataSourceOption_Create_DB", new com.earthview.world.utilities.DataSourceOptionCreateDbClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Utilities::DataSourceOption_Open", new com.earthview.world.utilities.DataSourceOptionOpenClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Utilities::DataSourceOption_Create", new com.earthview.world.utilities.DataSourceOptionCreateClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CEagleEyeControlAgent", new com.earthview.world.spatial2d.controls.EagleEyeControlAgentClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCEagleEyeControlAgentProxy", new com.earthview.world.spatial2d.controls.EagleEyeControlAgentClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::IEagleEyeControlListener", new com.earthview.world.spatial2d.controls.IeagleeyecontrollistenerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JIEagleEyeControlListenerProxy", new com.earthview.world.spatial2d.controls.IeagleeyecontrollistenerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CEagleEyeControl", new com.earthview.world.spatial2d.controls.EagleEyeControlClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCEagleEyeControlProxy", new com.earthview.world.spatial2d.controls.EagleEyeControlClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::CToolEagleEyeControl", new com.earthview.world.spatial2d.controls.ToolEagleEyeControlClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Controls::JCToolEagleEyeControlProxy", new com.earthview.world.spatial2d.controls.ToolEagleEyeControlClassFactory());
 		GlobalClassFactoryMap.put("CGlobleControlSpace", new GlobleControlSpaceClassFactory());
 		GlobalClassFactoryMap.put("JCGlobleControlSpaceProxy", new GlobleControlSpaceClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::FrameWorkProxy::CGroupStringinterfaceMap", new com.earthview.world.frameworkproxy.GroupStringinterfaceMapClassFactory());

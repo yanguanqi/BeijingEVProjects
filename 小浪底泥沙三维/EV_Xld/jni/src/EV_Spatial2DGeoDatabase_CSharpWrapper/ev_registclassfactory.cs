@@ -31,6 +31,8 @@ public static class EV_Spatial2DGeoDatabase_ClassFactory
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::GeoDataset::CSpatialIndexParamFactoryProxy", new EarthView.World.Spatial2D.GeoDataset.SpatialIndexParamFactoryClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::GeoDataset::CVectorFeatureClass", new EarthView.World.Spatial2D.GeoDataset.VectorFeatureClassClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::GeoDataset::CVectorFeatureClassProxy", new EarthView.World.Spatial2D.GeoDataset.VectorFeatureClassClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::GeoDataset::CVectorFeatureClassPostGisOperator", new EarthView.World.Spatial2D.GeoDataset.VectorFeatureClassPostGisOperatorClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::GeoDataset::CVectorFeatureClassPostGisOperatorProxy", new EarthView.World.Spatial2D.GeoDataset.VectorFeatureClassPostGisOperatorClassFactory());
 	}
 }
 

@@ -28,6 +28,9 @@ public static class EV_Spatial2DDisplay_ClassFactory
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Renderer::CFeatureRendererProxy", new EarthView.World.Spatial2D.Renderer.FeatureRendererClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Renderer::CLabelRenderer", new EarthView.World.Spatial2D.Renderer.LabelRendererClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Renderer::CLabelRendererProxy", new EarthView.World.Spatial2D.Renderer.LabelRendererClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Display::CLayerLabelProperty", new EarthView.World.Spatial2D.Display.LayerLabelPropertyClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Display::CLayerLabelPropertyProxy", new EarthView.World.Spatial2D.Display.LayerLabelPropertyClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Renderer::CLayerLabelRenderer", new EarthView.World.Spatial2D.Renderer.LayerLabelRendererClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Renderer::CRasterRenderer", new EarthView.World.Spatial2D.Renderer.RasterRendererClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Renderer::CRasterRendererProxy", new EarthView.World.Spatial2D.Renderer.RasterRendererClassFactory());
 	}

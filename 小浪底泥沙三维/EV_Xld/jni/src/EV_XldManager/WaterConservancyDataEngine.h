@@ -9,6 +9,7 @@
 #include "spatialobject\geometry\curvering.h"
 #include "globecontrol\globecontrol.h"
 #include "GISDataType.h"
+#include "graphic\scenenode.h"
 
 namespace EarthView
 {
@@ -54,9 +55,9 @@ namespace EarthView
 			static void GenerateTerrainModelStencil();
 
 			static EarthView::World::Spatial::Geometry::CPolygon* GetRiverRange();
+			static EarthView::World::Graphic::CSceneNode* mNode;
 
-
-			static void CreateStardardTerrain(_in EarthView::GISDataType::CGrdData * pData, _out EarthView::World::Geometry3D::CVertexVector* vertexVector, _out EarthView::World::Geometry3D::CIndexVector* indexVector);
+			static void CreateStardardTerrain();
 			/// <summary>
 			/// 将水下地形模型以二进制的形式写入缓存文件
 			/// </summary>

@@ -39,6 +39,13 @@ public static class EV_Spatial3DAnalysis_ClassFactory
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSectionProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DSectionClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSectionParam", new EarthView.World.Spatial3D.Analysis.Analysis3DSectionParamClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSectionParamProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DSectionParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CDepthMap", new EarthView.World.Spatial3D.Analysis.DepthMapClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CDepthAccessor", new EarthView.World.Spatial3D.Analysis.DepthAccessorClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CDepthAccessorProxy", new EarthView.World.Spatial3D.Analysis.DepthAccessorClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSkyLine", new EarthView.World.Spatial3D.Analysis.Analysis3DSkyLineClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSkyLineProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DSkyLineClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSkyLineParam", new EarthView.World.Spatial3D.Analysis.Analysis3DSkyLineParamClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSkyLineParamProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DSkyLineParamClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSlope", new EarthView.World.Spatial3D.Analysis.Analysis3DSlopeClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSlopeProxy", new EarthView.World.Spatial3D.Analysis.Analysis3DSlopeClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSlopeParam", new EarthView.World.Spatial3D.Analysis.Analysis3DSlopeParamClassFactory());
@@ -70,6 +77,8 @@ public static class EV_Spatial3DAnalysis_ClassFactory
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DRegionFloodProxy", new EarthView.World.Spatial3D.Analysis.CommandAnalysis3DRegionFloodClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DSection", new EarthView.World.Spatial3D.Analysis.CommandAnalysis3DSectionClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DSectionProxy", new EarthView.World.Spatial3D.Analysis.CommandAnalysis3DSectionClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DSkyline", new EarthView.World.Spatial3D.Analysis.CommandAnalysis3DSkylineClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DSkylineProxy", new EarthView.World.Spatial3D.Analysis.CommandAnalysis3DSkylineClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DSlope", new EarthView.World.Spatial3D.Analysis.CommandAnalysis3DSlopeClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DSlopeProxy", new EarthView.World.Spatial3D.Analysis.CommandAnalysis3DSlopeClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DVisibility", new EarthView.World.Spatial3D.Analysis.CommandAnalysis3DVisibilityClassFactory());

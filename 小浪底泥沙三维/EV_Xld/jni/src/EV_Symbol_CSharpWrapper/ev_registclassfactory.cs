@@ -17,6 +17,12 @@ public static class EV_Symbol_ClassFactory
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::CBillboard3DSymbolProxy", new EarthView.World.Spatial.Display.Billboard3DSymbolClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::CCartographicLineSymbol", new EarthView.World.Spatial.Display.CartographicLineSymbolClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::CCartographicLineSymbolProxy", new EarthView.World.Spatial.Display.CartographicLineSymbolClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::COutputEngine", new EarthView.World.Spatial.Display.OutputEngineClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::COutputEngineProxy", new EarthView.World.Spatial.Display.OutputEngineClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::EVOutputEngineManager", new EarthView.World.Spatial.Display.EvoutputenginemanagerClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::CRenderEngine", new EarthView.World.Spatial.Display.RenderEngineClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::CRenderEngineProxy", new EarthView.World.Spatial.Display.RenderEngineClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::EVRenderEngineManager", new EarthView.World.Spatial.Display.EvrenderenginemanagerClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::CFillSymbol", new EarthView.World.Spatial.Display.FillSymbolClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::CFillSymbolProxy", new EarthView.World.Spatial.Display.FillSymbolClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::CFontMarkerSymbol", new EarthView.World.Spatial.Display.FontMarkerSymbolClassFactory());
@@ -57,6 +63,8 @@ public static class EV_Symbol_ClassFactory
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::CPieStatistics3DSymbolProxy", new EarthView.World.Spatial.Display.PieStatistics3DSymbolClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::CPieStatisticsSymbol", new EarthView.World.Spatial.Display.PieStatisticsSymbolClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::CPieStatisticsSymbolProxy", new EarthView.World.Spatial.Display.PieStatisticsSymbolClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::CRichTextRenderMeasure", new EarthView.World.Spatial.Display.RichTextRenderMeasureClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::CRichTextRender", new EarthView.World.Spatial.Display.RichTextRenderClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::CSimpleFill3DSymbol", new EarthView.World.Spatial.Display.SimpleFill3DSymbolClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::CSimpleFill3DSymbolProxy", new EarthView.World.Spatial.Display.SimpleFill3DSymbolClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::CSimpleFillSymbol", new EarthView.World.Spatial.Display.SimpleFillSymbolClassFactory());

@@ -3,7 +3,6 @@
 
 #include "xldmanager_cfg.h"
 #include "globecontrol\globecontrol.h"
-#include "WorldSetting.h"
 
 namespace EarthView
 {
@@ -22,6 +21,7 @@ namespace EarthView
 			static CWaterConservancyManager* GetSingletonPtr();
 			~CWaterConservancyManager();
 			void Initialise(EarthView::World::Spatial3D::Controls::CGlobeControl* ref_globecontrol,EVString& runtimePath);
+			void SetExaggerationFactor(const ev_real32& factor);
 			void CreateTerrain(const EVString& grdFileName);
 			EVString GetTerrainName(const ev_int32 terrainIndex);
 			void SetTerrainVisible(const EVString& terrainName,const ev_bool& isVisible);

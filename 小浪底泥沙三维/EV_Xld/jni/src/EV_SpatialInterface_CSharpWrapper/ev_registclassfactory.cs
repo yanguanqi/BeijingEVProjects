@@ -167,6 +167,8 @@ public static class EV_SpatialInterface_ClassFactory
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Geometry::ISpatialReferenceProxy", new EarthView.World.Spatial.Geometry.IspatialreferenceClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Atlas::ISpatialScale", new EarthView.World.Spatial.Atlas.IspatialscaleClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Atlas::ISpatialScaleProxy", new EarthView.World.Spatial.Atlas.IspatialscaleClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Atlas::ISpatialThemeScale", new EarthView.World.Spatial.Atlas.IspatialthemescaleClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Atlas::ISpatialThemeScaleProxy", new EarthView.World.Spatial.Atlas.IspatialthemescaleClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::ISpatialTransformer", new EarthView.World.Spatial.Display.IspatialtransformerClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Display::ISpatialTransformerProxy", new EarthView.World.Spatial.Display.IspatialtransformerClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Carto::ISquareGrid", new EarthView.World.Spatial.Carto.IsquaregridClassFactory());
@@ -189,6 +191,8 @@ public static class EV_SpatialInterface_ClassFactory
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Atlas::IVectorLayerProxy", new EarthView.World.Spatial.Atlas.IvectorlayerClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Accessor::IWebAccessor", new EarthView.World.Spatial.Accessor.IwebaccessorClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Accessor::IWebAccessorProxy", new EarthView.World.Spatial.Accessor.IwebaccessorClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Atlas::LayerRenderOrderController", new EarthView.World.Spatial.Atlas.LayerRenderOrderControllerClassFactory());
+		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial::Atlas::LayerRenderOrderControllerProxy", new EarthView.World.Spatial.Atlas.LayerRenderOrderControllerClassFactory());
 		EarthView.World.Core.GlobalClassFactoryMap.Put("EarthView::World::Spatial2D::Raster::CProgressInfo", new EarthView.World.Spatial2D.Raster.ProgressInfoClassFactory());
 	}
 }

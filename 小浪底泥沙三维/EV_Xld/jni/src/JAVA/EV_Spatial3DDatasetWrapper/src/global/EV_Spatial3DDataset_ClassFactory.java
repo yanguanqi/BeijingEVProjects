@@ -72,6 +72,11 @@ public class EV_Spatial3DDataset_ClassFactory
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Dataset::CModelEventUtility", new com.earthview.world.spatial3d.dataset.ModelEventUtilityClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Dataset::CModelFeatureUtility", new com.earthview.world.spatial3d.dataset.ModelFeatureUtilityClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Dataset::CModelOctreeManager", new com.earthview.world.spatial3d.dataset.ModelOctreeManagerClassFactory());
+		GlobalClassFactoryMap.put("CResourceData", new ResourceDataClassFactory());
+		GlobalClassFactoryMap.put("CResourceDataList", new ResourceDataListClassFactory());
+		GlobalClassFactoryMap.put("CModelData", new ModelDataClassFactory());
+		GlobalClassFactoryMap.put("IModelTemplatePlugin", new ImodeltemplatepluginClassFactory());
+		GlobalClassFactoryMap.put("JIModelTemplatePluginProxy", new ImodeltemplatepluginClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Dataset::CObjectIDList", new com.earthview.world.spatial3d.dataset.ObjectIDListClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Dataset::CPropertyManager", new com.earthview.world.spatial3d.dataset.PropertyManagerClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Dataset::CResourceDataset", new com.earthview.world.spatial3d.dataset.ResourceDatasetClassFactory());

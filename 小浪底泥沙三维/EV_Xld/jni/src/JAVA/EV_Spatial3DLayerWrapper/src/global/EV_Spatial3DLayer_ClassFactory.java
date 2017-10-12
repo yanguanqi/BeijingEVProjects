@@ -57,6 +57,10 @@ public class EV_Spatial3DLayer_ClassFactory
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Atlas::JCOGCWFSVectorClampLayerProxy", new com.earthview.world.spatial3d.atlas.OgcwfsvectorclamplayerClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Atlas::COGCWFSVectorClampLayerFactory", new com.earthview.world.spatial3d.atlas.OgcwfsvectorclamplayerfactoryClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Atlas::JCOGCWFSVectorClampLayerFactoryProxy", new com.earthview.world.spatial3d.atlas.OgcwfsvectorclamplayerfactoryClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Atlas::COGCWFSVectorRelativeSceneLayer", new com.earthview.world.spatial3d.atlas.OgcwfsvectorrelativescenelayerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Atlas::JCOGCWFSVectorRelativeSceneLayerProxy", new com.earthview.world.spatial3d.atlas.OgcwfsvectorrelativescenelayerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Atlas::COGCWFSVectorRelativeSceneLayerFactory", new com.earthview.world.spatial3d.atlas.OgcwfsvectorrelativescenelayerfactoryClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Atlas::JCOGCWFSVectorRelativeSceneLayerFactoryProxy", new com.earthview.world.spatial3d.atlas.OgcwfsvectorrelativescenelayerfactoryClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Atlas::COGCWMSClampSceneLayer", new com.earthview.world.spatial3d.atlas.OgcwmsclampscenelayerClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Atlas::JCOGCWMSClampSceneLayerProxy", new com.earthview.world.spatial3d.atlas.OgcwmsclampscenelayerClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Atlas::COGCWMSClampSceneLayerFactory", new com.earthview.world.spatial3d.atlas.OgcwmsclampscenelayerfactoryClassFactory());

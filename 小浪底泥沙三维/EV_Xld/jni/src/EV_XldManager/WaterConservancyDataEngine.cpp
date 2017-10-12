@@ -20,6 +20,8 @@
 #include "BillboardManager.h"
 #include "spatial3dcalculator\spatialcalculator.h"
 #include "xld\WaterConservancyManager.h"
+#include "WorldSetting.h"
+#include "TerrainMovable.h"
 
 
 using namespace EarthView::World::Core;
@@ -59,19 +61,25 @@ EarthView::World::Spatial::Geometry::CPolygon * EarthView::Xld::CWaterConservanc
 {
 	EarthView::World::Spatial::Geometry::CPolygon* polygon = new EarthView::World::Spatial::Geometry::CPolygon();
 	CCurveRing curvering;
-	EarthView::World::Spatial::Geometry::CLineString linestring;
-	/*for (ev_size_t i = 0; i < bounds->size(); i++)
+	CFeatureGroupLayer* fg = ((EarthView::World::Spatial3D::CGeoSceneManager*)(EarthView::Xld::CWorldSetting::GetSingtonPtr()->mpGlobeControl->getSceneManager()))->getFeatureGroupLayer();
+	VertexList* vertextList = new VertexList();
+	for (ev_int32 i = 0; i < fg->getLayerCount(); i++)
 	{
-		CPoint point;
-		point.setX(bounds->at(i)->x);
-		point.setY(bounds->at(i)->y);
-		point.setZ(bounds->at(i)->z);
-		linestring.add(point, i);
-	}*/
-	linestring.setSpatialReferenceRef(CWorldSetting::GetSingtonPtr()->mpGlobeSpatialReference);
-	linestring.update();
-	curvering.add(linestring, 0);
-	curvering.update();
+		IGlobeLayer* gl = fg->getLayer(i);
+		if (gl->getName() == CWorldSetting::GetSingtonPtr()->mRiverRangeShpName)
+		{
+			CVectorDBClampSceneLayer* vl = dynamic_cast<CVectorDBClampSceneLayer*>(gl);
+			EarthView::World::Spatial::GeoDataset::IDataset* da = vl->getDataset();
+			EarthView::World::Spatial::GeoDataset::IFeatureClass* fc = dynamic_cast<EarthView::World::Spatial::GeoDataset::IFeatureClass*>(da);
+			EarthView::World::Spatial::GeoDataset::IFeature* feature = fc->getFeature(1);
+			const IGeometry* geo = feature->getGeometryRef();
+			const EarthView::World::Spatial::Geometry::CPolyline* polyline = dynamic_cast<const EarthView::World::Spatial::Geometry::CPolyline*> (geo);
+			CCurvePath* path = polyline->getCurvePath(0);
+			CCurve* ring = path->getCurve(0);
+			curvering.add(*ring, 0);
+			curvering.update();
+		}
+	}
 	polygon->addExteriorRing(curvering);
 	polygon->update();
 	polygon->setSpatialReferenceRef(CWorldSetting::GetSingtonPtr()->mpGlobeSpatialReference);
@@ -79,12 +87,148 @@ EarthView::World::Spatial::Geometry::CPolygon * EarthView::Xld::CWaterConservanc
 	return polygon;
 }
 
-void EarthView::Xld::CWaterConservancyDataEngine::CreateStardardTerrain(_in EarthView::GISDataType::CGrdData * pData, _out EarthView::World::Geometry3D::CVertexVector * vertexVector, _out EarthView::World::Geometry3D::CIndexVector * indexVector)
+void EarthView::Xld::CWaterConservancyDataEngine::CreateStardardTerrain()
 {
-	EarthView::World::Spatial::Geometry::CEnvelope* env = EarthView::Xld::CWaterConservancyDataEngine::GetWaterSurfaceEnvelope();
-	ev_real64 xStep = pData->GetXPix();
-	ev_real64 yStep = pData->GetYPix();
+	EarthView::World::Spatial::Geometry::CEnvelope* envlope = EarthView::Xld::CWaterConservancyDataEngine::GetWaterSurfaceEnvelope();
+	EarthView::World::Spatial::Geometry::CPolygon* polygon =  EarthView::Xld::CWaterConservancyDataEngine::GetRiverRange();
+	CVector2 minPoint(envlope->getMinX(),envlope->getMinY());
+	CVector2 maxPoint(envlope->getMaxX(), envlope->getMaxY());
+	ev_int64 xCount = 100;
+	ev_int64 yCount = 100;
+	ev_real64 xStep = maxPoint.x / 100 - minPoint.x / 100;
+	ev_real64 yStep = maxPoint.y / 100 - minPoint.y / 100;
+	CVector3 centerPoint;
+	envlope->getCenter(centerPoint.x, centerPoint.y, centerPoint.z);
+	ev_real64 centerAlti = EarthView::Xld::CWorldSetting::GetSingtonPtr()->mpGlobeControl->getSceneManager()->getHeightAt(centerPoint.y,centerPoint.x, -1);
+	CVector3 centerPos = EarthView::World::Spatial3D::Utility::CSpatialCalculator::sphericalToCartesian(centerPoint.y, centerPoint.x, centerAlti + EarthView::World::Spatial::Math::CMath::EARTH_RADIUS);
+	ev_int64 **tmpIndexes = new ev_int64*[yCount];
+	for (int i = 0; i < yCount; ++i)
+	{
+		tmpIndexes[i] = new ev_int64[xCount];
+	}
+	vector<CVector3> mVertextList;
+	CIndexVector indexVector;
+	CVertexVector vertexVector;
+	//计算顶点
+	ev_int64 index = 0;
+	for (ev_uint64 i = 0; i < xCount; i++)
+	{
+		for (ev_uint64 j = 0; j < yCount; j++)
+		{
+			EarthView::World::Spatial::Geometry::CPoint point(xStep*i + minPoint.x, yStep*j + minPoint.y, 0);
+			
+			if (polygon->isContains(&point,EVDimensionType::DT_DIMENSION_2))
+			{
+				ev_real64 tmpAlti =EarthView::Xld::CWorldSetting::GetSingtonPtr()->mpGlobeControl->getSceneManager()->getHeightAt(point.getY(), point.getX(), -1);
+				ev_real64 x = point.getX();
+				ev_real64 y = point.getY();
+				//EarthView::Xld::RenderLib::CBilloardManager::getSingletonPtr()->CreateBillBoard(i+""+j, "RedPoint.png", i+""+j,x,y, tmpAlti);
+				CVector3 tmpPos = EarthView::World::Spatial3D::Utility::CSpatialCalculator::sphericalToCartesian(point.getY(), point.getX(), tmpAlti + EarthView::World::Spatial::Math::CMath::EARTH_RADIUS);
+				CVertex tmpVertex;
+				CVector3 pos(tmpPos.y - centerPos.y, tmpPos.z-centerPos.z, tmpPos.x - centerPos.x);
+				mVertextList.push_back(CVector3(pos.x, pos.z, pos.y));
+				tmpVertex.setPostion(pos);
+				
+				tmpVertex.setTexCoord(CVector4(0.01*i, 0.01*j, 0, 1));
+				vertexVector.addVertex(tmpVertex);
+				tmpIndexes[i][j] = (index);
+				index++;
+			}
+			else
+			{
+				tmpIndexes[i][j] = (-1);
+			}
 
+		}
+	}
+	if (vertexVector.getCount() == 0)
+	{
+		return;
+	}
+	//计算索引
+	for (ev_uint64 i = 0; i < xCount-1; i++)
+	{
+		for (ev_uint64 j = 0; j < yCount - 1; j++)
+		{
+			if (tmpIndexes[i][j] != -1 && tmpIndexes[i][j + 1] != -1 && tmpIndexes[i + 1][j] != -1)
+			{
+				indexVector.addIndices(tmpIndexes[i][j]);
+				indexVector.addIndices(tmpIndexes[i][j + 1]);
+				indexVector.addIndices(tmpIndexes[i + 1][j]);
+
+			}
+			if (tmpIndexes[i + 1][j] != -1 && tmpIndexes[i][j + 1] != -1 && tmpIndexes[i + 1][j + 1] != -1)
+			{
+				indexVector.addIndices(tmpIndexes[i + 1][j]);
+				indexVector.addIndices(tmpIndexes[i][j + 1]);
+				indexVector.addIndices(tmpIndexes[i + 1][j + 1]);
+
+			}
+		}
+	}
+	//计算法线
+	ev_int32 faceCount = indexVector.getCount() / 3;
+
+	for (ev_int32 i = 0; i < faceCount; i++)
+	{
+		ev_int32 i3 = 3 * i;
+		CVector3 va = mVertextList[indexVector[i3]];
+		CVector3 vb = mVertextList[indexVector[i3 + 1]];
+		CVector3 vc = mVertextList[indexVector[i3 + 2]];
+		CVector3 v1 = vb - va;
+		CVector3 v2 = vc - va;
+
+		CVector3 v3 = v1.crossProduct(v2);
+
+		for (ev_int32 j = 0; j < 3; j++)
+		{
+			vertexVector.getVertex(indexVector[i3 + j]).m_normal += v3;
+		}
+
+	}
+
+	for (ev_size_t i = 0; i < vertexVector.getCount(); i++)
+	{
+		CVector3 n = vertexVector.getVertex(i).m_normal.normalisedCopy();
+		vertexVector.getVertex(i).setNormal(n);
+	}
+
+	CMaterialPtr TextureMaterial;
+	EVString TextureMatName = "TerrainTexture";
+	if (!CMaterialManager::getSingleton().resourceExists(TextureMatName))
+		TextureMaterial = CMaterialManager::getSingleton().create(TextureMatName, CResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
+
+
+
+	//设置纹理材质的图片
+	CImage image;
+	image.load("turang1.jpg", "Resource");
+	CTexturePtr mTitleTextTexturePtr = CTextureManager::getSingleton().loadImage("TerrainTexture", "Resource", image);
+	//设置纹理材质通道的光照，背面剔除，场景混合，颜色跟踪，阴影
+	TextureMaterial->getTechnique(0)->getPass(0)->setLightingEnabled(true);
+	TextureMaterial->getTechnique(0)->getPass(0)->setCullingMode(EarthView::World::Graphic::CULL_NONE);
+	TextureMaterial->getTechnique(0)->getPass(0)->setSceneBlending(SBT_TRANSPARENT_ALPHA);
+	TextureMaterial->setReceiveShadows(false);
+	//设置纹理单元的纹理和缩放比例
+	CTextureUnitState* tus = TextureMaterial->getTechnique(0)->getPass(0)->createTextureUnitState();
+	tus->setTexture(mTitleTextTexturePtr);
+	tus->setTextureUScale(1);
+	tus->setTextureVScale(1);
+	TextureMaterial->load();
+
+	EarthView::Xld::RenderableObject::CTerrainMovable* mMovable = new EarthView::Xld::RenderableObject::CTerrainMovable("test", CWorldSetting::GetSingtonPtr()->mpGlobeControl);
+	mMovable->buildSurfaceBuffer(vertexVector, indexVector);//创建顶点和索引缓存，并写入数据
+	mMovable->setSurfaceMaterial(TextureMatName);//设置材质
+	mNode = CWorldSetting::GetSingtonPtr()->mpGlobeControl->getSceneManager()->getRootSceneNode()->createChildSceneNode();//挂接节点
+	//mNode->setPosition(centerPos);																									
+	//CVector3 pos(112, 35, pData->MinZ);
+	CMatrix4 matrix = EarthView::World::Spatial3D::Utility::CSpatialCalculator::composeWorldMatrix(centerPoint.y, centerPoint.x, centerPoint.z, CVector3::UNIT_SCALE, CQuaternion::IDENTITY);
+	//mNode->attachObject(mMovable);
+	mNode->setMatrix(matrix);
+	//mNode->yaw(CRadian(CDegree(180)));
+	//this->mpGlobeControl->goTo(oriCenter.y, oriCenter.x, 0, 0, 2000);
+	//mTerrainList[terrainName] = mMovable;
+	//mNodeList[terrainName] = mNode;
 }
 
 void EarthView::Xld::CWaterConservancyDataEngine::WriteTerrainCache(const EVString & fileName, const EVString & materialName, _in EarthView::World::Geometry3D::CVertexVector * vertexVector, _in EarthView::World::Geometry3D::CIndexVector * indexVector)
@@ -246,3 +390,5 @@ EarthView::World::Spatial::Math::VertexList* EarthView::Xld::CWaterConservancyDa
 	}
 	return vertextList;
 }
+
+EarthView::World::Graphic::CSceneNode* EarthView::Xld::CWaterConservancyDataEngine::mNode = NULL;

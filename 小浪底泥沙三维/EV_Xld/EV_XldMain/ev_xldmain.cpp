@@ -8,7 +8,8 @@
 #include <QtGui\QStandardItem>
 #include "QStandardItemModel"
 #include "QTextCodec"
-int EV_XldMain::waterHeight = 219;
+#include "../src/EV_XldManager/WaterConservancyDataEngine.h"
+int EV_XldMain::waterHeight = 225;
 EV_XldMain::EV_XldMain(QWidget *parent, Qt::WFlags flags)
 	: QMainWindow(parent, flags)
 {
@@ -56,6 +57,7 @@ EV_XldMain::~EV_XldMain()
 }
 void EV_XldMain::GrdToTiff()
 {
+	
 	EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->GetTerrainCount();
 }
 void EV_XldMain::GrdToLOD()

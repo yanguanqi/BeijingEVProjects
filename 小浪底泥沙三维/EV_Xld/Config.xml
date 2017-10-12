@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="gb2312"?>
 <config>
   <platform>windows</platform>
-  <slnpath>D:\Projects\XiaolangdiSystem\System\EV_Xld</slnpath>
+  <slnpath>D:\EVProjects\BeijingEVProjects\小浪底泥沙三维\EV_Xld</slnpath>
   <projects>
     <!--三维工程-->
     <project compile="true">  

@@ -169,14 +169,12 @@ EarthView::Xld::RenderLib::CTerrainManager * EarthView::Xld::RenderLib::CTerrain
 
 void EarthView::Xld::RenderLib::CTerrainManager::CreateGrdTerrain(const EVString& grdFileName)
 {
-	cout << grdFileName << endl;
 	EarthView::GISDataType::CGrdData* pGrdData = EarthView::Xld::CGISDataEngine::ReadGrd(grdFileName);
 	ev_int32 startIndex = grdFileName.find_last_of('/')+1;
 	ev_int32 endIndex = grdFileName.find_last_of('.') ;
 	EVString terrainName = grdFileName.substr(startIndex, endIndex-startIndex);
 	CreateTerrain(terrainName, pGrdData);
 	delete pGrdData;
-
 }
 
 void EarthView::Xld::RenderLib::CTerrainManager::CreateTerrain(const EVString& terrainName, EarthView::GISDataType::CGrdData * pData)

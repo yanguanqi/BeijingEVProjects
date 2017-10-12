@@ -24,6 +24,7 @@
     <ClCompile Include="AnalysisToolManager.cpp" />
     <ClCompile Include="BaseInteractiver.cpp" />
     <ClCompile Include="BillBoardManager.cpp" />
+    <ClCompile Include="CustomRenderManager.cpp" />
     <ClCompile Include="GISDataEngine.cpp" />
     <ClCompile Include="GISDataType.cpp" />
     <ClCompile Include="InteractiveEngine.cpp" />
@@ -46,6 +47,7 @@
     <ClInclude Include="AnalysisToolManager.h" />
     <ClInclude Include="BaseInteractiver.h" />
     <ClInclude Include="BillboardManager.h" />
+    <ClInclude Include="CustomRenderManager.h" />
     <ClInclude Include="GISDataEngine.h" />
     <ClInclude Include="GISDataType.h" />
     <ClInclude Include="InteractiveEngine.h" />

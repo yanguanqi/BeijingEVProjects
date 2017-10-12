@@ -6,6 +6,8 @@ public class EV_Spatial3DDataExchange_ClassFactory
 {
 	public static void registerAll()
 	{
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::DataExchange::CShapeDataExchange", new com.earthview.world.spatial3d.dataexchange.ShapeDataExchangeClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::DataExchange::JCShapeDataExchangeProxy", new com.earthview.world.spatial3d.dataexchange.ShapeDataExchangeClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::DataExchange::CDatasourceHelper", new com.earthview.world.spatial3d.dataexchange.DatasourceHelperClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::DataExchange::CDataSourceUrl", new com.earthview.world.spatial3d.dataexchange.DataSourceUrlClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::DataExchange::CEarthViewModelDriver", new com.earthview.world.spatial3d.dataexchange.EarthViewModelDriverClassFactory());
@@ -27,6 +29,13 @@ public class EV_Spatial3DDataExchange_ClassFactory
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::DataExchange::CModelDataExchangeListener", new com.earthview.world.spatial3d.dataexchange.ModelDataExchangeListenerClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::DataExchange::JCModelDataExchangeListenerProxy", new com.earthview.world.spatial3d.dataexchange.ModelDataExchangeListenerClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::DataExchange::CModelSceneSerialzier", new com.earthview.world.spatial3d.dataexchange.ModelSceneSerialzierClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::DataExchange::ShapeFieldsList", new com.earthview.world.spatial3d.dataexchange.ShapeFieldsListClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::DataExchange::EntityMetaDataList", new com.earthview.world.spatial3d.dataexchange.EntityMetaDataListClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::DataExchange::CParseShapeFile", new com.earthview.world.spatial3d.dataexchange.ParseShapeFileClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::DataExchange::CScaleField", new com.earthview.world.spatial3d.dataexchange.ScaleFieldClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::DataExchange::CQuationField", new com.earthview.world.spatial3d.dataexchange.QuationFieldClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::DataExchange::CSkewField", new com.earthview.world.spatial3d.dataexchange.SkewFieldClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::DataExchange::CShapeAssignedFields", new com.earthview.world.spatial3d.dataexchange.ShapeAssignedFieldsClassFactory());
 	}
 }
 

@@ -33,6 +33,12 @@ public class EV_Spatial2DAtlas_ClassFactory
 		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Atlas::CMapSelection", new com.earthview.world.spatial2d.atlas.MapSelectionClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Atlas::JCMapSelectionProxy", new com.earthview.world.spatial2d.atlas.MapSelectionClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Atlas::CMapSet", new com.earthview.world.spatial2d.atlas.MapSetClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Atlas::CSpatialThemeScale", new com.earthview.world.spatial2d.atlas.SpatialThemeScaleClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Atlas::JCSpatialThemeScaleProxy", new com.earthview.world.spatial2d.atlas.SpatialThemeScaleClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Atlas::CWFSDataLayer", new com.earthview.world.spatial2d.atlas.WfsdatalayerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Atlas::JCWFSDataLayerProxy", new com.earthview.world.spatial2d.atlas.WfsdatalayerClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Atlas::CWFSDataLayerFactory", new com.earthview.world.spatial2d.atlas.WfsdatalayerfactoryClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial2D::Atlas::JCWFSDataLayerFactoryProxy", new com.earthview.world.spatial2d.atlas.WfsdatalayerfactoryClassFactory());
 	}
 }
 

@@ -38,6 +38,13 @@ public class EV_Spatial3DAnalysis_ClassFactory
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::JCAnalysis3DSectionProxy", new com.earthview.world.spatial3d.analysis.Analysis3DSectionClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSectionParam", new com.earthview.world.spatial3d.analysis.Analysis3DSectionParamClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::JCAnalysis3DSectionParamProxy", new com.earthview.world.spatial3d.analysis.Analysis3DSectionParamClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::CDepthMap", new com.earthview.world.spatial3d.analysis.DepthMapClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::CDepthAccessor", new com.earthview.world.spatial3d.analysis.DepthAccessorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::JCDepthAccessorProxy", new com.earthview.world.spatial3d.analysis.DepthAccessorClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSkyLine", new com.earthview.world.spatial3d.analysis.Analysis3DSkyLineClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::JCAnalysis3DSkyLineProxy", new com.earthview.world.spatial3d.analysis.Analysis3DSkyLineClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSkyLineParam", new com.earthview.world.spatial3d.analysis.Analysis3DSkyLineParamClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::JCAnalysis3DSkyLineParamProxy", new com.earthview.world.spatial3d.analysis.Analysis3DSkyLineParamClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSlope", new com.earthview.world.spatial3d.analysis.Analysis3DSlopeClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::JCAnalysis3DSlopeProxy", new com.earthview.world.spatial3d.analysis.Analysis3DSlopeClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::CAnalysis3DSlopeParam", new com.earthview.world.spatial3d.analysis.Analysis3DSlopeParamClassFactory());
@@ -69,6 +76,8 @@ public class EV_Spatial3DAnalysis_ClassFactory
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::JCCommandAnalysis3DRegionFloodProxy", new com.earthview.world.spatial3d.analysis.CommandAnalysis3DRegionFloodClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DSection", new com.earthview.world.spatial3d.analysis.CommandAnalysis3DSectionClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::JCCommandAnalysis3DSectionProxy", new com.earthview.world.spatial3d.analysis.CommandAnalysis3DSectionClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DSkyline", new com.earthview.world.spatial3d.analysis.CommandAnalysis3DSkylineClassFactory());
+		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::JCCommandAnalysis3DSkylineProxy", new com.earthview.world.spatial3d.analysis.CommandAnalysis3DSkylineClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DSlope", new com.earthview.world.spatial3d.analysis.CommandAnalysis3DSlopeClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::JCCommandAnalysis3DSlopeProxy", new com.earthview.world.spatial3d.analysis.CommandAnalysis3DSlopeClassFactory());
 		GlobalClassFactoryMap.put("EarthView::World::Spatial3D::Analysis::CCommandAnalysis3DVisibility", new com.earthview.world.spatial3d.analysis.CommandAnalysis3DVisibilityClassFactory());
