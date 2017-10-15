@@ -4,7 +4,7 @@
 
 #include "core\stringdefines.h"
 #include "GISDataType.h"
-#include "TerrainMovable.h"
+#include "CustomMovable.h"
 #include "globecontrol\globecontrol.h"
 
 
@@ -16,7 +16,6 @@ namespace EarthView
 		{
 			class CTerrainManager
 			{
-				friend class CWaterConservancyManager;
 			public:
 
 				~CTerrainManager();
@@ -72,7 +71,7 @@ namespace EarthView
 
 				EarthView::World::Spatial3D::Controls::CGlobeControl* mpGlobeControl;
 				CTerrainManager();
-				ev_map<EVString, EarthView::Xld::RenderableObject::CTerrainMovable*> mTerrainList;
+				ev_map<EVString, EarthView::Xld::RenderableObject::CCustomMovable*> mTerrainList;
 				ev_map<EVString, CSceneNode*> mNodeList;
 				vector<EVString> mTerrainNameList;
 				vector<EarthView::GISDataType::CGrdData*> grdDatas;

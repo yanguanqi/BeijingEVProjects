@@ -32,8 +32,8 @@
     <ClCompile Include="PolygonAnalysisTool.cpp" />
     <ClCompile Include="RectangleAnalysisTool.cpp" />
     <ClCompile Include="TerrainManager.cpp" />
-    <ClCompile Include="TerrainMovable.cpp" />
-    <ClCompile Include="TerrainRenderable.cpp" />
+    <ClCompile Include="CustomMovable.cpp" />
+    <ClCompile Include="CustomRenderable.cpp" />
     <ClCompile Include="WaterConservancyDataEngine.cpp" />
     <ClCompile Include="WaterConservancyManager.cpp" />
     <ClCompile Include="WaterManager.cpp" />
@@ -56,8 +56,8 @@
     <ClInclude Include="RectangleAnalysisTool.h" />
     <ClInclude Include="RenderLibDataType.h" />
     <ClInclude Include="TerrainManager.h" />
-    <ClInclude Include="TerrainMovable.h" />
-    <ClInclude Include="TerrainRenderable.h" />
+    <ClInclude Include="CustomMovable.h" />
+    <ClInclude Include="CustomRenderable.h" />
     <ClInclude Include="WaterConservancyDataEngine.h" />
     <ClInclude Include="WaterManager.h" />
     <ClInclude Include="WorldSetting.h" />

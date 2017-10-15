@@ -90,6 +90,22 @@ void EarthView::XldManager::CWaterConservancyManager::DeleteWaterSurface(const e
 	EarthView::Xld::RenderLib::CWaterManager::GetSingletonPtr()->DeleteWaterSurface(isSure);
 }
 
+void EarthView::XldManager::CWaterConservancyManager::WriteProjectModelStencil()
+{
+	EarthView::Xld::CWaterConservancyDataEngine::WriteProjectModelStencil(0.0001171, 0.0000901);
+}
+
+void EarthView::XldManager::CWaterConservancyManager::RenderProjectModelStencil()
+{
+	CVertexVector* v = new CVertexVector();
+	CIndexVector* i = new CIndexVector();
+	EarthView::Xld::CWaterConservancyDataEngine::ReadProjectModelStencil(EarthView::Xld::CWorldSetting::GetSingtonPtr()->mCurrentRuntimePath + "\\Data\\stencil\\BaseTerrain.stl", "turang1", v, i);
+}
+
+void EarthView::XldManager::CWaterConservancyManager::DeleteProejctModelStencil()
+{
+}
+
 void EarthView::XldManager::CWaterConservancyManager::SetSectionQueryEnable(const ev_bool & isEnable)
 {
 }
@@ -110,7 +126,6 @@ void EarthView::XldManager::CWaterConservancyManager::DrawPolylineBounds()
 
 ev_uint64 EarthView::XldManager::CWaterConservancyManager::GetTerrainCount()
 {
-	EarthView::Xld::CWaterConservancyDataEngine::CreateStardardTerrain();
 	return EarthView::Xld::RenderLib::CTerrainManager::getSingletonPtr()->GetTerrainCount();
 }
 

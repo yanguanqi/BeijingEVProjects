@@ -5,7 +5,7 @@
 #include "globecontrol/globecontrol.h"
 #include "mathengine/vector3.h"
 #include "mathengine/axisalignedbox.h"
-#include "TerrainRenderable.h"
+#include "CustomRenderable.h"
 
 using namespace EarthView::World::Graphic;
 using namespace EarthView::World::Spatial::Math;
@@ -15,10 +15,10 @@ namespace EarthView
 	{
 		namespace RenderableObject 
 		{
-			class CTerrainMovable :
+			class CCustomMovable :
 				public CMovableObject
 			{
-				friend class CTerrainRenderable;
+				friend class CCustomRenderable;
 			public:
 
 				EVString TerrainName;
@@ -26,12 +26,12 @@ namespace EarthView
 				/// <summary>
 				/// 构造函数
 				/// </summary>
-				CTerrainMovable(EVString terrainName, EarthView::World::Spatial3D::Controls::CGlobeControl* control);
+				CCustomMovable(EVString terrainName, EarthView::World::Spatial3D::Controls::CGlobeControl* control);
 
 				/// <summary>
 				/// 析构函数
 				/// </summary>
-				~CTerrainMovable();
+				~CCustomMovable();
 
 				/// <summary>
 				/// 通报当前摄像机
@@ -117,7 +117,7 @@ namespace EarthView
 				/// <summary>
 				/// 底板对象
 				/// </summary>
-				CTerrainRenderable* mpTestSurfaceRenderable;
+				CCustomRenderable* mpTestSurfaceRenderable;
 
 				/// <summary>
 				/// 对应模型对象位置

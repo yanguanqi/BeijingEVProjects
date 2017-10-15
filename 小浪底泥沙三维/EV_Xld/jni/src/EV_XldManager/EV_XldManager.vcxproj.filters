@@ -21,12 +21,6 @@
     <ClCompile Include="GISDataEngine.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="TerrainMovable.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="TerrainRenderable.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="TerrainManager.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -72,18 +66,18 @@
     <ClCompile Include="CustomRenderManager.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="CustomMovable.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomRenderable.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\xld\WaterConservancyManager.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\xld\xldmanager_cfg.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="TerrainMovable.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="TerrainRenderable.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="TerrainManager.h">
@@ -135,6 +129,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="CustomRenderManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomMovable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomRenderable.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

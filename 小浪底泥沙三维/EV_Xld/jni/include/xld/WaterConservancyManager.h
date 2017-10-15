@@ -52,6 +52,26 @@ namespace EarthView
 			/// <param name="isSure">确认？</param>
 			void DeleteWaterSurface(const ev_bool& isSure);
 
+
+#pragma region ForTest
+			/// <summary>
+			/// 缓存项目范围模型模板(仅测试）
+			/// </summary>
+			void WriteProjectModelStencil();
+			/// <summary>
+			/// 渲染缓存项目范围模型(仅测试）
+			/// </summary>
+			void RenderProjectModelStencil();
+			/// <summary>
+			/// 删除缓存项目范围模型(仅测试）
+			/// </summary>
+			void DeleteProejctModelStencil();
+#pragma endregion
+
+
+
+
+
 			void DrawRectBounds();
 			void DrawPolylineBounds();
 			ev_uint64 GetTerrainCount();

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ev_xldmain.ui'
 **
-** Created: Wed Oct 11 10:54:15 2017
+** Created: Sun Oct 15 09:20:50 2017
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -47,6 +47,8 @@ public:
     QAction *actionHideWater;
     QAction *actionShowWater;
     QAction *actionDeleteWater;
+    QAction *actionCreateStencil;
+    QAction *actionRenderStencil;
     QWidget *centralWidget;
     EVWorkspace *evWorkspace;
     GlobeWidget *globeWidget;
@@ -60,6 +62,7 @@ public:
     QMenu *menuGrd;
     QMenu *menu;
     QMenu *menu_2;
+    QMenu *menu_3;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -92,6 +95,10 @@ public:
         actionShowWater->setObjectName(QString::fromUtf8("actionShowWater"));
         actionDeleteWater = new QAction(EV_XldMainClass);
         actionDeleteWater->setObjectName(QString::fromUtf8("actionDeleteWater"));
+        actionCreateStencil = new QAction(EV_XldMainClass);
+        actionCreateStencil->setObjectName(QString::fromUtf8("actionCreateStencil"));
+        actionRenderStencil = new QAction(EV_XldMainClass);
+        actionRenderStencil->setObjectName(QString::fromUtf8("actionRenderStencil"));
         centralWidget = new QWidget(EV_XldMainClass);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         evWorkspace = new EVWorkspace(centralWidget);
@@ -134,6 +141,8 @@ public:
         menu->setObjectName(QString::fromUtf8("menu"));
         menu_2 = new QMenu(menuBar);
         menu_2->setObjectName(QString::fromUtf8("menu_2"));
+        menu_3 = new QMenu(menuBar);
+        menu_3->setObjectName(QString::fromUtf8("menu_3"));
         EV_XldMainClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(EV_XldMainClass);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -145,6 +154,7 @@ public:
         menuBar->addAction(menuGrd->menuAction());
         menuBar->addAction(menu->menuAction());
         menuBar->addAction(menu_2->menuAction());
+        menuBar->addAction(menu_3->menuAction());
         menuGrd->addAction(actionReadGrd);
         menuGrd->addAction(actionGrd2GTiff);
         menuGrd->addAction(actionGrdLOD);
@@ -157,6 +167,8 @@ public:
         menu_2->addAction(actionHideWater);
         menu_2->addAction(actionShowWater);
         menu_2->addAction(actionDeleteWater);
+        menu_3->addAction(actionCreateStencil);
+        menu_3->addAction(actionRenderStencil);
 
         retranslateUi(EV_XldMainClass);
 
@@ -178,6 +190,8 @@ public:
         actionHideWater->setText(QApplication::translate("EV_XldMainClass", "\351\232\220\350\227\217", 0, QApplication::UnicodeUTF8));
         actionShowWater->setText(QApplication::translate("EV_XldMainClass", "\346\230\276\347\244\272", 0, QApplication::UnicodeUTF8));
         actionDeleteWater->setText(QApplication::translate("EV_XldMainClass", "\345\210\240\351\231\244", 0, QApplication::UnicodeUTF8));
+        actionCreateStencil->setText(QApplication::translate("EV_XldMainClass", "\347\224\237\346\210\220\345\260\217\346\265\252\345\272\225\350\214\203\345\233\264\346\250\241\346\235\277", 0, QApplication::UnicodeUTF8));
+        actionRenderStencil->setText(QApplication::translate("EV_XldMainClass", "\346\270\262\346\237\223\345\260\217\346\265\252\345\272\225\350\214\203\345\233\264\346\250\241\346\235\277", 0, QApplication::UnicodeUTF8));
         evWorkspace->setProperty("projectName", QVariant(QApplication::translate("EV_XldMainClass", "xld.evproj", 0, QApplication::UnicodeUTF8)));
         evWorkspace->setProperty("localProjectName", QVariant(QApplication::translate("EV_XldMainClass", "D:/Projects/XiaolangdiSystem/System/EV_Xld/bin64/MyData/xld.evproj", 0, QApplication::UnicodeUTF8)));
         globeWidget->setProperty("globeName", QVariant(QApplication::translate("EV_XldMainClass", "\346\226\260\345\234\272\346\231\2571", 0, QApplication::UnicodeUTF8)));
@@ -185,6 +199,7 @@ public:
         menuGrd->setTitle(QApplication::translate("EV_XldMainClass", "Grd\346\226\207\344\273\266", 0, QApplication::UnicodeUTF8));
         menu->setTitle(QApplication::translate("EV_XldMainClass", "\345\212\237\350\203\275\344\272\244\344\272\222", 0, QApplication::UnicodeUTF8));
         menu_2->setTitle(QApplication::translate("EV_XldMainClass", "\346\260\264\351\235\242", 0, QApplication::UnicodeUTF8));
+        menu_3->setTitle(QApplication::translate("EV_XldMainClass", "\345\220\216\345\217\260", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

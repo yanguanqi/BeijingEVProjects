@@ -7,7 +7,7 @@
 #include "globecontrol/globecontrol.h"
 #include "spatial3dengine/globecamera.h"
 #include "geometry3d/vertex.h"
-#include "TerrainMovable.h"
+#include "CustomMovable.h"
 
 using namespace EarthView::World::Graphic;
 using namespace EarthView::World::Spatial3D;
@@ -22,23 +22,23 @@ namespace EarthView
 	{
 		namespace RenderableObject
 		{
-			class CTerrainRenderable :
+			class CCustomRenderable :
 				public EarthView::World::Graphic::CRenderable
 			{
-				friend class CTerrainMovable;
+				friend class CCustomMovable;
 			public:
 				/// <summary>
 				/// 构造函数
 				/// </summary>
 				/// <param name="name">名称</param>
 				/// <param name="parent">父对象</param>
-				CTerrainRenderable(const EVString& name, CTerrainMovable* parent);
+				CCustomRenderable(const EVString& name, CCustomMovable* parent);
 
 				/// <summary>
 				/// 析构函数
 				/// </summary>
 				/// <param name=""></param>
-				~CTerrainRenderable();
+				~CCustomRenderable();
 
 				/// <summary>
 				/// 获得渲染对象的转换矩阵
@@ -142,7 +142,7 @@ namespace EarthView
 				/// <summary>
 				/// 父对象
 				/// </summary>
-				CTerrainMovable* mpParent;
+				CCustomMovable* mpParent;
 			};
 		}
 	}

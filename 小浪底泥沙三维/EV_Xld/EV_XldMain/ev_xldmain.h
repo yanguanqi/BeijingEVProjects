@@ -30,6 +30,8 @@ public:
 		void HideWater();
 		void DeleteWater();
 		void EV_XldMain::treeViewSelected(QTreeWidgetItem *item, int column);
+		void WriteProjectStencil();
+		void RenderProjectStencil();
 
 private:
 	Ui::EV_XldMainClass ui;

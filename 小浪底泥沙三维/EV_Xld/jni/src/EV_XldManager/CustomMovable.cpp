@@ -1,4 +1,4 @@
-#include "TerrainMovable.h"
+#include "CustomMovable.h"
 #include "graphic\root.h"
 #include "graphic\hardwarevertexbuffer.h"
 #include "graphic\renderqueue.h"
@@ -6,14 +6,14 @@
 #include "graphic\renderable.h"
 #include "geometry3d\vertex.h"
 
-EarthView::Xld::RenderableObject::CTerrainMovable::CTerrainMovable(EVString terrainName,EarthView::World::Spatial3D::Controls::CGlobeControl * control)
+EarthView::Xld::RenderableObject::CCustomMovable::CCustomMovable(EVString terrainName,EarthView::World::Spatial3D::Controls::CGlobeControl * control)
 {
 	this->mpGlobeControl = control;
 	this->mpSceneManager = this->mpGlobeControl->getSceneManager();
-	mpTestSurfaceRenderable = new CTerrainRenderable(mName + "_TestSurfaceRenderable", this);
+	mpTestSurfaceRenderable = new CCustomRenderable(mName + "_TestSurfaceRenderable", this);
 }
 
-EarthView::Xld::RenderableObject::CTerrainMovable::~CTerrainMovable()
+EarthView::Xld::RenderableObject::CCustomMovable::~CCustomMovable()
 {
 	//mpGlobeControl->getScene()->getS
 	this->mpGlobeControl = NULL;
@@ -24,28 +24,28 @@ EarthView::Xld::RenderableObject::CTerrainMovable::~CTerrainMovable()
 	}
 }
 
-void EarthView::Xld::RenderableObject::CTerrainMovable::_notifyCurrentCamera(CCamera * cam)
+void EarthView::Xld::RenderableObject::CCustomMovable::_notifyCurrentCamera(CCamera * cam)
 {
 	CMovableObject::_notifyCurrentCamera(cam);
 	mCurrentCamera = cam;
 }
 
-void EarthView::Xld::RenderableObject::CTerrainMovable::_updateRenderQueue(CRenderQueue * queue)
+void EarthView::Xld::RenderableObject::CCustomMovable::_updateRenderQueue(CRenderQueue * queue)
 {
 	queue->addRenderable(mpTestSurfaceRenderable, 90);
 }
 
-void EarthView::Xld::RenderableObject::CTerrainMovable::visitRenderables(CRenderable::CVisitor * visitor, ev_bool debugRenderables)
+void EarthView::Xld::RenderableObject::CCustomMovable::visitRenderables(CRenderable::CVisitor * visitor, ev_bool debugRenderables)
 {
 	visitor->visit(mpTestSurfaceRenderable, 0, true);
 }
 
-void EarthView::Xld::RenderableObject::CTerrainMovable::visitRenderables(CRenderable::CVisitor * visitor)
+void EarthView::Xld::RenderableObject::CCustomMovable::visitRenderables(CRenderable::CVisitor * visitor)
 {
 	visitRenderables(visitor, false);
 }
 
-EVString EarthView::Xld::RenderableObject::CTerrainMovable::getMovableType() const
+EVString EarthView::Xld::RenderableObject::CCustomMovable::getMovableType() const
 {
 	static EVString movType = "CTerrainMovable";
 	return movType;
@@ -57,7 +57,7 @@ EVString EarthView::Xld::RenderableObject::CTerrainMovable::getMovableType() con
 //	return EVString();
 //}
 
-void EarthView::Xld::RenderableObject::CTerrainMovable::buildSurfaceBuffer(const CVertexVector & vertexVector, const CIndexVector & indexVector)
+void EarthView::Xld::RenderableObject::CCustomMovable::buildSurfaceBuffer(const CVertexVector & vertexVector, const CIndexVector & indexVector)
 {
 	EV_ASSERT(vertexVector.getCount() > 0 && indexVector.getCount() > 0);
 	mpTestSurfaceRenderable->getRenderOperation()->vertexData->vertexCount = vertexVector.getCount();
@@ -125,7 +125,7 @@ void EarthView::Xld::RenderableObject::CTerrainMovable::buildSurfaceBuffer(const
 	mRadius = CMath::boundingRadiusFromAABB(mBox);
 }
 
-void EarthView::Xld::RenderableObject::CTerrainMovable::setSurfaceMaterial(const EVString & matName)
+void EarthView::Xld::RenderableObject::CCustomMovable::setSurfaceMaterial(const EVString & matName)
 {
 	mpTestSurfaceRenderable->setMaterial(matName);
 }

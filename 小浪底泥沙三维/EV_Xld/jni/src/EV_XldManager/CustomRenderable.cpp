@@ -1,8 +1,8 @@
-#include "TerrainRenderable.h"
+#include "CustomRenderable.h"
 #include "graphic/movableobject.h"
 #include "graphic/node.h"
 
-EarthView::Xld::RenderableObject::CTerrainRenderable::CTerrainRenderable(const EVString & name, CTerrainMovable * parent)
+EarthView::Xld::RenderableObject::CCustomRenderable::CCustomRenderable(const EVString & name, CCustomMovable * parent)
 {
 	this->mGroupName = CResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME;
 	this->mRenderOp.vertexData = EV_NEW CVertexData();
@@ -15,7 +15,7 @@ EarthView::Xld::RenderableObject::CTerrainRenderable::CTerrainRenderable(const E
 	this->mpParent = parent;
 }
 
-EarthView::Xld::RenderableObject::CTerrainRenderable::~CTerrainRenderable()
+EarthView::Xld::RenderableObject::CCustomRenderable::~CCustomRenderable()
 {
 	if (this->mRenderOp.vertexData)
 	{
@@ -29,12 +29,12 @@ EarthView::Xld::RenderableObject::CTerrainRenderable::~CTerrainRenderable()
 	}
 }
 
-void EarthView::Xld::RenderableObject::CTerrainRenderable::getWorldTransforms(CMatrix4 * xform) const
+void EarthView::Xld::RenderableObject::CCustomRenderable::getWorldTransforms(CMatrix4 * xform) const
 {
 	*xform = this->mpParent->mParentNode->getMatrix();
 }
 
-const CMaterialPtr & EarthView::Xld::RenderableObject::CTerrainRenderable::getMaterial() const
+const CMaterialPtr & EarthView::Xld::RenderableObject::CCustomRenderable::getMaterial() const
 {
 	if (mMaterial.isNull())
 	{
@@ -43,31 +43,31 @@ const CMaterialPtr & EarthView::Xld::RenderableObject::CTerrainRenderable::getMa
 	return mMaterial;
 }
 
-Real EarthView::Xld::RenderableObject::CTerrainRenderable::getSquaredViewDepth(const CCamera * cam) const
+Real EarthView::Xld::RenderableObject::CCustomRenderable::getSquaredViewDepth(const CCamera * cam) const
 {
 	return this->mpParent->getParentNode()->getSquaredViewDepth(cam);
 }
 
-void EarthView::Xld::RenderableObject::CTerrainRenderable::getRenderOperation(_inout CRenderOperation & op)
+void EarthView::Xld::RenderableObject::CCustomRenderable::getRenderOperation(_inout CRenderOperation & op)
 {
 	op = this->mRenderOp;
 }
 
-const LightList & EarthView::Xld::RenderableObject::CTerrainRenderable::getLights(void) const
+const LightList & EarthView::Xld::RenderableObject::CCustomRenderable::getLights(void) const
 {
 	return this->mpParent->queryLights();
 }
 
-ev_bool EarthView::Xld::RenderableObject::CTerrainRenderable::preRender(CSceneManager *sm, CRenderSystem *rsys)
+ev_bool EarthView::Xld::RenderableObject::CCustomRenderable::preRender(CSceneManager *sm, CRenderSystem *rsys)
 {
 	return true;
 }
 
-void EarthView::Xld::RenderableObject::CTerrainRenderable::postRender(CSceneManager * sm, CRenderSystem * rsys)
+void EarthView::Xld::RenderableObject::CCustomRenderable::postRender(CSceneManager * sm, CRenderSystem * rsys)
 {
 }
 
-void EarthView::Xld::RenderableObject::CTerrainRenderable::setMaterial(const EVString & matName)
+void EarthView::Xld::RenderableObject::CCustomRenderable::setMaterial(const EVString & matName)
 {
 	if (mMaterialName != matName)
 	{
@@ -76,7 +76,7 @@ void EarthView::Xld::RenderableObject::CTerrainRenderable::setMaterial(const EVS
 	}
 }
 
-CRenderOperation * EarthView::Xld::RenderableObject::CTerrainRenderable::getRenderOperation()
+CRenderOperation * EarthView::Xld::RenderableObject::CCustomRenderable::getRenderOperation()
 {
 	return &this->mRenderOp;
 }

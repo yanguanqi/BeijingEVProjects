@@ -41,7 +41,7 @@ EarthView::Xld::RenderLib::CWaterManager::~CWaterManager()
 void EarthView::Xld::RenderLib::CWaterManager::CreateWaterSurface(const ev_real64 & waterHeight)
 {
 	if (this->mWaterCreated) return;
-	EarthView::World::Spatial::Math::VertexList * vl = CWaterConservancyDataEngine::CreateWaterSurfaceBounds(CWorldSetting::GetSingtonPtr()->mRiverRangeShpName);
+	EarthView::World::Spatial::Math::VertexList * vl = CWaterConservancyDataEngine::CreateProjectBoundPoints(CWorldSetting::GetSingtonPtr()->mRiverRangeShpName);
 	CreateKMLWaterSurface(CWorldSetting::GetSingtonPtr()->mWaterSurfaceKMLObjectName, vl, waterHeight);
 	delete vl;
 }

@@ -33,13 +33,15 @@ namespace EarthView
 			/// <param name="globecontrol">EV 5.0控件</param>
 			/// <param name="layerName">图层名称</param>
 			/// <returns>有序的点列表</returns>
-			static EarthView::World::Spatial::Math::VertexList* CreateWaterSurfaceBounds(EVString layerName);
+			static EarthView::World::Spatial::Math::VertexList* CreateProjectBoundPoints(EVString layerName);
+
 			/// <summary>
 			/// 依据矢量范围创建水面最小外接矩形范围
 			/// </summary>
 			/// <param name="globecontrol">EV 5.0控件</param>
 			/// <returns>最小外接矩形</returns>
-			static EarthView::World::Spatial::Geometry::CEnvelope* GetWaterSurfaceEnvelope();
+			static EarthView::World::Spatial::Geometry::CEnvelope* CreateProjectEnvelope();
+
 			/// <summary>
 			/// 将水下地形模板写入本底缓存
 			/// </summary>
@@ -47,25 +49,19 @@ namespace EarthView
 			/// <param name="materialName">纹理名称</param>
 			/// <param name="vertexVector">顶点缓存</param>
 			/// <param name="indexVector">索引缓存</param>
-			static void ReadTerrainModelStencil(EarthView::World::Spatial::Math::VertexList* verLst);
-			/// <summary>
-			/// 生产水下地形模板
-			/// </summary>
-			/// <param name="globecontrol">EV 5.0 控件</param>
-			static void GenerateTerrainModelStencil();
+			static void ReadProjectModelStencil(const EVString& fileName, _out EVString materialName, _out EarthView::World::Geometry3D::CVertexVector* vertexVector, _out EarthView::World::Geometry3D::CIndexVector* indexVector);
 
-			static EarthView::World::Spatial::Geometry::CPolygon* GetRiverRange();
-			static EarthView::World::Graphic::CSceneNode* mNode;
+			static EarthView::World::Spatial::Geometry::CPolygon* CreateProjectRange();
 
-			static void CreateStardardTerrain();
+			static void WriteProjectModelStencil(ev_real64 longiResolution,ev_real64 latiResolution);
 			/// <summary>
-			/// 将水下地形模型以二进制的形式写入缓存文件
+			/// 将自定义渲染对象以二进制的形式写入缓存文件
 			/// </summary>
 			/// <param name="fileName">文件名</param>
 			/// <param name="materialName">纹理名称</param>
 			/// <param name="vertexVector">顶点缓存</param>
 			/// <param name="indexVector">索引缓存</param>
-			static void WriteTerrainCache(const EVString& fileName,const EVString& materialName,_in EarthView::World::Geometry3D::CVertexVector* vertexVector,_in EarthView::World::Geometry3D::CIndexVector* indexVector);
+			static void WriteRenderObjectCache(const EVString& fileName,const EVString& materialName,_in EarthView::World::Geometry3D::CVertexVector* vertexVector,_in EarthView::World::Geometry3D::CIndexVector* indexVector);
 
 			/// <summary>
 			/// 读取水下地形缓存文件的内容

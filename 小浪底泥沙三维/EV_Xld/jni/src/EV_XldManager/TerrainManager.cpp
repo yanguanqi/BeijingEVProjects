@@ -10,7 +10,7 @@
 #include "graphic\texturemanager.h"
 #include "spatial3dcalculator\spatialcalculator.h"
 #include "xld\WaterConservancyManager.h"
-#include "TerrainMovable.h"
+#include "CustomMovable.h"
 #include "graphic\scenenode.h"
 #include "GISDataType.h"
 #include "graphic\common.h"
@@ -41,7 +41,7 @@ void EarthView::Xld::RenderLib::CTerrainManager::DeleteTerrain(const EVString & 
 	if (mTerrainList.find(name) != mTerrainList.end() && mNodeList.find(name) != mNodeList.end())
 	{
 		CSceneNode* mNode = mNodeList[name];
-		CTerrainMovable* mMovable = mTerrainList[name];
+		CCustomMovable* mMovable = mTerrainList[name];
 		if (mNode)
 		{
 			if (mMovable)
@@ -126,7 +126,7 @@ EarthView::Xld::RenderLib::CTerrainManager::~CTerrainManager()
 		CSceneNode* mNode = mNodeList[i];
 		if (mNode)
 		{
-			CTerrainMovable* mMovable = mTerrainList[i];
+			CCustomMovable* mMovable = mTerrainList[i];
 			if (mMovable)
 			{
 				mNode->detachObject(mMovable);
@@ -319,7 +319,7 @@ void EarthView::Xld::RenderLib::CTerrainManager::CreateTerrain(const EVString& t
 	tus->setTextureVScale(1);
 	TextureMaterial->load();
 
-	CTerrainMovable* mMovable = new CTerrainMovable("test", this->mpGlobeControl);
+	CCustomMovable* mMovable = new CCustomMovable("test", this->mpGlobeControl);
 	mMovable->buildSurfaceBuffer(vertexVector, indexVector);//创建顶点和索引缓存，并写入数据
 	mMovable->setSurfaceMaterial(TextureMatName);//设置材质
 	CSceneNode* mNode = this->mpGlobeControl->getSceneManager()->getRootSceneNode()->createChildSceneNode();//挂接节点
@@ -331,7 +331,7 @@ void EarthView::Xld::RenderLib::CTerrainManager::CreateTerrain(const EVString& t
 	this->mpGlobeControl->goTo(oriCenter.y,oriCenter.x, 0, 0, 2000);
 	mTerrainList[terrainName] = mMovable;
 	mNodeList[terrainName] = mNode;
-	CWaterConservancyDataEngine::WriteTerrainCache(".\\" + terrainName + ".y", TextureMatName, &vertexVector, &indexVector);
+	CWaterConservancyDataEngine::WriteRenderObjectCache(CWorldSetting::GetSingtonPtr()->mCurrentRuntimePath+"\\" + terrainName + ".tc", TextureMatName, &vertexVector, &indexVector);
 }
 
 

@@ -43,12 +43,24 @@ EV_XldMain::EV_XldMain(QWidget *parent, Qt::WFlags flags)
 	connect(ui.actionShowWater, SIGNAL(triggered()), this, SLOT(ShowWater()));
 	connect(ui.actionHideWater, SIGNAL(triggered()), this, SLOT(HideWater()));
 	connect(ui.actionDeleteWater, SIGNAL(triggered()), this, SLOT(DeleteWater()));
+	connect(ui.actionCreateStencil, SIGNAL(triggered()), this, SLOT(WriteProjectStencil()));
+	connect(ui.actionRenderStencil, SIGNAL(triggered()), this, SLOT(RenderProjectStencil()));
 	currrentName = "";
 	model = NULL;
 }
 void EV_XldMain::treeViewSelected(QTreeWidgetItem *item, int column)
 {
 	currrentName = item->text(column);
+}
+
+void EV_XldMain::WriteProjectStencil()
+{
+	EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->WriteProjectModelStencil();
+}
+
+void EV_XldMain::RenderProjectStencil()
+{
+	EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->RenderProjectModelStencil();
 }
 
 EV_XldMain::~EV_XldMain()
@@ -72,7 +84,7 @@ void EV_XldMain::GrdToRenderTerrain()
 }
 void EV_XldMain::slotGlobeOpened(GlobeWidget * globeWidget)
 {
-	EVString path = "D:\\EVProjects\\BeijingEVProjects\\Ð¡ÀËµ×ÄàÉ³ÈýÎ¬\\EV_Xld\\bin64";
+	EVString path = "D:\\OnlineProject\\BeijingEVProjects\\Ð¡ÀËµ×ÄàÉ³ÈýÎ¬\\EV_Xld\\bin64";
 	EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->Initialise(ui.globeWidget->getGlobeControl(), path);
 }
 void EV_XldMain::SliderValueChanged(int value)
@@ -138,27 +150,27 @@ void EV_XldMain::ReadGrd()
 		currrentName = fileName;
 		EVString current = fileName.toStdString().c_str();
 		EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->CreateTerrain(path.toStdString().c_str());
-		ev_uint64 tc = EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->GetTerrainCount();
-		QTreeWidgetItem * item = new QTreeWidgetItem(QStringList(currrentName));
+		//ev_uint64 tc = EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->GetTerrainCount();
+		/*QTreeWidgetItem * item = new QTreeWidgetItem(QStringList(currrentName));
 		ui.treeWidget->addTopLevelItem(item);
-		if (model) 
+		if (model)
 		{
 			model->clear();
 			ui.treeView->setModel(model);
-		}
-		for (int i=0;i<tc;i++)
-		{
-			//EVString* tn;
-			//EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->GetTerrainNames(tn);
-		
-			QStandardItem* item = new QStandardItem(fileName);
-			if (!model)
-			{
-				model = new QStandardItemModel(1, 1);
-			}
-			model->appendRow(item);
-			ui.treeView->setModel(model);
-		}
+		}*/
+		//for (int i=0;i<tc;i++)
+		//{
+		//	//EVString* tn;
+		//	//EarthView::XldManager::CWaterConservancyManager::GetSingletonPtr()->GetTerrainNames(tn);
+		//
+		//	QStandardItem* item = new QStandardItem(fileName);
+		//	if (!model)
+		//	{
+		//		model = new QStandardItemModel(1, 1);
+		//	}
+		//	model->appendRow(item);
+		//	ui.treeView->setModel(model);
+		//}
 		
 
 	}
